@@ -2,79 +2,91 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { 
-  MessageSquare, Palette, Diamond, Hammer, 
-  Shield, Headphones, Check, X, ArrowRight 
-} from "lucide-react";
-
-const benefits = [
-  {
-    icon: MessageSquare,
-    title: "Conseil personnalisé",
-    description: "Une étude gratuite de votre projet avec des conseils sur mesure. Nous analysons votre espace, vos besoins et vos envies pour vous proposer la solution idéale.",
-  },
-  {
-    icon: Palette,
-    title: "Design sur mesure",
-    description: "Chaque projet est unique. Nous concevons votre douche à l'italienne selon vos goûts, votre style de vie et les contraintes de votre espace.",
-  },
-  {
-    icon: Diamond,
-    title: "Matériaux premium",
-    description: "Nous sélectionnons les meilleurs matériaux auprès de fournisseurs reconnus : carrelages haut de gamme, robinetterie de qualité, verre trempé.",
-  },
-  {
-    icon: Hammer,
-    title: "Pose experte",
-    description: "Nos artisans qualifiés maîtrisent les techniques les plus avancées. Chaque pose est réalisée dans les règles de l'art pour un résultat impeccable.",
-  },
-  {
-    icon: Shield,
-    title: "Étanchéité garantie",
-    description: "Notre système d'étanchéité certifié vous protège pendant 10 ans. Aucun compromis sur la qualité de l'imperméabilisation.",
-  },
-  {
-    icon: Headphones,
-    title: "Service après-vente",
-    description: "Une équipe disponible pour répondre à toutes vos questions après la livraison. Nous restons à vos côtés pour garantir votre satisfaction.",
-  },
-];
-
-const comparison = [
-  { feature: "Étude personnalisée gratuite", us: true, others: false },
-  { feature: "Garantie décennale", us: true, others: true },
-  { feature: "Garantie étanchéité 10 ans", us: true, others: false },
-  { feature: "Matériaux certifiés", us: true, others: false },
-  { feature: "Artisans formés en continu", us: true, others: false },
-  { feature: "Prix ferme et définitif", us: true, others: false },
-  { feature: "Respect strict des délais", us: true, others: false },
-  { feature: "Nettoyage complet du chantier", us: true, others: false },
-  { feature: "Suivi après livraison", us: true, others: false },
-];
-
+import { MessageSquare, Palette, Diamond, Hammer, Shield, Headphones, Check, X, ArrowRight } from "lucide-react";
+const benefits = [{
+  icon: MessageSquare,
+  title: "Conseil personnalisé",
+  description: "Une étude gratuite de votre projet avec des conseils sur mesure. Nous analysons votre espace, vos besoins et vos envies pour vous proposer la solution idéale."
+}, {
+  icon: Palette,
+  title: "Design sur mesure",
+  description: "Chaque projet est unique. Nous concevons votre douche à l'italienne selon vos goûts, votre style de vie et les contraintes de votre espace."
+}, {
+  icon: Diamond,
+  title: "Matériaux premium",
+  description: "Nous sélectionnons les meilleurs matériaux auprès de fournisseurs reconnus : carrelages haut de gamme, robinetterie de qualité, verre trempé."
+}, {
+  icon: Hammer,
+  title: "Pose experte",
+  description: "Nos artisans qualifiés maîtrisent les techniques les plus avancées. Chaque pose est réalisée dans les règles de l'art pour un résultat impeccable."
+}, {
+  icon: Shield,
+  title: "Étanchéité garantie",
+  description: "Notre système d'étanchéité certifié vous protège pendant 10 ans. Aucun compromis sur la qualité de l'imperméabilisation."
+}, {
+  icon: Headphones,
+  title: "Service après-vente",
+  description: "Une équipe disponible pour répondre à toutes vos questions après la livraison. Nous restons à vos côtés pour garantir votre satisfaction."
+}];
+const comparison = [{
+  feature: "Étude personnalisée gratuite",
+  us: true,
+  others: false
+}, {
+  feature: "Garantie décennale",
+  us: true,
+  others: true
+}, {
+  feature: "Garantie étanchéité 10 ans",
+  us: true,
+  others: false
+}, {
+  feature: "Matériaux certifiés",
+  us: true,
+  others: false
+}, {
+  feature: "Artisans formés en continu",
+  us: true,
+  others: false
+}, {
+  feature: "Prix ferme et définitif",
+  us: true,
+  others: false
+}, {
+  feature: "Respect strict des délais",
+  us: true,
+  others: false
+}, {
+  feature: "Nettoyage complet du chantier",
+  us: true,
+  others: false
+}, {
+  feature: "Suivi après livraison",
+  us: true,
+  others: false
+}];
 export default function WhyUs() {
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero */}
       <section className="relative py-24 md:py-32">
         <div className="absolute inset-0 bg-stone" />
         <div className="relative container-custom">
-          <motion.div 
-            className="max-w-3xl"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <motion.div className="max-w-3xl" initial={{
+          opacity: 0,
+          y: 30
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6
+        }}>
             <span className="inline-block px-4 py-2 rounded-full bg-accent/30 text-wood text-sm font-medium mb-6">
               Pourquoi nous choisir
             </span>
             <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6">
-              La différence Atelier Douche Design
+              La différence avec renovermasalledebain.com  
             </h1>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              Découvrez pourquoi des centaines de clients nous font confiance 
-              pour créer leur douche à l'italienne.
-            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed">Découvrez pourquoi les  clients nous font confiance pour renover leur salle de bain</p>
           </motion.div>
         </div>
       </section>
@@ -82,12 +94,15 @@ export default function WhyUs() {
       {/* Benefits */}
       <section className="section-padding">
         <div className="container-custom">
-          <motion.div 
-            className="text-center max-w-3xl mx-auto mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <motion.div className="text-center max-w-3xl mx-auto mb-16" initial={{
+          opacity: 0,
+          y: 30
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }}>
             <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
               Nos engagements qualité
             </h2>
@@ -97,22 +112,23 @@ export default function WhyUs() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                className="card-elevated card-hover p-8"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
+            {benefits.map((benefit, index) => <motion.div key={index} className="card-elevated card-hover p-8" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            delay: index * 0.1
+          }}>
                 <div className="w-14 h-14 rounded-2xl bg-accent/30 flex items-center justify-center mb-6">
                   <benefit.icon className="w-7 h-7 text-wood" />
                 </div>
                 <h3 className="font-display text-xl font-semibold mb-3">{benefit.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
-              </motion.div>
-            ))}
+              </motion.div>)}
           </div>
         </div>
       </section>
@@ -120,12 +136,15 @@ export default function WhyUs() {
       {/* Comparison Table */}
       <section className="section-padding bg-stone">
         <div className="container-custom">
-          <motion.div 
-            className="text-center max-w-3xl mx-auto mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <motion.div className="text-center max-w-3xl mx-auto mb-16" initial={{
+          opacity: 0,
+          y: 30
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }}>
             <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
               Nous vs entreprises standards
             </h2>
@@ -134,12 +153,15 @@ export default function WhyUs() {
             </p>
           </motion.div>
 
-          <motion.div 
-            className="max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <motion.div className="max-w-4xl mx-auto" initial={{
+          opacity: 0,
+          y: 30
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }}>
             <div className="card-elevated overflow-hidden">
               {/* Header */}
               <div className="grid grid-cols-3 bg-primary text-primary-foreground p-4 font-semibold">
@@ -149,38 +171,23 @@ export default function WhyUs() {
               </div>
               
               {/* Rows */}
-              {comparison.map((row, index) => (
-                <div 
-                  key={index}
-                  className={`grid grid-cols-3 p-4 items-center ${
-                    index % 2 === 0 ? 'bg-background' : 'bg-muted/30'
-                  }`}
-                >
+              {comparison.map((row, index) => <div key={index} className={`grid grid-cols-3 p-4 items-center ${index % 2 === 0 ? 'bg-background' : 'bg-muted/30'}`}>
                   <div className="text-foreground">{row.feature}</div>
                   <div className="flex justify-center">
-                    {row.us ? (
-                      <div className="w-8 h-8 rounded-full bg-cta/20 flex items-center justify-center">
+                    {row.us ? <div className="w-8 h-8 rounded-full bg-cta/20 flex items-center justify-center">
                         <Check className="w-5 h-5 text-cta" />
-                      </div>
-                    ) : (
-                      <div className="w-8 h-8 rounded-full bg-destructive/20 flex items-center justify-center">
+                      </div> : <div className="w-8 h-8 rounded-full bg-destructive/20 flex items-center justify-center">
                         <X className="w-5 h-5 text-destructive" />
-                      </div>
-                    )}
+                      </div>}
                   </div>
                   <div className="flex justify-center">
-                    {row.others ? (
-                      <div className="w-8 h-8 rounded-full bg-cta/20 flex items-center justify-center">
+                    {row.others ? <div className="w-8 h-8 rounded-full bg-cta/20 flex items-center justify-center">
                         <Check className="w-5 h-5 text-cta" />
-                      </div>
-                    ) : (
-                      <div className="w-8 h-8 rounded-full bg-destructive/20 flex items-center justify-center">
+                      </div> : <div className="w-8 h-8 rounded-full bg-destructive/20 flex items-center justify-center">
                         <X className="w-5 h-5 text-destructive" />
-                      </div>
-                    )}
+                      </div>}
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </motion.div>
         </div>
@@ -189,12 +196,15 @@ export default function WhyUs() {
       {/* Testimonial */}
       <section className="section-padding bg-primary text-primary-foreground">
         <div className="container-custom">
-          <motion.div 
-            className="max-w-4xl mx-auto text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <motion.div className="max-w-4xl mx-auto text-center" initial={{
+          opacity: 0,
+          y: 30
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }}>
             <blockquote className="font-display text-2xl md:text-3xl italic mb-8">
               "Le professionnalisme de l'équipe Atelier Douche Design est remarquable. 
               Du premier contact jusqu'à la livraison, tout a été parfait. 
@@ -208,12 +218,15 @@ export default function WhyUs() {
       {/* CTA */}
       <section className="section-padding">
         <div className="container-custom text-center">
-          <motion.div
-            className="max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <motion.div className="max-w-2xl mx-auto" initial={{
+          opacity: 0,
+          y: 30
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }}>
             <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6">
               Convaincu par notre approche ?
             </h2>
@@ -230,6 +243,5 @@ export default function WhyUs() {
           </motion.div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 }
