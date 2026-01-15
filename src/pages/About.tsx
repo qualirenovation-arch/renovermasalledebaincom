@@ -22,7 +22,6 @@ const guarantees = [
 ];
 
 const certifications = [
-  "Qualibat RGE",
   "Certifié Schlüter-Systems",
   "Certifié Wedi",
   "Formation continue de nos équipes",
