@@ -138,7 +138,7 @@ export default function Index() {
             </motion.span>
             
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 leading-tight">
-              Création de douches à l'italienne
+              Rénovation de salle de bain & douche à l'italienne à Paris
             </h1>
             
             <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 leading-relaxed">
