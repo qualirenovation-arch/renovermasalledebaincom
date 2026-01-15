@@ -76,6 +76,14 @@ import vincennesMr1 from "@/assets/vincennes-mr-1.jpg";
 import vincennesMr2 from "@/assets/vincennes-mr-2.jpg";
 import vincennesMr3 from "@/assets/vincennes-mr-3.jpg";
 import vincennesMr4 from "@/assets/vincennes-mr-4.jpg";
+import vincennesMr5 from "@/assets/vincennes-mr-5.jpg";
+import vincennesMr6 from "@/assets/vincennes-mr-6.jpg";
+import vincennesMr7 from "@/assets/vincennes-mr-7.jpg";
+import vincennesMr8 from "@/assets/vincennes-mr-8.jpg";
+import vincennesMr9 from "@/assets/vincennes-mr-9.jpg";
+import vincennesMr10 from "@/assets/vincennes-mr-10.jpg";
+import vincennesMr11 from "@/assets/vincennes-mr-11.jpg";
+import vincennesMr12 from "@/assets/vincennes-mr-12.jpg";
 
 type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "convention" | "jemmapes" | "boiscolombes" | "vincennesmr";
 
@@ -652,6 +660,70 @@ const projects: Project[] = [
     description: "Paris 12ème - Cours de Vincennes",
     category: ["grande", "moderne", "pierre", "vincennesmr"],
     details: "Détail de la douche : robinetterie thermostatique noire encastrée, ciel de pluie XXL, douchette sur flexible. Niche de rangement carrelée marbre pour produits.",
+  },
+  {
+    id: 76,
+    image: vincennesMr5,
+    title: "Miroir et reflets",
+    description: "Paris 12ème - Cours de Vincennes",
+    category: ["grande", "moderne", "pierre", "vincennesmr"],
+    details: "Grand miroir numérique avec éclairage LED intégré. Reflet de la douche verrière et fenêtre bois. Vasque en solid surface blanc, robinetterie noire mate.",
+  },
+  {
+    id: 77,
+    image: vincennesMr6,
+    title: "Sèche-serviettes design",
+    description: "Paris 12ème - Cours de Vincennes",
+    category: ["grande", "moderne", "pierre", "vincennesmr"],
+    details: "Sèche-serviettes noir mat électrique avec programmateur. Colonne de rangement noyer toute hauteur. Carrelage marbre Calacatta or du sol au plafond.",
+  },
+  {
+    id: 78,
+    image: vincennesMr7,
+    title: "Niche et robinetterie douche",
+    description: "Paris 12ème - Cours de Vincennes",
+    category: ["grande", "moderne", "pierre", "vincennesmr"],
+    details: "Détail de la niche de rangement carrelée marbre. Robinetterie thermostatique encastrée noire, douchette ergonomique. Produits haut de gamme en présentation.",
+  },
+  {
+    id: 79,
+    image: vincennesMr8,
+    title: "Colonne rangement noyer",
+    description: "Paris 12ème - Cours de Vincennes",
+    category: ["grande", "moderne", "pierre", "vincennesmr"],
+    details: "Colonne de rangement sur-mesure en noyer avec boutons noirs. Espace optimisé du sol au plafond, reflet dans le miroir. Harmonie bois et marbre.",
+  },
+  {
+    id: 80,
+    image: vincennesMr9,
+    title: "Buanderie intégrée",
+    description: "Paris 12ème - Cours de Vincennes",
+    category: ["grande", "moderne", "pierre", "vincennesmr"],
+    details: "Espace buanderie dissimulé dans la colonne noyer : lave-linge et sèche-linge superposés, étagères pour serviettes, rangements produits. Solution gain de place élégante.",
+  },
+  {
+    id: 81,
+    image: vincennesMr10,
+    title: "Vue depuis la douche",
+    description: "Paris 12ème - Cours de Vincennes",
+    category: ["grande", "moderne", "pierre", "vincennesmr"],
+    details: "Perspective depuis la paroi verrière : vasque noyer, grand miroir, colonne rangement. Fenêtre bois apportant lumière naturelle. Sol et murs marbre Calacatta.",
+  },
+  {
+    id: 82,
+    image: vincennesMr11,
+    title: "Vue panoramique",
+    description: "Paris 12ème - Cours de Vincennes",
+    category: ["grande", "moderne", "pierre", "vincennesmr"],
+    details: "Vue d'ensemble : douche XXL avec ciel de pluie noir encastré, niche produits, vasque design, colonne rangement. Harmonie parfaite marbre, noyer et noir.",
+  },
+  {
+    id: 83,
+    image: vincennesMr12,
+    title: "Espace douche complet",
+    description: "Paris 12ème - Cours de Vincennes",
+    category: ["grande", "moderne", "pierre", "vincennesmr"],
+    details: "Douche à l'italienne spacieuse avec ciel de pluie XXL noir, paroi verrière, niche de rangement. Vue sur fenêtre bois et meuble vasque. Luminosité optimale.",
   },
   // Photos AVANT - Paris 12ème Cours de Vincennes
   {
