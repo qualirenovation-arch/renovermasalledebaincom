@@ -97,7 +97,7 @@ export function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-primary-foreground/10">
         <div className="container-custom py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
-          <p>© 2024 Atelier Douche Design. Tous droits réservés.</p>
+          <p>© 2024 Atelier Douche Design — Une marque Qualirenovation by Qualiconcept dédiée aux salles de bain. Tous droits réservés.</p>
           <div className="flex gap-6">
             <Link to="/mentions-legales" className="hover:text-primary-foreground transition-colors">
               Mentions légales
