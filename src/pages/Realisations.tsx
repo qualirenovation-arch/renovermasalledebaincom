@@ -47,8 +47,11 @@ import convention3 from "@/assets/courbevoie-3.jpg";
 import convention4 from "@/assets/courbevoie-4.jpg";
 import convention5 from "@/assets/courbevoie-5.jpg";
 import convention6 from "@/assets/courbevoie-6.jpg";
+import butteschaumont1 from "@/assets/buttes-chaumont-1.jpg";
+import butteschaumont2 from "@/assets/buttes-chaumont-2.jpg";
+import butteschaumont3 from "@/assets/buttes-chaumont-3.jpg";
 
-type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "convention";
+type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "convention" | "encours";
 
 interface Project {
   id: number;
@@ -404,10 +407,35 @@ const projects: Project[] = [
     category: ["moderne", "convention"],
     details: "Vue depuis l'entrée sur les toilettes design : WC suspendu, carrelage métro blanc, murs bleu profond avec niche bois et rangement supérieur. Cadre décoratif et ampoule vintage.",
   },
+  {
+    id: 44,
+    image: butteschaumont1,
+    title: "État initial - Vue lavabo",
+    description: "🚧 Chantier en cours - Paris 19ème",
+    category: ["petite", "encours"],
+    details: "Petite salle de bain avant rénovation : lavabo avec meuble sous vasque, paroi de douche vitrée décorative, carrelage blanc avec frise bleue. Transformation prévue en douche à l'italienne moderne.",
+  },
+  {
+    id: 45,
+    image: butteschaumont2,
+    title: "État initial - Espace douche",
+    description: "🚧 Chantier en cours - Paris 19ème",
+    category: ["petite", "encours"],
+    details: "Vue sur la douche existante avec cabine vitrée décorée, sol carrelage octogonal blanc et bleu. Projet de rénovation complète en cours.",
+  },
+  {
+    id: 46,
+    image: butteschaumont3,
+    title: "État initial - Vue d'entrée",
+    description: "🚧 Chantier en cours - Paris 19ème",
+    category: ["petite", "encours"],
+    details: "Vue depuis l'entrée de la salle de bain à rénover, passage voûté caractéristique. Travaux de transformation en cours pour créer une douche à l'italienne optimisée.",
+  },
 ];
 
 const categories: { id: Category; label: string }[] = [
   { id: "all", label: "Tous" },
+  { id: "encours", label: "🚧 Chantier en cours" },
   { id: "convention", label: "Paris 15ème - Convention" },
   { id: "severac", label: "Paris 17ème - Suite Parentale Ternes" },
   { id: "paris10", label: "Paris 10ème" },
