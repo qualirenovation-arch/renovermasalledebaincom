@@ -72,8 +72,12 @@ import boisColombes11 from "@/assets/bois-colombes-11.jpg";
 import vincennes1 from "@/assets/vincennes-1.jpg";
 import vincennes2 from "@/assets/vincennes-2.jpg";
 import vincennes3 from "@/assets/vincennes-3.jpg";
+import vincennesMr1 from "@/assets/vincennes-mr-1.jpg";
+import vincennesMr2 from "@/assets/vincennes-mr-2.jpg";
+import vincennesMr3 from "@/assets/vincennes-mr-3.jpg";
+import vincennesMr4 from "@/assets/vincennes-mr-4.jpg";
 
-type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "convention" | "jemmapes" | "boiscolombes";
+type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "convention" | "jemmapes" | "boiscolombes" | "vincennesmr";
 
 type InProgressCategory = "all-progress" | "butteschaumont" | "taitbout" | "rocroy" | "vincennes";
 
@@ -644,10 +648,48 @@ const projects: Project[] = [
     details: "Vue d'ensemble de la pièce d'eau existante : douche, zone buanderie, accès vers les autres pièces. Réaménagement complet prévu avec douche à l'italienne.",
     isInProgress: true,
   },
+  // Réalisations terminées - Paris 12ème Cours de Vincennes - SDB Monsieur
+  {
+    id: 69,
+    image: vincennesMr1,
+    title: "Vue d'ensemble SDB Monsieur",
+    description: "Paris 12ème - Cours de Vincennes",
+    category: ["grande", "moderne", "pierre", "vincennesmr"],
+    details: "Salle de bain masculine haut de gamme : carrelage effet marbre Calacatta or, meuble vasque noyer sur-mesure, paroi de douche verrière noire. Rangement colonne intégré.",
+  },
+  {
+    id: 70,
+    image: vincennesMr2,
+    title: "Vasque et miroir",
+    description: "Paris 12ème - Cours de Vincennes",
+    category: ["grande", "moderne", "pierre", "vincennesmr"],
+    details: "Plan vasque en solid surface blanc avec meuble noyer sans poignées. Grand miroir rétroéclairé, robinetterie noire mate. Carrelage mural marbre veiné or du sol au plafond.",
+  },
+  {
+    id: 71,
+    image: vincennesMr3,
+    title: "Douche verrière noire",
+    description: "Paris 12ème - Cours de Vincennes",
+    category: ["grande", "moderne", "pierre", "vincennesmr"],
+    details: "Douche spacieuse avec paroi verrière noire style atelier. Ciel de pluie encastré noir mat, douchette assortie. Niche de rangement intégrée. Receveur extra-plat blanc.",
+  },
+  {
+    id: 72,
+    image: vincennesMr4,
+    title: "Robinetterie et niche",
+    description: "Paris 12ème - Cours de Vincennes",
+    category: ["grande", "moderne", "pierre", "vincennesmr"],
+    details: "Détail de la douche : robinetterie thermostatique noire encastrée, ciel de pluie XXL, douchette sur flexible. Niche de rangement carrelée marbre pour produits.",
+  },
 ];
 
 const categories: { id: Category; label: string; description?: string }[] = [
   { id: "all", label: "Tous" },
+  { 
+    id: "vincennesmr", 
+    label: "Paris 12ème - Cours de Vincennes",
+    description: "Salle de bain masculine haut de gamme au Cours de Vincennes.\nCarrelage effet marbre Calacatta or, meuble vasque noyer sur-mesure.\nDouche verrière noire, robinetterie mate, ciel de pluie XXL."
+  },
   { 
     id: "boiscolombes", 
     label: "Bois-Colombes - Avant/Après",
