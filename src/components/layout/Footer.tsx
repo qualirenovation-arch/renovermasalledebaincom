@@ -14,6 +14,9 @@ const footerLinks = {
     label: "Réalisations",
     path: "/realisations"
   }, {
+    label: "FAQ",
+    path: "/faq"
+  }, {
     label: "Demande de devis",
     path: "/devis"
   }],
