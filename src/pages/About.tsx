@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { Shield, Award, Users, Clock, CheckCircle2, ArrowRight } from "lucide-react";
-import gallery2 from "@/assets/gallery-2.jpg";
+import aboutHistoire from "@/assets/about-histoire.jpg";
 
 const values = [
   { icon: Award, title: "Excellence", description: "Nous visons la perfection dans chaque détail de nos réalisations" },
@@ -103,8 +103,8 @@ export default function About() {
               viewport={{ once: true }}
             >
               <img 
-                src={gallery2} 
-                alt="Notre savoir-faire" 
+                src={aboutHistoire} 
+                alt="Rénovation salle de bain haut de gamme - Notre savoir-faire" 
                 className="w-full h-full object-cover"
               />
             </motion.div>
