@@ -23,8 +23,8 @@ const guarantees = [
 
 const certifications = [
   "Qualibat RGE",
-  "Artisan certifié",
-  "Partenaire agréé des grandes marques",
+  "Certifié Schlüter-Systems",
+  "Certifié Wedi",
   "Formation continue de nos équipes",
 ];
 
