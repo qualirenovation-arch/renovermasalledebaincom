@@ -727,14 +727,6 @@ const projects: Project[] = [
   },
   // Photos AVANT - Paris 12ème Cours de Vincennes
   {
-    id: 73,
-    image: vincennes1,
-    title: "Avant - L'ancienne douche",
-    description: "Paris 12ème - Cours de Vincennes",
-    category: ["vincennesmr", "avant-apres"],
-    details: "Le point de départ : une cabine de douche quart de cercle datée, paroi coulissante ternie, carrelage gris sans âme. Difficile d'imaginer qu'ici naîtra une douche à l'italienne XXL avec verrière noire et ciel de pluie encastré...",
-  },
-  {
     id: 74,
     image: vincennes2,
     title: "Avant - L'espace à réinventer",
