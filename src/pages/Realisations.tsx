@@ -109,22 +109,6 @@ const projects: Project[] = [
     details: "Transformation d'une petite salle de bain de 4m² en espace moderne avec douche à l'italienne. Carrelage grand format blanc, robinetterie noire mate, paroi en verre trempé fixe.",
   },
   {
-    id: 5,
-    image: gallery5,
-    title: "Avant / Après spectaculaire",
-    description: "Rénovation complète - Versailles",
-    category: ["avant-apres"],
-    details: "Transformation radicale d'une salle de bain datée. Avant : douche classique avec receveur. Après : douche à l'italienne avec marbre et paroi fixe.",
-  },
-  {
-    id: 6,
-    image: gallery6,
-    title: "Style terrazzo épuré",
-    description: "Loft contemporain - Montreuil",
-    category: ["moderne", "petite"],
-    details: "Douche à l'italienne ultra-minimaliste avec sol en terrazzo, paroi transparente et murs blancs. Design scandinave et lignes épurées.",
-  },
-  {
     id: 7,
     image: gallery7,
     title: "Élégance dorée et marbre",
