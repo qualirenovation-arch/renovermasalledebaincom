@@ -58,8 +58,12 @@ import taitbout2 from "@/assets/taitbout-2.jpg";
 import taitbout3 from "@/assets/taitbout-3.jpg";
 import rocroy1 from "@/assets/rocroy-1.jpg";
 import rocroy2 from "@/assets/rocroy-2.jpg";
+import boisColombes1 from "@/assets/bois-colombes-1.jpg";
+import boisColombes2 from "@/assets/bois-colombes-2.jpg";
+import boisColombes3 from "@/assets/bois-colombes-3.jpg";
+import boisColombes4 from "@/assets/bois-colombes-4.jpg";
 
-type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "convention" | "butteschaumont" | "jemmapes" | "taitbout" | "rocroy";
+type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "convention" | "butteschaumont" | "jemmapes" | "taitbout" | "rocroy" | "boiscolombes";
 
 interface Project {
   id: number;
@@ -503,10 +507,43 @@ const projects: Project[] = [
     category: ["petite", "rocroy", "avant-apres"],
     details: "Salle de bain avant travaux : baignoire d'angle à remplacer, carrelage blanc et frise dorée datée, sol en terre cuite. Transformation prévue en douche à l'italienne moderne.",
   },
+  {
+    id: 55,
+    image: boisColombes1,
+    title: "État avant travaux",
+    description: "Avant / Après - Bois-Colombes",
+    category: ["petite", "boiscolombes", "avant-apres"],
+    details: "Salle de bain avant rénovation : murs gris foncé, baignoire avec rideau, machine à laver sous plan de travail, sol carrelé noir et blanc. Ambiance sombre à moderniser.",
+  },
+  {
+    id: 56,
+    image: boisColombes2,
+    title: "Résultat - Vue générale",
+    description: "Rénovation complète - Bois-Colombes",
+    category: ["petite", "moderne", "boiscolombes"],
+    details: "Transformation complète : douche à l'italienne avec paroi dorée, carrelage mural chevrons blanc, sol terrazzo multicolore, murs vert d'eau. Robinetterie dorée élégante.",
+  },
+  {
+    id: 57,
+    image: boisColombes3,
+    title: "Résultat - Meuble vasque",
+    description: "Rénovation complète - Bois-Colombes",
+    category: ["petite", "moderne", "boiscolombes"],
+    details: "Meuble vasque blanc suspendu avec plan sur mesure, robinetterie dorée. Placard sur mesure vert d'eau avec intégration machine à laver. Plafonnier rond moderne, miroir rectangulaire.",
+  },
+  {
+    id: 58,
+    image: boisColombes4,
+    title: "Détail - Sèche-serviettes doré",
+    description: "Rénovation complète - Bois-Colombes",
+    category: ["petite", "moderne", "boiscolombes"],
+    details: "Sèche-serviettes électrique doré : finition laiton brossé assortie à la robinetterie et paroi de douche. Murs vert d'eau pour une ambiance douce et moderne.",
+  },
 ];
 
 const categories: { id: Category; label: string }[] = [
   { id: "all", label: "Tous" },
+  { id: "boiscolombes", label: "Bois-Colombes - Avant/Après" },
   { id: "rocroy", label: "🚧 Paris 10ème - Rue de Rocroy" },
   { id: "taitbout", label: "🚧 Paris 9ème - Rue Taitbout" },
   { id: "butteschaumont", label: "🚧 Paris 19ème - Buttes-Chaumont" },
