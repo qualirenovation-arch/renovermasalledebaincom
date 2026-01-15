@@ -23,6 +23,7 @@ import stylesCarrelageImage from "@/assets/styles-carrelage-fr.jpg";
 import paroisDoucheImage from "@/assets/parois-douche.jpg";
 import meublesVasqueImage from "@/assets/meubles-vasque.jpg";
 import wcTypesImage from "@/assets/wc-types.jpg";
+import pommeauxDoucheImage from "@/assets/pommeaux-douche.jpg";
 
 interface FormData {
   prenom: string;
@@ -546,6 +547,16 @@ export default function Devis() {
 
                       <div>
                         <Label className="text-sm font-medium text-muted-foreground mb-3 block">Style de pommeau</Label>
+                        
+                        {/* Image de référence pommeaux */}
+                        <div className="mb-4 rounded-2xl overflow-hidden">
+                          <img 
+                            src={pommeauxDoucheImage} 
+                            alt="Styles de pommeaux - Douchette à main, Pommeau fixe, Fixe + douchette, Colonne complète" 
+                            className="w-full h-auto"
+                          />
+                        </div>
+
                         <RadioGroup 
                           value={formData.typePommeau} 
                           onValueChange={(value) => handleChange("typePommeau", value)}
