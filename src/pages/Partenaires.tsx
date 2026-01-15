@@ -25,7 +25,7 @@ const partners = [
   { name: "Rue du Bain", url: "https://www.ruedubain.com", description: "Équipements de salle de bain" },
   { name: "Tots", url: "#", description: "Aménagement intérieur" },
   { name: "Democratik Design", url: "#", description: "Design et décoration" },
-  { name: "Houzz", url: "https://www.houzz.fr/pro/qualirenovation", description: "Notre profil professionnel" },
+  { name: "Houzz", url: "https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept", description: "Notre profil professionnel" },
   { name: "Parquet-Carrelage.com", url: "https://www.parquet-carrelage.com", description: "Revêtements de sol" },
   { name: "Poalgi", url: "https://www.poalgi.com", description: "Éviers et vasques design" },
   { name: "IKEA", url: "https://www.ikea.com/fr", description: "Mobilier et accessoires" },
