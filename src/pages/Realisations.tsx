@@ -65,6 +65,9 @@ import boisColombes8 from "@/assets/bois-colombes-8.jpg";
 import boisColombes9 from "@/assets/bois-colombes-9.jpg";
 import boisColombes10 from "@/assets/bois-colombes-10.jpg";
 import boisColombes11 from "@/assets/bois-colombes-11.jpg";
+import boisColombresAvant1 from "@/assets/bois-colombes-avant-1.jpg";
+import boisColombresAvant2 from "@/assets/bois-colombes-avant-2.jpg";
+import boisColombresAvant3 from "@/assets/bois-colombes-avant-3.jpg";
 
 // Vincennes SDB Monsieur
 import vincennesMr1 from "@/assets/vincennes-mr-1.jpg";
@@ -159,10 +162,9 @@ const albums: Album[] = [
       { id: 5, image: boisColombes6, title: "Espace optimisé", description: "Chaque cm² utilisé" },
       { id: 6, image: boisColombes10, title: "Travaux - Démolition", description: "Phase de dépose" },
       { id: 7, image: boisColombes11, title: "Travaux - Préparation", description: "Mise à nu des murs" },
-      { id: 8, image: boisColombes1, title: "Avant - État initial", description: "Salle de bain datée" },
-      { id: 9, image: boisColombes7, title: "Avant - Vue d'ensemble", description: "Espace à transformer" },
-      { id: 10, image: boisColombes8, title: "Avant - Ancienne douche", description: "Cabine à remplacer" },
-      { id: 11, image: boisColombes9, title: "Avant - Détails", description: "Équipements vétustes" },
+      { id: 8, image: boisColombresAvant1, title: "Avant - Vue d'ensemble", description: "Salle de bain avec baignoire" },
+      { id: 9, image: boisColombresAvant2, title: "Avant - Vasque", description: "Ancien meuble vasque" },
+      { id: 10, image: boisColombresAvant3, title: "Avant - Coin buanderie", description: "Espace lave-linge" },
     ],
   },
   {
