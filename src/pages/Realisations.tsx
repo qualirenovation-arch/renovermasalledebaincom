@@ -62,6 +62,10 @@ import boisColombes1 from "@/assets/bois-colombes-1.jpg";
 import boisColombes2 from "@/assets/bois-colombes-2.jpg";
 import boisColombes3 from "@/assets/bois-colombes-3.jpg";
 import boisColombes4 from "@/assets/bois-colombes-4.jpg";
+import boisColombes5 from "@/assets/bois-colombes-5.jpg";
+import boisColombes6 from "@/assets/bois-colombes-6.jpg";
+import boisColombes7 from "@/assets/bois-colombes-7.jpg";
+import boisColombes8 from "@/assets/bois-colombes-8.jpg";
 
 type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "convention" | "butteschaumont" | "jemmapes" | "taitbout" | "rocroy" | "boiscolombes";
 
@@ -538,6 +542,38 @@ const projects: Project[] = [
     description: "Rénovation complète - Bois-Colombes",
     category: ["petite", "moderne", "boiscolombes"],
     details: "Sèche-serviettes électrique doré : finition laiton brossé assortie à la robinetterie et paroi de douche. Murs vert d'eau pour une ambiance douce et moderne.",
+  },
+  {
+    id: 59,
+    image: boisColombes5,
+    title: "Détail - Vasque et miroir connecté",
+    description: "Rénovation complète - Bois-Colombes",
+    category: ["petite", "moderne", "boiscolombes"],
+    details: "Vasque rectangulaire blanche avec robinetterie dorée. Miroir LED connecté avec affichage digital. Plantes vertes en décoration sur étagère haute. Carrelage chevrons blanc en crédence.",
+  },
+  {
+    id: 60,
+    image: boisColombes6,
+    title: "Détail - Niche terrazzo",
+    description: "Rénovation complète - Bois-Colombes",
+    category: ["petite", "moderne", "boiscolombes"],
+    details: "Niche de rangement intégrée dans la douche : revêtement terrazzo multicolore assorti au sol. Encadrement carrelage chevrons blanc pour un contraste élégant.",
+  },
+  {
+    id: 61,
+    image: boisColombes7,
+    title: "Détail - Paroi et niche",
+    description: "Rénovation complète - Bois-Colombes",
+    category: ["petite", "moderne", "boiscolombes"],
+    details: "Vue sur la paroi de douche dorée avec poignée laiton brossé. Niche intégrée en terrazzo pour rangement produits. Carrelage chevrons blanc du sol au plafond.",
+  },
+  {
+    id: 62,
+    image: boisColombes8,
+    title: "Détail - Robinetterie dorée",
+    description: "Rénovation complète - Bois-Colombes",
+    category: ["petite", "moderne", "boiscolombes"],
+    details: "Gros plan sur la robinetterie dorée haut de gamme : mitigeur mono-commande en laiton brossé. Miroir connecté avec horloge digitale intégrée visible en reflet.",
   },
 ];
 
