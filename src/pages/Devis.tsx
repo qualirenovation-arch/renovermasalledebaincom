@@ -364,7 +364,7 @@ export default function Devis() {
 
                 <div className="space-y-6">
                   <a 
-                    href="tel:+33123456789"
+                    href="tel:+33659764685"
                     className="flex items-center gap-4 p-4 rounded-xl bg-secondary hover:bg-secondary/80 transition-colors"
                   >
                     <div className="w-12 h-12 rounded-full bg-accent/30 flex items-center justify-center">
@@ -372,7 +372,7 @@ export default function Devis() {
                     </div>
                     <div>
                       <p className="font-semibold">Téléphone</p>
-                      <p className="text-muted-foreground">01 23 45 67 89</p>
+                      <p className="text-muted-foreground">06 59 76 46 85</p>
                     </div>
                   </a>
 
