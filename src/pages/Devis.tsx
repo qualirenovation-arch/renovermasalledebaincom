@@ -9,22 +9,14 @@ import { useToast } from "@/hooks/use-toast";
 import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { 
-  CheckCircle2, 
   Upload, 
   Phone, 
   Mail, 
   MapPin, 
-  ShowerHead, 
-  Droplets,
-  DoorOpen,
-  Grid3X3,
-  Palette,
-  Layers,
-  FileText,
-  User,
-  Sparkles,
-  Square,
-  CalendarCheck
+  CalendarCheck,
+  Pencil,
+  Gem,
+  Wrench
 } from "lucide-react";
 
 interface FormData {
@@ -63,90 +55,124 @@ const initialFormData: FormData = {
   message: "",
 };
 
-// 🚿 Receveur de douche
+// Pictos SVG personnalisés
+const ReceveurIcon = () => (
+  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <rect x="2" y="4" width="20" height="16" rx="2" />
+    <line x1="2" y1="12" x2="22" y2="12" />
+  </svg>
+);
+
+const ParoiIcon = () => (
+  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <rect x="4" y="2" width="16" height="20" rx="1" />
+    <line x1="12" y1="2" x2="12" y2="22" />
+    <circle cx="10" cy="12" r="1" fill="currentColor" />
+  </svg>
+);
+
+const RobinetterieIcon = () => (
+  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <circle cx="12" cy="6" r="4" />
+    <path d="M12 10v8" />
+    <path d="M8 14h8" />
+    <circle cx="12" cy="20" r="2" />
+  </svg>
+);
+
+const CarrelageIcon = () => (
+  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <rect x="2" y="2" width="9" height="9" />
+    <rect x="13" y="2" width="9" height="9" />
+    <rect x="2" y="13" width="9" height="9" />
+    <rect x="13" y="13" width="9" height="9" />
+  </svg>
+);
+
+const FinitionsIcon = () => (
+  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+    <path d="M2 17l10 5 10-5" />
+    <path d="M2 12l10 5 10-5" />
+  </svg>
+);
+
+// Options avec pictogrammes
 const receveurOptions = [
-  { label: "Receveur extra-plat", icon: "⬜" },
-  { label: "Receveur à carreler (SPEC)", icon: "🔲" },
-  { label: "Receveur en pierre naturelle", icon: "🪨" },
-  { label: "Receveur en résine", icon: "✨" },
-  { label: "Je ne sais pas encore", icon: "❓" },
+  { label: "Receveur extra-plat", value: "extra-plat" },
+  { label: "Receveur à carreler (SPEC)", value: "carreler" },
+  { label: "Receveur en pierre naturelle", value: "pierre" },
+  { label: "Receveur en résine", value: "resine" },
+  { label: "Je ne sais pas encore", value: "indecis" },
 ];
 
-// 🚪 Porte de douche / Paroi
 const porteOptions = [
-  { label: "Paroi fixe", icon: "▯" },
-  { label: "Paroi battante", icon: "🚪" },
-  { label: "Paroi coulissante", icon: "↔️" },
-  { label: "Paroi pivotante", icon: "🔄" },
-  { label: "Paroi walk-in (sans porte)", icon: "🚶" },
-  { label: "Je ne sais pas encore", icon: "❓" },
+  { label: "Paroi fixe", value: "fixe" },
+  { label: "Paroi battante", value: "battante" },
+  { label: "Paroi coulissante", value: "coulissante" },
+  { label: "Paroi pivotante", value: "pivotante" },
+  { label: "Paroi walk-in (sans porte)", value: "walkin" },
+  { label: "Je ne sais pas encore", value: "indecis" },
 ];
 
-// 🔧 Robinetterie
 const robinetterieOptions = [
-  { label: "Colonne de douche apparente", icon: "🚿" },
-  { label: "Colonne de douche encastrée", icon: "💧" },
-  { label: "Mitigeur thermostatique", icon: "🌡️" },
-  { label: "Mitigeur mécanique", icon: "🔧" },
-  { label: "Douchette à main", icon: "🤚" },
-  { label: "Pomme de tête fixe (pluie)", icon: "🌧️" },
+  { label: "Colonne de douche apparente", value: "apparente" },
+  { label: "Colonne de douche encastrée", value: "encastree" },
+  { label: "Mitigeur thermostatique", value: "thermostatique" },
+  { label: "Mitigeur mécanique", value: "mecanique" },
+  { label: "Douchette à main", value: "douchette" },
+  { label: "Pomme de tête fixe (pluie)", value: "pluie" },
 ];
 
-// 🪞 Finitions robinetterie
 const finitionsOptions = [
-  { label: "Laiton brossé", icon: "🥇" },
-  { label: "Nickel brossé", icon: "🔘" },
-  { label: "Noir mat", icon: "⚫" },
-  { label: "Chromé", icon: "💎" },
-  { label: "Or brossé", icon: "✨" },
+  { label: "Laiton brossé", value: "laiton", color: "bg-[#C9A962]" },
+  { label: "Nickel brossé", value: "nickel", color: "bg-[#A0A0A0]" },
+  { label: "Noir mat", value: "noir", color: "bg-[#2D2D2D]" },
+  { label: "Chromé", value: "chrome", color: "bg-[#D4D4D4]" },
+  { label: "Or brossé", value: "or", color: "bg-[#D4AF37]" },
 ];
 
-// 🧱 Zones à carreler
 const zonesCarrelageOptions = [
-  { label: "Mur de la douche", icon: "🧱" },
-  { label: "Sol de la douche", icon: "⬛" },
-  { label: "Murs hors douche", icon: "🏠" },
-  { label: "Sol hors douche (pièce entière)", icon: "🏢" },
+  { label: "Mur de la douche", value: "mur-douche" },
+  { label: "Sol de la douche", value: "sol-douche" },
+  { label: "Murs hors douche", value: "mur-hors" },
+  { label: "Sol hors douche (pièce entière)", value: "sol-hors" },
 ];
 
-// 📏 Format de carrelage
 const formatCarrelageOptions = [
-  { label: "Petit format (5x5, 10x10…)", icon: "▪️" },
-  { label: "Moyen format (20x20, 30x60…)", icon: "◻️" },
-  { label: "Grand format (60x60, 120x60…)", icon: "⬜" },
-  { label: "Mosaïque", icon: "🔷" },
-  { label: "Je ne sais pas encore", icon: "❓" },
+  { label: "Petit format (5x5, 10x10…)", value: "petit" },
+  { label: "Moyen format (20x20, 30x60…)", value: "moyen" },
+  { label: "Grand format (60x60, 120x60…)", value: "grand" },
+  { label: "Mosaïque", value: "mosaique" },
+  { label: "Je ne sais pas encore", value: "indecis" },
 ];
 
-// 🎨 Style de carrelage
 const styleCarrelageOptions = [
-  { label: "Zellige", icon: "🔶" },
-  { label: "Effet marbre", icon: "🤍" },
-  { label: "Béton ciré", icon: "🔘" },
-  { label: "Terrazzo", icon: "🎨" },
-  { label: "Métro / biseauté", icon: "🚇" },
-  { label: "Graphique / géométrique", icon: "📐" },
-  { label: "Naturel (ton pierre, sable…)", icon: "🏜️" },
-  { label: "Couleur unie mate", icon: "🟫" },
-  { label: "Autre", icon: "➕" },
+  { label: "Zellige", value: "zellige" },
+  { label: "Effet marbre", value: "marbre" },
+  { label: "Béton ciré", value: "beton" },
+  { label: "Terrazzo", value: "terrazzo" },
+  { label: "Métro / biseauté", value: "metro" },
+  { label: "Graphique / géométrique", value: "graphique" },
+  { label: "Naturel (ton pierre, sable…)", value: "naturel" },
+  { label: "Couleur unie mate", value: "mate" },
+  { label: "Autre", value: "autre" },
 ];
 
-// 🧩 Pose envisagée
 const poseOptions = [
-  { label: "Pose droite", icon: "➡️" },
-  { label: "Pose en chevron", icon: "↗️" },
-  { label: "Pose décalée", icon: "↔️" },
-  { label: "Pose mosaïque", icon: "🔷" },
-  { label: "Je ne sais pas encore", icon: "❓" },
+  { label: "Pose droite", value: "droite" },
+  { label: "Pose en chevron", value: "chevron" },
+  { label: "Pose décalée", value: "decalee" },
+  { label: "Pose mosaïque", value: "mosaique" },
+  { label: "Je ne sais pas encore", value: "indecis" },
 ];
 
-// 🔧 Équipements supplémentaires
 const equipementsOptions = [
-  { label: "Niche murale", icon: "🕳️" },
-  { label: "Éclairage intégré (LED)", icon: "💡" },
-  { label: "Étanchéité complète (SPEC)", icon: "💧" },
-  { label: "Sèche-serviettes", icon: "🔥" },
-  { label: "Banc de douche", icon: "🪑" },
+  { label: "Niche murale", value: "niche" },
+  { label: "Éclairage intégré (LED)", value: "led" },
+  { label: "Étanchéité complète (SPEC)", value: "etancheite" },
+  { label: "Sèche-serviettes", value: "seche-serviettes" },
+  { label: "Banc de douche", value: "banc" },
 ];
 
 export default function Devis() {
@@ -240,8 +266,8 @@ export default function Devis() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
             >
-              <div className="w-24 h-24 rounded-full bg-cta/20 flex items-center justify-center mx-auto mb-8">
-                <CalendarCheck className="w-12 h-12 text-cta" />
+              <div className="w-24 h-24 rounded-full bg-[hsl(var(--tag-mint))] flex items-center justify-center mx-auto mb-8">
+                <CalendarCheck className="w-12 h-12 text-foreground" />
               </div>
               <h1 className="font-display text-3xl md:text-4xl font-semibold mb-6">
                 Demande de RDV envoyée !
@@ -250,7 +276,7 @@ export default function Devis() {
                 Merci pour votre demande. Notre équipe vous recontactera sous 24h 
                 pour planifier une <strong>visite technique gratuite sur site</strong>.
               </p>
-              <Button variant="default" size="lg" onClick={() => {
+              <Button variant="outline" size="lg" onClick={() => {
                 setIsSubmitted(false);
                 setFormData(initialFormData);
                 setUploadedFiles([]);
@@ -270,29 +296,47 @@ export default function Devis() {
     field, 
     columns = 2 
   }: { 
-    options: { label: string; icon: string }[]; 
+    options: { label: string; value: string }[]; 
     field: keyof FormData; 
     columns?: number;
   }) => (
-    <div className={`grid grid-cols-1 ${columns === 2 ? 'md:grid-cols-2' : columns === 3 ? 'md:grid-cols-2 lg:grid-cols-3' : ''} gap-2`}>
+    <div className={`grid grid-cols-1 ${columns === 2 ? 'md:grid-cols-2' : columns === 3 ? 'md:grid-cols-2 lg:grid-cols-3' : ''} gap-3`}>
       {options.map((option) => (
         <div 
-          key={option.label} 
-          className={`flex items-center space-x-3 p-3 rounded-xl border-2 transition-all cursor-pointer ${
-            (formData[field] as string[]).includes(option.label) 
-              ? 'border-primary bg-primary/5' 
-              : 'border-transparent bg-secondary/50 hover:bg-secondary'
+          key={option.value} 
+          className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
+            (formData[field] as string[]).includes(option.value) 
+              ? 'border-foreground bg-foreground/5' 
+              : 'border-border bg-card hover:border-foreground/30'
           }`}
-          onClick={() => handleCheckboxChange(field, option.label, !(formData[field] as string[]).includes(option.label))}
+          onClick={() => handleCheckboxChange(field, option.value, !(formData[field] as string[]).includes(option.value))}
         >
-          <span className="text-xl">{option.icon}</span>
           <Checkbox 
-            id={`${field}-${option.label}`}
-            checked={(formData[field] as string[]).includes(option.label)}
-            onCheckedChange={(checked) => handleCheckboxChange(field, option.label, checked as boolean)}
+            id={`${field}-${option.value}`}
+            checked={(formData[field] as string[]).includes(option.value)}
+            onCheckedChange={(checked) => handleCheckboxChange(field, option.value, checked as boolean)}
             className="pointer-events-none"
           />
-          <Label htmlFor={`${field}-${option.label}`} className="cursor-pointer flex-1 text-sm">{option.label}</Label>
+          <Label htmlFor={`${field}-${option.value}`} className="cursor-pointer flex-1 text-sm font-medium">{option.label}</Label>
+        </div>
+      ))}
+    </div>
+  );
+
+  const FinitionsGroup = () => (
+    <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+      {finitionsOptions.map((option) => (
+        <div 
+          key={option.value} 
+          className={`flex flex-col items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
+            (formData.finitionsRobinetterie).includes(option.value) 
+              ? 'border-foreground bg-foreground/5' 
+              : 'border-border bg-card hover:border-foreground/30'
+          }`}
+          onClick={() => handleCheckboxChange("finitionsRobinetterie", option.value, !formData.finitionsRobinetterie.includes(option.value))}
+        >
+          <div className={`w-12 h-12 rounded-full ${option.color}`} />
+          <span className="text-sm font-medium text-center">{option.label}</span>
         </div>
       ))}
     </div>
@@ -301,17 +345,16 @@ export default function Devis() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative py-24 md:py-32">
-        <div className="absolute inset-0 bg-stone" />
-        <div className="relative container-custom">
+      <section className="relative py-20 md:py-28 bg-stone">
+        <div className="container-custom">
           <motion.div 
             className="max-w-3xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block px-4 py-2 rounded-full bg-accent/30 text-wood text-sm font-medium mb-6">
-              <CalendarCheck className="w-4 h-4 inline mr-2" />
+            <span className="tag-mint inline-flex items-center gap-2 mb-6">
+              <CalendarCheck className="w-4 h-4" />
               Visite technique gratuite
             </span>
             <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6">
@@ -325,8 +368,29 @@ export default function Devis() {
         </div>
       </section>
 
+      {/* Avantages rapides */}
+      <section className="py-8 border-b border-border bg-background">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { icon: Pencil, title: "Conception sur mesure", desc: "Des solutions personnalisées" },
+              { icon: Gem, title: "Matériaux de qualité", desc: "Durables et esthétiques" },
+              { icon: Wrench, title: "Installation professionnelle", desc: "Experts qualifiés" }
+            ].map((item, index) => (
+              <div key={index} className="flex items-center gap-4">
+                <item.icon className="w-8 h-8 text-foreground flex-shrink-0" strokeWidth={1.5} />
+                <div>
+                  <h3 className="font-semibold text-sm">{item.title}</h3>
+                  <p className="text-muted-foreground text-xs">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Form Section */}
-      <section className="section-padding">
+      <section className="section-padding bg-background">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Form */}
@@ -340,8 +404,11 @@ export default function Devis() {
                 {/* Informations personnelles */}
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center">
-                      <User className="w-5 h-5 text-wood" />
+                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-beige))] flex items-center justify-center">
+                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <circle cx="12" cy="8" r="4" />
+                        <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
+                      </svg>
                     </div>
                     Informations personnelles
                   </h2>
@@ -354,6 +421,7 @@ export default function Devis() {
                         onChange={(e) => handleChange("prenom", e.target.value)}
                         placeholder="Jean"
                         required
+                        className="rounded-xl"
                       />
                     </div>
                     <div className="space-y-2">
@@ -364,6 +432,7 @@ export default function Devis() {
                         onChange={(e) => handleChange("nom", e.target.value)}
                         placeholder="Dupont"
                         required
+                        className="rounded-xl"
                       />
                     </div>
                     <div className="space-y-2">
@@ -375,6 +444,7 @@ export default function Devis() {
                         onChange={(e) => handleChange("email", e.target.value)}
                         placeholder="jean@exemple.fr"
                         required
+                        className="rounded-xl"
                       />
                     </div>
                     <div className="space-y-2">
@@ -385,6 +455,7 @@ export default function Devis() {
                         value={formData.telephone}
                         onChange={(e) => handleChange("telephone", e.target.value)}
                         placeholder="06 12 34 56 78"
+                        className="rounded-xl"
                       />
                     </div>
                     <div className="space-y-2 md:col-span-2">
@@ -395,7 +466,7 @@ export default function Devis() {
                         onChange={(e) => handleChange("codePostal", e.target.value)}
                         placeholder="75017"
                         required
-                        className="max-w-xs"
+                        className="max-w-xs rounded-xl"
                       />
                     </div>
                   </div>
@@ -404,31 +475,30 @@ export default function Devis() {
                 {/* Type d'installation */}
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center">
-                      <ShowerHead className="w-5 h-5 text-wood" />
+                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-blue))] flex items-center justify-center">
+                      <RobinetterieIcon />
                     </div>
-                    🚿 Type d'installation souhaitée
+                    Type d'installation souhaitée
                   </h2>
                   <RadioGroup 
                     value={formData.typeInstallation} 
                     onValueChange={(value) => handleChange("typeInstallation", value)}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-3"
+                    className="grid grid-cols-1 md:grid-cols-3 gap-4"
                   >
                     {[
-                      { value: "douche", label: "Une douche", icon: "🚿" },
-                      { value: "baignoire", label: "Une baignoire", icon: "🛁" },
-                      { value: "indecis", label: "Je ne sais pas", icon: "❓" }
+                      { value: "douche", label: "Une douche" },
+                      { value: "baignoire", label: "Une baignoire" },
+                      { value: "indecis", label: "Je ne sais pas" }
                     ].map((option) => (
                       <div 
                         key={option.value} 
-                        className={`flex items-center space-x-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
+                        className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
                           formData.typeInstallation === option.value 
-                            ? 'border-primary bg-primary/5' 
-                            : 'border-transparent bg-secondary/50 hover:bg-secondary'
+                            ? 'border-foreground bg-foreground/5' 
+                            : 'border-border bg-card hover:border-foreground/30'
                         }`}
                         onClick={() => handleChange("typeInstallation", option.value)}
                       >
-                        <span className="text-2xl">{option.icon}</span>
                         <RadioGroupItem value={option.value} id={option.value} className="pointer-events-none" />
                         <Label htmlFor={option.value} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
                       </div>
@@ -439,10 +509,10 @@ export default function Devis() {
                 {/* Receveur */}
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center">
-                      <Square className="w-5 h-5 text-wood" />
+                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-beige))] flex items-center justify-center">
+                      <ReceveurIcon />
                     </div>
-                    🔲 Receveur de douche
+                    Receveur de douche
                   </h2>
                   <CheckboxGroup options={receveurOptions} field="receveur" />
                 </div>
@@ -450,10 +520,10 @@ export default function Devis() {
                 {/* Porte de douche */}
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center">
-                      <DoorOpen className="w-5 h-5 text-wood" />
+                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-mint))] flex items-center justify-center">
+                      <ParoiIcon />
                     </div>
-                    🚪 Porte de douche / Paroi
+                    Porte de douche / Paroi
                   </h2>
                   <CheckboxGroup options={porteOptions} field="porteDouche" />
                 </div>
@@ -461,10 +531,10 @@ export default function Devis() {
                 {/* Robinetterie */}
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center">
-                      <Droplets className="w-5 h-5 text-wood" />
+                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-blue))] flex items-center justify-center">
+                      <RobinetterieIcon />
                     </div>
-                    🔧 Robinetterie
+                    Robinetterie
                   </h2>
                   <CheckboxGroup options={robinetterieOptions} field="robinetterie" />
                 </div>
@@ -472,21 +542,21 @@ export default function Devis() {
                 {/* Finitions robinetterie */}
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center">
-                      <Sparkles className="w-5 h-5 text-wood" />
+                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-peach))] flex items-center justify-center">
+                      <FinitionsIcon />
                     </div>
-                    🪞 Finitions robinetterie
+                    Finitions robinetterie
                   </h2>
-                  <CheckboxGroup options={finitionsOptions} field="finitionsRobinetterie" />
+                  <FinitionsGroup />
                 </div>
 
                 {/* Zones à carreler */}
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center">
-                      <Grid3X3 className="w-5 h-5 text-wood" />
+                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-beige))] flex items-center justify-center">
+                      <CarrelageIcon />
                     </div>
-                    🧱 Zones à carreler
+                    Zones à carreler
                   </h2>
                   <CheckboxGroup options={zonesCarrelageOptions} field="zonesCarrelage" />
                 </div>
@@ -494,10 +564,10 @@ export default function Devis() {
                 {/* Format de carrelage */}
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center">
-                      <Layers className="w-5 h-5 text-wood" />
+                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-mint))] flex items-center justify-center">
+                      <CarrelageIcon />
                     </div>
-                    📏 Format de carrelage
+                    Format de carrelage
                   </h2>
                   <CheckboxGroup options={formatCarrelageOptions} field="formatCarrelage" />
                 </div>
@@ -505,10 +575,10 @@ export default function Devis() {
                 {/* Style de carrelage */}
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center">
-                      <Palette className="w-5 h-5 text-wood" />
+                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-blue))] flex items-center justify-center">
+                      <CarrelageIcon />
                     </div>
-                    🎨 Style de carrelage
+                    Style de carrelage
                   </h2>
                   <CheckboxGroup options={styleCarrelageOptions} field="styleCarrelage" columns={3} />
                 </div>
@@ -516,10 +586,10 @@ export default function Devis() {
                 {/* Pose envisagée */}
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center">
-                      <Layers className="w-5 h-5 text-wood" />
+                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-peach))] flex items-center justify-center">
+                      <CarrelageIcon />
                     </div>
-                    🧩 Type de pose
+                    Type de pose
                   </h2>
                   <CheckboxGroup options={poseOptions} field="poseEnvisagee" />
                 </div>
@@ -527,30 +597,29 @@ export default function Devis() {
                 {/* Équipements supplémentaires */}
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center">
-                      <Sparkles className="w-5 h-5 text-wood" />
+                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-mint))] flex items-center justify-center">
+                      <Gem className="w-5 h-5" strokeWidth={1.5} />
                     </div>
-                    ✨ Équipements supplémentaires
+                    Équipements supplémentaires
                   </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {equipementsOptions.map((option) => (
                       <div 
-                        key={option.label} 
-                        className={`flex items-center space-x-3 p-3 rounded-xl border-2 transition-all cursor-pointer ${
-                          equipements.includes(option.label) 
-                            ? 'border-primary bg-primary/5' 
-                            : 'border-transparent bg-secondary/50 hover:bg-secondary'
+                        key={option.value} 
+                        className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
+                          equipements.includes(option.value) 
+                            ? 'border-foreground bg-foreground/5' 
+                            : 'border-border bg-card hover:border-foreground/30'
                         }`}
-                        onClick={() => handleEquipementChange(option.label, !equipements.includes(option.label))}
+                        onClick={() => handleEquipementChange(option.value, !equipements.includes(option.value))}
                       >
-                        <span className="text-xl">{option.icon}</span>
                         <Checkbox 
-                          id={`equip-${option.label}`}
-                          checked={equipements.includes(option.label)}
-                          onCheckedChange={(checked) => handleEquipementChange(option.label, checked as boolean)}
+                          id={`equip-${option.value}`}
+                          checked={equipements.includes(option.value)}
+                          onCheckedChange={(checked) => handleEquipementChange(option.value, checked as boolean)}
                           className="pointer-events-none"
                         />
-                        <Label htmlFor={`equip-${option.label}`} className="cursor-pointer flex-1 text-sm">{option.label}</Label>
+                        <Label htmlFor={`equip-${option.value}`} className="cursor-pointer flex-1 text-sm font-medium">{option.label}</Label>
                       </div>
                     ))}
                   </div>
@@ -559,10 +628,10 @@ export default function Devis() {
                 {/* Upload fichiers */}
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center">
-                      <Upload className="w-5 h-5 text-wood" />
+                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-beige))] flex items-center justify-center">
+                      <Upload className="w-5 h-5" strokeWidth={1.5} />
                     </div>
-                    📎 Photos ou plans de votre salle de bain
+                    Photos ou plans de votre salle de bain
                   </h2>
                   
                   <input
@@ -576,7 +645,7 @@ export default function Devis() {
                   
                   <div 
                     onClick={() => fileInputRef.current?.click()}
-                    className="border-2 border-dashed border-border rounded-2xl p-8 text-center cursor-pointer hover:border-primary/50 hover:bg-secondary/30 transition-colors"
+                    className="border-2 border-dashed border-border rounded-2xl p-8 text-center cursor-pointer hover:border-foreground/30 hover:bg-card transition-colors"
                   >
                     <Upload className="w-10 h-10 text-muted-foreground mx-auto mb-4" />
                     <p className="text-muted-foreground">
@@ -590,7 +659,7 @@ export default function Devis() {
                   {uploadedFiles.length > 0 && (
                     <div className="mt-4 space-y-2">
                       {uploadedFiles.map((file, index) => (
-                        <div key={index} className="flex items-center justify-between p-3 bg-secondary/50 rounded-lg">
+                        <div key={index} className="flex items-center justify-between p-3 bg-card rounded-xl border border-border">
                           <span className="text-sm truncate flex-1">{file.name}</span>
                           <Button 
                             type="button"
@@ -610,10 +679,10 @@ export default function Devis() {
                 {/* Message */}
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center">
-                      <FileText className="w-5 h-5 text-wood" />
+                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-blue))] flex items-center justify-center">
+                      <Pencil className="w-5 h-5" strokeWidth={1.5} />
                     </div>
-                    ✍️ Précisions sur votre projet
+                    Précisions sur votre projet
                   </h2>
                   <Textarea
                     id="message"
@@ -621,14 +690,14 @@ export default function Devis() {
                     onChange={(e) => handleChange("message", e.target.value)}
                     placeholder="Décrivez votre projet, vos envies, les contraintes de votre espace..."
                     rows={5}
+                    className="rounded-xl"
                   />
                 </div>
 
                 <Button 
                   type="submit" 
-                  variant="cta" 
-                  size="xl" 
-                  className="w-full"
+                  size="lg" 
+                  className="w-full bg-[hsl(38,50%,50%)] hover:bg-[hsl(38,50%,45%)] text-white rounded-xl py-6 text-lg"
                   disabled={isSubmitting}
                 >
                   <CalendarCheck className="w-5 h-5 mr-2" />
@@ -645,19 +714,19 @@ export default function Devis() {
             >
               <div className="card-elevated p-8 sticky top-24">
                 <h2 className="font-display text-xl font-semibold mb-6">
-                  🗓️ Visite technique gratuite
+                  Visite technique gratuite
                 </h2>
                 <p className="text-muted-foreground mb-8">
                   Nous venons chez vous pour étudier votre projet et vous proposer un devis personnalisé.
                 </p>
 
-                <div className="space-y-6">
+                <div className="space-y-4">
                   <a 
                     href="tel:+33659764685"
-                    className="flex items-center gap-4 p-4 rounded-xl bg-secondary hover:bg-secondary/80 transition-colors"
+                    className="flex items-center gap-4 p-4 rounded-xl bg-[hsl(var(--tag-beige))] hover:opacity-90 transition-opacity"
                   >
-                    <div className="w-12 h-12 rounded-full bg-accent/30 flex items-center justify-center">
-                      <Phone className="w-6 h-6 text-wood" />
+                    <div className="w-12 h-12 rounded-full bg-background flex items-center justify-center">
+                      <Phone className="w-6 h-6 text-foreground" />
                     </div>
                     <div>
                       <p className="font-semibold">Téléphone</p>
@@ -667,10 +736,10 @@ export default function Devis() {
 
                   <a 
                     href="mailto:contact@qualiconcept.fr"
-                    className="flex items-center gap-4 p-4 rounded-xl bg-secondary hover:bg-secondary/80 transition-colors"
+                    className="flex items-center gap-4 p-4 rounded-xl bg-[hsl(var(--tag-mint))] hover:opacity-90 transition-opacity"
                   >
-                    <div className="w-12 h-12 rounded-full bg-accent/30 flex items-center justify-center">
-                      <Mail className="w-6 h-6 text-wood" />
+                    <div className="w-12 h-12 rounded-full bg-background flex items-center justify-center">
+                      <Mail className="w-6 h-6 text-foreground" />
                     </div>
                     <div>
                       <p className="font-semibold">Email</p>
@@ -678,9 +747,9 @@ export default function Devis() {
                     </div>
                   </a>
 
-                  <div className="flex items-start gap-4 p-4 rounded-xl bg-secondary">
-                    <div className="w-12 h-12 rounded-full bg-accent/30 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-wood" />
+                  <div className="flex items-start gap-4 p-4 rounded-xl bg-[hsl(var(--tag-blue))]">
+                    <div className="w-12 h-12 rounded-full bg-background flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-foreground" />
                     </div>
                     <div>
                       <p className="font-semibold">Zone d'intervention</p>
@@ -691,9 +760,9 @@ export default function Devis() {
                   </div>
                 </div>
 
-                <div className="mt-8 p-4 rounded-xl bg-cta/10 border border-cta/20">
+                <div className="mt-8 p-4 rounded-xl bg-[hsl(var(--tag-peach))]">
                   <p className="text-sm text-foreground">
-                    <strong>✅ Réponse sous 24h</strong><br />
+                    <strong>✓ Réponse sous 24h</strong><br />
                     Nous vous rappelons rapidement pour fixer la date de visite.
                   </p>
                 </div>

@@ -63,6 +63,13 @@ export default {
           DEFAULT: "hsl(var(--cta))",
           foreground: "hsl(var(--cta-foreground))",
         },
+        tag: {
+          beige: "hsl(var(--tag-beige))",
+          mint: "hsl(var(--tag-mint))",
+          blue: "hsl(var(--tag-blue))",
+          peach: "hsl(var(--tag-peach))",
+          terracotta: "hsl(var(--tag-terracotta))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
