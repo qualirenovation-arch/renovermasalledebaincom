@@ -87,6 +87,12 @@ import vincennesMr12 from "@/assets/vincennes-mr-12.jpg";
 import butteschaumont1 from "@/assets/buttes-chaumont-1.jpg";
 import butteschaumont2 from "@/assets/buttes-chaumont-2.jpg";
 import butteschaumont3 from "@/assets/buttes-chaumont-3.jpg";
+import butteschaumont4 from "@/assets/buttes-chaumont-4.jpg";
+import butteschaumont5 from "@/assets/buttes-chaumont-5.jpg";
+import butteschaumont6 from "@/assets/buttes-chaumont-6.jpg";
+import butteschaumont7 from "@/assets/buttes-chaumont-7.jpg";
+import butteschaumont8 from "@/assets/buttes-chaumont-8.jpg";
+import butteschaumont9 from "@/assets/buttes-chaumont-9.jpg";
 import taitbout1 from "@/assets/taitbout-1.jpg";
 import taitbout2 from "@/assets/taitbout-2.jpg";
 import taitbout3 from "@/assets/taitbout-3.jpg";
@@ -306,9 +312,15 @@ const inProgressAlbums: Album[] = [
     coverImage: butteschaumont1,
     isInProgress: true,
     photos: [
-      { id: 1, image: butteschaumont1, title: "État initial - Lavabo", description: "Avant travaux" },
-      { id: 2, image: butteschaumont2, title: "État initial - Douche", description: "Cabine à remplacer" },
-      { id: 3, image: butteschaumont3, title: "Vue générale", description: "Espace à transformer" },
+      { id: 1, image: butteschaumont8, title: "Douche terrazzo", description: "Carrelage terrazzo et robinetterie dorée" },
+      { id: 2, image: butteschaumont9, title: "Vue d'ensemble", description: "Meuble vasque et paroi vitrée" },
+      { id: 3, image: butteschaumont7, title: "Miroir LED", description: "Miroir rétroéclairé et faïence" },
+      { id: 4, image: butteschaumont5, title: "Pose carrelage", description: "Terrazzo en cours de pose" },
+      { id: 5, image: butteschaumont6, title: "SEL - Étanchéité", description: "Système d'étanchéité liquide" },
+      { id: 6, image: butteschaumont4, title: "Placo hydro", description: "Préparation des murs" },
+      { id: 7, image: butteschaumont1, title: "État initial - Lavabo", description: "Avant travaux" },
+      { id: 8, image: butteschaumont2, title: "État initial - Douche", description: "Cabine à remplacer" },
+      { id: 9, image: butteschaumont3, title: "Vue générale", description: "Espace à transformer" },
     ],
   },
   {
