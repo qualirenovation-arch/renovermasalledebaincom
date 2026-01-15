@@ -19,6 +19,7 @@ import {
   Wrench
 } from "lucide-react";
 import finitionsImage from "@/assets/finitions-robinetterie-clean.png";
+import stylesCarrelageImage from "@/assets/styles-carrelage.jpg";
 
 interface FormData {
   prenom: string;
@@ -572,6 +573,17 @@ export default function Devis() {
                     </div>
                     Finitions et ambiance souhaitées
                   </h2>
+                  <p className="text-muted-foreground text-sm mb-6">Choisissez le style de carrelage qui correspond à vos envies.</p>
+                  
+                  {/* Image de référence */}
+                  <div className="mb-6 rounded-2xl overflow-hidden">
+                    <img 
+                      src={stylesCarrelageImage} 
+                      alt="Styles de carrelage - Zellige, Marbre, Béton ciré, Terrazzo, Métro, Graphique, Naturel" 
+                      className="w-full h-auto"
+                    />
+                  </div>
+
                   <CheckboxGroup options={styleCarrelageOptions} field="styleCarrelage" columns={3} />
                 </div>
 
