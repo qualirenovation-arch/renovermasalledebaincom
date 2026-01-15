@@ -25,6 +25,7 @@ import meublesVasqueImage from "@/assets/meubles-vasque.jpg";
 import wcTypesImage from "@/assets/wc-types.jpg";
 import pommeauxDoucheImage from "@/assets/pommeaux-douche.jpg";
 import receveursImage from "@/assets/receveurs-douche.jpg";
+import baignoiresImage from "@/assets/baignoires-styles.jpg";
 
 interface FormData {
   prenom: string;
@@ -602,6 +603,16 @@ export default function Devis() {
                     <div className="mt-6 pt-6 border-t border-border space-y-6">
                       <div>
                         <Label className="text-sm font-medium text-muted-foreground mb-3 block">Style de baignoire</Label>
+                        
+                        {/* Image de référence baignoires */}
+                        <div className="mb-4 rounded-2xl overflow-hidden">
+                          <img 
+                            src={baignoiresImage} 
+                            alt="Styles de baignoires - Fonte, Acier émaillé, Résine/Acrylique" 
+                            className="w-full h-auto"
+                          />
+                        </div>
+
                         <CheckboxGroup options={typeBaignoireOptions} field="typeBaignoire" />
                       </div>
 
