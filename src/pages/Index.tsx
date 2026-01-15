@@ -406,6 +406,10 @@ Que vous rénoviez un appartement haussmannien, un studio ou une salle de bain f
               { name: "Houzz", url: "https://www.houzz.fr" },
               { name: "Parquet-Carrelage.com", url: "https://www.parquet-carrelage.com" },
               { name: "Poalgi", url: "https://www.poalgi.com" },
+              { name: "IKEA", url: "https://www.ikea.com/fr" },
+              { name: "Wirquin", url: "https://www.wirquin.fr" },
+              { name: "Geberit", url: "https://www.geberit.fr" },
+              { name: "Kerakoll", url: "https://www.kerakoll.com/fr" },
             ].map((partner, index) => (
               <motion.a
                 key={index}
