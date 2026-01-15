@@ -29,6 +29,10 @@ import gallery22 from "@/assets/gallery-22.jpg";
 import gallery23 from "@/assets/gallery-23.jpg";
 import gallery24 from "@/assets/gallery-24.jpg";
 import gallery25 from "@/assets/gallery-25.jpg";
+import gallery26 from "@/assets/gallery-26.jpg";
+import gallery27 from "@/assets/gallery-27.jpg";
+import gallery28 from "@/assets/gallery-28.jpg";
+import gallery29 from "@/assets/gallery-29.jpg";
 
 type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord";
 
@@ -241,6 +245,38 @@ const projects: Project[] = [
     description: "État initial - Saint-Maur",
     category: ["avant-apres", "avnord"],
     details: "Panorama de la salle de bain avant transformation : agencement à repenser, matériaux vétustes, sol damier et meuble ancien en marbre rouge à déposer.",
+  },
+  {
+    id: 26,
+    image: gallery26,
+    title: "Avant travaux - Ancienne cuisine",
+    description: "Transformation cuisine → salle de bain - Paris 10ème",
+    category: ["avant-apres", "paris10"],
+    details: "État initial : ancienne cuisine en cours de démolition. Ce projet ambitieux a consisté à transformer entièrement cet espace cuisine en une luxueuse salle de bain avec douche à l'italienne, carrelage effet onyx et robinetterie dorée.",
+  },
+  {
+    id: 27,
+    image: gallery27,
+    title: "Avant travaux - Vue sur balcon",
+    description: "Transformation cuisine → salle de bain - Paris 10ème",
+    category: ["avant-apres", "paris10"],
+    details: "Vue d'ensemble de l'ancienne cuisine avec accès balcon. Travaux de démolition et préparation du sol en cours pour la création de la nouvelle salle de bain haut de gamme.",
+  },
+  {
+    id: 28,
+    image: gallery28,
+    title: "Avant travaux - Démolition",
+    description: "Chantier en cours - Paris 10ème",
+    category: ["avant-apres", "paris10"],
+    details: "Phase de gros œuvre : dépose de la cuisine existante, ouverture du sol pour passage des nouvelles canalisations d'évacuation et d'alimentation de la future douche à l'italienne.",
+  },
+  {
+    id: 29,
+    image: gallery29,
+    title: "Avant travaux - Préparation plomberie",
+    description: "Chantier en cours - Paris 10ème",
+    category: ["avant-apres", "paris10"],
+    details: "Travaux de plomberie : création des nouvelles arrivées d'eau et évacuations. La cuisine a été entièrement déposée pour laisser place à une salle de bain moderne avec douche de pluie et finitions dorées.",
   },
 ];
 
