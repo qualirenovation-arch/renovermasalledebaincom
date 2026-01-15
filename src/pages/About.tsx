@@ -85,7 +85,13 @@ export default function About() {
                   WhatsApp quotidien, vous savez exactement où en est votre chantier, qui intervient 
                   et quand. On ne fait pas de chez vous un hall de gare : chaque intervenant est annoncé 
                   à l'avance, surtout si vous habitez sur place. Vous êtes informé du planning quotidien, 
-                  des horaires de passage et de l'avancement technique. Fini le stress et les mauvaises surprises.
+                  des horaires de passage et de l'avancement technique.
+                </p>
+                <p>
+                  <strong>Transparence totale sur les commandes.</strong> Chaque commande passée ou 
+                  livraison prévue vous est communiquée. Nous vous transmettons les factures des 
+                  matériaux commandés pour assurer une traçabilité complète – un atout précieux pour 
+                  l'avenir (garanties, SAV, revente). Fini le stress et les mauvaises surprises.
                 </p>
               </div>
             </motion.div>
