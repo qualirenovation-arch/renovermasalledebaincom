@@ -701,7 +701,7 @@ export default function Realisations() {
 
           {/* Grid */}
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"
             layout
           >
             <AnimatePresence mode="popLayout">
@@ -717,7 +717,7 @@ export default function Realisations() {
                   onClick={() => setSelectedProject(project)}
                 >
                   <div className="card-elevated overflow-hidden">
-                    <div className="aspect-[4/5] overflow-hidden">
+                    <div className="aspect-square overflow-hidden">
                       <img 
                         src={project.image} 
                         alt={project.title}
