@@ -101,14 +101,6 @@ interface Project {
 
 const projects: Project[] = [
   {
-    id: 1,
-    image: gallery1,
-    title: "Douche moderne minimaliste",
-    description: "Petite salle de bain - Paris 16ème",
-    category: ["petite", "moderne"],
-    details: "Transformation d'une petite salle de bain de 4m² en espace moderne avec douche à l'italienne. Carrelage grand format blanc, robinetterie noire mate, paroi en verre trempé fixe.",
-  },
-  {
     id: 7,
     image: gallery7,
     title: "Élégance dorée et marbre",
