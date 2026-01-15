@@ -18,6 +18,7 @@ import {
   Gem,
   Wrench
 } from "lucide-react";
+import finitionsImage from "@/assets/finitions-robinetterie.png";
 
 interface FormData {
   prenom: string;
@@ -534,6 +535,16 @@ export default function Devis() {
                     Finitions robinetterie
                   </h2>
                   <p className="text-muted-foreground text-sm mb-6">Personnalisez votre robinetterie avec des finitions élégantes et durables.</p>
+                  
+                  {/* Image de référence */}
+                  <div className="mb-6 rounded-2xl overflow-hidden">
+                    <img 
+                      src={finitionsImage} 
+                      alt="Finitions robinetterie - Laiton brossé, Nickel brossé, Noir mat, Chromé" 
+                      className="w-full h-auto"
+                    />
+                  </div>
+
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     {finitionsOptions.map((option) => (
                       <div 
