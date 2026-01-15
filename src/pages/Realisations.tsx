@@ -679,9 +679,12 @@ export default function Realisations() {
             <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6">
               Découvrez nos créations
             </h1>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              Explorez notre galerie de projets réalisés et laissez-vous inspirer 
-              pour votre future douche à l'italienne.
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              Rénovation de salle de bain : douche à l'italienne, remplacement de baignoire, 
+              receveur extra-plat, avec ou sans WC. Inspirez-vous de nos réalisations.
+            </p>
+            <p className="text-wood font-medium text-xl">
+              Et vous, plutôt receveur ou baignoire ?
             </p>
           </motion.div>
         </div>
