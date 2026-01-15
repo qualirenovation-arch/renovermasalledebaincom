@@ -69,10 +69,13 @@ import boisColombes8 from "@/assets/bois-colombes-8.jpg";
 import boisColombes9 from "@/assets/bois-colombes-9.jpg";
 import boisColombes10 from "@/assets/bois-colombes-10.jpg";
 import boisColombes11 from "@/assets/bois-colombes-11.jpg";
+import vincennes1 from "@/assets/vincennes-1.jpg";
+import vincennes2 from "@/assets/vincennes-2.jpg";
+import vincennes3 from "@/assets/vincennes-3.jpg";
 
 type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "convention" | "jemmapes" | "boiscolombes";
 
-type InProgressCategory = "all-progress" | "butteschaumont" | "taitbout" | "rocroy";
+type InProgressCategory = "all-progress" | "butteschaumont" | "taitbout" | "rocroy" | "vincennes";
 
 interface Project {
   id: number;
@@ -613,6 +616,34 @@ const projects: Project[] = [
     category: ["petite", "boiscolombes", "avant-apres"],
     details: "Vue d'ensemble avant travaux : machine à laver sous plan noir, étagères ouvertes, baignoire avec rideau. Sol carrelé noir et blanc, murs gris. Transformation complète prévue.",
   },
+  // Projets en cours - Paris 12ème Cours de Vincennes
+  {
+    id: 66,
+    image: vincennes1,
+    title: "Douche quart de cercle existante",
+    description: "En cours - Paris 12ème Vincennes",
+    category: ["vincennes"],
+    details: "État initial : cabine de douche quart de cercle avec paroi coulissante. Carrelage gris clair, robinetterie chromée. Projet de transformation en douche à l'italienne.",
+    isInProgress: true,
+  },
+  {
+    id: 67,
+    image: vincennes2,
+    title: "Salle de bain à rénover",
+    description: "En cours - Paris 12ème Vincennes",
+    category: ["vincennes"],
+    details: "Vue depuis l'entrée : espace buanderie et salle de bain combinés. Carrelage grand format beige, meuble sous vasque à transformer. Potentiel d'optimisation de l'espace.",
+    isInProgress: true,
+  },
+  {
+    id: 68,
+    image: vincennes3,
+    title: "Vue générale avant travaux",
+    description: "En cours - Paris 12ème Vincennes",
+    category: ["vincennes"],
+    details: "Vue d'ensemble de la pièce d'eau existante : douche, zone buanderie, accès vers les autres pièces. Réaménagement complet prévu avec douche à l'italienne.",
+    isInProgress: true,
+  },
 ];
 
 const categories: { id: Category; label: string; description?: string }[] = [
@@ -637,6 +668,7 @@ const categories: { id: Category; label: string; description?: string }[] = [
 
 const inProgressCategories: { id: InProgressCategory; label: string }[] = [
   { id: "all-progress", label: "Tous les chantiers" },
+  { id: "vincennes", label: "Paris 12ème - Cours de Vincennes" },
   { id: "rocroy", label: "Paris 10ème - Rue de Rocroy" },
   { id: "taitbout", label: "Paris 9ème - Rue Taitbout" },
   { id: "butteschaumont", label: "Paris 19ème - Buttes-Chaumont" },
