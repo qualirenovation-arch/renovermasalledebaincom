@@ -53,8 +53,11 @@ import butteschaumont3 from "@/assets/buttes-chaumont-3.jpg";
 import jemmapes1 from "@/assets/jemmapes-1.jpg";
 import jemmapes2 from "@/assets/jemmapes-2.jpg";
 import jemmapes3 from "@/assets/jemmapes-3.jpg";
+import taitbout1 from "@/assets/taitbout-1.jpg";
+import taitbout2 from "@/assets/taitbout-2.jpg";
+import taitbout3 from "@/assets/taitbout-3.jpg";
 
-type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "convention" | "butteschaumont" | "jemmapes";
+type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "convention" | "butteschaumont" | "jemmapes" | "taitbout";
 
 interface Project {
   id: number;
@@ -458,10 +461,35 @@ const projects: Project[] = [
     category: ["petite", "moderne", "jemmapes"],
     details: "Détail du meuble vasque : plan bois chêne, tiroirs noirs sans poignée, vasque ovale blanche, robinetterie noire mat. Miroir arrondi élégant et accessoires noirs coordonnés.",
   },
+  {
+    id: 50,
+    image: taitbout1,
+    title: "État initial - Vue fenêtre",
+    description: "🚧 Chantier en cours - Paris 9ème",
+    category: ["taitbout"],
+    details: "Espace avant travaux : fenêtre donnant sur cour intérieure, tringle à rideau existante. Préparation du chantier pour transformation complète en salle de bain sous combles.",
+  },
+  {
+    id: 51,
+    image: taitbout2,
+    title: "État initial - Baignoire et WC",
+    description: "🚧 Chantier en cours - Paris 9ème",
+    category: ["petite", "taitbout"],
+    details: "Salle de bain existante sous pente : baignoire avec pare-douche accordéon, WC et meuble vasque blanc. Carrelage gris au sol, contrainte de hauteur sous plafond à optimiser.",
+  },
+  {
+    id: 52,
+    image: taitbout3,
+    title: "État initial - Vue d'ensemble",
+    description: "🚧 Chantier en cours - Paris 9ème",
+    category: ["petite", "taitbout"],
+    details: "Vue depuis l'entrée : lavabo sur pied, étagères de rangement, miroir extensible. Accès vers couloir et chambre. Projet de rénovation complète avec douche à l'italienne.",
+  },
 ];
 
 const categories: { id: Category; label: string }[] = [
   { id: "all", label: "Tous" },
+  { id: "taitbout", label: "🚧 Paris 9ème - Rue Taitbout" },
   { id: "butteschaumont", label: "🚧 Paris 19ème - Buttes-Chaumont" },
   { id: "jemmapes", label: "Paris 10ème - Salle de bain au masculin" },
   { id: "convention", label: "Paris 15ème - Convention" },
