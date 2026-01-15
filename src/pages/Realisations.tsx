@@ -354,7 +354,7 @@ const projects: Project[] = [
 
 const categories: { id: Category; label: string }[] = [
   { id: "all", label: "Tous" },
-  { id: "severac", label: "Paris 17ème Quartier" },
+  { id: "severac", label: "Paris 17ème - Les Ternes" },
   { id: "paris10", label: "Paris 10ème" },
   { id: "bdpereire", label: "Bd Pereire Paris 17ème" },
   { id: "avnord", label: "Saint-Maur" },
