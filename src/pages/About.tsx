@@ -18,6 +18,7 @@ const guarantees = [
   "Responsabilité civile professionnelle MIC Assurances",
   "Devis détaillé avec photos via Graneet – zéro mauvaise surprise",
   "Prix ferme et définitif, transparent ligne par ligne",
+  "Suivi visuel quotidien par WhatsApp et vidéo",
   "Suivi personnalisé de votre chantier",
 ];
 
