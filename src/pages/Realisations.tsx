@@ -604,9 +604,13 @@ const projects: Project[] = [
   },
 ];
 
-const categories: { id: Category; label: string }[] = [
+const categories: { id: Category; label: string; description?: string }[] = [
   { id: "all", label: "Tous" },
-  { id: "boiscolombes", label: "Bois-Colombes - Avant/Après" },
+  { 
+    id: "boiscolombes", 
+    label: "Bois-Colombes - Avant/Après",
+    description: "Transformation complète d'une salle de bain à Bois-Colombes.\nD'un espace sombre et daté à une pièce lumineuse et moderne.\nDouche à l'italienne, robinetterie dorée, sol terrazzo et murs vert d'eau."
+  },
   { id: "rocroy", label: "🚧 Paris 10ème - Rue de Rocroy" },
   { id: "taitbout", label: "🚧 Paris 9ème - Rue Taitbout" },
   { id: "butteschaumont", label: "🚧 Paris 19ème - Buttes-Chaumont" },
@@ -630,6 +634,8 @@ export default function Realisations() {
   const filteredProjects = activeCategory === "all" 
     ? projects 
     : projects.filter(p => p.category.includes(activeCategory));
+
+  const activeDescription = categories.find(c => c.id === activeCategory)?.description;
 
   return (
     <Layout>
@@ -676,6 +682,22 @@ export default function Realisations() {
               </button>
             ))}
           </div>
+
+          {/* Description du chantier */}
+          {activeDescription && (
+            <motion.div 
+              className="bg-accent/20 rounded-2xl p-6 mb-12 text-center max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              {activeDescription.split('\n').map((line, index) => (
+                <p key={index} className="text-foreground/80 leading-relaxed">
+                  {line}
+                </p>
+              ))}
+            </motion.div>
+          )}
 
           {/* Grid */}
           <motion.div 
