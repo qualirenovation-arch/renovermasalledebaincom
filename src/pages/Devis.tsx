@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -6,60 +6,141 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Layout } from "@/components/layout/Layout";
 import { useToast } from "@/hooks/use-toast";
-import { 
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { CheckCircle2, Upload, Phone, Mail, MapPin } from "lucide-react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { CheckCircle2, Upload, Phone, Mail, MapPin, ShowerHead, Wrench, Sparkles, Grid3X3, Palette, Layers, FileText } from "lucide-react";
 
 interface FormData {
+  prenom: string;
   nom: string;
   email: string;
   telephone: string;
-  ville: string;
-  typeProjet: string;
-  largeur: string;
-  longueur: string;
-  materiaux: string;
-  finition: string;
-  budget: string;
-  delai: string;
+  codePostal: string;
+  typeInstallation: string;
+  equipements: string[];
+  finitions: string[];
+  zonesCarrelage: string[];
+  formatCarrelage: string[];
+  styleCarrelage: string[];
+  poseEnvisagee: string[];
   message: string;
 }
 
 const initialFormData: FormData = {
+  prenom: "",
   nom: "",
   email: "",
   telephone: "",
-  ville: "",
-  typeProjet: "",
-  largeur: "",
-  longueur: "",
-  materiaux: "",
-  finition: "",
-  budget: "",
-  delai: "",
+  codePostal: "",
+  typeInstallation: "",
+  equipements: [],
+  finitions: [],
+  zonesCarrelage: [],
+  formatCarrelage: [],
+  styleCarrelage: [],
+  poseEnvisagee: [],
   message: "",
 };
+
+const equipementsOptions = [
+  "Paroi fixe",
+  "Paroi battante",
+  "Colonne de douche apparente",
+  "Colonne de douche encastrée",
+  "Mitigeur thermostatique",
+  "Niche murale",
+  "Carrelage mural",
+  "Carrelage au sol",
+  "Éclairage intégré (LED)",
+  "Étanchéité complète (SPEC)",
+];
+
+const finitionsOptions = [
+  "Laiton brossé",
+  "Nickel brossé",
+  "Noir mat",
+  "Chromé",
+];
+
+const zonesCarrelageOptions = [
+  "Mur de la douche",
+  "Sol de la douche",
+  "Murs hors douche",
+  "Sol hors douche (pièce entière)",
+];
+
+const formatCarrelageOptions = [
+  "Petit format (5x5, 10x10…)",
+  "Moyen format (20x20, 30x60…)",
+  "Grand format (60x60, 120x60…)",
+  "Mosaïque",
+  "Je ne sais pas encore",
+];
+
+const styleCarrelageOptions = [
+  "Zellige",
+  "Effet marbre",
+  "Béton ciré",
+  "Terrazzo",
+  "Métro / biseauté",
+  "Graphique / géométrique",
+  "Naturel (ton pierre, sable…)",
+  "Couleur unie mate",
+  "Autre",
+];
+
+const poseOptions = [
+  "Pose droite",
+  "Pose en chevron",
+  "Pose décalée",
+  "Pose mosaïque",
+  "Je ne sais pas encore",
+];
 
 export default function Devis() {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
 
   const handleChange = (field: keyof FormData, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
+  const handleCheckboxChange = (field: keyof FormData, value: string, checked: boolean) => {
+    setFormData(prev => {
+      const currentArray = prev[field] as string[];
+      if (checked) {
+        return { ...prev, [field]: [...currentArray, value] };
+      } else {
+        return { ...prev, [field]: currentArray.filter(item => item !== value) };
+      }
+    });
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+    if (files) {
+      const validFiles = Array.from(files).filter(file => {
+        const isValid = ['image/jpeg', 'image/png', 'application/pdf'].includes(file.type);
+        const isUnderLimit = file.size <= 10 * 1024 * 1024; // 10MB
+        return isValid && isUnderLimit;
+      });
+      setUploadedFiles(prev => [...prev, ...validFiles]);
+    }
+  };
+
+  const removeFile = (index: number) => {
+    setUploadedFiles(prev => prev.filter((_, i) => i !== index));
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validation simple
-    if (!formData.nom || !formData.email || !formData.telephone) {
+    // Validation
+    if (!formData.prenom || !formData.nom || !formData.email || !formData.codePostal) {
       toast({
         title: "Erreur",
         description: "Veuillez remplir tous les champs obligatoires.",
@@ -113,7 +194,11 @@ export default function Devis() {
                 Merci pour votre demande. Notre équipe va étudier votre projet 
                 et vous recontacter sous 24h pour planifier une visite technique gratuite.
               </p>
-              <Button variant="default" size="lg" onClick={() => setIsSubmitted(false)}>
+              <Button variant="default" size="lg" onClick={() => {
+                setIsSubmitted(false);
+                setFormData(initialFormData);
+                setUploadedFiles([]);
+              }}>
                 Faire une nouvelle demande
               </Button>
             </motion.div>
@@ -161,17 +246,32 @@ export default function Devis() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <form onSubmit={handleSubmit} className="space-y-8">
-                {/* Coordonnées */}
+                {/* Informations personnelles */}
                 <div className="card-elevated p-8">
-                  <h2 className="font-display text-xl font-semibold mb-6">Vos coordonnées</h2>
+                  <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center">
+                      <FileText className="w-5 h-5 text-wood" />
+                    </div>
+                    Informations personnelles
+                  </h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <Label htmlFor="nom">Nom complet *</Label>
+                      <Label htmlFor="prenom">Prénom *</Label>
+                      <Input
+                        id="prenom"
+                        value={formData.prenom}
+                        onChange={(e) => handleChange("prenom", e.target.value)}
+                        placeholder="Jean"
+                        required
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="nom">Nom *</Label>
                       <Input
                         id="nom"
                         value={formData.nom}
                         onChange={(e) => handleChange("nom", e.target.value)}
-                        placeholder="Jean Dupont"
+                        placeholder="Dupont"
                         required
                       />
                     </div>
@@ -187,153 +287,249 @@ export default function Devis() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="telephone">Téléphone *</Label>
+                      <Label htmlFor="telephone">Téléphone (facultatif)</Label>
                       <Input
                         id="telephone"
                         type="tel"
                         value={formData.telephone}
                         onChange={(e) => handleChange("telephone", e.target.value)}
                         placeholder="06 12 34 56 78"
-                        required
                       />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="ville">Ville</Label>
+                    <div className="space-y-2 md:col-span-2">
+                      <Label htmlFor="codePostal">Code postal du chantier *</Label>
                       <Input
-                        id="ville"
-                        value={formData.ville}
-                        onChange={(e) => handleChange("ville", e.target.value)}
-                        placeholder="Paris"
+                        id="codePostal"
+                        value={formData.codePostal}
+                        onChange={(e) => handleChange("codePostal", e.target.value)}
+                        placeholder="75017"
+                        required
+                        className="max-w-xs"
                       />
                     </div>
                   </div>
                 </div>
 
-                {/* Projet */}
+                {/* Type d'installation */}
                 <div className="card-elevated p-8">
-                  <h2 className="font-display text-xl font-semibold mb-6">Votre projet</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label>Type de projet</Label>
-                      <Select onValueChange={(v) => handleChange("typeProjet", v)}>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Sélectionnez..." />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="creation">Création complète</SelectItem>
-                          <SelectItem value="renovation">Rénovation</SelectItem>
-                          <SelectItem value="remplacement">Remplacement douche existante</SelectItem>
-                        </SelectContent>
-                      </Select>
+                  <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center">
+                      <ShowerHead className="w-5 h-5 text-wood" />
                     </div>
-                    <div className="space-y-2">
-                      <Label>Matériaux souhaités</Label>
-                      <Select onValueChange={(v) => handleChange("materiaux", v)}>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Sélectionnez..." />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="carrelage">Carrelage classique</SelectItem>
-                          <SelectItem value="grand-format">Carrelage grand format</SelectItem>
-                          <SelectItem value="mosaique">Mosaïque</SelectItem>
-                          <SelectItem value="pierre">Pierre naturelle</SelectItem>
-                          <SelectItem value="autre">Autre / Je ne sais pas</SelectItem>
-                        </SelectContent>
-                      </Select>
+                    🚿 Type d'installation souhaitée
+                  </h2>
+                  <RadioGroup 
+                    value={formData.typeInstallation} 
+                    onValueChange={(value) => handleChange("typeInstallation", value)}
+                    className="space-y-3"
+                  >
+                    {["Une douche avec receveur", "Une baignoire", "Je ne sais pas encore"].map((option) => (
+                      <div key={option} className="flex items-center space-x-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors">
+                        <RadioGroupItem value={option} id={option} />
+                        <Label htmlFor={option} className="cursor-pointer flex-1">{option}</Label>
+                      </div>
+                    ))}
+                  </RadioGroup>
+                </div>
+
+                {/* Équipements souhaités */}
+                <div className="card-elevated p-8">
+                  <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center">
+                      <Wrench className="w-5 h-5 text-wood" />
                     </div>
-                    <div className="space-y-2">
-                      <Label>Finition robinetterie</Label>
-                      <Select onValueChange={(v) => handleChange("finition", v)}>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Sélectionnez..." />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="noir">Noir</SelectItem>
-                          <SelectItem value="laiton">Laiton / Or</SelectItem>
-                          <SelectItem value="chrome">Chrome</SelectItem>
-                          <SelectItem value="nickel-mat">Nickel mat</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="largeur">Largeur (cm)</Label>
-                      <Input
-                        id="largeur"
-                        type="number"
-                        value={formData.largeur}
-                        onChange={(e) => handleChange("largeur", e.target.value)}
-                        placeholder="120"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="longueur">Longueur (cm)</Label>
-                      <Input
-                        id="longueur"
-                        type="number"
-                        value={formData.longueur}
-                        onChange={(e) => handleChange("longueur", e.target.value)}
-                        placeholder="180"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label>Budget estimé</Label>
-                      <Select onValueChange={(v) => handleChange("budget", v)}>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Sélectionnez..." />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="3000-5000">3 000€ - 5 000€</SelectItem>
-                          <SelectItem value="5000-8000">5 000€ - 8 000€</SelectItem>
-                          <SelectItem value="8000-12000">8 000€ - 12 000€</SelectItem>
-                          <SelectItem value="12000+">Plus de 12 000€</SelectItem>
-                          <SelectItem value="ne-sait-pas">Je ne sais pas</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                    <div className="space-y-2">
-                      <Label>Délai souhaité</Label>
-                      <Select onValueChange={(v) => handleChange("delai", v)}>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Sélectionnez..." />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="urgent">Urgent (1 mois)</SelectItem>
-                          <SelectItem value="normal">Normal (2-3 mois)</SelectItem>
-                          <SelectItem value="flexible">Flexible (3-6 mois)</SelectItem>
-                          <SelectItem value="projet">Projet futur (6+ mois)</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
+                    🔧 Équipements souhaités
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {equipementsOptions.map((option) => (
+                      <div key={option} className="flex items-center space-x-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors">
+                        <Checkbox 
+                          id={`equip-${option}`}
+                          checked={formData.equipements.includes(option)}
+                          onCheckedChange={(checked) => handleCheckboxChange("equipements", option, checked as boolean)}
+                        />
+                        <Label htmlFor={`equip-${option}`} className="cursor-pointer flex-1">{option}</Label>
+                      </div>
+                    ))}
                   </div>
+                </div>
+
+                {/* Finitions souhaitées */}
+                <div className="card-elevated p-8">
+                  <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center">
+                      <Sparkles className="w-5 h-5 text-wood" />
+                    </div>
+                    🪞 Finitions souhaitées
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {finitionsOptions.map((option) => (
+                      <div key={option} className="flex items-center space-x-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors">
+                        <Checkbox 
+                          id={`finition-${option}`}
+                          checked={formData.finitions.includes(option)}
+                          onCheckedChange={(checked) => handleCheckboxChange("finitions", option, checked as boolean)}
+                        />
+                        <Label htmlFor={`finition-${option}`} className="cursor-pointer flex-1">{option}</Label>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Zones à carreler */}
+                <div className="card-elevated p-8">
+                  <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center">
+                      <Grid3X3 className="w-5 h-5 text-wood" />
+                    </div>
+                    🧱 Zones à carreler
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {zonesCarrelageOptions.map((option) => (
+                      <div key={option} className="flex items-center space-x-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors">
+                        <Checkbox 
+                          id={`zone-${option}`}
+                          checked={formData.zonesCarrelage.includes(option)}
+                          onCheckedChange={(checked) => handleCheckboxChange("zonesCarrelage", option, checked as boolean)}
+                        />
+                        <Label htmlFor={`zone-${option}`} className="cursor-pointer flex-1">{option}</Label>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Format de carrelage */}
+                <div className="card-elevated p-8">
+                  <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center">
+                      <Layers className="w-5 h-5 text-wood" />
+                    </div>
+                    📏 Format de carrelage
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {formatCarrelageOptions.map((option) => (
+                      <div key={option} className="flex items-center space-x-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors">
+                        <Checkbox 
+                          id={`format-${option}`}
+                          checked={formData.formatCarrelage.includes(option)}
+                          onCheckedChange={(checked) => handleCheckboxChange("formatCarrelage", option, checked as boolean)}
+                        />
+                        <Label htmlFor={`format-${option}`} className="cursor-pointer flex-1">{option}</Label>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Style de carrelage */}
+                <div className="card-elevated p-8">
+                  <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center">
+                      <Palette className="w-5 h-5 text-wood" />
+                    </div>
+                    🎨 Style de carrelage
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                    {styleCarrelageOptions.map((option) => (
+                      <div key={option} className="flex items-center space-x-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors">
+                        <Checkbox 
+                          id={`style-${option}`}
+                          checked={formData.styleCarrelage.includes(option)}
+                          onCheckedChange={(checked) => handleCheckboxChange("styleCarrelage", option, checked as boolean)}
+                        />
+                        <Label htmlFor={`style-${option}`} className="cursor-pointer flex-1">{option}</Label>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Pose envisagée */}
+                <div className="card-elevated p-8">
+                  <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center">
+                      <Layers className="w-5 h-5 text-wood" />
+                    </div>
+                    🧩 Pose envisagée
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {poseOptions.map((option) => (
+                      <div key={option} className="flex items-center space-x-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors">
+                        <Checkbox 
+                          id={`pose-${option}`}
+                          checked={formData.poseEnvisagee.includes(option)}
+                          onCheckedChange={(checked) => handleCheckboxChange("poseEnvisagee", option, checked as boolean)}
+                        />
+                        <Label htmlFor={`pose-${option}`} className="cursor-pointer flex-1">{option}</Label>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Upload fichiers */}
+                <div className="card-elevated p-8">
+                  <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center">
+                      <Upload className="w-5 h-5 text-wood" />
+                    </div>
+                    📎 Ajouter un plan ou une photo
+                  </h2>
+                  
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept=".jpg,.jpeg,.png,.pdf"
+                    multiple
+                    onChange={handleFileChange}
+                    className="hidden"
+                  />
+                  
+                  <div 
+                    onClick={() => fileInputRef.current?.click()}
+                    className="border-2 border-dashed border-border rounded-2xl p-8 text-center cursor-pointer hover:border-primary/50 hover:bg-secondary/30 transition-colors"
+                  >
+                    <Upload className="w-10 h-10 text-muted-foreground mx-auto mb-4" />
+                    <p className="text-muted-foreground">
+                      Cliquez pour parcourir ou glissez vos fichiers ici
+                    </p>
+                    <p className="text-sm text-muted-foreground mt-2">
+                      JPG, PNG ou PDF — max 10 Mo par fichier
+                    </p>
+                  </div>
+
+                  {uploadedFiles.length > 0 && (
+                    <div className="mt-4 space-y-2">
+                      {uploadedFiles.map((file, index) => (
+                        <div key={index} className="flex items-center justify-between p-3 bg-secondary/50 rounded-lg">
+                          <span className="text-sm truncate flex-1">{file.name}</span>
+                          <Button 
+                            type="button"
+                            variant="ghost" 
+                            size="sm"
+                            onClick={() => removeFile(index)}
+                            className="text-destructive hover:text-destructive"
+                          >
+                            Supprimer
+                          </Button>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
 
                 {/* Message */}
                 <div className="card-elevated p-8">
-                  <h2 className="font-display text-xl font-semibold mb-6">Message</h2>
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Décrivez votre projet</Label>
-                    <Textarea
-                      id="message"
-                      value={formData.message}
-                      onChange={(e) => handleChange("message", e.target.value)}
-                      placeholder="Décrivez votre projet, vos envies, les contraintes de votre espace..."
-                      rows={5}
-                    />
-                  </div>
-
-                  {/* Upload placeholder */}
-                  <div className="mt-6">
-                    <Label>Photos de votre salle de bain (optionnel)</Label>
-                    <div className="mt-2 border-2 border-dashed border-border rounded-2xl p-8 text-center">
-                      <Upload className="w-10 h-10 text-muted-foreground mx-auto mb-4" />
-                      <p className="text-muted-foreground">
-                        Glissez vos photos ici ou cliquez pour parcourir
-                      </p>
-                      <p className="text-sm text-muted-foreground mt-2">
-                        PNG, JPG jusqu'à 10MB
-                      </p>
+                  <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center">
+                      <FileText className="w-5 h-5 text-wood" />
                     </div>
-                  </div>
+                    ✍️ Détails ou précisions sur votre projet
+                  </h2>
+                  <Textarea
+                    id="message"
+                    value={formData.message}
+                    onChange={(e) => handleChange("message", e.target.value)}
+                    placeholder="Décrivez votre projet, vos envies, les contraintes de votre espace, votre budget estimé..."
+                    rows={5}
+                  />
                 </div>
 
                 <Button 
