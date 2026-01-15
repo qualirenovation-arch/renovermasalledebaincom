@@ -290,7 +290,7 @@ const projects: Project[] = [
     id: 30,
     image: paris17_1,
     title: "Claustra bois et vasque suspendue",
-    description: "Salle de bain ouverte - 8 Rue Déodat de Séverac, Paris 17ème",
+    description: "Salle de bain ouverte - Paris 17ème",
     category: ["moderne", "grande", "severac"],
     details: "Création d'une salle de bain ouverte sur la chambre avec claustra en tasseaux de bois. Meuble vasque suspendu en noyer, miroir rond LED et robinetterie laiton doré. Carrelage effet marbre blanc au sol et murs.",
   },
@@ -354,7 +354,7 @@ const projects: Project[] = [
 
 const categories: { id: Category; label: string }[] = [
   { id: "all", label: "Tous" },
-  { id: "severac", label: "8 Rue Déodat de Séverac - Paris 17ème" },
+  { id: "severac", label: "Paris 17ème Quartier" },
   { id: "paris10", label: "Paris 10ème" },
   { id: "bdpereire", label: "Bd Pereire Paris 17ème" },
   { id: "avnord", label: "Saint-Maur" },
