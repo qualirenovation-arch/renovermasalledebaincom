@@ -375,6 +375,56 @@ Que vous rénoviez un appartement haussmannien, un studio ou une salle de bain f
         </div>
       </section>
 
+      {/* Partners Section */}
+      <section className="section-padding bg-stone">
+        <div className="container-custom">
+          <motion.div className="text-center max-w-3xl mx-auto mb-12" {...fadeInUp} viewport={{
+            once: true
+          }} whileInView="animate" initial="initial">
+            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
+              Nos partenaires
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Nous travaillons avec les meilleures marques du secteur
+            </p>
+          </motion.div>
+
+          <motion.div 
+            className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 items-center"
+            variants={stagger}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+          >
+            {[
+              { name: "Weber", url: "https://www.weber.fr" },
+              { name: "Schlüter", url: "https://www.schluter.fr" },
+              { name: "La Plateforme du Bâtiment", url: "https://www.laplateforme.com" },
+              { name: "Leroy Merlin", url: "https://www.leroymerlin.fr" },
+              { name: "MaSalleDeBain.com", url: "https://www.masalledebain.com" },
+              { name: "Tots Democratick Design", url: "#" },
+              { name: "Houzz", url: "https://www.houzz.fr" },
+              { name: "Parquet-Carrelage.com", url: "https://www.parquet-carrelage.com" },
+              { name: "Poalgi", url: "https://www.poalgi.com" },
+            ].map((partner, index) => (
+              <motion.a
+                key={index}
+                href={partner.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card-elevated p-6 flex items-center justify-center h-24 hover:shadow-lg transition-shadow duration-300"
+                variants={fadeInUp}
+                whileHover={{ scale: 1.05 }}
+              >
+                <span className="font-display text-sm md:text-base font-semibold text-center text-primary/80 hover:text-primary transition-colors">
+                  {partner.name}
+                </span>
+              </motion.a>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="section-padding bg-gradient-to-br from-primary via-primary to-wood">
         <div className="container-custom text-center">
