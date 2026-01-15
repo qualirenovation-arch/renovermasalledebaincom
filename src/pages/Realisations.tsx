@@ -10,6 +10,8 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
+import gallery7 from "@/assets/gallery-7.jpg";
+import gallery8 from "@/assets/gallery-8.jpg";
 
 type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres";
 
@@ -70,6 +72,22 @@ const projects: Project[] = [
     description: "Loft contemporain - Montreuil",
     category: ["moderne", "petite"],
     details: "Douche à l'italienne ultra-minimaliste avec sol en terrazzo, paroi transparente et murs blancs. Design scandinave et lignes épurées.",
+  },
+  {
+    id: 7,
+    image: gallery7,
+    title: "Élégance dorée et marbre",
+    description: "Rénovation luxueuse - Paris 10ème",
+    category: ["moderne", "grande"],
+    details: "Douche à l'italienne avec paroi vitrée profilé laiton doré, carrelage effet marbre onyx, niche intégrée et robinetterie dorée assortie. Meuble vasque en noyer avec poignées dorées.",
+  },
+  {
+    id: 8,
+    image: gallery8,
+    title: "Suite dorée contemporaine",
+    description: "Appartement parisien - Paris 10ème",
+    category: ["moderne", "grande"],
+    details: "Salle de bain complète avec douche à l'italienne, miroir ovale encadré laiton, robinetterie dorée haut de gamme et éclairage LED intégré. Finitions soignées en ton sur ton beige et or.",
   },
 ];
 
