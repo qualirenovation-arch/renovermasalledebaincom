@@ -160,10 +160,10 @@ const emplacementMachineOptions = [
 
 const typeMachineOptions = [
   { label: "Machine à laver uniquement", value: "lave-linge" },
-  { label: "Lave-linge + sèche-linge", value: "lave-seche" },
+  { label: "Lave-linge + sèche-linge (séparés)", value: "lave-seche" },
   { label: "Lavante-séchante (2 en 1)", value: "lavante-sechante" },
-  { label: "Aucun, mais je souhaite en intégrer", value: "souhaite-integrer" },
-  { label: "Aucun, et je ne souhaite pas en intégrer", value: "pas-integrer" },
+  { label: "Aucun, mais je souhaite en intégrer une", value: "souhaite-integrer" },
+  { label: "Aucun, et je ne souhaite pas en intégrer dans la salle de bain", value: "pas-integrer" },
 ];
 
 const finitionsOptions = [
