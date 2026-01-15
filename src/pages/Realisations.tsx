@@ -15,7 +15,7 @@ import gallery8 from "@/assets/gallery-8.jpg";
 import gallery9 from "@/assets/gallery-9.jpg";
 import gallery10 from "@/assets/gallery-10.jpg";
 
-type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres";
+type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10";
 
 interface Project {
   id: number;
@@ -80,7 +80,7 @@ const projects: Project[] = [
     image: gallery7,
     title: "Élégance dorée et marbre",
     description: "Rénovation luxueuse - Paris 10ème",
-    category: ["moderne", "grande"],
+    category: ["moderne", "grande", "paris10"],
     details: "Douche à l'italienne avec paroi vitrée profilé laiton doré, carrelage effet marbre onyx, niche intégrée et robinetterie dorée assortie. Meuble vasque en noyer avec poignées dorées.",
   },
   {
@@ -88,7 +88,7 @@ const projects: Project[] = [
     image: gallery8,
     title: "Suite dorée contemporaine",
     description: "Appartement parisien - Paris 10ème",
-    category: ["moderne", "grande"],
+    category: ["moderne", "grande", "paris10"],
     details: "Salle de bain complète avec douche à l'italienne, miroir ovale encadré laiton, robinetterie dorée haut de gamme et éclairage LED intégré. Finitions soignées en ton sur ton beige et or.",
   },
   {
@@ -96,7 +96,7 @@ const projects: Project[] = [
     image: gallery9,
     title: "Robinetterie laiton sur onyx",
     description: "Détail finitions - Paris 10ème",
-    category: ["moderne", "pierre"],
+    category: ["moderne", "pierre", "paris10"],
     details: "Gros plan sur la robinetterie encastrée en laiton brossé doré avec douchette sur barre. Carrelage effet marbre onyx aux veines rosées. Banc d'angle intégré avec bord arrondi.",
   },
   {
@@ -104,13 +104,14 @@ const projects: Project[] = [
     image: gallery10,
     title: "Ciel de pluie doré",
     description: "Douche luxe - Paris 10ème",
-    category: ["moderne", "grande"],
+    category: ["moderne", "grande", "paris10"],
     details: "Grande douche de pluie plafond en laiton doré combinée à une douchette à main. Paroi vitrée avec profilés dorés, niche de rangement intégrée et carrelage grand format effet onyx.",
   },
 ];
 
 const categories: { id: Category; label: string }[] = [
   { id: "all", label: "Tous" },
+  { id: "paris10", label: "Paris 10ème" },
   { id: "petite", label: "Petites salles de bain" },
   { id: "grande", label: "Grandes salles de bain" },
   { id: "moderne", label: "Style moderne" },
