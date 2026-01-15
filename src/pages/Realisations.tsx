@@ -21,8 +21,13 @@ import gallery14 from "@/assets/gallery-14.jpg";
 import gallery15 from "@/assets/gallery-15.jpg";
 import gallery16 from "@/assets/gallery-16.jpg";
 import gallery17 from "@/assets/gallery-17.jpg";
+import gallery18 from "@/assets/gallery-18.jpg";
+import gallery19 from "@/assets/gallery-19.jpg";
+import gallery20 from "@/assets/gallery-20.jpg";
+import gallery21 from "@/assets/gallery-21.jpg";
+import gallery22 from "@/assets/gallery-22.jpg";
 
-type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire";
+type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord";
 
 interface Project {
   id: number;
@@ -170,12 +175,53 @@ const projects: Project[] = [
     category: ["moderne", "bdpereire"],
     details: "Gros plan sur la robinetterie chromée haut de gamme et le carrelage chevrons blancs. Accessoires noirs (distributeur de savon) pour un style contemporain.",
   },
+  {
+    id: 18,
+    image: gallery18,
+    title: "Zellige bleu-vert et lavabo rétro",
+    description: "Salle de bain élégante - Av du Nord",
+    category: ["moderne", "petite", "avnord"],
+    details: "Salle de bain au charme rétro avec carrelage zellige bleu-vert posé à la verticale, lavabo sur pied blanc classique, miroir rond et appliques vintage. Sol en pierre naturelle beige.",
+  },
+  {
+    id: 19,
+    image: gallery19,
+    title: "Vasque sur pied classique",
+    description: "Détail lavabo - Av du Nord",
+    category: ["moderne", "avnord"],
+    details: "Vue rapprochée sur le lavabo sur pied blanc avec robinetterie chromée trois trous. Carrelage zellige bleu-vert aux nuances subtiles et miroir rond élégant.",
+  },
+  {
+    id: 20,
+    image: gallery20,
+    title: "Harmonie zellige et pierre",
+    description: "Vue d'angle - Av du Nord",
+    category: ["moderne", "pierre", "avnord"],
+    details: "Association raffinée entre le zellige bleu-vert mural et le sol en pierre naturelle. Applique boule vintage chromée et robinetterie classique trois trous.",
+  },
+  {
+    id: 21,
+    image: gallery21,
+    title: "Douche laiton vintage",
+    description: "Espace douche - Av du Nord",
+    category: ["moderne", "pierre", "avnord"],
+    details: "Douche à l'italienne avec colonne laiton vintage, parois vitrées double porte, fond en pierre naturelle beige et côtés en zellige bleu-vert. Niche de rangement intégrée.",
+  },
+  {
+    id: 22,
+    image: gallery22,
+    title: "Niche et robinetterie laiton",
+    description: "Détail douche - Av du Nord",
+    category: ["moderne", "pierre", "avnord"],
+    details: "Vue détaillée sur la niche de rangement en pierre naturelle, zellige bleu-vert vertical et colonne de douche laiton vintage avec douchette à main.",
+  },
 ];
 
 const categories: { id: Category; label: string }[] = [
   { id: "all", label: "Tous" },
   { id: "paris10", label: "Paris 10ème" },
   { id: "bdpereire", label: "Bd Pereire Paris 17ème" },
+  { id: "avnord", label: "Av du Nord" },
   { id: "petite", label: "Petites salles de bain" },
   { id: "grande", label: "Grandes salles de bain" },
   { id: "moderne", label: "Style moderne" },
