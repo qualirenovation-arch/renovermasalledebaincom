@@ -66,6 +66,8 @@ import boisColombes5 from "@/assets/bois-colombes-5.jpg";
 import boisColombes6 from "@/assets/bois-colombes-6.jpg";
 import boisColombes7 from "@/assets/bois-colombes-7.jpg";
 import boisColombes8 from "@/assets/bois-colombes-8.jpg";
+import boisColombes9 from "@/assets/bois-colombes-9.jpg";
+import boisColombes10 from "@/assets/bois-colombes-10.jpg";
 
 type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "convention" | "butteschaumont" | "jemmapes" | "taitbout" | "rocroy" | "boiscolombes";
 
@@ -574,6 +576,22 @@ const projects: Project[] = [
     description: "Rénovation complète - Bois-Colombes",
     category: ["petite", "moderne", "boiscolombes"],
     details: "Gros plan sur la robinetterie dorée haut de gamme : mitigeur mono-commande en laiton brossé. Miroir connecté avec horloge digitale intégrée visible en reflet.",
+  },
+  {
+    id: 63,
+    image: boisColombes9,
+    title: "État avant travaux - Vasque",
+    description: "Avant / Après - Bois-Colombes",
+    category: ["petite", "boiscolombes", "avant-apres"],
+    details: "Salle de bain avant rénovation : mur gris foncé, baignoire ancienne, meuble vasque blanc daté, carrelage mural blanc basique, radiateur fonte. Espace à moderniser entièrement.",
+  },
+  {
+    id: 64,
+    image: boisColombes10,
+    title: "État avant travaux - Vue générale",
+    description: "Avant / Après - Bois-Colombes",
+    category: ["petite", "boiscolombes", "avant-apres"],
+    details: "Vue d'ensemble avant travaux : machine à laver sous plan noir, étagères ouvertes, baignoire avec rideau. Sol carrelé noir et blanc, murs gris. Transformation complète prévue.",
   },
 ];
 
