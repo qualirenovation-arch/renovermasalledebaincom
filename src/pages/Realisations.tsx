@@ -680,11 +680,13 @@ export default function Realisations() {
               Découvrez nos créations
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              Rénovation de salle de bain : douche à l'italienne, remplacement de baignoire, 
-              receveur extra-plat, avec ou sans WC. Inspirez-vous de nos réalisations.
+              Du loft parisien au pavillon de banlieue, chaque projet raconte une métamorphose. 
+              Douche à l'italienne zéro ressaut, transformation baignoire en espace bien-être, 
+              receveur extra-plat ou réaménagement complet avec WC suspendu — nos artisans 
+              subliment vos mètres carrés les plus intimes.
             </p>
-            <p className="text-wood font-medium text-xl">
-              Et vous, plutôt receveur ou baignoire ?
+            <p className="text-wood font-medium text-xl italic">
+              Et vous, team receveur minimaliste ou baignoire cocooning ?
             </p>
           </motion.div>
         </div>
