@@ -31,6 +31,9 @@ interface FormData {
   telephone: string;
   codePostal: string;
   typeInstallation: string;
+  typeDouche: string;
+  typeReceveur: string[];
+  typeBaignoire: string[];
   wcType: string[];
   meubleVasque: string[];
   porteDouche: string[];
@@ -50,6 +53,9 @@ const initialFormData: FormData = {
   telephone: "",
   codePostal: "",
   typeInstallation: "",
+  typeDouche: "",
+  typeReceveur: [],
+  typeBaignoire: [],
   wcType: [],
   meubleVasque: [],
   porteDouche: [],
@@ -125,6 +131,25 @@ const porteOptions = [
   { label: "Porte de douche battante", value: "battante" },
   { label: "Porte de douche coulissante", value: "coulissante" },
   { label: "Porte de douche pliable", value: "pliable" },
+];
+
+const typeDoucheOptions = [
+  { value: "applique", label: "En applique" },
+  { value: "encastre", label: "Encastré" },
+];
+
+const typeReceveurOptions = [
+  { label: "Receveur à poser", value: "a-poser" },
+  { label: "Receveur à carreler", value: "a-carreler" },
+  { label: "Receveur à encastrer", value: "a-encastrer" },
+  { label: "Receveur en résine", value: "resine" },
+  { label: "Receveur en acrylique", value: "acrylique" },
+];
+
+const typeBaignoireOptions = [
+  { label: "Baignoire en fonte", value: "fonte" },
+  { label: "Baignoire en acier", value: "acier" },
+  { label: "Baignoire en résine", value: "resine" },
 ];
 
 const emplacementMachineOptions = [
@@ -466,6 +491,44 @@ export default function Devis() {
                       </div>
                     ))}
                   </RadioGroup>
+
+                  {/* Type de douche - visible si douche sélectionnée */}
+                  {formData.typeInstallation === "douche" && (
+                    <div className="mt-6 pt-6 border-t border-border">
+                      <Label className="text-sm font-medium text-muted-foreground mb-3 block">Type de robinetterie douche</Label>
+                      <RadioGroup 
+                        value={formData.typeDouche} 
+                        onValueChange={(value) => handleChange("typeDouche", value)}
+                        className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                      >
+                        {typeDoucheOptions.map((option) => (
+                          <div 
+                            key={option.value} 
+                            className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
+                              formData.typeDouche === option.value 
+                                ? 'border-foreground bg-foreground/5' 
+                                : 'border-border bg-card hover:border-foreground/30'
+                            }`}
+                            onClick={() => handleChange("typeDouche", option.value)}
+                          >
+                            <RadioGroupItem value={option.value} id={`douche-${option.value}`} className="pointer-events-none" />
+                            <Label htmlFor={`douche-${option.value}`} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
+                          </div>
+                        ))}
+                      </RadioGroup>
+
+                      <Label className="text-sm font-medium text-muted-foreground mb-3 block mt-6">Type de receveur</Label>
+                      <CheckboxGroup options={typeReceveurOptions} field="typeReceveur" columns={3} />
+                    </div>
+                  )}
+
+                  {/* Type de baignoire - visible si baignoire sélectionnée */}
+                  {formData.typeInstallation === "baignoire" && (
+                    <div className="mt-6 pt-6 border-t border-border">
+                      <Label className="text-sm font-medium text-muted-foreground mb-3 block">Style de baignoire</Label>
+                      <CheckboxGroup options={typeBaignoireOptions} field="typeBaignoire" />
+                    </div>
+                  )}
                 </div>
 
                 {/* WC */}
