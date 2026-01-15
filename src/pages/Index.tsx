@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { ArrowRight, Phone, MessageCircle, ShieldCheck, Clock, Palette, CheckCircle } from "lucide-react";
+import { ArrowRight, Phone, Pencil, Gem, Wrench } from "lucide-react";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
@@ -13,13 +13,13 @@ const fadeInUp = {
   transition: { duration: 0.6 }
 };
 
-// Section "Pourquoi choisir" - 3 colonnes
+// Section "Pourquoi choisir" - 3 colonnes avec pictos SVG
 const whyChoose = [
   {
     icon: (
       <svg className="w-12 h-12 mx-auto" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <circle cx="24" cy="16" r="10" />
-        <path d="M24 26v14" />
+        <circle cx="24" cy="12" r="8" />
+        <path d="M24 20v20" />
         <path d="M18 44h12" strokeLinecap="round" />
       </svg>
     ),
@@ -29,9 +29,10 @@ const whyChoose = [
   {
     icon: (
       <svg className="w-12 h-12 mx-auto" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <ellipse cx="24" cy="24" rx="8" ry="16" />
-        <path d="M24 8v32" />
-        <path d="M16 14c2-2 5-3 8-3s6 1 8 3" />
+        <ellipse cx="24" cy="24" rx="6" ry="14" />
+        <path d="M24 10v28" />
+        <path d="M18 16c2-2 4-3 6-3s4 1 6 3" />
+        <path d="M18 32c2 2 4 3 6 3s4-1 6-3" />
       </svg>
     ),
     title: "Personnalisez",
@@ -40,9 +41,9 @@ const whyChoose = [
   {
     icon: (
       <svg className="w-12 h-12 mx-auto" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M8 24c4-4 8-4 12-4s8 4 12 4 8-4 12-4" strokeLinecap="round" />
-        <path d="M8 32c4-4 8-4 12-4s8 4 12 4 8-4 12-4" strokeLinecap="round" />
-        <path d="M8 40c4-4 8-4 12-4s8 4 12 4 8-4 12-4" strokeLinecap="round" />
+        <path d="M8 20c6-6 12-4 16 0s10 6 16 0" strokeLinecap="round" />
+        <path d="M8 28c6-6 12-4 16 0s10 6 16 0" strokeLinecap="round" />
+        <path d="M8 36c6-6 12-4 16 0s10 6 16 0" strokeLinecap="round" />
       </svg>
     ),
     title: "Réalisez",
@@ -50,63 +51,107 @@ const whyChoose = [
   }
 ];
 
-// Section avantages
+// Section avantages avec pictos minimalistes
 const advantages = [
   {
-    icon: MessageCircle,
-    title: "Conseils personnalisés",
-    description: "Un accompagnement sur mesure"
+    icon: Pencil,
+    title: "Conception sur mesure",
+    description: "Des solutions personnalisées pour votre salle de bains"
   },
   {
-    icon: Palette,
-    title: "Large choix de matériaux",
-    description: "Des finitions haut de gamme"
+    icon: Gem,
+    title: "Matériaux de qualité",
+    description: "Une sélection de matériaux durables et esthétiques"
   },
   {
-    icon: ShieldCheck,
-    title: "Travaux garantis et assurés",
-    description: "Garantie décennale incluse"
-  },
-  {
-    icon: Clock,
-    title: "Respect des délais et budget",
-    description: "Engagement de résultat"
+    icon: Wrench,
+    title: "Installation professionnelle",
+    description: "Des experts qualifiés pour des résultats fiables"
   }
+];
+
+// Tags de style pour la galerie
+const styleTags = [
+  { label: "Style naturel", className: "tag-beige" },
+  { label: "Minimaliste", className: "tag-mint" },
+  { label: "Effet marbre", className: "tag-blue" },
+  { label: "Graphique", className: "tag-peach" }
 ];
 
 export default function Index() {
   return (
     <Layout>
-      {/* Hero Section - Minimaliste */}
+      {/* Hero Section - Style épuré beige */}
       <section className="bg-stone py-16 md:py-24">
-        <div className="container-custom text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 text-foreground">
-              Rénovation de salle de bain<br />
-              <span className="text-wood">&</span> douche à l'italienne
-            </h1>
-            <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-8">
-              Artisan concepteur à Paris · Visite technique gratuite
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="cta" size="lg" asChild>
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground leading-tight">
+                CRÉEZ VOTRE<br />
+                DOUCHE À<br />
+                <span className="italic font-normal">L'ITALIENNE</span>
+              </h1>
+              <p className="text-muted-foreground text-lg md:text-xl mb-8">
+                Conception et installation<br />
+                de douches à l'italienne
+              </p>
+              <Button 
+                variant="default" 
+                size="lg" 
+                asChild 
+                className="bg-[hsl(38,50%,50%)] hover:bg-[hsl(38,50%,45%)] text-white rounded-md px-8"
+              >
                 <Link to="/devis">
-                  Prendre rendez-vous
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  DEMANDER UN DEVIS
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" asChild>
-                <a href="tel:+33659764685">
-                  <Phone className="w-4 h-4 mr-2" />
-                  06 59 76 46 85
-                </a>
-              </Button>
-            </div>
-          </motion.div>
+            </motion.div>
+            
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden">
+                <img
+                  src={gallery1}
+                  alt="Douche à l'italienne moderne"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section avantages en ligne */}
+      <section className="py-12 border-y border-border">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {advantages.map((item, index) => (
+              <motion.div
+                key={index}
+                className="flex items-start gap-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <div className="flex-shrink-0">
+                  <item.icon className="w-8 h-8 text-foreground" strokeWidth={1.5} />
+                </div>
+                <div>
+                  <h3 className="font-display font-semibold text-lg mb-1">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm">{item.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -149,54 +194,88 @@ export default function Index() {
             viewport={{ once: true }}
             transition={{ delay: 0.5 }}
           >
-            <Button variant="default" size="lg" asChild className="bg-foreground text-background hover:bg-foreground/90">
+            <Button variant="outline" size="lg" asChild className="rounded-md border-foreground text-foreground hover:bg-foreground hover:text-background">
               <Link to="/realisations">Voir nos inspirations</Link>
             </Button>
           </motion.div>
         </div>
       </section>
 
-      {/* Section Réalisations */}
+      {/* Section Réalisations avec tags colorés */}
       <section className="section-padding bg-stone">
         <div className="container-custom">
-          <motion.h2 
-            className="font-display text-2xl md:text-3xl lg:text-4xl text-center mb-12"
+          <motion.div 
+            className="text-center mb-8"
             {...fadeInUp}
             viewport={{ once: true }}
             whileInView="animate"
             initial="initial"
           >
-            Nos plus belles réalisations
-          </motion.h2>
+            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl mb-4">
+              Nos plus belles réalisations
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Inspirez-vous de nos projets de douches à l'italienne, réalisés avec soin, élégance et précision.
+            </p>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-            {[gallery1, gallery2, gallery3].map((img, index) => (
+          {/* Tags de style */}
+          <motion.div 
+            className="flex flex-wrap justify-center gap-3 mb-10"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            {styleTags.map((tag, index) => (
+              <span key={index} className={tag.className}>
+                {tag.label}
+              </span>
+            ))}
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { img: gallery1, style: "Style naturel", location: "à Rueil-Malmaison", tag: "Terre d'ombre, pierre naturelle", borderClass: "photo-card-beige" },
+              { img: gallery2, style: "Effet marbre", location: "à Nantes", tag: "Matériaux veinés", borderClass: "photo-card-terracotta" },
+              { img: gallery3, style: "Minimaliste", location: "à Annecy", tag: "Élégance, extra-plat", borderClass: "photo-card-mint" }
+            ].map((project, index) => (
               <motion.div
                 key={index}
-                className="aspect-[3/4] rounded-xl overflow-hidden"
+                className="group"
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.02 }}
               >
-                <img
-                  src={img}
-                  alt={`Réalisation douche à l'italienne ${index + 1}`}
-                  className="w-full h-full object-cover"
-                />
+                <div className={`aspect-[3/4] ${project.borderClass} mb-4`}>
+                  <img
+                    src={project.img}
+                    alt={`${project.style} ${project.location}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="font-display text-lg font-semibold text-wood">{project.style}</h3>
+                <p className="text-foreground text-sm mb-2">{project.location}</p>
+                <span className="tag-beige text-xs">{project.tag}</span>
+                <Link 
+                  to="/realisations" 
+                  className="block mt-3 text-wood font-medium text-sm hover:underline"
+                >
+                  Voir le projet
+                </Link>
               </motion.div>
             ))}
           </div>
 
           <motion.div 
-            className="text-center mt-10"
+            className="text-center mt-12"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" asChild className="rounded-md">
               <Link to="/realisations">
                 Voir tous nos projets
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -226,7 +305,12 @@ export default function Index() {
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto">
-            {advantages.map((item, index) => (
+            {[
+              { icon: "💬", title: "Conseils personnalisés" },
+              { icon: "📦", title: "Large choix de matériaux" },
+              { icon: "✓", title: "Travaux garantis et assurés" },
+              { icon: "⏱", title: "Respect des délais et budget" }
+            ].map((item, index) => (
               <motion.div
                 key={index}
                 className="text-center"
@@ -235,11 +319,10 @@ export default function Index() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <div className="w-16 h-16 rounded-full border-2 border-foreground/20 flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="w-7 h-7 text-foreground" />
+                <div className="w-16 h-16 rounded-full border-2 border-foreground/20 flex items-center justify-center mx-auto mb-4 text-2xl">
+                  {item.icon}
                 </div>
-                <h3 className="font-display text-sm md:text-base font-semibold mb-1">{item.title}</h3>
-                <p className="text-muted-foreground text-xs md:text-sm">{item.description}</p>
+                <h3 className="font-display text-sm md:text-base font-semibold">{item.title}</h3>
               </motion.div>
             ))}
           </div>
@@ -267,10 +350,9 @@ export default function Index() {
               {["Visite gratuite", "Devis détaillé", "Garantie décennale", "Maîtrise d'œuvre"].map((item, index) => (
                 <span 
                   key={index}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone text-foreground text-sm"
+                  className="tag-beige"
                 >
-                  <CheckCircle className="w-4 h-4 text-wood" />
-                  {item}
+                  ✓ {item}
                 </span>
               ))}
             </div>
@@ -295,7 +377,11 @@ export default function Index() {
               Nous vous accompagnons de A à Z.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="cta" size="xl" asChild>
+              <Button 
+                size="lg" 
+                asChild
+                className="bg-[hsl(38,50%,50%)] hover:bg-[hsl(38,50%,45%)] text-white rounded-md"
+              >
                 <Link to="/devis">
                   Demander un devis gratuit
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -303,9 +389,9 @@ export default function Index() {
               </Button>
               <Button 
                 variant="outline" 
-                size="xl" 
+                size="lg" 
                 asChild
-                className="border-background/30 text-background hover:bg-background/10"
+                className="border-background/30 text-background hover:bg-background/10 rounded-md"
               >
                 <a href="tel:+33659764685">
                   <Phone className="w-5 h-5 mr-2" />
