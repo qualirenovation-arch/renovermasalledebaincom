@@ -41,14 +41,14 @@ import paris17_5 from "@/assets/paris17-5.jpg";
 import paris17_6 from "@/assets/paris17-6.jpg";
 import paris17_7 from "@/assets/paris17-7.jpg";
 import paris17_8 from "@/assets/paris17-8.jpg";
-import courbevoie1 from "@/assets/courbevoie-1.jpg";
-import courbevoie2 from "@/assets/courbevoie-2.jpg";
-import courbevoie3 from "@/assets/courbevoie-3.jpg";
-import courbevoie4 from "@/assets/courbevoie-4.jpg";
-import courbevoie5 from "@/assets/courbevoie-5.jpg";
-import courbevoie6 from "@/assets/courbevoie-6.jpg";
+import convention1 from "@/assets/courbevoie-1.jpg";
+import convention2 from "@/assets/courbevoie-2.jpg";
+import convention3 from "@/assets/courbevoie-3.jpg";
+import convention4 from "@/assets/courbevoie-4.jpg";
+import convention5 from "@/assets/courbevoie-5.jpg";
+import convention6 from "@/assets/courbevoie-6.jpg";
 
-type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "courbevoie";
+type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "convention";
 
 interface Project {
   id: number;
@@ -358,57 +358,57 @@ const projects: Project[] = [
   },
   {
     id: 38,
-    image: courbevoie1,
+    image: convention1,
     title: "Douche spacieuse carrelage béton",
-    description: "Salle de bain moderne - Courbevoie",
-    category: ["moderne", "grande", "courbevoie"],
+    description: "Salle de bain moderne - Paris 15ème",
+    category: ["moderne", "grande", "convention"],
     details: "Douche à l'italienne avec paroi coulissante vitrée, carrelage grand format effet béton gris, niche de rangement intégrée et meuble vasque chêne massif suspendu. Robinetterie chromée.",
   },
   {
     id: 39,
-    image: courbevoie2,
+    image: convention2,
     title: "Douche ciel de pluie",
-    description: "Espace douche - Courbevoie",
-    category: ["moderne", "grande", "courbevoie"],
+    description: "Espace douche - Paris 15ème",
+    category: ["moderne", "grande", "convention"],
     details: "Grande douche avec colonne de douche chromée incluant ciel de pluie et douchette à main. Paroi vitrée coulissante, receveur extra-plat blanc et niche de rangement dans le carrelage effet béton.",
   },
   {
     id: 40,
-    image: courbevoie3,
+    image: convention3,
     title: "Vasque chêne suspendue",
-    description: "Espace lavabo - Courbevoie",
-    category: ["moderne", "courbevoie"],
+    description: "Espace lavabo - Paris 15ème",
+    category: ["moderne", "convention"],
     details: "Meuble vasque suspendu en chêne massif avec tiroirs, vasque intégrée blanche et robinetterie inox brossé. Miroir rectangulaire et crédence carrelage effet béton.",
   },
   {
     id: 41,
-    image: courbevoie4,
+    image: convention4,
     title: "Vue d'ensemble salle de bain",
-    description: "Harmonie bois et béton - Courbevoie",
-    category: ["moderne", "grande", "courbevoie"],
+    description: "Harmonie bois et béton - Paris 15ème",
+    category: ["moderne", "grande", "convention"],
     details: "Salle de bain complète avec douche à l'italienne, meuble vasque chêne, miroir LED et carrelage effet béton. Association élégante du bois naturel et des teintes grises.",
   },
   {
     id: 42,
-    image: courbevoie5,
+    image: convention5,
     title: "WC suspendu design",
-    description: "Toilettes contemporaines - Courbevoie",
-    category: ["moderne", "courbevoie"],
+    description: "Toilettes contemporaines - Paris 15ème",
+    category: ["moderne", "convention"],
     details: "WC suspendu avec bâti-support encastré, carrelage métro blanc brillant, peinture bleu foncé, rangement bois encadré et éclairage d'ambiance. Design contemporain et optimisation de l'espace.",
   },
   {
     id: 43,
-    image: courbevoie6,
+    image: convention6,
     title: "WC vue d'entrée",
-    description: "Espace toilettes - Courbevoie",
-    category: ["moderne", "courbevoie"],
+    description: "Espace toilettes - Paris 15ème",
+    category: ["moderne", "convention"],
     details: "Vue depuis l'entrée sur les toilettes design : WC suspendu, carrelage métro blanc, murs bleu profond avec niche bois et rangement supérieur. Cadre décoratif et ampoule vintage.",
   },
 ];
 
 const categories: { id: Category; label: string }[] = [
   { id: "all", label: "Tous" },
-  { id: "courbevoie", label: "Courbevoie" },
+  { id: "convention", label: "Paris 15ème - Convention" },
   { id: "severac", label: "Paris 17ème - Les Ternes" },
   { id: "paris10", label: "Paris 10ème" },
   { id: "bdpereire", label: "Bd Pereire Paris 17ème" },
