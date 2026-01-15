@@ -41,8 +41,14 @@ import paris17_5 from "@/assets/paris17-5.jpg";
 import paris17_6 from "@/assets/paris17-6.jpg";
 import paris17_7 from "@/assets/paris17-7.jpg";
 import paris17_8 from "@/assets/paris17-8.jpg";
+import courbevoie1 from "@/assets/courbevoie-1.jpg";
+import courbevoie2 from "@/assets/courbevoie-2.jpg";
+import courbevoie3 from "@/assets/courbevoie-3.jpg";
+import courbevoie4 from "@/assets/courbevoie-4.jpg";
+import courbevoie5 from "@/assets/courbevoie-5.jpg";
+import courbevoie6 from "@/assets/courbevoie-6.jpg";
 
-type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac";
+type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "courbevoie";
 
 interface Project {
   id: number;
@@ -350,10 +356,59 @@ const projects: Project[] = [
     category: ["avant-apres", "severac"],
     details: "Vue sur la baignoire d'angle avec habillage bois exotique et sol galets noirs avant rénovation. Cette salle de bain a été entièrement repensée pour créer une salle d'eau moderne ouverte sur la chambre.",
   },
+  {
+    id: 38,
+    image: courbevoie1,
+    title: "Douche spacieuse carrelage béton",
+    description: "Salle de bain moderne - Courbevoie",
+    category: ["moderne", "grande", "courbevoie"],
+    details: "Douche à l'italienne avec paroi coulissante vitrée, carrelage grand format effet béton gris, niche de rangement intégrée et meuble vasque chêne massif suspendu. Robinetterie chromée.",
+  },
+  {
+    id: 39,
+    image: courbevoie2,
+    title: "Douche ciel de pluie",
+    description: "Espace douche - Courbevoie",
+    category: ["moderne", "grande", "courbevoie"],
+    details: "Grande douche avec colonne de douche chromée incluant ciel de pluie et douchette à main. Paroi vitrée coulissante, receveur extra-plat blanc et niche de rangement dans le carrelage effet béton.",
+  },
+  {
+    id: 40,
+    image: courbevoie3,
+    title: "Vasque chêne suspendue",
+    description: "Espace lavabo - Courbevoie",
+    category: ["moderne", "courbevoie"],
+    details: "Meuble vasque suspendu en chêne massif avec tiroirs, vasque intégrée blanche et robinetterie inox brossé. Miroir rectangulaire et crédence carrelage effet béton.",
+  },
+  {
+    id: 41,
+    image: courbevoie4,
+    title: "Vue d'ensemble salle de bain",
+    description: "Harmonie bois et béton - Courbevoie",
+    category: ["moderne", "grande", "courbevoie"],
+    details: "Salle de bain complète avec douche à l'italienne, meuble vasque chêne, miroir LED et carrelage effet béton. Association élégante du bois naturel et des teintes grises.",
+  },
+  {
+    id: 42,
+    image: courbevoie5,
+    title: "WC suspendu design",
+    description: "Toilettes contemporaines - Courbevoie",
+    category: ["moderne", "courbevoie"],
+    details: "WC suspendu avec bâti-support encastré, carrelage métro blanc brillant, peinture bleu foncé, rangement bois encadré et éclairage d'ambiance. Design contemporain et optimisation de l'espace.",
+  },
+  {
+    id: 43,
+    image: courbevoie6,
+    title: "WC vue d'entrée",
+    description: "Espace toilettes - Courbevoie",
+    category: ["moderne", "courbevoie"],
+    details: "Vue depuis l'entrée sur les toilettes design : WC suspendu, carrelage métro blanc, murs bleu profond avec niche bois et rangement supérieur. Cadre décoratif et ampoule vintage.",
+  },
 ];
 
 const categories: { id: Category; label: string }[] = [
   { id: "all", label: "Tous" },
+  { id: "courbevoie", label: "Courbevoie" },
   { id: "severac", label: "Paris 17ème - Les Ternes" },
   { id: "paris10", label: "Paris 10ème" },
   { id: "bdpereire", label: "Bd Pereire Paris 17ème" },
