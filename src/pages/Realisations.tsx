@@ -102,6 +102,9 @@ import stgermain2 from "@/assets/stgermain-2.jpg";
 import stgermain3 from "@/assets/stgermain-3.jpg";
 import stgermain4 from "@/assets/stgermain-4.jpg";
 import stgermainAvant from "@/assets/stgermain-avant.jpg";
+import stgermainAvant2 from "@/assets/stgermain-avant-2.jpg";
+import stgermainAvant3 from "@/assets/stgermain-avant-3.jpg";
+import stgermainAvant4 from "@/assets/stgermain-avant-4.jpg";
 
 interface Photo {
   id: number;
@@ -276,7 +279,10 @@ const albums: Album[] = [
       { id: 2, image: stgermain2, title: "Vue frontale", description: "Faïence zellige et carreaux de ciment" },
       { id: 3, image: stgermain3, title: "Vue d'ensemble", description: "Nouvelle baignoire et sèche-serviettes" },
       { id: 4, image: stgermain4, title: "Espace baignoire", description: "Faïence zellige ton sur ton" },
-      { id: 5, image: stgermainAvant, title: "Avant - État initial", description: "Salle de bain à relooker" },
+      { id: 5, image: stgermainAvant, title: "Avant - Baignoire", description: "Ancienne baignoire à remplacer" },
+      { id: 6, image: stgermainAvant2, title: "Avant - Vue vasque", description: "Meuble existant à moderniser" },
+      { id: 7, image: stgermainAvant3, title: "Avant - Vue générale", description: "État initial de la pièce" },
+      { id: 8, image: stgermainAvant4, title: "Avant - Baignoire détail", description: "Tablier à refaire" },
     ],
   },
 ];
