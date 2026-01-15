@@ -13,9 +13,9 @@ const values = [
 ];
 
 const guarantees = [
-  "Garantie décennale sur tous nos travaux",
+  "Garantie décennale MIC Assurances",
   "Garantie étanchéité 10 ans",
-  "Assurance responsabilité civile professionnelle",
+  "Responsabilité civile professionnelle MIC Assurances",
   "Devis détaillé avec photos via Graneet – zéro mauvaise surprise",
   "Prix ferme et définitif, transparent ligne par ligne",
   "Suivi personnalisé de votre chantier",
