@@ -409,7 +409,7 @@ const projects: Project[] = [
 const categories: { id: Category; label: string }[] = [
   { id: "all", label: "Tous" },
   { id: "convention", label: "Paris 15ème - Convention" },
-  { id: "severac", label: "Suite Parentale" },
+  { id: "severac", label: "Paris 17ème - Suite Parentale Ternes" },
   { id: "paris10", label: "Paris 10ème" },
   { id: "bdpereire", label: "Paris 17ème - Les Ternes" },
   { id: "avnord", label: "Saint-Maur" },
