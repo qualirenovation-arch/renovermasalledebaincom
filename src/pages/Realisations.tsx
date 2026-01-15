@@ -70,15 +70,18 @@ import boisColombes9 from "@/assets/bois-colombes-9.jpg";
 import boisColombes10 from "@/assets/bois-colombes-10.jpg";
 import boisColombes11 from "@/assets/bois-colombes-11.jpg";
 
-type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "convention" | "butteschaumont" | "jemmapes" | "taitbout" | "rocroy" | "boiscolombes";
+type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "convention" | "jemmapes" | "boiscolombes";
+
+type InProgressCategory = "all-progress" | "butteschaumont" | "taitbout" | "rocroy";
 
 interface Project {
   id: number;
   image: string;
   title: string;
   description: string;
-  category: Category[];
+  category: (Category | InProgressCategory)[];
   details: string;
+  isInProgress?: boolean;
 }
 
 const projects: Project[] = [
@@ -433,6 +436,7 @@ const projects: Project[] = [
     description: "🚧 Chantier en cours - Paris 19ème",
     category: ["petite", "butteschaumont"],
     details: "Petite salle de bain avant rénovation : lavabo avec meuble sous vasque, paroi de douche vitrée décorative, carrelage blanc avec frise bleue. Transformation prévue en douche à l'italienne moderne.",
+    isInProgress: true,
   },
   {
     id: 45,
@@ -441,6 +445,7 @@ const projects: Project[] = [
     description: "🚧 Chantier en cours - Paris 19ème",
     category: ["petite", "butteschaumont"],
     details: "Vue sur la douche existante avec cabine vitrée décorée, sol carrelage octogonal blanc et bleu. Projet de rénovation complète en cours.",
+    isInProgress: true,
   },
   {
     id: 46,
@@ -449,6 +454,7 @@ const projects: Project[] = [
     description: "🚧 Chantier en cours - Paris 19ème",
     category: ["petite", "butteschaumont"],
     details: "Vue depuis l'entrée de la salle de bain à rénover, passage voûté caractéristique. Travaux de transformation en cours pour créer une douche à l'italienne optimisée.",
+    isInProgress: true,
   },
   {
     id: 47,
@@ -481,6 +487,7 @@ const projects: Project[] = [
     description: "🚧 Chantier en cours - Paris 9ème",
     category: ["taitbout"],
     details: "Espace avant travaux : fenêtre donnant sur cour intérieure, tringle à rideau existante. Préparation du chantier pour transformation complète en salle de bain sous combles.",
+    isInProgress: true,
   },
   {
     id: 51,
@@ -489,6 +496,7 @@ const projects: Project[] = [
     description: "🚧 Chantier en cours - Paris 9ème",
     category: ["petite", "taitbout"],
     details: "Salle de bain existante sous pente : baignoire avec pare-douche accordéon, WC et meuble vasque blanc. Carrelage gris au sol, contrainte de hauteur sous plafond à optimiser.",
+    isInProgress: true,
   },
   {
     id: 52,
@@ -497,6 +505,7 @@ const projects: Project[] = [
     description: "🚧 Chantier en cours - Paris 9ème",
     category: ["petite", "taitbout"],
     details: "Vue depuis l'entrée : lavabo sur pied, étagères de rangement, miroir extensible. Accès vers couloir et chambre. Projet de rénovation complète avec douche à l'italienne.",
+    isInProgress: true,
   },
   {
     id: 53,
@@ -505,6 +514,7 @@ const projects: Project[] = [
     description: "🚧 Chantier en cours - Paris 10ème",
     category: ["rocroy"],
     details: "Phase de démolition dans un appartement haussmannien avec moulures au plafond. Travaux de gros œuvre : ouverture de cloisons, passage des gaines électriques. Projet de réaménagement complet.",
+    isInProgress: true,
   },
   {
     id: 54,
@@ -513,6 +523,7 @@ const projects: Project[] = [
     description: "🚧 Chantier en cours - Paris 10ème",
     category: ["petite", "rocroy", "avant-apres"],
     details: "Salle de bain avant travaux : baignoire d'angle à remplacer, carrelage blanc et frise dorée datée, sol en terre cuite. Transformation prévue en douche à l'italienne moderne.",
+    isInProgress: true,
   },
   {
     id: 55,
@@ -611,9 +622,6 @@ const categories: { id: Category; label: string; description?: string }[] = [
     label: "Bois-Colombes - Avant/Après",
     description: "Transformation complète d'une salle de bain à Bois-Colombes.\nD'un espace sombre et daté à une pièce lumineuse et moderne.\nDouche à l'italienne, robinetterie dorée, sol terrazzo et murs vert d'eau."
   },
-  { id: "rocroy", label: "🚧 Paris 10ème - Rue de Rocroy" },
-  { id: "taitbout", label: "🚧 Paris 9ème - Rue Taitbout" },
-  { id: "butteschaumont", label: "🚧 Paris 19ème - Buttes-Chaumont" },
   { id: "jemmapes", label: "Paris 10ème - Salle de bain au masculin" },
   { id: "convention", label: "Paris 15ème - Convention" },
   { id: "severac", label: "Paris 17ème - Suite Parentale Ternes" },
@@ -627,13 +635,29 @@ const categories: { id: Category; label: string; description?: string }[] = [
   { id: "avant-apres", label: "Avant / Après" },
 ];
 
+const inProgressCategories: { id: InProgressCategory; label: string }[] = [
+  { id: "all-progress", label: "Tous les chantiers" },
+  { id: "rocroy", label: "Paris 10ème - Rue de Rocroy" },
+  { id: "taitbout", label: "Paris 9ème - Rue Taitbout" },
+  { id: "butteschaumont", label: "Paris 19ème - Buttes-Chaumont" },
+];
+
 export default function Realisations() {
   const [activeCategory, setActiveCategory] = useState<Category>("all");
+  const [activeInProgressCategory, setActiveInProgressCategory] = useState<InProgressCategory>("all-progress");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
+  // Projets terminés (sans isInProgress)
+  const completedProjects = projects.filter(p => !p.isInProgress);
   const filteredProjects = activeCategory === "all" 
-    ? projects 
-    : projects.filter(p => p.category.includes(activeCategory));
+    ? completedProjects 
+    : completedProjects.filter(p => p.category.includes(activeCategory));
+
+  // Projets en cours
+  const inProgressProjects = projects.filter(p => p.isInProgress);
+  const filteredInProgressProjects = activeInProgressCategory === "all-progress"
+    ? inProgressProjects
+    : inProgressProjects.filter(p => p.category.includes(activeInProgressCategory));
 
   const activeDescription = categories.find(c => c.id === activeCategory)?.description;
 
@@ -723,6 +747,85 @@ export default function Realisations() {
                         alt={project.title}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="font-display text-xl font-semibold mb-2">
+                        {project.title}
+                      </h3>
+                      <p className="text-muted-foreground">{project.description}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section Projets en cours */}
+      <section className="section-padding bg-stone/50">
+        <div className="container-custom">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <span className="inline-block px-4 py-2 rounded-full bg-wood/20 text-wood text-sm font-medium mb-4">
+              🚧 Travaux en cours
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
+              Projets en cours
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Découvrez nos chantiers actuels et suivez leur avancement
+            </p>
+          </motion.div>
+
+          {/* Filtres projets en cours */}
+          <div className="flex flex-wrap gap-3 justify-center mb-12">
+            {inProgressCategories.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setActiveInProgressCategory(cat.id)}
+                className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+                  activeInProgressCategory === cat.id
+                    ? "bg-wood text-white"
+                    : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                }`}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Grid projets en cours */}
+          <motion.div 
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"
+            layout
+          >
+            <AnimatePresence mode="popLayout">
+              {filteredInProgressProjects.map((project) => (
+                <motion.div
+                  key={project.id}
+                  layout
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.3 }}
+                  className="group cursor-pointer"
+                  onClick={() => setSelectedProject(project)}
+                >
+                  <div className="card-elevated overflow-hidden border-2 border-wood/30">
+                    <div className="aspect-square overflow-hidden relative">
+                      <img 
+                        src={project.image} 
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute top-2 left-2 bg-wood text-white text-xs px-2 py-1 rounded-full">
+                        En cours
+                      </div>
                     </div>
                     <div className="p-6">
                       <h3 className="font-display text-xl font-semibold mb-2">
