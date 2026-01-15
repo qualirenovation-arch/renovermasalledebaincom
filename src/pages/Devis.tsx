@@ -396,7 +396,7 @@ export default function Devis() {
                     <div>
                       <p className="font-semibold">Adresse</p>
                       <p className="text-muted-foreground">
-                        123 Rue du Carrelage<br />75000 Paris
+                        6 rue d'Armaillé<br />75017 Paris
                       </p>
                     </div>
                   </div>
