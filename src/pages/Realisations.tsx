@@ -50,8 +50,11 @@ import convention6 from "@/assets/courbevoie-6.jpg";
 import butteschaumont1 from "@/assets/buttes-chaumont-1.jpg";
 import butteschaumont2 from "@/assets/buttes-chaumont-2.jpg";
 import butteschaumont3 from "@/assets/buttes-chaumont-3.jpg";
+import jemmapes1 from "@/assets/jemmapes-1.jpg";
+import jemmapes2 from "@/assets/jemmapes-2.jpg";
+import jemmapes3 from "@/assets/jemmapes-3.jpg";
 
-type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "convention" | "butteschaumont";
+type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "convention" | "butteschaumont" | "jemmapes";
 
 interface Project {
   id: number;
@@ -431,11 +434,36 @@ const projects: Project[] = [
     category: ["petite", "butteschaumont"],
     details: "Vue depuis l'entrée de la salle de bain à rénover, passage voûté caractéristique. Travaux de transformation en cours pour créer une douche à l'italienne optimisée.",
   },
+  {
+    id: 47,
+    image: jemmapes1,
+    title: "Douche à l'italienne - Vue latérale",
+    description: "Paris 10ème - Quai Jemmapes",
+    category: ["petite", "moderne", "jemmapes"],
+    details: "Salle de bain masculine élégante : douche à l'italienne avec paroi fixe noire, receveur anthracite, carrelage grand format gris béton. Meuble vasque bois et noir avec vasque à poser blanche, robinetterie noire mat.",
+  },
+  {
+    id: 48,
+    image: jemmapes2,
+    title: "Vue d'ensemble avec sèche-serviettes",
+    description: "Paris 10ème - Quai Jemmapes",
+    category: ["petite", "moderne", "jemmapes"],
+    details: "Vue complète de la salle de bain : paroi fixe noire avec barre de stabilisation, pomme de douche ronde noire, sèche-serviettes design gris. Style minimaliste gris et noir pour homme.",
+  },
+  {
+    id: 49,
+    image: jemmapes3,
+    title: "Meuble vasque design",
+    description: "Paris 10ème - Quai Jemmapes",
+    category: ["petite", "moderne", "jemmapes"],
+    details: "Détail du meuble vasque : plan bois chêne, tiroirs noirs sans poignée, vasque ovale blanche, robinetterie noire mat. Miroir arrondi élégant et accessoires noirs coordonnés.",
+  },
 ];
 
 const categories: { id: Category; label: string }[] = [
   { id: "all", label: "Tous" },
   { id: "butteschaumont", label: "🚧 Paris 19ème - Buttes-Chaumont" },
+  { id: "jemmapes", label: "Paris 10ème - Quai Jemmapes" },
   { id: "convention", label: "Paris 15ème - Convention" },
   { id: "severac", label: "Paris 17ème - Suite Parentale Ternes" },
   { id: "paris10", label: "Paris 10ème" },
