@@ -327,7 +327,7 @@ const inProgressAlbums: Album[] = [
     id: "taitbout",
     title: "Rénovation haussmannienne",
     location: "Paris 9ème - Rue Taitbout",
-    description: "Rénovation d'une salle de bain dans un immeuble haussmannien. Chantier en cours.",
+    description: "Rénovation d'une salle de bain dans un immeuble haussmannien. Chantier en cours — restez connecté pour découvrir cette transformation !",
     coverImage: taitbout1,
     isInProgress: true,
     photos: [
@@ -340,7 +340,7 @@ const inProgressAlbums: Album[] = [
     id: "rocroy",
     title: "Petite salle de bain",
     location: "Paris 10ème - Rue de Rocroy",
-    description: "Optimisation d'une petite salle de bain avec création d'une douche à l'italienne. Chantier en cours.",
+    description: "Optimisation d'une petite salle de bain avec création d'une douche à l'italienne. Chantier en cours — restez connecté pour découvrir cette transformation !",
     coverImage: rocroy1,
     isInProgress: true,
     photos: [
