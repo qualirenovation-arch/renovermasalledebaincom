@@ -102,11 +102,11 @@ export function Footer() {
               </li>
               <li>
                 <a 
-                  href="mailto:contact@atelier-douche-design.fr" 
+                  href="mailto:gestion@qualiconcept.fr" 
                   className="flex items-center gap-3 text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   <Mail className="w-5 h-5 text-accent" />
-                  contact@atelier-douche-design.fr
+                  gestion@qualiconcept.fr
                 </a>
               </li>
               <li className="flex items-start gap-3 text-primary-foreground/80">
