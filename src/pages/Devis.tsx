@@ -18,7 +18,7 @@ import {
   Gem,
   Wrench
 } from "lucide-react";
-import finitionsImage from "@/assets/finitions-robinetterie.png";
+import finitionsImage from "@/assets/finitions-robinetterie-clean.png";
 
 interface FormData {
   prenom: string;
