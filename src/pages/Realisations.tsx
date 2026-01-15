@@ -33,8 +33,16 @@ import gallery26 from "@/assets/gallery-26.jpg";
 import gallery27 from "@/assets/gallery-27.jpg";
 import gallery28 from "@/assets/gallery-28.jpg";
 import gallery29 from "@/assets/gallery-29.jpg";
+import paris17_1 from "@/assets/paris17-1.jpg";
+import paris17_2 from "@/assets/paris17-2.jpg";
+import paris17_3 from "@/assets/paris17-3.jpg";
+import paris17_4 from "@/assets/paris17-4.jpg";
+import paris17_5 from "@/assets/paris17-5.jpg";
+import paris17_6 from "@/assets/paris17-6.jpg";
+import paris17_7 from "@/assets/paris17-7.jpg";
+import paris17_8 from "@/assets/paris17-8.jpg";
 
-type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord";
+type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac";
 
 interface Project {
   id: number;
@@ -278,10 +286,75 @@ const projects: Project[] = [
     category: ["avant-apres", "paris10"],
     details: "Travaux de plomberie : création des nouvelles arrivées d'eau et évacuations. La cuisine a été entièrement déposée pour laisser place à une salle de bain moderne avec douche de pluie et finitions dorées.",
   },
+  {
+    id: 30,
+    image: paris17_1,
+    title: "Claustra bois et vasque suspendue",
+    description: "Salle de bain ouverte - 8 Rue Déodat de Séverac, Paris 17ème",
+    category: ["moderne", "grande", "severac"],
+    details: "Création d'une salle de bain ouverte sur la chambre avec claustra en tasseaux de bois. Meuble vasque suspendu en noyer, miroir rond LED et robinetterie laiton doré. Carrelage effet marbre blanc au sol et murs.",
+  },
+  {
+    id: 31,
+    image: paris17_2,
+    title: "Douche à l'italienne profilé doré",
+    description: "Paroi vitrée haut de gamme - Paris 17ème",
+    category: ["moderne", "grande", "severac"],
+    details: "Douche à l'italienne spacieuse avec paroi coulissante vitrée profilé laiton doré, colonne haute de rangement et carrelage effet marbre veines grises. Colonne de douche avec ciel de pluie.",
+  },
+  {
+    id: 32,
+    image: paris17_3,
+    title: "Vue d'ensemble douche et vasque",
+    description: "Harmonie bois et laiton - Paris 17ème",
+    category: ["moderne", "grande", "severac"],
+    details: "Salle de bain complète avec douche à l'italienne, meuble vasque noyer, miroir rond rétroéclairé LED et paroi vitrée laiton. Association raffinée du bois, du marbre et des finitions dorées.",
+  },
+  {
+    id: 33,
+    image: paris17_4,
+    title: "Claustra vue depuis l'entrée",
+    description: "Séparation design - Paris 17ème",
+    category: ["moderne", "grande", "severac"],
+    details: "Vue à travers le claustra en tasseaux de bois sur l'espace salle de bain. Miroir rond LED, vasque suspendue noyer et robinetterie laiton doré. Transition élégante entre la chambre et la salle d'eau.",
+  },
+  {
+    id: 34,
+    image: paris17_5,
+    title: "Claustra et sol marbre",
+    description: "Intégration parquet/carrelage - Paris 17ème",
+    category: ["moderne", "grande", "severac"],
+    details: "Jonction parfaite entre le parquet chevrons de la chambre et le carrelage effet marbre de la salle de bain. Claustra bois sur muret carrelé créant une séparation aérienne.",
+  },
+  {
+    id: 35,
+    image: paris17_6,
+    title: "Vue chambre et claustra",
+    description: "Suite parentale ouverte - Paris 17ème",
+    category: ["moderne", "grande", "severac"],
+    details: "Aménagement suite parentale avec claustra bois créant une séparation visuelle élégante entre l'espace nuit et la salle de bain. Lumière naturelle préservée grâce à l'espacement des tasseaux.",
+  },
+  {
+    id: 36,
+    image: paris17_7,
+    title: "Ancienne salle de bain - Avant travaux",
+    description: "État initial - Paris 17ème",
+    category: ["avant-apres", "severac"],
+    details: "Salle de bain initiale avec baignoire d'angle habillage bois, carrelage gris ardoise, mur bleu canard et sol galets. Transformation complète vers un style contemporain épuré avec claustra bois et finitions dorées.",
+  },
+  {
+    id: 37,
+    image: paris17_8,
+    title: "Baignoire d'angle avant travaux",
+    description: "État initial - Paris 17ème",
+    category: ["avant-apres", "severac"],
+    details: "Vue sur la baignoire d'angle avec habillage bois exotique et sol galets noirs avant rénovation. Cette salle de bain a été entièrement repensée pour créer une salle d'eau moderne ouverte sur la chambre.",
+  },
 ];
 
 const categories: { id: Category; label: string }[] = [
   { id: "all", label: "Tous" },
+  { id: "severac", label: "8 Rue Déodat de Séverac - Paris 17ème" },
   { id: "paris10", label: "Paris 10ème" },
   { id: "bdpereire", label: "Bd Pereire Paris 17ème" },
   { id: "avnord", label: "Saint-Maur" },
