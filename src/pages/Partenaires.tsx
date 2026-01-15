@@ -40,6 +40,11 @@ const partners = [
   { name: "Tible et Dumont", url: "#", description: "Fournisseur professionnel" },
   { name: "Unikalo Ivry", url: "https://www.unikalo.com", description: "Peintures professionnelles" },
   { name: "Atlantic", url: "https://www.atlantic.fr", description: "Chauffage et eau chaude" },
+  { name: "Aubade", url: "https://www.frenchaubade.fr", description: "Sanitaires et salles de bain" },
+  { name: "Schmitt Ney", url: "https://www.schmitt-ney.fr", description: "Négoce sanitaire" },
+  { name: "Cedeo", url: "https://www.cedeo.fr", description: "Distribution sanitaire chauffage" },
+  { name: "Horus", url: "https://www.hfrob.fr", description: "Robinetterie française" },
+  { name: "Ceramica.fr", url: "https://www.ceramica.fr", description: "Carrelages et céramiques" },
 ];
 
 export default function Partenaires() {
