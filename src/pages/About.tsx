@@ -83,8 +83,9 @@ export default function About() {
                 <p>
                   <strong>Vous suivez chaque étape en toute sérénité.</strong> Grâce à notre suivi 
                   WhatsApp quotidien, vous savez exactement où en est votre chantier, qui intervient 
-                  et quand. Chaque avancée technique vous est communiquée de façon claire et détendue. 
-                  Fini le stress et les mauvaises surprises.
+                  et quand. On ne fait pas de chez vous un hall de gare : chaque intervenant est annoncé 
+                  à l'avance, surtout si vous habitez sur place. Vous êtes informé du planning quotidien, 
+                  des horaires de passage et de l'avancement technique. Fini le stress et les mauvaises surprises.
                 </p>
               </div>
             </motion.div>
