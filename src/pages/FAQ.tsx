@@ -43,6 +43,10 @@ const faqCategories = [
         answer: "L'étanchéité douche est notre priorité absolue. Nous utilisons des systèmes certifiés Schlüter et Wedi, posés selon les règles de l'art (DTU). Chaque douche bénéficie d'une garantie étanchéité 10 ans et de notre garantie décennale MIC Assurances."
       },
       {
+        question: "Pourquoi l'étanchéité Aquastop Weber est-elle obligatoire ?",
+        answer: "L'étanchéité Weber Aquastop (la peinture bleue visible sur nos photos de chantier) est un système d'étanchéité liquide (SEL) obligatoire selon le DTU pour les pièces humides. Appliquée sur les murs ET le sol avant la pose du carrelage, elle crée une barrière imperméable qui protège votre appartement et celui de vos voisins contre les infiltrations d'eau. C'est une étape invisible mais essentielle que nous documentons systématiquement en photo pour vous garantir un travail dans les règles de l'art."
+      },
+      {
         question: "Quel receveur de douche choisir ?",
         answer: "Nous proposons différents types de receveurs de douche : receveur extra-plat en résine, receveur à carreler pour un rendu 100% personnalisé, ou douche maçonnée traditionnelle. Le choix dépend de vos goûts, de votre budget et des contraintes techniques de votre salle de bain."
       }
