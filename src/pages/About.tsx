@@ -45,11 +45,11 @@ export default function About() {
               À propos de nous
             </span>
             <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6">
-              Plus de 15 ans d'expertise au service de votre confort
+              20 ans d'expertise chantier au service de vos projets
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Atelier Douche Design est né de la passion pour le travail bien fait et 
-              l'art de créer des espaces de vie exceptionnels.
+              Qualirenovation by Qualiconcept, société créée en 2019, met à votre disposition 
+              une maître d'œuvre expérimentée pour transformer votre salle de bain.
             </p>
           </motion.div>
         </div>
@@ -69,17 +69,20 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Fondé par des artisans passionnés, Atelier Douche Design s'est spécialisé 
-                  dès ses débuts dans la création de douches à l'italienne haut de gamme.
+                  <strong>renovermasalledebain.com</strong> est une marque de la société 
+                  <strong> Qualirenovation by Qualiconcept</strong>, fondée en 2019 et spécialisée 
+                  dans la rénovation haut de gamme de salles de bain.
                 </p>
                 <p>
-                  Fort de plus de 15 années d'expérience et de centaines de réalisations, 
-                  nous avons développé un savoir-faire unique qui allie techniques traditionnelles 
-                  et innovations modernes.
+                  Notre maître d'œuvre, forte de <strong>plus de 20 ans d'expérience</strong> sur 
+                  les chantiers parisiens, supervise personnellement chaque projet. Vous bénéficiez 
+                  ainsi d'une véritable expertise travaux : analyse de faisabilité, coordination 
+                  des corps de métier, respect des normes DTU et suivi rigoureux jusqu'à la livraison.
                 </p>
                 <p>
-                  Notre équipe de professionnels qualifiés met tout son talent à votre service 
-                  pour transformer votre salle de bain en un véritable espace de bien-être.
+                  Cette expérience terrain fait toute la différence : anticipation des contraintes 
+                  techniques, optimisation de chaque centimètre carré et finitions irréprochables 
+                  pour transformer votre salle de bain en un espace de bien-être sur-mesure.
                 </p>
               </div>
             </motion.div>
@@ -206,16 +209,16 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-5xl font-display font-bold text-accent mb-2">15+</div>
-              <p className="text-primary-foreground/80">Années d'expérience</p>
+              <div className="text-5xl font-display font-bold text-accent mb-2">20+</div>
+              <p className="text-primary-foreground/80">Années d'expérience chantier</p>
             </div>
             <div>
-              <div className="text-5xl font-display font-bold text-accent mb-2">500+</div>
-              <p className="text-primary-foreground/80">Projets réalisés</p>
+              <div className="text-5xl font-display font-bold text-accent mb-2">2019</div>
+              <p className="text-primary-foreground/80">Création de Qualirenovation</p>
             </div>
             <div>
-              <div className="text-5xl font-display font-bold text-accent mb-2">98%</div>
-              <p className="text-primary-foreground/80">Clients satisfaits</p>
+              <div className="text-5xl font-display font-bold text-accent mb-2">100%</div>
+              <p className="text-primary-foreground/80">Projets livrés clé en main</p>
             </div>
           </div>
         </div>
