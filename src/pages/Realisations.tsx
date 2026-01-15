@@ -56,8 +56,10 @@ import jemmapes3 from "@/assets/jemmapes-3.jpg";
 import taitbout1 from "@/assets/taitbout-1.jpg";
 import taitbout2 from "@/assets/taitbout-2.jpg";
 import taitbout3 from "@/assets/taitbout-3.jpg";
+import rocroy1 from "@/assets/rocroy-1.jpg";
+import rocroy2 from "@/assets/rocroy-2.jpg";
 
-type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "convention" | "butteschaumont" | "jemmapes" | "taitbout";
+type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "convention" | "butteschaumont" | "jemmapes" | "taitbout" | "rocroy";
 
 interface Project {
   id: number;
@@ -485,10 +487,27 @@ const projects: Project[] = [
     category: ["petite", "taitbout"],
     details: "Vue depuis l'entrée : lavabo sur pied, étagères de rangement, miroir extensible. Accès vers couloir et chambre. Projet de rénovation complète avec douche à l'italienne.",
   },
+  {
+    id: 53,
+    image: rocroy1,
+    title: "Démolition - Vue générale",
+    description: "🚧 Chantier en cours - Paris 10ème",
+    category: ["rocroy"],
+    details: "Phase de démolition dans un appartement haussmannien avec moulures au plafond. Travaux de gros œuvre : ouverture de cloisons, passage des gaines électriques. Projet de réaménagement complet.",
+  },
+  {
+    id: 54,
+    image: rocroy2,
+    title: "État initial - Salle de bain existante",
+    description: "🚧 Chantier en cours - Paris 10ème",
+    category: ["petite", "rocroy", "avant-apres"],
+    details: "Salle de bain avant travaux : baignoire d'angle à remplacer, carrelage blanc et frise dorée datée, sol en terre cuite. Transformation prévue en douche à l'italienne moderne.",
+  },
 ];
 
 const categories: { id: Category; label: string }[] = [
   { id: "all", label: "Tous" },
+  { id: "rocroy", label: "🚧 Paris 10ème - Rue de Rocroy" },
   { id: "taitbout", label: "🚧 Paris 9ème - Rue Taitbout" },
   { id: "butteschaumont", label: "🚧 Paris 19ème - Buttes-Chaumont" },
   { id: "jemmapes", label: "Paris 10ème - Salle de bain au masculin" },
