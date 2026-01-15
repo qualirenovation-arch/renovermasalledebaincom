@@ -643,7 +643,7 @@ const projects: Project[] = [
     title: "Vasque et miroir",
     description: "Paris 12ème - Cours de Vincennes",
     category: ["grande", "moderne", "pierre", "vincennesmr"],
-    details: "Plan vasque en Corian blanc avec meuble sur-mesure Noyer de Bourgogne sans poignées. Grand miroir rétroéclairé, robinetterie noire mate. Carrelage mural marbre veiné or du sol au plafond.",
+    details: "Plan vasque en Corian blanc avec meuble sur-mesure Noyer de Bourgogne sans poignées. Grand miroir AICA rétroéclairé avec affichage digital, robinetterie noire mate. Carrelage mural marbre veiné or du sol au plafond.",
   },
   {
     id: 71,
@@ -667,7 +667,7 @@ const projects: Project[] = [
     title: "Miroir et reflets",
     description: "Paris 12ème - Cours de Vincennes",
     category: ["grande", "moderne", "pierre", "vincennesmr"],
-    details: "Grand miroir numérique avec éclairage LED intégré. Reflet de la douche verrière et fenêtre bois. Vasque en Corian blanc, robinetterie noire mate.",
+    details: "Grand miroir AICA avec éclairage LED périmétrique et affichage digital intégré. Reflet de la douche verrière et fenêtre bois. Vasque en Corian blanc immaculé, robinetterie noire mate.",
   },
   {
     id: 77,
@@ -691,7 +691,7 @@ const projects: Project[] = [
     title: "Colonne rangement noyer",
     description: "Paris 12ème - Cours de Vincennes",
     category: ["grande", "moderne", "pierre", "vincennesmr"],
-    details: "Colonne de rangement sur-mesure en Noyer de Bourgogne avec boutons noirs. Espace optimisé du sol au plafond, reflet dans le miroir. Harmonie bois et marbre.",
+    details: "Chef-d'œuvre d'ébénisterie : colonne sur-mesure en Noyer de Bourgogne du sol au plafond. Derrière ces portes élégantes, un secret bien gardé... Chaque centimètre a été pensé pour sublimer le quotidien.",
   },
   {
     id: 80,
@@ -699,7 +699,7 @@ const projects: Project[] = [
     title: "Buanderie intégrée",
     description: "Paris 12ème - Cours de Vincennes",
     category: ["grande", "moderne", "pierre", "vincennesmr"],
-    details: "Espace buanderie dissimulé dans la colonne Noyer de Bourgogne : lave-linge et sèche-linge superposés, étagères pour serviettes, rangements produits. Solution gain de place élégante.",
+    details: "Le tour de force de cette réalisation : une buanderie complète dissimulée dans la colonne Noyer de Bourgogne. Lave-linge et sèche-linge superposés, étagères linge de maison, emplacement table à repasser, rangements produits. Chaque centimètre a été optimisé pour tout cacher et tout avoir à portée de main.",
   },
   {
     id: 81,
