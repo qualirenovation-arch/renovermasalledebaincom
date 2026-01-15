@@ -766,7 +766,7 @@ export default function Realisations() {
       </section>
 
       {/* Section Projets en cours */}
-      <section className="section-padding bg-stone/50">
+      <section id="chantiers-en-cours" className="section-padding bg-stone/50">
         <div className="container-custom">
           <motion.div 
             className="text-center mb-12"
