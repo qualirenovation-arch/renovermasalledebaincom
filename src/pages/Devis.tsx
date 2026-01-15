@@ -24,6 +24,7 @@ import paroisDoucheImage from "@/assets/parois-douche.jpg";
 import meublesVasqueImage from "@/assets/meubles-vasque.jpg";
 import wcTypesImage from "@/assets/wc-types.jpg";
 import pommeauxDoucheImage from "@/assets/pommeaux-douche.jpg";
+import receveursImage from "@/assets/receveurs-douche.jpg";
 
 interface FormData {
   prenom: string;
@@ -581,6 +582,16 @@ export default function Devis() {
 
                       <div>
                         <Label className="text-sm font-medium text-muted-foreground mb-3 block">Type de receveur</Label>
+                        
+                        {/* Image de référence receveurs */}
+                        <div className="mb-4 rounded-2xl overflow-hidden">
+                          <img 
+                            src={receveursImage} 
+                            alt="Types de receveurs - À poser, À carreler, Encastré, Résine, Acrylique" 
+                            className="w-full h-auto"
+                          />
+                        </div>
+
                         <CheckboxGroup options={typeReceveurOptions} field="typeReceveur" columns={3} />
                       </div>
                     </div>
