@@ -651,7 +651,7 @@ const projects: Project[] = [
     title: "Douche verrière noire",
     description: "Paris 12ème - Cours de Vincennes",
     category: ["grande", "moderne", "pierre", "vincennesmr"],
-    details: "Douche spacieuse avec paroi verrière noire style atelier. Ciel de pluie encastré noir mat, douchette assortie. Niche de rangement intégrée. Receveur extra-plat blanc.",
+    details: "Douche spacieuse avec paroi verrière VF + PC Twenty Noir + latéral fixe Asealia. Ciel de pluie encastré noir mat, douchette assortie. Niche de rangement intégrée. Receveur extra-plat Le Monde du Bain.",
   },
   {
     id: 72,
@@ -659,7 +659,7 @@ const projects: Project[] = [
     title: "Robinetterie et niche",
     description: "Paris 12ème - Cours de Vincennes",
     category: ["grande", "moderne", "pierre", "vincennesmr"],
-    details: "Détail de la douche : robinetterie thermostatique noire encastrée, ciel de pluie XXL, douchette sur flexible. Niche de rangement carrelée marbre pour produits.",
+    details: "Détail de la douche : robinetterie thermostatique noire encastrée MaSalleDeBain.com, ciel de pluie XXL, douchette sur flexible. Niche de rangement carrelée marbre pour produits.",
   },
   {
     id: 76,
@@ -683,7 +683,7 @@ const projects: Project[] = [
     title: "Niche et robinetterie douche",
     description: "Paris 12ème - Cours de Vincennes",
     category: ["grande", "moderne", "pierre", "vincennesmr"],
-    details: "Détail de la niche de rangement carrelée marbre. Robinetterie thermostatique encastrée noire, douchette ergonomique. Produits haut de gamme en présentation.",
+    details: "Détail de la niche de rangement carrelée marbre. Robinetterie thermostatique encastrée noire MaSalleDeBain.com, douchette ergonomique. Produits haut de gamme en présentation.",
   },
   {
     id: 79,
@@ -757,7 +757,7 @@ const categories: { id: Category; label: string; description?: string }[] = [
   { 
     id: "vincennesmr", 
     label: "Paris 12ème - Cours de Vincennes",
-    description: "Salle de bain masculine haut de gamme au Cours de Vincennes.\nPlan vasque Corian blanc, meuble et colonne sur-mesure Noyer de Bourgogne.\nDouche verrière noire, robinetterie mate, ciel de pluie XXL."
+    description: "Salle de bain masculine haut de gamme au Cours de Vincennes.\nPlan Corian blanc, meuble sur-mesure Noyer de Bourgogne.\nParoi verrière Asealia Twenty Noir, robinetterie MaSalleDeBain.com, receveur Le Monde du Bain."
   },
   { 
     id: "boiscolombes", 
