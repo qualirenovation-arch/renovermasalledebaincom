@@ -90,6 +90,12 @@ import taitbout3 from "@/assets/taitbout-3.jpg";
 import rocroy1 from "@/assets/rocroy-1.jpg";
 import rocroy2 from "@/assets/rocroy-2.jpg";
 
+// Soisy-sous-Montmorency WC
+import soisy1 from "@/assets/soisy-1.jpg";
+import soisy2 from "@/assets/soisy-2.jpg";
+import soisy3 from "@/assets/soisy-3.jpg";
+import soisyAvant from "@/assets/soisy-avant.jpg";
+
 interface Photo {
   id: number;
   image: string;
@@ -237,6 +243,19 @@ const albums: Album[] = [
       { id: 6, image: gallery23, title: "Avant - Détails", description: "Carrelage ancien" },
       { id: 7, image: gallery24, title: "Travaux", description: "Phase de rénovation" },
       { id: 8, image: gallery25, title: "Finitions", description: "Dernières touches" },
+    ],
+  },
+  {
+    id: "soisy-wc",
+    title: "Rénovation WC Avant/Après",
+    location: "Soisy-sous-Montmorency",
+    description: "Transformation complète d'un WC vétuste en espace raffiné. Meuble rose terracotta sur-mesure avec niche en chêne, carrelage mural losanges, sol carreaux de ciment graphiques et robinetterie noire mate.",
+    coverImage: soisy1,
+    photos: [
+      { id: 1, image: soisy1, title: "Vue d'ensemble", description: "Meuble rose et niche chêne" },
+      { id: 2, image: soisy2, title: "Rangement ouvert", description: "Optimisation du rangement" },
+      { id: 3, image: soisy3, title: "Espace complet", description: "WC suspendu et lave-mains" },
+      { id: 4, image: soisyAvant, title: "Avant - État initial", description: "WC vétuste à transformer" },
     ],
   },
 ];
