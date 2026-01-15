@@ -2,8 +2,16 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { MessageSquare, Palette, Diamond, Hammer, Shield, Headphones, Check, X, ArrowRight } from "lucide-react";
+import { MessageSquare, Palette, Diamond, Hammer, Shield, Headphones, Check, X, ArrowRight, ClipboardCheck, UserCheck } from "lucide-react";
 const benefits = [{
+  icon: ClipboardCheck,
+  title: "Maître d'œuvre dès le 1er RDV",
+  description: "Dès notre première rencontre, une technicienne se déplace pour réaliser une analyse de faisabilité complète et vous présenter tous les plans possibles pour votre projet."
+}, {
+  icon: UserCheck,
+  title: "Visite technique gratuite",
+  description: "Une technicienne qualifiée vient chez vous pour étudier votre espace, prendre les mesures et vous expliquer toutes les options envisageables."
+}, {
   icon: MessageSquare,
   title: "Conseil personnalisé",
   description: "Une étude gratuite de votre projet avec des conseils sur mesure. Nous analysons votre espace, vos besoins et vos envies pour vous proposer la solution idéale."
