@@ -25,10 +25,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <h3 className="font-display font-semibold mb-4 text-lg">RENOVERMASALLEBAIN.COM</h3>
+            <h3 className="font-display font-semibold mb-4 text-lg">RénoveMaSalleDeBain</h3>
+            <p className="text-primary-foreground/80 mb-2 leading-relaxed">
+              <strong>6 rue d'Armaillé, 75017 Paris</strong>
+            </p>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
-              Artisan spécialisé dans la création et rénovation de douches à l'italienne haut de gamme. 
-              Qualité, élégance et savoir-faire depuis plus de 15 ans.
+              Spécialiste de la rénovation de salle de bain et douche à l'italienne à Paris et en Île-de-France.
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors" aria-label="Facebook">
