@@ -22,6 +22,7 @@ import finitionsImage from "@/assets/finitions-robinetterie-clean.png";
 import stylesCarrelageImage from "@/assets/styles-carrelage-fr.jpg";
 import paroisDoucheImage from "@/assets/parois-douche.jpg";
 import meublesVasqueImage from "@/assets/meubles-vasque.jpg";
+import wcTypesImage from "@/assets/wc-types.jpg";
 
 interface FormData {
   prenom: string;
@@ -30,7 +31,8 @@ interface FormData {
   telephone: string;
   codePostal: string;
   typeInstallation: string;
-  wcMeubleVasque: string[];
+  wcType: string[];
+  meubleVasque: string[];
   porteDouche: string[];
   machineLaver: string;
   emplacementMachine: string[];
@@ -48,7 +50,8 @@ const initialFormData: FormData = {
   telephone: "",
   codePostal: "",
   typeInstallation: "",
-  wcMeubleVasque: [],
+  wcType: [],
+  meubleVasque: [],
   porteDouche: [],
   machineLaver: "",
   emplacementMachine: [],
@@ -102,8 +105,13 @@ const FinitionsIcon = () => (
 );
 
 // Options avec pictogrammes
-const wcMeubleVasqueOptions = [
-  { label: "Remplacer les WC", value: "wc" },
+const wcOptions = [
+  { label: "WC suspendu", value: "wc-suspendu" },
+  { label: "WC classique (au sol)", value: "wc-classique" },
+  { label: "Ne pas remplacer les WC", value: "wc-non" },
+];
+
+const meubleVasqueOptions = [
   { label: "Meuble vasque suspendu", value: "meuble-suspendu" },
   { label: "Meuble vasque au sol", value: "meuble-sol" },
   { label: "Vasque à poser avec plage", value: "vasque-plage" },
@@ -460,13 +468,35 @@ export default function Devis() {
                   </RadioGroup>
                 </div>
 
-                {/* WC, meuble vasque, robinetterie */}
+                {/* WC */}
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-beige))] flex items-center justify-center">
                       <ReceveurIcon />
                     </div>
-                    WC, meuble vasque, robinetterie souhaités
+                    WC souhaité
+                  </h2>
+                  <p className="text-muted-foreground text-sm mb-6">Choisissez le type de WC adapté à votre salle de bain.</p>
+                  
+                  {/* Image de référence */}
+                  <div className="mb-6 rounded-2xl overflow-hidden">
+                    <img 
+                      src={wcTypesImage} 
+                      alt="Types de WC - WC Suspendu, WC Classique" 
+                      className="w-full h-auto"
+                    />
+                  </div>
+
+                  <CheckboxGroup options={wcOptions} field="wcType" />
+                </div>
+
+                {/* Meuble vasque */}
+                <div className="card-elevated p-8">
+                  <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-beige))] flex items-center justify-center">
+                      <ReceveurIcon />
+                    </div>
+                    Meuble vasque souhaité
                   </h2>
                   <p className="text-muted-foreground text-sm mb-6">Découvrez les options de meubles vasques disponibles.</p>
                   
@@ -479,7 +509,7 @@ export default function Devis() {
                     />
                   </div>
 
-                  <CheckboxGroup options={wcMeubleVasqueOptions} field="wcMeubleVasque" />
+                  <CheckboxGroup options={meubleVasqueOptions} field="meubleVasque" />
                 </div>
 
                 {/* Paroi de douche */}
