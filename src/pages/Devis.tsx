@@ -21,6 +21,7 @@ import {
 import finitionsImage from "@/assets/finitions-robinetterie-clean.png";
 import stylesCarrelageImage from "@/assets/styles-carrelage-fr.jpg";
 import paroisDoucheImage from "@/assets/parois-douche.jpg";
+import meublesVasqueImage from "@/assets/meubles-vasque.jpg";
 
 interface FormData {
   prenom: string;
@@ -467,6 +468,17 @@ export default function Devis() {
                     </div>
                     WC, meuble vasque, robinetterie souhaités
                   </h2>
+                  <p className="text-muted-foreground text-sm mb-6">Découvrez les options de meubles vasques disponibles.</p>
+                  
+                  {/* Image de référence */}
+                  <div className="mb-6 rounded-2xl overflow-hidden">
+                    <img 
+                      src={meublesVasqueImage} 
+                      alt="Types de meubles vasques - Suspendu, Au sol" 
+                      className="w-full h-auto"
+                    />
+                  </div>
+
                   <CheckboxGroup options={wcMeubleVasqueOptions} field="wcMeubleVasque" />
                 </div>
 
