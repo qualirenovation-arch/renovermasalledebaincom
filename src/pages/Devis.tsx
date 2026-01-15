@@ -19,7 +19,8 @@ import {
   Wrench
 } from "lucide-react";
 import finitionsImage from "@/assets/finitions-robinetterie-clean.png";
-import stylesCarrelageImage from "@/assets/styles-carrelage.jpg";
+import stylesCarrelageImage from "@/assets/styles-carrelage-fr.jpg";
+import paroisDoucheImage from "@/assets/parois-douche.jpg";
 
 interface FormData {
   prenom: string;
@@ -477,6 +478,17 @@ export default function Devis() {
                     </div>
                     Paroi de douche souhaitée
                   </h2>
+                  <p className="text-muted-foreground text-sm mb-6">Choisissez le type de paroi adapté à votre espace.</p>
+                  
+                  {/* Image de référence */}
+                  <div className="mb-6 rounded-2xl overflow-hidden">
+                    <img 
+                      src={paroisDoucheImage} 
+                      alt="Types de parois de douche - Paroi fixe, Porte battante, Porte coulissante, Porte pliable" 
+                      className="w-full h-auto"
+                    />
+                  </div>
+
                   <CheckboxGroup options={porteOptions} field="porteDouche" />
                 </div>
 
