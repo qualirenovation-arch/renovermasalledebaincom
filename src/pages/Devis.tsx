@@ -26,12 +26,12 @@ interface FormData {
   telephone: string;
   codePostal: string;
   typeInstallation: string;
-  receveur: string[];
+  wcMeubleVasque: string[];
   porteDouche: string[];
-  robinetterie: string[];
+  machineLaver: string;
+  emplacementMachine: string[];
+  typeMachine: string[];
   finitionsRobinetterie: string[];
-  zonesCarrelage: string[];
-  formatCarrelage: string[];
   styleCarrelage: string[];
   poseEnvisagee: string[];
   message: string;
@@ -44,12 +44,12 @@ const initialFormData: FormData = {
   telephone: "",
   codePostal: "",
   typeInstallation: "",
-  receveur: [],
+  wcMeubleVasque: [],
   porteDouche: [],
-  robinetterie: [],
+  machineLaver: "",
+  emplacementMachine: [],
+  typeMachine: [],
   finitionsRobinetterie: [],
-  zonesCarrelage: [],
-  formatCarrelage: [],
   styleCarrelage: [],
   poseEnvisagee: [],
   message: "",
@@ -98,53 +98,42 @@ const FinitionsIcon = () => (
 );
 
 // Options avec pictogrammes
-const receveurOptions = [
-  { label: "Receveur extra-plat", value: "extra-plat" },
-  { label: "Receveur à carreler (SPEC)", value: "carreler" },
-  { label: "Receveur en pierre naturelle", value: "pierre" },
-  { label: "Receveur en résine", value: "resine" },
-  { label: "Je ne sais pas encore", value: "indecis" },
+const wcMeubleVasqueOptions = [
+  { label: "Remplacer les WC", value: "wc" },
+  { label: "Meuble vasque suspendu", value: "meuble-suspendu" },
+  { label: "Meuble vasque au sol", value: "meuble-sol" },
+  { label: "Vasque à poser avec plage", value: "vasque-plage" },
+  { label: "Vasque à poser sans plage", value: "vasque-sans-plage" },
+  { label: "Vasque encastrée", value: "vasque-encastree" },
+  { label: "Plan vasque moulé", value: "plan-moule" },
 ];
 
 const porteOptions = [
   { label: "Paroi fixe", value: "fixe" },
-  { label: "Paroi battante", value: "battante" },
-  { label: "Paroi coulissante", value: "coulissante" },
-  { label: "Paroi pivotante", value: "pivotante" },
-  { label: "Paroi walk-in (sans porte)", value: "walkin" },
-  { label: "Je ne sais pas encore", value: "indecis" },
+  { label: "Porte de douche battante", value: "battante" },
+  { label: "Porte de douche coulissante", value: "coulissante" },
+  { label: "Porte de douche pliable", value: "pliable" },
 ];
 
-const robinetterieOptions = [
-  { label: "Colonne de douche apparente", value: "apparente" },
-  { label: "Colonne de douche encastrée", value: "encastree" },
-  { label: "Mitigeur thermostatique", value: "thermostatique" },
-  { label: "Mitigeur mécanique", value: "mecanique" },
-  { label: "Douchette à main", value: "douchette" },
-  { label: "Pomme de tête fixe (pluie)", value: "pluie" },
+const emplacementMachineOptions = [
+  { label: "Sous un plan vasque", value: "sous-vasque" },
+  { label: "Dans un placard fermé", value: "placard" },
+  { label: "Autre emplacement (à préciser)", value: "autre" },
+];
+
+const typeMachineOptions = [
+  { label: "Machine à laver uniquement", value: "lave-linge" },
+  { label: "Lave-linge + sèche-linge", value: "lave-seche" },
+  { label: "Lavante-séchante (2 en 1)", value: "lavante-sechante" },
+  { label: "Aucun, mais je souhaite en intégrer", value: "souhaite-integrer" },
+  { label: "Aucun, et je ne souhaite pas en intégrer", value: "pas-integrer" },
 ];
 
 const finitionsOptions = [
+  { label: "Noir", value: "noir", color: "bg-[#2D2D2D]" },
+  { label: "Blanc", value: "blanc", color: "bg-[#FFFFFF] border border-gray-300" },
   { label: "Laiton brossé", value: "laiton", color: "bg-[#C9A962]" },
-  { label: "Nickel brossé", value: "nickel", color: "bg-[#A0A0A0]" },
-  { label: "Noir mat", value: "noir", color: "bg-[#2D2D2D]" },
   { label: "Chromé", value: "chrome", color: "bg-[#D4D4D4]" },
-  { label: "Or brossé", value: "or", color: "bg-[#D4AF37]" },
-];
-
-const zonesCarrelageOptions = [
-  { label: "Mur de la douche", value: "mur-douche" },
-  { label: "Sol de la douche", value: "sol-douche" },
-  { label: "Murs hors douche", value: "mur-hors" },
-  { label: "Sol hors douche (pièce entière)", value: "sol-hors" },
-];
-
-const formatCarrelageOptions = [
-  { label: "Petit format (5x5, 10x10…)", value: "petit" },
-  { label: "Moyen format (20x20, 30x60…)", value: "moyen" },
-  { label: "Grand format (60x60, 120x60…)", value: "grand" },
-  { label: "Mosaïque", value: "mosaique" },
-  { label: "Je ne sais pas encore", value: "indecis" },
 ];
 
 const styleCarrelageOptions = [
@@ -154,25 +143,14 @@ const styleCarrelageOptions = [
   { label: "Terrazzo", value: "terrazzo" },
   { label: "Métro / biseauté", value: "metro" },
   { label: "Graphique / géométrique", value: "graphique" },
-  { label: "Naturel (ton pierre, sable…)", value: "naturel" },
-  { label: "Couleur unie mate", value: "mate" },
-  { label: "Autre", value: "autre" },
+  { label: "Naturel (pierre, sable…)", value: "naturel" },
 ];
 
 const poseOptions = [
-  { label: "Pose droite", value: "droite" },
-  { label: "Pose en chevron", value: "chevron" },
-  { label: "Pose décalée", value: "decalee" },
-  { label: "Pose mosaïque", value: "mosaique" },
-  { label: "Je ne sais pas encore", value: "indecis" },
-];
-
-const equipementsOptions = [
-  { label: "Niche murale", value: "niche" },
-  { label: "Éclairage intégré (LED)", value: "led" },
-  { label: "Étanchéité complète (SPEC)", value: "etancheite" },
-  { label: "Sèche-serviettes", value: "seche-serviettes" },
-  { label: "Banc de douche", value: "banc" },
+  { label: "Zellige", value: "zellige" },
+  { label: "Effet marbre", value: "marbre" },
+  { label: "Béton ciré", value: "beton" },
+  { label: "Métro / biseauté", value: "metro" },
 ];
 
 export default function Devis() {
@@ -180,7 +158,6 @@ export default function Devis() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
-  const [equipements, setEquipements] = useState<string[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
 
@@ -197,14 +174,6 @@ export default function Devis() {
         return { ...prev, [field]: currentArray.filter(item => item !== value) };
       }
     });
-  };
-
-  const handleEquipementChange = (value: string, checked: boolean) => {
-    if (checked) {
-      setEquipements(prev => [...prev, value]);
-    } else {
-      setEquipements(prev => prev.filter(item => item !== value));
-    }
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -280,7 +249,6 @@ export default function Devis() {
                 setIsSubmitted(false);
                 setFormData(initialFormData);
                 setUploadedFiles([]);
-                setEquipements([]);
               }}>
                 Faire une nouvelle demande
               </Button>
@@ -323,24 +291,6 @@ export default function Devis() {
     </div>
   );
 
-  const FinitionsGroup = () => (
-    <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-      {finitionsOptions.map((option) => (
-        <div 
-          key={option.value} 
-          className={`flex flex-col items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
-            (formData.finitionsRobinetterie).includes(option.value) 
-              ? 'border-foreground bg-foreground/5' 
-              : 'border-border bg-card hover:border-foreground/30'
-          }`}
-          onClick={() => handleCheckboxChange("finitionsRobinetterie", option.value, !formData.finitionsRobinetterie.includes(option.value))}
-        >
-          <div className={`w-12 h-12 rounded-full ${option.color}`} />
-          <span className="text-sm font-medium text-center">{option.label}</span>
-        </div>
-      ))}
-    </div>
-  );
 
   return (
     <Layout>
@@ -506,123 +456,111 @@ export default function Devis() {
                   </RadioGroup>
                 </div>
 
-                {/* Receveur */}
+                {/* WC, meuble vasque, robinetterie */}
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-beige))] flex items-center justify-center">
                       <ReceveurIcon />
                     </div>
-                    Receveur de douche
+                    WC, meuble vasque, robinetterie souhaités
                   </h2>
-                  <CheckboxGroup options={receveurOptions} field="receveur" />
+                  <CheckboxGroup options={wcMeubleVasqueOptions} field="wcMeubleVasque" />
                 </div>
 
-                {/* Porte de douche */}
+                {/* Paroi de douche */}
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-mint))] flex items-center justify-center">
                       <ParoiIcon />
                     </div>
-                    Porte de douche / Paroi
+                    Paroi de douche souhaitée
                   </h2>
                   <CheckboxGroup options={porteOptions} field="porteDouche" />
                 </div>
 
-                {/* Robinetterie */}
+                {/* Machine à laver */}
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-blue))] flex items-center justify-center">
                       <RobinetterieIcon />
                     </div>
-                    Robinetterie
+                    Souhaitez-vous intégrer une machine à laver ?
                   </h2>
-                  <CheckboxGroup options={robinetterieOptions} field="robinetterie" />
+                  <RadioGroup 
+                    value={formData.machineLaver} 
+                    onValueChange={(value) => handleChange("machineLaver", value)}
+                    className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6"
+                  >
+                    {[
+                      { value: "oui", label: "Oui" },
+                      { value: "non", label: "Non" },
+                      { value: "indecis", label: "Je ne sais pas encore" }
+                    ].map((option) => (
+                      <div 
+                        key={option.value} 
+                        className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
+                          formData.machineLaver === option.value 
+                            ? 'border-foreground bg-foreground/5' 
+                            : 'border-border bg-card hover:border-foreground/30'
+                        }`}
+                        onClick={() => handleChange("machineLaver", option.value)}
+                      >
+                        <RadioGroupItem value={option.value} id={`machine-${option.value}`} className="pointer-events-none" />
+                        <Label htmlFor={`machine-${option.value}`} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
+                      </div>
+                    ))}
+                  </RadioGroup>
+
+                  {formData.machineLaver === "oui" && (
+                    <div className="space-y-6 pt-4 border-t border-border">
+                      <div>
+                        <Label className="text-sm font-medium text-muted-foreground mb-3 block">Emplacement souhaité</Label>
+                        <CheckboxGroup options={emplacementMachineOptions} field="emplacementMachine" />
+                      </div>
+                      <div>
+                        <Label className="text-sm font-medium text-muted-foreground mb-3 block">Avez-vous déjà une machine ?</Label>
+                        <CheckboxGroup options={typeMachineOptions} field="typeMachine" />
+                      </div>
+                    </div>
+                  )}
                 </div>
 
-                {/* Finitions robinetterie */}
+                {/* Finitions et ambiance */}
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-peach))] flex items-center justify-center">
                       <FinitionsIcon />
                     </div>
-                    Finitions robinetterie
-                  </h2>
-                  <FinitionsGroup />
-                </div>
-
-                {/* Zones à carreler */}
-                <div className="card-elevated p-8">
-                  <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-beige))] flex items-center justify-center">
-                      <CarrelageIcon />
-                    </div>
-                    Zones à carreler
-                  </h2>
-                  <CheckboxGroup options={zonesCarrelageOptions} field="zonesCarrelage" />
-                </div>
-
-                {/* Format de carrelage */}
-                <div className="card-elevated p-8">
-                  <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-mint))] flex items-center justify-center">
-                      <CarrelageIcon />
-                    </div>
-                    Format de carrelage
-                  </h2>
-                  <CheckboxGroup options={formatCarrelageOptions} field="formatCarrelage" />
-                </div>
-
-                {/* Style de carrelage */}
-                <div className="card-elevated p-8">
-                  <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-blue))] flex items-center justify-center">
-                      <CarrelageIcon />
-                    </div>
-                    Style de carrelage
+                    Finitions et ambiance souhaitées
                   </h2>
                   <CheckboxGroup options={styleCarrelageOptions} field="styleCarrelage" columns={3} />
                 </div>
 
-                {/* Pose envisagée */}
-                <div className="card-elevated p-8">
-                  <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-peach))] flex items-center justify-center">
-                      <CarrelageIcon />
-                    </div>
-                    Type de pose
-                  </h2>
-                  <CheckboxGroup options={poseOptions} field="poseEnvisagee" />
-                </div>
-
-                {/* Équipements supplémentaires */}
+                {/* Pose envisagée (finitions robinetterie) */}
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-mint))] flex items-center justify-center">
-                      <Gem className="w-5 h-5" strokeWidth={1.5} />
+                      <CarrelageIcon />
                     </div>
-                    Équipements supplémentaires
+                    Pose envisagée
                   </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {equipementsOptions.map((option) => (
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                    {finitionsOptions.map((option) => (
                       <div 
                         key={option.value} 
-                        className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
-                          equipements.includes(option.value) 
+                        className={`flex flex-col items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
+                          (formData.finitionsRobinetterie).includes(option.value) 
                             ? 'border-foreground bg-foreground/5' 
                             : 'border-border bg-card hover:border-foreground/30'
                         }`}
-                        onClick={() => handleEquipementChange(option.value, !equipements.includes(option.value))}
+                        onClick={() => handleCheckboxChange("finitionsRobinetterie", option.value, !formData.finitionsRobinetterie.includes(option.value))}
                       >
-                        <Checkbox 
-                          id={`equip-${option.value}`}
-                          checked={equipements.includes(option.value)}
-                          onCheckedChange={(checked) => handleEquipementChange(option.value, checked as boolean)}
-                          className="pointer-events-none"
-                        />
-                        <Label htmlFor={`equip-${option.value}`} className="cursor-pointer flex-1 text-sm font-medium">{option.label}</Label>
+                        <div className={`w-12 h-12 rounded-full ${option.color}`} />
+                        <span className="text-sm font-medium text-center">{option.label}</span>
                       </div>
                     ))}
                   </div>
+                  <CheckboxGroup options={poseOptions} field="poseEnvisagee" />
                 </div>
 
                 {/* Upload fichiers */}
