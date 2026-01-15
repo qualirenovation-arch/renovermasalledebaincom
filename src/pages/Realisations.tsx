@@ -14,8 +14,15 @@ import gallery7 from "@/assets/gallery-7.jpg";
 import gallery8 from "@/assets/gallery-8.jpg";
 import gallery9 from "@/assets/gallery-9.jpg";
 import gallery10 from "@/assets/gallery-10.jpg";
+import gallery11 from "@/assets/gallery-11.jpg";
+import gallery12 from "@/assets/gallery-12.jpg";
+import gallery13 from "@/assets/gallery-13.jpg";
+import gallery14 from "@/assets/gallery-14.jpg";
+import gallery15 from "@/assets/gallery-15.jpg";
+import gallery16 from "@/assets/gallery-16.jpg";
+import gallery17 from "@/assets/gallery-17.jpg";
 
-type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10";
+type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire";
 
 interface Project {
   id: number;
@@ -107,11 +114,68 @@ const projects: Project[] = [
     category: ["moderne", "grande", "paris10"],
     details: "Grande douche de pluie plafond en laiton doré combinée à une douchette à main. Paroi vitrée avec profilés dorés, niche de rangement intégrée et carrelage grand format effet onyx.",
   },
+  {
+    id: 11,
+    image: gallery11,
+    title: "Chevrons blancs et terrazzo",
+    description: "Salle de bain complète - Bd Pereire Paris 17ème",
+    category: ["moderne", "petite", "bdpereire"],
+    details: "Rénovation complète avec carrelage chevrons blancs, sol terrazzo gris, meuble vasque suspendu blanc et sèche-serviettes noir. Robinetterie chromée et éclairage industriel.",
+  },
+  {
+    id: 12,
+    image: gallery12,
+    title: "Douche d'angle vitrée",
+    description: "Vue d'ensemble - Bd Pereire Paris 17ème",
+    category: ["moderne", "petite", "bdpereire"],
+    details: "Douche à l'italienne avec paroi vitrée d'angle, colonne de douche chromée avec ciel de pluie carré. WC suspendu et rangement encastré optimisant l'espace.",
+  },
+  {
+    id: 13,
+    image: gallery13,
+    title: "Agencement optimisé",
+    description: "Détails aménagement - Bd Pereire Paris 17ème",
+    category: ["moderne", "petite", "bdpereire"],
+    details: "Vue sur l'agencement compact et fonctionnel : WC suspendu, paroi de douche vitrée et meuble vasque. Carrelage chevrons blancs du sol au plafond.",
+  },
+  {
+    id: 14,
+    image: gallery14,
+    title: "Colonne de douche design",
+    description: "Équipements - Bd Pereire Paris 17ème",
+    category: ["moderne", "bdpereire"],
+    details: "Colonne de douche avec pommeau ciel de pluie carré et douchette à main. Paroi vitrée pivotante chromée et rangement intégré avec étagères.",
+  },
+  {
+    id: 15,
+    image: gallery15,
+    title: "Vasque et miroir",
+    description: "Espace lavabo - Bd Pereire Paris 17ème",
+    category: ["moderne", "petite", "bdpereire"],
+    details: "Meuble vasque blanc suspendu avec robinetterie chromée. Miroir rectangulaire encadré noir avec applique industrielle. Carrelage chevrons blancs.",
+  },
+  {
+    id: 16,
+    image: gallery16,
+    title: "Sol terrazzo élégant",
+    description: "Détail sol - Bd Pereire Paris 17ème",
+    category: ["moderne", "bdpereire"],
+    details: "Sol en carrelage terrazzo gris et blanc avec WC suspendu. Accessoires noirs (dérouleur papier) contrastant avec le blanc immaculé des murs.",
+  },
+  {
+    id: 17,
+    image: gallery17,
+    title: "Robinetterie chromée premium",
+    description: "Détail finitions - Bd Pereire Paris 17ème",
+    category: ["moderne", "bdpereire"],
+    details: "Gros plan sur la robinetterie chromée haut de gamme et le carrelage chevrons blancs. Accessoires noirs (distributeur de savon) pour un style contemporain.",
+  },
 ];
 
 const categories: { id: Category; label: string }[] = [
   { id: "all", label: "Tous" },
   { id: "paris10", label: "Paris 10ème" },
+  { id: "bdpereire", label: "Bd Pereire Paris 17ème" },
   { id: "petite", label: "Petites salles de bain" },
   { id: "grande", label: "Grandes salles de bain" },
   { id: "moderne", label: "Style moderne" },
