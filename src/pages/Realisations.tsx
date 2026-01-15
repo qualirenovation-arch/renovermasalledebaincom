@@ -635,7 +635,7 @@ const projects: Project[] = [
     title: "Vue d'ensemble SDB Monsieur",
     description: "Paris 12ème - Cours de Vincennes",
     category: ["grande", "moderne", "pierre", "vincennesmr"],
-    details: "Salle de bain masculine haut de gamme : carrelage effet marbre Calacatta or, meuble vasque noyer sur-mesure, paroi de douche verrière noire. Rangement colonne intégré.",
+    details: "Salle de bain masculine haut de gamme : carrelage effet marbre Calacatta or, meuble sur-mesure Noyer de Bourgogne, paroi de douche verrière noire. Rangement colonne intégré.",
   },
   {
     id: 70,
@@ -643,7 +643,7 @@ const projects: Project[] = [
     title: "Vasque et miroir",
     description: "Paris 12ème - Cours de Vincennes",
     category: ["grande", "moderne", "pierre", "vincennesmr"],
-    details: "Plan vasque en solid surface blanc avec meuble noyer sans poignées. Grand miroir rétroéclairé, robinetterie noire mate. Carrelage mural marbre veiné or du sol au plafond.",
+    details: "Plan vasque en Corian blanc avec meuble sur-mesure Noyer de Bourgogne sans poignées. Grand miroir rétroéclairé, robinetterie noire mate. Carrelage mural marbre veiné or du sol au plafond.",
   },
   {
     id: 71,
@@ -667,7 +667,7 @@ const projects: Project[] = [
     title: "Miroir et reflets",
     description: "Paris 12ème - Cours de Vincennes",
     category: ["grande", "moderne", "pierre", "vincennesmr"],
-    details: "Grand miroir numérique avec éclairage LED intégré. Reflet de la douche verrière et fenêtre bois. Vasque en solid surface blanc, robinetterie noire mate.",
+    details: "Grand miroir numérique avec éclairage LED intégré. Reflet de la douche verrière et fenêtre bois. Vasque en Corian blanc, robinetterie noire mate.",
   },
   {
     id: 77,
@@ -675,7 +675,7 @@ const projects: Project[] = [
     title: "Sèche-serviettes design",
     description: "Paris 12ème - Cours de Vincennes",
     category: ["grande", "moderne", "pierre", "vincennesmr"],
-    details: "Sèche-serviettes noir mat électrique avec programmateur. Colonne de rangement noyer toute hauteur. Carrelage marbre Calacatta or du sol au plafond.",
+    details: "Sèche-serviettes noir mat électrique avec programmateur. Colonne de rangement sur-mesure Noyer de Bourgogne toute hauteur. Carrelage marbre Calacatta or du sol au plafond.",
   },
   {
     id: 78,
@@ -691,7 +691,7 @@ const projects: Project[] = [
     title: "Colonne rangement noyer",
     description: "Paris 12ème - Cours de Vincennes",
     category: ["grande", "moderne", "pierre", "vincennesmr"],
-    details: "Colonne de rangement sur-mesure en noyer avec boutons noirs. Espace optimisé du sol au plafond, reflet dans le miroir. Harmonie bois et marbre.",
+    details: "Colonne de rangement sur-mesure en Noyer de Bourgogne avec boutons noirs. Espace optimisé du sol au plafond, reflet dans le miroir. Harmonie bois et marbre.",
   },
   {
     id: 80,
@@ -699,7 +699,7 @@ const projects: Project[] = [
     title: "Buanderie intégrée",
     description: "Paris 12ème - Cours de Vincennes",
     category: ["grande", "moderne", "pierre", "vincennesmr"],
-    details: "Espace buanderie dissimulé dans la colonne noyer : lave-linge et sèche-linge superposés, étagères pour serviettes, rangements produits. Solution gain de place élégante.",
+    details: "Espace buanderie dissimulé dans la colonne Noyer de Bourgogne : lave-linge et sèche-linge superposés, étagères pour serviettes, rangements produits. Solution gain de place élégante.",
   },
   {
     id: 81,
@@ -707,7 +707,7 @@ const projects: Project[] = [
     title: "Vue depuis la douche",
     description: "Paris 12ème - Cours de Vincennes",
     category: ["grande", "moderne", "pierre", "vincennesmr"],
-    details: "Perspective depuis la paroi verrière : vasque noyer, grand miroir, colonne rangement. Fenêtre bois apportant lumière naturelle. Sol et murs marbre Calacatta.",
+    details: "Perspective depuis la paroi verrière : meuble vasque Noyer de Bourgogne, grand miroir, colonne rangement. Fenêtre bois apportant lumière naturelle. Sol et murs marbre Calacatta.",
   },
   {
     id: 82,
@@ -715,7 +715,7 @@ const projects: Project[] = [
     title: "Vue panoramique",
     description: "Paris 12ème - Cours de Vincennes",
     category: ["grande", "moderne", "pierre", "vincennesmr"],
-    details: "Vue d'ensemble : douche XXL avec ciel de pluie noir encastré, niche produits, vasque design, colonne rangement. Harmonie parfaite marbre, noyer et noir.",
+    details: "Vue d'ensemble : douche XXL avec ciel de pluie noir encastré, niche produits, vasque Corian blanc, colonne rangement Noyer de Bourgogne. Harmonie parfaite marbre, bois et noir.",
   },
   {
     id: 83,
@@ -723,7 +723,7 @@ const projects: Project[] = [
     title: "Espace douche complet",
     description: "Paris 12ème - Cours de Vincennes",
     category: ["grande", "moderne", "pierre", "vincennesmr"],
-    details: "Douche à l'italienne spacieuse avec ciel de pluie XXL noir, paroi verrière, niche de rangement. Vue sur fenêtre bois et meuble vasque. Luminosité optimale.",
+    details: "Douche à l'italienne spacieuse avec ciel de pluie XXL noir, paroi verrière, niche de rangement. Vue sur fenêtre bois et meuble vasque Noyer de Bourgogne. Luminosité optimale.",
   },
   // Photos AVANT - Paris 12ème Cours de Vincennes
   {
@@ -757,7 +757,7 @@ const categories: { id: Category; label: string; description?: string }[] = [
   { 
     id: "vincennesmr", 
     label: "Paris 12ème - Cours de Vincennes",
-    description: "Salle de bain masculine haut de gamme au Cours de Vincennes.\nCarrelage effet marbre Calacatta or, meuble vasque noyer sur-mesure.\nDouche verrière noire, robinetterie mate, ciel de pluie XXL."
+    description: "Salle de bain masculine haut de gamme au Cours de Vincennes.\nPlan vasque Corian blanc, meuble et colonne sur-mesure Noyer de Bourgogne.\nDouche verrière noire, robinetterie mate, ciel de pluie XXL."
   },
   { 
     id: "boiscolombes", 
