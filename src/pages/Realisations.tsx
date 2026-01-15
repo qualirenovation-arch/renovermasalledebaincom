@@ -463,7 +463,7 @@ const projects: Project[] = [
 const categories: { id: Category; label: string }[] = [
   { id: "all", label: "Tous" },
   { id: "butteschaumont", label: "🚧 Paris 19ème - Buttes-Chaumont" },
-  { id: "jemmapes", label: "Paris 10ème - Quai Jemmapes" },
+  { id: "jemmapes", label: "Paris 10ème - Salle de bain au masculin" },
   { id: "convention", label: "Paris 15ème - Convention" },
   { id: "severac", label: "Paris 17ème - Suite Parentale Ternes" },
   { id: "paris10", label: "Paris 10ème" },
