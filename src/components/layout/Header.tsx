@@ -39,7 +39,7 @@ export function Header() {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2">
               <span className="font-display text-xl md:text-2xl font-semibold text-primary">
-                Atelier Douche Design
+                renovermasalledebain.com
               </span>
             </Link>
 
