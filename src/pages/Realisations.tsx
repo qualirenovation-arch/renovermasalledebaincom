@@ -79,7 +79,7 @@ import vincennesMr4 from "@/assets/vincennes-mr-4.jpg";
 
 type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "convention" | "jemmapes" | "boiscolombes" | "vincennesmr";
 
-type InProgressCategory = "all-progress" | "butteschaumont" | "taitbout" | "rocroy" | "vincennes";
+type InProgressCategory = "all-progress" | "butteschaumont" | "taitbout" | "rocroy";
 
 interface Project {
   id: number;
@@ -620,34 +620,6 @@ const projects: Project[] = [
     category: ["petite", "boiscolombes", "avant-apres"],
     details: "Vue d'ensemble avant travaux : machine à laver sous plan noir, étagères ouvertes, baignoire avec rideau. Sol carrelé noir et blanc, murs gris. Transformation complète prévue.",
   },
-  // Projets en cours - Paris 12ème Cours de Vincennes
-  {
-    id: 66,
-    image: vincennes1,
-    title: "Douche quart de cercle existante",
-    description: "En cours - Paris 12ème Vincennes",
-    category: ["vincennes"],
-    details: "État initial : cabine de douche quart de cercle avec paroi coulissante. Carrelage gris clair, robinetterie chromée. Projet de transformation en douche à l'italienne.",
-    isInProgress: true,
-  },
-  {
-    id: 67,
-    image: vincennes2,
-    title: "Salle de bain à rénover",
-    description: "En cours - Paris 12ème Vincennes",
-    category: ["vincennes"],
-    details: "Vue depuis l'entrée : espace buanderie et salle de bain combinés. Carrelage grand format beige, meuble sous vasque à transformer. Potentiel d'optimisation de l'espace.",
-    isInProgress: true,
-  },
-  {
-    id: 68,
-    image: vincennes3,
-    title: "Vue générale avant travaux",
-    description: "En cours - Paris 12ème Vincennes",
-    category: ["vincennes"],
-    details: "Vue d'ensemble de la pièce d'eau existante : douche, zone buanderie, accès vers les autres pièces. Réaménagement complet prévu avec douche à l'italienne.",
-    isInProgress: true,
-  },
   // Réalisations terminées - Paris 12ème Cours de Vincennes - SDB Monsieur
   {
     id: 69,
@@ -681,6 +653,31 @@ const projects: Project[] = [
     category: ["grande", "moderne", "pierre", "vincennesmr"],
     details: "Détail de la douche : robinetterie thermostatique noire encastrée, ciel de pluie XXL, douchette sur flexible. Niche de rangement carrelée marbre pour produits.",
   },
+  // Photos AVANT - Paris 12ème Cours de Vincennes
+  {
+    id: 73,
+    image: vincennes1,
+    title: "Avant - Douche quart de cercle",
+    description: "Paris 12ème - Cours de Vincennes",
+    category: ["vincennesmr", "avant-apres"],
+    details: "État initial : cabine de douche quart de cercle avec paroi coulissante. Carrelage gris clair, robinetterie chromée. Transformation en douche à l'italienne haut de gamme.",
+  },
+  {
+    id: 74,
+    image: vincennes2,
+    title: "Avant - Salle de bain à rénover",
+    description: "Paris 12ème - Cours de Vincennes",
+    category: ["vincennesmr", "avant-apres"],
+    details: "Vue depuis l'entrée : espace buanderie et salle de bain combinés. Carrelage grand format beige, meuble sous vasque à transformer.",
+  },
+  {
+    id: 75,
+    image: vincennes3,
+    title: "Avant - Vue générale",
+    description: "Paris 12ème - Cours de Vincennes",
+    category: ["vincennesmr", "avant-apres"],
+    details: "Vue d'ensemble de la pièce d'eau avant travaux : douche, zone buanderie, accès vers les autres pièces.",
+  },
 ];
 
 const categories: { id: Category; label: string; description?: string }[] = [
@@ -710,7 +707,6 @@ const categories: { id: Category; label: string; description?: string }[] = [
 
 const inProgressCategories: { id: InProgressCategory; label: string }[] = [
   { id: "all-progress", label: "Tous les chantiers" },
-  { id: "vincennes", label: "Paris 12ème - Cours de Vincennes" },
   { id: "rocroy", label: "Paris 10ème - Rue de Rocroy" },
   { id: "taitbout", label: "Paris 9ème - Rue Taitbout" },
   { id: "butteschaumont", label: "Paris 19ème - Buttes-Chaumont" },
