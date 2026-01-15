@@ -729,26 +729,26 @@ const projects: Project[] = [
   {
     id: 73,
     image: vincennes1,
-    title: "Avant - Douche quart de cercle",
+    title: "Avant - L'ancienne douche",
     description: "Paris 12ème - Cours de Vincennes",
     category: ["vincennesmr", "avant-apres"],
-    details: "État initial : cabine de douche quart de cercle avec paroi coulissante. Carrelage gris clair, robinetterie chromée. Transformation en douche à l'italienne haut de gamme.",
+    details: "Le point de départ : une cabine de douche quart de cercle datée, paroi coulissante ternie, carrelage gris sans âme. Difficile d'imaginer qu'ici naîtra une douche à l'italienne XXL avec verrière noire et ciel de pluie encastré...",
   },
   {
     id: 74,
     image: vincennes2,
-    title: "Avant - Salle de bain à rénover",
+    title: "Avant - L'espace à réinventer",
     description: "Paris 12ème - Cours de Vincennes",
     category: ["vincennesmr", "avant-apres"],
-    details: "Vue depuis l'entrée : espace buanderie et salle de bain combinés. Carrelage grand format beige, meuble sous vasque à transformer.",
+    details: "Un défi de taille : fusionner buanderie et salle de bain dans un espace contraint. Carrelage beige vieillissant, meuble vasque standard, machines visibles. La métamorphose ? Un écrin de marbre Calacatta où chaque centimètre est optimisé.",
   },
   {
     id: 75,
     image: vincennes3,
-    title: "Avant - Vue générale",
+    title: "Avant - La promesse du changement",
     description: "Paris 12ème - Cours de Vincennes",
     category: ["vincennesmr", "avant-apres"],
-    details: "Vue d'ensemble de la pièce d'eau avant travaux : douche, zone buanderie, accès vers les autres pièces.",
+    details: "Vue d'ensemble avant la transformation : un espace fonctionnel mais sans caractère. Aujourd'hui ? Une salle de bain digne d'un palace avec meuble Noyer de Bourgogne, plan Corian, miroir AICA et buanderie totalement invisible.",
   },
 ];
 
