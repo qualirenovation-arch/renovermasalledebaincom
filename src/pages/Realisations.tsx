@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { X, ArrowRight, ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, ArrowRight, ArrowLeft, ChevronLeft, ChevronRight, MapPin } from "lucide-react";
 
 // Paris 10ème
 import gallery7 from "@/assets/gallery-7.jpg";
@@ -241,6 +241,14 @@ const albums: Album[] = [
   },
 ];
 
+interface ProjectLocation {
+  id: string;
+  name: string;
+  area: string;
+  x: number; // percentage from left
+  y: number; // percentage from top
+}
+
 const inProgressAlbums: Album[] = [
   {
     id: "buttes-chaumont",
@@ -280,6 +288,13 @@ const inProgressAlbums: Album[] = [
       { id: 2, image: rocroy2, title: "Travaux", description: "En cours de rénovation" },
     ],
   },
+];
+
+// Positions des chantiers sur la carte de Paris
+const projectLocations: ProjectLocation[] = [
+  { id: "buttes-chaumont", name: "Buttes-Chaumont", area: "19ème", x: 68, y: 25 },
+  { id: "taitbout", name: "Rue Taitbout", area: "9ème", x: 48, y: 38 },
+  { id: "rocroy", name: "Rue de Rocroy", area: "10ème", x: 55, y: 32 },
 ];
 
 export default function Realisations() {
@@ -360,6 +375,90 @@ export default function Realisations() {
           </div>
         </div>
       </section>
+
+      {/* Paris Map for In Progress */}
+      {viewMode === "inProgress" && !selectedAlbum && (
+        <section className="py-12 bg-stone">
+          <div className="container-custom">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-center mb-8"
+            >
+              <h2 className="font-display text-2xl md:text-3xl font-semibold mb-2">
+                Nos chantiers en cours sur Paris
+              </h2>
+              <p className="text-muted-foreground">Cliquez sur un point pour voir le projet</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="relative max-w-3xl mx-auto"
+            >
+              {/* Carte stylisée de Paris */}
+              <div className="relative bg-accent/20 rounded-3xl overflow-hidden aspect-[4/3] border border-border">
+                {/* Fond avec forme de Paris simplifiée */}
+                <svg viewBox="0 0 400 300" className="w-full h-full">
+                  {/* Forme simplifiée de Paris */}
+                  <path
+                    d="M80 150 Q60 100 100 60 Q150 30 200 40 Q280 30 330 70 Q370 100 360 150 Q370 200 320 250 Q260 280 200 270 Q140 280 90 240 Q50 200 80 150 Z"
+                    fill="hsl(var(--accent))"
+                    stroke="hsl(var(--border))"
+                    strokeWidth="2"
+                    opacity="0.5"
+                  />
+                  {/* Seine */}
+                  <path
+                    d="M40 165 Q120 140 200 160 Q280 180 360 155"
+                    fill="none"
+                    stroke="hsl(var(--primary))"
+                    strokeWidth="6"
+                    opacity="0.3"
+                    strokeLinecap="round"
+                  />
+                  {/* Arrondissements labels */}
+                  <text x="160" y="85" className="fill-muted-foreground text-[10px] font-medium">18e</text>
+                  <text x="260" y="70" className="fill-muted-foreground text-[10px] font-medium">19e</text>
+                  <text x="310" y="120" className="fill-muted-foreground text-[10px] font-medium">20e</text>
+                  <text x="200" y="105" className="fill-muted-foreground text-[10px] font-medium">9e</text>
+                  <text x="230" y="100" className="fill-muted-foreground text-[10px] font-medium">10e</text>
+                  <text x="200" y="150" className="fill-muted-foreground text-[10px] font-medium">1er</text>
+                  <text x="140" y="130" className="fill-muted-foreground text-[10px] font-medium">8e</text>
+                  <text x="100" y="170" className="fill-muted-foreground text-[10px] font-medium">16e</text>
+                  <text x="150" y="200" className="fill-muted-foreground text-[10px] font-medium">15e</text>
+                  <text x="280" y="200" className="fill-muted-foreground text-[10px] font-medium">12e</text>
+                </svg>
+
+                {/* Points des chantiers */}
+                {projectLocations.map((location, index) => (
+                  <motion.button
+                    key={location.id}
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ delay: 0.3 + index * 0.1, type: "spring" }}
+                    className="absolute transform -translate-x-1/2 -translate-y-1/2 group"
+                    style={{ left: `${location.x}%`, top: `${location.y}%` }}
+                    onClick={() => {
+                      const album = inProgressAlbums.find(a => a.id === location.id);
+                      if (album) setSelectedAlbum(album);
+                    }}
+                  >
+                    <span className="flex items-center justify-center w-10 h-10 bg-wood text-white rounded-full shadow-lg transition-transform duration-300 group-hover:scale-125">
+                      <MapPin className="w-5 h-5" />
+                    </span>
+                    <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-foreground text-background text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                      {location.name}
+                    </span>
+                    {/* Pulse animation */}
+                    <span className="absolute inset-0 w-10 h-10 bg-wood rounded-full animate-ping opacity-30" />
+                  </motion.button>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      )}
 
       {/* Albums Grid */}
       <section className="section-padding">
