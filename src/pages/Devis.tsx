@@ -377,7 +377,7 @@ export default function Devis() {
                   </a>
 
                   <a 
-                    href="mailto:contact@atelier-douche-design.fr"
+                    href="mailto:contact@qualiconcept.fr"
                     className="flex items-center gap-4 p-4 rounded-xl bg-secondary hover:bg-secondary/80 transition-colors"
                   >
                     <div className="w-12 h-12 rounded-full bg-accent/30 flex items-center justify-center">
@@ -385,7 +385,7 @@ export default function Devis() {
                     </div>
                     <div>
                       <p className="font-semibold">Email</p>
-                      <p className="text-muted-foreground">contact@atelier-douche-design.fr</p>
+                      <p className="text-muted-foreground">contact@qualiconcept.fr</p>
                     </div>
                   </a>
 
