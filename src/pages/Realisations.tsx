@@ -12,6 +12,8 @@ import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
 import gallery7 from "@/assets/gallery-7.jpg";
 import gallery8 from "@/assets/gallery-8.jpg";
+import gallery9 from "@/assets/gallery-9.jpg";
+import gallery10 from "@/assets/gallery-10.jpg";
 
 type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres";
 
@@ -88,6 +90,22 @@ const projects: Project[] = [
     description: "Appartement parisien - Paris 10ème",
     category: ["moderne", "grande"],
     details: "Salle de bain complète avec douche à l'italienne, miroir ovale encadré laiton, robinetterie dorée haut de gamme et éclairage LED intégré. Finitions soignées en ton sur ton beige et or.",
+  },
+  {
+    id: 9,
+    image: gallery9,
+    title: "Robinetterie laiton sur onyx",
+    description: "Détail finitions - Paris 10ème",
+    category: ["moderne", "pierre"],
+    details: "Gros plan sur la robinetterie encastrée en laiton brossé doré avec douchette sur barre. Carrelage effet marbre onyx aux veines rosées. Banc d'angle intégré avec bord arrondi.",
+  },
+  {
+    id: 10,
+    image: gallery10,
+    title: "Ciel de pluie doré",
+    description: "Douche luxe - Paris 10ème",
+    category: ["moderne", "grande"],
+    details: "Grande douche de pluie plafond en laiton doré combinée à une douchette à main. Paroi vitrée avec profilés dorés, niche de rangement intégrée et carrelage grand format effet onyx.",
   },
 ];
 
