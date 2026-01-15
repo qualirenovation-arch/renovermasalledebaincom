@@ -684,8 +684,8 @@ export default function Realisations() {
               Douche à l'italienne au seuil optimisé selon les règles DTU, trappe de visite 
               invisible intégrée au carrelage, transformation baignoire en espace bien-être, 
               receveur extra-plat ou réaménagement complet avec WC suspendu — nos équipes 
-              et leur maître d'œuvre intégré supervisent chaque étape pour sublimer vos 
-              mètres carrés les plus intimes.
+              avec notre maître d'œuvre Carina, dédiée à votre projet, supervisent chaque 
+              étape pour sublimer vos mètres carrés les plus intimes.
             </p>
             <p className="text-wood font-medium text-xl italic">
               Et vous, team receveur minimaliste ou baignoire cocooning ?
