@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { MessageSquare, Palette, Diamond, Hammer, Shield, Headphones, Check, X, ArrowRight, ClipboardCheck, UserCheck } from "lucide-react";
+import { MessageSquare, Palette, Diamond, Hammer, Shield, Headphones, Check, X, ArrowRight, ClipboardCheck, UserCheck, Handshake, Lightbulb, Home } from "lucide-react";
 const benefits = [{
   icon: ClipboardCheck,
   title: "Maître d'œuvre dès le 1er RDV",
@@ -95,6 +95,79 @@ export default function WhyUs() {
               La différence avec renovermasalledebain.com  
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed">Découvrez pourquoi les  clients nous font confiance pour renover leur salle de bain</p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Co-construction Section */}
+      <section className="section-padding bg-primary text-primary-foreground">
+        <div className="container-custom">
+          <motion.div 
+            className="max-w-4xl mx-auto text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="w-20 h-20 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-8">
+              <Handshake className="w-10 h-10 text-accent" />
+            </div>
+            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6">
+              Le projet, on le construit ensemble
+            </h2>
+            <p className="text-xl leading-relaxed text-primary-foreground/90 mb-8">
+              Pour s'adapter à votre mode de vie et vous apporter les solutions techniques 
+              qui vont améliorer votre vision du projet et rendre votre espace encore plus confortable.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+              <motion.div 
+                className="bg-primary-foreground/10 rounded-2xl p-6"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+              >
+                <div className="w-12 h-12 rounded-full bg-accent/30 flex items-center justify-center mx-auto mb-4">
+                  <Home className="w-6 h-6 text-accent" />
+                </div>
+                <h3 className="font-display text-lg font-semibold mb-2">Adapté à votre vie</h3>
+                <p className="text-primary-foreground/80 text-sm">
+                  Nous étudions vos habitudes quotidiennes pour créer un espace parfaitement adapté à votre rythme de vie.
+                </p>
+              </motion.div>
+              
+              <motion.div 
+                className="bg-primary-foreground/10 rounded-2xl p-6"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+              >
+                <div className="w-12 h-12 rounded-full bg-accent/30 flex items-center justify-center mx-auto mb-4">
+                  <Lightbulb className="w-6 h-6 text-accent" />
+                </div>
+                <h3 className="font-display text-lg font-semibold mb-2">Solutions techniques</h3>
+                <p className="text-primary-foreground/80 text-sm">
+                  Notre expertise nous permet de proposer des solutions innovantes qui subliment votre projet initial.
+                </p>
+              </motion.div>
+              
+              <motion.div 
+                className="bg-primary-foreground/10 rounded-2xl p-6"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+              >
+                <div className="w-12 h-12 rounded-full bg-accent/30 flex items-center justify-center mx-auto mb-4">
+                  <Diamond className="w-6 h-6 text-accent" />
+                </div>
+                <h3 className="font-display text-lg font-semibold mb-2">Confort optimal</h3>
+                <p className="text-primary-foreground/80 text-sm">
+                  Chaque détail est pensé pour maximiser votre confort et votre bien-être au quotidien.
+                </p>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>
