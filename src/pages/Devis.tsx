@@ -32,14 +32,17 @@ interface FormData {
   codePostal: string;
   typeInstallation: string;
   typeDouche: string;
+  typePommeau: string;
   typeReceveur: string[];
   typeBaignoire: string[];
+  robinetterieBaignoire: string;
   wcType: string[];
   meubleVasque: string[];
   porteDouche: string[];
   machineLaver: string;
   emplacementMachine: string[];
   typeMachine: string[];
+  robinetterieMLaver: string;
   finitionsRobinetterie: string[];
   styleCarrelage: string[];
   poseEnvisagee: string[];
@@ -54,14 +57,17 @@ const initialFormData: FormData = {
   codePostal: "",
   typeInstallation: "",
   typeDouche: "",
+  typePommeau: "",
   typeReceveur: [],
   typeBaignoire: [],
+  robinetterieBaignoire: "",
   wcType: [],
   meubleVasque: [],
   porteDouche: [],
   machineLaver: "",
   emplacementMachine: [],
   typeMachine: [],
+  robinetterieMLaver: "",
   finitionsRobinetterie: [],
   styleCarrelage: [],
   poseEnvisagee: [],
@@ -134,8 +140,15 @@ const porteOptions = [
 ];
 
 const typeDoucheOptions = [
-  { value: "applique", label: "En applique" },
-  { value: "encastre", label: "Encastré" },
+  { value: "applique", label: "En applique (visible)" },
+  { value: "encastre", label: "Encastré (dans le mur)" },
+];
+
+const typePommeauOptions = [
+  { value: "pommeau-main", label: "Pommeau à main uniquement" },
+  { value: "pommeau-fixe", label: "Pommeau fixe (plafonnier ou mural)" },
+  { value: "pommeau-combo", label: "Pommeau fixe + douchette à main" },
+  { value: "colonne", label: "Colonne de douche complète" },
 ];
 
 const typeReceveurOptions = [
@@ -149,7 +162,13 @@ const typeReceveurOptions = [
 const typeBaignoireOptions = [
   { label: "Baignoire en fonte", value: "fonte" },
   { label: "Baignoire en acier", value: "acier" },
-  { label: "Baignoire en résine", value: "resine" },
+  { label: "Baignoire en résine / acrylique", value: "resine" },
+];
+
+const robinetterieBaignoireOptions = [
+  { value: "applique", label: "En applique (sur le mur)" },
+  { value: "encastre", label: "Encastré (dans le mur)" },
+  { value: "sur-gorge", label: "Sur gorge (sur le rebord)" },
 ];
 
 const emplacementMachineOptions = [
@@ -164,6 +183,12 @@ const typeMachineOptions = [
   { label: "Lavante-séchante (2 en 1)", value: "lavante-sechante" },
   { label: "Aucun, mais je souhaite en intégrer une", value: "souhaite-integrer" },
   { label: "Aucun, et je ne souhaite pas en intégrer dans la salle de bain", value: "pas-integrer" },
+];
+
+const robinetterieMLaverOptions = [
+  { value: "applique", label: "Robinet en applique (visible)" },
+  { value: "encastre", label: "Robinet encastré (dans le mur)" },
+  { value: "existant", label: "Utiliser l'arrivée d'eau existante" },
 ];
 
 const finitionsOptions = [
@@ -494,39 +519,93 @@ export default function Devis() {
 
                   {/* Type de douche - visible si douche sélectionnée */}
                   {formData.typeInstallation === "douche" && (
-                    <div className="mt-6 pt-6 border-t border-border">
-                      <Label className="text-sm font-medium text-muted-foreground mb-3 block">Type de robinetterie douche</Label>
-                      <RadioGroup 
-                        value={formData.typeDouche} 
-                        onValueChange={(value) => handleChange("typeDouche", value)}
-                        className="grid grid-cols-1 md:grid-cols-2 gap-4"
-                      >
-                        {typeDoucheOptions.map((option) => (
-                          <div 
-                            key={option.value} 
-                            className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
-                              formData.typeDouche === option.value 
-                                ? 'border-foreground bg-foreground/5' 
-                                : 'border-border bg-card hover:border-foreground/30'
-                            }`}
-                            onClick={() => handleChange("typeDouche", option.value)}
-                          >
-                            <RadioGroupItem value={option.value} id={`douche-${option.value}`} className="pointer-events-none" />
-                            <Label htmlFor={`douche-${option.value}`} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
-                          </div>
-                        ))}
-                      </RadioGroup>
+                    <div className="mt-6 pt-6 border-t border-border space-y-6">
+                      <div>
+                        <Label className="text-sm font-medium text-muted-foreground mb-3 block">Type de robinetterie douche</Label>
+                        <RadioGroup 
+                          value={formData.typeDouche} 
+                          onValueChange={(value) => handleChange("typeDouche", value)}
+                          className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                        >
+                          {typeDoucheOptions.map((option) => (
+                            <div 
+                              key={option.value} 
+                              className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
+                                formData.typeDouche === option.value 
+                                  ? 'border-foreground bg-foreground/5' 
+                                  : 'border-border bg-card hover:border-foreground/30'
+                              }`}
+                              onClick={() => handleChange("typeDouche", option.value)}
+                            >
+                              <RadioGroupItem value={option.value} id={`douche-${option.value}`} className="pointer-events-none" />
+                              <Label htmlFor={`douche-${option.value}`} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
+                            </div>
+                          ))}
+                        </RadioGroup>
+                      </div>
 
-                      <Label className="text-sm font-medium text-muted-foreground mb-3 block mt-6">Type de receveur</Label>
-                      <CheckboxGroup options={typeReceveurOptions} field="typeReceveur" columns={3} />
+                      <div>
+                        <Label className="text-sm font-medium text-muted-foreground mb-3 block">Style de pommeau</Label>
+                        <RadioGroup 
+                          value={formData.typePommeau} 
+                          onValueChange={(value) => handleChange("typePommeau", value)}
+                          className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                        >
+                          {typePommeauOptions.map((option) => (
+                            <div 
+                              key={option.value} 
+                              className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
+                                formData.typePommeau === option.value 
+                                  ? 'border-foreground bg-foreground/5' 
+                                  : 'border-border bg-card hover:border-foreground/30'
+                              }`}
+                              onClick={() => handleChange("typePommeau", option.value)}
+                            >
+                              <RadioGroupItem value={option.value} id={`pommeau-${option.value}`} className="pointer-events-none" />
+                              <Label htmlFor={`pommeau-${option.value}`} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
+                            </div>
+                          ))}
+                        </RadioGroup>
+                      </div>
+
+                      <div>
+                        <Label className="text-sm font-medium text-muted-foreground mb-3 block">Type de receveur</Label>
+                        <CheckboxGroup options={typeReceveurOptions} field="typeReceveur" columns={3} />
+                      </div>
                     </div>
                   )}
 
                   {/* Type de baignoire - visible si baignoire sélectionnée */}
                   {formData.typeInstallation === "baignoire" && (
-                    <div className="mt-6 pt-6 border-t border-border">
-                      <Label className="text-sm font-medium text-muted-foreground mb-3 block">Style de baignoire</Label>
-                      <CheckboxGroup options={typeBaignoireOptions} field="typeBaignoire" />
+                    <div className="mt-6 pt-6 border-t border-border space-y-6">
+                      <div>
+                        <Label className="text-sm font-medium text-muted-foreground mb-3 block">Style de baignoire</Label>
+                        <CheckboxGroup options={typeBaignoireOptions} field="typeBaignoire" />
+                      </div>
+
+                      <div>
+                        <Label className="text-sm font-medium text-muted-foreground mb-3 block">Type de robinetterie baignoire</Label>
+                        <RadioGroup 
+                          value={formData.robinetterieBaignoire} 
+                          onValueChange={(value) => handleChange("robinetterieBaignoire", value)}
+                          className="grid grid-cols-1 md:grid-cols-3 gap-4"
+                        >
+                          {robinetterieBaignoireOptions.map((option) => (
+                            <div 
+                              key={option.value} 
+                              className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
+                                formData.robinetterieBaignoire === option.value 
+                                  ? 'border-foreground bg-foreground/5' 
+                                  : 'border-border bg-card hover:border-foreground/30'
+                              }`}
+                              onClick={() => handleChange("robinetterieBaignoire", option.value)}
+                            >
+                              <RadioGroupItem value={option.value} id={`baignoire-rob-${option.value}`} className="pointer-events-none" />
+                              <Label htmlFor={`baignoire-rob-${option.value}`} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
+                            </div>
+                          ))}
+                        </RadioGroup>
+                      </div>
                     </div>
                   )}
                 </div>
@@ -639,6 +718,29 @@ export default function Devis() {
                       <div>
                         <Label className="text-sm font-medium text-muted-foreground mb-3 block">Avez-vous déjà une machine ?</Label>
                         <CheckboxGroup options={typeMachineOptions} field="typeMachine" />
+                      </div>
+                      <div>
+                        <Label className="text-sm font-medium text-muted-foreground mb-3 block">Robinetterie pour la machine à laver</Label>
+                        <RadioGroup 
+                          value={formData.robinetterieMLaver} 
+                          onValueChange={(value) => handleChange("robinetterieMLaver", value)}
+                          className="grid grid-cols-1 md:grid-cols-3 gap-4"
+                        >
+                          {robinetterieMLaverOptions.map((option) => (
+                            <div 
+                              key={option.value} 
+                              className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
+                                formData.robinetterieMLaver === option.value 
+                                  ? 'border-foreground bg-foreground/5' 
+                                  : 'border-border bg-card hover:border-foreground/30'
+                              }`}
+                              onClick={() => handleChange("robinetterieMLaver", option.value)}
+                            >
+                              <RadioGroupItem value={option.value} id={`rob-machine-${option.value}`} className="pointer-events-none" />
+                              <Label htmlFor={`rob-machine-${option.value}`} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
+                            </div>
+                          ))}
+                        </RadioGroup>
                       </div>
                     </div>
                   )}
