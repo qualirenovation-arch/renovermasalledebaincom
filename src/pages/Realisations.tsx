@@ -681,9 +681,10 @@ export default function Realisations() {
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
               Du loft parisien au pavillon de banlieue, chaque projet raconte une métamorphose. 
-              Douche à l'italienne au seuil optimisé selon les règles DTU, transformation baignoire 
-              en espace bien-être, receveur extra-plat ou réaménagement complet avec WC suspendu — 
-              nos artisans subliment vos mètres carrés les plus intimes.
+              Douche à l'italienne au seuil optimisé selon les règles DTU, trappe de visite 
+              invisible intégrée au carrelage, transformation baignoire en espace bien-être, 
+              receveur extra-plat ou réaménagement complet avec WC suspendu — nos artisans 
+              subliment vos mètres carrés les plus intimes.
             </p>
             <p className="text-wood font-medium text-xl italic">
               Et vous, team receveur minimaliste ou baignoire cocooning ?
