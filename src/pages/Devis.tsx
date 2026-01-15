@@ -24,6 +24,7 @@ interface FormData {
   largeur: string;
   longueur: string;
   materiaux: string;
+  finition: string;
   budget: string;
   delai: string;
   message: string;
@@ -38,6 +39,7 @@ const initialFormData: FormData = {
   largeur: "",
   longueur: "",
   materiaux: "",
+  finition: "",
   budget: "",
   delai: "",
   message: "",
@@ -236,6 +238,20 @@ export default function Devis() {
                           <SelectItem value="mosaique">Mosaïque</SelectItem>
                           <SelectItem value="pierre">Pierre naturelle</SelectItem>
                           <SelectItem value="autre">Autre / Je ne sais pas</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <div className="space-y-2">
+                      <Label>Finition robinetterie</Label>
+                      <Select onValueChange={(v) => handleChange("finition", v)}>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Sélectionnez..." />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="noir">Noir</SelectItem>
+                          <SelectItem value="laiton">Laiton / Or</SelectItem>
+                          <SelectItem value="chrome">Chrome</SelectItem>
+                          <SelectItem value="nickel-mat">Nickel mat</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
