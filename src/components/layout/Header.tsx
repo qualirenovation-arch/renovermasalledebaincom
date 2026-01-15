@@ -23,11 +23,11 @@ export function Header() {
         <div className="container-custom flex justify-center md:justify-between items-center text-sm">
           <span className="hidden md:block">Artisan spécialiste de la douche à l'italienne</span>
           <a 
-            href="tel:+33123456789" 
+            href="tel:+33659764685" 
             className="flex items-center gap-2 font-semibold hover:text-accent transition-colors"
           >
             <Phone className="w-4 h-4" />
-            01 23 45 67 89
+            06 59 76 46 85
           </a>
         </div>
       </div>
