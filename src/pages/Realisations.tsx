@@ -51,7 +51,7 @@ import butteschaumont1 from "@/assets/buttes-chaumont-1.jpg";
 import butteschaumont2 from "@/assets/buttes-chaumont-2.jpg";
 import butteschaumont3 from "@/assets/buttes-chaumont-3.jpg";
 
-type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "convention" | "encours";
+type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "convention" | "butteschaumont";
 
 interface Project {
   id: number;
@@ -412,7 +412,7 @@ const projects: Project[] = [
     image: butteschaumont1,
     title: "État initial - Vue lavabo",
     description: "🚧 Chantier en cours - Paris 19ème",
-    category: ["petite", "encours"],
+    category: ["petite", "butteschaumont"],
     details: "Petite salle de bain avant rénovation : lavabo avec meuble sous vasque, paroi de douche vitrée décorative, carrelage blanc avec frise bleue. Transformation prévue en douche à l'italienne moderne.",
   },
   {
@@ -420,7 +420,7 @@ const projects: Project[] = [
     image: butteschaumont2,
     title: "État initial - Espace douche",
     description: "🚧 Chantier en cours - Paris 19ème",
-    category: ["petite", "encours"],
+    category: ["petite", "butteschaumont"],
     details: "Vue sur la douche existante avec cabine vitrée décorée, sol carrelage octogonal blanc et bleu. Projet de rénovation complète en cours.",
   },
   {
@@ -428,14 +428,14 @@ const projects: Project[] = [
     image: butteschaumont3,
     title: "État initial - Vue d'entrée",
     description: "🚧 Chantier en cours - Paris 19ème",
-    category: ["petite", "encours"],
+    category: ["petite", "butteschaumont"],
     details: "Vue depuis l'entrée de la salle de bain à rénover, passage voûté caractéristique. Travaux de transformation en cours pour créer une douche à l'italienne optimisée.",
   },
 ];
 
 const categories: { id: Category; label: string }[] = [
   { id: "all", label: "Tous" },
-  { id: "encours", label: "🚧 Chantier en cours" },
+  { id: "butteschaumont", label: "🚧 Paris 19ème - Buttes-Chaumont" },
   { id: "convention", label: "Paris 15ème - Convention" },
   { id: "severac", label: "Paris 17ème - Suite Parentale Ternes" },
   { id: "paris10", label: "Paris 10ème" },
