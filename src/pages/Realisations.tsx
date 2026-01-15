@@ -68,6 +68,7 @@ import boisColombes7 from "@/assets/bois-colombes-7.jpg";
 import boisColombes8 from "@/assets/bois-colombes-8.jpg";
 import boisColombes9 from "@/assets/bois-colombes-9.jpg";
 import boisColombes10 from "@/assets/bois-colombes-10.jpg";
+import boisColombes11 from "@/assets/bois-colombes-11.jpg";
 
 type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord" | "severac" | "convention" | "butteschaumont" | "jemmapes" | "taitbout" | "rocroy" | "boiscolombes";
 
@@ -592,6 +593,14 @@ const projects: Project[] = [
     description: "Avant / Après - Bois-Colombes",
     category: ["petite", "boiscolombes", "avant-apres"],
     details: "Vue d'ensemble avant travaux : machine à laver sous plan noir, étagères ouvertes, baignoire avec rideau. Sol carrelé noir et blanc, murs gris. Transformation complète prévue.",
+  },
+  {
+    id: 65,
+    image: boisColombes11,
+    title: "Résultat - Douche à l'italienne",
+    description: "Rénovation complète - Bois-Colombes",
+    category: ["petite", "moderne", "boiscolombes"],
+    details: "Grande douche à l'italienne avec paroi coulissante dorée. Pomme de douche ronde effet pluie en laiton brossé. Carrelage chevrons blanc, sol terrazzo. Sèche-serviettes doré sous fenêtre.",
   },
 ];
 
