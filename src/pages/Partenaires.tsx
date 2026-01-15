@@ -45,6 +45,16 @@ const partners = [
   { name: "Cedeo", url: "https://www.cedeo.fr", description: "Distribution sanitaire chauffage" },
   { name: "Horus", url: "https://www.hfrob.fr", description: "Robinetterie française" },
   { name: "Ceramica.fr", url: "https://www.ceramica.fr", description: "Carrelages et céramiques" },
+  { name: "Sawiday", url: "https://www.sawiday.fr", description: "Équipements salle de bain" },
+  { name: "Planizia", url: "https://www.planizia.com", description: "Aménagement intérieur" },
+  { name: "Reuter", url: "https://www.reuter.com", description: "Équipements sanitaires" },
+  { name: "Hudson Reed", url: "https://www.hudsonreed.fr", description: "Robinetterie et douches" },
+  { name: "Foussier", url: "https://www.foussier.fr", description: "Quincaillerie professionnelle" },
+  { name: "Legallais", url: "https://www.legallais.com", description: "Fournitures du bâtiment" },
+  { name: "Legrand", url: "https://www.legrand.fr", description: "Électricité et domotique" },
+  { name: "Schneider", url: "https://www.se.com/fr", description: "Solutions électriques" },
+  { name: "Corston", url: "#", description: "Équipements professionnels" },
+  { name: "David B", url: "https://www.davidb.fr", description: "Salles de bain design" },
 ];
 
 export default function Partenaires() {
