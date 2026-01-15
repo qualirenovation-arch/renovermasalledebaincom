@@ -26,6 +26,9 @@ import gallery19 from "@/assets/gallery-19.jpg";
 import gallery20 from "@/assets/gallery-20.jpg";
 import gallery21 from "@/assets/gallery-21.jpg";
 import gallery22 from "@/assets/gallery-22.jpg";
+import gallery23 from "@/assets/gallery-23.jpg";
+import gallery24 from "@/assets/gallery-24.jpg";
+import gallery25 from "@/assets/gallery-25.jpg";
 
 type Category = "all" | "petite" | "grande" | "moderne" | "pierre" | "avant-apres" | "paris10" | "bdpereire" | "avnord";
 
@@ -214,6 +217,30 @@ const projects: Project[] = [
     description: "Détail douche - Saint-Maur",
     category: ["moderne", "pierre", "avnord"],
     details: "Vue détaillée sur la niche de rangement en pierre naturelle, Tebrick bleu-vert vertical et colonne de douche nickel mat vintage avec douchette à main.",
+  },
+  {
+    id: 23,
+    image: gallery23,
+    title: "Avant travaux - Vue d'ensemble",
+    description: "État initial - Saint-Maur",
+    category: ["avant-apres", "avnord"],
+    details: "Salle de bain avant rénovation : baignoire avec pare-douche opaque, carrelage blanc vieillissant, sol damier vert et blanc, lavabo sur pied et mobilier ancien en marbre.",
+  },
+  {
+    id: 24,
+    image: gallery24,
+    title: "Avant travaux - Espace baignoire",
+    description: "État initial - Saint-Maur",
+    category: ["avant-apres", "avnord"],
+    details: "Vue sur la baignoire avec robinetterie datée, carrelage blanc petit format, volets intérieurs abîmés et équipements à remplacer.",
+  },
+  {
+    id: 25,
+    image: gallery25,
+    title: "Avant travaux - Vue large",
+    description: "État initial - Saint-Maur",
+    category: ["avant-apres", "avnord"],
+    details: "Panorama de la salle de bain avant transformation : agencement à repenser, matériaux vétustes, sol damier et meuble ancien en marbre rouge à déposer.",
   },
 ];
 
