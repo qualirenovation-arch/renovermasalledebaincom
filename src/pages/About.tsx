@@ -16,8 +16,8 @@ const guarantees = [
   "Garantie décennale sur tous nos travaux",
   "Garantie étanchéité 10 ans",
   "Assurance responsabilité civile professionnelle",
-  "Devis détaillé gratuit et sans engagement",
-  "Prix ferme et définitif",
+  "Devis détaillé avec photos via Graneet – zéro mauvaise surprise",
+  "Prix ferme et définitif, transparent ligne par ligne",
   "Suivi personnalisé de votre chantier",
 ];
 
