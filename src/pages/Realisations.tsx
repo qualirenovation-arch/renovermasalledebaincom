@@ -308,7 +308,7 @@ const inProgressAlbums: Album[] = [
     id: "buttes-chaumont",
     title: "Rénovation en cours",
     location: "Paris 19ème - Buttes-Chaumont",
-    description: "Transformation d'une petite salle de bain en douche à l'italienne moderne. Chantier en cours.",
+    description: "Transformation d'une petite salle de bain en douche à l'italienne moderne. Chantier en cours — restez connecté pour découvrir cette transformation !",
     coverImage: butteschaumont1,
     isInProgress: true,
     photos: [
