@@ -70,19 +70,21 @@ export default function About() {
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   <strong>renovermasalledebain.com</strong> est une marque de la société 
-                  <strong> Qualirenovation by Qualiconcept</strong>, fondée en 2019 et spécialisée 
-                  dans la rénovation haut de gamme de salles de bain.
+                  <strong> Qualirenovation by Qualiconcept</strong>, fondée en 2019. Notre positionnement 
+                  est clair : <strong>nous sommes concepteurs, pas simples exécutants</strong>. 
+                  C'est toute la différence.
                 </p>
                 <p>
-                  Notre maître d'œuvre, forte de <strong>plus de 20 ans d'expérience</strong> sur 
-                  les chantiers parisiens, supervise personnellement chaque projet. Vous bénéficiez 
-                  ainsi d'une véritable expertise travaux : analyse de faisabilité, coordination 
-                  des corps de métier, respect des normes DTU et suivi rigoureux jusqu'à la livraison.
+                  Chez nous, pas de plans sur la comète ni de maîtrise approximative. Notre maître d'œuvre, 
+                  forte de <strong>plus de 20 ans d'expérience</strong> sur les chantiers parisiens, 
+                  conçoit et pilote votre projet de A à Z : étude de faisabilité, conception sur-mesure, 
+                  coordination des corps de métier et respect des normes DTU.
                 </p>
                 <p>
-                  Cette expérience terrain fait toute la différence : anticipation des contraintes 
-                  techniques, optimisation de chaque centimètre carré et finitions irréprochables 
-                  pour transformer votre salle de bain en un espace de bien-être sur-mesure.
+                  <strong>Vous suivez chaque étape en toute sérénité.</strong> Grâce à notre suivi 
+                  WhatsApp quotidien, vous savez exactement où en est votre chantier, qui intervient 
+                  et quand. Chaque avancée technique vous est communiquée de façon claire et détendue. 
+                  Fini le stress et les mauvaises surprises.
                 </p>
               </div>
             </motion.div>
