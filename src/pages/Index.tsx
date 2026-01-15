@@ -168,7 +168,7 @@ export default function Index() {
           once: true
         }} whileInView="animate" initial="initial">
             <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
-              Nos prestations
+              Rénovation de douche à l'italienne
             </h2>
             <p className="text-muted-foreground text-lg">
               Une expertise complète pour créer la douche à l'italienne de vos rêves
@@ -196,7 +196,7 @@ export default function Index() {
           once: true
         }} whileInView="animate" initial="initial">
             <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
-              Notre processus
+              Rénovation de salle de bain clé en main
             </h2>
             <p className="text-muted-foreground text-lg">
               De la conception à la réalisation, nous vous accompagnons à chaque étape
@@ -355,7 +355,7 @@ Que vous rénoviez un appartement haussmannien, un studio ou une salle de bain f
           <div className="card-elevated p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
             <div className="flex-1">
               <h2 className="font-display text-3xl font-semibold mb-4">
-                Zone d'intervention
+                Rénovation salle de bain à Paris
               </h2>
               <p className="text-muted-foreground text-lg mb-4">
                 Nous intervenons sur Paris et toute l'Île-de-France : Paris (75), Hauts-de-Seine (92), 

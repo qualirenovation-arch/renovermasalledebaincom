@@ -112,7 +112,7 @@ export default function WhyUs() {
           once: true
         }}>
             <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
-              Nos engagements qualité
+              Receveur de douche et baignoire
             </h2>
             <p className="text-muted-foreground text-lg">
               Des avantages concrets pour un résultat exceptionnel

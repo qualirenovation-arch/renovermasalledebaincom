@@ -152,7 +152,7 @@ export default function About() {
               viewport={{ once: true }}
             >
               <h2 className="font-display text-3xl font-semibold mb-8">
-                Nos garanties
+                Étanchéité et finitions garanties
               </h2>
               <ul className="space-y-4">
                 {guarantees.map((guarantee, index) => (
