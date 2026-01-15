@@ -96,6 +96,13 @@ import soisy2 from "@/assets/soisy-2.jpg";
 import soisy3 from "@/assets/soisy-3.jpg";
 import soisyAvant from "@/assets/soisy-avant.jpg";
 
+// Boulevard Saint-Germain
+import stgermain1 from "@/assets/stgermain-1.jpg";
+import stgermain2 from "@/assets/stgermain-2.jpg";
+import stgermain3 from "@/assets/stgermain-3.jpg";
+import stgermain4 from "@/assets/stgermain-4.jpg";
+import stgermainAvant from "@/assets/stgermain-avant.jpg";
+
 interface Photo {
   id: number;
   image: string;
@@ -256,6 +263,20 @@ const albums: Album[] = [
       { id: 2, image: soisy2, title: "Rangement ouvert", description: "Optimisation du rangement" },
       { id: 3, image: soisy3, title: "Espace complet", description: "WC suspendu et lave-mains" },
       { id: 4, image: soisyAvant, title: "Avant - État initial", description: "WC vétuste à transformer" },
+    ],
+  },
+  {
+    id: "stgermain",
+    title: "Relooking Salle de bain",
+    location: "Paris 5ème - Boulevard Saint-Germain",
+    description: "Relooking complet sans modification de disposition. Remplacement de la baignoire, nouvelle faïence zellige, carreaux de ciment au sol et peinture. Un vrai coup de frais pour cet appartement haussmannien.",
+    coverImage: stgermain1,
+    photos: [
+      { id: 1, image: stgermain1, title: "Double vasque", description: "Meuble laqué bleu canard et miroir" },
+      { id: 2, image: stgermain2, title: "Vue frontale", description: "Faïence zellige et carreaux de ciment" },
+      { id: 3, image: stgermain3, title: "Vue d'ensemble", description: "Nouvelle baignoire et sèche-serviettes" },
+      { id: 4, image: stgermain4, title: "Espace baignoire", description: "Faïence zellige ton sur ton" },
+      { id: 5, image: stgermainAvant, title: "Avant - État initial", description: "Salle de bain à relooker" },
     ],
   },
 ];
