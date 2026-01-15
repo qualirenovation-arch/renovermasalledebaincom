@@ -130,10 +130,10 @@ const typeMachineOptions = [
 ];
 
 const finitionsOptions = [
-  { label: "Noir", value: "noir", color: "bg-[#2D2D2D]" },
-  { label: "Blanc", value: "blanc", color: "bg-[#FFFFFF] border border-gray-300" },
-  { label: "Laiton brossé", value: "laiton", color: "bg-[#C9A962]" },
-  { label: "Chromé", value: "chrome", color: "bg-[#D4D4D4]" },
+  { label: "Laiton brossé", value: "laiton", color: "bg-[#C9A962]", description: "Chaleureux et raffiné" },
+  { label: "Nickel brossé", value: "nickel", color: "bg-[#A0A0A0]", description: "Discret et chic" },
+  { label: "Noir mat", value: "noir", color: "bg-[#2D2D2D]", description: "Graphique et moderne" },
+  { label: "Chromé", value: "chrome", color: "bg-[#D4D4D4]", description: "Lumineux et classique" },
 ];
 
 const styleCarrelageOptions = [
@@ -525,7 +525,35 @@ export default function Devis() {
                   )}
                 </div>
 
-                {/* Finitions et ambiance */}
+                {/* Finitions robinetterie */}
+                <div className="card-elevated p-8">
+                  <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-beige))] flex items-center justify-center">
+                      <RobinetterieIcon />
+                    </div>
+                    Finitions robinetterie
+                  </h2>
+                  <p className="text-muted-foreground text-sm mb-6">Personnalisez votre robinetterie avec des finitions élégantes et durables.</p>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {finitionsOptions.map((option) => (
+                      <div 
+                        key={option.value} 
+                        className={`flex flex-col items-center gap-3 p-5 rounded-xl border-2 transition-all cursor-pointer ${
+                          (formData.finitionsRobinetterie).includes(option.value) 
+                            ? 'border-foreground bg-foreground/5' 
+                            : 'border-border bg-card hover:border-foreground/30'
+                        }`}
+                        onClick={() => handleCheckboxChange("finitionsRobinetterie", option.value, !formData.finitionsRobinetterie.includes(option.value))}
+                      >
+                        <div className={`w-16 h-16 rounded-full ${option.color}`} />
+                        <span className="font-semibold text-center">{option.label}</span>
+                        <span className="text-xs text-muted-foreground text-center">{option.description}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Finitions et ambiance carrelage */}
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-peach))] flex items-center justify-center">
@@ -536,7 +564,7 @@ export default function Devis() {
                   <CheckboxGroup options={styleCarrelageOptions} field="styleCarrelage" columns={3} />
                 </div>
 
-                {/* Pose envisagée (finitions robinetterie) */}
+                {/* Pose envisagée */}
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-mint))] flex items-center justify-center">
@@ -544,22 +572,6 @@ export default function Devis() {
                     </div>
                     Pose envisagée
                   </h2>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                    {finitionsOptions.map((option) => (
-                      <div 
-                        key={option.value} 
-                        className={`flex flex-col items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
-                          (formData.finitionsRobinetterie).includes(option.value) 
-                            ? 'border-foreground bg-foreground/5' 
-                            : 'border-border bg-card hover:border-foreground/30'
-                        }`}
-                        onClick={() => handleCheckboxChange("finitionsRobinetterie", option.value, !formData.finitionsRobinetterie.includes(option.value))}
-                      >
-                        <div className={`w-12 h-12 rounded-full ${option.color}`} />
-                        <span className="text-sm font-medium text-center">{option.label}</span>
-                      </div>
-                    ))}
-                  </div>
                   <CheckboxGroup options={poseOptions} field="poseEnvisagee" />
                 </div>
 
