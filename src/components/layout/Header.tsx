@@ -9,6 +9,7 @@ const navItems = [
   { label: "À propos", path: "/a-propos" },
   { label: "Pourquoi nous", path: "/pourquoi-nous" },
   { label: "Réalisations", path: "/realisations" },
+  { label: "Partenaires", path: "/partenaires" },
   { label: "Demande de devis", path: "/devis" },
 ];
 
