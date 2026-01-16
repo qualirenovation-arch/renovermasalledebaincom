@@ -26,7 +26,10 @@ import chateletChromeImage from "@/assets/chatelet-chrome.jpg";
 import chateletInoxImage from "@/assets/chatelet-inox.jpg";
 import chateletBlancImage from "@/assets/chatelet-blanc-correct.jpg";
 import stylesCarrelageImage from "@/assets/styles-carrelage-fr.jpg";
-import paroisDoucheImage from "@/assets/parois-douche.jpg";
+import totsParoiItalienneImage from "@/assets/tots-paroi-italienne.jpg";
+import totsPortePivotanteImage from "@/assets/tots-porte-pivotante.jpg";
+import totsPorteCoulissanteImage from "@/assets/tots-porte-coulissante.jpg";
+import totsPortePliableImage from "@/assets/tots-porte-pliable.jpg";
 import meublesVasqueImage from "@/assets/meubles-vasque.jpg";
 import wcTypesImage from "@/assets/wc-types.jpg";
 import chateletDouchetteImage from "@/assets/chatelet-douchette.jpg";
@@ -702,13 +705,43 @@ export default function Devis() {
                   </h2>
                   <p className="text-muted-foreground text-sm mb-6">Choisissez le type de paroi adapté à votre espace.</p>
                   
-                  {/* Image de référence */}
-                  <div className="mb-6 rounded-2xl overflow-hidden">
-                    <img 
-                      src={paroisDoucheImage} 
-                      alt="Types de parois de douche - Paroi fixe, Porte battante, Porte coulissante, Porte pliable" 
-                      className="w-full h-auto"
-                    />
+                  {/* Images de référence - Gamme Tots */}
+                  <div className="mb-6">
+                    <p className="text-xs text-muted-foreground mb-3 text-center">Gamme Tots — tots.fr</p>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 rounded-2xl overflow-hidden">
+                      <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
+                        <img 
+                          src={totsParoiItalienneImage} 
+                          alt="Paroi fixe à l'italienne" 
+                          className="w-full h-full object-cover"
+                        />
+                        <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Paroi fixe</span>
+                      </div>
+                      <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
+                        <img 
+                          src={totsPortePivotanteImage} 
+                          alt="Porte de douche pivotante" 
+                          className="w-full h-full object-cover"
+                        />
+                        <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Pivotante</span>
+                      </div>
+                      <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
+                        <img 
+                          src={totsPorteCoulissanteImage} 
+                          alt="Porte de douche coulissante" 
+                          className="w-full h-full object-cover"
+                        />
+                        <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Coulissante</span>
+                      </div>
+                      <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
+                        <img 
+                          src={totsPortePliableImage} 
+                          alt="Porte de douche pliable" 
+                          className="w-full h-full object-cover"
+                        />
+                        <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Pliable</span>
+                      </div>
+                    </div>
                   </div>
 
                   <CheckboxGroup options={porteOptions} field="porteDouche" />
