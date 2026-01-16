@@ -32,6 +32,7 @@ import wcTypesImage from "@/assets/wc-types.jpg";
 import chateletDouchetteImage from "@/assets/chatelet-douchette.jpg";
 import chateletColonneImage from "@/assets/chatelet-colonne-dore.jpg";
 import chateletEncastreImage from "@/assets/chatelet-encastre-inox.jpg";
+import chateletCielPluieImage from "@/assets/chatelet-ciel-pluie.jpg";
 import receveursImage from "@/assets/receveurs-douche.jpg";
 import baignoiresImage from "@/assets/baignoires-styles.jpg";
 
@@ -750,7 +751,7 @@ export default function Devis() {
                             {/* Images de référence pommeaux - Gamme Châtelet */}
                             <div className="mb-4">
                               <p className="text-xs text-muted-foreground mb-3 text-center">Gamme Châtelet — masalledebain.com</p>
-                              <div className="grid grid-cols-3 gap-3 rounded-2xl overflow-hidden">
+                              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 rounded-2xl overflow-hidden">
                                 <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
                                   <img 
                                     src={chateletDouchetteImage} 
@@ -758,6 +759,14 @@ export default function Devis() {
                                     className="w-full h-full object-cover"
                                   />
                                   <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Douchette</span>
+                                </div>
+                                <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
+                                  <img 
+                                    src={chateletCielPluieImage} 
+                                    alt="Ciel de pluie Châtelet" 
+                                    className="w-full h-full object-cover"
+                                  />
+                                  <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Ciel de pluie</span>
                                 </div>
                                 <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
                                   <img 
