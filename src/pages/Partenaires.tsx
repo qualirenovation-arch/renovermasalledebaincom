@@ -46,7 +46,7 @@ const partners = [
   { name: "Horus", url: "https://www.hfrob.fr", description: "Robinetterie française" },
   { name: "Ceramica.fr", url: "https://www.ceramica.fr", description: "Carrelages et céramiques" },
   { name: "Sawiday", url: "https://www.sawiday.fr", description: "Équipements salle de bain" },
-  { name: "Planizia", url: "https://www.planizia.com", description: "Aménagement intérieur" },
+  { name: "Planizia", url: "https://www.planizia.com", description: "Concepteur de plan de travail en pierre" },
   { name: "Reuter", url: "https://www.reuter.com", description: "Équipements sanitaires" },
   { name: "Hudson Reed", url: "https://www.hudsonreed.fr", description: "Robinetterie et douches" },
   { name: "Foussier", url: "https://www.foussier.fr", description: "Quincaillerie professionnelle" },
