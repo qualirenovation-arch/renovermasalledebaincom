@@ -16,7 +16,9 @@ import {
   CalendarCheck,
   Pencil,
   Gem,
-  Wrench
+  Wrench,
+  Building2,
+  Home
 } from "lucide-react";
 import finitionsImage from "@/assets/finitions-robinetterie-clean.png";
 import stylesCarrelageImage from "@/assets/styles-carrelage-fr.jpg";
@@ -33,6 +35,7 @@ interface FormData {
   email: string;
   telephone: string;
   codePostal: string;
+  typeLogement: string;
   typeInstallation: string;
   typeDouche: string;
   typePommeau: string;
@@ -48,7 +51,6 @@ interface FormData {
   robinetterieMLaver: string;
   finitionsRobinetterie: string[];
   styleCarrelage: string[];
-  poseEnvisagee: string[];
   message: string;
 }
 
@@ -58,6 +60,7 @@ const initialFormData: FormData = {
   email: "",
   telephone: "",
   codePostal: "",
+  typeLogement: "",
   typeInstallation: "",
   typeDouche: "",
   typePommeau: "",
@@ -73,7 +76,6 @@ const initialFormData: FormData = {
   robinetterieMLaver: "",
   finitionsRobinetterie: [],
   styleCarrelage: [],
-  poseEnvisagee: [],
   message: "",
 };
 
@@ -102,15 +104,6 @@ const RobinetterieIcon = () => (
   </svg>
 );
 
-const CarrelageIcon = () => (
-  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-    <rect x="2" y="2" width="9" height="9" />
-    <rect x="13" y="2" width="9" height="9" />
-    <rect x="2" y="13" width="9" height="9" />
-    <rect x="13" y="13" width="9" height="9" />
-  </svg>
-);
-
 const FinitionsIcon = () => (
   <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
     <path d="M12 2L2 7l10 5 10-5-10-5z" />
@@ -118,6 +111,12 @@ const FinitionsIcon = () => (
     <path d="M2 12l10 5 10-5" />
   </svg>
 );
+
+// Options type de logement
+const typeLogementOptions = [
+  { value: "appartement", label: "Appartement", icon: Building2 },
+  { value: "maison", label: "Maison", icon: Home }
+];
 
 // Options avec pictogrammes
 const wcOptions = [
@@ -209,13 +208,6 @@ const styleCarrelageOptions = [
   { label: "Métro / biseauté", value: "metro" },
   { label: "Graphique / géométrique", value: "graphique" },
   { label: "Naturel (pierre, sable…)", value: "naturel" },
-];
-
-const poseOptions = [
-  { label: "Zellige", value: "zellige" },
-  { label: "Effet marbre", value: "marbre" },
-  { label: "Béton ciré", value: "beton" },
-  { label: "Métro / biseauté", value: "metro" },
 ];
 
 export default function Devis() {
@@ -473,7 +465,7 @@ export default function Devis() {
                         className="rounded-xl"
                       />
                     </div>
-                    <div className="space-y-2 md:col-span-2">
+                    <div className="space-y-2">
                       <Label htmlFor="codePostal">Code postal du chantier *</Label>
                       <Input
                         id="codePostal"
@@ -481,8 +473,27 @@ export default function Devis() {
                         onChange={(e) => handleChange("codePostal", e.target.value)}
                         placeholder="75017"
                         required
-                        className="max-w-xs rounded-xl"
+                        className="rounded-xl"
                       />
+                    </div>
+                    <div className="space-y-2">
+                      <Label>Vous habitez en... *</Label>
+                      <div className="grid grid-cols-2 gap-3">
+                        {typeLogementOptions.map((option) => (
+                          <div 
+                            key={option.value} 
+                            className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
+                              formData.typeLogement === option.value 
+                                ? 'border-foreground bg-foreground/5' 
+                                : 'border-border bg-card hover:border-foreground/30'
+                            }`}
+                            onClick={() => handleChange("typeLogement", option.value)}
+                          >
+                            <option.icon className="w-5 h-5" strokeWidth={1.5} />
+                            <span className="font-medium text-sm">{option.label}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -491,7 +502,7 @@ export default function Devis() {
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-blue))] flex items-center justify-center">
-                      <RobinetterieIcon />
+                      <ReceveurIcon />
                     </div>
                     Type d'installation souhaitée
                   </h2>
@@ -520,125 +531,39 @@ export default function Devis() {
                     ))}
                   </RadioGroup>
 
-                  {/* Type de douche - visible si douche sélectionnée */}
+                  {/* Sous-options douche (receveur uniquement) */}
                   {formData.typeInstallation === "douche" && (
-                    <div className="mt-6 pt-6 border-t border-border space-y-6">
-                      <div>
-                        <Label className="text-sm font-medium text-muted-foreground mb-3 block">Type de robinetterie douche</Label>
-                        <RadioGroup 
-                          value={formData.typeDouche} 
-                          onValueChange={(value) => handleChange("typeDouche", value)}
-                          className="grid grid-cols-1 md:grid-cols-2 gap-4"
-                        >
-                          {typeDoucheOptions.map((option) => (
-                            <div 
-                              key={option.value} 
-                              className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
-                                formData.typeDouche === option.value 
-                                  ? 'border-foreground bg-foreground/5' 
-                                  : 'border-border bg-card hover:border-foreground/30'
-                              }`}
-                              onClick={() => handleChange("typeDouche", option.value)}
-                            >
-                              <RadioGroupItem value={option.value} id={`douche-${option.value}`} className="pointer-events-none" />
-                              <Label htmlFor={`douche-${option.value}`} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
-                            </div>
-                          ))}
-                        </RadioGroup>
+                    <div className="mt-6 pt-6 border-t border-border">
+                      <Label className="text-sm font-medium text-muted-foreground mb-3 block">Type de receveur</Label>
+                      
+                      {/* Image de référence receveurs */}
+                      <div className="mb-4 rounded-2xl overflow-hidden">
+                        <img 
+                          src={receveursImage} 
+                          alt="Types de receveurs - À poser, À carreler, Encastré, Résine, Acrylique" 
+                          className="w-full h-auto"
+                        />
                       </div>
 
-                      <div>
-                        <Label className="text-sm font-medium text-muted-foreground mb-3 block">Style de pommeau</Label>
-                        
-                        {/* Image de référence pommeaux */}
-                        <div className="mb-4 rounded-2xl overflow-hidden">
-                          <img 
-                            src={pommeauxDoucheImage} 
-                            alt="Styles de pommeaux - Douchette à main, Pommeau fixe, Fixe + douchette, Colonne complète" 
-                            className="w-full h-auto"
-                          />
-                        </div>
-
-                        <RadioGroup 
-                          value={formData.typePommeau} 
-                          onValueChange={(value) => handleChange("typePommeau", value)}
-                          className="grid grid-cols-1 md:grid-cols-2 gap-4"
-                        >
-                          {typePommeauOptions.map((option) => (
-                            <div 
-                              key={option.value} 
-                              className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
-                                formData.typePommeau === option.value 
-                                  ? 'border-foreground bg-foreground/5' 
-                                  : 'border-border bg-card hover:border-foreground/30'
-                              }`}
-                              onClick={() => handleChange("typePommeau", option.value)}
-                            >
-                              <RadioGroupItem value={option.value} id={`pommeau-${option.value}`} className="pointer-events-none" />
-                              <Label htmlFor={`pommeau-${option.value}`} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
-                            </div>
-                          ))}
-                        </RadioGroup>
-                      </div>
-
-                      <div>
-                        <Label className="text-sm font-medium text-muted-foreground mb-3 block">Type de receveur</Label>
-                        
-                        {/* Image de référence receveurs */}
-                        <div className="mb-4 rounded-2xl overflow-hidden">
-                          <img 
-                            src={receveursImage} 
-                            alt="Types de receveurs - À poser, À carreler, Encastré, Résine, Acrylique" 
-                            className="w-full h-auto"
-                          />
-                        </div>
-
-                        <CheckboxGroup options={typeReceveurOptions} field="typeReceveur" columns={3} />
-                      </div>
+                      <CheckboxGroup options={typeReceveurOptions} field="typeReceveur" columns={3} />
                     </div>
                   )}
 
-                  {/* Type de baignoire - visible si baignoire sélectionnée */}
+                  {/* Sous-options baignoire (style uniquement) */}
                   {formData.typeInstallation === "baignoire" && (
-                    <div className="mt-6 pt-6 border-t border-border space-y-6">
-                      <div>
-                        <Label className="text-sm font-medium text-muted-foreground mb-3 block">Style de baignoire</Label>
-                        
-                        {/* Image de référence baignoires */}
-                        <div className="mb-4 rounded-2xl overflow-hidden">
-                          <img 
-                            src={baignoiresImage} 
-                            alt="Styles de baignoires - Fonte, Acier émaillé, Résine/Acrylique" 
-                            className="w-full h-auto"
-                          />
-                        </div>
-
-                        <CheckboxGroup options={typeBaignoireOptions} field="typeBaignoire" />
+                    <div className="mt-6 pt-6 border-t border-border">
+                      <Label className="text-sm font-medium text-muted-foreground mb-3 block">Style de baignoire</Label>
+                      
+                      {/* Image de référence baignoires */}
+                      <div className="mb-4 rounded-2xl overflow-hidden">
+                        <img 
+                          src={baignoiresImage} 
+                          alt="Styles de baignoires - Fonte, Acier émaillé, Résine/Acrylique" 
+                          className="w-full h-auto"
+                        />
                       </div>
 
-                      <div>
-                        <Label className="text-sm font-medium text-muted-foreground mb-3 block">Type de robinetterie baignoire</Label>
-                        <RadioGroup 
-                          value={formData.robinetterieBaignoire} 
-                          onValueChange={(value) => handleChange("robinetterieBaignoire", value)}
-                          className="grid grid-cols-1 md:grid-cols-3 gap-4"
-                        >
-                          {robinetterieBaignoireOptions.map((option) => (
-                            <div 
-                              key={option.value} 
-                              className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
-                                formData.robinetterieBaignoire === option.value 
-                                  ? 'border-foreground bg-foreground/5' 
-                                  : 'border-border bg-card hover:border-foreground/30'
-                              }`}
-                              onClick={() => handleChange("robinetterieBaignoire", option.value)}
-                            >
-                              <RadioGroupItem value={option.value} id={`baignoire-rob-${option.value}`} className="pointer-events-none" />
-                              <Label htmlFor={`baignoire-rob-${option.value}`} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
-                            </div>
-                          ))}
-                        </RadioGroup>
-                      </div>
+                      <CheckboxGroup options={typeBaignoireOptions} field="typeBaignoire" />
                     </div>
                   )}
                 </div>
@@ -709,11 +634,187 @@ export default function Devis() {
                   <CheckboxGroup options={porteOptions} field="porteDouche" />
                 </div>
 
-                {/* Machine à laver */}
+                {/* Section Robinetterie centralisée */}
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-blue))] flex items-center justify-center">
                       <RobinetterieIcon />
+                    </div>
+                    Robinetterie
+                  </h2>
+                  <p className="text-muted-foreground text-sm mb-6">
+                    Configurez l'ensemble de votre robinetterie : types, styles et finitions.
+                  </p>
+
+                  <div className="space-y-8">
+                    {/* Robinetterie douche - conditionnel */}
+                    {formData.typeInstallation === "douche" && (
+                      <div className="space-y-6">
+                        <div className="p-4 rounded-xl bg-muted/30">
+                          <Label className="text-sm font-semibold text-foreground mb-3 block">🚿 Robinetterie douche</Label>
+                          
+                          <div className="space-y-4">
+                            <div>
+                              <Label className="text-sm text-muted-foreground mb-3 block">Type de robinetterie</Label>
+                              <RadioGroup 
+                                value={formData.typeDouche} 
+                                onValueChange={(value) => handleChange("typeDouche", value)}
+                                className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                              >
+                                {typeDoucheOptions.map((option) => (
+                                  <div 
+                                    key={option.value} 
+                                    className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
+                                      formData.typeDouche === option.value 
+                                        ? 'border-foreground bg-foreground/5' 
+                                        : 'border-border bg-card hover:border-foreground/30'
+                                    }`}
+                                    onClick={() => handleChange("typeDouche", option.value)}
+                                  >
+                                    <RadioGroupItem value={option.value} id={`douche-${option.value}`} className="pointer-events-none" />
+                                    <Label htmlFor={`douche-${option.value}`} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
+                                  </div>
+                                ))}
+                              </RadioGroup>
+                            </div>
+
+                            <div>
+                              <Label className="text-sm text-muted-foreground mb-3 block">Style de pommeau</Label>
+                              
+                              {/* Image de référence pommeaux */}
+                              <div className="mb-4 rounded-2xl overflow-hidden">
+                                <img 
+                                  src={pommeauxDoucheImage} 
+                                  alt="Styles de pommeaux - Douchette à main, Pommeau fixe, Fixe + douchette, Colonne complète" 
+                                  className="w-full h-auto"
+                                />
+                              </div>
+
+                              <RadioGroup 
+                                value={formData.typePommeau} 
+                                onValueChange={(value) => handleChange("typePommeau", value)}
+                                className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                              >
+                                {typePommeauOptions.map((option) => (
+                                  <div 
+                                    key={option.value} 
+                                    className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
+                                      formData.typePommeau === option.value 
+                                        ? 'border-foreground bg-foreground/5' 
+                                        : 'border-border bg-card hover:border-foreground/30'
+                                    }`}
+                                    onClick={() => handleChange("typePommeau", option.value)}
+                                  >
+                                    <RadioGroupItem value={option.value} id={`pommeau-${option.value}`} className="pointer-events-none" />
+                                    <Label htmlFor={`pommeau-${option.value}`} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
+                                  </div>
+                                ))}
+                              </RadioGroup>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Robinetterie baignoire - conditionnel */}
+                    {formData.typeInstallation === "baignoire" && (
+                      <div className="p-4 rounded-xl bg-muted/30">
+                        <Label className="text-sm font-semibold text-foreground mb-3 block">🛁 Robinetterie baignoire</Label>
+                        <RadioGroup 
+                          value={formData.robinetterieBaignoire} 
+                          onValueChange={(value) => handleChange("robinetterieBaignoire", value)}
+                          className="grid grid-cols-1 md:grid-cols-3 gap-4"
+                        >
+                          {robinetterieBaignoireOptions.map((option) => (
+                            <div 
+                              key={option.value} 
+                              className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
+                                formData.robinetterieBaignoire === option.value 
+                                  ? 'border-foreground bg-foreground/5' 
+                                  : 'border-border bg-card hover:border-foreground/30'
+                              }`}
+                              onClick={() => handleChange("robinetterieBaignoire", option.value)}
+                            >
+                              <RadioGroupItem value={option.value} id={`baignoire-rob-${option.value}`} className="pointer-events-none" />
+                              <Label htmlFor={`baignoire-rob-${option.value}`} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
+                            </div>
+                          ))}
+                        </RadioGroup>
+                      </div>
+                    )}
+
+                    {/* Robinetterie machine à laver - conditionnel */}
+                    {formData.machineLaver === "oui" && (
+                      <div className="p-4 rounded-xl bg-muted/30">
+                        <Label className="text-sm font-semibold text-foreground mb-3 block">🧺 Robinetterie machine à laver</Label>
+                        <RadioGroup 
+                          value={formData.robinetterieMLaver} 
+                          onValueChange={(value) => handleChange("robinetterieMLaver", value)}
+                          className="grid grid-cols-1 md:grid-cols-3 gap-4"
+                        >
+                          {robinetterieMLaverOptions.map((option) => (
+                            <div 
+                              key={option.value} 
+                              className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
+                                formData.robinetterieMLaver === option.value 
+                                  ? 'border-foreground bg-foreground/5' 
+                                  : 'border-border bg-card hover:border-foreground/30'
+                              }`}
+                              onClick={() => handleChange("robinetterieMLaver", option.value)}
+                            >
+                              <RadioGroupItem value={option.value} id={`rob-machine-${option.value}`} className="pointer-events-none" />
+                              <Label htmlFor={`rob-machine-${option.value}`} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
+                            </div>
+                          ))}
+                        </RadioGroup>
+                      </div>
+                    )}
+
+                    {/* Finitions robinetterie - toujours visible */}
+                    <div>
+                      <Label className="text-sm font-semibold text-foreground mb-3 block">✨ Finitions robinetterie</Label>
+                      <p className="text-muted-foreground text-sm mb-4">Personnalisez votre robinetterie avec des finitions élégantes et durables.</p>
+                      
+                      {/* Image de référence */}
+                      <div className="mb-6 rounded-2xl overflow-hidden">
+                        <img 
+                          src={finitionsImage} 
+                          alt="Finitions robinetterie - Laiton brossé, Nickel brossé, Noir mat, Chromé" 
+                          className="w-full h-auto"
+                        />
+                      </div>
+
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        {finitionsOptions.map((option) => (
+                          <div 
+                            key={option.value} 
+                            className={`flex flex-col items-center gap-3 p-5 rounded-xl border-2 transition-all cursor-pointer ${
+                              (formData.finitionsRobinetterie).includes(option.value) 
+                                ? 'border-foreground bg-foreground/5' 
+                                : 'border-border bg-card hover:border-foreground/30'
+                            }`}
+                            onClick={() => handleCheckboxChange("finitionsRobinetterie", option.value, !formData.finitionsRobinetterie.includes(option.value))}
+                          >
+                            <div className={`w-16 h-16 rounded-full ${option.color}`} />
+                            <span className="font-semibold text-center">{option.label}</span>
+                            <span className="text-xs text-muted-foreground text-center">{option.description}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Machine à laver */}
+                <div className="card-elevated p-8">
+                  <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-peach))] flex items-center justify-center">
+                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                        <circle cx="12" cy="14" r="4" />
+                        <line x1="8" y1="7" x2="8" y2="7.01" strokeWidth="2" />
+                        <line x1="12" y1="7" x2="12" y2="7.01" strokeWidth="2" />
+                      </svg>
                     </div>
                     Souhaitez-vous intégrer une machine à laver ?
                   </h2>
@@ -752,69 +853,8 @@ export default function Devis() {
                         <Label className="text-sm font-medium text-muted-foreground mb-3 block">Avez-vous déjà une machine ?</Label>
                         <CheckboxGroup options={typeMachineOptions} field="typeMachine" />
                       </div>
-                      <div>
-                        <Label className="text-sm font-medium text-muted-foreground mb-3 block">Robinetterie pour la machine à laver</Label>
-                        <RadioGroup 
-                          value={formData.robinetterieMLaver} 
-                          onValueChange={(value) => handleChange("robinetterieMLaver", value)}
-                          className="grid grid-cols-1 md:grid-cols-3 gap-4"
-                        >
-                          {robinetterieMLaverOptions.map((option) => (
-                            <div 
-                              key={option.value} 
-                              className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
-                                formData.robinetterieMLaver === option.value 
-                                  ? 'border-foreground bg-foreground/5' 
-                                  : 'border-border bg-card hover:border-foreground/30'
-                              }`}
-                              onClick={() => handleChange("robinetterieMLaver", option.value)}
-                            >
-                              <RadioGroupItem value={option.value} id={`rob-machine-${option.value}`} className="pointer-events-none" />
-                              <Label htmlFor={`rob-machine-${option.value}`} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
-                            </div>
-                          ))}
-                        </RadioGroup>
-                      </div>
                     </div>
                   )}
-                </div>
-
-                {/* Finitions robinetterie */}
-                <div className="card-elevated p-8">
-                  <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-beige))] flex items-center justify-center">
-                      <RobinetterieIcon />
-                    </div>
-                    Finitions robinetterie
-                  </h2>
-                  <p className="text-muted-foreground text-sm mb-6">Personnalisez votre robinetterie avec des finitions élégantes et durables.</p>
-                  
-                  {/* Image de référence */}
-                  <div className="mb-6 rounded-2xl overflow-hidden">
-                    <img 
-                      src={finitionsImage} 
-                      alt="Finitions robinetterie - Laiton brossé, Nickel brossé, Noir mat, Chromé" 
-                      className="w-full h-auto"
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {finitionsOptions.map((option) => (
-                      <div 
-                        key={option.value} 
-                        className={`flex flex-col items-center gap-3 p-5 rounded-xl border-2 transition-all cursor-pointer ${
-                          (formData.finitionsRobinetterie).includes(option.value) 
-                            ? 'border-foreground bg-foreground/5' 
-                            : 'border-border bg-card hover:border-foreground/30'
-                        }`}
-                        onClick={() => handleCheckboxChange("finitionsRobinetterie", option.value, !formData.finitionsRobinetterie.includes(option.value))}
-                      >
-                        <div className={`w-16 h-16 rounded-full ${option.color}`} />
-                        <span className="font-semibold text-center">{option.label}</span>
-                        <span className="text-xs text-muted-foreground text-center">{option.description}</span>
-                      </div>
-                    ))}
-                  </div>
                 </div>
 
                 {/* Finitions et ambiance carrelage */}
@@ -837,17 +877,6 @@ export default function Devis() {
                   </div>
 
                   <CheckboxGroup options={styleCarrelageOptions} field="styleCarrelage" columns={3} />
-                </div>
-
-                {/* Pose envisagée */}
-                <div className="card-elevated p-8">
-                  <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-mint))] flex items-center justify-center">
-                      <CarrelageIcon />
-                    </div>
-                    Pose envisagée
-                  </h2>
-                  <CheckboxGroup options={poseOptions} field="poseEnvisagee" />
                 </div>
 
                 {/* Upload fichiers */}
