@@ -53,7 +53,7 @@ const partners = [
   { name: "Legallais", url: "https://www.legallais.com", description: "Fournitures du bâtiment" },
   { name: "Legrand", url: "https://www.legrand.fr", description: "Électricité et domotique" },
   { name: "Schneider", url: "https://www.se.com/fr", description: "Solutions électriques" },
-  { name: "Corston", url: "#", description: "Équipements professionnels" },
+  { name: "Corston", url: "#", description: "Appareillages électriques" },
   { name: "David B", url: "https://www.davidb.fr", description: "Salles de bain design" },
 ];
 
