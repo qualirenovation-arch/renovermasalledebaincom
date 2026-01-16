@@ -692,6 +692,11 @@ const inProgressAlbums: Album[] = [
     description: "AVANT : WC vétuste avec carrelage bleu abîmé, équipements datés et peinture écaillée. APRÈS : Transformation luxueuse avec douche italienne en zellige turquoise posé en chevron, paroi et robinetterie dorées, niches intégrées avec listel or, carrelage grand format effet marbre. WC suspendu assorti avec lave-mains doré, local technique optimisé intégrant chauffe-eau et lave-linge.",
     coverImage: nicolasRoret5,
     isInProgress: false,
+    review: {
+      text: "Carina est une architecte de talent, créative et toujours à l'écoute. Elle a su transformer notre petite salle de bain en un espace fonctionnel et esthétique, avec des matériaux de qualité et des finitions impeccables. Son suivi de chantier est rigoureux et elle sait gérer les imprévus avec professionnalisme.",
+      author: "Propriétaire Paris 13ème",
+      link: "https://www.houzz.fr/viewReview/2197601/qualirenovation-by-qualiconcept-review"
+    },
     photos: [
       { id: 1, image: nicolasRoret5, title: "Après — Douche italienne", description: "Zellige turquoise chevron et paroi dorée" },
       { id: 2, image: nicolasRoret1, title: "Après — Détail niches", description: "Niches encastrées avec listel or" },
