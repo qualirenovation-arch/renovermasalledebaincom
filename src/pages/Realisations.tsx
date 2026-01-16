@@ -258,7 +258,7 @@ const albums: Album[] = [
   {
     id: "bois-colombes",
     title: "Rénovation complète Avant/Après",
-    location: "Bois-Colombes",
+    location: "Bois-Colombes (92)",
     description: "AVANT : Salle de bain sombre et datée avec baignoire, carrelage ancien et buanderie encombrante. APRÈS : Transformation spectaculaire en pièce lumineuse et moderne. Douche à l'italienne XXL, robinetterie dorée, sol terrazzo et murs vert d'eau.",
     coverImage: boisColombes2,
     photos: [
@@ -277,7 +277,7 @@ const albums: Album[] = [
   {
     id: "paris17-suite",
     title: "Suite Parentale Les Ternes",
-    location: "Paris 17ème",
+    location: "Paris 17ème - Les Ternes",
     description: "AVANT : Chambre parentale sans salle de bain attenante. APRÈS : Création d'une suite parentale luxueuse avec douche à l'italienne XXL double entrée, double vasque en pierre naturelle et finitions haut de gamme. Robinetterie noire mate et niches intégrées.",
     coverImage: paris17_1,
     photos: [
@@ -294,7 +294,7 @@ const albums: Album[] = [
   {
     id: "paris15-convention",
     title: "Rénovation Convention",
-    location: "Paris 15ème",
+    location: "Paris 15ème - Convention",
     description: "AVANT : Salle de bain avec baignoire et carrelage démodé. APRÈS : Transformation complète en douche à l'italienne avec carrelage grand format effet marbre et robinetterie noire. Meuble suspendu moderne et paroi fixe en verre trempé.",
     coverImage: convention1,
     photos: [
@@ -321,7 +321,7 @@ const albums: Album[] = [
   {
     id: "paris10-dore",
     title: "Élégance dorée",
-    location: "Paris 10ème",
+    location: "Paris 10ème - Faubourg Saint-Denis",
     description: "AVANT : Salle de bain banale avec équipements standards. APRÈS : Salle de bain luxueuse avec robinetterie dorée laiton brossé, carrelage effet marbre onyx et finitions haut de gamme. Paroi vitrée à profilé doré et ciel de pluie encastré.",
     coverImage: gallery7,
     photos: [
@@ -350,7 +350,7 @@ const albums: Album[] = [
   {
     id: "saint-maur",
     title: "Rénovation Avant/Après",
-    location: "Saint-Maur-des-Fossés",
+    location: "Saint-Maur-des-Fossés (94)",
     description: "AVANT : Salle de bain datée avec baignoire et carrelage ancien, espace mal exploité. APRÈS : Transformation complète en espace moderne avec douche à l'italienne, carrelage grand format contemporain et meuble vasque design.",
     coverImage: gallery18,
     photos: [
@@ -367,7 +367,7 @@ const albums: Album[] = [
   {
     id: "soisy-wc",
     title: "Rénovation WC Avant/Après",
-    location: "Soisy-sous-Montmorency",
+    location: "Soisy-sous-Montmorency (95)",
     description: "AVANT : WC vétuste et sans charme, espace négligé. APRÈS : Transformation en espace raffiné avec meuble rose terracotta sur-mesure, niche en chêne, carrelage mural losanges et sol carreaux de ciment graphiques. Robinetterie noire mate pour une touche contemporaine.",
     coverImage: soisy1,
     photos: [
@@ -521,7 +521,7 @@ const albums: Album[] = [
   {
     id: "temple",
     title: "Style masculin — Bois & Noir",
-    location: "Paris 3ème arrondissement - Rue du Temple",
+    location: "Paris 3ème - Rue du Temple",
     description: "AVANT : Salle de bain vétuste avec baignoire, lavabo sur pied et carrelage blanc/bleu dégradé. APRÈS : Transformation complète pour un appartement au masculin. Douche à l'italienne avec receveur extra-plat et paroi fixe noire, meuble vasque en bois clair avec plan blanc, robinetterie noire mate, miroir rond LED. Lave-linge intégré sous le plan vasque. WC suspendu avec chauffe-eau dissimulé dans le placard au-dessus.",
     coverImage: temple1,
     photos: [
@@ -591,7 +591,7 @@ const inProgressAlbums: Album[] = [
   {
     id: "port-royal",
     title: "Rénovation complète",
-    location: "Paris - Bld de Port-Royal",
+    location: "Paris 5ème - Boulevard de Port-Royal",
     description: "Transformation d'une salle de bain années 70 avec mosaïque bleue. Création d'une douche à l'italienne et rénovation des WC. Chantier en cours — restez connecté pour découvrir cette transformation !",
     coverImage: portRoyal1,
     isInProgress: true,
@@ -619,7 +619,7 @@ const inProgressAlbums: Album[] = [
   {
     id: "courbevoie",
     title: "Transformation salle de bain",
-    location: "Courbevoie 92 - Rue Ernest Lalyre",
+    location: "Courbevoie (92) - Rue Ernest Lalyre",
     description: "Salle de bain datée avec carrelage bleu-gris moucheté et plafond papier peint floral. Baignoire standard et meuble vasque blanc à transformer en douche à l'italienne moderne. Chantier en cours — restez connecté pour découvrir cette transformation !",
     coverImage: courbevoieAvant1,
     isInProgress: true,
