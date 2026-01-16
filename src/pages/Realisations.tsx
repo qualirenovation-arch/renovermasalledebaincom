@@ -194,6 +194,16 @@ import boulogneAvant4 from "@/assets/boulogne-avant-4.jpg";
 import boulogneTravaux1 from "@/assets/boulogne-travaux-1.jpg";
 import boulogneTravaux2 from "@/assets/boulogne-travaux-2.jpg";
 
+// Auteuil Paris 16ème
+import auteuil1 from "@/assets/auteuil-1.jpg";
+import auteuil2 from "@/assets/auteuil-2.jpg";
+import auteuil3 from "@/assets/auteuil-3.jpg";
+import auteuil4 from "@/assets/auteuil-4.jpg";
+import auteuil5 from "@/assets/auteuil-5.jpg";
+import auteuil6 from "@/assets/auteuil-6.jpg";
+import auteuil7 from "@/assets/auteuil-7.jpg";
+import auteuilAvant1 from "@/assets/auteuil-avant-1.jpg";
+
 interface Photo {
   id: number;
   image: string;
@@ -477,6 +487,23 @@ const albums: Album[] = [
       { id: 16, image: boulogneAvant4, title: "Avant — WC ancien", description: "WC avec réservoir apparent" },
       { id: 17, image: boulogneTravaux1, title: "Travaux — Préparation", description: "Démolition et plomberie" },
       { id: 18, image: boulogneTravaux2, title: "Travaux — Installation", description: "Mise en place des équipements" },
+    ],
+  },
+  {
+    id: "auteuil",
+    title: "Style Parisien Chic — SDB & WC",
+    location: "Paris 16ème - Rue Boileau, Auteuil",
+    description: "AVANT : Salle de bain datée avec carrelage mosaïque noir et escalier en travaux. APRÈS : Duplex entièrement repensé avec salle de bain sous escalier. Vasque rose poudré sur plan noir, robinetterie dorée encastrée, carrelage effet marbre, paroi coulissante noire. WC séparé avec mur bordeaux, affiche fashion et frise hexagonale cuivrée.",
+    coverImage: auteuil1,
+    photos: [
+      { id: 1, image: auteuil1, title: "Après — Vue d'ensemble", description: "Salle de bain sous escalier avec vasque rose" },
+      { id: 2, image: auteuil2, title: "Après — Douche à l'italienne", description: "Paroi coulissante noire et robinetterie dorée" },
+      { id: 3, image: auteuil3, title: "Après — Détail vasque", description: "Vasque rose et robinet doré encastré" },
+      { id: 4, image: auteuil4, title: "Après — Meuble vasque", description: "Plan noir et meuble bois avec étagères" },
+      { id: 5, image: auteuil5, title: "Après — Robinetterie", description: "Robinet doré et vasque rose poudré" },
+      { id: 6, image: auteuil6, title: "Après — WC vue face", description: "Mur bordeaux et affiche fashion" },
+      { id: 7, image: auteuil7, title: "Après — WC vue large", description: "Frise hexagonale cuivrée et marbre" },
+      { id: 8, image: auteuilAvant1, title: "Avant — État initial", description: "Ancienne salle de bain mosaïque noire" },
     ],
   },
 ];
