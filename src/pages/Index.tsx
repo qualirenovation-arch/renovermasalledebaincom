@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { ArrowRight, Phone, Pencil, Gem, Wrench } from "lucide-react";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
+import jemmapes1 from "@/assets/jemmapes-1.jpg";
+import vincennesMr1 from "@/assets/vincennes-mr-1.jpg";
+import vincennesMr5 from "@/assets/vincennes-mr-5.jpg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -119,7 +119,7 @@ export default function Index() {
             >
               <div className="aspect-[4/5] rounded-2xl overflow-hidden">
                 <img
-                  src={gallery1}
+                  src={jemmapes1}
                   alt="Douche à l'italienne moderne"
                   className="w-full h-full object-cover"
                 />
@@ -236,9 +236,9 @@ export default function Index() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { img: gallery1, style: "Style naturel", location: "à Rueil-Malmaison", tag: "Terre d'ombre, pierre naturelle", borderClass: "photo-card-beige" },
-              { img: gallery2, style: "Effet marbre", location: "à Nantes", tag: "Matériaux veinés", borderClass: "photo-card-terracotta" },
-              { img: gallery3, style: "Minimaliste", location: "à Annecy", tag: "Élégance, extra-plat", borderClass: "photo-card-mint" }
+              { img: jemmapes1, style: "Élégance parisienne", location: "Paris 10ème — Jemmapes", tag: "Douche à l'italienne, carrelage graphique", borderClass: "photo-card-beige" },
+              { img: vincennesMr1, style: "Contemporain épuré", location: "Cours de Vincennes", tag: "Matériaux nobles, finitions soignées", borderClass: "photo-card-terracotta" },
+              { img: vincennesMr5, style: "Ambiance spa", location: "Cours de Vincennes", tag: "Design moderne, tons naturels", borderClass: "photo-card-mint" }
             ].map((project, index) => (
               <motion.div
                 key={index}
