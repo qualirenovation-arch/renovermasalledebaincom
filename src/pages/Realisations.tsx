@@ -381,7 +381,7 @@ const inProgressAlbums: Album[] = [
   {
     id: "port-royal",
     title: "Rénovation complète",
-    location: "Paris 5ème - Boulevard de Port-Royal",
+    location: "Paris - Bld de Port-Royal",
     description: "Transformation d'une salle de bain années 70 avec mosaïque bleue. Création d'une douche à l'italienne et rénovation des WC. Chantier en cours — restez connecté pour découvrir cette transformation !",
     coverImage: portRoyal1,
     isInProgress: true,
