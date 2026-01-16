@@ -161,12 +161,11 @@ const wcOptions = [
 ];
 
 const meubleVasqueOptions = [
-  { label: "Meuble vasque suspendu", value: "meuble-suspendu" },
-  { label: "Meuble vasque au sol", value: "meuble-sol" },
-  { label: "Vasque à poser avec plage", value: "vasque-plage" },
-  { label: "Vasque à poser sans plage", value: "vasque-sans-plage" },
-  { label: "Vasque encastrée", value: "vasque-encastree" },
-  { label: "Plan vasque moulé", value: "plan-moule" },
+  { label: "Vasque seule (sans meuble)", value: "vasque-seule" },
+  { label: "Meuble suspendu", value: "meuble-suspendu" },
+  { label: "Meuble sur pieds", value: "meuble-pieds" },
+  { label: "Simple vasque", value: "simple-vasque" },
+  { label: "Double vasque", value: "double-vasque" },
 ];
 
 const porteOptions = [
