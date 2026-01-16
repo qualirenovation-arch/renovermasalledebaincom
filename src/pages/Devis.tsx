@@ -30,7 +30,11 @@ import totsParoiItalienneImage from "@/assets/tots-paroi-italienne.jpg";
 import totsPortePivotanteImage from "@/assets/tots-porte-pivotante.jpg";
 import totsPorteCoulissanteImage from "@/assets/tots-porte-coulissante.jpg";
 import totsPortePliableImage from "@/assets/tots-porte-pliable.jpg";
-import meublesVasqueImage from "@/assets/meubles-vasque.jpg";
+import vasqueSuspendueImage from "@/assets/vasque-suspendue.jpg";
+import meubleSuspenduImage from "@/assets/meuble-suspendu.jpg";
+import meubleSurPiedsImage from "@/assets/meuble-sur-pieds.jpg";
+import meubleDoubleVasqueImage from "@/assets/meuble-double-vasque.jpg";
+import meubleSimpleVasqueImage from "@/assets/meuble-simple-vasque.jpg";
 import wcTypesImage from "@/assets/wc-types.jpg";
 import chateletDouchetteImage from "@/assets/chatelet-douchette.jpg";
 import chateletColonneImage from "@/assets/chatelet-colonne-dore.jpg";
@@ -683,13 +687,51 @@ export default function Devis() {
                   </h2>
                   <p className="text-muted-foreground text-sm mb-6">Découvrez les options de meubles vasques disponibles.</p>
                   
-                  {/* Image de référence */}
-                  <div className="mb-6 rounded-2xl overflow-hidden">
-                    <img 
-                      src={meublesVasqueImage} 
-                      alt="Types de meubles vasques - Suspendu, Au sol" 
-                      className="w-full h-auto"
-                    />
+                  {/* Images de référence - Meubles vasque */}
+                  <div className="mb-6">
+                    <p className="text-xs text-muted-foreground mb-3 text-center">Gamme Tots — tots.fr</p>
+                    <div className="grid grid-cols-2 md:grid-cols-5 gap-3 rounded-2xl overflow-hidden">
+                      <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
+                        <img 
+                          src={vasqueSuspendueImage} 
+                          alt="Vasque suspendue design" 
+                          className="w-full h-full object-cover"
+                        />
+                        <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Vasque seule</span>
+                      </div>
+                      <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
+                        <img 
+                          src={meubleSuspenduImage} 
+                          alt="Meuble suspendu avec vasque" 
+                          className="w-full h-full object-cover"
+                        />
+                        <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Suspendu</span>
+                      </div>
+                      <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
+                        <img 
+                          src={meubleSurPiedsImage} 
+                          alt="Meuble sur pieds avec vasque" 
+                          className="w-full h-full object-cover"
+                        />
+                        <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Sur pieds</span>
+                      </div>
+                      <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
+                        <img 
+                          src={meubleSimpleVasqueImage} 
+                          alt="Meuble simple vasque" 
+                          className="w-full h-full object-cover"
+                        />
+                        <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Simple vasque</span>
+                      </div>
+                      <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
+                        <img 
+                          src={meubleDoubleVasqueImage} 
+                          alt="Meuble double vasque" 
+                          className="w-full h-full object-cover"
+                        />
+                        <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Double vasque</span>
+                      </div>
+                    </div>
                   </div>
 
                   <CheckboxGroup options={meubleVasqueOptions} field="meubleVasque" />
