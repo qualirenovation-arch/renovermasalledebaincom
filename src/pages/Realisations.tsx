@@ -39,6 +39,11 @@ import paris17_5 from "@/assets/paris17-5.jpg";
 import paris17_6 from "@/assets/paris17-6.jpg";
 import paris17_7 from "@/assets/paris17-7.jpg";
 import paris17_8 from "@/assets/paris17-8.jpg";
+import suiteParentale1 from "@/assets/suite-parentale-1.jpg";
+import suiteParentale2 from "@/assets/suite-parentale-2.jpg";
+import suiteParentale3 from "@/assets/suite-parentale-3.jpg";
+import suiteParentale4 from "@/assets/suite-parentale-4.jpg";
+import suiteParentale5 from "@/assets/suite-parentale-5.jpg";
 
 // Paris 15ème Convention
 import convention1 from "@/assets/courbevoie-1.jpg";
@@ -338,6 +343,11 @@ const albums: Album[] = [
       { id: 6, image: paris17_6, title: "Après — Rangements", description: "Niches intégrées" },
       { id: 7, image: paris17_7, title: "Après — Éclairage", description: "LED encastrés" },
       { id: 8, image: paris17_8, title: "Après — Finitions", description: "Joints et détails soignés" },
+      { id: 9, image: suiteParentale1, title: "Après — Douche marbre", description: "Paroi dorée et colonnes hautes" },
+      { id: 10, image: suiteParentale2, title: "Après — Niches douche", description: "Rangements intégrés pratiques" },
+      { id: 11, image: suiteParentale3, title: "Après — Chambre parentale", description: "Claustra bois et miroir rond" },
+      { id: 12, image: suiteParentale4, title: "Après — Claustra et rangement", description: "Harmonie bois et marbre" },
+      { id: 13, image: suiteParentale5, title: "Après — Colonne dorée", description: "Robinetterie laiton brossé" },
     ],
   },
   {
