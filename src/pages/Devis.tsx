@@ -708,74 +708,72 @@ export default function Devis() {
                   </p>
 
                   <div className="space-y-8">
-                    {/* Robinetterie douche - conditionnel */}
-                    {formData.typeInstallation === "douche" && (
-                      <div className="space-y-6">
-                        <div className="p-4 rounded-xl bg-muted/30">
-                          <Label className="text-sm font-semibold text-foreground mb-3 block">🚿 Robinetterie douche</Label>
-                          
-                          <div className="space-y-4">
-                            <div>
-                              <Label className="text-sm text-muted-foreground mb-3 block">Type de robinetterie</Label>
-                              <RadioGroup 
-                                value={formData.typeDouche} 
-                                onValueChange={(value) => handleChange("typeDouche", value)}
-                                className="grid grid-cols-1 md:grid-cols-2 gap-4"
-                              >
-                                {typeDoucheOptions.map((option) => (
-                                  <div 
-                                    key={option.value} 
-                                    className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
-                                      formData.typeDouche === option.value 
-                                        ? 'border-foreground bg-foreground/5' 
-                                        : 'border-border bg-card hover:border-foreground/30'
-                                    }`}
-                                    onClick={() => handleChange("typeDouche", option.value)}
-                                  >
-                                    <RadioGroupItem value={option.value} id={`douche-${option.value}`} className="pointer-events-none" />
-                                    <Label htmlFor={`douche-${option.value}`} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
-                                  </div>
-                                ))}
-                              </RadioGroup>
+                    {/* Robinetterie douche - toujours visible */}
+                    <div className="space-y-6">
+                      <div className="p-4 rounded-xl bg-muted/30">
+                        <Label className="text-sm font-semibold text-foreground mb-3 block">🚿 Robinetterie douche</Label>
+                        
+                        <div className="space-y-4">
+                          <div>
+                            <Label className="text-sm text-muted-foreground mb-3 block">Type de robinetterie</Label>
+                            <RadioGroup 
+                              value={formData.typeDouche} 
+                              onValueChange={(value) => handleChange("typeDouche", value)}
+                              className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                            >
+                              {typeDoucheOptions.map((option) => (
+                                <div 
+                                  key={option.value} 
+                                  className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
+                                    formData.typeDouche === option.value 
+                                      ? 'border-foreground bg-foreground/5' 
+                                      : 'border-border bg-card hover:border-foreground/30'
+                                  }`}
+                                  onClick={() => handleChange("typeDouche", option.value)}
+                                >
+                                  <RadioGroupItem value={option.value} id={`douche-${option.value}`} className="pointer-events-none" />
+                                  <Label htmlFor={`douche-${option.value}`} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
+                                </div>
+                              ))}
+                            </RadioGroup>
+                          </div>
+
+                          <div>
+                            <Label className="text-sm text-muted-foreground mb-3 block">Style de pommeau</Label>
+                            
+                            {/* Image de référence pommeaux */}
+                            <div className="mb-4 rounded-2xl overflow-hidden">
+                              <img 
+                                src={pommeauxDoucheImage} 
+                                alt="Styles de pommeaux - Douchette à main, Pommeau fixe, Fixe + douchette, Colonne complète" 
+                                className="w-full h-auto"
+                              />
                             </div>
 
-                            <div>
-                              <Label className="text-sm text-muted-foreground mb-3 block">Style de pommeau</Label>
-                              
-                              {/* Image de référence pommeaux */}
-                              <div className="mb-4 rounded-2xl overflow-hidden">
-                                <img 
-                                  src={pommeauxDoucheImage} 
-                                  alt="Styles de pommeaux - Douchette à main, Pommeau fixe, Fixe + douchette, Colonne complète" 
-                                  className="w-full h-auto"
-                                />
-                              </div>
-
-                              <RadioGroup 
-                                value={formData.typePommeau} 
-                                onValueChange={(value) => handleChange("typePommeau", value)}
-                                className="grid grid-cols-1 md:grid-cols-2 gap-4"
-                              >
-                                {typePommeauOptions.map((option) => (
-                                  <div 
-                                    key={option.value} 
-                                    className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
-                                      formData.typePommeau === option.value 
-                                        ? 'border-foreground bg-foreground/5' 
-                                        : 'border-border bg-card hover:border-foreground/30'
-                                    }`}
-                                    onClick={() => handleChange("typePommeau", option.value)}
-                                  >
-                                    <RadioGroupItem value={option.value} id={`pommeau-${option.value}`} className="pointer-events-none" />
-                                    <Label htmlFor={`pommeau-${option.value}`} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
-                                  </div>
-                                ))}
-                              </RadioGroup>
-                            </div>
+                            <RadioGroup 
+                              value={formData.typePommeau} 
+                              onValueChange={(value) => handleChange("typePommeau", value)}
+                              className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                            >
+                              {typePommeauOptions.map((option) => (
+                                <div 
+                                  key={option.value} 
+                                  className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
+                                    formData.typePommeau === option.value 
+                                      ? 'border-foreground bg-foreground/5' 
+                                      : 'border-border bg-card hover:border-foreground/30'
+                                  }`}
+                                  onClick={() => handleChange("typePommeau", option.value)}
+                                >
+                                  <RadioGroupItem value={option.value} id={`pommeau-${option.value}`} className="pointer-events-none" />
+                                  <Label htmlFor={`pommeau-${option.value}`} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
+                                </div>
+                              ))}
+                            </RadioGroup>
                           </div>
                         </div>
                       </div>
-                    )}
+                    </div>
 
                     {/* Robinetterie baignoire - conditionnel */}
                     {formData.typeInstallation === "baignoire" && (
