@@ -314,6 +314,11 @@ const albums: Album[] = [
     location: "Paris 17ème - Les Ternes",
     description: "AVANT : Chambre parentale sans salle de bain attenante. APRÈS : Création d'une suite parentale luxueuse avec douche à l'italienne XXL double entrée, double vasque en pierre naturelle et finitions haut de gamme. Robinetterie noire mate et niches intégrées.",
     coverImage: paris17_1,
+    review: {
+      text: "Je recommande avec beaucoup d'enthousiasme les prestations de QualiConcept. Carina a géré mon chantier avec beaucoup de professionnalisme et de rigueur, elle est très à l'écoute de ses clients. Le chantier a été livré dans le délai imparti, avec des finitions soignées et beaucoup de créativité. Le résultat est formidable et dépasse même mes ambitions initiales !",
+      author: "Marie C.",
+      link: "https://www.houzz.fr/viewReview/2076669/qualirenovation-by-qualiconcept-review"
+    },
     photos: [
       { id: 1, image: paris17_1, title: "Après — Douche XXL", description: "Double entrée et ciel de pluie" },
       { id: 2, image: paris17_2, title: "Après — Double vasque", description: "Plan en pierre naturelle" },
