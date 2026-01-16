@@ -108,6 +108,16 @@ import taitbout12 from "@/assets/taitbout-12.jpg";
 import rocroy1 from "@/assets/rocroy-1.jpg";
 import rocroy2 from "@/assets/rocroy-2.jpg";
 
+// Nicolas Roret Paris 13
+import nicolasRoret1 from "@/assets/nicolas-roret-1.jpg";
+import nicolasRoret2 from "@/assets/nicolas-roret-2.jpg";
+import nicolasRoret3 from "@/assets/nicolas-roret-3.jpg";
+import nicolasRoret4 from "@/assets/nicolas-roret-4.jpg";
+import nicolasRoret5 from "@/assets/nicolas-roret-5.jpg";
+import nicolasRoret6 from "@/assets/nicolas-roret-6.jpg";
+import nicolasRoret7 from "@/assets/nicolas-roret-7.jpg";
+import nicolasRoret8 from "@/assets/nicolas-roret-8.jpg";
+
 // Soisy-sous-Montmorency WC
 import soisy1 from "@/assets/soisy-1.jpg";
 import soisy2 from "@/assets/soisy-2.jpg";
@@ -645,6 +655,24 @@ const inProgressAlbums: Album[] = [
       { id: 2, image: courbevoieAvant2, title: "Avant — Vue d'ensemble", description: "Carrelage moucheté et plafond floral" },
     ],
   },
+  {
+    id: "nicolas-roret",
+    title: "Zellige turquoise & Or",
+    location: "Paris 13ème - Rue Nicolas Roret",
+    description: "Rénovation haut de gamme avec zellige turquoise en chevron, robinetterie et parois dorées. Carrelage grand format effet marbre, niches intégrées avec listel or, rangements sur mesure et WC suspendu assorti. Chantier en cours — restez connecté pour découvrir cette transformation !",
+    coverImage: nicolasRoret5,
+    isInProgress: true,
+    photos: [
+      { id: 1, image: nicolasRoret5, title: "Douche italienne", description: "Zellige turquoise chevron et paroi dorée" },
+      { id: 2, image: nicolasRoret1, title: "Détail niches", description: "Niches encastrées avec listel or" },
+      { id: 3, image: nicolasRoret2, title: "Vue d'ensemble", description: "Douche, sèche-serviettes et rangements" },
+      { id: 4, image: nicolasRoret3, title: "Rangements", description: "Placard technique intégré" },
+      { id: 5, image: nicolasRoret4, title: "Lave-linge", description: "Dissimulation technique astucieuse" },
+      { id: 6, image: nicolasRoret6, title: "WC suspendu", description: "Zellige turquoise et lave-mains" },
+      { id: 7, image: nicolasRoret7, title: "Vasque suspendue", description: "Meuble blanc, robinetterie dorée" },
+      { id: 8, image: nicolasRoret8, title: "Visualisation 3D", description: "Projet de conception" },
+    ],
+  },
 ];
 
 // Positions des chantiers sur la carte de Paris
@@ -654,6 +682,7 @@ const projectLocations: ProjectLocation[] = [
   { id: "port-royal", name: "Port-Royal", area: "5ème", x: 48, y: 60 },
   { id: "la-tour", name: "Rue de la Tour", area: "16ème", x: 25, y: 45 },
   { id: "courbevoie", name: "Rue Ernest Lalyre", area: "Courbevoie", x: 15, y: 30 },
+  { id: "nicolas-roret", name: "Rue Nicolas Roret", area: "13ème", x: 55, y: 68 },
 ];
 
 export default function Realisations() {
