@@ -449,7 +449,7 @@ const albums: Album[] = [
   {
     id: "boulogne",
     title: "Ambiance marine",
-    location: "Boulogne-Billancourt",
+    location: "Boulogne-Billancourt - Av. du Maréchal de Lattre de Tassigny",
     description: "AVANT : Chaudière apparente au milieu de la pièce, espace mal exploité et vétuste. APRÈS : Transformation complète pour cette mère célibataire et son enfant. Création d'un placard technique pour dissimuler la chaudière, grand meuble vasque avec double vasque, carrelage 3D blanc, tomettes hexagonales bleues au sol et fresque murale marine. Robinetterie dorée pour une touche d'élégance.",
     coverImage: boulogne1,
     photos: [
