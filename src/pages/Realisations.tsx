@@ -659,18 +659,18 @@ const inProgressAlbums: Album[] = [
     id: "nicolas-roret",
     title: "Zellige turquoise & Or",
     location: "Paris 13ème - Rue Nicolas Roret",
-    description: "Rénovation haut de gamme avec zellige turquoise en chevron, robinetterie et parois dorées. Carrelage grand format effet marbre, niches intégrées avec listel or, rangements sur mesure et WC suspendu assorti. Chantier en cours — restez connecté pour découvrir cette transformation !",
+    description: "AVANT : Salle de bain vétuste avec équipements dépassés, carrelage abîmé et agencement peu fonctionnel. APRÈS : Transformation luxueuse avec douche italienne en zellige turquoise posé en chevron, paroi et robinetterie dorées, niches intégrées avec listel or, carrelage grand format effet marbre. WC suspendu assorti avec lave-mains, meuble vasque blanc et rangements sur mesure optimisant chaque recoin.",
     coverImage: nicolasRoret5,
-    isInProgress: true,
+    isInProgress: false,
     photos: [
-      { id: 1, image: nicolasRoret5, title: "Douche italienne", description: "Zellige turquoise chevron et paroi dorée" },
-      { id: 2, image: nicolasRoret1, title: "Détail niches", description: "Niches encastrées avec listel or" },
-      { id: 3, image: nicolasRoret2, title: "Vue d'ensemble", description: "Douche, sèche-serviettes et rangements" },
-      { id: 4, image: nicolasRoret3, title: "Rangements", description: "Placard technique intégré" },
-      { id: 5, image: nicolasRoret4, title: "Lave-linge", description: "Dissimulation technique astucieuse" },
-      { id: 6, image: nicolasRoret6, title: "WC suspendu", description: "Zellige turquoise et lave-mains" },
-      { id: 7, image: nicolasRoret7, title: "Vasque suspendue", description: "Meuble blanc, robinetterie dorée" },
-      { id: 8, image: nicolasRoret8, title: "Visualisation 3D", description: "Projet de conception" },
+      { id: 1, image: nicolasRoret5, title: "Après — Douche italienne", description: "Zellige turquoise chevron et paroi dorée" },
+      { id: 2, image: nicolasRoret1, title: "Après — Détail niches", description: "Niches encastrées avec listel or" },
+      { id: 3, image: nicolasRoret2, title: "Après — Vue d'ensemble", description: "Douche, sèche-serviettes et rangements" },
+      { id: 4, image: nicolasRoret3, title: "Après — Rangements", description: "Placard technique intégré" },
+      { id: 5, image: nicolasRoret4, title: "Après — Lave-linge", description: "Dissimulation technique astucieuse" },
+      { id: 6, image: nicolasRoret6, title: "Après — WC suspendu", description: "Zellige turquoise et lave-mains" },
+      { id: 7, image: nicolasRoret7, title: "Après — Vasque suspendue", description: "Meuble blanc, robinetterie dorée" },
+      { id: 8, image: nicolasRoret8, title: "Avant — Visualisation 3D", description: "Projet de conception initial" },
     ],
   },
 ];
@@ -682,7 +682,6 @@ const projectLocations: ProjectLocation[] = [
   { id: "port-royal", name: "Port-Royal", area: "5ème", x: 48, y: 60 },
   { id: "la-tour", name: "Rue de la Tour", area: "16ème", x: 25, y: 45 },
   { id: "courbevoie", name: "Rue Ernest Lalyre", area: "Courbevoie", x: 15, y: 30 },
-  { id: "nicolas-roret", name: "Rue Nicolas Roret", area: "13ème", x: 55, y: 68 },
 ];
 
 export default function Realisations() {
