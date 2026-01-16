@@ -775,32 +775,30 @@ export default function Devis() {
                       </div>
                     </div>
 
-                    {/* Robinetterie baignoire - conditionnel */}
-                    {formData.typeInstallation === "baignoire" && (
-                      <div className="p-4 rounded-xl bg-muted/30">
-                        <Label className="text-sm font-semibold text-foreground mb-3 block">🛁 Robinetterie baignoire</Label>
-                        <RadioGroup 
-                          value={formData.robinetterieBaignoire} 
-                          onValueChange={(value) => handleChange("robinetterieBaignoire", value)}
-                          className="grid grid-cols-1 md:grid-cols-3 gap-4"
-                        >
-                          {robinetterieBaignoireOptions.map((option) => (
-                            <div 
-                              key={option.value} 
-                              className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
-                                formData.robinetterieBaignoire === option.value 
-                                  ? 'border-foreground bg-foreground/5' 
-                                  : 'border-border bg-card hover:border-foreground/30'
-                              }`}
-                              onClick={() => handleChange("robinetterieBaignoire", option.value)}
-                            >
-                              <RadioGroupItem value={option.value} id={`baignoire-rob-${option.value}`} className="pointer-events-none" />
-                              <Label htmlFor={`baignoire-rob-${option.value}`} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
-                            </div>
-                          ))}
-                        </RadioGroup>
-                      </div>
-                    )}
+                    {/* Robinetterie baignoire - toujours visible */}
+                    <div className="p-4 rounded-xl bg-muted/30">
+                      <Label className="text-sm font-semibold text-foreground mb-3 block">🛁 Robinetterie baignoire</Label>
+                      <RadioGroup 
+                        value={formData.robinetterieBaignoire} 
+                        onValueChange={(value) => handleChange("robinetterieBaignoire", value)}
+                        className="grid grid-cols-1 md:grid-cols-3 gap-4"
+                      >
+                        {robinetterieBaignoireOptions.map((option) => (
+                          <div 
+                            key={option.value} 
+                            className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
+                              formData.robinetterieBaignoire === option.value 
+                                ? 'border-foreground bg-foreground/5' 
+                                : 'border-border bg-card hover:border-foreground/30'
+                            }`}
+                            onClick={() => handleChange("robinetterieBaignoire", option.value)}
+                          >
+                            <RadioGroupItem value={option.value} id={`baignoire-rob-${option.value}`} className="pointer-events-none" />
+                            <Label htmlFor={`baignoire-rob-${option.value}`} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
+                          </div>
+                        ))}
+                      </RadioGroup>
+                    </div>
 
                     {/* Robinetterie machine à laver - conditionnel */}
                     {formData.machineLaver === "oui" && (
