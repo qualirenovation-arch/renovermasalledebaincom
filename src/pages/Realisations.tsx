@@ -164,6 +164,14 @@ import lauriston5 from "@/assets/lauriston-5.jpg";
 import lauristonAvant1 from "@/assets/lauriston-avant-1.jpg";
 import lauristonAvant2 from "@/assets/lauriston-avant-2.jpg";
 
+// Cîteaux Paris 12ème
+import citeaux1 from "@/assets/citeaux-1.jpg";
+import citeaux2 from "@/assets/citeaux-2.jpg";
+import citeaux3 from "@/assets/citeaux-3.jpg";
+import citeaux4 from "@/assets/citeaux-4.jpg";
+import citeauxAvant1 from "@/assets/citeaux-avant-1.jpg";
+import citeauxAvant2 from "@/assets/citeaux-avant-2.jpg";
+
 interface Photo {
   id: number;
   image: string;
@@ -377,34 +385,49 @@ const albums: Album[] = [
     id: "buffon",
     title: "Optimisation maximale",
     location: "Paris 5ème - Rue Buffon",
-    description: "Pied-à-terre parisien familial hyper optimisé : lave-linge dissimulé derrière une porte à côté de la vasque, chauffe-eau intégré au-dessus du WC suspendu. Niches de rangement encastrées et meuble sur mesure avec plan chêne.",
+    description: "AVANT : Salle de bain vétuste et mal agencée, espace perdu et rangements insuffisants. APRÈS : Pied-à-terre parisien familial hyper optimisé. Lave-linge dissimulé derrière une porte à droite de la vasque, chauffe-eau intégré au-dessus des WC. Chaque centimètre carré est exploité intelligemment.",
     coverImage: buffon1,
     photos: [
-      { id: 1, image: buffon1, title: "Vue d'ensemble", description: "Douche, vasque et meuble optimisé" },
-      { id: 2, image: buffon2, title: "Vue générale", description: "WC suspendu et placard chauffe-eau" },
-      { id: 3, image: buffon3, title: "Espace WC", description: "Chauffe-eau dissimulé au-dessus" },
-      { id: 4, image: buffon4, title: "Meuble vasque", description: "Plan chêne et vasque bol" },
-      { id: 5, image: buffon5, title: "Détail vasque", description: "Robinetterie chromée élégante" },
-      { id: 6, image: buffon6, title: "Niches encastrées", description: "Rangements dans la douche" },
-      { id: 7, image: buffon7, title: "Lave-linge intégré", description: "Dissimulé derrière une porte" },
-      { id: 8, image: buffonAvant1, title: "Avant travaux", description: "Ancienne salle de bain" },
-      { id: 9, image: buffonAvant2, title: "Avant travaux", description: "Vue d'ensemble avant" },
+      { id: 1, image: buffon1, title: "Après — Vue d'ensemble", description: "Douche à l'italienne et vasque modernes" },
+      { id: 2, image: buffon2, title: "Après — Vue générale", description: "WC suspendu et placard chauffe-eau" },
+      { id: 3, image: buffon3, title: "Après — Espace WC", description: "Chauffe-eau dissimulé au-dessus — gain de place" },
+      { id: 4, image: buffon4, title: "Après — Meuble vasque", description: "Plan chêne et vasque bol épurée" },
+      { id: 5, image: buffon5, title: "Après — Détail vasque", description: "Robinetterie chromée élégante" },
+      { id: 6, image: buffon6, title: "Après — Niches encastrées", description: "Rangements dans la douche" },
+      { id: 7, image: buffon7, title: "Après — Lave-linge", description: "Dissimulé derrière une porte — astuce maline" },
+      { id: 8, image: buffonAvant1, title: "Avant — Ancienne SDB", description: "Salle de bain vétuste à rénover" },
+      { id: 9, image: buffonAvant2, title: "Avant — Vue d'ensemble", description: "Espace mal exploité" },
     ],
   },
   {
     id: "lauriston",
     title: "Matériaux belges & LED",
     location: "Paris 16ème - Rue Lauriston",
-    description: "Rénovation complète de salle de douche dans un appartement parisien. Ambiance blanc et gris clair avec matériaux sélectionnés et livrés de Belgique. Double vasque à poser, faïence ondulée, frise galets naturels et niche LED intégrée dans la douche.",
+    description: "AVANT : Salle de bain avec baignoire, couleurs datées et manque de luminosité. APRÈS : Rénovation complète de salle de douche. Ambiance blanc et gris clair avec matériaux sélectionnés et livrés de Belgique. Double vasque à poser, faïence ondulée, frise galets naturels et niche LED intégrée dans la douche pour une atmosphère spa.",
     coverImage: lauriston1,
     photos: [
-      { id: 1, image: lauriston1, title: "Vue d'ensemble", description: "Double vasque et meuble suspendu blanc" },
-      { id: 2, image: lauriston2, title: "Perspective complète", description: "Douche, WC et fenêtre parisienne" },
-      { id: 3, image: lauriston3, title: "Douche LED", description: "Paroi vitrée et niche LED intégrée" },
-      { id: 4, image: lauriston4, title: "Double vasque", description: "Vasques à poser et frise galets" },
-      { id: 5, image: lauriston5, title: "Niche LED", description: "Détail de la niche rétroéclairée" },
-      { id: 6, image: lauristonAvant1, title: "Avant travaux", description: "Ancienne salle de bain avec baignoire" },
-      { id: 7, image: lauristonAvant2, title: "Avant travaux", description: "Vue d'ensemble avant rénovation" },
+      { id: 1, image: lauriston1, title: "Après — Vue d'ensemble", description: "Double vasque et meuble suspendu blanc" },
+      { id: 2, image: lauriston2, title: "Après — Perspective complète", description: "Douche, WC et fenêtre parisienne" },
+      { id: 3, image: lauriston3, title: "Après — Douche LED", description: "Paroi vitrée et niche LED intégrée" },
+      { id: 4, image: lauriston4, title: "Après — Double vasque", description: "Vasques à poser et frise galets naturels" },
+      { id: 5, image: lauriston5, title: "Après — Niche LED", description: "Détail de la niche rétroéclairée" },
+      { id: 6, image: lauristonAvant1, title: "Avant — Baignoire", description: "Ancienne salle de bain avec baignoire" },
+      { id: 7, image: lauristonAvant2, title: "Avant — Vue d'ensemble", description: "Espace daté à transformer" },
+    ],
+  },
+  {
+    id: "citeaux",
+    title: "Jaune & Gris",
+    location: "Paris 12ème - Rue de Cîteaux",
+    description: "AVANT : Salle de bain trop grande empiétant sur la cuisine, agencement inefficace. APRÈS : Partage intelligent de l'espace entre salle de bain et cuisine pour agrandir cette dernière. Ambiance jaune et gris pétillante, lave-linge sous plan, chauffe-eau intégré. Petit espace, grande optimisation.",
+    coverImage: citeaux1,
+    photos: [
+      { id: 1, image: citeaux1, title: "Après — Vue d'ensemble", description: "Ambiance jaune et gris dynamique" },
+      { id: 2, image: citeaux2, title: "Après — Douche", description: "Paroi vitrée et carrelage moderne" },
+      { id: 3, image: citeaux3, title: "Après — Détails", description: "Finitions soignées et accessoires jaunes" },
+      { id: 4, image: citeaux4, title: "Après — Vasque", description: "Meuble optimisé avec rangements" },
+      { id: 5, image: citeauxAvant1, title: "Avant — Salle de bain", description: "Espace à reconfigurer" },
+      { id: 6, image: citeauxAvant2, title: "Avant — Vue complète", description: "Agencement inefficace" },
     ],
   },
 ];
