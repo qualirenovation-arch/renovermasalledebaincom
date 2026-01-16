@@ -96,6 +96,15 @@ import butteschaumont9 from "@/assets/buttes-chaumont-9.jpg";
 import taitbout1 from "@/assets/taitbout-1.jpg";
 import taitbout2 from "@/assets/taitbout-2.jpg";
 import taitbout3 from "@/assets/taitbout-3.jpg";
+import taitbout5 from "@/assets/taitbout-5.jpg";
+import taitbout6 from "@/assets/taitbout-6.jpg";
+import taitbout7 from "@/assets/taitbout-7.jpg";
+import taitbout8 from "@/assets/taitbout-8.jpg";
+import taitbout8_2 from "@/assets/taitbout-8-2.jpg";
+import taitbout9 from "@/assets/taitbout-9.jpg";
+import taitbout10 from "@/assets/taitbout-10.jpg";
+import taitbout11 from "@/assets/taitbout-11.jpg";
+import taitbout12 from "@/assets/taitbout-12.jpg";
 import rocroy1 from "@/assets/rocroy-1.jpg";
 import rocroy2 from "@/assets/rocroy-2.jpg";
 
@@ -533,6 +542,27 @@ const albums: Album[] = [
       { id: 6, image: templeAvant2, title: "Avant — Vue rangements", description: "Anciens placards et carrelage bleu" },
     ],
   },
+  {
+    id: "taitbout",
+    title: "Rénovation haussmannienne",
+    location: "Paris 9ème - Rue Taitbout",
+    description: "AVANT : Salle de bain classique dans un immeuble haussmannien avec baignoire et équipements datés. APRÈS : Transformation élégante en douche à l'italienne avec receveur extra-plat, paroi vitrée, carrelage contemporain et robinetterie moderne. Optimisation de l'espace pour un résultat lumineux et fonctionnel.",
+    coverImage: taitbout5,
+    photos: [
+      { id: 1, image: taitbout5, title: "Après — Vue douche", description: "Douche à l'italienne avec paroi vitrée" },
+      { id: 2, image: taitbout6, title: "Après — Vue d'ensemble", description: "Salle de bain rénovée" },
+      { id: 3, image: taitbout7, title: "Après — Détails", description: "Finitions modernes" },
+      { id: 4, image: taitbout8, title: "Après — Carrelage", description: "Carrelage grand format" },
+      { id: 5, image: taitbout8_2, title: "Après — Vue vasque", description: "Meuble vasque moderne" },
+      { id: 6, image: taitbout9, title: "Après — WC", description: "WC suspendu" },
+      { id: 7, image: taitbout10, title: "Après — Robinetterie", description: "Colonne de douche" },
+      { id: 8, image: taitbout11, title: "Après — Accessoires", description: "Détails et rangements" },
+      { id: 9, image: taitbout12, title: "Après — Ensemble", description: "Vue finale de la pièce" },
+      { id: 10, image: taitbout1, title: "Avant — Vue initiale", description: "Salle de bain avant travaux" },
+      { id: 11, image: taitbout2, title: "Avant — Baignoire", description: "Baignoire à transformer" },
+      { id: 12, image: taitbout3, title: "Avant — Vue d'ensemble", description: "État des lieux initial" },
+    ],
+  },
 ];
 
 interface ProjectLocation {
@@ -561,19 +591,6 @@ const inProgressAlbums: Album[] = [
       { id: 7, image: butteschaumont1, title: "État initial - Lavabo", description: "Avant travaux" },
       { id: 8, image: butteschaumont2, title: "État initial - Douche", description: "Cabine à remplacer" },
       { id: 9, image: butteschaumont3, title: "Vue générale", description: "Espace à transformer" },
-    ],
-  },
-  {
-    id: "taitbout",
-    title: "Rénovation haussmannienne",
-    location: "Paris 9ème - Rue Taitbout",
-    description: "Rénovation d'une salle de bain dans un immeuble haussmannien. Chantier en cours — restez connecté pour découvrir cette transformation !",
-    coverImage: taitbout1,
-    isInProgress: true,
-    photos: [
-      { id: 1, image: taitbout1, title: "État initial", description: "Salle de bain avant travaux" },
-      { id: 2, image: taitbout2, title: "Baignoire", description: "À transformer en douche" },
-      { id: 3, image: taitbout3, title: "Vue d'ensemble", description: "Projet en cours" },
     ],
   },
   {
@@ -633,7 +650,6 @@ const inProgressAlbums: Album[] = [
 // Positions des chantiers sur la carte de Paris
 const projectLocations: ProjectLocation[] = [
   { id: "buttes-chaumont", name: "Buttes-Chaumont", area: "19ème", x: 68, y: 25 },
-  { id: "taitbout", name: "Rue Taitbout", area: "9ème", x: 48, y: 38 },
   { id: "rocroy", name: "Rue de Rocroy", area: "10ème", x: 55, y: 32 },
   { id: "port-royal", name: "Port-Royal", area: "5ème", x: 48, y: 60 },
   { id: "la-tour", name: "Rue de la Tour", area: "16ème", x: 25, y: 45 },
