@@ -138,6 +138,13 @@ import soisy1 from "@/assets/soisy-1.jpg";
 import soisy2 from "@/assets/soisy-2.jpg";
 import soisy3 from "@/assets/soisy-3.jpg";
 import soisyAvant from "@/assets/soisy-avant.jpg";
+// Soisy-sous-Montmorency SDB Parentale
+import soisySdb1 from "@/assets/soisy-sdb-1.jpg";
+import soisySdb2 from "@/assets/soisy-sdb-2.jpg";
+import soisySdb3 from "@/assets/soisy-sdb-3.jpg";
+import soisySdb4 from "@/assets/soisy-sdb-4.jpg";
+import soisySdb5 from "@/assets/soisy-sdb-5.jpg";
+import soisySdbAvant from "@/assets/soisy-sdb-avant.jpg";
 
 // Boulevard Saint-Germain
 import stgermain1 from "@/assets/stgermain-1.jpg";
@@ -439,6 +446,21 @@ const albums: Album[] = [
       { id: 2, image: soisy2, title: "Après — Rangement ouvert", description: "Optimisation du rangement" },
       { id: 3, image: soisy3, title: "Après — Espace complet", description: "WC suspendu et lave-mains" },
       { id: 4, image: soisyAvant, title: "Avant — État initial", description: "WC vétuste à transformer" },
+    ],
+  },
+  {
+    id: "soisy-sdb",
+    title: "Salle de bain parentale",
+    location: "Soisy-sous-Montmorency (95)",
+    description: "AVANT : Salle de bain vétuste avec baignoire, bidet et WC sur podium, carrelage beige daté et peinture abîmée. APRÈS : Transformation en suite parentale moderne avec zellige bleu posé en chevron, meuble vasque sur mesure avec plan chêne, robinetterie noire encastrée, miroir rond LED, sèche-serviettes design noir et WC suspendu.",
+    coverImage: soisySdb1,
+    photos: [
+      { id: 1, image: soisySdb1, title: "Après — Vue meuble vasque", description: "Zellige bleu chevron et plan chêne" },
+      { id: 2, image: soisySdb2, title: "Après — Vue d'ensemble", description: "Miroir rond et fenêtre arche" },
+      { id: 3, image: soisySdb3, title: "Après — Détail vasque", description: "Robinetterie noire encastrée" },
+      { id: 4, image: soisySdb4, title: "Après — WC suspendu", description: "Sèche-serviettes design noir" },
+      { id: 5, image: soisySdb5, title: "Après — Vue complète", description: "Harmonie bleu et bois" },
+      { id: 6, image: soisySdbAvant, title: "Avant — État initial", description: "Baignoire, bidet et WC sur podium" },
     ],
   },
   {
