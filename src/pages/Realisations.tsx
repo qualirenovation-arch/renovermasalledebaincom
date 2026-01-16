@@ -177,6 +177,9 @@ import amiralRoussin3 from "@/assets/amiral-roussin-3.jpg";
 import amiralRoussin4 from "@/assets/amiral-roussin-4.jpg";
 import amiralRoussin5 from "@/assets/amiral-roussin-5.jpg";
 import amiralRoussin6 from "@/assets/amiral-roussin-6.jpg";
+import amiralRoussinAvant1 from "@/assets/amiral-roussin-avant-1.jpg";
+import amiralRoussinAvant2 from "@/assets/amiral-roussin-avant-2.jpg";
+import amiralRoussinAvant3 from "@/assets/amiral-roussin-avant-3.jpg";
 
 // Buffon Paris 5ème
 import buffon1 from "@/assets/buffon-1.jpg";
@@ -484,6 +487,9 @@ const albums: Album[] = [
       { id: 4, image: amiralRoussin2, title: "Après — Détail vasque", description: "Robinet noir et plan bois" },
       { id: 5, image: amiralRoussin6, title: "Après — Vue générale", description: "Harmonie bois et blanc" },
       { id: 6, image: amiralRoussin4, title: "Après — Placard buanderie", description: "Buanderie intégrée" },
+      { id: 7, image: amiralRoussinAvant1, title: "Avant — Baignoire", description: "Baignoire vétuste et carrelage daté" },
+      { id: 8, image: amiralRoussinAvant2, title: "Avant — Vasque", description: "Meuble standard et tomettes au sol" },
+      { id: 9, image: amiralRoussinAvant3, title: "Avant — Sol", description: "Carrelage damier terracotta" },
     ],
   },
   {
