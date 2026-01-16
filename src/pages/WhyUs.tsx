@@ -286,12 +286,17 @@ export default function WhyUs() {
         }} viewport={{
           once: true
         }}>
-            <blockquote className="font-display text-2xl md:text-3xl italic mb-8">
-              "Le professionnalisme de l'équipe Atelier Douche Design est remarquable. 
-              Du premier contact jusqu'à la livraison, tout a été parfait. 
-              Je recommande sans hésitation."
-            </blockquote>
-            <p className="text-accent font-semibold">— Laurent D., Versailles</p>
+            <a 
+              href="https://www.houzz.fr/viewReview/2101062/qualirenovation-by-qualiconcept-review" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block hover:opacity-80 transition-opacity"
+            >
+              <blockquote className="font-display text-2xl md:text-3xl italic mb-8">
+                "Découvrez nos avis clients sur Houzz"
+              </blockquote>
+              <p className="text-accent font-semibold underline">Voir tous les avis →</p>
+            </a>
           </motion.div>
         </div>
       </section>
