@@ -30,15 +30,16 @@ import gallery23 from "@/assets/gallery-23.jpg";
 import gallery24 from "@/assets/gallery-24.jpg";
 import gallery25 from "@/assets/gallery-25.jpg";
 
-// Paris 17ème Suite Parentale
-import paris17_1 from "@/assets/paris17-1.jpg";
-import paris17_2 from "@/assets/paris17-2.jpg";
-import paris17_3 from "@/assets/paris17-3.jpg";
-import paris17_4 from "@/assets/paris17-4.jpg";
-import paris17_5 from "@/assets/paris17-5.jpg";
-import paris17_6 from "@/assets/paris17-6.jpg";
-import paris17_7 from "@/assets/paris17-7.jpg";
-import paris17_8 from "@/assets/paris17-8.jpg";
+// Paris 17ème Suite Parentale - AVANT
+import paris17Avant1 from "@/assets/paris17-1.jpg";
+import paris17Avant2 from "@/assets/paris17-2.jpg";
+import paris17Avant3 from "@/assets/paris17-3.jpg";
+import paris17Avant4 from "@/assets/paris17-4.jpg";
+import paris17Avant5 from "@/assets/paris17-5.jpg";
+import paris17Avant6 from "@/assets/paris17-6.jpg";
+import paris17Avant7 from "@/assets/paris17-7.jpg";
+import paris17Avant8 from "@/assets/paris17-8.jpg";
+// Paris 17ème Suite Parentale - APRÈS
 import suiteParentale1 from "@/assets/suite-parentale-1.jpg";
 import suiteParentale2 from "@/assets/suite-parentale-2.jpg";
 import suiteParentale3 from "@/assets/suite-parentale-3.jpg";
@@ -340,8 +341,14 @@ const albums: Album[] = [
       { id: 3, image: suiteParentale2, title: "Après — Niches douche", description: "Rangements intégrés pratiques" },
       { id: 4, image: suiteParentale4, title: "Après — Claustra et rangement", description: "Harmonie bois et marbre" },
       { id: 5, image: suiteParentale3, title: "Après — Chambre parentale", description: "Claustra bois et miroir rond" },
-      { id: 6, image: paris17_7, title: "Avant — Baignoire balnéo", description: "En panne depuis des années, galets au sol" },
-      { id: 7, image: paris17_8, title: "Avant — Sans paroi", description: "Éclaboussures sur le parquet" },
+      { id: 6, image: paris17Avant1, title: "Avant — Baignoire balnéo", description: "En panne depuis des années" },
+      { id: 7, image: paris17Avant2, title: "Avant — Galets au sol", description: "Revêtement à changer" },
+      { id: 8, image: paris17Avant3, title: "Avant — Sans paroi", description: "Éclaboussures sur le parquet" },
+      { id: 9, image: paris17Avant4, title: "Avant — Vue d'ensemble", description: "Configuration peu pratique" },
+      { id: 10, image: paris17Avant5, title: "Avant — Détail", description: "Espace à transformer" },
+      { id: 11, image: paris17Avant6, title: "Avant — Rangements", description: "À optimiser" },
+      { id: 12, image: paris17Avant7, title: "Avant — Éclairage", description: "À moderniser" },
+      { id: 13, image: paris17Avant8, title: "Avant — État initial", description: "Avant rénovation complète" },
     ],
   },
   {
