@@ -347,7 +347,7 @@ const albums: Album[] = [
       { id: 9, image: paris17Avant4, title: "Avant — Vue d'ensemble", description: "Configuration peu pratique" },
       { id: 10, image: paris17Avant5, title: "Avant — Détail", description: "Espace à transformer" },
       { id: 11, image: paris17Avant6, title: "Avant — Rangements", description: "À optimiser" },
-      { id: 12, image: paris17Avant7, title: "Avant — Éclairage", description: "À moderniser" },
+      { id: 12, image: paris17Avant7, title: "Avant — Baignoire balnéo en panne", description: "Hors service depuis des années" },
       { id: 13, image: paris17Avant8, title: "Avant — État initial", description: "Avant rénovation complète" },
     ],
   },
