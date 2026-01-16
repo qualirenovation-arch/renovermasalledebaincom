@@ -129,6 +129,13 @@ import portRoyal1 from "@/assets/port-royal-1.jpg";
 import portRoyalAvant1 from "@/assets/port-royal-avant-1.jpg";
 import portRoyalAvant2 from "@/assets/port-royal-avant-2.jpg";
 
+// La Tour Paris 16ème - Chantier en cours
+import laTourAvant1 from "@/assets/la-tour-avant-1.jpg";
+import laTourAvant2 from "@/assets/la-tour-avant-2.jpg";
+import laTourAvant3 from "@/assets/la-tour-avant-3.jpg";
+import laTourAvant4 from "@/assets/la-tour-avant-4.jpg";
+import laTourAvant5 from "@/assets/la-tour-avant-5.jpg";
+
 interface Photo {
   id: number;
   image: string;
@@ -391,6 +398,21 @@ const inProgressAlbums: Album[] = [
       { id: 3, image: portRoyalAvant2, title: "Avant - WC", description: "WC à rénover" },
     ],
   },
+  {
+    id: "la-tour",
+    title: "Restructuration complète",
+    location: "Paris 16ème - Rue de la Tour",
+    description: "Projet ambitieux de restructuration : démolition de la salle de bain existante pour agrandir la cuisine. Création d'une nouvelle salle de douche et WC au fond de l'appartement, en exploitant la colonne d'évacuation. Chantier en cours — restez connecté pour découvrir cette transformation !",
+    coverImage: laTourAvant4,
+    isInProgress: true,
+    photos: [
+      { id: 1, image: laTourAvant4, title: "Avant - Vue douche", description: "Colonne de douche existante" },
+      { id: 2, image: laTourAvant3, title: "Avant - Vue générale", description: "Rangements et vasque" },
+      { id: 3, image: laTourAvant1, title: "Avant - Vasque", description: "Vasque marbre et sèche-serviettes" },
+      { id: 4, image: laTourAvant2, title: "Avant - Détail", description: "Aménagement existant" },
+      { id: 5, image: laTourAvant5, title: "Avant - WC", description: "WC suspendu à rénover" },
+    ],
+  },
 ];
 
 // Positions des chantiers sur la carte de Paris
@@ -399,6 +421,7 @@ const projectLocations: ProjectLocation[] = [
   { id: "taitbout", name: "Rue Taitbout", area: "9ème", x: 48, y: 38 },
   { id: "rocroy", name: "Rue de Rocroy", area: "10ème", x: 55, y: 32 },
   { id: "port-royal", name: "Port-Royal", area: "5ème", x: 48, y: 60 },
+  { id: "la-tour", name: "Rue de la Tour", area: "16ème", x: 25, y: 45 },
 ];
 
 export default function Realisations() {
