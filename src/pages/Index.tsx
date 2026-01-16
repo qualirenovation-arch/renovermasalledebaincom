@@ -121,7 +121,7 @@ export default function Index() {
                 <img
                   src={jemmapes1}
                   alt="Douche à l'italienne moderne"
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-left"
                 />
               </div>
             </motion.div>
