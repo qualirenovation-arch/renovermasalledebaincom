@@ -20,7 +20,9 @@ import {
   Building2,
   Home
 } from "lucide-react";
-import finitionsImage from "@/assets/finitions-robinetterie-clean.png";
+import chateletDoreImage from "@/assets/chatelet-dore.jpg";
+import chateletNoirImage from "@/assets/chatelet-noir.jpg";
+import chateletChromeImage from "@/assets/chatelet-chrome.jpg";
 import stylesCarrelageImage from "@/assets/styles-carrelage-fr.jpg";
 import paroisDoucheImage from "@/assets/parois-douche.jpg";
 import meublesVasqueImage from "@/assets/meubles-vasque.jpg";
@@ -832,13 +834,35 @@ export default function Devis() {
                       <Label className="text-sm font-semibold text-foreground mb-3 block">✨ Finitions robinetterie</Label>
                       <p className="text-muted-foreground text-sm mb-4">Personnalisez votre robinetterie avec des finitions élégantes et durables.</p>
                       
-                      {/* Image de référence */}
-                      <div className="mb-6 rounded-2xl overflow-hidden">
-                        <img 
-                          src={finitionsImage} 
-                          alt="Finitions robinetterie - Laiton brossé, Nickel brossé, Noir mat, Chromé" 
-                          className="w-full h-auto"
-                        />
+                      {/* Images de référence - Gamme Châtelet */}
+                      <div className="mb-6">
+                        <p className="text-xs text-muted-foreground mb-3 text-center">Gamme Châtelet — masalledebain.com</p>
+                        <div className="grid grid-cols-3 gap-4 rounded-2xl overflow-hidden">
+                          <div className="relative aspect-square overflow-hidden rounded-xl">
+                            <img 
+                              src={chateletChromeImage} 
+                              alt="Mitigeur Châtelet - Chromé" 
+                              className="w-full h-full object-cover"
+                            />
+                            <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Chromé</span>
+                          </div>
+                          <div className="relative aspect-square overflow-hidden rounded-xl">
+                            <img 
+                              src={chateletNoirImage} 
+                              alt="Mitigeur Châtelet - Noir brossé" 
+                              className="w-full h-full object-cover"
+                            />
+                            <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Noir brossé</span>
+                          </div>
+                          <div className="relative aspect-square overflow-hidden rounded-xl">
+                            <img 
+                              src={chateletDoreImage} 
+                              alt="Mitigeur Châtelet - Doré brossé" 
+                              className="w-full h-full object-cover"
+                            />
+                            <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Doré brossé</span>
+                          </div>
+                        </div>
                       </div>
 
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
