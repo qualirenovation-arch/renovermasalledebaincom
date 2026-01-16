@@ -136,6 +136,14 @@ import laTourAvant3 from "@/assets/la-tour-avant-3.jpg";
 import laTourAvant4 from "@/assets/la-tour-avant-4.jpg";
 import laTourAvant5 from "@/assets/la-tour-avant-5.jpg";
 
+// Amiral Roussin Paris 15ème
+import amiralRoussin1 from "@/assets/amiral-roussin-1.jpg";
+import amiralRoussin2 from "@/assets/amiral-roussin-2.jpg";
+import amiralRoussin3 from "@/assets/amiral-roussin-3.jpg";
+import amiralRoussin4 from "@/assets/amiral-roussin-4.jpg";
+import amiralRoussin5 from "@/assets/amiral-roussin-5.jpg";
+import amiralRoussin6 from "@/assets/amiral-roussin-6.jpg";
+
 interface Photo {
   id: number;
   image: string;
@@ -328,6 +336,21 @@ const albums: Album[] = [
       { id: 5, image: faubourgStmartin5, title: "WC suspendu", description: "Poutres apparentes et effet marbre" },
       { id: 6, image: faubourgStmartin2, title: "Vue globale", description: "Optimisation sous pente" },
       { id: 7, image: faubourgStmartin7, title: "Détail douche", description: "Paroi noire et ciel de pluie" },
+    ],
+  },
+  {
+    id: "amiral-roussin",
+    title: "Style scandinave",
+    location: "Paris 15ème - Amiral Roussin",
+    description: "Rénovation pour un jeune couple : style scandinave épuré avec meuble vasque en chêne massif, robinetterie noire mate et receveur extra-plat. Buanderie intégrée dans le placard pour optimiser l'espace.",
+    coverImage: amiralRoussin1,
+    photos: [
+      { id: 1, image: amiralRoussin1, title: "Vue d'ensemble", description: "Douche et meuble chêne scandinave" },
+      { id: 2, image: amiralRoussin3, title: "Douche et vasque", description: "Robinetterie noire et paroi vitrée" },
+      { id: 3, image: amiralRoussin5, title: "Meuble vasque", description: "Chêne massif avec vasque bol" },
+      { id: 4, image: amiralRoussin2, title: "Détail vasque", description: "Robinet noir et plan bois" },
+      { id: 5, image: amiralRoussin6, title: "Vue générale", description: "Harmonie bois et blanc" },
+      { id: 6, image: amiralRoussin4, title: "Placard buanderie", description: "Buanderie intégrée" },
     ],
   },
 ];
