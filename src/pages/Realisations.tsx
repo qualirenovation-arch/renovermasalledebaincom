@@ -182,9 +182,15 @@ import boulogne6 from "@/assets/boulogne-6.jpg";
 import boulogne7 from "@/assets/boulogne-7.jpg";
 import boulogne8 from "@/assets/boulogne-8.jpg";
 import boulogne9 from "@/assets/boulogne-9.jpg";
+import boulogne10 from "@/assets/boulogne-10.jpg";
+import boulogne11 from "@/assets/boulogne-11.jpg";
+import boulogne12 from "@/assets/boulogne-12.jpg";
+import boulogne13 from "@/assets/boulogne-13.jpg";
+import boulogne14 from "@/assets/boulogne-14.jpg";
 import boulogneAvant1 from "@/assets/boulogne-avant-1.jpg";
 import boulogneAvant2 from "@/assets/boulogne-avant-2.jpg";
 import boulogneAvant3 from "@/assets/boulogne-avant-3.jpg";
+import boulogneAvant4 from "@/assets/boulogne-avant-4.jpg";
 import boulogneTravaux1 from "@/assets/boulogne-travaux-1.jpg";
 import boulogneTravaux2 from "@/assets/boulogne-travaux-2.jpg";
 
@@ -450,23 +456,29 @@ const albums: Album[] = [
     id: "boulogne",
     title: "Ambiance marine",
     location: "Boulogne-Billancourt - Av. du Maréchal de Lattre de Tassigny",
-    description: "AVANT : Chaudière apparente au milieu de la pièce, espace mal exploité et vétuste. APRÈS : Transformation complète pour cette mère célibataire et son enfant. Création d'un placard technique pour dissimuler la chaudière, grand meuble vasque avec double vasque, carrelage 3D blanc, tomettes hexagonales bleues au sol et fresque murale marine. Robinetterie dorée pour une touche d'élégance.",
-    coverImage: boulogne1,
+    description: "AVANT : Chaudière apparente au milieu de la pièce, WC vétuste avec réservoir apparent. APRÈS : Transformation complète pour cette mère célibataire et son enfant. Création d'un placard technique pour dissimuler la chaudière, grand meuble vasque avec double vasque et miroirs ronds, carrelage 3D blanc, tomettes hexagonales bleues au sol et fresque murale marine. WC suspendu moderne avec carrelage 3D. Robinetterie dorée pour une touche d'élégance.",
+    coverImage: boulogne14,
     photos: [
-      { id: 1, image: boulogne1, title: "Après — Vue d'ensemble", description: "Baignoire 3D et tomettes bleues" },
-      { id: 2, image: boulogne2, title: "Après — Double vasque", description: "Grand meuble avec robinetterie dorée" },
-      { id: 3, image: boulogne3, title: "Après — Niches douche", description: "Carrelage 3D et niches bleues" },
-      { id: 4, image: boulogne4, title: "Après — Détail carrelage", description: "Carrelage 3D blanc effet vague" },
-      { id: 5, image: boulogne5, title: "Après — Miroir vasque", description: "Miroir LED et finitions dorées" },
-      { id: 6, image: boulogne6, title: "Après — Vue baignoire", description: "Espace baignoire avec fresque marine" },
-      { id: 7, image: boulogne7, title: "Après — Ambiance complète", description: "Harmonie bleu et blanc" },
-      { id: 8, image: boulogne8, title: "Après — Rangements", description: "Optimisation du stockage" },
-      { id: 9, image: boulogne9, title: "Après — Finitions", description: "Détails soignés" },
-      { id: 10, image: boulogneAvant1, title: "Avant — Chaudière", description: "Chaudière apparente à dissimuler" },
-      { id: 11, image: boulogneAvant2, title: "Avant — Vue générale", description: "Espace vétuste à transformer" },
-      { id: 12, image: boulogneAvant3, title: "Avant — État initial", description: "Configuration d'origine" },
-      { id: 13, image: boulogneTravaux1, title: "Travaux — Préparation", description: "Démolition et plomberie" },
-      { id: 14, image: boulogneTravaux2, title: "Travaux — Installation", description: "Mise en place des équipements" },
+      { id: 1, image: boulogne14, title: "Après — Vue d'ensemble", description: "Baignoire, fresque marine et double vasque" },
+      { id: 2, image: boulogne12, title: "Après — Double vasque", description: "Miroirs ronds avec méduses et robinetterie dorée" },
+      { id: 3, image: boulogne13, title: "Après — Détail vasque", description: "Tomettes hexagonales et carrelage 3D" },
+      { id: 4, image: boulogne1, title: "Après — Baignoire", description: "Baignoire 3D et tomettes bleues" },
+      { id: 5, image: boulogne2, title: "Après — Meuble vasque", description: "Grand meuble avec poignées dorées" },
+      { id: 6, image: boulogne3, title: "Après — Niches douche", description: "Carrelage 3D et niches bleues" },
+      { id: 7, image: boulogne4, title: "Après — Détail carrelage", description: "Carrelage 3D blanc effet vague" },
+      { id: 8, image: boulogne5, title: "Après — Miroir vasque", description: "Miroir LED et finitions dorées" },
+      { id: 9, image: boulogne6, title: "Après — Vue baignoire", description: "Espace baignoire avec fresque marine" },
+      { id: 10, image: boulogne7, title: "Après — Ambiance complète", description: "Harmonie bleu et blanc" },
+      { id: 11, image: boulogne8, title: "Après — Rangements", description: "Optimisation du stockage" },
+      { id: 12, image: boulogne9, title: "Après — Finitions", description: "Détails soignés" },
+      { id: 13, image: boulogne10, title: "Après — WC suspendu", description: "WC moderne avec carrelage 3D" },
+      { id: 14, image: boulogne11, title: "Après — WC vue complète", description: "Rangements intégrés au plafond" },
+      { id: 15, image: boulogneAvant1, title: "Avant — Chaudière", description: "Chaudière apparente à dissimuler" },
+      { id: 16, image: boulogneAvant2, title: "Avant — Vue générale", description: "Espace vétuste à transformer" },
+      { id: 17, image: boulogneAvant3, title: "Avant — État initial", description: "Configuration d'origine" },
+      { id: 18, image: boulogneAvant4, title: "Avant — WC ancien", description: "WC avec réservoir apparent" },
+      { id: 19, image: boulogneTravaux1, title: "Travaux — Préparation", description: "Démolition et plomberie" },
+      { id: 20, image: boulogneTravaux2, title: "Travaux — Installation", description: "Mise en place des équipements" },
     ],
   },
 ];
