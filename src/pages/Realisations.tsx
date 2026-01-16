@@ -172,6 +172,14 @@ import citeaux4 from "@/assets/citeaux-4.jpg";
 import citeauxAvant1 from "@/assets/citeaux-avant-1.jpg";
 import citeauxAvant2 from "@/assets/citeaux-avant-2.jpg";
 
+// Boulogne-Billancourt
+import boulogne1 from "@/assets/boulogne-1.jpg";
+import boulogne2 from "@/assets/boulogne-2.jpg";
+import boulogne3 from "@/assets/boulogne-3.jpg";
+import boulogneAvant1 from "@/assets/boulogne-avant-1.jpg";
+import boulogneAvant2 from "@/assets/boulogne-avant-2.jpg";
+import boulogneAvant3 from "@/assets/boulogne-avant-3.jpg";
+
 interface Photo {
   id: number;
   image: string;
@@ -428,6 +436,21 @@ const albums: Album[] = [
       { id: 4, image: citeaux4, title: "Après — Vasque", description: "Meuble optimisé avec rangements" },
       { id: 5, image: citeauxAvant1, title: "Avant — Salle de bain", description: "Espace à reconfigurer" },
       { id: 6, image: citeauxAvant2, title: "Avant — Vue complète", description: "Agencement inefficace" },
+    ],
+  },
+  {
+    id: "boulogne",
+    title: "Ambiance marine",
+    location: "Boulogne-Billancourt",
+    description: "AVANT : Chaudière apparente au milieu de la pièce, espace mal exploité et vétuste. APRÈS : Transformation complète pour cette mère célibataire et son enfant. Création d'un placard technique pour dissimuler la chaudière, grand meuble vasque avec double vasque, carrelage 3D blanc, tomettes hexagonales bleues au sol et fresque murale marine. Robinetterie dorée pour une touche d'élégance.",
+    coverImage: boulogne1,
+    photos: [
+      { id: 1, image: boulogne1, title: "Après — Vue d'ensemble", description: "Baignoire 3D et tomettes bleues" },
+      { id: 2, image: boulogne2, title: "Après — Double vasque", description: "Grand meuble avec robinetterie dorée" },
+      { id: 3, image: boulogne3, title: "Après — Niches douche", description: "Carrelage 3D et niches bleues" },
+      { id: 4, image: boulogneAvant1, title: "Avant — Chaudière", description: "Chaudière apparente à dissimuler" },
+      { id: 5, image: boulogneAvant2, title: "Avant — Vue générale", description: "Espace vétuste à transformer" },
+      { id: 6, image: boulogneAvant3, title: "Avant — Travaux", description: "Démolition et préparation" },
     ],
   },
 ];
