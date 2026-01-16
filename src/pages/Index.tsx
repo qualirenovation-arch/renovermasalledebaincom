@@ -91,13 +91,13 @@ export default function Index() {
               transition={{ duration: 0.6 }}
             >
               <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground leading-tight">
-                CRÉEZ VOTRE<br />
-                DOUCHE À<br />
-                <span className="italic font-normal">L'ITALIENNE</span>
+                RÉNOVEZ VOTRE<br />
+                SALLE DE<br />
+                <span className="italic font-normal">BAIN</span>
               </h1>
               <p className="text-muted-foreground text-lg md:text-xl mb-8">
-                Conception et installation<br />
-                de douches à l'italienne
+                Conception et réalisation<br />
+                de salles de bain sur mesure
               </p>
               <Button 
                 variant="default" 
