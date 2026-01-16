@@ -24,7 +24,7 @@ import chateletDoreImage from "@/assets/chatelet-dore.jpg";
 import chateletNoirImage from "@/assets/chatelet-noir.jpg";
 import chateletChromeImage from "@/assets/chatelet-chrome.jpg";
 import chateletInoxImage from "@/assets/chatelet-inox.jpg";
-import chateletBlancImage from "@/assets/chatelet-blanc.jpg";
+import chateletBlancImage from "@/assets/chatelet-blanc-correct.jpg";
 import stylesCarrelageImage from "@/assets/styles-carrelage-fr.jpg";
 import paroisDoucheImage from "@/assets/parois-douche.jpg";
 import meublesVasqueImage from "@/assets/meubles-vasque.jpg";
@@ -32,7 +32,7 @@ import wcTypesImage from "@/assets/wc-types.jpg";
 import chateletDouchetteImage from "@/assets/chatelet-douchette.jpg";
 import chateletColonneImage from "@/assets/chatelet-colonne-dore.jpg";
 import chateletEncastreImage from "@/assets/chatelet-encastre-inox.jpg";
-import chateletCielPluieImage from "@/assets/chatelet-ciel-pluie.jpg";
+import chateletCielPluieImage from "@/assets/chatelet-ciel-pluie-plafond.jpg";
 import receveursImage from "@/assets/receveurs-douche.jpg";
 import baignoiresImage from "@/assets/baignoires-styles.jpg";
 
