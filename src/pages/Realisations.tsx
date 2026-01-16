@@ -115,6 +115,15 @@ import stgermainAvant2 from "@/assets/stgermain-avant-2.jpg";
 import stgermainAvant3 from "@/assets/stgermain-avant-3.jpg";
 import stgermainAvant4 from "@/assets/stgermain-avant-4.jpg";
 
+// Faubourg Saint-Martin Paris 10ème
+import faubourgStmartin1 from "@/assets/faubourg-stmartin-1.jpg";
+import faubourgStmartin2 from "@/assets/faubourg-stmartin-2.jpg";
+import faubourgStmartin3 from "@/assets/faubourg-stmartin-3.jpg";
+import faubourgStmartin4 from "@/assets/faubourg-stmartin-4.jpg";
+import faubourgStmartin5 from "@/assets/faubourg-stmartin-5.jpg";
+import faubourgStmartin6 from "@/assets/faubourg-stmartin-6.jpg";
+import faubourgStmartin7 from "@/assets/faubourg-stmartin-7.jpg";
+
 interface Photo {
   id: number;
   image: string;
@@ -291,6 +300,22 @@ const albums: Album[] = [
       { id: 6, image: stgermainAvant2, title: "Avant - Vue vasque", description: "Meuble existant à moderniser" },
       { id: 7, image: stgermainAvant3, title: "Avant - Vue générale", description: "État initial de la pièce" },
       { id: 8, image: stgermainAvant4, title: "Avant - Baignoire détail", description: "Tablier à refaire" },
+    ],
+  },
+  {
+    id: "faubourg-stmartin",
+    title: "Rénovation sous combles",
+    location: "Paris 10ème - Faubourg Saint-Martin",
+    description: "Création d'une salle de bain moderne sous combles. Carrelage effet marbre blanc, double vasque suspendue, paroi verrière noire et WC avec poutres apparentes. Robinetterie noire mate pour un style contemporain.",
+    coverImage: faubourgStmartin3,
+    photos: [
+      { id: 1, image: faubourgStmartin3, title: "Double vasque", description: "Meuble suspendu et miroir LED" },
+      { id: 2, image: faubourgStmartin4, title: "Détail robinetterie", description: "Double robinetterie noire" },
+      { id: 3, image: faubourgStmartin1, title: "Vue d'ensemble", description: "Douche et vasque sous combles" },
+      { id: 4, image: faubourgStmartin6, title: "Colonne de douche", description: "Robinetterie noire effet marbre" },
+      { id: 5, image: faubourgStmartin5, title: "WC suspendu", description: "Poutres apparentes et effet marbre" },
+      { id: 6, image: faubourgStmartin2, title: "Vue globale", description: "Optimisation sous pente" },
+      { id: 7, image: faubourgStmartin7, title: "Détail douche", description: "Paroi noire et ciel de pluie" },
     ],
   },
 ];
