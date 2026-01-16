@@ -155,6 +155,15 @@ import buffon7 from "@/assets/buffon-7.jpg";
 import buffonAvant1 from "@/assets/buffon-avant-1.jpg";
 import buffonAvant2 from "@/assets/buffon-avant-2.jpg";
 
+// Lauriston Paris 16ème
+import lauriston1 from "@/assets/lauriston-1.jpg";
+import lauriston2 from "@/assets/lauriston-2.jpg";
+import lauriston3 from "@/assets/lauriston-3.jpg";
+import lauriston4 from "@/assets/lauriston-4.jpg";
+import lauriston5 from "@/assets/lauriston-5.jpg";
+import lauristonAvant1 from "@/assets/lauriston-avant-1.jpg";
+import lauristonAvant2 from "@/assets/lauriston-avant-2.jpg";
+
 interface Photo {
   id: number;
   image: string;
@@ -380,6 +389,22 @@ const albums: Album[] = [
       { id: 7, image: buffon7, title: "Lave-linge intégré", description: "Dissimulé derrière une porte" },
       { id: 8, image: buffonAvant1, title: "Avant travaux", description: "Ancienne salle de bain" },
       { id: 9, image: buffonAvant2, title: "Avant travaux", description: "Vue d'ensemble avant" },
+    ],
+  },
+  {
+    id: "lauriston",
+    title: "Matériaux belges & LED",
+    location: "Paris 16ème - Rue Lauriston",
+    description: "Rénovation complète de salle de douche dans un appartement parisien. Ambiance blanc et gris clair avec matériaux sélectionnés et livrés de Belgique. Double vasque à poser, faïence ondulée, frise galets naturels et niche LED intégrée dans la douche.",
+    coverImage: lauriston1,
+    photos: [
+      { id: 1, image: lauriston1, title: "Vue d'ensemble", description: "Double vasque et meuble suspendu blanc" },
+      { id: 2, image: lauriston2, title: "Perspective complète", description: "Douche, WC et fenêtre parisienne" },
+      { id: 3, image: lauriston3, title: "Douche LED", description: "Paroi vitrée et niche LED intégrée" },
+      { id: 4, image: lauriston4, title: "Double vasque", description: "Vasques à poser et frise galets" },
+      { id: 5, image: lauriston5, title: "Niche LED", description: "Détail de la niche rétroéclairée" },
+      { id: 6, image: lauristonAvant1, title: "Avant travaux", description: "Ancienne salle de bain avec baignoire" },
+      { id: 7, image: lauristonAvant2, title: "Avant travaux", description: "Vue d'ensemble avant rénovation" },
     ],
   },
 ];
