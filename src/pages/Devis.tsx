@@ -29,7 +29,9 @@ import stylesCarrelageImage from "@/assets/styles-carrelage-fr.jpg";
 import paroisDoucheImage from "@/assets/parois-douche.jpg";
 import meublesVasqueImage from "@/assets/meubles-vasque.jpg";
 import wcTypesImage from "@/assets/wc-types.jpg";
-import pommeauxDoucheImage from "@/assets/pommeaux-douche.jpg";
+import chateletDouchetteImage from "@/assets/chatelet-douchette.jpg";
+import chateletColonneImage from "@/assets/chatelet-colonne-dore.jpg";
+import chateletEncastreImage from "@/assets/chatelet-encastre-inox.jpg";
 import receveursImage from "@/assets/receveurs-douche.jpg";
 import baignoiresImage from "@/assets/baignoires-styles.jpg";
 
@@ -745,13 +747,35 @@ export default function Devis() {
                           <div>
                             <Label className="text-sm text-muted-foreground mb-3 block">Style de pommeau</Label>
                             
-                            {/* Image de référence pommeaux */}
-                            <div className="mb-4 rounded-2xl overflow-hidden">
-                              <img 
-                                src={pommeauxDoucheImage} 
-                                alt="Styles de pommeaux - Douchette à main, Pommeau fixe, Fixe + douchette, Colonne complète" 
-                                className="w-full h-auto"
-                              />
+                            {/* Images de référence pommeaux - Gamme Châtelet */}
+                            <div className="mb-4">
+                              <p className="text-xs text-muted-foreground mb-3 text-center">Gamme Châtelet — masalledebain.com</p>
+                              <div className="grid grid-cols-3 gap-3 rounded-2xl overflow-hidden">
+                                <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
+                                  <img 
+                                    src={chateletDouchetteImage} 
+                                    alt="Douchette à main tube Châtelet" 
+                                    className="w-full h-full object-cover"
+                                  />
+                                  <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Douchette</span>
+                                </div>
+                                <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
+                                  <img 
+                                    src={chateletColonneImage} 
+                                    alt="Colonne de douche Châtelet" 
+                                    className="w-full h-full object-cover"
+                                  />
+                                  <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Colonne</span>
+                                </div>
+                                <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
+                                  <img 
+                                    src={chateletEncastreImage} 
+                                    alt="Douche encastrée Châtelet" 
+                                    className="w-full h-full object-cover"
+                                  />
+                                  <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Encastré</span>
+                                </div>
+                              </div>
                             </div>
 
                             <RadioGroup 
