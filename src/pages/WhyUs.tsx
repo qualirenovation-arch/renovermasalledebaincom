@@ -287,15 +287,15 @@ export default function WhyUs() {
           once: true
         }}>
             <a 
-              href="https://www.houzz.fr/viewReview/2101062/qualirenovation-by-qualiconcept-review" 
+              href="https://www.houzz.fr/viewReview/2076669/qualirenovation-by-qualiconcept-review" 
               target="_blank" 
               rel="noopener noreferrer"
               className="block hover:opacity-80 transition-opacity"
             >
               <blockquote className="font-display text-xl md:text-2xl italic mb-8">
-                "Je recommande fortement Carina pour son professionnalisme et sa bonne humeur qui est un véritable plus pour le client stressé par ses travaux. Sa réactivité a été top. C'est un vrai plaisir de collaborer avec Carina. Le client se sent rassuré, soutenu et compris."
+                "Je recommande avec beaucoup d'enthousiasme les prestations de QualiConcept. Carina a géré mon chantier avec beaucoup de professionnalisme et de rigueur, elle est très à l'écoute de ses clients. Le chantier a été livré dans le délai imparti, avec des finitions soignées et beaucoup de créativité. Le résultat est formidable et dépasse même mes ambitions initiales !"
               </blockquote>
-              <p className="text-accent font-semibold">— Cecile J. <span className="underline ml-2">Voir sur Houzz →</span></p>
+              <p className="text-accent font-semibold">— Marie C. <span className="underline ml-2">Voir sur Houzz →</span></p>
             </a>
           </motion.div>
         </div>
