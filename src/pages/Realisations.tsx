@@ -208,6 +208,14 @@ import auteuilAvant1 from "@/assets/auteuil-avant-1.jpg";
 import courbevoieAvant1 from "@/assets/courbevoie-avant-1.jpg";
 import courbevoieAvant2 from "@/assets/courbevoie-avant-2.jpg";
 
+// Rue du Temple Paris 3ème
+import temple1 from "@/assets/temple-1.jpg";
+import temple2 from "@/assets/temple-2.jpg";
+import temple3 from "@/assets/temple-3.jpg";
+import temple4 from "@/assets/temple-4.jpg";
+import templeAvant1 from "@/assets/temple-avant-1.jpg";
+import templeAvant2 from "@/assets/temple-avant-2.jpg";
+
 interface Photo {
   id: number;
   image: string;
@@ -508,6 +516,21 @@ const albums: Album[] = [
       { id: 6, image: auteuil6, title: "Après — WC vue face", description: "Mur bordeaux et affiche fashion" },
       { id: 7, image: auteuil7, title: "Après — WC vue large", description: "Frise hexagonale cuivrée et marbre" },
       { id: 8, image: auteuilAvant1, title: "Avant — État initial", description: "Ancienne salle de bain mosaïque noire" },
+    ],
+  },
+  {
+    id: "temple",
+    title: "Style masculin — Bois & Noir",
+    location: "Paris 3ème - Rue du Temple",
+    description: "AVANT : Salle de bain vétuste avec baignoire, lavabo sur pied et carrelage blanc/bleu dégradé. APRÈS : Transformation complète pour un appartement au masculin. Douche à l'italienne avec receveur extra-plat et paroi fixe noire, meuble vasque en bois clair avec plan blanc, robinetterie noire mate, miroir rond LED. Lave-linge intégré sous le plan vasque. WC suspendu avec chauffe-eau dissimulé dans le placard au-dessus.",
+    coverImage: temple1,
+    photos: [
+      { id: 1, image: temple1, title: "Après — Vue d'ensemble", description: "Douche à l'italienne, paroi fixe noire et meuble bois" },
+      { id: 2, image: temple2, title: "Après — Détail vasque", description: "Meuble bois clair, vasque à poser et miroir rond LED" },
+      { id: 3, image: temple3, title: "Après — WC suspendu", description: "Chauffe-eau dissimulé dans le placard" },
+      { id: 4, image: temple4, title: "Après — Lave-linge intégré", description: "Machine à laver sous le plan vasque" },
+      { id: 5, image: templeAvant1, title: "Avant — Salle de bain", description: "Baignoire et lavabo sur pied vétustes" },
+      { id: 6, image: templeAvant2, title: "Avant — Vue rangements", description: "Anciens placards et carrelage bleu" },
     ],
   },
 ];
