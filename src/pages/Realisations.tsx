@@ -454,7 +454,7 @@ const albums: Album[] = [
   },
   {
     id: "boulogne",
-    title: "Duo gagnant SDB & WC",
+    title: "Ambiance marine — SDB & WC",
     location: "Boulogne-Billancourt - Av. du Maréchal de Lattre de Tassigny",
     description: "AVANT : Chaudière apparente au milieu de la pièce, WC vétuste avec réservoir apparent — un ensemble daté et mal exploité. APRÈS : Rénovation complète du duo salle de bain + WC pour cette mère célibataire et son enfant. Grand meuble double vasque avec miroirs ronds décorés de méduses, baignoire avec fresque marine, tomettes hexagonales bleues au sol. WC suspendu moderne avec carrelage 3D assorti et rangements au plafond. Robinetterie dorée pour une touche d'élégance.",
     coverImage: boulogne14,
