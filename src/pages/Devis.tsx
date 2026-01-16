@@ -23,6 +23,7 @@ import {
 import chateletDoreImage from "@/assets/chatelet-dore.jpg";
 import chateletNoirImage from "@/assets/chatelet-noir.jpg";
 import chateletChromeImage from "@/assets/chatelet-chrome.jpg";
+import chateletInoxImage from "@/assets/chatelet-inox.jpg";
 import stylesCarrelageImage from "@/assets/styles-carrelage-fr.jpg";
 import paroisDoucheImage from "@/assets/parois-douche.jpg";
 import meublesVasqueImage from "@/assets/meubles-vasque.jpg";
@@ -837,7 +838,7 @@ export default function Devis() {
                       {/* Images de référence - Gamme Châtelet */}
                       <div className="mb-6">
                         <p className="text-xs text-muted-foreground mb-3 text-center">Gamme Châtelet — masalledebain.com</p>
-                        <div className="grid grid-cols-3 gap-4 rounded-2xl overflow-hidden">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 rounded-2xl overflow-hidden">
                           <div className="relative aspect-square overflow-hidden rounded-xl">
                             <img 
                               src={chateletChromeImage} 
@@ -861,6 +862,14 @@ export default function Devis() {
                               className="w-full h-full object-cover"
                             />
                             <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Doré brossé</span>
+                          </div>
+                          <div className="relative aspect-square overflow-hidden rounded-xl">
+                            <img 
+                              src={chateletInoxImage} 
+                              alt="Mitigeur Châtelet - Inox brossé" 
+                              className="w-full h-full object-cover"
+                            />
+                            <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Inox brossé</span>
                           </div>
                         </div>
                       </div>
