@@ -292,10 +292,10 @@ export default function WhyUs() {
               rel="noopener noreferrer"
               className="block hover:opacity-80 transition-opacity"
             >
-              <blockquote className="font-display text-2xl md:text-3xl italic mb-8">
-                "Découvrez nos avis clients sur Houzz"
+              <blockquote className="font-display text-xl md:text-2xl italic mb-8">
+                "Je recommande fortement Carina pour son professionnalisme et sa bonne humeur qui est un véritable plus pour le client stressé par ses travaux. Sa réactivité a été top. C'est un vrai plaisir de collaborer avec Carina. Le client se sent rassuré, soutenu et compris."
               </blockquote>
-              <p className="text-accent font-semibold underline">Voir tous les avis →</p>
+              <p className="text-accent font-semibold">— Cecile J. <span className="underline ml-2">Voir sur Houzz →</span></p>
             </a>
           </motion.div>
         </div>
