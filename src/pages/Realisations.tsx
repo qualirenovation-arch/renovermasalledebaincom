@@ -120,6 +120,7 @@ import nicolasRoret8 from "@/assets/nicolas-roret-8.jpg";
 import nicolasRoret9 from "@/assets/nicolas-roret-9.jpg";
 import nicolasRoret10 from "@/assets/nicolas-roret-10.jpg";
 import nicolasRoret11 from "@/assets/nicolas-roret-11.jpg";
+import nicolasRoret12 from "@/assets/nicolas-roret-12.jpg";
 import nicolasRoretAvant1 from "@/assets/nicolas-roret-avant-1.jpg";
 import nicolasRoretTravaux1 from "@/assets/nicolas-roret-travaux-1.jpg";
 import nicolasRoret3d1 from "@/assets/nicolas-roret-3d-1.jpg";
@@ -673,17 +674,18 @@ const inProgressAlbums: Album[] = [
       { id: 1, image: nicolasRoret5, title: "Après — Douche italienne", description: "Zellige turquoise chevron et paroi dorée" },
       { id: 2, image: nicolasRoret1, title: "Après — Détail niches", description: "Niches encastrées avec listel or" },
       { id: 3, image: nicolasRoret2, title: "Après — Vue d'ensemble", description: "Douche, sèche-serviettes et rangements" },
-      { id: 4, image: nicolasRoret9, title: "Après — Vasque et miroir", description: "Frise zellige turquoise et robinetterie dorée" },
-      { id: 5, image: nicolasRoret11, title: "Après — WC suspendu", description: "Zellige chevron et lave-mains doré" },
-      { id: 6, image: nicolasRoret10, title: "Après — Local technique", description: "Chauffe-eau et lave-linge intégrés" },
-      { id: 7, image: nicolasRoret3, title: "Après — Rangements", description: "Placard technique intégré" },
-      { id: 8, image: nicolasRoret4, title: "Après — Lave-linge", description: "Dissimulation technique astucieuse" },
-      { id: 9, image: nicolasRoret6, title: "Après — WC vue angle", description: "Zellige turquoise et carrelage marbre" },
-      { id: 10, image: nicolasRoret7, title: "Après — Vasque suspendue", description: "Meuble blanc, robinetterie dorée" },
-      { id: 11, image: nicolasRoretTravaux1, title: "Travaux — Pose zellige WC", description: "Installation du zellige chevron" },
-      { id: 12, image: nicolasRoretAvant1, title: "Avant — WC vétuste", description: "État initial avec carrelage bleu et équipements datés" },
-      { id: 13, image: nicolasRoret3d1, title: "Avant — Visualisation 3D", description: "Projet de conception initial" },
-      { id: 14, image: nicolasRoret3d2, title: "Avant — Vue 3D vasque", description: "Conception du meuble vasque" },
+      { id: 4, image: nicolasRoret12, title: "Après — Vue large fenêtre", description: "Vasque, frise zellige et lumière naturelle" },
+      { id: 5, image: nicolasRoret9, title: "Après — Vasque et miroir", description: "Frise zellige turquoise et robinetterie dorée" },
+      { id: 6, image: nicolasRoret11, title: "Après — WC suspendu", description: "Zellige chevron et lave-mains doré" },
+      { id: 7, image: nicolasRoret10, title: "Après — Local technique", description: "Chauffe-eau et lave-linge intégrés" },
+      { id: 8, image: nicolasRoret3, title: "Après — Rangements", description: "Placard technique intégré" },
+      { id: 9, image: nicolasRoret4, title: "Après — Lave-linge", description: "Dissimulation technique astucieuse" },
+      { id: 10, image: nicolasRoret6, title: "Après — WC vue angle", description: "Zellige turquoise et carrelage marbre" },
+      { id: 11, image: nicolasRoret7, title: "Après — Vasque suspendue", description: "Meuble blanc, robinetterie dorée" },
+      { id: 12, image: nicolasRoretTravaux1, title: "Travaux — Pose zellige WC", description: "Installation du zellige chevron" },
+      { id: 13, image: nicolasRoretAvant1, title: "Avant — WC vétuste", description: "État initial avec carrelage bleu et équipements datés" },
+      { id: 14, image: nicolasRoret3d1, title: "Avant — Visualisation 3D", description: "Projet de conception initial" },
+      { id: 15, image: nicolasRoret3d2, title: "Avant — Vue 3D vasque", description: "Conception du meuble vasque" },
     ],
   },
 ];
