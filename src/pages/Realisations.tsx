@@ -204,6 +204,10 @@ import auteuil6 from "@/assets/auteuil-6.jpg";
 import auteuil7 from "@/assets/auteuil-7.jpg";
 import auteuilAvant1 from "@/assets/auteuil-avant-1.jpg";
 
+// Courbevoie 92
+import courbevoieAvant1 from "@/assets/courbevoie-avant-1.jpg";
+import courbevoieAvant2 from "@/assets/courbevoie-avant-2.jpg";
+
 interface Photo {
   id: number;
   image: string;
@@ -589,6 +593,18 @@ const inProgressAlbums: Album[] = [
       { id: 5, image: laTourAvant5, title: "Avant - WC", description: "WC suspendu à rénover" },
     ],
   },
+  {
+    id: "courbevoie",
+    title: "Transformation salle de bain",
+    location: "Courbevoie 92 - Rue Ernest Lalyre",
+    description: "Salle de bain datée avec carrelage bleu-gris moucheté et plafond papier peint floral. Baignoire standard et meuble vasque blanc à transformer en douche à l'italienne moderne. Chantier en cours — restez connecté pour découvrir cette transformation !",
+    coverImage: courbevoieAvant1,
+    isInProgress: true,
+    photos: [
+      { id: 1, image: courbevoieAvant1, title: "Avant — Vue vasque", description: "Meuble vasque et baignoire existants" },
+      { id: 2, image: courbevoieAvant2, title: "Avant — Vue d'ensemble", description: "Carrelage moucheté et plafond floral" },
+    ],
+  },
 ];
 
 // Positions des chantiers sur la carte de Paris
@@ -598,6 +614,7 @@ const projectLocations: ProjectLocation[] = [
   { id: "rocroy", name: "Rue de Rocroy", area: "10ème", x: 55, y: 32 },
   { id: "port-royal", name: "Port-Royal", area: "5ème", x: 48, y: 60 },
   { id: "la-tour", name: "Rue de la Tour", area: "16ème", x: 25, y: 45 },
+  { id: "courbevoie", name: "Rue Ernest Lalyre", area: "Courbevoie", x: 15, y: 30 },
 ];
 
 export default function Realisations() {
