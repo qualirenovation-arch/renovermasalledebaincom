@@ -176,9 +176,17 @@ import citeauxAvant2 from "@/assets/citeaux-avant-2.jpg";
 import boulogne1 from "@/assets/boulogne-1.jpg";
 import boulogne2 from "@/assets/boulogne-2.jpg";
 import boulogne3 from "@/assets/boulogne-3.jpg";
+import boulogne4 from "@/assets/boulogne-4.jpg";
+import boulogne5 from "@/assets/boulogne-5.jpg";
+import boulogne6 from "@/assets/boulogne-6.jpg";
+import boulogne7 from "@/assets/boulogne-7.jpg";
+import boulogne8 from "@/assets/boulogne-8.jpg";
+import boulogne9 from "@/assets/boulogne-9.jpg";
 import boulogneAvant1 from "@/assets/boulogne-avant-1.jpg";
 import boulogneAvant2 from "@/assets/boulogne-avant-2.jpg";
 import boulogneAvant3 from "@/assets/boulogne-avant-3.jpg";
+import boulogneTravaux1 from "@/assets/boulogne-travaux-1.jpg";
+import boulogneTravaux2 from "@/assets/boulogne-travaux-2.jpg";
 
 interface Photo {
   id: number;
@@ -448,9 +456,17 @@ const albums: Album[] = [
       { id: 1, image: boulogne1, title: "Après — Vue d'ensemble", description: "Baignoire 3D et tomettes bleues" },
       { id: 2, image: boulogne2, title: "Après — Double vasque", description: "Grand meuble avec robinetterie dorée" },
       { id: 3, image: boulogne3, title: "Après — Niches douche", description: "Carrelage 3D et niches bleues" },
-      { id: 4, image: boulogneAvant1, title: "Avant — Chaudière", description: "Chaudière apparente à dissimuler" },
-      { id: 5, image: boulogneAvant2, title: "Avant — Vue générale", description: "Espace vétuste à transformer" },
-      { id: 6, image: boulogneAvant3, title: "Avant — Travaux", description: "Démolition et préparation" },
+      { id: 4, image: boulogne4, title: "Après — Détail carrelage", description: "Carrelage 3D blanc effet vague" },
+      { id: 5, image: boulogne5, title: "Après — Miroir vasque", description: "Miroir LED et finitions dorées" },
+      { id: 6, image: boulogne6, title: "Après — Vue baignoire", description: "Espace baignoire avec fresque marine" },
+      { id: 7, image: boulogne7, title: "Après — Ambiance complète", description: "Harmonie bleu et blanc" },
+      { id: 8, image: boulogne8, title: "Après — Rangements", description: "Optimisation du stockage" },
+      { id: 9, image: boulogne9, title: "Après — Finitions", description: "Détails soignés" },
+      { id: 10, image: boulogneAvant1, title: "Avant — Chaudière", description: "Chaudière apparente à dissimuler" },
+      { id: 11, image: boulogneAvant2, title: "Avant — Vue générale", description: "Espace vétuste à transformer" },
+      { id: 12, image: boulogneAvant3, title: "Avant — État initial", description: "Configuration d'origine" },
+      { id: 13, image: boulogneTravaux1, title: "Travaux — Préparation", description: "Démolition et plomberie" },
+      { id: 14, image: boulogneTravaux2, title: "Travaux — Installation", description: "Mise en place des équipements" },
     ],
   },
 ];
