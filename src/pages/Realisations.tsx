@@ -274,6 +274,11 @@ const albums: Album[] = [
     location: "Paris 12ème - Cours de Vincennes",
     description: "AVANT : Salle de bain standard sans caractère. APRÈS : Salle de bain masculine haut de gamme. Plan Corian blanc, meuble sur-mesure Noyer de Bourgogne, miroir AICA. Paroi verrière Asealia Twenty Noir, robinetterie MaSalleDeBain.com. Buanderie et table à repasser dissimulées dans une colonne sur-mesure.",
     coverImage: vincennesMr1,
+    review: {
+      text: "Dès notre premier rendez-vous, Carina a su écouter nos besoins et adapter les aménagements. Elle a joué un rôle clé en gérant toutes les commandes et en coordonnant les équipes. Les délais ont été rigoureusement respectés. Son expertise et son professionnalisme ont été exemplaires tout au long du projet.",
+      author: "Jean Claude et Claire",
+      link: "https://www.houzz.fr/viewReview/2051925/qualirenovation-by-qualiconcept-review"
+    },
     photos: [
       { id: 1, image: vincennesMr1, title: "Après — Vue d'ensemble", description: "Double vasque Corian et meuble Noyer de Bourgogne" },
       { id: 2, image: vincennesMr2, title: "Après — Douche à l'italienne", description: "Verrière Twenty Noir et ciel de pluie encastré" },
