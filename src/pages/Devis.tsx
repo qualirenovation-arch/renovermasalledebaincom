@@ -42,6 +42,7 @@ interface FormData {
   email: string;
   telephone: string;
   codePostal: string;
+  dimensionPiece: string;
   typeLogement: string;
   etage: string;
   ascenseur: string;
@@ -69,6 +70,7 @@ const initialFormData: FormData = {
   email: "",
   telephone: "",
   codePostal: "",
+  dimensionPiece: "",
   typeLogement: "",
   etage: "",
   ascenseur: "",
@@ -499,6 +501,16 @@ export default function Devis() {
                         onChange={(e) => handleChange("codePostal", e.target.value)}
                         placeholder="75017"
                         required
+                        className="rounded-xl"
+                      />
+                    </div>
+                    <div className="space-y-2 md:col-span-2">
+                      <Label htmlFor="dimensionPiece">Quelle est la dimension de votre pièce ? (en m²)</Label>
+                      <Input
+                        id="dimensionPiece"
+                        value={formData.dimensionPiece}
+                        onChange={(e) => handleChange("dimensionPiece", e.target.value)}
+                        placeholder="Ex: 5 m² ou 2m x 3m"
                         className="rounded-xl"
                       />
                     </div>
