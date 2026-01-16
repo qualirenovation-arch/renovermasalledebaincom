@@ -124,6 +124,11 @@ import faubourgStmartin5 from "@/assets/faubourg-stmartin-5.jpg";
 import faubourgStmartin6 from "@/assets/faubourg-stmartin-6.jpg";
 import faubourgStmartin7 from "@/assets/faubourg-stmartin-7.jpg";
 
+// Port Royal Paris 5ème - Chantier en cours
+import portRoyal1 from "@/assets/port-royal-1.jpg";
+import portRoyalAvant1 from "@/assets/port-royal-avant-1.jpg";
+import portRoyalAvant2 from "@/assets/port-royal-avant-2.jpg";
+
 interface Photo {
   id: number;
   image: string;
@@ -373,6 +378,19 @@ const inProgressAlbums: Album[] = [
       { id: 2, image: rocroy2, title: "Travaux", description: "En cours de rénovation" },
     ],
   },
+  {
+    id: "port-royal",
+    title: "Rénovation complète",
+    location: "Paris 5ème - Boulevard de Port-Royal",
+    description: "Transformation d'une salle de bain années 70 avec mosaïque bleue. Création d'une douche à l'italienne et rénovation des WC. Chantier en cours — restez connecté pour découvrir cette transformation !",
+    coverImage: portRoyal1,
+    isInProgress: true,
+    photos: [
+      { id: 1, image: portRoyal1, title: "Pose du carrelage", description: "Faïence format métro en cours" },
+      { id: 2, image: portRoyalAvant1, title: "Avant - Salle de bain", description: "Mosaïque bleue d'origine" },
+      { id: 3, image: portRoyalAvant2, title: "Avant - WC", description: "WC à rénover" },
+    ],
+  },
 ];
 
 // Positions des chantiers sur la carte de Paris
@@ -380,6 +398,7 @@ const projectLocations: ProjectLocation[] = [
   { id: "buttes-chaumont", name: "Buttes-Chaumont", area: "19ème", x: 68, y: 25 },
   { id: "taitbout", name: "Rue Taitbout", area: "9ème", x: 48, y: 38 },
   { id: "rocroy", name: "Rue de Rocroy", area: "10ème", x: 55, y: 32 },
+  { id: "port-royal", name: "Port-Royal", area: "5ème", x: 48, y: 60 },
 ];
 
 export default function Realisations() {
