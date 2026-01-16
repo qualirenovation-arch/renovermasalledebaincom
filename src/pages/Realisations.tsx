@@ -144,6 +144,17 @@ import amiralRoussin4 from "@/assets/amiral-roussin-4.jpg";
 import amiralRoussin5 from "@/assets/amiral-roussin-5.jpg";
 import amiralRoussin6 from "@/assets/amiral-roussin-6.jpg";
 
+// Buffon Paris 5ème
+import buffon1 from "@/assets/buffon-1.jpg";
+import buffon2 from "@/assets/buffon-2.jpg";
+import buffon3 from "@/assets/buffon-3.jpg";
+import buffon4 from "@/assets/buffon-4.jpg";
+import buffon5 from "@/assets/buffon-5.jpg";
+import buffon6 from "@/assets/buffon-6.jpg";
+import buffon7 from "@/assets/buffon-7.jpg";
+import buffonAvant1 from "@/assets/buffon-avant-1.jpg";
+import buffonAvant2 from "@/assets/buffon-avant-2.jpg";
+
 interface Photo {
   id: number;
   image: string;
@@ -351,6 +362,24 @@ const albums: Album[] = [
       { id: 4, image: amiralRoussin2, title: "Détail vasque", description: "Robinet noir et plan bois" },
       { id: 5, image: amiralRoussin6, title: "Vue générale", description: "Harmonie bois et blanc" },
       { id: 6, image: amiralRoussin4, title: "Placard buanderie", description: "Buanderie intégrée" },
+    ],
+  },
+  {
+    id: "buffon",
+    title: "Optimisation maximale",
+    location: "Paris 5ème - Rue Buffon",
+    description: "Pied-à-terre parisien familial hyper optimisé : lave-linge dissimulé derrière une porte à côté de la vasque, chauffe-eau intégré au-dessus du WC suspendu. Niches de rangement encastrées et meuble sur mesure avec plan chêne.",
+    coverImage: buffon1,
+    photos: [
+      { id: 1, image: buffon1, title: "Vue d'ensemble", description: "Douche, vasque et meuble optimisé" },
+      { id: 2, image: buffon2, title: "Vue générale", description: "WC suspendu et placard chauffe-eau" },
+      { id: 3, image: buffon3, title: "Espace WC", description: "Chauffe-eau dissimulé au-dessus" },
+      { id: 4, image: buffon4, title: "Meuble vasque", description: "Plan chêne et vasque bol" },
+      { id: 5, image: buffon5, title: "Détail vasque", description: "Robinetterie chromée élégante" },
+      { id: 6, image: buffon6, title: "Niches encastrées", description: "Rangements dans la douche" },
+      { id: 7, image: buffon7, title: "Lave-linge intégré", description: "Dissimulé derrière une porte" },
+      { id: 8, image: buffonAvant1, title: "Avant travaux", description: "Ancienne salle de bain" },
+      { id: 9, image: buffonAvant2, title: "Avant travaux", description: "Vue d'ensemble avant" },
     ],
   },
 ];
