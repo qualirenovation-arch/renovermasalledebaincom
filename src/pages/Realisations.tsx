@@ -117,6 +117,13 @@ import nicolasRoret5 from "@/assets/nicolas-roret-5.jpg";
 import nicolasRoret6 from "@/assets/nicolas-roret-6.jpg";
 import nicolasRoret7 from "@/assets/nicolas-roret-7.jpg";
 import nicolasRoret8 from "@/assets/nicolas-roret-8.jpg";
+import nicolasRoret9 from "@/assets/nicolas-roret-9.jpg";
+import nicolasRoret10 from "@/assets/nicolas-roret-10.jpg";
+import nicolasRoret11 from "@/assets/nicolas-roret-11.jpg";
+import nicolasRoretAvant1 from "@/assets/nicolas-roret-avant-1.jpg";
+import nicolasRoretTravaux1 from "@/assets/nicolas-roret-travaux-1.jpg";
+import nicolasRoret3d1 from "@/assets/nicolas-roret-3d-1.jpg";
+import nicolasRoret3d2 from "@/assets/nicolas-roret-3d-2.jpg";
 
 // Soisy-sous-Montmorency WC
 import soisy1 from "@/assets/soisy-1.jpg";
@@ -659,18 +666,24 @@ const inProgressAlbums: Album[] = [
     id: "nicolas-roret",
     title: "Zellige turquoise & Or",
     location: "Paris 13ème - Rue Nicolas Roret",
-    description: "AVANT : Salle de bain vétuste avec équipements dépassés, carrelage abîmé et agencement peu fonctionnel. APRÈS : Transformation luxueuse avec douche italienne en zellige turquoise posé en chevron, paroi et robinetterie dorées, niches intégrées avec listel or, carrelage grand format effet marbre. WC suspendu assorti avec lave-mains, meuble vasque blanc et rangements sur mesure optimisant chaque recoin.",
+    description: "AVANT : WC vétuste avec carrelage bleu abîmé, équipements datés et peinture écaillée. APRÈS : Transformation luxueuse avec douche italienne en zellige turquoise posé en chevron, paroi et robinetterie dorées, niches intégrées avec listel or, carrelage grand format effet marbre. WC suspendu assorti avec lave-mains doré, local technique optimisé intégrant chauffe-eau et lave-linge.",
     coverImage: nicolasRoret5,
     isInProgress: false,
     photos: [
       { id: 1, image: nicolasRoret5, title: "Après — Douche italienne", description: "Zellige turquoise chevron et paroi dorée" },
       { id: 2, image: nicolasRoret1, title: "Après — Détail niches", description: "Niches encastrées avec listel or" },
       { id: 3, image: nicolasRoret2, title: "Après — Vue d'ensemble", description: "Douche, sèche-serviettes et rangements" },
-      { id: 4, image: nicolasRoret3, title: "Après — Rangements", description: "Placard technique intégré" },
-      { id: 5, image: nicolasRoret4, title: "Après — Lave-linge", description: "Dissimulation technique astucieuse" },
-      { id: 6, image: nicolasRoret6, title: "Après — WC suspendu", description: "Zellige turquoise et lave-mains" },
-      { id: 7, image: nicolasRoret7, title: "Après — Vasque suspendue", description: "Meuble blanc, robinetterie dorée" },
-      { id: 8, image: nicolasRoret8, title: "Avant — Visualisation 3D", description: "Projet de conception initial" },
+      { id: 4, image: nicolasRoret9, title: "Après — Vasque et miroir", description: "Frise zellige turquoise et robinetterie dorée" },
+      { id: 5, image: nicolasRoret11, title: "Après — WC suspendu", description: "Zellige chevron et lave-mains doré" },
+      { id: 6, image: nicolasRoret10, title: "Après — Local technique", description: "Chauffe-eau et lave-linge intégrés" },
+      { id: 7, image: nicolasRoret3, title: "Après — Rangements", description: "Placard technique intégré" },
+      { id: 8, image: nicolasRoret4, title: "Après — Lave-linge", description: "Dissimulation technique astucieuse" },
+      { id: 9, image: nicolasRoret6, title: "Après — WC vue angle", description: "Zellige turquoise et carrelage marbre" },
+      { id: 10, image: nicolasRoret7, title: "Après — Vasque suspendue", description: "Meuble blanc, robinetterie dorée" },
+      { id: 11, image: nicolasRoretTravaux1, title: "Travaux — Pose zellige WC", description: "Installation du zellige chevron" },
+      { id: 12, image: nicolasRoretAvant1, title: "Avant — WC vétuste", description: "État initial avec carrelage bleu et équipements datés" },
+      { id: 13, image: nicolasRoret3d1, title: "Avant — Visualisation 3D", description: "Projet de conception initial" },
+      { id: 14, image: nicolasRoret3d2, title: "Avant — Vue 3D vasque", description: "Conception du meuble vasque" },
     ],
   },
 ];
