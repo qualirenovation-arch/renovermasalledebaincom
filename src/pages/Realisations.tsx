@@ -521,7 +521,7 @@ const albums: Album[] = [
   {
     id: "temple",
     title: "Style masculin — Bois & Noir",
-    location: "3ème arrondissement - Rue du Temple",
+    location: "Paris 3ème arrondissement - Rue du Temple",
     description: "AVANT : Salle de bain vétuste avec baignoire, lavabo sur pied et carrelage blanc/bleu dégradé. APRÈS : Transformation complète pour un appartement au masculin. Douche à l'italienne avec receveur extra-plat et paroi fixe noire, meuble vasque en bois clair avec plan blanc, robinetterie noire mate, miroir rond LED. Lave-linge intégré sous le plan vasque. WC suspendu avec chauffe-eau dissimulé dans le placard au-dessus.",
     coverImage: temple1,
     photos: [
