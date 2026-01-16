@@ -250,6 +250,12 @@ interface Photo {
   description: string;
 }
 
+interface Review {
+  text: string;
+  author: string;
+  link: string;
+}
+
 interface Album {
   id: string;
   title: string;
@@ -258,6 +264,7 @@ interface Album {
   coverImage: string;
   photos: Photo[];
   isInProgress?: boolean;
+  review?: Review;
 }
 
 const albums: Album[] = [
@@ -931,6 +938,29 @@ export default function Realisations() {
                   <p className="text-sm text-wood font-medium mb-2">{selectedAlbum.location}</p>
                   <h2 className="font-display text-3xl font-semibold mb-4">{selectedAlbum.title}</h2>
                   <p className="text-muted-foreground max-w-3xl">{selectedAlbum.description}</p>
+                  
+                  {/* Avis client */}
+                  {selectedAlbum.review && (
+                    <motion.div 
+                      className="mt-6 p-6 bg-accent/20 rounded-xl border border-border"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.2 }}
+                    >
+                      <p className="text-sm text-wood font-medium mb-3">★★★★★ Avis du client</p>
+                      <a 
+                        href={selectedAlbum.review.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="block hover:opacity-80 transition-opacity"
+                      >
+                        <blockquote className="font-display text-lg italic mb-3 text-foreground">
+                          "{selectedAlbum.review.text}"
+                        </blockquote>
+                        <p className="text-wood font-semibold text-sm">— {selectedAlbum.review.author} <span className="underline ml-2">Voir sur Houzz →</span></p>
+                      </a>
+                    </motion.div>
+                  )}
                 </div>
 
                 {/* Photos grid */}
