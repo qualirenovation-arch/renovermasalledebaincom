@@ -36,6 +36,8 @@ interface FormData {
   telephone: string;
   codePostal: string;
   typeLogement: string;
+  etage: string;
+  ascenseur: string;
   typeInstallation: string;
   typeDouche: string;
   typePommeau: string;
@@ -61,6 +63,8 @@ const initialFormData: FormData = {
   telephone: "",
   codePostal: "",
   typeLogement: "",
+  etage: "",
+  ascenseur: "",
   typeInstallation: "",
   typeDouche: "",
   typePommeau: "",
@@ -116,6 +120,21 @@ const FinitionsIcon = () => (
 const typeLogementOptions = [
   { value: "appartement", label: "Appartement", icon: Building2 },
   { value: "maison", label: "Maison", icon: Home }
+];
+
+const etageOptions = [
+  { value: "rdc", label: "Rez-de-chaussée" },
+  { value: "1", label: "1er étage" },
+  { value: "2", label: "2ème étage" },
+  { value: "3", label: "3ème étage" },
+  { value: "4", label: "4ème étage" },
+  { value: "5", label: "5ème étage" },
+  { value: "6+", label: "6ème et plus" },
+];
+
+const ascenseurOptions = [
+  { value: "oui", label: "Oui" },
+  { value: "non", label: "Non" },
 ];
 
 // Options avec pictogrammes
@@ -495,6 +514,48 @@ export default function Devis() {
                         ))}
                       </div>
                     </div>
+
+                    {/* Étage et ascenseur - conditionnel si appartement */}
+                    {formData.typeLogement === "appartement" && (
+                      <>
+                        <div className="space-y-2">
+                          <Label>À quel étage ?</Label>
+                          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                            {etageOptions.map((option) => (
+                              <div 
+                                key={option.value} 
+                                className={`flex items-center justify-center p-3 rounded-xl border-2 transition-all cursor-pointer text-center ${
+                                  formData.etage === option.value 
+                                    ? 'border-foreground bg-foreground/5' 
+                                    : 'border-border bg-card hover:border-foreground/30'
+                                }`}
+                                onClick={() => handleChange("etage", option.value)}
+                              >
+                                <span className="font-medium text-sm">{option.label}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        <div className="space-y-2">
+                          <Label>Y a-t-il un ascenseur ?</Label>
+                          <div className="grid grid-cols-2 gap-3">
+                            {ascenseurOptions.map((option) => (
+                              <div 
+                                key={option.value} 
+                                className={`flex items-center justify-center gap-2 p-4 rounded-xl border-2 transition-all cursor-pointer ${
+                                  formData.ascenseur === option.value 
+                                    ? 'border-foreground bg-foreground/5' 
+                                    : 'border-border bg-card hover:border-foreground/30'
+                                }`}
+                                onClick={() => handleChange("ascenseur", option.value)}
+                              >
+                                <span className="font-medium">{option.label}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
 
