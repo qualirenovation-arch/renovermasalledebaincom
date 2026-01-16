@@ -145,6 +145,8 @@ import soisySdb3 from "@/assets/soisy-sdb-3.jpg";
 import soisySdb4 from "@/assets/soisy-sdb-4.jpg";
 import soisySdb5 from "@/assets/soisy-sdb-5.jpg";
 import soisySdbAvant from "@/assets/soisy-sdb-avant.jpg";
+import soisySdbAvant2 from "@/assets/soisy-sdb-avant-2.jpg";
+import soisySdbAvant3 from "@/assets/soisy-sdb-avant-3.jpg";
 
 // Boulevard Saint-Germain
 import stgermain1 from "@/assets/stgermain-1.jpg";
@@ -461,6 +463,8 @@ const albums: Album[] = [
       { id: 4, image: soisySdb4, title: "Après — WC suspendu", description: "Sèche-serviettes design noir" },
       { id: 5, image: soisySdb5, title: "Après — Vue complète", description: "Harmonie bleu et bois" },
       { id: 6, image: soisySdbAvant, title: "Avant — État initial", description: "Baignoire, bidet et WC sur podium" },
+      { id: 7, image: soisySdbAvant2, title: "Avant — Vue baignoire", description: "Carrelage beige daté" },
+      { id: 8, image: soisySdbAvant3, title: "Avant — Vue bidet", description: "Équipements vétustes" },
     ],
   },
   {
