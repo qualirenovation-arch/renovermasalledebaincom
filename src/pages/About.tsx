@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { Shield, Award, Users, Clock, CheckCircle2, ArrowRight } from "lucide-react";
+import { Shield, Award, Users, Clock, CheckCircle2, ArrowRight, Camera } from "lucide-react";
 import aboutHistoire from "@/assets/about-histoire.jpg";
 import teamPhoto from "@/assets/team-photo.jpg";
 import teamChantier1 from "@/assets/team-chantier-1.jpg";
@@ -292,6 +292,35 @@ export default function About() {
                   className="w-full h-full object-cover"
                 />
               </motion.div>
+            </div>
+          </motion.div>
+
+          {/* Photographe partenaire */}
+          <motion.div
+            className="mt-16 pt-12 border-t border-primary-foreground/20"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="max-w-3xl mx-auto text-center">
+              <div className="w-16 h-16 rounded-2xl bg-accent/30 flex items-center justify-center mx-auto mb-6">
+                <Camera className="w-8 h-8 text-wood" />
+              </div>
+              <h3 className="font-display text-2xl font-semibold mb-4">
+                Stéphane Vasco, notre photographe partenaire
+              </h3>
+              <p className="text-primary-foreground/80 leading-relaxed mb-6">
+                Avant les travaux, nous immortalisons votre salle de bain. À la fin du chantier, 
+                Stéphane réalise un shooting professionnel pour capturer la transformation et vous 
+                offrir un album souvenir unique de cette aventure. Les réalisations que vous découvrez 
+                sur notre site sont le fruit de son travail assidu à nos côtés.
+              </p>
+              <Button variant="outline" size="lg" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                <Link to="/photographe">
+                  Découvrir Stéphane Vasco
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </Button>
             </div>
           </motion.div>
         </div>
