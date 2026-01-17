@@ -2,12 +2,14 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { Shield, Award, Users, Clock, CheckCircle2, ArrowRight, Camera } from "lucide-react";
+import { Shield, Award, Users, Clock, CheckCircle2, ArrowRight, Camera, PenTool } from "lucide-react";
 import aboutHistoire from "@/assets/about-histoire.jpg";
 import teamPhoto from "@/assets/team-photo.jpg";
 import teamChantier1 from "@/assets/team-chantier-1.jpg";
 import teamChantier3 from "@/assets/team-chantier-3.jpg";
 import stephaneVasco2 from "@/assets/stephane-vasco-2.jpg";
+import thierryBelmard1 from "@/assets/thierry-belmard-1.jpg";
+import thierryBelmard2 from "@/assets/thierry-belmard-2.jpg";
 
 const values = [
   { icon: Award, title: "Excellence", description: "Nous visons la perfection dans chaque détail de nos réalisations" },
@@ -293,6 +295,59 @@ export default function About() {
                   className="w-full h-full object-cover"
                 />
               </motion.div>
+            </div>
+          </motion.div>
+
+          {/* Architecte d'intérieur partenaire */}
+          <motion.div
+            className="mt-16 pt-12 border-t border-primary-foreground/20"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+              <div className="text-center lg:text-left">
+                <div className="w-16 h-16 rounded-2xl bg-accent/30 flex items-center justify-center mx-auto lg:mx-0 mb-6">
+                  <PenTool className="w-8 h-8 text-wood" />
+                </div>
+                <h3 className="font-display text-2xl font-semibold mb-4">
+                  Thierry Belmard, notre architecte d'intérieur partenaire
+                </h3>
+                <p className="text-primary-foreground/80 leading-relaxed mb-6">
+                  Fondateur de P3D Concept, Thierry collabore avec nous depuis plusieurs années sur 
+                  <strong className="text-accent"> plus de 60 projets</strong>. Il réalise les plans techniques 
+                  et les visualisations 3D de votre future salle de bain, garantissant une conception 
+                  sur-mesure parfaitement adaptée à vos besoins et à votre espace.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <motion.div 
+                  className="overflow-hidden rounded-2xl shadow-lg"
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                >
+                  <img 
+                    src={thierryBelmard1} 
+                    alt="Thierry Belmard - P3D Concept" 
+                    className="w-full h-56 object-cover"
+                  />
+                </motion.div>
+                <motion.div 
+                  className="overflow-hidden rounded-2xl shadow-lg"
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 }}
+                >
+                  <img 
+                    src={thierryBelmard2} 
+                    alt="Thierry Belmard avec l'équipe" 
+                    className="w-full h-56 object-cover"
+                  />
+                </motion.div>
+              </div>
             </div>
           </motion.div>
 
