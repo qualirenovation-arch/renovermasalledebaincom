@@ -28,7 +28,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <h3 className="font-display font-semibold mb-4 text-lg">RénoveMaSalleDeBain</h3>
+            <h3 className="font-display font-semibold mb-4 text-lg">renovermasalledebain.com</h3>
             <p className="text-primary-foreground/80 mb-2 leading-relaxed">
               <strong>6 rue d'Armaillé, 75017 Paris</strong>
             </p>
@@ -103,7 +103,7 @@ export function Footer() {
       <div className="border-t border-primary-foreground/10">
         <div className="container-custom py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
           <div className="text-center md:text-left">
-            <p>RénoverMaSalleDeBain.com est un site édité par QualiRénovation by QualiConcept</p>
+            <p>renovermasalledebain.com est un site édité par QualiRénovation by QualiConcept</p>
             <p className="mt-1">6 rue d'Armaillé, 75017 Paris — © 2024 Tous droits réservés.</p>
           </div>
           <div className="flex gap-6">

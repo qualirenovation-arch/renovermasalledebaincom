@@ -14,7 +14,7 @@ export default function PolitiqueConfidentialite() {
             {/* Introduction */}
             <section>
               <p className="text-muted-foreground leading-relaxed">
-                QUALICONCEPT, exploitant le site <strong>RénoverMaSalleDeBain.com</strong>, s'engage à protéger la vie privée des utilisateurs de son site internet. Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD).
+                QUALICONCEPT, exploitant le site <strong>renovermasalledebain.com</strong>, s'engage à protéger la vie privée des utilisateurs de son site internet. Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD).
               </p>
             </section>
 

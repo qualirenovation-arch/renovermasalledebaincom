@@ -148,7 +148,7 @@ const faqCategories = [
     questions: [
       {
         question: "Pourquoi choisir votre entreprise de salle de bain à Paris ?",
-        answer: "RénoveMaSalleDeBain (Qualirenovation by Qualiconcept) est une entreprise spécialisée depuis 2019, avec une maître d'œuvre forte de 20 ans d'expérience sur les chantiers parisiens. Nous sommes certifiés Schlüter et Wedi, assurés chez MIC Assurances, et nous offrons un suivi visuel quotidien par WhatsApp."
+        answer: "renovermasalledebain.com (Qualirenovation by Qualiconcept) est une entreprise spécialisée depuis 2019, avec une maître d'œuvre forte de 20 ans d'expérience sur les chantiers parisiens. Nous sommes certifiés Schlüter et Wedi, assurés chez MIC Assurances, et nous offrons un suivi visuel quotidien par WhatsApp."
       },
       {
         question: "Quelle est votre zone d'intervention ?",
