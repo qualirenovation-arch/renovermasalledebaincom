@@ -759,9 +759,8 @@ const albums: Album[] = [
     photos: [
       { id: 1, image: nicolasRoret11, title: "Après — WC suspendu", description: "Zellige chevron et lave-mains laiton brossé" },
       { id: 2, image: nicolasRoret6, title: "Après — WC vue angle", description: "Zellige turquoise et carrelage marbre" },
-      { id: 3, image: nicolasRoret10, title: "Après — Local technique", description: "Chauffe-eau et lave-linge intégrés" },
-      { id: 4, image: nicolasRoretTravaux1, title: "Travaux — Pose zellige WC", description: "Installation du zellige chevron" },
-      { id: 5, image: nicolasRoretAvant1, title: "Avant — WC vétuste", description: "État initial avec carrelage bleu et équipements datés" },
+      { id: 3, image: nicolasRoretTravaux1, title: "Travaux — Pose zellige WC", description: "Installation du zellige chevron" },
+      { id: 4, image: nicolasRoretAvant1, title: "Avant — WC vétuste", description: "État initial avec carrelage bleu et équipements datés" },
     ],
   },
   {
