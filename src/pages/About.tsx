@@ -10,6 +10,7 @@ import teamChantier3 from "@/assets/team-chantier-3.jpg";
 import stephaneVasco2 from "@/assets/stephane-vasco-2.jpg";
 import thierryPelmard1 from "@/assets/thierry-pelmard-1.jpg";
 import thierryPelmard2 from "@/assets/thierry-pelmard-2.jpg";
+import carinaNahmani1 from "@/assets/carina-nahmani-1.jpg";
 
 const values = [
   { icon: Award, title: "Excellence", description: "Nous visons la perfection dans chaque détail de nos réalisations" },
@@ -306,13 +307,26 @@ export default function About() {
             viewport={{ once: true }}
           >
             <div className="max-w-4xl mx-auto text-center lg:text-left">
-              <div className="w-16 h-16 rounded-2xl bg-accent/30 flex items-center justify-center mx-auto lg:mx-0 mb-6">
-                <HardHat className="w-8 h-8 text-wood" />
-              </div>
-              <h3 className="font-display text-2xl font-semibold mb-4">
-                Carina Nahmani – Maître d'œuvre
-              </h3>
-              <div className="space-y-4 text-primary-foreground/80 leading-relaxed">
+              <div className="grid gap-8 lg:grid-cols-[220px_1fr] items-start">
+                <div className="mx-auto lg:mx-0 w-full max-w-[260px]">
+                  <div className="aspect-square rounded-2xl overflow-hidden bg-accent/10">
+                    <img
+                      src={carinaNahmani1}
+                      alt="Portrait de Carina Nahmani, maître d'œuvre"
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <div className="w-16 h-16 rounded-2xl bg-accent/30 flex items-center justify-center mx-auto lg:mx-0 mb-6">
+                    <HardHat className="w-8 h-8 text-wood" />
+                  </div>
+                  <h3 className="font-display text-2xl font-semibold mb-4">
+                    Carina Nahmani – Maître d'œuvre
+                  </h3>
+                  <div className="space-y-4 text-primary-foreground/80 leading-relaxed">
                 <p className="text-lg italic text-accent">
                   « Seul on n'avance pas, en équipe oui. »
                 </p>
@@ -335,20 +349,22 @@ export default function About() {
                   Ce qui la motive avant tout ? <strong className="text-accent">Vous voir sourire</strong> et livrer 
                   un chantier bien mené, fluide et parfaitement abouti.
                 </p>
-              </div>
-              <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
-                <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
-                  Chef d'orchestre
-                </span>
-                <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
-                  Énergie positive
-                </span>
-                <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
-                  Rien au hasard
-                </span>
-                <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
-                  Toujours disponible
-                </span>
+                  </div>
+                  <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
+                    <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
+                      Chef d'orchestre
+                    </span>
+                    <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
+                      Énergie positive
+                    </span>
+                    <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
+                      Rien au hasard
+                    </span>
+                    <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
+                      Toujours disponible
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>
