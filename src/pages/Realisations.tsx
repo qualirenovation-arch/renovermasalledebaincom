@@ -279,6 +279,7 @@ import pierreGuerin1 from "@/assets/pierre-guerin-1.jpg";
 import pierreGuerin2 from "@/assets/pierre-guerin-2.jpg";
 import pierreGuerin3 from "@/assets/pierre-guerin-3.jpg";
 import pierreGuerin4 from "@/assets/pierre-guerin-4.jpg";
+import pierreGuerin5 from "@/assets/pierre-guerin-5.jpg";
 
 // Saint-Ouen (93)
 import stOuen1 from "@/assets/st-ouen-1.jpg";
@@ -365,6 +366,7 @@ const albums: Album[] = [
       { id: 2, image: pierreGuerin2, title: "Après — Rangements sur-mesure", description: "Colonnes avec buanderie intégrée" },
       { id: 3, image: pierreGuerin3, title: "Après — Douche à l'italienne", description: "Robinetterie encastrée chromée" },
       { id: 4, image: pierreGuerin4, title: "Après — Détail niches", description: "Niches de rangement intégrées" },
+      { id: 5, image: pierreGuerin5, title: "Après — Buanderie", description: "Placards ouverts avec rangement intégré" },
     ],
   },
   {
