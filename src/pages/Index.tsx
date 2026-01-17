@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { ArrowRight, Phone, Pencil, Gem, Wrench } from "lucide-react";
+import { ArrowRight, Phone, Pencil, Gem, Wrench, Play } from "lucide-react";
 import jemmapes1 from "@/assets/jemmapes-1.jpg";
 import vincennesMr1 from "@/assets/vincennes-mr-1.jpg";
 import vincennesMr5 from "@/assets/vincennes-mr-5.jpg";
@@ -269,7 +269,7 @@ export default function Index() {
           </div>
 
           <motion.div 
-            className="text-center mt-12"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -280,6 +280,21 @@ export default function Index() {
                 Voir tous nos projets
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
+            </Button>
+            <Button 
+              variant="default" 
+              size="lg" 
+              asChild 
+              className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white rounded-md"
+            >
+              <a 
+                href="https://www.instagram.com/reel/DEc8OANsV-j/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <Play className="w-4 h-4 mr-2" />
+                Découvrir en vidéo
+              </a>
             </Button>
           </motion.div>
         </div>
