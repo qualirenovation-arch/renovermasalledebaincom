@@ -7,6 +7,96 @@ import { useState } from "react";
 
 const faqCategories = [
   {
+    title: "✨ Notre engagement",
+    intro: "Cette FAQ répond à vos interrogations. Mais parce que nous sommes avant tout dans une relation humaine, tout est dit dès le départ, avant le premier coup de marteau. Le devis est clair, précis, et chaque étape est expliquée en amont. 👉 Aucune surprise, aucun coût caché, budget maîtrisé.",
+    questions: []
+  },
+  {
+    title: "🧾 Devis, budget et validation",
+    questions: [
+      {
+        question: "Comment valider le devis ?",
+        answer: "Le devis doit être signé et retourné, accompagné du premier acompte, par virement uniquement sur notre compte société. Le RIB, le montant de l'acompte et les CGV sont intégrés directement au devis. Tout est clair, au même endroit."
+      },
+      {
+        question: "Y a-t-il des travaux supplémentaires imprévus ?",
+        answer: "Non. Chaque plus-value ou moins-value est expliquée, chiffrée, et validée par vos soins avant exécution. 👉 Vous gardez la maîtrise totale de votre budget."
+      }
+    ]
+  },
+  {
+    title: "📐 Plans, croquis et 3D",
+    questions: [
+      {
+        question: "Faites-vous des plans ou des 3D ?",
+        answer: "Pour les petites surfaces, un croquis et la présentation de projets similaires suffisent généralement. La 3D est possible, si le projet le nécessite et si c'est votre souhait, via un forfait dédié."
+      },
+      {
+        question: "Avec qui réalisez-vous les plans ?",
+        answer: "Nous travaillons avec P3D Concept, partenaire de longue date. Vous recevez un devis précis, la prestation est payée directement à P3D Concept, et vous échangez librement avec lui pour bien préparer le projet.",
+        instagramLink: "C_aaIoPNMBz"
+      }
+    ]
+  },
+  {
+    title: "👷 Suivi de chantier",
+    questions: [
+      {
+        question: "Qui gère le chantier ?",
+        answer: "Un interlocuteur unique assure : la coordination des artisans, le respect du planning, le contrôle qualité, et les points réguliers avec vous."
+      },
+      {
+        question: "Comment suivre mon chantier si je suis très occupé, en province ou à l'étranger ?",
+        answer: "Nous assurons un suivi à distance avec : photos, comptes-rendus, échanges téléphone ou visio si nécessaire."
+      }
+    ]
+  },
+  {
+    title: "🧱 Démolition & vérifications techniques",
+    questions: [
+      {
+        question: "Vérifiez-vous l'existant ?",
+        answer: "Oui, systématiquement après la démolition : réseaux, évacuations, colonnes en fonte ou en plomb, accès techniques et compteurs. 👉 C'est le bon moment pour corriger, afin d'éviter de recasser plus tard."
+      }
+    ]
+  },
+  {
+    title: "🏢 Copropriété, syndic et voisins",
+    questions: [
+      {
+        question: "Le syndic est-il informé ?",
+        answer: "Oui. Dès le devis signé, vous recevez : un avis de travaux à afficher, un mail type à adresser au syndic. Les voisins sont informés et les parties communes sont protégées. 👉 Nous ne faisons pas de travaux à la sauvage."
+      }
+    ]
+  },
+  {
+    title: "🛡️ Assurances",
+    questions: [
+      {
+        question: "Êtes-vous assuré ?",
+        answer: "Oui. Les attestations d'assurance (RC pro et décennale) sont fournies avant la signature du devis et transmises au syndic avec les avis de travaux."
+      }
+    ]
+  },
+  {
+    title: "📝 Réception des travaux",
+    questions: [
+      {
+        question: "Comment se passe la réception du chantier ?",
+        answer: "Nous organisons une réunion de pré-réception pour lister les finitions et détails à ajuster. Une fois ces points traités, le procès-verbal de réception de chantier est signé. 👉 La signature du PV marque la fin officielle des travaux et le démarrage des garanties."
+      }
+    ]
+  },
+  {
+    title: "📸 Inspirations & réalisations",
+    questions: [
+      {
+        question: "Où puis-je voir vos réalisations ?",
+        answer: "Nous partageons régulièrement nos réalisations et conseils techniques sur Instagram. 👉 Les photos valent souvent mieux que mille explications. Consultez également notre page Réalisations pour découvrir nos projets terminés et en cours."
+      }
+    ]
+  },
+  {
     title: "Rénovation salle de bain",
     questions: [
       {
@@ -66,23 +156,6 @@ const faqCategories = [
       {
         question: "Qu'est-ce qu'un maître d'œuvre salle de bain ?",
         answer: "Le maître d'œuvre salle de bain est votre chef de projet dédié. Il coordonne tous les corps de métier (plomberie salle de bain, carrelage, électricité), contrôle la qualité des travaux, veille au respect du budget et des délais. Chez nous, Carina supervise personnellement chaque chantier."
-      },
-      {
-        question: "Quelles garanties proposez-vous ?",
-        answer: "Nous offrons une garantie décennale et une responsabilité civile professionnelle MIC Assurances, une garantie étanchéité 10 ans, un devis détaillé avec photos via Graneet, et un suivi visuel quotidien par WhatsApp et vidéo."
-      },
-      {
-        question: "Le devis est-il ferme et définitif dès le départ ?",
-        answer: "Non, nous fonctionnons avec un premier devis estimatif. Ensuite, au fil du chantier, nous émettons des situations de chantier qui évoluent selon la validation des produits par vos soins. Cette méthode nous permet de réajuster au plus juste et de vous offrir une transparence totale sur l'avancement des travaux. C'est également indispensable pour les appels de fonds qui rythment le paiement de votre projet."
-      },
-      {
-        question: "Comment gérez-vous les travaux supplémentaires ?",
-        answer: "Les travaux supplémentaires peuvent survenir en cours de chantier suite à des découvertes (état des canalisations, murs, etc.) ou à vos nouvelles envies. Dans tous les cas, rien n'est engagé sans votre accord écrit préalable. Nous vous présentons un avenant détaillé avec le coût exact avant toute intervention. Cette transparence vous garantit de ne jamais avoir de mauvaise surprise sur la facture finale."
-      },
-      {
-        question: "Qui réalise les plans de ma future salle de bain ?",
-        answer: "Pour la réalisation des plans, nous travaillons avec P3D Concept, partenaire avec qui nous formons un binôme depuis plusieurs années. Vous recevez un devis précis, la prestation est réglée directement auprès de P3D Concept, et vous échangez librement avec lui pour préparer au mieux votre projet. Une collaboration fluide, pour un projet bien pensé dès le départ.",
-        instagramLink: "C_aaIoPNMBz"
       }
     ]
   },
@@ -222,25 +295,74 @@ export default function FAQ() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: categoryIndex * 0.1 }}
+                transition={{ delay: categoryIndex * 0.05 }}
               >
-                <h2 className="font-display text-2xl md:text-3xl font-semibold mb-6 text-primary">
+                <h2 className="font-display text-2xl md:text-3xl font-semibold mb-4 text-primary">
                   {category.title}
                 </h2>
-                <div className="card-elevated rounded-2xl p-6 md:p-8">
-                  {category.questions.map((item, questionIndex) => (
-                    <FAQItem
-                      key={questionIndex}
-                      question={item.question}
-                      answer={item.answer}
-                      isOpen={openItems[`${categoryIndex}-${questionIndex}`] || false}
-                      onClick={() => toggleItem(categoryIndex, questionIndex)}
-                      instagramLink={'instagramLink' in item ? (item as any).instagramLink : undefined}
-                    />
-                  ))}
-                </div>
+                {'intro' in category && category.intro && (
+                  <p className="text-muted-foreground mb-6 leading-relaxed bg-accent/20 p-4 rounded-xl border-l-4 border-primary">
+                    {(category as any).intro}
+                  </p>
+                )}
+                {category.questions.length > 0 && (
+                  <div className="card-elevated rounded-2xl p-6 md:p-8">
+                    {category.questions.map((item, questionIndex) => (
+                      <FAQItem
+                        key={questionIndex}
+                        question={item.question}
+                        answer={item.answer}
+                        isOpen={openItems[`${categoryIndex}-${questionIndex}`] || false}
+                        onClick={() => toggleItem(categoryIndex, questionIndex)}
+                        instagramLink={'instagramLink' in item ? (item as any).instagramLink : undefined}
+                      />
+                    ))}
+                  </div>
+                )}
               </motion.div>
             ))}
+
+            {/* Résumé */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-primary/10 to-accent/20 rounded-2xl p-8 border border-primary/20"
+            >
+              <h2 className="font-display text-2xl md:text-3xl font-semibold mb-6 text-primary">
+                🤝 En résumé
+              </h2>
+              <ul className="space-y-3 text-foreground">
+                <li className="flex items-center gap-3">
+                  <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                  <span>Devis clair et contractuel</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                  <span>Budget maîtrisé</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                  <span>Suivi de chantier rigoureux</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                  <span>Ajustements validés avant exécution</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                  <span>Respect de la copropriété</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                  <span>Réception préparée et encadrée</span>
+                </li>
+              </ul>
+              <p className="mt-6 text-muted-foreground italic">
+                Chez QualiRénovation by QualiConcept, on ne fait pas que rénover un lieu : 
+                <span className="text-primary font-medium"> on vous accompagne, sereinement, du début à la fin.</span>
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
