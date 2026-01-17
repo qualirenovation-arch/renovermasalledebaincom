@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { Camera, Phone, Globe, MapPin, Star, ArrowRight, ExternalLink, Award, Building, Home, Eye } from "lucide-react";
+import stephaneVasco1 from "@/assets/stephane-vasco-1.jpg";
+import stephaneVasco2 from "@/assets/stephane-vasco-2.jpg";
 
 const specialties = [
   {
@@ -157,6 +159,53 @@ export default function Photographe() {
               </motion.div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Photos en action */}
+      <section className="section-padding bg-muted/30">
+        <div className="container-custom">
+          <motion.div 
+            className="text-center max-w-3xl mx-auto mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
+              Stéphane en action
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Sur nos chantiers, Stéphane déploie tout son savoir-faire pour capturer chaque détail
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <motion.div 
+              className="overflow-hidden rounded-2xl shadow-lg"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <img 
+                src={stephaneVasco1} 
+                alt="Stéphane Vasco en plein shooting dans une cuisine rénovée" 
+                className="w-full h-80 object-cover"
+              />
+            </motion.div>
+            <motion.div 
+              className="overflow-hidden rounded-2xl shadow-lg"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              <img 
+                src={stephaneVasco2} 
+                alt="Stéphane Vasco préparant son trépied pour un reportage photo" 
+                className="w-full h-80 object-cover"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 
