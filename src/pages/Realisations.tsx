@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
@@ -776,9 +776,18 @@ const projectLocations: ProjectLocation[] = [
 ];
 
 export default function Realisations() {
+  const location = useLocation();
   const [selectedAlbum, setSelectedAlbum] = useState<Album | null>(null);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [viewMode, setViewMode] = useState<"completed" | "inProgress">("completed");
+
+  // Détecter l'ancre #chantiers-en-cours dans l'URL
+  useEffect(() => {
+    if (location.hash === "#chantiers-en-cours") {
+      setViewMode("inProgress");
+      setSelectedAlbum(null);
+    }
+  }, [location.hash]);
 
   const currentAlbums = viewMode === "completed" ? albums : inProgressAlbums;
 
@@ -938,7 +947,8 @@ export default function Realisations() {
         </section>
       )}
 
-      {/* Albums Grid */}
+      {/* Albums Grid - Only show for completed albums or when viewing a specific album */}
+      {(viewMode === "completed" || selectedAlbum) && (
       <section className="section-padding">
         <div className="container-custom">
           <AnimatePresence mode="wait">
@@ -999,7 +1009,7 @@ export default function Realisations() {
                   className="flex items-center gap-2 text-wood font-medium mb-8 hover:underline"
                 >
                   <ArrowLeft className="w-4 h-4" />
-                  Retour aux albums
+                  {viewMode === "inProgress" ? "Retour à la carte" : "Retour aux albums"}
                 </button>
 
                 {/* Album header */}
@@ -1059,6 +1069,7 @@ export default function Realisations() {
           </AnimatePresence>
         </div>
       </section>
+      )}
 
       {/* Photo Lightbox */}
       <AnimatePresence>
