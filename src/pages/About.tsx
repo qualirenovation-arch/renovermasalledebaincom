@@ -5,6 +5,9 @@ import { Layout } from "@/components/layout/Layout";
 import { Shield, Award, Users, Clock, CheckCircle2, ArrowRight } from "lucide-react";
 import aboutHistoire from "@/assets/about-histoire.jpg";
 import teamPhoto from "@/assets/team-photo.jpg";
+import teamChantier1 from "@/assets/team-chantier-1.jpg";
+import teamChantier2 from "@/assets/team-chantier-2.jpg";
+import teamChantier3 from "@/assets/team-chantier-3.jpg";
 
 const values = [
   { icon: Award, title: "Excellence", description: "Nous visons la perfection dans chaque détail de nos réalisations" },
@@ -217,7 +220,7 @@ export default function About() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
             <motion.div
               className="aspect-[4/3] rounded-2xl overflow-hidden"
               initial={{ opacity: 0, x: -30 }}
@@ -257,6 +260,52 @@ export default function About() {
               </p>
             </motion.div>
           </div>
+
+          {/* Gallery photos équipe sur chantier */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="font-display text-2xl font-semibold text-center mb-8">
+              Nos artisans en action
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <motion.div 
+                className="aspect-[4/3] rounded-2xl overflow-hidden"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img 
+                  src={teamChantier1} 
+                  alt="L'équipe au complet sur un chantier parisien" 
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+              <motion.div 
+                className="aspect-[4/3] rounded-2xl overflow-hidden"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img 
+                  src={teamChantier3} 
+                  alt="Artisan réalisant des travaux de perçage" 
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+              <motion.div 
+                className="aspect-[4/3] rounded-2xl overflow-hidden"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img 
+                  src={teamChantier2} 
+                  alt="Pause déjeuner conviviale sur le chantier" 
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
