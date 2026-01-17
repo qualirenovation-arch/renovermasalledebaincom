@@ -323,6 +323,7 @@ interface Photo {
   image: string;
   title: string;
   description: string;
+  isVideo?: boolean;
 }
 
 interface Review {
@@ -423,9 +424,14 @@ const albums: Album[] = [
     photos: [
       { id: 1, image: bobillot1, title: "Après — Vue d'ensemble", description: "Meuble bois, plan noir et robinetterie laiton" },
       { id: 2, image: bobillot2, title: "Après — Détail vasque", description: "Zellige beige et applique murale dorée" },
-      { id: 3, image: bobillotAvant1, title: "Avant — Vue générale", description: "Murs dégradés et tuyauteries apparentes" },
-      { id: 4, image: bobillotAvant2, title: "Avant — Cuisine", description: "État initial à rénover" },
-      { id: 5, image: bobillotAvant3, title: "Avant — Vue d'ensemble", description: "Logement nécessitant rénovation complète" },
+      { id: 3, image: "/videos/bobillot-1.mp4", title: "Vidéo — Visite salle de bain", description: "Découverte de la salle de bain rénovée", isVideo: true },
+      { id: 4, image: "/videos/bobillot-2.mp4", title: "Vidéo — Détails finitions", description: "Robinetterie laiton et zellige beige", isVideo: true },
+      { id: 5, image: "/videos/bobillot-3.mp4", title: "Vidéo — Cuisine", description: "Cuisine rénovée aux teintes beige et bois", isVideo: true },
+      { id: 6, image: "/videos/bobillot-4.mp4", title: "Vidéo — Vue d'ensemble", description: "Visite complète de la rénovation", isVideo: true },
+      { id: 7, image: "/videos/bobillot-5.mp4", title: "Vidéo — Ambiance finale", description: "Rendu final du projet", isVideo: true },
+      { id: 8, image: bobillotAvant1, title: "Avant — Vue générale", description: "Murs dégradés et tuyauteries apparentes" },
+      { id: 9, image: bobillotAvant2, title: "Avant — Cuisine", description: "État initial à rénover" },
+      { id: 10, image: bobillotAvant3, title: "Avant — Vue d'ensemble", description: "Logement nécessitant rénovation complète" },
     ],
   },
   {
@@ -1282,7 +1288,7 @@ export default function Realisations() {
                   )}
                 </div>
 
-                {/* Photos grid */}
+                {/* Photos/Videos grid */}
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                   {selectedAlbum.photos.map((photo, index) => (
                     <motion.div
@@ -1293,12 +1299,31 @@ export default function Realisations() {
                       className="group cursor-pointer"
                       onClick={() => setSelectedPhotoIndex(index)}
                     >
-                      <div className="aspect-square overflow-hidden rounded-xl">
-                        <img 
-                          src={photo.image} 
-                          alt={photo.title}
-                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                        />
+                      <div className="aspect-square overflow-hidden rounded-xl relative">
+                        {photo.isVideo ? (
+                          <>
+                            <video 
+                              src={photo.image} 
+                              className="w-full h-full object-cover"
+                              muted
+                              playsInline
+                              preload="metadata"
+                            />
+                            <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+                              <div className="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center">
+                                <svg className="w-5 h-5 text-primary ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                  <path d="M8 5v14l11-7z"/>
+                                </svg>
+                              </div>
+                            </div>
+                          </>
+                        ) : (
+                          <img 
+                            src={photo.image} 
+                            alt={photo.title}
+                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                          />
+                        )}
                       </div>
                       <p className="mt-2 text-sm font-medium truncate">{photo.title}</p>
                     </motion.div>
@@ -1350,11 +1375,21 @@ export default function Realisations() {
               className="max-w-5xl max-h-[85vh] flex flex-col items-center"
               onClick={(e) => e.stopPropagation()}
             >
-              <img 
-                src={selectedAlbum.photos[selectedPhotoIndex].image} 
-                alt={selectedAlbum.photos[selectedPhotoIndex].title}
-                className="max-h-[75vh] w-auto object-contain rounded-lg"
-              />
+              {selectedAlbum.photos[selectedPhotoIndex].isVideo ? (
+                <video 
+                  src={selectedAlbum.photos[selectedPhotoIndex].image} 
+                  className="max-h-[75vh] w-auto object-contain rounded-lg"
+                  controls
+                  autoPlay
+                  playsInline
+                />
+              ) : (
+                <img 
+                  src={selectedAlbum.photos[selectedPhotoIndex].image} 
+                  alt={selectedAlbum.photos[selectedPhotoIndex].title}
+                  className="max-h-[75vh] w-auto object-contain rounded-lg"
+                />
+              )}
               <div className="mt-4 text-center text-white">
                 <h3 className="text-xl font-semibold">{selectedAlbum.photos[selectedPhotoIndex].title}</h3>
                 <p className="text-white/70">{selectedAlbum.photos[selectedPhotoIndex].description}</p>
