@@ -469,8 +469,9 @@ const albums: Album[] = [
     id: "paris17-pereire",
     title: "Les Ternes - Chevrons",
     location: "Paris 17ème - Bd Pereire",
-    description: "AVANT : Salle de bain des années 80 avec carrelage dépassé. APRÈS : Rénovation complète avec carrelage chevrons blancs tendance, sol terrazzo gris et robinetterie chromée. Douche d'angle avec paroi vitrée et ciel de pluie.",
+    description: "AVANT : Dégâts des eaux et malfaçons laissés par une précédente entreprise — infiltrations, moisissures et travaux bâclés. APRÈS : Intervention de Carina pour reprendre le chantier. Rénovation complète avec carrelage chevrons blancs tendance, sol terrazzo gris et robinetterie chromée. On vous explique tout sur ce chantier de rattrapage !",
     coverImage: gallery11,
+    instagramLink: "https://www.instagram.com/reel/DDFsmeBNeur/",
     photos: [
       { id: 1, image: gallery11, title: "Après — Chevrons blancs", description: "Carrelage mural tendance" },
       { id: 2, image: gallery12, title: "Après — Douche d'angle", description: "Paroi vitrée et ciel de pluie" },
@@ -774,19 +775,6 @@ const albums: Album[] = [
       { id: 1, image: stMande1, title: "Après — Vue d'ensemble", description: "Douche à l'italienne moderne" },
       { id: 2, image: stMande2, title: "Après — Détails", description: "Finitions soignées" },
       { id: 3, image: stMande3, title: "Après — Vue complète", description: "Transformation réussie" },
-    ],
-  },
-  {
-    id: "pereire-degats-eaux",
-    title: "Dégâts des eaux & Malfaçons",
-    location: "Paris 17ème - Bd Pereire",
-    description: "AVANT : Dégâts des eaux et malfaçons laissés par une précédente entreprise. Infiltrations, moisissures et travaux bâclés. APRÈS : Intervention de Carina pour reprendre le chantier, réparer les dégâts et livrer une salle de bain fonctionnelle et esthétique. On vous explique tout sur ce chantier de rattrapage !",
-    coverImage: gallery11,
-    instagramLink: "https://www.instagram.com/reel/DDFsmeBNeur/",
-    photos: [
-      { id: 1, image: gallery11, title: "Après — Résultat final", description: "Réparation des malfaçons et dégâts des eaux" },
-      { id: 2, image: gallery12, title: "Après — Douche réparée", description: "Étanchéité refaite correctement" },
-      { id: 3, image: gallery13, title: "Après — Vue complète", description: "Chantier repris par Carina" },
     ],
   },
 ];
