@@ -297,6 +297,16 @@ import stMande1 from "@/assets/st-mande-1.jpg";
 import stMande2 from "@/assets/st-mande-2.jpg";
 import stMande3 from "@/assets/st-mande-3.jpg";
 
+// Avenue Matignon Paris 8ème
+import matignon1 from "@/assets/matignon-1.jpg";
+import matignon2 from "@/assets/matignon-2.jpg";
+import matignon3 from "@/assets/matignon-3.jpg";
+import matignon4 from "@/assets/matignon-4.jpg";
+import matignonAvant1 from "@/assets/matignon-avant-1.jpg";
+import matignonAvant2 from "@/assets/matignon-avant-2.jpg";
+import matignonAvant3 from "@/assets/matignon-avant-3.jpg";
+import matignonAvant4 from "@/assets/matignon-avant-4.jpg";
+
 interface Photo {
   id: number;
   image: string;
@@ -367,6 +377,23 @@ const albums: Album[] = [
       { id: 3, image: pierreGuerin3, title: "Après — Douche à l'italienne", description: "Robinetterie encastrée chromée" },
       { id: 4, image: pierreGuerin4, title: "Après — Détail niches", description: "Niches de rangement intégrées" },
       { id: 5, image: pierreGuerin5, title: "Après — Buanderie", description: "Placards ouverts avec rangement intégré" },
+    ],
+  },
+  {
+    id: "matignon",
+    title: "Rafraîchissement entre deux locations",
+    location: "Paris 8ème - Avenue Matignon",
+    description: "AVANT : Salle de bain dans son jus avec baignoire et vasque roses, carrelage marbre vieillot et papier peint daté. APRÈS : Transformation complète en espace épuré et moderne. Carrelage effet marbre grand format, douche à l'italienne avec robinetterie Grohe encastrée, double vasque contemporaine et WC suspendu.",
+    coverImage: matignon1,
+    photos: [
+      { id: 1, image: matignon1, title: "Après — Vue d'ensemble", description: "Douche, WC suspendu et sèche-serviettes" },
+      { id: 2, image: matignon2, title: "Après — WC suspendu", description: "Étagères en verre et effet marbre" },
+      { id: 3, image: matignon3, title: "Après — Douche Grohe", description: "Robinetterie encastrée et niche de rangement" },
+      { id: 4, image: matignon4, title: "Après — Double vasque", description: "Meuble 3D blanc et robinetterie chromée" },
+      { id: 5, image: matignonAvant1, title: "Avant — Chambre vers SDB", description: "Vue depuis la chambre sur la salle de bain rose" },
+      { id: 6, image: matignonAvant2, title: "Avant — Vue d'ensemble", description: "Salle de bain avec baignoire rose" },
+      { id: 7, image: matignonAvant3, title: "Avant — Baignoire rose", description: "Vasque et baignoire roses datées" },
+      { id: 8, image: matignonAvant4, title: "Avant — Détail", description: "Carrelage marbre et équipements vétustes" },
     ],
   },
   {
