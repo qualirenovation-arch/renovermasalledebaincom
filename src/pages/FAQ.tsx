@@ -90,7 +90,11 @@ const faqCategories = [
       },
       {
         question: "Travaillez-vous avec quelles marques ?",
-        answer: "Nous sommes partenaires des plus grandes marques : Schlüter et Wedi pour l'étanchéité, Grohe et Hansgrohe pour la robinetterie, Villeroy & Boch et Duravit pour les sanitaires, et de nombreuses marques de carrelage haut de gamme italiennes et espagnoles."
+        answer: "Toutes les marques ! Nous vérifions systématiquement vos choix avant la pose pour éviter les produits de mauvaise manufacture. Notre expertise nous permet de vous accompagner dans vos sélections et de vous conseiller sur la qualité des références. L'essentiel est d'échanger ensemble pour trouver les meilleurs produits adaptés à votre projet et votre budget."
+      },
+      {
+        question: "Travaillez-vous avec quels fournisseurs ?",
+        answer: "Tous les fournisseurs ! Si nous connaissons déjà le distributeur, c'est plus simple, mais nous n'hésitons pas à contacter et ouvrir un compte client chez un nouveau fournisseur si c'est le produit que vous souhaitez. Avant toute commande, nous échangeons avec vous car nos fournisseurs partenaires (Castorama, Leroy Merlin, Ikea, Aica Sanitaires, Livea...) peuvent aussi proposer les mêmes références, souvent avec de meilleures conditions."
       }
     ]
   }
