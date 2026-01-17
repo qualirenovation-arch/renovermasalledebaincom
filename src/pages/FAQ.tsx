@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { ArrowRight, Plus, Minus, Play } from "lucide-react";
+import { ArrowRight, Plus, Minus, Play, Instagram } from "lucide-react";
 import { useState } from "react";
 
 const faqCategories = [
@@ -92,7 +92,8 @@ const faqCategories = [
     questions: [
       {
         question: "Où puis-je voir vos réalisations ?",
-        answer: "Nous partageons régulièrement nos réalisations et conseils techniques sur Instagram. 👉 Les photos valent souvent mieux que mille explications. Consultez également notre page Réalisations pour découvrir nos projets terminés et en cours."
+        answer: "Nous partageons régulièrement nos réalisations et conseils techniques sur Instagram. 👉 Les photos valent souvent mieux que mille explications. Consultez également notre page Réalisations pour découvrir nos projets terminés et en cours.",
+        instagramProfileLink: "https://www.instagram.com/qualirenovation__travaux/"
       }
     ]
   },
@@ -186,7 +187,7 @@ const faqCategories = [
   }
 ];
 
-function FAQItem({ question, answer, isOpen, onClick, instagramLink }: { question: string; answer: string; isOpen: boolean; onClick: () => void; instagramLink?: string }) {
+function FAQItem({ question, answer, isOpen, onClick, instagramLink, instagramProfileLink }: { question: string; answer: string; isOpen: boolean; onClick: () => void; instagramLink?: string; instagramProfileLink?: string }) {
   return (
     <motion.div 
       className="border-b border-border last:border-b-0"
@@ -223,7 +224,18 @@ function FAQItem({ question, answer, isOpen, onClick, instagramLink }: { questio
             Découvrir en vidéo
           </a>
         )}
-        {!instagramLink && <div className="pb-2" />}
+        {instagramProfileLink && (
+          <a
+            href={instagramProfileLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mb-5 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white text-sm font-medium hover:opacity-90 transition-opacity"
+          >
+            <Instagram className="w-4 h-4" />
+            Voir sur Instagram
+          </a>
+        )}
+        {!instagramLink && !instagramProfileLink && <div className="pb-2" />}
       </motion.div>
     </motion.div>
   );
@@ -315,6 +327,7 @@ export default function FAQ() {
                         isOpen={openItems[`${categoryIndex}-${questionIndex}`] || false}
                         onClick={() => toggleItem(categoryIndex, questionIndex)}
                         instagramLink={'instagramLink' in item ? (item as any).instagramLink : undefined}
+                        instagramProfileLink={'instagramProfileLink' in item ? (item as any).instagramProfileLink : undefined}
                       />
                     ))}
                   </div>
