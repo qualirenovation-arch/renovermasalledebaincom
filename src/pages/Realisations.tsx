@@ -280,6 +280,17 @@ import pierreGuerin2 from "@/assets/pierre-guerin-2.jpg";
 import pierreGuerin3 from "@/assets/pierre-guerin-3.jpg";
 import pierreGuerin4 from "@/assets/pierre-guerin-4.jpg";
 
+// Saint-Ouen (93)
+import stOuen1 from "@/assets/st-ouen-1.jpg";
+import stOuen2 from "@/assets/st-ouen-2.jpg";
+import stOuen3 from "@/assets/st-ouen-3.jpg";
+import stOuen4 from "@/assets/st-ouen-4.jpg";
+import stOuen5 from "@/assets/st-ouen-5.jpg";
+import stOuen6 from "@/assets/st-ouen-6.jpg";
+import stOuen7 from "@/assets/st-ouen-7.jpg";
+import stOuenAvant1 from "@/assets/st-ouen-avant-1.jpg";
+import stOuenAvant2 from "@/assets/st-ouen-avant-2.jpg";
+
 interface Photo {
   id: number;
   image: string;
@@ -549,6 +560,25 @@ const albums: Album[] = [
       { id: 5, image: faubourgStmartin5, title: "Après — WC suspendu", description: "Poutres apparentes et effet marbre" },
       { id: 6, image: faubourgStmartin2, title: "Après — Vue globale", description: "Optimisation sous pente" },
       { id: 7, image: faubourgStmartin7, title: "Après — Détail douche", description: "Paroi noire et ciel de pluie doré" },
+    ],
+  },
+  {
+    id: "st-ouen",
+    title: "Orange & Pierre naturelle",
+    location: "Saint-Ouen (93) - Rue Pablo Picasso",
+    description: "AVANT : Salle de bain fonctionnelle mais manquant de caractère. APRÈS : Transformation audacieuse avec murs orange vif, double vasque en pierre naturelle sur plan chêne massif, meuble noir mat et miroirs LED design (rond et rectangulaire). Baignoire avec pare-bain verrière noire et carrelage travertin. Un mariage réussi entre couleurs vibrantes et matériaux nobles.",
+    coverImage: stOuen3,
+    instagramLink: "https://www.instagram.com/reel/DKISLTuMLAY/",
+    photos: [
+      { id: 1, image: stOuen3, title: "Après — Double vasque", description: "Vasques pierre sur plan chêne et miroirs LED" },
+      { id: 2, image: stOuen4, title: "Après — Vue latérale", description: "Harmonie orange, noir et bois" },
+      { id: 3, image: stOuen1, title: "Après — Vue d'ensemble", description: "Meuble noir et sèche-serviettes blanc" },
+      { id: 4, image: stOuen2, title: "Après — Espace complet", description: "Double vasque et rangements" },
+      { id: 5, image: stOuen5, title: "Après — Baignoire", description: "Pare-bain verrière et travertin" },
+      { id: 6, image: stOuen6, title: "Après — Détail vasque", description: "Vasque pierre et robinet noir" },
+      { id: 7, image: stOuen7, title: "Après — Miroir rond LED", description: "Vasque pierre naturelle" },
+      { id: 8, image: stOuenAvant1, title: "Avant — Baignoire", description: "Baignoire et verrière existante" },
+      { id: 9, image: stOuenAvant2, title: "Avant — Vasque", description: "Meuble et lave-linge en place" },
     ],
   },
   {
