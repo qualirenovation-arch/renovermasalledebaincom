@@ -751,6 +751,21 @@ const albums: Album[] = [
     ],
   },
   {
+    id: "nicolas-roret-wc",
+    title: "WC Zellige turquoise & Or",
+    location: "Paris 13ème - Rue Nicolas Roret",
+    description: "AVANT : WC vétuste avec carrelage bleu abîmé, équipements datés et peinture écaillée. APRÈS : WC suspendu luxueux avec zellige turquoise posé en chevron, lave-mains avec robinetterie dorée, local technique optimisé intégrant chauffe-eau et lave-linge.",
+    coverImage: nicolasRoret11,
+    instagramLink: "https://www.instagram.com/reel/DTiv9H0jb06/",
+    photos: [
+      { id: 1, image: nicolasRoret11, title: "Après — WC suspendu", description: "Zellige chevron et lave-mains doré" },
+      { id: 2, image: nicolasRoret6, title: "Après — WC vue angle", description: "Zellige turquoise et carrelage marbre" },
+      { id: 3, image: nicolasRoret10, title: "Après — Local technique", description: "Chauffe-eau et lave-linge intégrés" },
+      { id: 4, image: nicolasRoretTravaux1, title: "Travaux — Pose zellige WC", description: "Installation du zellige chevron" },
+      { id: 5, image: nicolasRoretAvant1, title: "Avant — WC vétuste", description: "État initial avec carrelage bleu et équipements datés" },
+    ],
+  },
+  {
     id: "taitbout",
     title: "Rénovation haussmannienne",
     location: "Paris 9ème - Rue Taitbout",
