@@ -23,7 +23,7 @@ export function Header() {
       {/* Top Banner */}
       <div className="bg-primary text-primary-foreground py-2 px-4">
         <div className="container-custom flex justify-center md:justify-between items-center text-sm">
-          <span className="hidden md:block">Artisan spécialiste de la douche à l'italienne</span>
+          <span className="hidden md:block">Spécialiste de la rénovation de votre salle de bain</span>
           <a 
             href="tel:+33659764685" 
             className="flex items-center gap-2 font-semibold hover:text-accent transition-colors"
