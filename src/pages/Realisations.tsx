@@ -262,6 +262,12 @@ import temple4 from "@/assets/temple-4.jpg";
 import templeAvant1 from "@/assets/temple-avant-1.jpg";
 import templeAvant2 from "@/assets/temple-avant-2.jpg";
 
+// Pierre Guérin Paris 16ème
+import pierreGuerin1 from "@/assets/pierre-guerin-1.jpg";
+import pierreGuerin2 from "@/assets/pierre-guerin-2.jpg";
+import pierreGuerin3 from "@/assets/pierre-guerin-3.jpg";
+import pierreGuerin4 from "@/assets/pierre-guerin-4.jpg";
+
 interface Photo {
   id: number;
   image: string;
@@ -311,6 +317,19 @@ const albums: Album[] = [
       { id: 10, image: vincennesMr10, title: "Après — Espace douche", description: "Receveur Le Monde du Bain" },
       { id: 11, image: vincennesMr11, title: "Après — Rangements", description: "Solutions sur-mesure" },
       { id: 12, image: vincennesMr12, title: "Après — Ambiance finale", description: "Harmonie des matériaux" },
+    ],
+  },
+  {
+    id: "pierre-guerin",
+    title: "Style masculin — Pierre & Inox",
+    location: "Paris 16ème - Rue Pierre Guérin",
+    description: "Rénovation d'une salle de bain pour un appartement au masculin. Douche à l'italienne avec carrelage pierre naturelle, robinetterie encastrée chromée haut de gamme, niches de rangement intégrées et rangements sur-mesure avec buanderie dissimulée.",
+    coverImage: pierreGuerin1,
+    photos: [
+      { id: 1, image: pierreGuerin1, title: "Après — Vue d'ensemble", description: "Meuble vasque et WC suspendu" },
+      { id: 2, image: pierreGuerin2, title: "Après — Rangements sur-mesure", description: "Colonnes avec buanderie intégrée" },
+      { id: 3, image: pierreGuerin3, title: "Après — Douche à l'italienne", description: "Robinetterie encastrée chromée" },
+      { id: 4, image: pierreGuerin4, title: "Après — Détail niches", description: "Niches de rangement intégrées" },
     ],
   },
   {
