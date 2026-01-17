@@ -424,14 +424,9 @@ const albums: Album[] = [
     photos: [
       { id: 1, image: bobillot1, title: "Après — Vue d'ensemble", description: "Meuble bois, plan noir et robinetterie laiton" },
       { id: 2, image: bobillot2, title: "Après — Détail vasque", description: "Zellige beige et applique murale dorée" },
-      { id: 3, image: "/videos/bobillot-1.mp4", title: "Vidéo — Visite salle de bain", description: "Découverte de la salle de bain rénovée", isVideo: true },
-      { id: 4, image: "/videos/bobillot-2.mp4", title: "Vidéo — Détails finitions", description: "Robinetterie laiton et zellige beige", isVideo: true },
-      { id: 5, image: "/videos/bobillot-3.mp4", title: "Vidéo — Cuisine", description: "Cuisine rénovée aux teintes beige et bois", isVideo: true },
-      { id: 6, image: "/videos/bobillot-4.mp4", title: "Vidéo — Vue d'ensemble", description: "Visite complète de la rénovation", isVideo: true },
-      { id: 7, image: "/videos/bobillot-5.mp4", title: "Vidéo — Ambiance finale", description: "Rendu final du projet", isVideo: true },
-      { id: 8, image: bobillotAvant1, title: "Avant — Vue générale", description: "Murs dégradés et tuyauteries apparentes" },
-      { id: 9, image: bobillotAvant2, title: "Avant — Salle de bain", description: "Carrelage dégradé et état initial" },
-      { id: 10, image: bobillotAvant3, title: "Avant — Vue d'ensemble", description: "Logement nécessitant rénovation complète" },
+      { id: 3, image: bobillotAvant1, title: "Avant — Vue générale", description: "Murs dégradés et tuyauteries apparentes" },
+      { id: 4, image: bobillotAvant2, title: "Avant — Salle de bain", description: "Carrelage dégradé et état initial" },
+      { id: 5, image: bobillotAvant3, title: "Avant — Vue d'ensemble", description: "Logement nécessitant rénovation complète" },
     ],
   },
   {
