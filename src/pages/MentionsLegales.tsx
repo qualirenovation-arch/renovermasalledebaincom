@@ -35,7 +35,7 @@ export default function MentionsLegales() {
                 Directeur de la publication
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Carina Nahmani, en qualité de gérante de QualiRénovation by QualiConcept.
+                Rubens Mimouni, en qualité de gérant de QUALICONCEPT.
               </p>
             </section>
 
