@@ -94,7 +94,7 @@ const faqCategories = [
       },
       {
         question: "Travaillez-vous avec quelles marques ?",
-        answer: "Toutes les marques ! Nous vérifions systématiquement vos choix avant la pose pour éviter les produits de mauvaise manufacture. Notre expertise nous permet de vous accompagner dans vos sélections et de vous conseiller sur la qualité des références. L'essentiel est d'échanger ensemble pour trouver les meilleurs produits adaptés à votre projet et votre budget."
+        answer: "Toutes les marques ! Nous vérifions systématiquement vos choix avant de valider les commandes pour éviter les produits de mauvaise manufacture. Notre expertise nous permet de vous accompagner dans vos sélections et de vous conseiller sur la qualité des références. L'essentiel est d'échanger ensemble pour trouver les meilleurs produits adaptés à votre projet et votre budget."
       },
       {
         question: "Travaillez-vous avec quels fournisseurs ?",
