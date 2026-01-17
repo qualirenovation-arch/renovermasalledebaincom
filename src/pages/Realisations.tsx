@@ -265,6 +265,10 @@ import vitryAvant7 from "@/assets/vitry-avant-7.jpg";
 import vitryAvant8 from "@/assets/vitry-avant-8.jpg";
 import vitryAvant9 from "@/assets/vitry-avant-9.jpg";
 import vitryAvant10 from "@/assets/vitry-avant-10.jpg";
+import vitryApres1 from "@/assets/vitry-apres-1.jpg";
+import vitryApres2 from "@/assets/vitry-apres-2.jpg";
+import vitryApres3 from "@/assets/vitry-apres-3.jpg";
+import vitryApres4 from "@/assets/vitry-apres-4.jpg";
 
 // Rue du Temple Paris 3ème
 import temple1 from "@/assets/temple-1.jpg";
@@ -917,20 +921,19 @@ const inProgressAlbums: Album[] = [
   },
   {
     id: "vitry",
-    title: "Rénovation complète en couleurs",
+    title: "Carrelage picot & robinetterie dorée",
     location: "Vitry-sur-Seine (94)",
-    description: "AVANT : Salle de bain vétuste avec tuyauterie apparente, mosaïque dégradée et aménagement daté. Chauffe-eau encombrant au-dessus du WC. PROJET : Transformation totale avec receveur XXL, meuble vasque moderne, habillage du chauffe-eau. Remise à neuf complète : électricité, plomberie, carrelage, faïence, doublage et étanchéité. Des couleurs vives pour donner vie à cet espace ! Chantier en cours — restez connecté pour découvrir cette transformation !",
-    coverImage: vitryAvant1,
-    isInProgress: true,
+    description: "AVANT : Salle de bain vétuste avec tuyauterie apparente, mosaïque dégradée et aménagement daté. Chauffe-eau encombrant au-dessus du WC. APRÈS : Transformation complète avec carrelage picot vert d'eau posé en chevron, robinetterie encastrée dorée et niche intégrée. WC suspendu Geberit avec habillage dissimulant le chauffe-eau et rangement sur mesure. Cabine de douche avec paroi noire et pommeau doré pour un rendu chic et contemporain.",
+    coverImage: vitryApres3,
     photos: [
-      { id: 1, image: vitryAvant1, title: "Avant — Vue générale", description: "Entrée de la salle de bain avec chauffe-eau" },
-      { id: 2, image: vitryAvant2, title: "Avant — Vasque et douche", description: "Meuble vasque et paroi de douche" },
-      { id: 3, image: vitryAvant3, title: "Avant — Vue WC", description: "WC et sèche-serviettes" },
-      { id: 4, image: vitryAvant4, title: "Avant — Sèche-serviettes", description: "Radiateur sèche-serviettes" },
-      { id: 5, image: vitryAvant5, title: "Avant — Chauffe-eau", description: "Chauffe-eau au-dessus du WC" },
-      { id: 6, image: vitryAvant6, title: "Avant — Tuyauterie", description: "Tuyauteries apparentes" },
-      { id: 7, image: vitryAvant7, title: "Avant — Paroi douche", description: "Cabine de douche existante" },
-      { id: 8, image: vitryAvant8, title: "Avant — Douche détail", description: "Paroi de douche et faïence" },
+      { id: 1, image: vitryApres3, title: "Après — Vue générale", description: "Meuble vasque blanc et cabine de douche" },
+      { id: 2, image: vitryApres4, title: "Après — Douche et robinetterie", description: "Paroi noire et pommeau doré" },
+      { id: 3, image: vitryApres1, title: "Après — WC suspendu", description: "Carrelage picot et chauffe-eau intégré" },
+      { id: 4, image: vitryApres2, title: "Après — Rangement", description: "Placard sur mesure au-dessus du WC" },
+      { id: 5, image: vitryAvant1, title: "Avant — Vue générale", description: "Entrée de la salle de bain avec chauffe-eau" },
+      { id: 6, image: vitryAvant2, title: "Avant — Vasque et douche", description: "Meuble vasque et paroi de douche" },
+      { id: 7, image: vitryAvant3, title: "Avant — Vue WC", description: "WC et sèche-serviettes" },
+      { id: 8, image: vitryAvant5, title: "Avant — Chauffe-eau", description: "Chauffe-eau au-dessus du WC" },
       { id: 9, image: vitryAvant9, title: "Avant — Sol mosaïque", description: "Mosaïque dégradée à remplacer" },
       { id: 10, image: vitryAvant10, title: "Avant — Plomberie", description: "Canalisations et évacuations" },
     ],
@@ -944,7 +947,6 @@ const projectLocations: ProjectLocation[] = [
   { id: "port-royal", name: "Port-Royal", area: "5ème", x: 48, y: 60 },
   { id: "la-tour", name: "Rue de la Tour", area: "16ème", x: 25, y: 45 },
   { id: "courbevoie", name: "Rue Ernest Lalyre", area: "Courbevoie", x: 15, y: 30 },
-  { id: "vitry", name: "Vitry-sur-Seine", area: "94", x: 75, y: 85 },
 ];
 
 export default function Realisations() {
