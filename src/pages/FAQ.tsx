@@ -69,7 +69,11 @@ const faqCategories = [
       },
       {
         question: "Quelles garanties proposez-vous ?",
-        answer: "Nous offrons une garantie décennale et une responsabilité civile professionnelle MIC Assurances, une garantie étanchéité 10 ans, un devis détaillé avec photos via Graneet, un prix ferme et définitif, et un suivi visuel quotidien par WhatsApp et vidéo."
+        answer: "Nous offrons une garantie décennale et une responsabilité civile professionnelle MIC Assurances, une garantie étanchéité 10 ans, un devis détaillé avec photos via Graneet, et un suivi visuel quotidien par WhatsApp et vidéo."
+      },
+      {
+        question: "Le devis est-il ferme et définitif dès le départ ?",
+        answer: "Non, nous fonctionnons avec un premier devis estimatif. Ensuite, au fil du chantier, nous émettons des situations de chantier qui évoluent selon la validation des produits par vos soins. Cette méthode nous permet de réajuster au plus juste et de vous offrir une transparence totale sur l'avancement des travaux. C'est également indispensable pour les appels de fonds qui rythment le paiement de votre projet."
       }
     ]
   },
