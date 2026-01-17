@@ -472,6 +472,11 @@ const albums: Album[] = [
     description: "AVANT : Dégâts des eaux et malfaçons laissés par une précédente entreprise — infiltrations, moisissures et travaux bâclés. APRÈS : Intervention de Carina pour reprendre le chantier. Rénovation complète avec carrelage chevrons blancs tendance, sol terrazzo gris et robinetterie chromée. On vous explique tout sur ce chantier de rattrapage !",
     coverImage: gallery11,
     instagramLink: "https://www.instagram.com/reel/DDFsmeBNeur/",
+    review: {
+      text: "Carina est fantastique. Elle a géré notre projet avec professionnalisme et créativité. Le résultat est magnifique et nous sommes ravis du travail accompli. Son équipe est réactive et le chantier a été livré dans les temps avec des finitions impeccables.",
+      author: "Client Paris 17ème",
+      link: "https://www.houzz.fr/viewReview/2101062/qualirenovation-by-qualiconcept-review"
+    },
     photos: [
       { id: 1, image: gallery11, title: "Après — Chevrons blancs", description: "Carrelage mural tendance" },
       { id: 2, image: gallery12, title: "Après — Douche d'angle", description: "Paroi vitrée et ciel de pluie" },
