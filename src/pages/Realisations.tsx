@@ -726,7 +726,6 @@ const albums: Album[] = [
     location: "Paris 13ème - Rue Nicolas Roret",
     description: "AVANT : WC vétuste avec carrelage bleu abîmé, équipements datés et peinture écaillée. APRÈS : Transformation luxueuse avec douche italienne en zellige turquoise posé en chevron, paroi et robinetterie dorées, niches intégrées avec listel or, carrelage grand format effet marbre. WC suspendu assorti avec lave-mains doré, local technique optimisé intégrant chauffe-eau et lave-linge.",
     coverImage: nicolasRoret5,
-    instagramLink: "https://www.instagram.com/reel/DTiv9H0jb06/",
     review: {
       text: "Carina est une architecte de talent, créative et toujours à l'écoute. Elle a su transformer notre petite salle de bain en un espace fonctionnel et esthétique, avec des matériaux de qualité et des finitions impeccables. Son suivi de chantier est rigoureux et elle sait gérer les imprévus avec professionnalisme.",
       author: "Propriétaire Paris 13ème",
@@ -756,6 +755,7 @@ const albums: Album[] = [
     location: "Paris 13ème - Rue Nicolas Roret",
     description: "AVANT : WC vétuste avec carrelage bleu abîmé, équipements datés et peinture écaillée. APRÈS : WC suspendu luxueux avec zellige turquoise posé en chevron, lave-mains avec robinetterie laiton brossé, local technique optimisé intégrant chauffe-eau et lave-linge.",
     coverImage: nicolasRoret11,
+    instagramLink: "https://www.instagram.com/reel/DTiv9H0jb06/",
     photos: [
       { id: 1, image: nicolasRoret11, title: "Après — WC suspendu", description: "Zellige chevron et lave-mains laiton brossé" },
       { id: 2, image: nicolasRoret6, title: "Après — WC vue angle", description: "Zellige turquoise et carrelage marbre" },
