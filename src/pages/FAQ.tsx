@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { ArrowRight, Plus, Minus } from "lucide-react";
+import { ArrowRight, Plus, Minus, Play } from "lucide-react";
 import { useState } from "react";
 
 const faqCategories = [
@@ -81,7 +81,8 @@ const faqCategories = [
       },
       {
         question: "Qui réalise les plans de ma future salle de bain ?",
-        answer: "Pour la réalisation des plans, nous travaillons avec P3D Concept, partenaire avec qui nous formons un binôme depuis plusieurs années. Vous recevez un devis précis, la prestation est réglée directement auprès de P3D Concept, et vous échangez librement avec lui pour préparer au mieux votre projet. Une collaboration fluide, pour un projet bien pensé dès le départ."
+        answer: "Pour la réalisation des plans, nous travaillons avec P3D Concept, partenaire avec qui nous formons un binôme depuis plusieurs années. Vous recevez un devis précis, la prestation est réglée directement auprès de P3D Concept, et vous échangez librement avec lui pour préparer au mieux votre projet. Une collaboration fluide, pour un projet bien pensé dès le départ.",
+        instagramLink: "C_aaIoPNMBz"
       }
     ]
   },
@@ -112,7 +113,7 @@ const faqCategories = [
   }
 ];
 
-function FAQItem({ question, answer, isOpen, onClick }: { question: string; answer: string; isOpen: boolean; onClick: () => void }) {
+function FAQItem({ question, answer, isOpen, onClick, instagramLink }: { question: string; answer: string; isOpen: boolean; onClick: () => void; instagramLink?: string }) {
   return (
     <motion.div 
       className="border-b border-border last:border-b-0"
@@ -137,7 +138,19 @@ function FAQItem({ question, answer, isOpen, onClick }: { question: string; answ
         transition={{ duration: 0.3, ease: "easeInOut" }}
         className="overflow-hidden"
       >
-        <p className="pb-5 text-muted-foreground leading-relaxed">{answer}</p>
+        <p className="pb-3 text-muted-foreground leading-relaxed">{answer}</p>
+        {instagramLink && (
+          <a
+            href={`https://www.instagram.com/reel/${instagramLink}/`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mb-5 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white text-sm font-medium hover:opacity-90 transition-opacity"
+          >
+            <Play className="w-4 h-4" />
+            Découvrir en vidéo
+          </a>
+        )}
+        {!instagramLink && <div className="pb-2" />}
       </motion.div>
     </motion.div>
   );
@@ -222,6 +235,7 @@ export default function FAQ() {
                       answer={item.answer}
                       isOpen={openItems[`${categoryIndex}-${questionIndex}`] || false}
                       onClick={() => toggleItem(categoryIndex, questionIndex)}
+                      instagramLink={'instagramLink' in item ? (item as any).instagramLink : undefined}
                     />
                   ))}
                 </div>
