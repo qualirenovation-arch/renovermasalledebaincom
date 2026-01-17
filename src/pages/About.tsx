@@ -327,38 +327,49 @@ export default function About() {
                     Carina Nahmani – Maître d'œuvre
                   </h3>
                   <div className="space-y-4 text-primary-foreground/80 leading-relaxed">
-                <p className="text-lg italic text-accent">
-                  « Seul on n'avance pas, en équipe oui. »
-                </p>
-                <p>
-                  Véritable <strong className="text-primary-foreground">chef d'orchestre de votre chantier</strong>, 
-                  Carina Nahmani pilote chaque projet avec méthode, sang-froid et énergie positive.
-                </p>
-                <p>
-                  <strong className="text-accent">Femme du BTP</strong>, féminine mais avec la poigne qu'il faut pour 
-                  orchestrer tout ce joli monde, elle gère la pression des équipes comme celle des clients sans jamais 
-                  se laisser déborder. Elle sait aussi glisser une petite touche d'humour pour détendre l'atmosphère 
-                  et maintenir un chantier serein et respectueux.
-                </p>
-                <p>
-                  Carina <strong className="text-primary-foreground">maîtrise les produits, les techniques et leur mise en œuvre</strong>. 
-                  Tout est expliqué, tout est contrôlé : rien n'est laissé au hasard.
-                </p>
-                <p>
-                  Toujours disponible, à l'écoute au moindre doute, elle ne vous laisse jamais dans le flou. 
-                  Ce qui la motive avant tout ? <strong className="text-accent">Vous voir sourire</strong> et livrer 
-                  un chantier bien mené, fluide et parfaitement abouti.
-                </p>
+                    <p>
+                      Véritable <strong className="text-primary-foreground">chef d'orchestre de votre chantier</strong>, 
+                      Carina Nahmani pilote chaque projet avec exigence, sang-froid et engagement.
+                    </p>
+                    <p className="text-lg italic text-accent">
+                      Sa devise : seul on n'avance pas, en équipe oui.
+                    </p>
+                    <p>
+                      <strong className="text-accent">Femme du BTP</strong>, féminine et déterminée, elle possède la poigne 
+                      nécessaire pour orchestrer l'ensemble des intervenants, gérer la pression des équipes comme celle des 
+                      clients et maintenir un climat de travail fondé sur le respect, la confiance et la bonne humeur. 
+                      Toujours à l'écoute, disponible à la moindre question ou au moindre doute, elle ne laisse jamais ses 
+                      clients dans le flou.
+                    </p>
+                    <p>
+                      Forte de <strong className="text-primary-foreground">plus de 20 ans d'expérience</strong>, Carina a 
+                      construit un réseau solide de partenaires et d'artisans avec lesquels elle collabore depuis de nombreuses 
+                      années. Experte reconnue, elle maîtrise les produits, les normes, les DTU et leur mise en œuvre. 
+                      Consciente que le métier évolue sans cesse, elle se forme en continu auprès des fabricants et fournisseurs 
+                      afin de garantir des solutions techniques toujours à jour et parfaitement exécutées.
+                    </p>
+                    <p>
+                      Pour sécuriser chaque projet, elle s'entoure également d'un <strong className="text-accent">expert construction</strong>, 
+                      d'un <strong className="text-accent">expert d'assurance</strong> et d'un <strong className="text-accent">avocat</strong>, 
+                      assurant à ses clients un accompagnement complet et une parfaite maîtrise des enjeux techniques, réglementaires et juridiques.
+                    </p>
+                    <p>
+                      👉 Grâce à son savoir-faire, ses projets sont régulièrement repris dans la presse, pour la plus grande fierté de ses clients.
+                    </p>
+                    <p>
+                      Au final, vous ne retenez pas seulement un beau chantier, mais un <strong className="text-primary-foreground">projet durable, 
+                      bien construit, dans les règles de l'art</strong>, porté par une équipe soudée et engagée.
+                    </p>
                   </div>
                   <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
                     <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
                       Chef d'orchestre
                     </span>
                     <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
-                      Énergie positive
+                      20+ ans d'expérience
                     </span>
                     <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
-                      Rien au hasard
+                      Expertise DTU
                     </span>
                     <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
                       Toujours disponible
