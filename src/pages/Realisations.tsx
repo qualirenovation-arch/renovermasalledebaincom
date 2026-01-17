@@ -345,6 +345,11 @@ import charentonAvant1 from "@/assets/charenton-avant-1.jpg";
 import charentonAvant2 from "@/assets/charenton-avant-2.jpg";
 import charentonAvant3 from "@/assets/charenton-avant-3.jpg";
 import charentonAvant4 from "@/assets/charenton-avant-4.jpg";
+import charenton14 from "@/assets/charenton-14.jpg";
+import charentonAvant5 from "@/assets/charenton-avant-5.jpg";
+import charentonAvant6 from "@/assets/charenton-avant-6.jpg";
+import charentonAvant7 from "@/assets/charenton-avant-7.jpg";
+import charentonAvant8 from "@/assets/charenton-avant-8.jpg";
 
 interface Photo {
   id: number;
@@ -478,11 +483,16 @@ const albums: Album[] = [
       { id: 11, image: charenton11, title: "Après — Ensemble", description: "Harmonie marbre blanc et laiton" },
       { id: 12, image: charenton12, title: "Après — Finitions", description: "Sèche-serviettes et WC" },
       { id: 13, image: charenton13, title: "Après — Vue finale", description: "Style Black & White élégant" },
+      { id: 14, image: charenton14, title: "Après — Niches douche", description: "Double niche avec mosaïque hexagonale" },
       // AVANT
-      { id: 14, image: charentonAvant1, title: "Avant — Baignoire", description: "Ancienne baignoire à remplacer" },
-      { id: 15, image: charentonAvant2, title: "Avant — Vue générale", description: "État initial de la salle de bain" },
-      { id: 16, image: charentonAvant3, title: "Avant — Équipements", description: "Aménagement daté à transformer" },
-      { id: 17, image: charentonAvant4, title: "Avant — Vasque", description: "Meuble vasque à moderniser" },
+      { id: 15, image: charentonAvant5, title: "Avant — Salle de bain complète", description: "Baignoire mosaïque beige et carrelage daté" },
+      { id: 16, image: charentonAvant6, title: "Avant — Vue baignoire", description: "Mosaïque beige à remplacer" },
+      { id: 17, image: charentonAvant7, title: "Avant — Vasque", description: "Meuble blanc et carrelage mosaïque" },
+      { id: 18, image: charentonAvant8, title: "Avant — WC séparé", description: "WC ancien avec réservoir apparent" },
+      { id: 19, image: charentonAvant1, title: "Avant — Détail baignoire", description: "État initial à transformer" },
+      { id: 20, image: charentonAvant2, title: "Avant — Vue générale", description: "Aménagement daté" },
+      { id: 21, image: charentonAvant3, title: "Avant — Équipements", description: "Configuration peu fonctionnelle" },
+      { id: 22, image: charentonAvant4, title: "Avant — Détail", description: "Espace à optimiser" },
     ],
   },
   {
