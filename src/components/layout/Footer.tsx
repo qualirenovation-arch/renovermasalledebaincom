@@ -102,7 +102,10 @@ export function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-primary-foreground/10">
         <div className="container-custom py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
-          <p>© 2024 renovermasalledebain.com — Une marque Qualirenovation by Qualiconcept dédiée aux salles de bain. Tous droits réservés.</p>
+          <div className="text-center md:text-left">
+            <p>RénoveMaSalleDeBain est un site édité par QualiRénovation by QualiConcept</p>
+            <p className="mt-1">6 rue d'Armaillé, 75017 Paris — © 2024 Tous droits réservés.</p>
+          </div>
           <div className="flex gap-6">
             <Link to="/mentions-legales" className="hover:text-primary-foreground transition-colors">
               Mentions légales
