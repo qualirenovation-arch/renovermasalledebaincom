@@ -59,11 +59,19 @@ export default function MentionsLegales() {
                 Propriété intellectuelle
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                L'ensemble des contenus présents sur ce site (textes, images, photographies, logos, graphismes, icônes, vidéos, sons, etc.) sont la propriété exclusive de QualiRénovation by QualiConcept, sauf mention contraire.
+                L'ensemble des contenus présents sur ce site (textes, images, photographies, logos, graphismes, icônes, vidéos, sons, etc.) sont la propriété exclusive de QUALICONCEPT, sauf mention contraire.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                Toute reproduction, représentation, modification, publication, transmission, dénaturation, totale ou partielle du site ou de son contenu, par quelque procédé que ce soit, et sur quelque support que ce soit est interdite sans l'autorisation écrite préalable de QualiRénovation by QualiConcept.
+                Toute reproduction, représentation, modification, publication, transmission, dénaturation, totale ou partielle du site ou de son contenu, par quelque procédé que ce soit, et sur quelque support que ce soit est interdite sans l'autorisation écrite préalable de QUALICONCEPT.
               </p>
+              <div className="mt-6 p-6 bg-secondary/50 rounded-lg border border-border">
+                <h3 className="font-display text-lg font-semibold text-primary mb-2">
+                  📰 Presse & Médias
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Nos réalisations vous plaisent ? Nous pouvons partager nos photos pour vos articles de presse. Pour toute demande de reproduction, <a href="mailto:gestion@qualiconcept.fr" className="text-accent hover:underline font-medium">contactez-nous</a>.
+                </p>
+              </div>
             </section>
 
             {/* Responsabilité */}
