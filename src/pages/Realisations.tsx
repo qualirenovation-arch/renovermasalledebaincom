@@ -430,7 +430,7 @@ const albums: Album[] = [
       { id: 6, image: "/videos/bobillot-4.mp4", title: "Vidéo — Vue d'ensemble", description: "Visite complète de la rénovation", isVideo: true },
       { id: 7, image: "/videos/bobillot-5.mp4", title: "Vidéo — Ambiance finale", description: "Rendu final du projet", isVideo: true },
       { id: 8, image: bobillotAvant1, title: "Avant — Vue générale", description: "Murs dégradés et tuyauteries apparentes" },
-      { id: 9, image: bobillotAvant2, title: "Avant — Cuisine", description: "État initial à rénover" },
+      { id: 9, image: bobillotAvant2, title: "Avant — Salle de bain", description: "Carrelage dégradé et état initial" },
       { id: 10, image: bobillotAvant3, title: "Avant — Vue d'ensemble", description: "Logement nécessitant rénovation complète" },
     ],
   },
