@@ -301,6 +301,62 @@ export default function WhyUs() {
         </div>
       </section>
 
+      {/* Partners Section */}
+      <section className="py-12 bg-muted/30">
+        <div className="container-custom">
+          <motion.div
+            className="text-center mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="font-display text-xl font-medium text-muted-foreground mb-2">
+              Nos partenaires
+            </h3>
+          </motion.div>
+          
+          <motion.div 
+            className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            {[
+              { name: "Weber", url: "https://www.weber.fr" },
+              { name: "Schlüter", url: "https://www.schluter.fr" },
+              { name: "Wedi", url: "https://www.wedi.de/fr" },
+              { name: "Geberit", url: "https://www.geberit.fr" },
+              { name: "Mapei", url: "https://www.mapei.com/fr" },
+              { name: "Kerakoll", url: "https://www.kerakoll.com/fr" },
+              { name: "Castorama", url: "https://www.castorama.fr" },
+              { name: "Leroy Merlin", url: "https://www.leroymerlin.fr" },
+              { name: "IKEA", url: "https://www.ikea.com/fr" },
+              { name: "Cedeo", url: "https://www.cedeo.fr" },
+              { name: "Aubade", url: "https://www.frenchaubade.fr" },
+              { name: "Atlantic", url: "https://www.atlantic.fr" },
+              { name: "Legrand", url: "https://www.legrand.fr" },
+              { name: "Schneider", url: "https://www.se.com/fr" },
+              { name: "Hudson Reed", url: "https://www.hudsonreed.fr" },
+              { name: "Horus", url: "https://www.hfrob.fr" },
+              { name: "ManoMano", url: "https://www.manomano.fr" },
+              { name: "Aica Sanitaires", url: "#" },
+              { name: "Livea Sanitaire", url: "#" },
+            ].map((partner, index) => (
+              <a
+                key={index}
+                href={partner.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors font-medium"
+              >
+                {partner.name}
+              </a>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="section-padding">
         <div className="container-custom text-center">
