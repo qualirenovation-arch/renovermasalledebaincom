@@ -74,6 +74,10 @@ const faqCategories = [
       {
         question: "Le devis est-il ferme et définitif dès le départ ?",
         answer: "Non, nous fonctionnons avec un premier devis estimatif. Ensuite, au fil du chantier, nous émettons des situations de chantier qui évoluent selon la validation des produits par vos soins. Cette méthode nous permet de réajuster au plus juste et de vous offrir une transparence totale sur l'avancement des travaux. C'est également indispensable pour les appels de fonds qui rythment le paiement de votre projet."
+      },
+      {
+        question: "Comment gérez-vous les travaux supplémentaires ?",
+        answer: "Les travaux supplémentaires peuvent survenir en cours de chantier suite à des découvertes (état des canalisations, murs, etc.) ou à vos nouvelles envies. Dans tous les cas, rien n'est engagé sans votre accord écrit préalable. Nous vous présentons un avenant détaillé avec le coût exact avant toute intervention. Cette transparence vous garantit de ne jamais avoir de mauvaise surprise sur la facture finale."
       }
     ]
   },
