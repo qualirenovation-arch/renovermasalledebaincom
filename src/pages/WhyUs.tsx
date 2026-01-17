@@ -200,12 +200,20 @@ export default function WhyUs() {
                   Ces photos sont à la fois notre vitrine et <strong className="text-foreground">votre plus beau souvenir</strong> — 
                   une pièce unique née de notre collaboration.
                 </p>
-                <Button variant="outline" asChild>
-                  <Link to="/realisations">
-                    Découvrir nos réalisations
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </Button>
+                <div className="flex flex-wrap gap-4">
+                  <Button variant="outline" asChild>
+                    <Link to="/realisations">
+                      Découvrir nos réalisations
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                  </Button>
+                  <Button variant="ghost" asChild>
+                    <Link to="/photographe">
+                      En savoir plus sur Stéphane Vasco
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                  </Button>
+                </div>
               </div>
               
               <div className="relative">

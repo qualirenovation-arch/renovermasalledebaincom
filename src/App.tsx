@@ -13,6 +13,7 @@ import Devis from "./pages/Devis";
 import FAQ from "./pages/FAQ";
 import MentionsLegales from "./pages/MentionsLegales";
 import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
+import Photographe from "./pages/Photographe";
 import NotFound from "./pages/NotFound";
 
 
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/faq" element={<FAQ />} />
           <Route path="/mentions-legales" element={<MentionsLegales />} />
           <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
+          <Route path="/photographe" element={<Photographe />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
