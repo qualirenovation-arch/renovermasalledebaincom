@@ -456,6 +456,11 @@ const albums: Album[] = [
     location: "Soisy-sous-Montmorency (95)",
     description: "AVANT : Salle de bain vétuste avec baignoire, bidet et WC sur podium, carrelage beige daté et peinture abîmée. APRÈS : Transformation en suite parentale moderne avec zellige bleu posé en chevron, meuble vasque sur mesure avec plan chêne, robinetterie noire encastrée, miroir rond LED, sèche-serviettes design noir et WC suspendu.",
     coverImage: soisySdb1,
+    review: {
+      text: "L'entreprise Qualirenovation, découverte sur Houzz, a pris en charge la rénovation de notre maison datant de 1900. Ce projet d'envergure incluait la démolition de deux murs porteurs, des travaux d'électricité, de plomberie, d'isolation thermique, de revêtements de sol et de peinture, tout en préservant les éléments anciens typiques. Carina Nahmani et son équipe ont su relever les défis techniques, fournissant un résultat final qualitatif à la hauteur de nos attentes. Leur expertise, leur disponibilité et leur capacité à trouver des solutions fonctionnelles et esthétiques ont été très appréciées.",
+      author: "Justin Montheillet",
+      link: "https://www.houzz.fr/viewReview/2042067/qualirenovation-by-qualiconcept-review"
+    },
     photos: [
       { id: 1, image: soisySdb1, title: "Après — Vue meuble vasque", description: "Zellige bleu chevron et plan chêne" },
       { id: 2, image: soisySdb2, title: "Après — Vue d'ensemble", description: "Miroir rond et fenêtre arche" },
