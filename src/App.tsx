@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import WhyUs from "./pages/WhyUs";
 import Realisations from "./pages/Realisations";
+import Presse from "./pages/Presse";
 import Partenaires from "./pages/Partenaires";
 import Devis from "./pages/Devis";
 import FAQ from "./pages/FAQ";
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/a-propos" element={<About />} />
           <Route path="/pourquoi-nous" element={<WhyUs />} />
           <Route path="/realisations" element={<Realisations />} />
+          <Route path="/presse" element={<Presse />} />
           <Route path="/partenaires" element={<Partenaires />} />
           <Route path="/devis" element={<Devis />} />
           <Route path="/faq" element={<FAQ />} />
