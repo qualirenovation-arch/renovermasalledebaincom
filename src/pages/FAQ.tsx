@@ -130,7 +130,7 @@ const faqCategories = [
       },
       {
         question: "Comment garantissez-vous l'étanchéité d'une douche à l'italienne ?",
-        answer: "L'étanchéité douche est notre priorité absolue. Nous utilisons des systèmes certifiés Schlüter et Wedi, posés selon les règles de l'art (DTU). Chaque douche bénéficie d'une garantie étanchéité 10 ans et de notre garantie décennale MIC Assurances."
+        answer: "L'étanchéité est une **obligation DTU** (référence DTU 52.2 pour les revêtements céramiques en locaux humides). Nous utilisons des systèmes certifiés Schlüter, Wedi et Weber, posés selon les règles de l'art. Nous vous envoyons systématiquement les **photos de la mise en œuvre** (application SEL/SPEC, bandes d'étanchéité, raccords) pour vous garantir un travail conforme. Chaque douche bénéficie d'une garantie étanchéité 10 ans et de notre garantie décennale MIC Assurances."
       },
       {
         question: "Pourquoi l'étanchéité sous carrelage est-elle obligatoire ?",
