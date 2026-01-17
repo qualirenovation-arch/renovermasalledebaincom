@@ -8,8 +8,8 @@ import teamPhoto from "@/assets/team-photo.jpg";
 import teamChantier1 from "@/assets/team-chantier-1.jpg";
 import teamChantier3 from "@/assets/team-chantier-3.jpg";
 import stephaneVasco2 from "@/assets/stephane-vasco-2.jpg";
-import thierryBelmard1 from "@/assets/thierry-belmard-1.jpg";
-import thierryBelmard2 from "@/assets/thierry-belmard-2.jpg";
+import thierryPelmard1 from "@/assets/thierry-pelmard-1.jpg";
+import thierryPelmard2 from "@/assets/thierry-pelmard-2.jpg";
 
 const values = [
   { icon: Award, title: "Excellence", description: "Nous visons la perfection dans chaque détail de nos réalisations" },
@@ -311,7 +311,7 @@ export default function About() {
                   <PenTool className="w-8 h-8 text-wood" />
                 </div>
                 <h3 className="font-display text-2xl font-semibold mb-4">
-                  Thierry Belmard, notre architecte d'intérieur partenaire
+                  Thierry Pelmard, notre architecte d'intérieur partenaire
                 </h3>
                 <p className="text-primary-foreground/80 leading-relaxed mb-6">
                   Fondateur de P3D Concept, Thierry collabore avec nous depuis plusieurs années sur 
@@ -329,8 +329,8 @@ export default function About() {
                   transition={{ delay: 0.2 }}
                 >
                   <img 
-                    src={thierryBelmard1} 
-                    alt="Thierry Belmard - P3D Concept" 
+                    src={thierryPelmard1} 
+                    alt="Thierry Pelmard - P3D Concept" 
                     className="w-full h-56 object-cover"
                   />
                 </motion.div>
@@ -342,8 +342,8 @@ export default function About() {
                   transition={{ delay: 0.3 }}
                 >
                   <img 
-                    src={thierryBelmard2} 
-                    alt="Thierry Belmard avec l'équipe" 
+                    src={thierryPelmard2} 
+                    alt="Thierry Pelmard avec l'équipe" 
                     className="w-full h-56 object-cover"
                   />
                 </motion.div>
