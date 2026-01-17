@@ -6,7 +6,6 @@ import { Shield, Award, Users, Clock, CheckCircle2, ArrowRight } from "lucide-re
 import aboutHistoire from "@/assets/about-histoire.jpg";
 import teamPhoto from "@/assets/team-photo.jpg";
 import teamChantier1 from "@/assets/team-chantier-1.jpg";
-import teamChantier2 from "@/assets/team-chantier-2.jpg";
 import teamChantier3 from "@/assets/team-chantier-3.jpg";
 
 const values = [
@@ -270,7 +269,7 @@ export default function About() {
             <h3 className="font-display text-2xl font-semibold text-center mb-8">
               Nos artisans en action
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               <motion.div 
                 className="aspect-[4/3] rounded-2xl overflow-hidden"
                 whileHover={{ scale: 1.02 }}
@@ -290,17 +289,6 @@ export default function About() {
                 <img 
                   src={teamChantier3} 
                   alt="Artisan réalisant des travaux de perçage" 
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
-              <motion.div 
-                className="aspect-[4/3] rounded-2xl overflow-hidden"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-              >
-                <img 
-                  src={teamChantier2} 
-                  alt="Pause déjeuner conviviale sur le chantier" 
                   className="w-full h-full object-cover"
                 />
               </motion.div>
