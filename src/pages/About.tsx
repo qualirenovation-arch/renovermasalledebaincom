@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { Shield, Award, Users, Clock, CheckCircle2, ArrowRight, Camera, PenTool } from "lucide-react";
+import { Shield, Award, Users, Clock, CheckCircle2, ArrowRight, Camera, PenTool, HardHat } from "lucide-react";
 import aboutHistoire from "@/assets/about-histoire.jpg";
 import teamPhoto from "@/assets/team-photo.jpg";
 import teamChantier1 from "@/assets/team-chantier-1.jpg";
@@ -295,6 +295,62 @@ export default function About() {
                   className="w-full h-full object-cover"
                 />
               </motion.div>
+            </div>
+          </motion.div>
+
+          {/* Carina Nahmani - Maître d'œuvre */}
+          <motion.div
+            className="mt-16 pt-12 border-t border-primary-foreground/20"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="max-w-4xl mx-auto text-center lg:text-left">
+              <div className="w-16 h-16 rounded-2xl bg-accent/30 flex items-center justify-center mx-auto lg:mx-0 mb-6">
+                <HardHat className="w-8 h-8 text-wood" />
+              </div>
+              <h3 className="font-display text-2xl font-semibold mb-4">
+                Carina Nahmani, votre maître d'œuvre dédiée
+              </h3>
+              <div className="space-y-4 text-primary-foreground/80 leading-relaxed">
+                <p>
+                  Avec <strong className="text-accent">plus de 20 ans d'expérience</strong> sur les chantiers parisiens, 
+                  Carina est le pilier de chaque projet. Ancienne conductrice de travaux pour des entreprises générales 
+                  du bâtiment, elle maîtrise parfaitement l'ensemble des corps de métier : plomberie, électricité, 
+                  carrelage, menuiserie, peinture et étanchéité.
+                </p>
+                <p>
+                  <strong className="text-primary-foreground">Son rôle ?</strong> Concevoir, coordonner et superviser 
+                  votre rénovation de A à Z. Dès le premier rendez-vous, elle se déplace chez vous pour une 
+                  <strong className="text-accent"> visite technique gratuite</strong> : analyse de faisabilité, 
+                  prise de mesures précises, identification des contraintes techniques et présentation des solutions adaptées.
+                </p>
+                <p>
+                  Carina assure un <strong className="text-primary-foreground">suivi quotidien rigoureux</strong> de 
+                  votre chantier via WhatsApp : photos, vidéos, comptes-rendus. Vous savez exactement qui intervient, 
+                  quand et comment avance votre projet. Pour les clients occupés ou à l'étranger, elle organise des 
+                  visioconférences régulières.
+                </p>
+                <p>
+                  Sa force : une <strong className="text-accent">exigence sans compromis</strong> sur la qualité des 
+                  finitions et le respect des normes DTU. Chaque détail compte, chaque jointure est vérifiée, chaque 
+                  étanchéité est contrôlée. C'est cette rigueur qui fait notre réputation.
+                </p>
+              </div>
+              <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
+                <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
+                  20+ ans d'expérience
+                </span>
+                <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
+                  Visite technique gratuite
+                </span>
+                <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
+                  Suivi WhatsApp quotidien
+                </span>
+                <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
+                  Normes DTU respectées
+                </span>
+              </div>
             </div>
           </motion.div>
 
