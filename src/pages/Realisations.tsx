@@ -385,6 +385,7 @@ const albums: Album[] = [
     location: "Paris 8ème - Avenue Matignon",
     description: "AVANT : Salle de bain dans son jus avec baignoire et vasque roses, carrelage marbre vieillot et papier peint daté. APRÈS : Transformation complète en espace épuré et moderne. Carrelage effet marbre grand format, douche à l'italienne avec robinetterie Grohe encastrée, double vasque contemporaine et WC suspendu.",
     coverImage: matignon1,
+    instagramLink: "DEc8OANsV-j",
     photos: [
       { id: 1, image: matignon1, title: "Après — Vue d'ensemble", description: "Douche, WC suspendu et sèche-serviettes" },
       { id: 2, image: matignon2, title: "Après — WC suspendu", description: "Étagères en verre et effet marbre" },
