@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { MessageSquare, Palette, Diamond, Hammer, Shield, Headphones, Check, X, ArrowRight, ClipboardCheck, UserCheck, Handshake, Lightbulb, Home } from "lucide-react";
+import { MessageSquare, Palette, Diamond, Hammer, Shield, Headphones, Check, X, ArrowRight, ClipboardCheck, UserCheck, Handshake, Lightbulb, Home, Camera } from "lucide-react";
 const benefits = [{
   icon: ClipboardCheck,
   title: "Maître d'œuvre dès le 1er RDV",
@@ -167,6 +167,98 @@ export default function WhyUs() {
                   Chaque détail est pensé pour maximiser votre confort et votre bien-être au quotidien.
                 </p>
               </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Photography Section */}
+      <section className="section-padding bg-stone">
+        <div className="container-custom">
+          <motion.div 
+            className="max-w-5xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="w-16 h-16 rounded-full bg-accent/30 flex items-center justify-center mb-6">
+                  <Camera className="w-8 h-8 text-wood" />
+                </div>
+                <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6">
+                  Votre transformation immortalisée
+                </h2>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                  <strong className="text-foreground">Avant les travaux</strong>, nous immortalisons votre salle de bain telle qu'elle est. 
+                  <strong className="text-foreground"> À la fin du chantier</strong>, nous organisons un shooting professionnel pour capturer 
+                  la transformation et vous rappeler l'aventure que nous avons vécue ensemble.
+                </p>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+                  Ce travail minutieux, c'est <strong className="text-foreground">Stéphane Vasco</strong>, notre photographe partenaire, 
+                  qui s'en charge. Tous les albums que vous découvrez sur ce site sont le fruit de son travail assidu à nos côtés. 
+                  Ces photos sont à la fois notre vitrine et <strong className="text-foreground">votre plus beau souvenir</strong> — 
+                  une pièce unique née de notre collaboration.
+                </p>
+                <Button variant="outline" asChild>
+                  <Link to="/realisations">
+                    Découvrir nos réalisations
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </Button>
+              </div>
+              
+              <div className="relative">
+                <motion.div 
+                  className="bg-background rounded-2xl p-8 shadow-lg"
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                >
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <span className="text-primary font-bold">1</span>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-1">Shooting "Avant"</h4>
+                        <p className="text-muted-foreground text-sm">On immortalise l'état initial de votre salle de bain avant toute intervention.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center flex-shrink-0">
+                        <Hammer className="w-5 h-5 text-wood" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-1">Transformation</h4>
+                        <p className="text-muted-foreground text-sm">Notre équipe réalise les travaux avec passion et expertise.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-full bg-cta/20 flex items-center justify-center flex-shrink-0">
+                        <span className="text-cta font-bold">2</span>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-1">Shooting "Après"</h4>
+                        <p className="text-muted-foreground text-sm">Stéphane Vasco capture votre nouvelle salle de bain sous son meilleur jour.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Diamond className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-1">Votre souvenir</h4>
+                        <p className="text-muted-foreground text-sm">Des photos professionnelles de votre pièce unique, témoins de notre aventure commune.</p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
             </div>
           </motion.div>
         </div>
