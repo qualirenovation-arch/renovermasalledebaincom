@@ -325,6 +325,11 @@ const albums: Album[] = [
     location: "Paris 16ème - Rue Pierre Guérin",
     description: "Rénovation d'une salle de bain pour un appartement au masculin. Douche à l'italienne avec carrelage pierre naturelle, robinetterie encastrée chromée haut de gamme, niches de rangement intégrées et rangements sur-mesure avec buanderie dissimulée.",
     coverImage: pierreGuerin1,
+    review: {
+      text: "J'ai fait appel à Qualirenovation pour deux chantiers dont une rénovation d'envergure d'un appartement. La qualité d'exécution fut exemplaire. Carina est rapidement devenue non plus un prestataire mais un véritable partenaire. Des années après la fin des travaux, Carina est toujours disponible pour assurer un suivi ou fournir un conseil quel que soit le sujet. Bravo et merci Carina.",
+      author: "Julien",
+      link: "https://www.houzz.fr/viewReview/1891218/qualirenovation-by-qualiconcept-review"
+    },
     photos: [
       { id: 1, image: pierreGuerin1, title: "Après — Vue d'ensemble", description: "Meuble vasque et WC suspendu" },
       { id: 2, image: pierreGuerin2, title: "Après — Rangements sur-mesure", description: "Colonnes avec buanderie intégrée" },
