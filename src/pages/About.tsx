@@ -7,6 +7,7 @@ import aboutHistoire from "@/assets/about-histoire.jpg";
 import teamPhoto from "@/assets/team-photo.jpg";
 import teamChantier1 from "@/assets/team-chantier-1.jpg";
 import teamChantier3 from "@/assets/team-chantier-3.jpg";
+import stephaneVasco2 from "@/assets/stephane-vasco-2.jpg";
 
 const values = [
   { icon: Award, title: "Excellence", description: "Nous visons la perfection dans chaque détail de nos réalisations" },
@@ -302,25 +303,40 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="max-w-3xl mx-auto text-center">
-              <div className="w-16 h-16 rounded-2xl bg-accent/30 flex items-center justify-center mx-auto mb-6">
-                <Camera className="w-8 h-8 text-wood" />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+              <div className="text-center lg:text-left">
+                <div className="w-16 h-16 rounded-2xl bg-accent/30 flex items-center justify-center mx-auto lg:mx-0 mb-6">
+                  <Camera className="w-8 h-8 text-wood" />
+                </div>
+                <h3 className="font-display text-2xl font-semibold mb-4">
+                  Stéphane Vasco, notre photographe partenaire
+                </h3>
+                <p className="text-primary-foreground/80 leading-relaxed mb-6">
+                  Avant les travaux, nous immortalisons votre salle de bain. À la fin du chantier, 
+                  Stéphane réalise un shooting professionnel pour capturer la transformation et vous 
+                  offrir un album souvenir unique de cette aventure. Les réalisations que vous découvrez 
+                  sur notre site sont le fruit de son travail assidu à nos côtés.
+                </p>
+                <Button variant="outline" size="lg" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                  <Link to="/photographe">
+                    Découvrir Stéphane Vasco
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </Button>
               </div>
-              <h3 className="font-display text-2xl font-semibold mb-4">
-                Stéphane Vasco, notre photographe partenaire
-              </h3>
-              <p className="text-primary-foreground/80 leading-relaxed mb-6">
-                Avant les travaux, nous immortalisons votre salle de bain. À la fin du chantier, 
-                Stéphane réalise un shooting professionnel pour capturer la transformation et vous 
-                offrir un album souvenir unique de cette aventure. Les réalisations que vous découvrez 
-                sur notre site sont le fruit de son travail assidu à nos côtés.
-              </p>
-              <Button variant="outline" size="lg" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-                <Link to="/photographe">
-                  Découvrir Stéphane Vasco
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </Button>
+              <motion.div 
+                className="overflow-hidden rounded-2xl shadow-lg"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+              >
+                <img 
+                  src={stephaneVasco2} 
+                  alt="Stéphane Vasco en action sur un de nos chantiers" 
+                  className="w-full h-72 object-cover"
+                />
+              </motion.div>
             </div>
           </motion.div>
         </div>
