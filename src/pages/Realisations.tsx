@@ -325,16 +325,23 @@ const albums: Album[] = [
       link: "https://www.houzz.fr/viewReview/2089505/qualirenovation-by-qualiconcept-review"
     },
     photos: [
-      { id: 1, image: boisColombes2, title: "Après — Résultat final", description: "Meuble suspendu et robinetterie dorée" },
-      { id: 2, image: boisColombes3, title: "Après — Paroi vitrée", description: "Verrière noire élégante" },
-      { id: 3, image: boisColombes4, title: "Après — Sol terrazzo", description: "Finition haut de gamme" },
-      { id: 4, image: boisColombes5, title: "Après — Détails dorés", description: "Robinetterie et accessoires" },
-      { id: 5, image: boisColombes6, title: "Après — Espace optimisé", description: "Chaque cm² utilisé" },
-      { id: 6, image: boisColombes10, title: "Travaux — Démolition", description: "Phase de dépose" },
-      { id: 7, image: boisColombes11, title: "Travaux — Préparation", description: "Mise à nu des murs" },
-      { id: 8, image: boisColombresAvant1, title: "Avant — Vue d'ensemble", description: "Salle de bain avec baignoire datée" },
-      { id: 9, image: boisColombresAvant2, title: "Avant — Vasque", description: "Ancien meuble vasque" },
-      { id: 10, image: boisColombresAvant3, title: "Avant — Coin buanderie", description: "Espace lave-linge" },
+      // APRÈS
+      { id: 1, image: boisColombes1, title: "Après — Vue générale", description: "Douche à l'italienne XXL" },
+      { id: 2, image: boisColombes2, title: "Après — Résultat final", description: "Meuble suspendu et robinetterie dorée" },
+      { id: 3, image: boisColombes3, title: "Après — Paroi vitrée", description: "Verrière noire élégante" },
+      { id: 4, image: boisColombes4, title: "Après — Sol terrazzo", description: "Finition haut de gamme" },
+      { id: 5, image: boisColombes5, title: "Après — Détails dorés", description: "Robinetterie et accessoires" },
+      { id: 6, image: boisColombes6, title: "Après — Espace optimisé", description: "Chaque cm² utilisé" },
+      { id: 7, image: boisColombes7, title: "Après — Douche", description: "Vue de la douche à l'italienne" },
+      { id: 8, image: boisColombes8, title: "Après — Vasque", description: "Détail du meuble vasque" },
+      { id: 9, image: boisColombes9, title: "Après — Finitions", description: "Détails et accessoires" },
+      // TRAVAUX
+      { id: 10, image: boisColombes10, title: "Travaux — Démolition", description: "Phase de dépose" },
+      { id: 11, image: boisColombes11, title: "Travaux — Préparation", description: "Mise à nu des murs" },
+      // AVANT
+      { id: 12, image: boisColombresAvant1, title: "Avant — Vue d'ensemble", description: "Salle de bain avec baignoire datée" },
+      { id: 13, image: boisColombresAvant2, title: "Avant — Vasque", description: "Ancien meuble vasque" },
+      { id: 14, image: boisColombresAvant3, title: "Avant — Coin buanderie", description: "Espace lave-linge" },
     ],
   },
   {
