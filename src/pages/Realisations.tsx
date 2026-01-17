@@ -482,6 +482,7 @@ const albums: Album[] = [
     location: "Saint-Maur-des-Fossés (94)",
     description: "AVANT : Salle de bain datée avec baignoire et carrelage ancien, espace mal exploité. APRÈS : Transformation complète en espace moderne avec douche à l'italienne, carrelage grand format contemporain et meuble vasque design.",
     coverImage: gallery18,
+    instagramLink: "https://www.instagram.com/reel/DIO91EFs5tM/",
     photos: [
       { id: 1, image: gallery18, title: "Après — Carrelage", description: "Grand format contemporain" },
       { id: 2, image: gallery19, title: "Après — Paroi", description: "Verre fixe élégant" },
