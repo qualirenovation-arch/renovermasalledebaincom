@@ -414,6 +414,7 @@ const albums: Album[] = [
     location: "Paris 15ème - Convention",
     description: "AVANT : Salle de bain avec baignoire et carrelage démodé. APRÈS : Transformation complète en douche à l'italienne avec carrelage grand format effet marbre et robinetterie noire. Meuble suspendu moderne et paroi fixe en verre trempé.",
     coverImage: convention1,
+    instagramLink: "https://www.instagram.com/reel/DL4wrtXt7Y3/",
     photos: [
       { id: 1, image: convention1, title: "Après — Résultat final", description: "Douche à l'italienne élégante" },
       { id: 2, image: convention2, title: "Après — Carrelage grand format", description: "Effet marbre contemporain" },
