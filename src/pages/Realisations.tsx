@@ -311,6 +311,13 @@ import matignonAvant2 from "@/assets/matignon-avant-2.jpg";
 import matignonAvant3 from "@/assets/matignon-avant-3.jpg";
 import matignonAvant4 from "@/assets/matignon-avant-4.jpg";
 
+// Bobillot Paris 13ème
+import bobillot1 from "@/assets/bobillot-1.jpg";
+import bobillot2 from "@/assets/bobillot-2.jpg";
+import bobillotAvant1 from "@/assets/bobillot-avant-1.jpg";
+import bobillotAvant2 from "@/assets/bobillot-avant-2.jpg";
+import bobillotAvant3 from "@/assets/bobillot-avant-3.jpg";
+
 interface Photo {
   id: number;
   image: string;
@@ -399,6 +406,26 @@ const albums: Album[] = [
       { id: 6, image: matignonAvant2, title: "Avant — Vue d'ensemble", description: "Salle de bain avec baignoire rose" },
       { id: 7, image: matignonAvant3, title: "Avant — Baignoire rose", description: "Vasque et baignoire roses datées" },
       { id: 8, image: matignonAvant4, title: "Avant — Détail", description: "Carrelage marbre et équipements vétustes" },
+    ],
+  },
+  {
+    id: "bobillot",
+    title: "Rénovation entre deux locations",
+    location: "Paris 13ème - Rue Bobillot",
+    description: "AVANT : Logement dégradé nécessitant une rénovation profonde pour améliorer le DPE et revaloriser le bien. Murs abîmés, tuyauteries apparentes, aucun équipement moderne. APRÈS : Rénovation complète cuisine et salle de bain. Ambiance chaleureuse avec teintes beige, bois et noir. Meuble vasque bois avec plan noir, robinetterie laiton brossé, carrelage zellige beige et chauffe-eau dissimulé au-dessus du WC suspendu pour un gain de place optimal.",
+    coverImage: bobillot1,
+    instagramLink: "https://www.instagram.com/reel/C-S-wyLtLP-/",
+    review: {
+      text: "Carina m'a été recommandée par mes amis. Je souhaitais rénover ma salle de bain. Elle a fait du super travail, dans les temps et bien réalisé. Je la recommande.",
+      author: "Client Paris 13ème",
+      link: "https://www.houzz.fr/viewReview/2059916/qualirenovation-by-qualiconcept-review"
+    },
+    photos: [
+      { id: 1, image: bobillot1, title: "Après — Vue d'ensemble", description: "Meuble bois, plan noir et robinetterie laiton" },
+      { id: 2, image: bobillot2, title: "Après — Détail vasque", description: "Zellige beige et applique murale dorée" },
+      { id: 3, image: bobillotAvant1, title: "Avant — Vue générale", description: "Murs dégradés et tuyauteries apparentes" },
+      { id: 4, image: bobillotAvant2, title: "Avant — Cuisine", description: "État initial à rénover" },
+      { id: 5, image: bobillotAvant3, title: "Avant — Vue d'ensemble", description: "Logement nécessitant rénovation complète" },
     ],
   },
   {
