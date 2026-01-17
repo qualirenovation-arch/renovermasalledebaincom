@@ -310,45 +310,44 @@ export default function About() {
                 <HardHat className="w-8 h-8 text-wood" />
               </div>
               <h3 className="font-display text-2xl font-semibold mb-4">
-                Carina Nahmani, votre maître d'œuvre dédiée
+                Carina Nahmani – Maître d'œuvre
               </h3>
               <div className="space-y-4 text-primary-foreground/80 leading-relaxed">
-                <p>
-                  Avec <strong className="text-accent">plus de 20 ans d'expérience</strong> sur les chantiers parisiens, 
-                  Carina est le pilier de chaque projet. Ancienne conductrice de travaux pour des entreprises générales 
-                  du bâtiment, elle maîtrise parfaitement l'ensemble des corps de métier : plomberie, électricité, 
-                  carrelage, menuiserie, peinture et étanchéité.
+                <p className="text-lg italic text-accent">
+                  « Seul on n'avance pas, en équipe oui. »
                 </p>
                 <p>
-                  <strong className="text-primary-foreground">Son rôle ?</strong> Concevoir, coordonner et superviser 
-                  votre rénovation de A à Z. Dès le premier rendez-vous, elle se déplace chez vous pour une 
-                  <strong className="text-accent"> visite technique gratuite</strong> : analyse de faisabilité, 
-                  prise de mesures précises, identification des contraintes techniques et présentation des solutions adaptées.
+                  Véritable <strong className="text-primary-foreground">chef d'orchestre de votre chantier</strong>, 
+                  Carina Nahmani pilote chaque projet avec méthode, sang-froid et énergie positive.
                 </p>
                 <p>
-                  Carina assure un <strong className="text-primary-foreground">suivi quotidien rigoureux</strong> de 
-                  votre chantier via WhatsApp : photos, vidéos, comptes-rendus. Vous savez exactement qui intervient, 
-                  quand et comment avance votre projet. Pour les clients occupés ou à l'étranger, elle organise des 
-                  visioconférences régulières.
+                  <strong className="text-accent">Femme du BTP</strong>, féminine mais avec la poigne qu'il faut pour 
+                  orchestrer tout ce joli monde, elle gère la pression des équipes comme celle des clients sans jamais 
+                  se laisser déborder. Elle sait aussi glisser une petite touche d'humour pour détendre l'atmosphère 
+                  et maintenir un chantier serein et respectueux.
                 </p>
                 <p>
-                  Sa force : une <strong className="text-accent">exigence sans compromis</strong> sur la qualité des 
-                  finitions et le respect des normes DTU. Chaque détail compte, chaque jointure est vérifiée, chaque 
-                  étanchéité est contrôlée. C'est cette rigueur qui fait notre réputation.
+                  Carina <strong className="text-primary-foreground">maîtrise les produits, les techniques et leur mise en œuvre</strong>. 
+                  Tout est expliqué, tout est contrôlé : rien n'est laissé au hasard.
+                </p>
+                <p>
+                  Toujours disponible, à l'écoute au moindre doute, elle ne vous laisse jamais dans le flou. 
+                  Ce qui la motive avant tout ? <strong className="text-accent">Vous voir sourire</strong> et livrer 
+                  un chantier bien mené, fluide et parfaitement abouti.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
                 <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
-                  20+ ans d'expérience
+                  Chef d'orchestre
                 </span>
                 <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
-                  Visite technique gratuite
+                  Énergie positive
                 </span>
                 <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
-                  Suivi WhatsApp quotidien
+                  Rien au hasard
                 </span>
                 <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
-                  Normes DTU respectées
+                  Toujours disponible
                 </span>
               </div>
             </div>
