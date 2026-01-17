@@ -375,6 +375,7 @@ const albums: Album[] = [
     location: "Bois-Colombes (92)",
     description: "AVANT : Salle de bain sombre et datée avec baignoire, carrelage ancien et buanderie encombrante. APRÈS : Transformation spectaculaire en pièce lumineuse et moderne. Douche à l'italienne XXL, robinetterie dorée, sol terrazzo et murs vert d'eau.",
     coverImage: boisColombes2,
+    instagramLink: "DFvTfUlst9t",
     review: {
       text: "J'ai sollicité Carina de QUALIRENOVATION pour la rénovation de ma salle de bain. La rénovation a été complète : plomberie, électricité, remplacement de la baignoire par une douche, carrelage, peinture et menuiserie. L'équipe est compétente et a réalisé un travail de très bonne qualité. Je suis très satisfait et je recommande vivement car le résultat dépasse mes attentes initiales.",
       author: "Olivier G.",
