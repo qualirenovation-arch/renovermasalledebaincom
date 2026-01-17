@@ -139,7 +139,7 @@ const faqCategories = [
       },
       {
         question: "Quel receveur de douche choisir ?",
-        answer: "Nous proposons différents types de receveurs de douche : receveur extra-plat en résine, receveur à carreler pour un rendu 100% personnalisé, ou douche maçonnée traditionnelle. Le choix dépend de vos goûts, de votre budget et des contraintes techniques de votre salle de bain."
+        answer: "Nous proposons différents types de receveurs de douche : receveur extra-plat en résine, receveur à carreler pour un rendu 100% personnalisé, receveur en acier recoupable (ajustable aux dimensions exactes de votre espace), ou douche maçonnée traditionnelle. Le choix dépend de vos goûts, de votre budget et des contraintes techniques de votre salle de bain."
       }
     ]
   },
