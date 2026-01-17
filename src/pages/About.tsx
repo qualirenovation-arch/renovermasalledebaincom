@@ -264,44 +264,9 @@ export default function About() {
             </motion.div>
           </div>
 
-          {/* Gallery photos équipe sur chantier */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="font-display text-2xl font-semibold text-center mb-8">
-              Nos artisans en action
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              <motion.div 
-                className="aspect-[4/3] rounded-2xl overflow-hidden"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-              >
-                <img 
-                  src={teamChantier1} 
-                  alt="L'équipe au complet sur un chantier parisien" 
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
-              <motion.div 
-                className="aspect-[4/3] rounded-2xl overflow-hidden"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-              >
-                <img 
-                  src={teamChantier3} 
-                  alt="Artisan réalisant des travaux de perçage" 
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
-            </div>
-          </motion.div>
-
           {/* Carina Nahmani - Maître d'œuvre */}
           <motion.div
-            className="mt-16 pt-12 border-t border-primary-foreground/20"
+            className="mt-8"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -430,6 +395,42 @@ export default function About() {
                   />
                 </motion.div>
               </div>
+            </div>
+          </motion.div>
+
+          {/* Gallery photos équipe sur chantier */}
+          <motion.div
+            className="mt-16 pt-12 border-t border-primary-foreground/20"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="font-display text-2xl font-semibold text-center mb-8">
+              Nos artisans en action
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <motion.div 
+                className="aspect-[4/3] rounded-2xl overflow-hidden"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img 
+                  src={teamChantier1} 
+                  alt="L'équipe au complet sur un chantier parisien" 
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+              <motion.div 
+                className="aspect-[4/3] rounded-2xl overflow-hidden"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img 
+                  src={teamChantier3} 
+                  alt="Artisan réalisant des travaux de perçage" 
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
             </div>
           </motion.div>
 
