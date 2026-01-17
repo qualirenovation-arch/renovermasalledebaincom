@@ -55,6 +55,14 @@ import convention4 from "@/assets/courbevoie-4.jpg";
 import convention5 from "@/assets/courbevoie-5.jpg";
 import convention6 from "@/assets/courbevoie-6.jpg";
 
+// Paris 11ème Charonne - Bastille
+import charonne1 from "@/assets/charonne-1.jpg";
+import charonne2 from "@/assets/charonne-2.jpg";
+import charonneAvant1 from "@/assets/charonne-avant-1.jpg";
+import charonneAvant2 from "@/assets/charonne-avant-2.jpg";
+import charonneAvant3 from "@/assets/charonne-avant-3.jpg";
+import charonneAvant4 from "@/assets/charonne-avant-4.jpg";
+
 // Paris 10ème Jemmapes
 import jemmapes1 from "@/assets/jemmapes-1.jpg";
 import jemmapes2 from "@/assets/jemmapes-2.jpg";
@@ -863,6 +871,21 @@ const albums: Album[] = [
       { id: 1, image: stMande1, title: "Après — Vue d'ensemble", description: "Douche à l'italienne moderne" },
       { id: 2, image: stMande2, title: "Après — Détails", description: "Finitions soignées" },
       { id: 3, image: stMande3, title: "Après — Vue complète", description: "Transformation réussie" },
+    ],
+  },
+  {
+    id: "charonne",
+    title: "Black & White — Robinetterie Rétro",
+    location: "Paris 11ème - Rue de Charonne (Bastille)",
+    description: "AVANT : Salle de bain datée avec carrelage blanc, cabine de douche et vasque en bois usée, WC encombré. APRÈS : Transformation spectaculaire pour ce pied-à-terre parisien. Création d'une salle de douche ouverte sur la chambre avec carrelage noir brillant posé en chevrons, lavabo colonne rétro et robinetterie dorée vintage. Carreaux de ciment au sol et papier peint nuages pour une atmosphère hôtel boutique.",
+    coverImage: charonne1,
+    photos: [
+      { id: 1, image: charonne1, title: "Après — Vue chambre", description: "Douche ouverte sur la chambre, style hôtel boutique" },
+      { id: 2, image: charonne2, title: "Après — Salle de douche", description: "Carrelage noir en chevrons, robinetterie rétro dorée" },
+      { id: 3, image: charonneAvant1, title: "Avant — Salle de bain", description: "Cabine de douche et vasque bois à remplacer" },
+      { id: 4, image: charonneAvant2, title: "Avant — Chambre", description: "État initial de la chambre" },
+      { id: 5, image: charonneAvant3, title: "Avant — WC", description: "WC encombré à rénover" },
+      { id: 6, image: charonneAvant4, title: "Avant — WC angle", description: "Carrelage daté" },
     ],
   },
 ];
