@@ -1016,6 +1016,13 @@ export default function Realisations() {
     }
   }, [location.hash]);
 
+  // Scroll to top when album is selected
+  useEffect(() => {
+    if (selectedAlbum) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [selectedAlbum]);
+
   const currentAlbums = viewMode === "completed" ? albums : inProgressAlbums;
 
   const handleNextPhoto = () => {
