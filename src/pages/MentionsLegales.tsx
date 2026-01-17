@@ -17,7 +17,7 @@ export default function MentionsLegales() {
                 Éditeur du site
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Le site <strong>RénoverMaSalleDeBain.com</strong> est édité par :
+                Le site <strong>renovermasalledebain.com</strong> est édité par :
               </p>
               <ul className="list-none space-y-2 text-muted-foreground mt-4">
                 <li><strong>Raison sociale :</strong> QUALICONCEPT</li>
@@ -45,7 +45,7 @@ export default function MentionsLegales() {
                 Hébergement
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Le site RénoverMaSalleDeBain.com est hébergé par :
+                Le site renovermasalledebain.com est hébergé par :
               </p>
               <ul className="list-none space-y-2 text-muted-foreground mt-4">
                 <li><strong>Lovable (Lovable Technologies)</strong></li>
@@ -93,7 +93,7 @@ export default function MentionsLegales() {
                 Liens hypertextes
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Le site RénoverMaSalleDeBain.com peut contenir des liens vers d'autres sites internet. QualiRénovation by QualiConcept n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.
+                Le site renovermasalledebain.com peut contenir des liens vers d'autres sites internet. QualiRénovation by QualiConcept n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.
               </p>
             </section>
 
