@@ -78,6 +78,10 @@ const faqCategories = [
       {
         question: "Comment gérez-vous les travaux supplémentaires ?",
         answer: "Les travaux supplémentaires peuvent survenir en cours de chantier suite à des découvertes (état des canalisations, murs, etc.) ou à vos nouvelles envies. Dans tous les cas, rien n'est engagé sans votre accord écrit préalable. Nous vous présentons un avenant détaillé avec le coût exact avant toute intervention. Cette transparence vous garantit de ne jamais avoir de mauvaise surprise sur la facture finale."
+      },
+      {
+        question: "Qui réalise les plans de ma future salle de bain ?",
+        answer: "Pour la réalisation des plans, nous travaillons avec P3D Concept, partenaire avec qui nous formons un binôme depuis plusieurs années. Vous recevez un devis précis, la prestation est réglée directement auprès de P3D Concept, et vous échangez librement avec lui pour préparer au mieux votre projet. Une collaboration fluide, pour un projet bien pensé dès le départ."
       }
     ]
   },
