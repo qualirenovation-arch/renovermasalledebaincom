@@ -327,6 +327,25 @@ import bobillotAvant1 from "@/assets/bobillot-avant-1.jpg";
 import bobillotAvant2 from "@/assets/bobillot-avant-2.jpg";
 import bobillotAvant3 from "@/assets/bobillot-avant-3.jpg";
 
+// Charenton-le-Pont (94)
+import charenton1 from "@/assets/charenton-1.jpg";
+import charenton2 from "@/assets/charenton-2.jpg";
+import charenton3 from "@/assets/charenton-3.jpg";
+import charenton4 from "@/assets/charenton-4.jpg";
+import charenton5 from "@/assets/charenton-5.jpg";
+import charenton6 from "@/assets/charenton-6.jpg";
+import charenton7 from "@/assets/charenton-7.jpg";
+import charenton8 from "@/assets/charenton-8.jpg";
+import charenton9 from "@/assets/charenton-9.jpg";
+import charenton10 from "@/assets/charenton-10.jpg";
+import charenton11 from "@/assets/charenton-11.jpg";
+import charenton12 from "@/assets/charenton-12.jpg";
+import charenton13 from "@/assets/charenton-13.jpg";
+import charentonAvant1 from "@/assets/charenton-avant-1.jpg";
+import charentonAvant2 from "@/assets/charenton-avant-2.jpg";
+import charentonAvant3 from "@/assets/charenton-avant-3.jpg";
+import charentonAvant4 from "@/assets/charenton-avant-4.jpg";
+
 interface Photo {
   id: number;
   image: string;
@@ -436,6 +455,34 @@ const albums: Album[] = [
       { id: 3, image: bobillotAvant1, title: "Avant — Vue générale", description: "Murs dégradés et tuyauteries apparentes" },
       { id: 4, image: bobillotAvant2, title: "Avant — Salle de bain", description: "Carrelage dégradé et état initial" },
       { id: 5, image: bobillotAvant3, title: "Avant — Vue d'ensemble", description: "Logement nécessitant rénovation complète" },
+    ],
+  },
+  {
+    id: "charenton",
+    title: "Duo SDB & WC — Marbre et Laiton",
+    location: "Charenton-le-Pont (94)",
+    description: "AVANT : Baignoire datée et espace peu fonctionnel. APRÈS : Création d'un duo salle de bain et WC au style Black & White raffiné. Carrelage effet marbre grand format, mosaïque hexagonale sur le mur WC, robinetterie laiton brossé encastrée. Remplacement de la baignoire par un receveur de douche avec paroi profilé doré. Meuble vasque blanc avec façade 3D et miroir encadré laiton.",
+    coverImage: charenton4,
+    photos: [
+      // APRÈS
+      { id: 1, image: charenton1, title: "Après — WC suspendu", description: "Mosaïque hexagonale effet marbre" },
+      { id: 2, image: charenton2, title: "Après — Détail WC", description: "Niche et accessoires assortis" },
+      { id: 3, image: charenton3, title: "Après — Douche à l'italienne", description: "Receveur, robinetterie laiton et paroi dorée" },
+      { id: 4, image: charenton4, title: "Après — Vue meuble vasque", description: "Double vasque et miroirs encadrés laiton" },
+      { id: 5, image: charenton5, title: "Après — Jonction parquet", description: "Transition parquet et carrelage marbre" },
+      { id: 6, image: charenton6, title: "Après — Robinetterie encastrée", description: "Laiton brossé sur marbre" },
+      { id: 7, image: charenton7, title: "Après — Vasque détail", description: "Robinetterie murale laiton" },
+      { id: 8, image: charenton8, title: "Après — Vue complète vasque", description: "Meuble 3D blanc et miroir laiton" },
+      { id: 9, image: charenton9, title: "Après — Vue douche", description: "Paroi profilé doré et niches intégrées" },
+      { id: 10, image: charenton10, title: "Après — Détail robinetterie", description: "Mitigeur laiton encastré" },
+      { id: 11, image: charenton11, title: "Après — Ensemble", description: "Harmonie marbre blanc et laiton" },
+      { id: 12, image: charenton12, title: "Après — Finitions", description: "Sèche-serviettes et WC" },
+      { id: 13, image: charenton13, title: "Après — Vue finale", description: "Style Black & White élégant" },
+      // AVANT
+      { id: 14, image: charentonAvant1, title: "Avant — Baignoire", description: "Ancienne baignoire à remplacer" },
+      { id: 15, image: charentonAvant2, title: "Avant — Vue générale", description: "État initial de la salle de bain" },
+      { id: 16, image: charentonAvant3, title: "Avant — Équipements", description: "Aménagement daté à transformer" },
+      { id: 17, image: charentonAvant4, title: "Avant — Vasque", description: "Meuble vasque à moderniser" },
     ],
   },
   {
