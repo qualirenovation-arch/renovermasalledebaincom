@@ -62,6 +62,7 @@ import charonneAvant1 from "@/assets/charonne-avant-1.jpg";
 import charonneAvant2 from "@/assets/charonne-avant-2.jpg";
 import charonneAvant3 from "@/assets/charonne-avant-3.jpg";
 import charonneAvant4 from "@/assets/charonne-avant-4.jpg";
+const charonneVideo1 = "/videos/charonne-1.mp4";
 
 // Paris 10ème Jemmapes
 import jemmapes1 from "@/assets/jemmapes-1.jpg";
@@ -877,15 +878,16 @@ const albums: Album[] = [
     id: "charonne",
     title: "Black & White — Robinetterie Rétro",
     location: "Paris 11ème - Rue de Charonne (Bastille)",
-    description: "AVANT : Salle de bain datée avec carrelage blanc, cabine de douche et vasque en bois usée, WC encombré. APRÈS : Transformation spectaculaire pour ce pied-à-terre parisien. Création d'une salle de douche ouverte sur la chambre avec carrelage noir brillant posé en chevrons, lavabo colonne rétro et robinetterie dorée vintage. Carreaux de ciment au sol et papier peint nuages pour une atmosphère hôtel boutique.",
+    description: "AVANT : Salle de bain datée avec carrelage blanc, cabine de douche et vasque en bois usée. APRÈS : Transformation spectaculaire pour ce pied-à-terre parisien. Carreaux fleuris inspiration carreaux de ciment (Neocim) au sol, métro noir mat et brillant aux murs avec pose en chevrons dans la douche et à l'anglaise côté vasque, séparation marquée par un profilé laiton. Lavabo colonne rétro et robinetterie dorée vintage. Papier peint nuages pour une atmosphère hôtel boutique. **Projet réalisé à distance** : le client avait préparé tous les rendus souhaités, nous avons respecté le cahier des charges à la lettre.",
     coverImage: charonne1,
     photos: [
-      { id: 1, image: charonne1, title: "Après — Vue chambre", description: "Douche ouverte sur la chambre, style hôtel boutique" },
-      { id: 2, image: charonne2, title: "Après — Salle de douche", description: "Carrelage noir en chevrons, robinetterie rétro dorée" },
-      { id: 3, image: charonneAvant1, title: "Avant — Salle de bain", description: "Cabine de douche et vasque bois à remplacer" },
-      { id: 4, image: charonneAvant2, title: "Avant — Chambre", description: "État initial de la chambre" },
-      { id: 5, image: charonneAvant3, title: "Avant — WC", description: "WC encombré à rénover" },
-      { id: 6, image: charonneAvant4, title: "Avant — WC angle", description: "Carrelage daté" },
+      { id: 1, image: charonneVideo1, title: "Vidéo — Visite virtuelle", description: "Découvrez la transformation complète", isVideo: true },
+      { id: 2, image: charonne1, title: "Après — Vue chambre", description: "Douche ouverte sur la chambre, style hôtel boutique" },
+      { id: 3, image: charonne2, title: "Après — Salle de douche", description: "Métro noir brillant en chevrons, profilé laiton, robinetterie rétro" },
+      { id: 4, image: charonneAvant1, title: "Avant — Salle de bain", description: "Cabine de douche et vasque bois à remplacer" },
+      { id: 5, image: charonneAvant2, title: "Avant — Chambre", description: "État initial de la chambre" },
+      { id: 6, image: charonneAvant3, title: "Avant — WC", description: "WC encombré à rénover" },
+      { id: 7, image: charonneAvant4, title: "Avant — WC angle", description: "Carrelage daté" },
     ],
   },
 ];
