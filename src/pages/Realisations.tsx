@@ -835,36 +835,6 @@ const albums: Album[] = [
   },
 ];
 
-// Section Presse - Albums avec couverture médiatique
-const presseAlbums: Album[] = [
-  {
-    id: "presse-st-mande",
-    title: "Saint-Mandé — Couverture Instagram",
-    location: "Saint-Mandé (94)",
-    description: "Découvrez notre projet Saint-Mandé mis en avant sur nos réseaux sociaux. Une transformation complète documentée étape par étape.",
-    coverImage: stMande1,
-    instagramLink: "https://www.instagram.com/p/DE-fqg4sxql/",
-    photos: [
-      { id: 1, image: stMande1, title: "Projet vedette", description: "Rénovation Saint-Mandé" },
-      { id: 2, image: stMande2, title: "Détails", description: "Finitions soignées" },
-      { id: 3, image: stMande3, title: "Vue complète", description: "Transformation réussie" },
-    ],
-  },
-  {
-    id: "presse-pereire",
-    title: "Dégâts des eaux — On vous explique tout !",
-    location: "Paris 17ème - Bd Pereire",
-    description: "Vidéo explicative sur les dégâts des eaux et malfaçons. Comment reconnaître les signes, que faire, et comment Carina intervient pour reprendre les chantiers bâclés.",
-    coverImage: gallery11,
-    instagramLink: "https://www.instagram.com/reel/DDFsmeBNeur/",
-    photos: [
-      { id: 1, image: gallery11, title: "Réparation malfaçons", description: "Avant l'intervention de Carina" },
-      { id: 2, image: gallery12, title: "Travaux de reprise", description: "Étanchéité refaite" },
-      { id: 3, image: gallery13, title: "Résultat final", description: "SDB fonctionnelle" },
-    ],
-  },
-];
-
 interface ProjectLocation {
   id: string;
   name: string;
@@ -981,20 +951,17 @@ export default function Realisations() {
   const location = useLocation();
   const [selectedAlbum, setSelectedAlbum] = useState<Album | null>(null);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
-  const [viewMode, setViewMode] = useState<"completed" | "inProgress" | "presse">("completed");
+  const [viewMode, setViewMode] = useState<"completed" | "inProgress">("completed");
 
-  // Détecter l'ancre #chantiers-en-cours ou #presse dans l'URL
+  // Détecter l'ancre #chantiers-en-cours dans l'URL
   useEffect(() => {
     if (location.hash === "#chantiers-en-cours") {
       setViewMode("inProgress");
       setSelectedAlbum(null);
-    } else if (location.hash === "#presse") {
-      setViewMode("presse");
-      setSelectedAlbum(null);
     }
   }, [location.hash]);
 
-  const currentAlbums = viewMode === "completed" ? albums : viewMode === "inProgress" ? inProgressAlbums : presseAlbums;
+  const currentAlbums = viewMode === "completed" ? albums : inProgressAlbums;
 
   const handleNextPhoto = () => {
     if (selectedAlbum && selectedPhotoIndex !== null) {
@@ -1063,16 +1030,6 @@ export default function Realisations() {
               }`}
             >
               🚧 Chantiers en cours
-            </button>
-            <button
-              onClick={() => setViewMode("presse")}
-              className={`px-6 py-3 rounded-full text-sm font-medium transition-all ${
-                viewMode === "presse"
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-              }`}
-            >
-              📰 Presse
             </button>
           </div>
         </div>
