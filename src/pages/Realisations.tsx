@@ -341,10 +341,6 @@ import charenton10 from "@/assets/charenton-10.jpg";
 import charenton11 from "@/assets/charenton-11.jpg";
 import charenton12 from "@/assets/charenton-12.jpg";
 import charenton13 from "@/assets/charenton-13.jpg";
-import charentonAvant1 from "@/assets/charenton-avant-1.jpg";
-import charentonAvant2 from "@/assets/charenton-avant-2.jpg";
-import charentonAvant3 from "@/assets/charenton-avant-3.jpg";
-import charentonAvant4 from "@/assets/charenton-avant-4.jpg";
 import charenton14 from "@/assets/charenton-14.jpg";
 import charentonAvant5 from "@/assets/charenton-avant-5.jpg";
 import charentonAvant6 from "@/assets/charenton-avant-6.jpg";
@@ -489,10 +485,6 @@ const albums: Album[] = [
       { id: 16, image: charentonAvant6, title: "Avant — Vue baignoire", description: "Mosaïque beige à remplacer" },
       { id: 17, image: charentonAvant7, title: "Avant — Vasque", description: "Meuble blanc et carrelage mosaïque" },
       { id: 18, image: charentonAvant8, title: "Avant — WC séparé", description: "WC ancien avec réservoir apparent" },
-      { id: 19, image: charentonAvant1, title: "Avant — Détail baignoire", description: "État initial à transformer" },
-      { id: 20, image: charentonAvant2, title: "Avant — Vue générale", description: "Aménagement daté" },
-      { id: 21, image: charentonAvant3, title: "Avant — Équipements", description: "Configuration peu fonctionnelle" },
-      { id: 22, image: charentonAvant4, title: "Avant — Détail", description: "Espace à optimiser" },
     ],
   },
   {
