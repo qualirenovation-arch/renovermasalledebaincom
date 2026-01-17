@@ -403,6 +403,7 @@ const albums: Album[] = [
     location: "Paris 17ème - Les Ternes",
     description: "AVANT : Baignoire balnéo en panne depuis des années avec galets au sol, aucune paroi pour protéger de l'eau — la douche causait des éclaboussures sur le parquet, très peu pratique. APRÈS : Création d'une suite parentale luxueuse avec claustra bois sur mesure, douche à l'italienne en carrelage effet marbre, paroi et robinetterie dorées laiton brossé, niches intégrées et colonnes de rangement.",
     coverImage: suiteParentaleCover,
+    instagramLink: "https://www.instagram.com/reel/DAmG5VDtPwK/",
     review: {
       text: "Je recommande avec beaucoup d'enthousiasme les prestations de QualiConcept. Carina a géré mon chantier avec beaucoup de professionnalisme et de rigueur, elle est très à l'écoute de ses clients. Le chantier a été livré dans le délai imparti, avec des finitions soignées et beaucoup de créativité. Le résultat est formidable et dépasse même mes ambitions initiales !",
       author: "Marie C.",
