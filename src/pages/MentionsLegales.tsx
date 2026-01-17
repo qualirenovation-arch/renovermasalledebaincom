@@ -1,4 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
+import micLogo from "@/assets/logos/mic-insurance.jpg";
 
 export default function MentionsLegales() {
   return (
@@ -19,13 +20,12 @@ export default function MentionsLegales() {
                 Le site <strong>RénoverMaSalleDeBain.com</strong> est édité par :
               </p>
               <ul className="list-none space-y-2 text-muted-foreground mt-4">
-                <li><strong>Raison sociale :</strong> QualiRénovation by QualiConcept</li>
+                <li><strong>Raison sociale :</strong> QUALICONCEPT</li>
                 <li><strong>Forme juridique :</strong> SARL</li>
                 <li><strong>Siège social :</strong> 6 rue d'Armaillé, 75017 Paris, France</li>
                 <li><strong>Téléphone :</strong> 06 59 76 46 85</li>
                 <li><strong>Email :</strong> gestion@qualiconcept.fr</li>
-                <li><strong>SIRET :</strong> [À compléter]</li>
-                <li><strong>Numéro de TVA intracommunautaire :</strong> [À compléter]</li>
+                <li><strong>SIREN :</strong> 852 867 282</li>
               </ul>
             </section>
 
@@ -94,9 +94,17 @@ export default function MentionsLegales() {
               <h2 className="font-display text-2xl font-semibold text-primary mb-4">
                 Assurances professionnelles
               </h2>
-              <p className="text-muted-foreground leading-relaxed">
-                QualiRénovation by QualiConcept est titulaire d'une assurance Responsabilité Civile Professionnelle et d'une assurance Décennale auprès de MIC Assurances.
-              </p>
+              <div className="flex items-center gap-6">
+                <img 
+                  src={micLogo} 
+                  alt="MIC Insurance" 
+                  className="h-16 w-auto object-contain"
+                />
+                <p className="text-muted-foreground leading-relaxed">
+                  Entreprise assurée auprès de MIC Insurance<br />
+                  <span className="text-sm">(Responsabilité Civile Professionnelle et Décennale)</span>
+                </p>
+              </div>
             </section>
 
             {/* Droit applicable */}
