@@ -366,6 +366,12 @@ export default function About() {
                   et les visualisations 3D de votre future salle de bain, garantissant une conception 
                   sur-mesure parfaitement adaptée à vos besoins et à votre espace.
                 </p>
+                <Button variant="outline" size="lg" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                  <a href="https://www.p3dconcept.fr" target="_blank" rel="noopener noreferrer">
+                    Découvrir Thierry Pelmard
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </a>
+                </Button>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <motion.div 
