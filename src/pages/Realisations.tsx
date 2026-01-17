@@ -342,6 +342,9 @@ import charenton11 from "@/assets/charenton-11.jpg";
 import charenton12 from "@/assets/charenton-12.jpg";
 import charenton13 from "@/assets/charenton-13.jpg";
 import charenton14 from "@/assets/charenton-14.jpg";
+import charenton15 from "@/assets/charenton-15.jpg";
+import charenton16 from "@/assets/charenton-16.jpg";
+import charenton17 from "@/assets/charenton-17.jpg";
 import charentonAvant5 from "@/assets/charenton-avant-5.jpg";
 import charentonAvant6 from "@/assets/charenton-avant-6.jpg";
 import charentonAvant7 from "@/assets/charenton-avant-7.jpg";
@@ -480,6 +483,9 @@ const albums: Album[] = [
       { id: 12, image: charenton12, title: "Après — Finitions", description: "Sèche-serviettes et WC" },
       { id: 13, image: charenton13, title: "Après — Vue finale", description: "Style Black & White élégant" },
       { id: 14, image: charenton14, title: "Après — Niches douche", description: "Double niche avec mosaïque hexagonale" },
+      { id: 15, image: charenton15, title: "Après — Détail WC mosaïque", description: "Mosaïque hexagonale marbre et plaque Geberit" },
+      { id: 16, image: charenton16, title: "Après — WC vue complète", description: "Placard suspendu et mosaïque hexagonale" },
+      { id: 17, image: charenton17, title: "Après — Douchette laiton", description: "Robinetterie laiton brossé sur marbre" },
       // AVANT
       { id: 15, image: charentonAvant5, title: "Avant — Salle de bain complète", description: "Baignoire mosaïque beige et carrelage daté" },
       { id: 16, image: charentonAvant6, title: "Avant — Vue baignoire", description: "Mosaïque beige à remplacer" },
