@@ -8,10 +8,10 @@ const navItems = [
   { label: "Accueil", path: "/" },
   { label: "À propos", path: "/a-propos" },
   { label: "Pourquoi nous", path: "/pourquoi-nous" },
+  { label: "Partenaires", path: "/partenaires" },
   { label: "Réalisations", path: "/realisations" },
   { label: "🚧 Chantiers en cours", path: "/realisations#chantiers-en-cours" },
   { label: "📰 Presse", path: "/realisations#presse" },
-  { label: "Partenaires", path: "/partenaires" },
   { label: "Demande de devis", path: "/devis" },
 ];
 
