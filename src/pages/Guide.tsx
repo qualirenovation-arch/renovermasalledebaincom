@@ -40,6 +40,46 @@ const Guide = () => {
           "@type": "Answer",
           "text": "Avec un maître d'œuvre intégré, tout est pensé avec vous et pour vous. Nous validons et sélectionnons ensemble chaque achat, gérons les commandes et livraisons, et maîtrisons chaque choix du début à la fin. Produits adaptés, compatibilité technique vérifiée, délais coordonnés. Résultat : un chantier fluide, maîtrisé, et un projet qui traverse le temps sans mauvaise surprise."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "Qu'est-ce qu'une douche à l'italienne ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Une douche à l'italienne est une douche de plain-pied, sans marche ni receveur surélevé. Elle s'intègre parfaitement au sol de la salle de bain, offrant un accès facile et un design épuré. C'est la solution idéale pour une salle de bain moderne et accessible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Peut-on installer une douche à l'italienne dans un appartement ancien ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, la création d'une douche italienne est possible dans la plupart des appartements, même anciens. Notre maître d'œuvre réalise une étude de faisabilité gratuite pour évaluer les contraintes techniques (hauteur de réservation, évacuations) et vous proposer la meilleure solution."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment garantissez-vous l'étanchéité d'une douche à l'italienne ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "L'étanchéité est une obligation DTU (DTU 52.2). Nous utilisons des systèmes certifiés Schlüter, Wedi et Weber, posés selon les règles de l'art. Chaque douche bénéficie d'une garantie étanchéité 10 ans et de notre garantie décennale MIC Assurances."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pourquoi l'étanchéité sous carrelage est-elle obligatoire ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "L'étanchéité est obligatoire selon le DTU pour les pièces humides. Il existe deux systèmes : le SEL (Système d'Étanchéité Liquide) et le SPEC (Système de Protection à l'Eau sous Carrelage). Nous utilisons les produits Weber Aquastop."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quel receveur de douche choisir ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nous proposons différents types de receveurs : extra-plat en résine, à carreler, en acier recoupable, ou douche maçonnée traditionnelle. Le choix dépend de vos goûts, budget et contraintes techniques."
+        }
       }
     ]
   };
@@ -960,8 +1000,91 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* FAQ Section - Douche à l'italienne */}
       <section className="py-16 bg-accent/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto"
+          >
+            <h2 className="text-2xl md:text-3xl font-serif text-center mb-8">
+              🚿 Douche à l'italienne
+            </h2>
+            <div className="space-y-4">
+              <div className="bg-background rounded-xl p-6 shadow-sm">
+                <h3 className="font-semibold text-lg mb-2">
+                  ❓ Qu'est-ce qu'une douche à l'italienne ?
+                </h3>
+                <p className="text-muted-foreground">
+                  Une douche à l'italienne est une douche de plain-pied, sans marche ni receveur surélevé. Elle s'intègre parfaitement au sol de la salle de bain, offrant un accès facile et un design épuré. C'est la solution idéale pour une salle de bain moderne et accessible.
+                </p>
+              </div>
+              <div className="bg-background rounded-xl p-6 shadow-sm">
+                <h3 className="font-semibold text-lg mb-2">
+                  ❓ Peut-on installer une douche à l'italienne dans un appartement ancien ?
+                </h3>
+                <p className="text-muted-foreground">
+                  Oui, la création d'une douche italienne est possible dans la plupart des appartements, même anciens. Notre maître d'œuvre réalise une étude de faisabilité gratuite pour évaluer les contraintes techniques (hauteur de réservation, évacuations) et vous proposer la meilleure solution.
+                </p>
+              </div>
+              <div className="bg-background rounded-xl p-6 shadow-sm">
+                <h3 className="font-semibold text-lg mb-2">
+                  ❓ Comment garantissez-vous l'étanchéité d'une douche à l'italienne ?
+                </h3>
+                <div className="text-muted-foreground space-y-2">
+                  <p>
+                    L'étanchéité est une <strong>obligation DTU</strong> (référence DTU 52.2 pour les revêtements céramiques en locaux humides).
+                  </p>
+                  <p>
+                    Nous utilisons des systèmes certifiés Schlüter, Wedi et Weber, posés selon les règles de l'art. Nous vous envoyons systématiquement les <strong>photos de la mise en œuvre</strong> (application SEL/SPEC, bandes d'étanchéité, raccords) pour vous garantir un travail conforme.
+                  </p>
+                  <p className="font-medium text-foreground">
+                    Chaque douche bénéficie d'une garantie étanchéité 10 ans et de notre garantie décennale MIC Assurances.
+                  </p>
+                </div>
+              </div>
+              <div className="bg-background rounded-xl p-6 shadow-sm">
+                <h3 className="font-semibold text-lg mb-2">
+                  ❓ Pourquoi l'étanchéité sous carrelage est-elle obligatoire ?
+                </h3>
+                <div className="text-muted-foreground space-y-2">
+                  <p>
+                    L'étanchéité (la peinture bleue visible sur nos photos de chantier) est obligatoire selon le DTU pour les pièces humides. Appliquée sur les murs ET le sol avant la pose du carrelage, elle crée une barrière imperméable qui protège votre appartement et celui de vos voisins contre les infiltrations d'eau.
+                  </p>
+                  <p>
+                    Il existe deux systèmes : le <strong>SEL</strong> (Système d'Étanchéité Liquide) appliqué au rouleau ou à la brosse, et le <strong>SPEC</strong> (Système de Protection à l'Eau sous Carrelage) qui comprend des bandes et manchettes à coller aux angles et traversées.
+                  </p>
+                  <p className="font-medium text-foreground">
+                    Nous utilisons les produits Weber Aquastop, marque pionnière et innovante dans notre métier.
+                  </p>
+                </div>
+              </div>
+              <div className="bg-background rounded-xl p-6 shadow-sm">
+                <h3 className="font-semibold text-lg mb-2">
+                  ❓ Quel receveur de douche choisir ?
+                </h3>
+                <div className="text-muted-foreground space-y-2">
+                  <p>Nous proposons différents types de receveurs de douche :</p>
+                  <ul className="list-disc list-inside space-y-1 ml-2">
+                    <li>Receveur extra-plat en résine</li>
+                    <li>Receveur à carreler pour un rendu 100% personnalisé</li>
+                    <li>Receveur en acier recoupable (ajustable aux dimensions exactes)</li>
+                    <li>Douche maçonnée traditionnelle</li>
+                  </ul>
+                  <p className="font-medium text-foreground">
+                    Le choix dépend de vos goûts, de votre budget et des contraintes techniques de votre salle de bain.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FAQ Section - Questions techniques */}
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
