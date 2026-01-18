@@ -86,21 +86,75 @@ export const guideConseils = [
 
 // Vidéos Conseils - Explications avantages/inconvénients
 export const videoConseils = [
+  // === DOUCHE ===
   {
     id: "video-douche-italienne",
     title: "Douche italienne : avantages et inconvénients",
     description: "Tout ce qu'il faut savoir avant de choisir une douche à l'italienne",
-    instagramUrl: "https://www.instagram.com/reel/EXAMPLE1/",
+    instagramUrl: "https://www.instagram.com/reel/DTqBs2bDKsN/",
     category: "Douche",
   },
+  {
+    id: "video-paroi-douche",
+    title: "Paroi fixe ou porte : que choisir ?",
+    description: "Comparatif des différentes options pour votre douche",
+    instagramUrl: "https://www.instagram.com/reel/VOTRE_LIEN_ICI/",
+    category: "Douche",
+  },
+  // === CARRELAGE ===
   {
     id: "video-carrelage-grand-format",
     title: "Carrelage grand format : le pour et le contre",
     description: "Découvrez si le grand format est adapté à votre salle de bain",
-    instagramUrl: "https://www.instagram.com/reel/EXAMPLE2/",
+    instagramUrl: "https://www.instagram.com/reel/VOTRE_LIEN_ICI/",
     category: "Carrelage",
   },
-  // Ajoutez vos vidéos conseils ici
+  {
+    id: "video-carrelage-joints",
+    title: "Couleur des joints : assorti ou contrasté ?",
+    description: "L'impact visuel du choix de vos joints de carrelage",
+    instagramUrl: "https://www.instagram.com/reel/VOTRE_LIEN_ICI/",
+    category: "Carrelage",
+  },
+  // === ROBINETTERIE ===
+  {
+    id: "video-robinetterie-finitions",
+    title: "Chrome, noir mat ou doré : quelle finition choisir ?",
+    description: "Avantages et inconvénients de chaque finition de robinetterie",
+    instagramUrl: "https://www.instagram.com/reel/VOTRE_LIEN_ICI/",
+    category: "Robinetterie",
+  },
+  {
+    id: "video-robinetterie-encastree",
+    title: "Robinetterie encastrée vs apparente",
+    description: "Ce qu'il faut savoir avant de faire votre choix",
+    instagramUrl: "https://www.instagram.com/reel/VOTRE_LIEN_ICI/",
+    category: "Robinetterie",
+  },
+  // === PLOMBERIE ===
+  {
+    id: "video-plomberie-multicouche",
+    title: "Cuivre ou multicouche : le bon choix",
+    description: "Comparatif des matériaux pour votre plomberie",
+    instagramUrl: "https://www.instagram.com/reel/VOTRE_LIEN_ICI/",
+    category: "Plomberie",
+  },
+  // === WC ===
+  {
+    id: "video-wc-suspendu",
+    title: "WC suspendu : vraiment pratique ?",
+    description: "Avantages, inconvénients et ce que personne ne vous dit",
+    instagramUrl: "https://www.instagram.com/reel/VOTRE_LIEN_ICI/",
+    category: "WC",
+  },
+  // === MEUBLE VASQUE ===
+  {
+    id: "video-meuble-suspendu",
+    title: "Meuble suspendu ou sur pieds ?",
+    description: "Le choix qui change tout pour l'entretien",
+    instagramUrl: "https://www.instagram.com/reel/VOTRE_LIEN_ICI/",
+    category: "Meuble vasque",
+  },
 ];
 
 // Fonction pour obtenir les actualités mixtes (presse + conseils)
