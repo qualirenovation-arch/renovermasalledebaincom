@@ -246,17 +246,30 @@ export default function Presse() {
                   <p className="text-muted-foreground max-w-3xl">
                     {selectedAlbum.description}
                   </p>
-                  {selectedAlbum.instagramLink && (
-                    <a 
-                      href={selectedAlbum.instagramLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full text-sm font-medium hover:from-pink-600 hover:to-purple-700 transition-all"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      Voir sur Instagram
-                    </a>
-                  )}
+                  <div className="flex flex-wrap gap-3 mt-4">
+                    {selectedAlbum.externalLink && (
+                      <a 
+                        href={selectedAlbum.externalLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm font-medium hover:bg-primary/90 transition-all"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Lire l'article
+                      </a>
+                    )}
+                    {selectedAlbum.instagramLink && (
+                      <a 
+                        href={selectedAlbum.instagramLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full text-sm font-medium hover:from-pink-600 hover:to-purple-700 transition-all"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Voir sur Instagram
+                      </a>
+                    )}
+                  </div>
                 </div>
 
                 {/* Photos grid */}
