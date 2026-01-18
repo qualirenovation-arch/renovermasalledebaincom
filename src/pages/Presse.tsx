@@ -45,20 +45,7 @@ interface Album {
 }
 
 const presseAlbums: Album[] = [
-  {
-    id: "presse-houzz-bois",
-    title: "Photothèque : 50 salles de bains réchauffées grâce au bois",
-    location: "Houzz France",
-    description: "La salle de bains fait partie des pièces les plus rénovées par les Français avec la chambre et la cuisine, selon les résultats d'une étude Houzz. Nombreux sont ceux qui souhaitent transformer les lieux en un havre de paix dédié à la détente, inspiré des spas et hôtels. Le bois se place ainsi en matériau de référence pour apporter de la chaleur, une touche de nature ou donner un esprit zen à la salle de bains.",
-    coverImage: presseHouzzBois,
-    externalLink: "https://www.houzz.fr/magazine/phototheque-50-salles-de-bains-rechauffees-grace-au-bois-stsetivw-vs~121061583",
-    source: "Houzz",
-    publishDate: "2021",
-    journalist: "Rédaction Houzz",
-    photos: [
-      { id: 1, image: presseHouzzBois, title: "Salle de bain bois", description: "Carrelage effet bois et ambiance zen" },
-    ],
-  },
+  // Janvier 2025
   {
     id: "presse-houzz-soisy",
     title: "Avant/Après : À Soisy, une maison de maître 1900 rénovée de A à Z",
@@ -73,6 +60,24 @@ const presseAlbums: Album[] = [
       { id: 1, image: presseHouzzSoisy, title: "SDB 2ème étage — Enfants", description: "Terrazzo hexagonal et robinetterie dorée" },
     ],
   },
+  // Janvier 2025
+  {
+    id: "presse-st-mande",
+    title: "Conseils d'artisans : comment faire des économies de gaz",
+    location: "Saint-Mandé (94)",
+    description: "Notre expertise mise en avant dans un article Houzz sur les économies d'énergie.",
+    coverImage: stMande1,
+    externalLink: "https://www.houzz.fr/magazine/conseils-d-artisans-comment-faire-des-economies-de-gaz-stsetivw-vs~164524740",
+    source: "Houzz",
+    publishDate: "Janvier 2025",
+    journalist: "Agnès Carpentier",
+    photos: [
+      { id: 1, image: stMande1, title: "Projet vedette", description: "Rénovation Saint-Mandé" },
+      { id: 2, image: stMande2, title: "Détails", description: "Finitions soignées" },
+      { id: 3, image: stMande3, title: "Vue complète", description: "Transformation réussie" },
+    ],
+  },
+  // Novembre 2024
   {
     id: "presse-marie-claire-adresses",
     title: "La rénovation d'intérieur avec transparence et expertise",
@@ -87,6 +92,7 @@ const presseAlbums: Album[] = [
       { id: 1, image: presseMarieClaireAdresses, title: "QualiRénovation", description: "Adresse incontournable Marie Claire Maison" },
     ],
   },
+  // Octobre 2022
   {
     id: "presse-maitre-oeuvre",
     title: "Pourquoi est-il judicieux de faire appel à un maître d'œuvre ?",
@@ -101,22 +107,22 @@ const presseAlbums: Album[] = [
       { id: 1, image: carinaNahmani, title: "Carina Nahmani", description: "Maître d'œuvre chez QualiRénovation" },
     ],
   },
+  // Juin 2022
   {
-    id: "presse-houzz-trois-pieces",
-    title: "Un trois-pièces de 54 m² rafraîchi pour 25 000 €",
-    location: "Paris",
-    description: "Focus salle de bain : cette rénovation complète a fait l'objet de deux articles distincts — le WC chez Elle Décoration et la salle de bain chez Marie Claire Maison. Une transformation remarquée par la presse déco.",
-    coverImage: presseMarieClaireApres,
-    externalLink: "https://www.houzz.fr/magazine/avant-apres-un-trois-pieces-de-54-m%C2%B2-rafraichi-pour-25-000-eur-stsetivw-vs~92733439",
-    source: "Houzz",
-    publishDate: "Avril 2019",
-    journalist: "Agnès Carpentier",
+    id: "presse-elle-wc",
+    title: "Toilettes suspendues : transformer ses WC en espace déco",
+    location: "Elle Déco",
+    description: "Notre projet de WC avec carrelage graphique noir et blanc et zellige anthracite mis en avant dans le magazine Elle Décoration.",
+    coverImage: presseElleWc,
+    externalLink: "https://www.elle.fr/Deco/Pratique/Amenagement/Toilettes-suspendues-comment-transformer-ses-WC-en-espace-deco",
+    source: "Elle Décoration × Houzz",
+    publishDate: "Juin 2022",
+    journalist: "Cécile Debise",
     photos: [
-      { id: 1, image: presseMarieClaireApres, title: "Après — Salle de bain contemporaine", description: "Robinetterie noire, paroi verrière et zellige blanc" },
-      { id: 2, image: presseMarieClaireAvant, title: "Avant — État initial", description: "Salle de bain à rénover" },
-      { id: 3, image: presseElleWc, title: "Après — WC design", description: "Zellige anthracite et carreaux de ciment graphiques" },
+      { id: 1, image: presseElleWc, title: "WC suspendus design", description: "Zellige anthracite et carreaux de ciment graphiques" },
     ],
   },
+  // Juillet 2021
   {
     id: "presse-marie-claire",
     title: "Une salle de bains contemporaine",
@@ -132,34 +138,36 @@ const presseAlbums: Album[] = [
       { id: 2, image: presseMarieClaireAvant, title: "Avant — État initial", description: "Salle de bain à rénover" },
     ],
   },
+  // 2021
   {
-    id: "presse-elle-wc",
-    title: "Toilettes suspendues : transformer ses WC en espace déco",
-    location: "Elle Déco",
-    description: "Notre projet de WC avec carrelage graphique noir et blanc et zellige anthracite mis en avant dans le magazine Elle Décoration.",
-    coverImage: presseElleWc,
-    externalLink: "https://www.elle.fr/Deco/Pratique/Amenagement/Toilettes-suspendues-comment-transformer-ses-WC-en-espace-deco",
-    source: "Elle Décoration × Houzz",
-    publishDate: "Juin 2022",
-    journalist: "Cécile Debise",
+    id: "presse-houzz-bois",
+    title: "Photothèque : 50 salles de bains réchauffées grâce au bois",
+    location: "Houzz France",
+    description: "La salle de bains fait partie des pièces les plus rénovées par les Français avec la chambre et la cuisine, selon les résultats d'une étude Houzz. Nombreux sont ceux qui souhaitent transformer les lieux en un havre de paix dédié à la détente, inspiré des spas et hôtels. Le bois se place ainsi en matériau de référence pour apporter de la chaleur, une touche de nature ou donner un esprit zen à la salle de bains.",
+    coverImage: presseHouzzBois,
+    externalLink: "https://www.houzz.fr/magazine/phototheque-50-salles-de-bains-rechauffees-grace-au-bois-stsetivw-vs~121061583",
+    source: "Houzz",
+    publishDate: "2021",
+    journalist: "Rédaction Houzz",
     photos: [
-      { id: 1, image: presseElleWc, title: "WC suspendus design", description: "Zellige anthracite et carreaux de ciment graphiques" },
+      { id: 1, image: presseHouzzBois, title: "Salle de bain bois", description: "Carrelage effet bois et ambiance zen" },
     ],
   },
+  // Avril 2019
   {
-    id: "presse-st-mande",
-    title: "Conseils d'artisans : comment faire des économies de gaz",
-    location: "Saint-Mandé (94)",
-    description: "Notre expertise mise en avant dans un article Houzz sur les économies d'énergie.",
-    coverImage: stMande1,
-    externalLink: "https://www.houzz.fr/magazine/conseils-d-artisans-comment-faire-des-economies-de-gaz-stsetivw-vs~164524740",
+    id: "presse-houzz-trois-pieces",
+    title: "Un trois-pièces de 54 m² rafraîchi pour 25 000 €",
+    location: "Paris",
+    description: "Focus salle de bain : cette rénovation complète a fait l'objet de deux articles distincts — le WC chez Elle Décoration et la salle de bain chez Marie Claire Maison. Une transformation remarquée par la presse déco.",
+    coverImage: presseMarieClaireApres,
+    externalLink: "https://www.houzz.fr/magazine/avant-apres-un-trois-pieces-de-54-m%C2%B2-rafraichi-pour-25-000-eur-stsetivw-vs~92733439",
     source: "Houzz",
-    publishDate: "Janvier 2025",
+    publishDate: "Avril 2019",
     journalist: "Agnès Carpentier",
     photos: [
-      { id: 1, image: stMande1, title: "Projet vedette", description: "Rénovation Saint-Mandé" },
-      { id: 2, image: stMande2, title: "Détails", description: "Finitions soignées" },
-      { id: 3, image: stMande3, title: "Vue complète", description: "Transformation réussie" },
+      { id: 1, image: presseMarieClaireApres, title: "Après — Salle de bain contemporaine", description: "Robinetterie noire, paroi verrière et zellige blanc" },
+      { id: 2, image: presseMarieClaireAvant, title: "Avant — État initial", description: "Salle de bain à rénover" },
+      { id: 3, image: presseElleWc, title: "Après — WC design", description: "Zellige anthracite et carreaux de ciment graphiques" },
     ],
   },
 ];
