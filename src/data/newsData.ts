@@ -84,6 +84,25 @@ export const guideConseils = [
   },
 ];
 
+// Vidéos Conseils - Explications avantages/inconvénients
+export const videoConseils = [
+  {
+    id: "video-douche-italienne",
+    title: "Douche italienne : avantages et inconvénients",
+    description: "Tout ce qu'il faut savoir avant de choisir une douche à l'italienne",
+    instagramUrl: "https://www.instagram.com/reel/EXAMPLE1/",
+    category: "Douche",
+  },
+  {
+    id: "video-carrelage-grand-format",
+    title: "Carrelage grand format : le pour et le contre",
+    description: "Découvrez si le grand format est adapté à votre salle de bain",
+    instagramUrl: "https://www.instagram.com/reel/EXAMPLE2/",
+    category: "Carrelage",
+  },
+  // Ajoutez vos vidéos conseils ici
+];
+
 // Fonction pour obtenir les actualités mixtes (presse + conseils)
 export function getMixedNews(count: number = 4) {
   const mixed = [];
