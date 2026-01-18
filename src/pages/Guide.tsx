@@ -1138,32 +1138,6 @@ const Guide = () => {
                   Toujours. Une trappe d'accès est indispensable pour intervenir rapidement en cas de problème.
                 </p>
               </div>
-              <div className="bg-background rounded-xl p-6 shadow-sm">
-                <h3 className="font-semibold text-lg mb-2">
-                  ❓ Maître d'œuvre intégré : chacun son métier
-                </h3>
-                <div className="text-muted-foreground space-y-3">
-                  <p>
-                    👉 <strong>Avec un maître d'œuvre intégré, tout est pensé avec vous et pour vous.</strong><br />
-                    Nous validons et sélectionnons ensemble chaque achat, nous gérons les commandes et les livraisons, et nous maîtrisons chaque choix du début à la fin.
-                  </p>
-                  <ul className="list-none space-y-1 pl-0">
-                    <li>✔ Produits adaptés au projet</li>
-                    <li>✔ Compatibilité technique vérifiée</li>
-                    <li>✔ Délais et livraisons coordonnés au chantier</li>
-                    <li>✔ Aucune décision laissée au hasard</li>
-                  </ul>
-                  <p>
-                    🧠 <strong>Chacun son métier.</strong><br />
-                    Même si vous êtes un excellent bricoleur, notre rôle n'est pas l'improvisation.<br />
-                    Le maître d'œuvre ne fait pas "à peu près" :<br />
-                    👉 c'est l'art de bien faire, dans les règles, avec méthode, anticipation… et sérénité.
-                  </p>
-                  <p className="font-medium text-foreground">
-                    Résultat : un chantier fluide, maîtrisé, et un projet qui traverse le temps sans mauvaise surprise 😉
-                  </p>
-                </div>
-              </div>
             </div>
           </motion.div>
         </div>
