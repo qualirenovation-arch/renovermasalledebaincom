@@ -155,6 +155,21 @@ export const videoConseils = [
     instagramUrl: "https://www.instagram.com/reel/VOTRE_LIEN_ICI/",
     category: "Meuble vasque",
   },
+  // === TRAVAUX ===
+  {
+    id: "video-travaux-demolition",
+    title: "La démolition : étape cruciale",
+    description: "Ce qu'il faut vérifier avant et pendant la démolition",
+    instagramUrl: "https://www.instagram.com/reel/VOTRE_LIEN_ICI/",
+    category: "Travaux",
+  },
+  {
+    id: "video-travaux-chantier",
+    title: "Organisation d'un chantier de rénovation",
+    description: "Les étapes clés pour un chantier bien mené",
+    instagramUrl: "https://www.instagram.com/reel/VOTRE_LIEN_ICI/",
+    category: "Travaux",
+  },
 ];
 
 // Fonction pour obtenir les actualités mixtes (presse + conseils)
