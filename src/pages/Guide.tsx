@@ -447,9 +447,18 @@ const Guide = () => {
                   💬 Résultat : un chantier fluide, maîtrisé, et un projet qui traverse le temps sans mauvaise surprise 😉
                 </p>
               </div>
-              <div className="bg-accent/50 rounded-xl p-6 border-l-4 border-primary">
+              <motion.div 
+                className="bg-accent/50 rounded-xl p-6 border-l-4 border-primary cursor-pointer group hover:bg-accent/70 transition-all duration-300 hover:shadow-lg hover:border-l-8"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
                 <p className="text-foreground font-semibold mb-3 flex items-center gap-2">
-                  <HelpCircle className="w-5 h-5 text-primary" />
+                  <motion.span
+                    animate={{ rotate: [0, 15, -15, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+                  >
+                    <HelpCircle className="w-6 h-6 text-primary group-hover:text-primary/80 transition-colors" />
+                  </motion.span>
                   Est-ce une obligation d'avoir un maître d'œuvre ?
                 </p>
                 <p className="text-muted-foreground mb-3">
@@ -460,7 +469,7 @@ const Guide = () => {
                   <span className="text-primary font-medium"> nous sommes des experts en rénovation</span>. 
                   Notre rôle est de concevoir, coordonner et garantir la réussite de votre projet de A à Z.
                 </p>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
