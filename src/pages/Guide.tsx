@@ -137,38 +137,59 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* Section Vidéos Conseils */}
+      {/* Section Vidéos Conseils - Intégrées directement */}
       <section className="py-12 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
+            className="max-w-5xl mx-auto"
           >
-            <div className="bg-background rounded-2xl p-8 shadow-lg border border-primary/20">
-              <div className="flex flex-col md:flex-row items-center gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
-                    <Play className="w-8 h-8 text-primary-foreground" />
-                  </div>
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-full mb-4">
+                <Play className="w-8 h-8 text-primary-foreground" />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-serif text-foreground mb-2">
+                📹 Vidéos Conseils
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Nos vidéos explicatives pour faire les bons choix avant vos travaux
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Vidéo 1 - Vasque à poser */}
+              <div className="bg-background rounded-2xl overflow-hidden shadow-lg border border-primary/20">
+                <video 
+                  className="w-full aspect-[9/16] object-cover"
+                  controls
+                  preload="metadata"
+                  playsInline
+                >
+                  <source src="/videos/vasque-a-poser-1.mp4" type="video/mp4" />
+                  Votre navigateur ne supporte pas la lecture vidéo.
+                </video>
+                <div className="p-4">
+                  <h3 className="font-semibold text-lg text-foreground">Comment choisir votre vasque à poser</h3>
+                  <p className="text-sm text-muted-foreground">Les critères essentiels pour bien choisir</p>
                 </div>
-                <div className="flex-grow text-center md:text-left">
-                  <h2 className="text-2xl md:text-3xl font-serif text-foreground mb-2">
-                    📹 Vidéos Conseils
-                  </h2>
-                  <p className="text-muted-foreground mb-4">
-                    Découvrez nos vidéos explicatives sur Instagram : douche italienne, vasques, carrelage, robinetterie… 
-                    Des conseils pratiques pour faire les bons choix avant vos travaux.
-                  </p>
-                </div>
-                <div className="flex-shrink-0">
-                  <Link to="/videos-conseils">
-                    <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-6">
-                      Voir toutes les vidéos
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </Button>
-                  </Link>
+              </div>
+              
+              {/* Vidéo 2 - Vasque à poser suite */}
+              <div className="bg-background rounded-2xl overflow-hidden shadow-lg border border-primary/20">
+                <video 
+                  className="w-full aspect-[9/16] object-cover"
+                  controls
+                  preload="metadata"
+                  playsInline
+                >
+                  <source src="/videos/vasque-a-poser-2.mp4" type="video/mp4" />
+                  Votre navigateur ne supporte pas la lecture vidéo.
+                </video>
+                <div className="p-4">
+                  <h3 className="font-semibold text-lg text-foreground">Vasque à poser : la suite</h3>
+                  <p className="text-sm text-muted-foreground">Conseils complémentaires pour votre projet</p>
                 </div>
               </div>
             </div>
