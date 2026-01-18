@@ -20,6 +20,7 @@ import presseElleWc from "@/assets/presse-elle-wc-suspendus.jpg";
 import presseMarieClaireApres from "@/assets/presse-marie-claire-1.jpg";
 import presseMarieClaireAvant from "@/assets/presse-marie-claire-2.jpg";
 import presseMarieClaireAdresses from "@/assets/presse-marie-claire-adresses.png";
+import presseHouzzSoisy from "@/assets/presse-houzz-soisy.png";
 
 interface Photo {
   id: number;
@@ -47,14 +48,14 @@ const presseAlbums: Album[] = [
     id: "presse-houzz-soisy",
     title: "Avant/Après : À Soisy, une maison de maître 1900 rénovée de A à Z",
     location: "Soisy-sous-Montmorency (95)",
-    description: "Découvrez la transformation complète d'une maison de maître datant de 1900 à Soisy-sous-Montmorency. Un chantier d'envergure incluant deux salles de bain exceptionnelles : celle du 1er étage avec zellige bleu en chevron, et celle du 2ème étage pour les enfants avec terrazzo hexagonal et robinetterie dorée.",
-    coverImage: carinaNahmani,
+    description: "Découvrez la transformation complète d'une maison de maître datant de 1900 à Soisy-sous-Montmorency. Un chantier d'envergure incluant deux salles de bain exceptionnelles mises en avant dans cet article : celle du 1er étage avec zellige bleu en chevron, et celle du 2ème étage pour les enfants avec terrazzo hexagonal et robinetterie dorée.",
+    coverImage: presseHouzzSoisy,
     externalLink: "https://www.houzz.fr/magazine/avant-apres-a-soisy-une-maison-de-maitre-1900-renovee-de-a-a-z-stsetivw-vs~176073945",
     source: "Houzz",
     publishDate: "Janvier 2025",
     journalist: "Agnès Carpentier",
     photos: [
-      { id: 1, image: carinaNahmani, title: "Maison de maître 1900", description: "Rénovation complète à Soisy-sous-Montmorency" },
+      { id: 1, image: presseHouzzSoisy, title: "SDB 2ème étage — Enfants", description: "Terrazzo hexagonal et robinetterie dorée" },
     ],
   },
   {
