@@ -19,6 +19,7 @@ import presseElleWc from "@/assets/presse-elle-wc-suspendus.jpg";
 // Marie Claire Maison
 import presseMarieClaireApres from "@/assets/presse-marie-claire-1.jpg";
 import presseMarieClaireAvant from "@/assets/presse-marie-claire-2.jpg";
+import presseMarieClaireAdresses from "@/assets/presse-marie-claire-adresses.png";
 
 interface Photo {
   id: number;
@@ -58,16 +59,16 @@ const presseAlbums: Album[] = [
   },
   {
     id: "presse-marie-claire-adresses",
-    title: "QualiRénovation — Adresses Incontournables",
+    title: "La rénovation d'intérieur avec transparence et expertise",
     location: "Marie Claire Maison",
-    description: "QualiRénovation by QualiConcept figure parmi les adresses incontournables sélectionnées par Marie Claire Maison. Une reconnaissance de notre savoir-faire en rénovation de salles de bain haut de gamme à Paris et en Île-de-France.",
-    coverImage: carinaNahmani,
+    description: "Société spécialisée dans la rénovation d'intérieur en Île-de-France, QualiRénovation by QualiConcept compte sur le travail pointilleux de ses artisans et fait preuve d'une grande transparence auprès de ses clients pour mener à bien ses projets.",
+    coverImage: presseMarieClaireAdresses,
     externalLink: "http://adresses-incontournables-maison.marieclaire.fr/dossier/qualirenovation-by-qualiconcept/",
-    source: "Marie Claire Maison",
-    publishDate: "2024",
+    source: "Marie Claire Maison × Médias France",
+    publishDate: "Novembre 2024",
     journalist: "Rédaction Marie Claire",
     photos: [
-      { id: 1, image: carinaNahmani, title: "QualiRénovation", description: "Adresse incontournable Marie Claire Maison" },
+      { id: 1, image: presseMarieClaireAdresses, title: "QualiRénovation", description: "Adresse incontournable Marie Claire Maison" },
     ],
   },
   {
