@@ -155,47 +155,119 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Section "Pourquoi choisir une douche à l'italienne ?" */}
+      {/* Section "Douche ou baignoire ?" */}
       <section className="section-padding bg-background">
         <div className="container-custom">
-          <motion.h2 
-            className="font-display text-2xl md:text-3xl lg:text-4xl text-center mb-16"
+          <motion.div 
+            className="text-center mb-12"
             {...fadeInUp}
             viewport={{ once: true }}
             whileInView="animate"
             initial="initial"
           >
-            Pourquoi choisir une <span className="italic font-normal">douche</span> à l'italienne ?
-          </motion.h2>
+            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl mb-6">
+              <span className="italic font-normal">Douche</span> ou <span className="italic font-normal">baignoire</span> : laquelle choisir ?
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              👉 La vraie question n'est pas italienne ou pas, mais : <strong>comment vivez-vous votre salle de bain ?</strong><br />
+              Plutôt douche rapide et efficace ou bain détente pour décompresser ?
+            </p>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 max-w-5xl mx-auto">
-            {whyChoose.map((item, index) => (
-              <motion.div
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.15 }}
-              >
-                <div className="text-foreground mb-6">
-                  {item.icon}
-                </div>
-                <h3 className="font-display text-xl font-semibold mb-3">{item.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+            {/* Baignoire */}
+            <motion.div
+              className="bg-stone rounded-2xl p-8"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              <div className="text-4xl mb-4">🛁</div>
+              <h3 className="font-display text-xl font-semibold mb-4">Vous êtes plutôt baignoire si :</h3>
+              <ul className="space-y-3 text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <span className="text-wood">•</span>
+                  <span>Vous aimez prendre le temps</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-wood">•</span>
+                  <span>Vous avez des enfants</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-wood">•</span>
+                  <span>Vous cherchez un côté cocooning et intemporel</span>
+                </li>
+              </ul>
+            </motion.div>
+
+            {/* Douche */}
+            <motion.div
+              className="bg-accent/30 rounded-2xl p-8"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              <div className="text-4xl mb-4">🚿</div>
+              <h3 className="font-display text-xl font-semibold mb-4">Vous êtes plutôt douche si :</h3>
+              <ul className="space-y-3 text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <span className="text-wood">•</span>
+                  <span>Vous voulez de la praticité au quotidien</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-wood">•</span>
+                  <span>Vous manquez d'espace</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-wood">•</span>
+                  <span>Vous privilégiez l'accessibilité et la fluidité</span>
+                </li>
+              </ul>
+            </motion.div>
           </div>
 
+          {/* Pourquoi c'est important */}
+          <motion.div
+            className="max-w-3xl mx-auto text-center mb-10"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+          >
+            <div className="text-3xl mb-4">✨</div>
+            <h3 className="font-display text-xl font-semibold mb-4">Pourquoi c'est important ?</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              La salle de bain, c'est la première pièce que l'on utilise le matin.<br />
+              Une belle salle de bain bien pensée, c'est commencer la journée du bon pied,<br />
+              dans un espace <strong>fonctionnel, harmonieux et agréable</strong>.
+            </p>
+          </motion.div>
+
+          {/* Notre rôle */}
+          <motion.div
+            className="max-w-3xl mx-auto text-center bg-foreground/5 rounded-2xl p-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+          >
+            <p className="text-foreground leading-relaxed">
+              👉 <strong>Notre rôle :</strong> vous guider vers le bon choix pour vous, pas une solution toute faite.<br />
+              Chaque projet est unique… et chaque réveil mérite une salle de bain à la hauteur 😉
+            </p>
+          </motion.div>
+
           <motion.div 
-            className="text-center mt-12"
+            className="text-center mt-10"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.5 }}
           >
             <Button variant="outline" size="lg" asChild className="rounded-md border-foreground text-foreground hover:bg-foreground hover:text-background">
-              <Link to="/realisations">Voir nos inspirations</Link>
+              <Link to="/guide-travaux">Consulter le guide complet</Link>
             </Button>
           </motion.div>
         </div>
