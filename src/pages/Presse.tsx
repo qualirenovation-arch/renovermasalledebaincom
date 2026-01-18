@@ -211,6 +211,10 @@ export default function Presse() {
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
               Découvrez nos réalisations mises en avant sur les réseaux sociaux et dans la presse spécialisée.
             </p>
+            <div className="mt-6 inline-flex items-center gap-2 bg-primary/10 text-primary px-6 py-3 rounded-full">
+              <span className="text-2xl font-bold">{presseAlbums.length}</span>
+              <span className="text-sm font-medium">articles de presse</span>
+            </div>
           </motion.div>
         </div>
       </section>
