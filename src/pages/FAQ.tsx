@@ -119,31 +119,6 @@ const faqCategories = [
     ]
   },
   {
-    title: "Douche à l'italienne",
-    questions: [
-      {
-        question: "Qu'est-ce qu'une douche à l'italienne ?",
-        answer: "Une douche à l'italienne est une douche de plain-pied, sans marche ni receveur surélevé. Elle s'intègre parfaitement au sol de la salle de bain, offrant un accès facile et un design épuré. C'est la solution idéale pour une salle de bain moderne et accessible."
-      },
-      {
-        question: "Peut-on installer une douche à l'italienne dans un appartement ancien ?",
-        answer: "Oui, la création d'une douche italienne est possible dans la plupart des appartements, même anciens. Notre maître d'œuvre réalise une étude de faisabilité gratuite pour évaluer les contraintes techniques (hauteur de réservation, évacuations) et vous proposer la meilleure solution."
-      },
-      {
-        question: "Comment garantissez-vous l'étanchéité d'une douche à l'italienne ?",
-        answer: "L'étanchéité est une **obligation DTU** (référence DTU 52.2 pour les revêtements céramiques en locaux humides). Nous utilisons des systèmes certifiés Schlüter, Wedi et Weber, posés selon les règles de l'art. Nous vous envoyons systématiquement les **photos de la mise en œuvre** (application SEL/SPEC, bandes d'étanchéité, raccords) pour vous garantir un travail conforme. Chaque douche bénéficie d'une garantie étanchéité 10 ans et de notre garantie décennale MIC Assurances."
-      },
-      {
-        question: "Pourquoi l'étanchéité sous carrelage est-elle obligatoire ?",
-        answer: "L'étanchéité (la peinture bleue visible sur nos photos de chantier) est obligatoire selon le DTU pour les pièces humides. Appliquée sur les murs ET le sol avant la pose du carrelage, elle crée une barrière imperméable qui protège votre appartement et celui de vos voisins contre les infiltrations d'eau. Il existe deux systèmes : le **SEL** (Système d'Étanchéité Liquide) appliqué au rouleau ou à la brosse, et le **SPEC** (Système de Protection à l'Eau sous Carrelage) qui comprend des bandes et manchettes à coller aux angles et traversées. Nous utilisons les produits **Weber Aquastop**, marque pionnière et innovante dans notre métier. C'est une étape invisible mais essentielle que nous documentons systématiquement en photo pour vous garantir un travail dans les règles de l'art."
-      },
-      {
-        question: "Quel receveur de douche choisir ?",
-        answer: "Nous proposons différents types de receveurs de douche : receveur extra-plat en résine, receveur à carreler pour un rendu 100% personnalisé, receveur en acier recoupable (ajustable aux dimensions exactes de votre espace), ou douche maçonnée traditionnelle. Le choix dépend de vos goûts, de votre budget et des contraintes techniques de votre salle de bain."
-      }
-    ]
-  },
-  {
     title: "Notre entreprise",
     questions: [
       {
