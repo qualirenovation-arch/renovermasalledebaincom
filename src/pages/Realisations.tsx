@@ -272,12 +272,7 @@ import courbevoieStGuillaumeTravaux1 from "@/assets/courbevoie-travaux-1.jpg";
 import courbevoieStGuillaumeTravaux2 from "@/assets/courbevoie-travaux-2.jpg";
 
 // Courbevoie 92 - Lalyre
-import courbevoieLalyre1 from "@/assets/courbevoie-1.jpg";
-import courbevoieLalyre2 from "@/assets/courbevoie-2.jpg";
-import courbevoieLalyre3 from "@/assets/courbevoie-3.jpg";
-import courbevoieLalyre4 from "@/assets/courbevoie-4.jpg";
-import courbevoieLalyre5 from "@/assets/courbevoie-5.jpg";
-import courbevoieLalyre6 from "@/assets/courbevoie-6.jpg";
+import courbevoieLalyreAvant1 from "@/assets/courbevoie-lalyre-avant-1.jpg";
 
 // Vitry-sur-Seine 94
 import vitryAvant1 from "@/assets/vitry-avant-1.jpg";
@@ -1093,15 +1088,10 @@ const inProgressAlbums: Album[] = [
     title: "Rénovation en cours — Style contemporain",
     location: "Courbevoie (92) - Rue Ernest Lalyre",
     description: "Rénovation d'une salle de bain dans un esprit contemporain. Carrelage grand format, douche à l'italienne avec paroi vitrée fixe, meuble vasque suspendu et finitions soignées. Chantier en cours — restez connecté pour découvrir cette transformation !",
-    coverImage: courbevoieLalyre1,
+    coverImage: courbevoieLalyreAvant1,
     isInProgress: true,
     photos: [
-      { id: 1, image: courbevoieLalyre1, title: "Travaux — Vue d'ensemble", description: "Aménagement en cours" },
-      { id: 2, image: courbevoieLalyre2, title: "Travaux — Douche", description: "Douche à l'italienne en cours" },
-      { id: 3, image: courbevoieLalyre3, title: "Travaux — Détails", description: "Finitions en cours" },
-      { id: 4, image: courbevoieLalyre4, title: "Travaux — Vasque", description: "Installation du meuble vasque" },
-      { id: 5, image: courbevoieLalyre5, title: "Travaux — Vue angle", description: "Optimisation de l'espace" },
-      { id: 6, image: courbevoieLalyre6, title: "Travaux — Rangements", description: "Création des rangements" },
+      { id: 1, image: courbevoieLalyreAvant1, title: "Avant — Vue vasque et ensemble", description: "Salle de bain avant rénovation" },
     ],
   },
 ];
