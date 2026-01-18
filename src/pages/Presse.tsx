@@ -10,6 +10,8 @@ import stMande1 from "@/assets/st-mande-1.jpg";
 import stMande2 from "@/assets/st-mande-2.jpg";
 import stMande3 from "@/assets/st-mande-3.jpg";
 
+// Carina Nahmani - Article Maître d'œuvre
+import carinaNahmani from "@/assets/carina-nahmani-1.jpg";
 
 // Elle Magazine
 import presseElleWc from "@/assets/presse-elle-wc-suspendus.jpg";
@@ -36,9 +38,24 @@ interface Album {
   externalLink?: string;
   source?: string;
   publishDate?: string;
+  journalist?: string;
 }
 
 const presseAlbums: Album[] = [
+  {
+    id: "presse-maitre-oeuvre",
+    title: "Pourquoi est-il judicieux de faire appel à un maître d'œuvre ?",
+    location: "Interview Houzz",
+    description: "Découvrez le rôle du maître d'œuvre, l'interlocuteur privilégié pour des travaux bien réalisés, sans retard ni tension. Interview de Carina Nahmani, maître d'œuvre chez QualiRénovation.",
+    coverImage: carinaNahmani,
+    externalLink: "https://www.houzz.fr/magazine/pourquoi-est-il-judicieux-de-faire-appel-a-un-maitre-d-oeuvre-stsetivw-vs~87724005",
+    source: "Houzz",
+    publishDate: "Octobre 2022",
+    journalist: "Agnès Carpentier",
+    photos: [
+      { id: 1, image: carinaNahmani, title: "Carina Nahmani", description: "Maître d'œuvre chez QualiRénovation" },
+    ],
+  },
   {
     id: "presse-houzz-trois-pieces",
     title: "Un trois-pièces de 54 m² rafraîchi pour 25 000 €",
@@ -48,6 +65,7 @@ const presseAlbums: Album[] = [
     externalLink: "https://www.houzz.fr/magazine/avant-apres-un-trois-pieces-de-54-m%C2%B2-rafraichi-pour-25-000-eur-stsetivw-vs~92733439",
     source: "Houzz",
     publishDate: "Avril 2019",
+    journalist: "Agnès Carpentier",
     photos: [
       { id: 1, image: presseMarieClaireApres, title: "Après — Salle de bain contemporaine", description: "Robinetterie noire, paroi verrière et zellige blanc" },
       { id: 2, image: presseMarieClaireAvant, title: "Avant — État initial", description: "Salle de bain à rénover" },
@@ -63,6 +81,7 @@ const presseAlbums: Album[] = [
     externalLink: "https://www.marieclaire.fr/photo/1357704/3119092/une-salle-de-bains-contemporaine",
     source: "Marie Claire Maison × Houzz",
     publishDate: "Juillet 2021",
+    journalist: "Rédaction Marie Claire",
     photos: [
       { id: 1, image: presseMarieClaireApres, title: "Après — Salle de bain contemporaine", description: "Robinetterie noire, paroi verrière et zellige blanc" },
       { id: 2, image: presseMarieClaireAvant, title: "Avant — État initial", description: "Salle de bain à rénover" },
@@ -72,11 +91,12 @@ const presseAlbums: Album[] = [
     id: "presse-elle-wc",
     title: "Toilettes suspendues : transformer ses WC en espace déco",
     location: "Elle Déco",
-    description: "Notre projet de WC avec carrelage graphique noir et blanc et zellige anthracite mis en avant dans le magazine Elle Décoration. Article rédigé par Cécile Debise en partenariat avec Houzz.",
+    description: "Notre projet de WC avec carrelage graphique noir et blanc et zellige anthracite mis en avant dans le magazine Elle Décoration.",
     coverImage: presseElleWc,
     externalLink: "https://www.elle.fr/Deco/Pratique/Amenagement/Toilettes-suspendues-comment-transformer-ses-WC-en-espace-deco",
     source: "Elle Décoration × Houzz",
     publishDate: "Juin 2022",
+    journalist: "Cécile Debise",
     photos: [
       { id: 1, image: presseElleWc, title: "WC suspendus design", description: "Zellige anthracite et carreaux de ciment graphiques" },
     ],
@@ -85,11 +105,12 @@ const presseAlbums: Album[] = [
     id: "presse-st-mande",
     title: "Conseils d'artisans : comment faire des économies de gaz",
     location: "Saint-Mandé (94)",
-    description: "Notre expertise mise en avant dans un article Houzz sur les économies d'énergie. Article rédigé par Agnès Carpentier, journaliste contributrice Houzz.",
+    description: "Notre expertise mise en avant dans un article Houzz sur les économies d'énergie.",
     coverImage: stMande1,
     externalLink: "https://www.houzz.fr/magazine/conseils-d-artisans-comment-faire-des-economies-de-gaz-stsetivw-vs~164524740",
     source: "Houzz",
     publishDate: "Janvier 2025",
+    journalist: "Agnès Carpentier",
     photos: [
       { id: 1, image: stMande1, title: "Projet vedette", description: "Rénovation Saint-Mandé" },
       { id: 2, image: stMande2, title: "Détails", description: "Finitions soignées" },
@@ -189,6 +210,11 @@ export default function Presse() {
                         <p className="text-muted-foreground text-sm line-clamp-2">
                           {album.description}
                         </p>
+                        {album.journalist && (
+                          <p className="text-xs text-muted-foreground mt-2 italic">
+                            Par {album.journalist}
+                          </p>
+                        )}
                         {album.instagramLink && (
                           <a 
                             href={album.instagramLink}
