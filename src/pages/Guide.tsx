@@ -1023,7 +1023,7 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* FAQ Section - Douche à l'italienne */}
+      {/* FAQ Section - Questions fréquentes */}
       <section className="py-16 bg-accent/30">
         <div className="container mx-auto px-4">
           <motion.div
@@ -1033,29 +1033,34 @@ const Guide = () => {
             className="max-w-3xl mx-auto"
           >
             <h2 className="text-2xl md:text-3xl font-serif text-center mb-8">
-              🚿 Douche à l'italienne
+              Questions fréquentes
             </h2>
-            <div className="space-y-4">
+            
+            {/* Sous-section Douche à l'italienne */}
+            <h3 className="text-xl font-serif text-primary mb-4 flex items-center gap-2">
+              🚿 Douche à l'italienne
+            </h3>
+            <div className="space-y-4 mb-8">
               <div className="bg-background rounded-xl p-6 shadow-sm">
-                <h3 className="font-semibold text-lg mb-2">
+                <h4 className="font-semibold text-lg mb-2">
                   ❓ Qu'est-ce qu'une douche à l'italienne ?
-                </h3>
+                </h4>
                 <p className="text-muted-foreground">
                   Une douche à l'italienne est une douche de plain-pied, sans marche ni receveur surélevé. Elle s'intègre parfaitement au sol de la salle de bain, offrant un accès facile et un design épuré. C'est la solution idéale pour une salle de bain moderne et accessible.
                 </p>
               </div>
               <div className="bg-background rounded-xl p-6 shadow-sm">
-                <h3 className="font-semibold text-lg mb-2">
+                <h4 className="font-semibold text-lg mb-2">
                   ❓ Peut-on installer une douche à l'italienne dans un appartement ancien ?
-                </h3>
+                </h4>
                 <p className="text-muted-foreground">
                   Oui, la création d'une douche italienne est possible dans la plupart des appartements, même anciens. Notre maître d'œuvre réalise une étude de faisabilité gratuite pour évaluer les contraintes techniques (hauteur de réservation, évacuations) et vous proposer la meilleure solution.
                 </p>
               </div>
               <div className="bg-background rounded-xl p-6 shadow-sm">
-                <h3 className="font-semibold text-lg mb-2">
+                <h4 className="font-semibold text-lg mb-2">
                   ❓ Comment garantissez-vous l'étanchéité d'une douche à l'italienne ?
-                </h3>
+                </h4>
                 <div className="text-muted-foreground space-y-2">
                   <p>
                     L'étanchéité est une <strong>obligation DTU</strong> (référence DTU 52.2 pour les revêtements céramiques en locaux humides).
@@ -1069,9 +1074,9 @@ const Guide = () => {
                 </div>
               </div>
               <div className="bg-background rounded-xl p-6 shadow-sm">
-                <h3 className="font-semibold text-lg mb-2">
+                <h4 className="font-semibold text-lg mb-2">
                   ❓ Pourquoi l'étanchéité sous carrelage est-elle obligatoire ?
-                </h3>
+                </h4>
                 <div className="text-muted-foreground space-y-2">
                   <p>
                     L'étanchéité (la peinture bleue visible sur nos photos de chantier) est obligatoire selon le DTU pour les pièces humides. Appliquée sur les murs ET le sol avant la pose du carrelage, elle crée une barrière imperméable qui protège votre appartement et celui de vos voisins contre les infiltrations d'eau.
@@ -1085,9 +1090,9 @@ const Guide = () => {
                 </div>
               </div>
               <div className="bg-background rounded-xl p-6 shadow-sm">
-                <h3 className="font-semibold text-lg mb-2">
+                <h4 className="font-semibold text-lg mb-2">
                   ❓ Quel receveur de douche choisir ?
-                </h3>
+                </h4>
                 <div className="text-muted-foreground space-y-2">
                   <p>Nous proposons différents types de receveurs de douche :</p>
                   <ul className="list-disc list-inside space-y-1 ml-2">
@@ -1102,22 +1107,11 @@ const Guide = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
-        </div>
-      </section>
 
-      {/* FAQ Section - Questions techniques */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-3xl mx-auto"
-          >
-            <h2 className="text-2xl md:text-3xl font-serif text-center mb-8">
-              Questions fréquentes
-            </h2>
+            {/* Sous-section Questions techniques */}
+            <h3 className="text-xl font-serif text-primary mb-4 flex items-center gap-2">
+              🔧 Questions techniques
+            </h3>
             <div className="space-y-4">
               <div className="bg-background rounded-xl p-6 shadow-sm">
                 <h3 className="font-semibold text-lg mb-2">
