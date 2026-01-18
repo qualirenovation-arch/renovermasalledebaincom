@@ -120,13 +120,19 @@ export function NewsColumn() {
           to="/presse"
           className="flex-1 text-center text-xs font-medium text-primary hover:text-primary/80 transition-colors py-2 px-3 rounded-lg bg-primary/5 hover:bg-primary/10"
         >
-          Toute la presse
+          Presse
+        </Link>
+        <Link
+          to="/videos-conseils"
+          className="flex-1 text-center text-xs font-medium text-destructive hover:text-destructive/80 transition-colors py-2 px-3 rounded-lg bg-destructive/5 hover:bg-destructive/10"
+        >
+          Vidéos
         </Link>
         <Link
           to="/guide-travaux"
           className="flex-1 text-center text-xs font-medium text-mint hover:text-mint/80 transition-colors py-2 px-3 rounded-lg bg-mint/5 hover:bg-mint/10"
         >
-          Guide complet
+          Guide
         </Link>
       </div>
     </div>
