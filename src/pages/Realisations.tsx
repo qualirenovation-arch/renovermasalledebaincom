@@ -707,6 +707,9 @@ const albums: Album[] = [
     location: "Soisy-sous-Montmorency (95)",
     description: "AVANT : WC vétuste et sans charme, espace négligé. APRÈS : Transformation en espace raffiné avec meuble rose terracotta sur-mesure, niche en chêne, carrelage mural losanges et sol carreaux de ciment graphiques. Robinetterie noire mate pour une touche contemporaine.",
     coverImage: soisy1,
+    instagramLinks: [
+      "https://www.instagram.com/reel/C8UqT-at1r4/"
+    ],
     photos: [
       { id: 1, image: soisy1, title: "Après — Vue d'ensemble", description: "Meuble rose terracotta et niche chêne" },
       { id: 2, image: soisy2, title: "Après — Rangement ouvert", description: "Optimisation du rangement" },
