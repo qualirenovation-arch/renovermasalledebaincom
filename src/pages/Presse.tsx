@@ -79,7 +79,6 @@ const presseAlbums: Album[] = [
     externalLink: "https://www.houzz.fr/magazine/conseils-d-artisans-comment-faire-des-economies-de-gaz-stsetivw-vs~164524740",
     source: "Houzz",
     publishDate: "Janvier 2025",
-    instagramLink: "https://www.instagram.com/p/DE-fqg4sxql/",
     photos: [
       { id: 1, image: stMande1, title: "Projet vedette", description: "Rénovation Saint-Mandé" },
       { id: 2, image: stMande2, title: "Détails", description: "Finitions soignées" },
