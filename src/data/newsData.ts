@@ -155,6 +155,13 @@ export const videoConseils = [
     instagramUrl: "https://www.instagram.com/reel/VOTRE_LIEN_ICI/",
     category: "Meuble vasque",
   },
+  {
+    id: "video-vasque-a-poser",
+    title: "Comment choisir votre vasque à poser",
+    description: "Les critères essentiels pour bien choisir votre vasque à poser",
+    instagramUrl: "https://www.instagram.com/reel/VOTRE_LIEN_ICI/",
+    category: "Meuble vasque",
+  },
   // === TRAVAUX ===
   {
     id: "video-travaux-demolition",
