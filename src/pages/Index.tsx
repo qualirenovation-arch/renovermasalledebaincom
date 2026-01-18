@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { ArrowRight, Phone, Pencil, Gem, Wrench, Play } from "lucide-react";
+import { ArrowRight, Phone, Pencil, Gem, Wrench, Play, Sparkles, ChevronRight } from "lucide-react";
 import jemmapes1 from "@/assets/jemmapes-1.jpg";
 import vincennesMr1 from "@/assets/vincennes-mr-1.jpg";
 import nicolasRoretDouche from "@/assets/nicolas-roret-douche.jpg";
@@ -169,7 +169,7 @@ export default function Index() {
               <span className="italic font-normal">Douche</span> ou <span className="italic font-normal">baignoire</span> : laquelle choisir ?
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              👉 La vraie question n'est pas italienne ou pas, mais : <strong>comment vivez-vous votre salle de bain ?</strong><br />
+              La vraie question n'est pas italienne ou pas, mais : <strong>comment vivez-vous votre salle de bain ?</strong><br />
               Plutôt douche rapide et efficace ou bain détente pour décompresser ?
             </p>
           </motion.div>
@@ -183,7 +183,13 @@ export default function Index() {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              <div className="text-4xl mb-4">🛁</div>
+              <div className="w-14 h-14 rounded-full bg-wood/10 flex items-center justify-center mb-4">
+                <svg className="w-7 h-7 text-wood" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 12h16a1 1 0 0 1 1 1v3a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-3a1 1 0 0 1 1-1z"/>
+                  <path d="M6 12V5a2 2 0 0 1 2-2h3"/>
+                  <circle cx="12" cy="5" r="1"/>
+                </svg>
+              </div>
               <h3 className="font-display text-xl font-semibold mb-4">Vous êtes plutôt baignoire si :</h3>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-2">
@@ -209,7 +215,13 @@ export default function Index() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              <div className="text-4xl mb-4">🚿</div>
+              <div className="w-14 h-14 rounded-full bg-foreground/10 flex items-center justify-center mb-4">
+                <svg className="w-7 h-7 text-foreground" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 4a2 2 0 0 1 2-2h.5a2 2 0 0 1 2 2v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V4a2 2 0 0 1 2-2h.5a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4z"/>
+                  <path d="M6 8v2m3-2v4m3-4v2m3-2v4"/>
+                  <path d="M10 8v12"/>
+                </svg>
+              </div>
               <h3 className="font-display text-xl font-semibold mb-4">Vous êtes plutôt douche si :</h3>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-2">
@@ -236,7 +248,9 @@ export default function Index() {
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
           >
-            <div className="text-3xl mb-4">✨</div>
+            <div className="w-14 h-14 rounded-full bg-accent flex items-center justify-center mx-auto mb-4">
+              <Sparkles className="w-7 h-7 text-wood" strokeWidth={1.5} />
+            </div>
             <h3 className="font-display text-xl font-semibold mb-4">Pourquoi c'est important ?</h3>
             <p className="text-muted-foreground leading-relaxed">
               La salle de bain, c'est la première pièce que l'on utilise le matin.<br />
@@ -253,9 +267,13 @@ export default function Index() {
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            <p className="text-foreground leading-relaxed">
-              👉 <strong>Notre rôle :</strong> vous guider vers le bon choix pour vous, pas une solution toute faite.<br />
-              Chaque projet est unique… et chaque réveil mérite une salle de bain à la hauteur 😉
+            <div className="flex items-center justify-center gap-2 mb-3">
+              <ChevronRight className="w-5 h-5 text-wood" strokeWidth={2} />
+              <span className="font-display font-semibold text-lg">Notre rôle</span>
+            </div>
+            <p className="text-muted-foreground leading-relaxed">
+              Vous guider vers le bon choix pour vous, pas une solution toute faite.<br />
+              Chaque projet est unique… et chaque réveil mérite une salle de bain à la hauteur.
             </p>
           </motion.div>
 
