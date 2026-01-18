@@ -5,7 +5,7 @@ import { Layout } from "@/components/layout/Layout";
 import { ArrowRight, Phone, Pencil, Gem, Wrench, Play } from "lucide-react";
 import jemmapes1 from "@/assets/jemmapes-1.jpg";
 import vincennesMr1 from "@/assets/vincennes-mr-1.jpg";
-import vincennesMr5 from "@/assets/vincennes-mr-5.jpg";
+import nicolasRoretDouche from "@/assets/nicolas-roret-douche.jpg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -238,7 +238,7 @@ export default function Index() {
             {[
               { img: jemmapes1, style: "Élégance parisienne", location: "Paris 10ème — Jemmapes", tag: "Douche à l'italienne, carrelage graphique", borderClass: "photo-card-beige" },
               { img: vincennesMr1, style: "Contemporain épuré", location: "Cours de Vincennes", tag: "Matériaux nobles, finitions soignées", borderClass: "photo-card-terracotta" },
-              { img: vincennesMr5, style: "Ambiance spa", location: "Cours de Vincennes", tag: "Design moderne, tons naturels", borderClass: "photo-card-mint" }
+              { img: nicolasRoretDouche, style: "Zellige & Laiton", location: "Paris 13ème — Nicolas Roret", tag: "Zellige turquoise, robinetterie dorée", borderClass: "photo-card-mint" }
             ].map((project, index) => (
               <motion.div
                 key={index}
