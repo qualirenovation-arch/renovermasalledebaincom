@@ -17,8 +17,10 @@ import gallery13 from "@/assets/gallery-13.jpg";
 
 // Elle Magazine
 import presseElleWc from "@/assets/presse-elle-wc-suspendus.jpg";
-import presseElleWc2 from "@/assets/presse-elle-wc-2.jpg";
-import presseElleWc3 from "@/assets/presse-elle-wc-3.jpg";
+
+// Marie Claire Maison
+import presseMarieClaireApres from "@/assets/presse-marie-claire-1.jpg";
+import presseMarieClaireAvant from "@/assets/presse-marie-claire-2.jpg";
 
 interface Photo {
   id: number;
@@ -42,6 +44,20 @@ interface Album {
 
 const presseAlbums: Album[] = [
   {
+    id: "presse-marie-claire",
+    title: "Une salle de bains contemporaine",
+    location: "Paris",
+    description: "Transformation d'une salle de bain datée en espace contemporain avec robinetterie noire, paroi verrière industrielle et carrelage blanc lumineux. Un projet mis en avant par Marie Claire Maison.",
+    coverImage: presseMarieClaireApres,
+    externalLink: "https://www.marieclaire.fr/photo/1357704/3119092/une-salle-de-bains-contemporaine",
+    source: "Marie Claire Maison",
+    publishDate: "2024",
+    photos: [
+      { id: 1, image: presseMarieClaireApres, title: "Après — Salle de bain contemporaine", description: "Robinetterie noire, paroi verrière et zellige blanc" },
+      { id: 2, image: presseMarieClaireAvant, title: "Avant — État initial", description: "Salle de bain à rénover" },
+    ],
+  },
+  {
     id: "presse-elle-wc",
     title: "Toilettes suspendues : transformer ses WC en espace déco",
     location: "Elle Déco",
@@ -52,8 +68,6 @@ const presseAlbums: Album[] = [
     publishDate: "Janvier 2025",
     photos: [
       { id: 1, image: presseElleWc, title: "WC suspendus design", description: "Zellige anthracite et carreaux de ciment graphiques" },
-      { id: 2, image: presseElleWc2, title: "Après — Salle de bain moderne", description: "Robinetterie noire, paroi verrière et zellige blanc" },
-      { id: 3, image: presseElleWc3, title: "Avant — État initial", description: "Salle de bain à rénover" },
     ],
   },
   {
