@@ -98,6 +98,15 @@ import vincennesMr9 from "@/assets/vincennes-mr-9.jpg";
 import vincennesMr10 from "@/assets/vincennes-mr-10.jpg";
 import vincennesMr11 from "@/assets/vincennes-mr-11.jpg";
 import vincennesMr12 from "@/assets/vincennes-mr-12.jpg";
+import vincennesMrAvant1 from "@/assets/vincennes-mr-avant-1.jpg";
+import vincennesMrAvant2 from "@/assets/vincennes-mr-avant-2.jpg";
+import vincennesMrAvant3 from "@/assets/vincennes-mr-avant-3.jpg";
+import vincennesMrAvant4 from "@/assets/vincennes-mr-avant-4.jpg";
+import vincennesMrAvant5 from "@/assets/vincennes-mr-avant-5.jpg";
+import vincennesMrAvant6 from "@/assets/vincennes-mr-avant-6.jpg";
+import vincennesMrAvant7 from "@/assets/vincennes-mr-avant-7.jpg";
+import vincennesMrAvant8 from "@/assets/vincennes-mr-avant-8.jpg";
+import vincennesMrAvant9 from "@/assets/vincennes-mr-avant-9.jpg";
 
 // Chantiers en cours
 import butteschaumont1 from "@/assets/buttes-chaumont-1.jpg";
@@ -439,6 +448,15 @@ const albums: Album[] = [
       { id: 10, image: vincennesMr10, title: "Après — Espace douche", description: "Receveur Le Monde du Bain" },
       { id: 11, image: vincennesMr11, title: "Après — Rangements", description: "Solutions sur-mesure" },
       { id: 12, image: vincennesMr12, title: "Après — Ambiance finale", description: "Harmonie des matériaux" },
+      { id: 13, image: vincennesMrAvant1, title: "Avant — Entrée salle de bain", description: "État initial avec séchoir et encombrement" },
+      { id: 14, image: vincennesMrAvant2, title: "Avant — Vue vers couloir", description: "Douche existante et aménagement provisoire" },
+      { id: 15, image: vincennesMrAvant3, title: "Avant — Espace vasque", description: "Meuble et fenêtre côté vasque" },
+      { id: 16, image: vincennesMrAvant4, title: "Avant — Douche existante", description: "Colonne de douche et paroi vitrée" },
+      { id: 17, image: vincennesMrAvant5, title: "Avant — Vue HD douche", description: "Salle de bain à rénover" },
+      { id: 18, image: vincennesMrAvant6, title: "Avant — Espace douche complet", description: "Aménagement existant" },
+      { id: 19, image: vincennesMrAvant7, title: "Avant — Sèche-linge intégré", description: "Colonne buanderie d'origine" },
+      { id: 20, image: vincennesMrAvant8, title: "Avant — Douche et rangements", description: "Configuration initiale" },
+      { id: 21, image: vincennesMrAvant9, title: "Avant — Vue d'ensemble", description: "Lave-linge et vasque existants" },
     ],
   },
   {
