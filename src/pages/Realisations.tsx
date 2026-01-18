@@ -345,6 +345,8 @@ import charenton14 from "@/assets/charenton-14.jpg";
 import charenton15 from "@/assets/charenton-15.jpg";
 import charenton16 from "@/assets/charenton-16.jpg";
 import charenton17 from "@/assets/charenton-17.jpg";
+import charenton18 from "@/assets/charenton-18.jpg";
+import charenton19 from "@/assets/charenton-19.jpg";
 import charentonAvant5 from "@/assets/charenton-avant-5.jpg";
 import charentonAvant6 from "@/assets/charenton-avant-6.jpg";
 import charentonAvant7 from "@/assets/charenton-avant-7.jpg";
@@ -491,15 +493,17 @@ const albums: Album[] = [
     id: "charenton-wc",
     title: "WC Mosaïque hexagonale & Laiton",
     location: "Charenton-le-Pont (94)",
-    description: "AVANT : WC séparé avec réservoir apparent et équipements datés. APRÈS : WC suspendu moderne avec mur en mosaïque hexagonale effet marbre, plaque Geberit, placard suspendu pour rangement et finitions laiton assorties à la salle de bain.",
-    coverImage: charenton16,
+    description: "AVANT : WC séparé avec réservoir apparent et équipements datés. APRÈS : WC suspendu moderne avec mur en mosaïque hexagonale effet marbre (Leroy Merlin), plaque Geberit, placard suspendu sur-mesure et carrelage grand format effet marbre au sol. Robinetterie et accessoires MaSalleDeBain.com.",
+    coverImage: charenton19,
     photos: [
-      { id: 1, image: charenton16, title: "Après — WC vue complète", description: "Placard suspendu et mosaïque hexagonale" },
-      { id: 2, image: charenton1, title: "Après — WC suspendu", description: "Mosaïque hexagonale effet marbre" },
-      { id: 3, image: charenton15, title: "Après — Détail mosaïque", description: "Mosaïque hexagonale marbre et plaque Geberit" },
-      { id: 4, image: charenton2, title: "Après — Niche WC", description: "Niche et accessoires assortis" },
-      { id: 5, image: charenton12, title: "Après — Finitions", description: "Sèche-serviettes et WC" },
-      { id: 6, image: charentonAvant8, title: "Avant — WC ancien", description: "WC avec réservoir apparent" },
+      { id: 1, image: charenton19, title: "Après — WC vue complète", description: "Placard suspendu, étagères et mosaïque hexagonale" },
+      { id: 2, image: charenton18, title: "Après — Détail mosaïque", description: "Mosaïque hexagonale marbre et plaque Geberit" },
+      { id: 3, image: charenton16, title: "Après — Vue d'ensemble", description: "Rangement optimisé et sol marbre" },
+      { id: 4, image: charenton1, title: "Après — WC suspendu", description: "Mosaïque hexagonale effet marbre Leroy Merlin" },
+      { id: 5, image: charenton15, title: "Après — Plaque Geberit", description: "Détail plaque de chasse double touche" },
+      { id: 6, image: charenton2, title: "Après — Niche WC", description: "Niche et accessoires MaSalleDeBain.com" },
+      { id: 7, image: charenton12, title: "Après — Finitions", description: "Sèche-serviettes et WC" },
+      { id: 8, image: charentonAvant8, title: "Avant — WC ancien", description: "WC avec réservoir apparent" },
     ],
   },
   {
