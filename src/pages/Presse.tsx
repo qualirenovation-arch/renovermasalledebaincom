@@ -21,6 +21,7 @@ import presseMarieClaireApres from "@/assets/presse-marie-claire-1.jpg";
 import presseMarieClaireAvant from "@/assets/presse-marie-claire-2.jpg";
 import presseMarieClaireAdresses from "@/assets/presse-marie-claire-adresses.png";
 import presseHouzzSoisy from "@/assets/presse-houzz-soisy.png";
+import presseHouzzBois from "@/assets/presse-houzz-bois.jpg";
 
 interface Photo {
   id: number;
@@ -44,6 +45,20 @@ interface Album {
 }
 
 const presseAlbums: Album[] = [
+  {
+    id: "presse-houzz-bois",
+    title: "Photothèque : 50 salles de bains réchauffées grâce au bois",
+    location: "Houzz France",
+    description: "La salle de bains fait partie des pièces les plus rénovées par les Français avec la chambre et la cuisine, selon les résultats d'une étude Houzz. Nombreux sont ceux qui souhaitent transformer les lieux en un havre de paix dédié à la détente, inspiré des spas et hôtels. Le bois se place ainsi en matériau de référence pour apporter de la chaleur, une touche de nature ou donner un esprit zen à la salle de bains.",
+    coverImage: presseHouzzBois,
+    externalLink: "https://www.houzz.fr/magazine/phototheque-50-salles-de-bains-rechauffees-grace-au-bois-stsetivw-vs~121061583",
+    source: "Houzz",
+    publishDate: "2021",
+    journalist: "Rédaction Houzz",
+    photos: [
+      { id: 1, image: presseHouzzBois, title: "Salle de bain bois", description: "Carrelage effet bois et ambiance zen" },
+    ],
+  },
   {
     id: "presse-houzz-soisy",
     title: "Avant/Après : À Soisy, une maison de maître 1900 rénovée de A à Z",
