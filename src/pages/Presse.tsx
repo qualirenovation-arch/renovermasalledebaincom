@@ -40,6 +40,21 @@ interface Album {
 
 const presseAlbums: Album[] = [
   {
+    id: "presse-houzz-trois-pieces",
+    title: "Un trois-pièces de 54 m² rafraîchi pour 25 000 €",
+    location: "Paris",
+    description: "Focus salle de bain : cette rénovation complète a fait l'objet de deux articles distincts — le WC chez Elle Décoration et la salle de bain chez Marie Claire Maison. Une transformation remarquée par la presse déco.",
+    coverImage: presseMarieClaireApres,
+    externalLink: "https://www.houzz.fr/magazine/avant-apres-un-trois-pieces-de-54-m%C2%B2-rafraichi-pour-25-000-eur-stsetivw-vs~92733439",
+    source: "Houzz",
+    publishDate: "Avril 2019",
+    photos: [
+      { id: 1, image: presseMarieClaireApres, title: "Après — Salle de bain contemporaine", description: "Robinetterie noire, paroi verrière et zellige blanc" },
+      { id: 2, image: presseMarieClaireAvant, title: "Avant — État initial", description: "Salle de bain à rénover" },
+      { id: 3, image: presseElleWc, title: "Après — WC design", description: "Zellige anthracite et carreaux de ciment graphiques" },
+    ],
+  },
+  {
     id: "presse-marie-claire",
     title: "Une salle de bains contemporaine",
     location: "Paris",
