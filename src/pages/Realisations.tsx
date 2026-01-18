@@ -463,9 +463,9 @@ const albums: Album[] = [
   },
   {
     id: "charenton",
-    title: "Duo SDB & WC — Marbre et Laiton",
+    title: "Salle de bain — Marbre et Laiton",
     location: "Charenton-le-Pont (94)",
-    description: "AVANT : Baignoire datée et espace peu fonctionnel. APRÈS : Création d'un duo salle de bain et WC au style Black & White raffiné. Carrelage effet marbre grand format, mosaïque hexagonale sur le mur WC, robinetterie laiton brossé encastrée. Remplacement de la baignoire par un receveur de douche avec paroi profilé doré. Meuble vasque blanc avec façade 3D et miroir encadré laiton.",
+    description: "AVANT : Baignoire datée et espace peu fonctionnel. APRÈS : Transformation en salle de bain au style Black & White raffiné. Carrelage effet marbre grand format, robinetterie laiton brossé encastrée. Remplacement de la baignoire par un receveur de douche avec paroi profilé doré. Meuble vasque blanc avec façade 3D et miroir encadré laiton.",
     coverImage: charenton4,
     photos: [
       // APRÈS — SALLE DE BAIN
@@ -481,18 +481,25 @@ const albums: Album[] = [
       { id: 10, image: charenton17, title: "Après — Douchette laiton", description: "Robinetterie laiton brossé sur marbre" },
       { id: 11, image: charenton11, title: "Après — Ensemble SDB", description: "Harmonie marbre blanc et laiton" },
       { id: 12, image: charenton13, title: "Après — Vue finale SDB", description: "Style Black & White élégant" },
-      // APRÈS — WC
-      { id: 13, image: charenton16, title: "Après — WC vue complète", description: "Placard suspendu et mosaïque hexagonale" },
-      { id: 14, image: charenton1, title: "Après — WC suspendu", description: "Mosaïque hexagonale effet marbre" },
-      { id: 15, image: charenton15, title: "Après — Détail WC mosaïque", description: "Mosaïque hexagonale marbre et plaque Geberit" },
-      { id: 16, image: charenton2, title: "Après — Détail WC", description: "Niche et accessoires assortis" },
-      { id: 17, image: charenton12, title: "Après — Finitions WC", description: "Sèche-serviettes et WC" },
       // AVANT — SALLE DE BAIN
-      { id: 18, image: charentonAvant5, title: "Avant — Salle de bain complète", description: "Baignoire mosaïque beige et carrelage daté" },
-      { id: 19, image: charentonAvant6, title: "Avant — Vue baignoire", description: "Mosaïque beige à remplacer" },
-      { id: 20, image: charentonAvant7, title: "Avant — Vasque", description: "Meuble blanc et carrelage mosaïque" },
-      // AVANT — WC
-      { id: 21, image: charentonAvant8, title: "Avant — WC séparé", description: "WC ancien avec réservoir apparent" },
+      { id: 13, image: charentonAvant5, title: "Avant — Salle de bain complète", description: "Baignoire mosaïque beige et carrelage daté" },
+      { id: 14, image: charentonAvant6, title: "Avant — Vue baignoire", description: "Mosaïque beige à remplacer" },
+      { id: 15, image: charentonAvant7, title: "Avant — Vasque", description: "Meuble blanc et carrelage mosaïque" },
+    ],
+  },
+  {
+    id: "charenton-wc",
+    title: "WC Mosaïque hexagonale & Laiton",
+    location: "Charenton-le-Pont (94)",
+    description: "AVANT : WC séparé avec réservoir apparent et équipements datés. APRÈS : WC suspendu moderne avec mur en mosaïque hexagonale effet marbre, plaque Geberit, placard suspendu pour rangement et finitions laiton assorties à la salle de bain.",
+    coverImage: charenton16,
+    photos: [
+      { id: 1, image: charenton16, title: "Après — WC vue complète", description: "Placard suspendu et mosaïque hexagonale" },
+      { id: 2, image: charenton1, title: "Après — WC suspendu", description: "Mosaïque hexagonale effet marbre" },
+      { id: 3, image: charenton15, title: "Après — Détail mosaïque", description: "Mosaïque hexagonale marbre et plaque Geberit" },
+      { id: 4, image: charenton2, title: "Après — Niche WC", description: "Niche et accessoires assortis" },
+      { id: 5, image: charenton12, title: "Après — Finitions", description: "Sèche-serviettes et WC" },
+      { id: 6, image: charentonAvant8, title: "Avant — WC ancien", description: "WC avec réservoir apparent" },
     ],
   },
   {
