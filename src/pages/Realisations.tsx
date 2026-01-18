@@ -262,6 +262,9 @@ import auteuilAvant1 from "@/assets/auteuil-avant-1.jpg";
 // Courbevoie 92
 import courbevoieAvant1 from "@/assets/courbevoie-avant-1.jpg";
 import courbevoieAvant2 from "@/assets/courbevoie-avant-2.jpg";
+import courbevoie7 from "@/assets/courbevoie-7.jpg";
+import courbevoie8 from "@/assets/courbevoie-8.jpg";
+import courbevoie9 from "@/assets/courbevoie-9.jpg";
 
 // Vitry-sur-Seine 94
 import vitryAvant1 from "@/assets/vitry-avant-1.jpg";
@@ -958,6 +961,20 @@ const albums: Album[] = [
       { id: 7, image: charonneAvant4, title: "Avant — WC angle", description: "Carrelage daté" },
     ],
   },
+  {
+    id: "courbevoie-renovation",
+    title: "Suite dégât des eaux — Carrelage mal posé",
+    location: "Courbevoie (92) - Rue Ernest Lalyre",
+    description: "AVANT : Carrelage mal posé et absence totale d'étanchéité — la catastrophe ! Une salle de bain qui a causé des dégâts chez les voisins. APRÈS : Reprise complète dans les règles de l'art. Carrelage terrazzo grand format sol et mur, meuble vasque teck massif, robinetterie chromée, paroi fixe et receveur blanc extra-plat. Miroir LED tactile avec affichage digital. Sèche-serviettes blanc et niches de rangement intégrées pour un espace optimisé et enfin étanche.",
+    coverImage: courbevoie7,
+    photos: [
+      { id: 1, image: courbevoie7, title: "Après — Vue générale", description: "Terrazzo, meuble teck et paroi vitrée" },
+      { id: 2, image: courbevoie8, title: "Après — Douche et vasque", description: "Détail de l'aménagement et robinetterie chromée" },
+      { id: 3, image: courbevoie9, title: "Après — Miroir LED", description: "Miroir tactile avec affichage digital et terrazzo" },
+      { id: 4, image: courbevoieAvant1, title: "Avant — Vue vasque", description: "Meuble vasque et carrelage défaillant" },
+      { id: 5, image: courbevoieAvant2, title: "Avant — Vue d'ensemble", description: "Carrelage moucheté et absence d'étanchéité" },
+    ],
+  },
 ];
 
 interface ProjectLocation {
@@ -1029,18 +1046,6 @@ const inProgressAlbums: Album[] = [
     ],
   },
   {
-    id: "courbevoie",
-    title: "Transformation salle de bain",
-    location: "Courbevoie (92) - Rue Ernest Lalyre",
-    description: "Salle de bain datée avec carrelage bleu-gris moucheté et plafond papier peint floral. Baignoire standard et meuble vasque blanc à transformer en douche à l'italienne moderne. Chantier en cours — restez connecté pour découvrir cette transformation !",
-    coverImage: courbevoieAvant1,
-    isInProgress: true,
-    photos: [
-      { id: 1, image: courbevoieAvant1, title: "Avant — Vue vasque", description: "Meuble vasque et baignoire existants" },
-      { id: 2, image: courbevoieAvant2, title: "Avant — Vue d'ensemble", description: "Carrelage moucheté et plafond floral" },
-    ],
-  },
-  {
     id: "vitry",
     title: "Carrelage picot & robinetterie dorée",
     location: "Vitry-sur-Seine (94)",
@@ -1067,7 +1072,6 @@ const projectLocations: ProjectLocation[] = [
   { id: "rocroy", name: "Rue de Rocroy", area: "10ème", x: 55, y: 32 },
   { id: "port-royal", name: "Port-Royal", area: "5ème", x: 48, y: 60 },
   { id: "la-tour", name: "Rue de la Tour", area: "16ème", x: 25, y: 45 },
-  { id: "courbevoie", name: "Rue Ernest Lalyre", area: "Courbevoie", x: 15, y: 30 },
 ];
 
 export default function Realisations() {
