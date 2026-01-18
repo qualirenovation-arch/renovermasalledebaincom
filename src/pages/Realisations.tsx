@@ -985,6 +985,11 @@ const albums: Album[] = [
       { id: 10, image: courbevoieAvant1, title: "Avant — Vue vasque", description: "Meuble vasque et carrelage défaillant" },
       { id: 11, image: courbevoieAvant2, title: "Avant — Vue d'ensemble", description: "Carrelage moucheté et absence d'étanchéité" },
     ],
+    review: {
+      text: "J'ai fait appel à Qualirenovation pour 2 projets de rénovation et les résultats sont excellents à tous points de vue (tant sur le rendu que sur le déroulement) : Carina partage de très bonnes idées, s'adapte aux besoins de ses clients, est ultra-disponible pour le suivi et pour trouver des solutions ! Je suis ravie et j'ai hâte de faire à nouveau appel à elle pour un futur projet « Saretta »!!",
+      author: "Sarah C.",
+      link: "https://www.houzz.fr/viewReview/1886768/qualirenovation-by-qualiconcept-review"
+    },
   },
 ];
 
