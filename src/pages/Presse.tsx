@@ -43,6 +43,20 @@ interface Album {
 
 const presseAlbums: Album[] = [
   {
+    id: "presse-marie-claire-adresses",
+    title: "QualiRénovation — Adresses Incontournables",
+    location: "Marie Claire Maison",
+    description: "QualiRénovation by QualiConcept figure parmi les adresses incontournables sélectionnées par Marie Claire Maison. Une reconnaissance de notre savoir-faire en rénovation de salles de bain haut de gamme à Paris et en Île-de-France.",
+    coverImage: carinaNahmani,
+    externalLink: "http://adresses-incontournables-maison.marieclaire.fr/dossier/qualirenovation-by-qualiconcept/",
+    source: "Marie Claire Maison",
+    publishDate: "2024",
+    journalist: "Rédaction Marie Claire",
+    photos: [
+      { id: 1, image: carinaNahmani, title: "QualiRénovation", description: "Adresse incontournable Marie Claire Maison" },
+    ],
+  },
+  {
     id: "presse-maitre-oeuvre",
     title: "Pourquoi est-il judicieux de faire appel à un maître d'œuvre ?",
     location: "Interview Houzz",
