@@ -408,6 +408,29 @@ const Guide = () => {
                 Maître d'œuvre intégré : chacun son métier
               </h2>
             </div>
+            <motion.div 
+              className="bg-accent/50 rounded-xl p-6 border-l-4 border-primary cursor-pointer group hover:bg-accent/70 transition-all duration-300 hover:shadow-lg hover:border-l-8 mb-6"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <p className="text-foreground font-semibold mb-3 flex items-center gap-2">
+                <motion.span
+                  animate={{ rotate: [0, 15, -15, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+                >
+                  <HelpCircle className="w-6 h-6 text-primary group-hover:text-primary/80 transition-colors" />
+                </motion.span>
+                Est-ce une obligation d'avoir un maître d'œuvre ?
+              </p>
+              <p className="text-muted-foreground mb-3">
+                👉 <span className="font-medium">Non, ce n'est pas une obligation légale.</span>
+              </p>
+              <p className="text-muted-foreground">
+                Mais c'est inclus dans notre prestation car nous ne sommes pas des exécutants : 
+                <span className="text-primary font-medium"> nous sommes des experts en rénovation</span>. 
+                Notre rôle est de concevoir, coordonner et garantir la réussite de votre projet de A à Z.
+              </p>
+            </motion.div>
             <div className="bg-accent/30 rounded-2xl p-8">
               <Ruler className="w-10 h-10 text-primary mb-4" />
               <p className="text-lg text-muted-foreground mb-6">
@@ -442,34 +465,11 @@ const Guide = () => {
                   👉 C'est l'art de bien faire, dans les règles, avec méthode, anticipation… et sérénité.
                 </p>
               </div>
-              <div className="bg-background rounded-xl p-4 border border-primary/20 mb-6">
+              <div className="bg-background rounded-xl p-4 border border-primary/20">
                 <p className="text-primary font-medium italic">
                   💬 Résultat : un chantier fluide, maîtrisé, et un projet qui traverse le temps sans mauvaise surprise 😉
                 </p>
               </div>
-              <motion.div 
-                className="bg-accent/50 rounded-xl p-6 border-l-4 border-primary cursor-pointer group hover:bg-accent/70 transition-all duration-300 hover:shadow-lg hover:border-l-8"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <p className="text-foreground font-semibold mb-3 flex items-center gap-2">
-                  <motion.span
-                    animate={{ rotate: [0, 15, -15, 0] }}
-                    transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
-                  >
-                    <HelpCircle className="w-6 h-6 text-primary group-hover:text-primary/80 transition-colors" />
-                  </motion.span>
-                  Est-ce une obligation d'avoir un maître d'œuvre ?
-                </p>
-                <p className="text-muted-foreground mb-3">
-                  👉 <span className="font-medium">Non, ce n'est pas une obligation légale.</span>
-                </p>
-                <p className="text-muted-foreground">
-                  Mais c'est inclus dans notre prestation car nous ne sommes pas des exécutants : 
-                  <span className="text-primary font-medium"> nous sommes des experts en rénovation</span>. 
-                  Notre rôle est de concevoir, coordonner et garantir la réussite de votre projet de A à Z.
-                </p>
-              </motion.div>
             </div>
           </motion.div>
         </div>
