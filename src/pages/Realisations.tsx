@@ -262,9 +262,14 @@ import auteuilAvant1 from "@/assets/auteuil-avant-1.jpg";
 // Courbevoie 92
 import courbevoieAvant1 from "@/assets/courbevoie-avant-1.jpg";
 import courbevoieAvant2 from "@/assets/courbevoie-avant-2.jpg";
+import courbevoieAvant3 from "@/assets/courbevoie-avant-3.jpg";
 import courbevoie7 from "@/assets/courbevoie-7.jpg";
 import courbevoie8 from "@/assets/courbevoie-8.jpg";
 import courbevoie9 from "@/assets/courbevoie-9.jpg";
+import courbevoie10 from "@/assets/courbevoie-10.jpg";
+import courbevoie11 from "@/assets/courbevoie-11.jpg";
+import courbevoieTravaux1 from "@/assets/courbevoie-travaux-1.jpg";
+import courbevoieTravaux2 from "@/assets/courbevoie-travaux-2.jpg";
 
 // Vitry-sur-Seine 94
 import vitryAvant1 from "@/assets/vitry-avant-1.jpg";
@@ -964,15 +969,21 @@ const albums: Album[] = [
   {
     id: "courbevoie-renovation",
     title: "Suite dégât des eaux — Carrelage mal posé",
-    location: "Courbevoie (92) - Rue Ernest Lalyre",
+    location: "Courbevoie (92) - 17 Rue Saint-Guillaume",
     description: "AVANT : Carrelage mal posé et absence totale d'étanchéité — la catastrophe ! Une salle de bain qui a causé des dégâts chez les voisins. APRÈS : Reprise complète dans les règles de l'art. Carrelage terrazzo grand format sol et mur, meuble vasque teck massif, robinetterie chromée, paroi fixe et receveur blanc extra-plat. Miroir LED tactile avec affichage digital. Sèche-serviettes blanc et niches de rangement intégrées pour un espace optimisé et enfin étanche.",
-    coverImage: courbevoie7,
+    coverImage: courbevoie11,
     photos: [
-      { id: 1, image: courbevoie7, title: "Après — Vue générale", description: "Terrazzo, meuble teck et paroi vitrée" },
-      { id: 2, image: courbevoie8, title: "Après — Douche et vasque", description: "Détail de l'aménagement et robinetterie chromée" },
-      { id: 3, image: courbevoie9, title: "Après — Miroir LED", description: "Miroir tactile avec affichage digital et terrazzo" },
-      { id: 4, image: courbevoieAvant1, title: "Avant — Vue vasque", description: "Meuble vasque et carrelage défaillant" },
-      { id: 5, image: courbevoieAvant2, title: "Avant — Vue d'ensemble", description: "Carrelage moucheté et absence d'étanchéité" },
+      { id: 1, image: "/videos/courbevoie-1.mp4", title: "Après — Visite vidéo", description: "Tour de la salle de bain rénovée", isVideo: true },
+      { id: 2, image: courbevoie11, title: "Après — Vue générale", description: "Terrazzo, meuble teck et paroi vitrée" },
+      { id: 3, image: courbevoie10, title: "Après — Détail terrazzo", description: "Carrelage terrazzo et robinetterie chromée" },
+      { id: 4, image: courbevoie7, title: "Après — Aménagement", description: "Terrazzo, meuble teck et receveur blanc" },
+      { id: 5, image: courbevoie8, title: "Après — Douche et vasque", description: "Détail de l'aménagement et robinetterie chromée" },
+      { id: 6, image: courbevoie9, title: "Après — Miroir LED", description: "Miroir tactile avec affichage digital" },
+      { id: 7, image: courbevoieTravaux1, title: "Travaux — Niches en cours", description: "Création des niches de rangement" },
+      { id: 8, image: courbevoieTravaux2, title: "Travaux — Pose carrelage", description: "Pose du terrazzo et receveur" },
+      { id: 9, image: courbevoieAvant3, title: "Avant — Salle de bain sombre", description: "Carrelage foncé et meuble teck d'origine" },
+      { id: 10, image: courbevoieAvant1, title: "Avant — Vue vasque", description: "Meuble vasque et carrelage défaillant" },
+      { id: 11, image: courbevoieAvant2, title: "Avant — Vue d'ensemble", description: "Carrelage moucheté et absence d'étanchéité" },
     ],
   },
 ];
