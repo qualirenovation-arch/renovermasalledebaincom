@@ -17,6 +17,8 @@ import gallery13 from "@/assets/gallery-13.jpg";
 
 // Elle Magazine
 import presseElleWc from "@/assets/presse-elle-wc-suspendus.jpg";
+import presseElleWc2 from "@/assets/presse-elle-wc-2.jpg";
+import presseElleWc3 from "@/assets/presse-elle-wc-3.jpg";
 
 interface Photo {
   id: number;
@@ -50,6 +52,8 @@ const presseAlbums: Album[] = [
     publishDate: "Janvier 2025",
     photos: [
       { id: 1, image: presseElleWc, title: "WC suspendus design", description: "Zellige anthracite et carreaux de ciment graphiques" },
+      { id: 2, image: presseElleWc2, title: "Après — Salle de bain moderne", description: "Robinetterie noire, paroi verrière et zellige blanc" },
+      { id: 3, image: presseElleWc3, title: "Avant — État initial", description: "Salle de bain à rénover" },
     ],
   },
   {
