@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
-import { Newspaper, BookOpen, ArrowRight, ExternalLink } from "lucide-react";
-import { presseNews, guideConseils } from "@/data/newsData";
+import { Newspaper, BookOpen, ArrowRight, ExternalLink, PlayCircle } from "lucide-react";
+import { presseNews, guideConseils, videoConseils } from "@/data/newsData";
 
 export function NewsColumn() {
-  // Prendre les 2 articles presse les plus récents et 2 conseils
+  // Prendre les 2 articles presse les plus récents, 2 conseils et 2 vidéos
   const latestPresse = presseNews.slice(0, 2);
   const featuredConseils = guideConseils.slice(0, 2);
+  const latestVideos = videoConseils.slice(0, 2);
 
   return (
     <div className="w-80 p-4">
@@ -40,6 +41,45 @@ export function NewsColumn() {
           ))}
         </div>
       </div>
+
+      {/* Séparateur */}
+      <div className="border-t border-border my-4" />
+
+      {/* Section Vidéos Conseils */}
+      {latestVideos.length > 0 && (
+        <div className="mb-4">
+          <h3 className="font-display text-sm font-semibold text-destructive mb-3 flex items-center gap-2 uppercase tracking-wide">
+            <PlayCircle className="w-4 h-4" />
+            Vidéos Conseils
+          </h3>
+          
+          <div className="space-y-2">
+            {latestVideos.map((item) => (
+              <a
+                key={item.id}
+                href={item.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block p-3 rounded-lg bg-destructive/10 hover:bg-destructive/20 transition-colors group"
+              >
+                <div className="flex items-start gap-3">
+                  <div className="flex-1 min-w-0">
+                    <p className="font-medium text-sm text-foreground group-hover:text-destructive transition-colors">
+                      {item.title}
+                    </p>
+                    <p className="text-xs text-muted-foreground mt-1 flex items-center gap-1">
+                      <span className="font-medium text-destructive/80">{item.category}</span>
+                      <span>•</span>
+                      <span>Instagram</span>
+                    </p>
+                  </div>
+                  <PlayCircle className="w-3.5 h-3.5 text-muted-foreground group-hover:text-destructive transition-colors flex-shrink-0 mt-1" />
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Séparateur */}
       <div className="border-t border-border my-4" />
