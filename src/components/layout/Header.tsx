@@ -10,7 +10,7 @@ const navItems = [
   { label: "Pourquoi nous", path: "/pourquoi-nous" },
   { label: "Réalisations", path: "/realisations" },
   { label: "🚧 Chantiers en cours", path: "/realisations#chantiers-en-cours" },
-  { label: "📰 Presse", path: "/presse" },
+  { label: "📖 Guide travaux", path: "/guide-travaux" },
   { label: "Demande de devis", path: "/devis" },
 ];
 
