@@ -916,9 +916,18 @@ const Guide = () => {
                 <h3 className="font-semibold text-lg mb-2">
                   ❓ Faut-il refaire toute la plomberie lors d'une rénovation de salle de bain ?
                 </h3>
-                <p className="text-muted-foreground">
-                  Oui, pour éviter les fuites et sécuriser l'installation. Le plomb est remplacé par du cuivre ou du multicouche.
-                </p>
+                <div className="text-muted-foreground space-y-3">
+                  <p>
+                    👉 <strong>Oui, dans la grande majorité des cas.</strong><br />
+                    Les DTU imposent que toute installation modifiée soit mise aux normes actuelles : le plomb est interdit, les raccords encastrés non accessibles sont proscrits, et les matériaux autorisés sont le cuivre ou le multicouche.
+                  </p>
+                  <p>
+                    🛡 <strong>Côté assurances</strong>, une plomberie ancienne conservée peut entraîner un refus de prise en charge en cas de fuite.
+                  </p>
+                  <p className="font-medium text-foreground">
+                    Conclusion : refaire la plomberie, c'est sécuriser l'installation, le chantier… et l'assurance.
+                  </p>
+                </div>
               </div>
               <div className="bg-background rounded-xl p-6 shadow-sm">
                 <h3 className="font-semibold text-lg mb-2">
