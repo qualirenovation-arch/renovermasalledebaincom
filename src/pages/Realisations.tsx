@@ -274,6 +274,17 @@ import courbevoieStGuillaumeTravaux2 from "@/assets/courbevoie-travaux-2.jpg";
 // Courbevoie 92 - Lalyre
 import courbevoieLalyreAvant1 from "@/assets/courbevoie-lalyre-avant-1.jpg";
 
+// Rue des Puits
+import rueDesPuits1 from "@/assets/rue-des-puits-1.jpg";
+import rueDesPuits2 from "@/assets/rue-des-puits-2.jpg";
+import rueDesPuits3 from "@/assets/rue-des-puits-3.jpg";
+import rueDesPuits4 from "@/assets/rue-des-puits-4.jpg";
+import rueDesPuits5 from "@/assets/rue-des-puits-5.jpg";
+import rueDesPuitsAvant1 from "@/assets/rue-des-puits-avant-1.jpg";
+import rueDesPuitsAvant2 from "@/assets/rue-des-puits-avant-2.jpg";
+import rueDesPuitsAvant3 from "@/assets/rue-des-puits-avant-3.jpg";
+import rueDesPuitsAvant4 from "@/assets/rue-des-puits-avant-4.jpg";
+
 // Vitry-sur-Seine 94
 import vitryAvant1 from "@/assets/vitry-avant-1.jpg";
 import vitryAvant2 from "@/assets/vitry-avant-2.jpg";
@@ -415,6 +426,24 @@ const albums: Album[] = [
       { id: 10, image: vincennesMr10, title: "Après — Espace douche", description: "Receveur Le Monde du Bain" },
       { id: 11, image: vincennesMr11, title: "Après — Rangements", description: "Solutions sur-mesure" },
       { id: 12, image: vincennesMr12, title: "Après — Ambiance finale", description: "Harmonie des matériaux" },
+    ],
+  },
+  {
+    id: "rue-des-puits",
+    title: "Cette salle de bain voit la vie en bleu",
+    location: "Rue des Puits",
+    description: "AVANT : Salle de bain fonctionnelle mais datée avec baignoire classique, carrelage beige et vasque simple sur plateau bois. APRÈS : Transformation spectaculaire vers un style marbre bleu saisissant. Meuble chêne IKEA avec double vasque en verre strié, miroir XXL rétroéclairé, niche encastrée ergonomique dans la douche et plan vasque confortable. Dans l'entrée, le lave-linge est astucieusement dissimulé dans le placard.",
+    coverImage: rueDesPuits4,
+    photos: [
+      { id: 1, image: rueDesPuits4, title: "Après — Vue d'ensemble", description: "Meuble chêne, vasques verre et miroir XXL" },
+      { id: 2, image: rueDesPuits2, title: "Après — Double vasque", description: "Vasques en verre strié et miroir rétroéclairé" },
+      { id: 3, image: rueDesPuits3, title: "Après — Détail vasques", description: "Verre strié et robinetterie chromée" },
+      { id: 4, image: rueDesPuits5, title: "Après — Baignoire marbre bleu", description: "Carrelage effet marbre avec niche intégrée" },
+      { id: 5, image: rueDesPuits1, title: "Après — Niche et colonne de douche", description: "Niche encastrée et robinetterie pluie" },
+      { id: 6, image: rueDesPuitsAvant1, title: "Avant — Vue baignoire", description: "Baignoire avec pare-bain et carrelage beige" },
+      { id: 7, image: rueDesPuitsAvant2, title: "Avant — Vue d'ensemble", description: "Configuration initiale avec lave-linge visible" },
+      { id: 8, image: rueDesPuitsAvant3, title: "Avant — Vasque et miroir", description: "Vasque simple sur plateau bois" },
+      { id: 9, image: rueDesPuitsAvant4, title: "Avant — Vue angle", description: "Espace avant transformation" },
     ],
   },
   {
