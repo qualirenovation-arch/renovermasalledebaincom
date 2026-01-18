@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, AlertTriangle, Droplets, Shield, Wrench, Sparkles, Eye, Users, Home, Phone, Paintbrush, Wind, HardHat, Building, Hammer, Ruler } from "lucide-react";
+import { ArrowRight, CheckCircle, AlertTriangle, Droplets, Shield, Wrench, Sparkles, Eye, Users, Home, Phone, Paintbrush, Wind, HardHat, Building, Hammer, Ruler, HelpCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 // Images
@@ -442,9 +442,23 @@ const Guide = () => {
                   👉 C'est l'art de bien faire, dans les règles, avec méthode, anticipation… et sérénité.
                 </p>
               </div>
-              <div className="bg-background rounded-xl p-4 border border-primary/20">
+              <div className="bg-background rounded-xl p-4 border border-primary/20 mb-6">
                 <p className="text-primary font-medium italic">
                   💬 Résultat : un chantier fluide, maîtrisé, et un projet qui traverse le temps sans mauvaise surprise 😉
+                </p>
+              </div>
+              <div className="bg-accent/50 rounded-xl p-6 border-l-4 border-primary">
+                <p className="text-foreground font-semibold mb-3 flex items-center gap-2">
+                  <HelpCircle className="w-5 h-5 text-primary" />
+                  Est-ce une obligation d'avoir un maître d'œuvre ?
+                </p>
+                <p className="text-muted-foreground mb-3">
+                  👉 <span className="font-medium">Non, ce n'est pas une obligation légale.</span>
+                </p>
+                <p className="text-muted-foreground">
+                  Mais c'est inclus dans notre prestation car nous ne sommes pas des exécutants : 
+                  <span className="text-primary font-medium"> nous sommes des experts en rénovation</span>. 
+                  Notre rôle est de concevoir, coordonner et garantir la réussite de votre projet de A à Z.
                 </p>
               </div>
             </div>
