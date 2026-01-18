@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, AlertTriangle, Droplets, Shield, Wrench, Sparkles, Eye, Users, Home, Phone, Paintbrush, Wind, HardHat, Building, Hammer, Ruler, HelpCircle } from "lucide-react";
+import { ArrowRight, CheckCircle, AlertTriangle, Droplets, Shield, Wrench, Sparkles, Eye, Users, Home, Phone, Paintbrush, Wind, HardHat, Building, Hammer, Ruler, HelpCircle, Play } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 // Images
@@ -133,6 +133,45 @@ const Guide = () => {
             <p className="text-lg text-muted-foreground italic border-l-4 border-primary pl-6 text-left">
               Ce guide reprend notre méthode, issue du terrain, pour concevoir et rénover une salle de bain qui fonctionne aujourd'hui… et encore dans 10 ans.
             </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section Vidéos Conseils */}
+      <section className="py-12 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="bg-background rounded-2xl p-8 shadow-lg border border-primary/20">
+              <div className="flex flex-col md:flex-row items-center gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
+                    <Play className="w-8 h-8 text-primary-foreground" />
+                  </div>
+                </div>
+                <div className="flex-grow text-center md:text-left">
+                  <h2 className="text-2xl md:text-3xl font-serif text-foreground mb-2">
+                    📹 Vidéos Conseils
+                  </h2>
+                  <p className="text-muted-foreground mb-4">
+                    Découvrez nos vidéos explicatives sur Instagram : douche italienne, vasques, carrelage, robinetterie… 
+                    Des conseils pratiques pour faire les bons choix avant vos travaux.
+                  </p>
+                </div>
+                <div className="flex-shrink-0">
+                  <Link to="/videos-conseils">
+                    <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-6">
+                      Voir toutes les vidéos
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
