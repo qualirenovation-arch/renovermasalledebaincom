@@ -10,10 +10,6 @@ import stMande1 from "@/assets/st-mande-1.jpg";
 import stMande2 from "@/assets/st-mande-2.jpg";
 import stMande3 from "@/assets/st-mande-3.jpg";
 
-// Bd Pereire Paris 17ème
-import gallery11 from "@/assets/gallery-11.jpg";
-import gallery12 from "@/assets/gallery-12.jpg";
-import gallery13 from "@/assets/gallery-13.jpg";
 
 // Elle Magazine
 import presseElleWc from "@/assets/presse-elle-wc-suspendus.jpg";
@@ -83,19 +79,6 @@ const presseAlbums: Album[] = [
       { id: 1, image: stMande1, title: "Projet vedette", description: "Rénovation Saint-Mandé" },
       { id: 2, image: stMande2, title: "Détails", description: "Finitions soignées" },
       { id: 3, image: stMande3, title: "Vue complète", description: "Transformation réussie" },
-    ],
-  },
-  {
-    id: "presse-pereire",
-    title: "Dégâts des eaux — On vous explique tout !",
-    location: "Paris 17ème - Bd Pereire",
-    description: "Vidéo explicative sur les dégâts des eaux et malfaçons. Comment reconnaître les signes, que faire, et comment Carina intervient pour reprendre les chantiers bâclés.",
-    coverImage: gallery11,
-    instagramLink: "https://www.instagram.com/reel/DDFsmeBNeur/",
-    photos: [
-      { id: 1, image: gallery11, title: "Réparation malfaçons", description: "Avant l'intervention de Carina" },
-      { id: 2, image: gallery12, title: "Travaux de reprise", description: "Étanchéité refaite" },
-      { id: 3, image: gallery13, title: "Résultat final", description: "SDB fonctionnelle" },
     ],
   },
 ];
