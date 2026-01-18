@@ -15,6 +15,9 @@ import gallery11 from "@/assets/gallery-11.jpg";
 import gallery12 from "@/assets/gallery-12.jpg";
 import gallery13 from "@/assets/gallery-13.jpg";
 
+// Elle Magazine
+import presseElleWc from "@/assets/presse-elle-wc-suspendus.jpg";
+
 interface Photo {
   id: number;
   image: string;
@@ -30,9 +33,25 @@ interface Album {
   coverImage: string;
   photos: Photo[];
   instagramLink?: string;
+  externalLink?: string;
+  source?: string;
+  publishDate?: string;
 }
 
 const presseAlbums: Album[] = [
+  {
+    id: "presse-elle-wc",
+    title: "Toilettes suspendues : transformer ses WC en espace déco",
+    location: "Elle Déco",
+    description: "Notre projet de WC avec carrelage graphique noir et blanc et zellige anthracite mis en avant dans le magazine Elle. Un exemple parfait de comment transformer un petit espace en lieu design.",
+    coverImage: presseElleWc,
+    externalLink: "https://www.elle.fr/Deco/Pratique/Amenagement/Toilettes-suspendues-comment-transformer-ses-WC-en-espace-deco",
+    source: "Elle Magazine",
+    publishDate: "Janvier 2025",
+    photos: [
+      { id: 1, image: presseElleWc, title: "WC suspendus design", description: "Zellige anthracite et carreaux de ciment graphiques" },
+    ],
+  },
   {
     id: "presse-st-mande",
     title: "Saint-Mandé — Couverture Instagram",
@@ -133,10 +152,15 @@ export default function Presse() {
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                         />
                         <div className="absolute top-4 left-4 px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">
-                          📰 Presse
+                          {album.source || "📰 Presse"}
                         </div>
+                        {album.publishDate && (
+                          <div className="absolute top-4 right-4 px-3 py-1 bg-white/90 text-foreground text-xs font-medium rounded-full">
+                            {album.publishDate}
+                          </div>
+                        )}
                         <div className="absolute bottom-4 right-4 px-3 py-1 bg-black/60 text-white text-xs font-medium rounded-full">
-                          {album.photos.length} photos
+                          {album.photos.length} photo{album.photos.length > 1 ? "s" : ""}
                         </div>
                       </div>
                       <div className="p-6">
@@ -157,6 +181,18 @@ export default function Presse() {
                           >
                             <ExternalLink className="w-3 h-3" />
                             Voir sur Instagram
+                          </a>
+                        )}
+                        {album.externalLink && (
+                          <a 
+                            href={album.externalLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="inline-flex items-center gap-1 mt-3 text-sm text-primary hover:underline"
+                          >
+                            <ExternalLink className="w-3 h-3" />
+                            Lire l'article
                           </a>
                         )}
                       </div>
