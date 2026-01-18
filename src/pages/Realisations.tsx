@@ -775,7 +775,7 @@ const albums: Album[] = [
     description: "AVANT : Salle de bain très vétuste avec douche dégradée, WC sur pied et peinture écaillée. APRÈS : Salle de bain ludique pour enfants avec carrelage terrazzo hexagonal (sol et murs), baignoire avec pare-bain vitré à profilés dorés, double vasque avec meuble blanc et rangements corail, robinetterie dorée et niche encastrée dorée. Le mur de façade a été doublé pour aligner la cloison, permettre la pose du meuble et miroir, et améliorer le DPE. Placard corail intégré pour le rangement. Ce projet a été repéré par Marie Claire Maison.",
     coverImage: soisyEnfants5,
     instagramLinks: [
-      "https://www.instagram.com/reel/C84yeXvNnG6/"
+      "https://www.instagram.com/reel/DTqBs2bDKsN/"
     ],
     photos: [
       { id: 1, image: soisyEnfants5, title: "Après — Vue d'ensemble", description: "Baignoire, double vasque et rangements corail" },
