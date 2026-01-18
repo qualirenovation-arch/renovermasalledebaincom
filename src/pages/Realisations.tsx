@@ -259,17 +259,25 @@ import auteuil6 from "@/assets/auteuil-6.jpg";
 import auteuil7 from "@/assets/auteuil-7.jpg";
 import auteuilAvant1 from "@/assets/auteuil-avant-1.jpg";
 
-// Courbevoie 92
-import courbevoieAvant1 from "@/assets/courbevoie-avant-1.jpg";
-import courbevoieAvant2 from "@/assets/courbevoie-avant-2.jpg";
-import courbevoieAvant3 from "@/assets/courbevoie-avant-3.jpg";
-import courbevoie7 from "@/assets/courbevoie-7.jpg";
-import courbevoie8 from "@/assets/courbevoie-8.jpg";
-import courbevoie9 from "@/assets/courbevoie-9.jpg";
-import courbevoie10 from "@/assets/courbevoie-10.jpg";
-import courbevoie11 from "@/assets/courbevoie-11.jpg";
-import courbevoieTravaux1 from "@/assets/courbevoie-travaux-1.jpg";
-import courbevoieTravaux2 from "@/assets/courbevoie-travaux-2.jpg";
+// Courbevoie 92 - Saint-Guillaume (dégât des eaux)
+import courbevoieStGuillaumeAvant1 from "@/assets/courbevoie-avant-1.jpg";
+import courbevoieStGuillaumeAvant2 from "@/assets/courbevoie-avant-2.jpg";
+import courbevoieStGuillaumeAvant3 from "@/assets/courbevoie-avant-3.jpg";
+import courbevoieStGuillaume7 from "@/assets/courbevoie-7.jpg";
+import courbevoieStGuillaume8 from "@/assets/courbevoie-8.jpg";
+import courbevoieStGuillaume9 from "@/assets/courbevoie-9.jpg";
+import courbevoieStGuillaume10 from "@/assets/courbevoie-10.jpg";
+import courbevoieStGuillaume11 from "@/assets/courbevoie-11.jpg";
+import courbevoieStGuillaumeTravaux1 from "@/assets/courbevoie-travaux-1.jpg";
+import courbevoieStGuillaumeTravaux2 from "@/assets/courbevoie-travaux-2.jpg";
+
+// Courbevoie 92 - Lalyre
+import courbevoieLalyre1 from "@/assets/courbevoie-1.jpg";
+import courbevoieLalyre2 from "@/assets/courbevoie-2.jpg";
+import courbevoieLalyre3 from "@/assets/courbevoie-3.jpg";
+import courbevoieLalyre4 from "@/assets/courbevoie-4.jpg";
+import courbevoieLalyre5 from "@/assets/courbevoie-5.jpg";
+import courbevoieLalyre6 from "@/assets/courbevoie-6.jpg";
 
 // Vitry-sur-Seine 94
 import vitryAvant1 from "@/assets/vitry-avant-1.jpg";
@@ -967,29 +975,44 @@ const albums: Album[] = [
     ],
   },
   {
-    id: "courbevoie-renovation",
+    id: "courbevoie-st-guillaume",
     title: "Suite dégât des eaux — Carrelage mal posé",
     location: "Courbevoie (92) - 17 Rue Saint-Guillaume",
     description: "AVANT : Carrelage mal posé et absence totale d'étanchéité — la catastrophe ! Une salle de bain qui a causé des dégâts chez les voisins. APRÈS : Reprise complète dans les règles de l'art. Carrelage terrazzo grand format sol et mur, meuble vasque teck massif, robinetterie chromée, paroi fixe et receveur blanc extra-plat. Miroir LED tactile avec affichage digital. Sèche-serviettes blanc et niches de rangement intégrées pour un espace optimisé et enfin étanche.",
-    coverImage: courbevoie11,
+    coverImage: courbevoieStGuillaume11,
     photos: [
       { id: 1, image: "/videos/courbevoie-1.mp4", title: "Après — Visite vidéo", description: "Tour de la salle de bain rénovée", isVideo: true },
-      { id: 2, image: courbevoie11, title: "Après — Vue générale", description: "Terrazzo, meuble teck et paroi vitrée" },
-      { id: 3, image: courbevoie10, title: "Après — Détail terrazzo", description: "Carrelage terrazzo et robinetterie chromée" },
-      { id: 4, image: courbevoie7, title: "Après — Aménagement", description: "Terrazzo, meuble teck et receveur blanc" },
-      { id: 5, image: courbevoie8, title: "Après — Douche et vasque", description: "Détail de l'aménagement et robinetterie chromée" },
-      { id: 6, image: courbevoie9, title: "Après — Miroir LED", description: "Miroir tactile avec affichage digital" },
-      { id: 7, image: courbevoieTravaux1, title: "Travaux — Niches en cours", description: "Création des niches de rangement" },
-      { id: 8, image: courbevoieTravaux2, title: "Travaux — Pose carrelage", description: "Pose du terrazzo et receveur" },
-      { id: 9, image: courbevoieAvant3, title: "Avant — Salle de bain sombre", description: "Carrelage foncé et meuble teck d'origine" },
-      { id: 10, image: courbevoieAvant1, title: "Avant — Vue vasque", description: "Meuble vasque et carrelage défaillant" },
-      { id: 11, image: courbevoieAvant2, title: "Avant — Vue d'ensemble", description: "Carrelage moucheté et absence d'étanchéité" },
+      { id: 2, image: courbevoieStGuillaume11, title: "Après — Vue générale", description: "Terrazzo, meuble teck et paroi vitrée" },
+      { id: 3, image: courbevoieStGuillaume10, title: "Après — Détail terrazzo", description: "Carrelage terrazzo et robinetterie chromée" },
+      { id: 4, image: courbevoieStGuillaume7, title: "Après — Aménagement", description: "Terrazzo, meuble teck et receveur blanc" },
+      { id: 5, image: courbevoieStGuillaume8, title: "Après — Douche et vasque", description: "Détail de l'aménagement et robinetterie chromée" },
+      { id: 6, image: courbevoieStGuillaume9, title: "Après — Miroir LED", description: "Miroir tactile avec affichage digital" },
+      { id: 7, image: courbevoieStGuillaumeTravaux1, title: "Travaux — Niches en cours", description: "Création des niches de rangement" },
+      { id: 8, image: courbevoieStGuillaumeTravaux2, title: "Travaux — Pose carrelage", description: "Pose du terrazzo et receveur" },
+      { id: 9, image: courbevoieStGuillaumeAvant3, title: "Avant — Salle de bain sombre", description: "Carrelage foncé et meuble teck d'origine" },
+      { id: 10, image: courbevoieStGuillaumeAvant1, title: "Avant — Vue vasque", description: "Meuble vasque et carrelage défaillant" },
+      { id: 11, image: courbevoieStGuillaumeAvant2, title: "Avant — Vue d'ensemble", description: "Carrelage moucheté et absence d'étanchéité" },
     ],
     review: {
       text: "J'ai fait appel à Qualirenovation pour 2 projets de rénovation et les résultats sont excellents à tous points de vue (tant sur le rendu que sur le déroulement) : Carina partage de très bonnes idées, s'adapte aux besoins de ses clients, est ultra-disponible pour le suivi et pour trouver des solutions ! Je suis ravie et j'ai hâte de faire à nouveau appel à elle pour un futur projet « Saretta »!!",
       author: "Sarah C.",
       link: "https://www.houzz.fr/viewReview/1886768/qualirenovation-by-qualiconcept-review"
     },
+  },
+  {
+    id: "courbevoie-lalyre",
+    title: "Rénovation complète — Style contemporain",
+    location: "Courbevoie (92) - Rue Ernest Lalyre",
+    description: "Rénovation d'une salle de bain dans un esprit contemporain. Carrelage grand format, douche à l'italienne avec paroi vitrée fixe, meuble vasque suspendu et finitions soignées.",
+    coverImage: courbevoieLalyre1,
+    photos: [
+      { id: 1, image: courbevoieLalyre1, title: "Après — Vue d'ensemble", description: "Aménagement contemporain" },
+      { id: 2, image: courbevoieLalyre2, title: "Après — Douche", description: "Douche à l'italienne" },
+      { id: 3, image: courbevoieLalyre3, title: "Après — Détails", description: "Finitions et robinetterie" },
+      { id: 4, image: courbevoieLalyre4, title: "Après — Vasque", description: "Meuble vasque suspendu" },
+      { id: 5, image: courbevoieLalyre5, title: "Après — Vue angle", description: "Optimisation de l'espace" },
+      { id: 6, image: courbevoieLalyre6, title: "Après — Rangements", description: "Solutions de rangement" },
+    ],
   },
 ];
 
