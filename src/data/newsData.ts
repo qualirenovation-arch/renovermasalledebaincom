@@ -48,10 +48,10 @@ export const guideConseils = [
     link: "/guide-travaux#etancheite",
   },
   {
-    id: "guide-douche-italienne",
-    title: "Douche à l'italienne : faisabilité",
-    description: "Possible même dans un appartement ancien",
-    section: "Douche italienne",
+    id: "guide-douche-baignoire",
+    title: "Douche ou baignoire : laquelle choisir ?",
+    description: "La vraie question : comment vivez-vous votre salle de bain ?",
+    section: "Conseils",
     link: "/guide-travaux#douche-italienne",
   },
   {
