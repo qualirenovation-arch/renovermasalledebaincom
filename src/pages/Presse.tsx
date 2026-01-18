@@ -74,10 +74,11 @@ const presseAlbums: Album[] = [
     id: "presse-st-mande",
     title: "Conseils d'artisans : comment faire des économies de gaz",
     location: "Saint-Mandé (94)",
-    description: "Notre expertise mise en avant dans un article Houzz sur les économies d'énergie. Des conseils pratiques d'artisans pour réduire sa consommation de gaz.",
+    description: "Notre expertise mise en avant dans un article Houzz sur les économies d'énergie. Article rédigé par Agnès Carpentier, journaliste contributrice Houzz.",
     coverImage: stMande1,
     externalLink: "https://www.houzz.fr/magazine/conseils-d-artisans-comment-faire-des-economies-de-gaz-stsetivw-vs~164524740",
     source: "Houzz",
+    publishDate: "Janvier 2025",
     instagramLink: "https://www.instagram.com/p/DE-fqg4sxql/",
     photos: [
       { id: 1, image: stMande1, title: "Projet vedette", description: "Rénovation Saint-Mandé" },
