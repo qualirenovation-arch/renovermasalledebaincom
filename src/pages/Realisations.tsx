@@ -999,21 +999,6 @@ const albums: Album[] = [
       link: "https://www.houzz.fr/viewReview/1886768/qualirenovation-by-qualiconcept-review"
     },
   },
-  {
-    id: "courbevoie-lalyre",
-    title: "Rénovation complète — Style contemporain",
-    location: "Courbevoie (92) - Rue Ernest Lalyre",
-    description: "Rénovation d'une salle de bain dans un esprit contemporain. Carrelage grand format, douche à l'italienne avec paroi vitrée fixe, meuble vasque suspendu et finitions soignées.",
-    coverImage: courbevoieLalyre1,
-    photos: [
-      { id: 1, image: courbevoieLalyre1, title: "Après — Vue d'ensemble", description: "Aménagement contemporain" },
-      { id: 2, image: courbevoieLalyre2, title: "Après — Douche", description: "Douche à l'italienne" },
-      { id: 3, image: courbevoieLalyre3, title: "Après — Détails", description: "Finitions et robinetterie" },
-      { id: 4, image: courbevoieLalyre4, title: "Après — Vasque", description: "Meuble vasque suspendu" },
-      { id: 5, image: courbevoieLalyre5, title: "Après — Vue angle", description: "Optimisation de l'espace" },
-      { id: 6, image: courbevoieLalyre6, title: "Après — Rangements", description: "Solutions de rangement" },
-    ],
-  },
 ];
 
 interface ProjectLocation {
@@ -1103,6 +1088,22 @@ const inProgressAlbums: Album[] = [
       { id: 10, image: vitryAvant10, title: "Avant — Plomberie", description: "Canalisations et évacuations" },
     ],
   },
+  {
+    id: "courbevoie-lalyre",
+    title: "Rénovation en cours — Style contemporain",
+    location: "Courbevoie (92) - Rue Ernest Lalyre",
+    description: "Rénovation d'une salle de bain dans un esprit contemporain. Carrelage grand format, douche à l'italienne avec paroi vitrée fixe, meuble vasque suspendu et finitions soignées. Chantier en cours — restez connecté pour découvrir cette transformation !",
+    coverImage: courbevoieLalyre1,
+    isInProgress: true,
+    photos: [
+      { id: 1, image: courbevoieLalyre1, title: "Travaux — Vue d'ensemble", description: "Aménagement en cours" },
+      { id: 2, image: courbevoieLalyre2, title: "Travaux — Douche", description: "Douche à l'italienne en cours" },
+      { id: 3, image: courbevoieLalyre3, title: "Travaux — Détails", description: "Finitions en cours" },
+      { id: 4, image: courbevoieLalyre4, title: "Travaux — Vasque", description: "Installation du meuble vasque" },
+      { id: 5, image: courbevoieLalyre5, title: "Travaux — Vue angle", description: "Optimisation de l'espace" },
+      { id: 6, image: courbevoieLalyre6, title: "Travaux — Rangements", description: "Création des rangements" },
+    ],
+  },
 ];
 
 // Positions des chantiers sur la carte de Paris
@@ -1111,6 +1112,7 @@ const projectLocations: ProjectLocation[] = [
   { id: "rocroy", name: "Rue de Rocroy", area: "10ème", x: 55, y: 32 },
   { id: "port-royal", name: "Port-Royal", area: "5ème", x: 48, y: 60 },
   { id: "la-tour", name: "Rue de la Tour", area: "16ème", x: 25, y: 45 },
+  { id: "courbevoie-lalyre", name: "Rue Ernest Lalyre", area: "Courbevoie", x: 15, y: 20 },
 ];
 
 export default function Realisations() {
