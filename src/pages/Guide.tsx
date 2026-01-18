@@ -351,7 +351,7 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* Section 5 - Plomberie */}
+      {/* Section 5 - Maître d'œuvre intégré : chacun son métier */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
@@ -363,6 +363,67 @@ const Guide = () => {
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
                 5
+              </div>
+              <h2 className="text-2xl md:text-3xl font-serif text-foreground">
+                Maître d'œuvre intégré : chacun son métier
+              </h2>
+            </div>
+            <div className="bg-accent/30 rounded-2xl p-8">
+              <Ruler className="w-10 h-10 text-primary mb-4" />
+              <p className="text-lg text-muted-foreground mb-6">
+                👉 Avec un maître d'œuvre intégré, tout est pensé avec vous et pour vous.
+                Nous validons et sélectionnons ensemble chaque achat, nous gérons les commandes et les livraisons, et nous maîtrisons chaque choix du début à la fin.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4 mb-6">
+                <div className="flex items-center gap-3 bg-background rounded-xl p-4">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  <span>Produits adaptés au projet</span>
+                </div>
+                <div className="flex items-center gap-3 bg-background rounded-xl p-4">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  <span>Compatibilité technique vérifiée</span>
+                </div>
+                <div className="flex items-center gap-3 bg-background rounded-xl p-4">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  <span>Délais et livraisons coordonnés</span>
+                </div>
+                <div className="flex items-center gap-3 bg-background rounded-xl p-4">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  <span>Aucune décision laissée au hasard</span>
+                </div>
+              </div>
+              <div className="bg-primary/10 border border-primary/20 rounded-xl p-6 mb-6">
+                <p className="text-foreground font-semibold mb-2">🧠 Chacun son métier.</p>
+                <p className="text-muted-foreground">
+                  Même si vous êtes un excellent bricoleur, notre rôle n'est pas l'improvisation.
+                  Le maître d'œuvre ne fait pas "à peu près" :
+                </p>
+                <p className="text-primary font-medium mt-2">
+                  👉 C'est l'art de bien faire, dans les règles, avec méthode, anticipation… et sérénité.
+                </p>
+              </div>
+              <div className="bg-background rounded-xl p-4 border border-primary/20">
+                <p className="text-primary font-medium italic">
+                  💬 Résultat : un chantier fluide, maîtrisé, et un projet qui traverse le temps sans mauvaise surprise 😉
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section 6 - Plomberie */}
+      <section className="py-16 bg-accent/20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
+                6
               </div>
               <h2 className="text-2xl md:text-3xl font-serif text-foreground">
                 Plomberie : refaire entièrement pour éviter les fuites
@@ -403,8 +464,8 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* Section 6 - Étanchéité */}
-      <section className="py-16 bg-accent/20">
+      {/* Section 7 - Étanchéité */}
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -414,7 +475,7 @@ const Guide = () => {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
-                6
+                7
               </div>
               <h2 className="text-2xl md:text-3xl font-serif text-foreground">
                 Étanchéité salle de bain : la base invisible
@@ -461,8 +522,8 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* Section 7 - Receveur & baignoire */}
-      <section className="py-16 bg-background">
+      {/* Section 8 - Receveur & baignoire */}
+      <section className="py-16 bg-accent/20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -472,7 +533,7 @@ const Guide = () => {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
-                7
+                8
               </div>
               <h2 className="text-2xl md:text-3xl font-serif text-foreground">
                 Receveur et baignoire : pose, accès et maintenance
@@ -529,8 +590,8 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* Section 8 - Joints & finitions */}
-      <section className="py-16 bg-accent/20">
+      {/* Section 9 - Joints & finitions */}
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -540,7 +601,7 @@ const Guide = () => {
           >
             <div className="flex items-center gap-4 mb-8">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
-                8
+                9
               </div>
               <h2 className="text-2xl md:text-3xl font-serif text-foreground">
                 Joints, profils et finitions : le diable se cache dans le détail
@@ -654,8 +715,8 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* Section 9 - Robinetterie encastrée */}
-      <section className="py-16 bg-background">
+      {/* Section 10 - Robinetterie encastrée */}
+      <section className="py-16 bg-accent/20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -665,7 +726,7 @@ const Guide = () => {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
-                9
+                10
               </div>
               <h2 className="text-2xl md:text-3xl font-serif text-foreground">
                 Robinetterie encastrée : anticiper dès la conception
@@ -700,8 +761,8 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* Section 10 - Baignoire & receveur matériaux */}
-      <section className="py-16 bg-accent/20">
+      {/* Section 11 - Baignoire & receveur matériaux */}
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -711,7 +772,7 @@ const Guide = () => {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
-                10
+                11
               </div>
               <h2 className="text-2xl md:text-3xl font-serif text-foreground">
                 Choisir sa baignoire et son receveur
@@ -761,8 +822,8 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* Section 11 - Peinture */}
-      <section className="py-16 bg-background">
+      {/* Section 12 - Peinture */}
+      <section className="py-16 bg-accent/20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -772,7 +833,7 @@ const Guide = () => {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
-                11
+                12
               </div>
               <h2 className="text-2xl md:text-3xl font-serif text-foreground">
                 Peinture salle de bain : un produit adapté à l'humidité
@@ -807,8 +868,8 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* Section 12 - VMC */}
-      <section className="py-16 bg-accent/20">
+      {/* Section 13 - VMC */}
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -818,7 +879,7 @@ const Guide = () => {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
-                12
+                13
               </div>
               <h2 className="text-2xl md:text-3xl font-serif text-foreground">
                 VMC et ventilation : protéger la salle de bain dans le temps
