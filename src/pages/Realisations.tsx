@@ -977,7 +977,7 @@ const albums: Album[] = [
   {
     id: "courbevoie-st-guillaume",
     title: "Suite dégât des eaux — Carrelage mal posé",
-    location: "Courbevoie (92) - 17 Rue Saint-Guillaume",
+    location: "Courbevoie (92)",
     description: "AVANT : Carrelage mal posé et absence totale d'étanchéité — la catastrophe ! Une salle de bain qui a causé des dégâts chez les voisins. APRÈS : Reprise complète dans les règles de l'art. Carrelage terrazzo grand format sol et mur, meuble vasque teck massif, robinetterie chromée, paroi fixe et receveur blanc extra-plat. Miroir LED tactile avec affichage digital. Sèche-serviettes blanc et niches de rangement intégrées pour un espace optimisé et enfin étanche.",
     coverImage: courbevoieStGuillaume11,
     photos: [
