@@ -467,7 +467,7 @@ const albums: Album[] = [
     id: "charenton",
     title: "Salle de bain — Marbre et Laiton",
     location: "Charenton-le-Pont (94)",
-    description: "AVANT : Baignoire datée et espace peu fonctionnel. APRÈS : Transformation en salle de bain au style Black & White raffiné. Carrelage effet marbre grand format, robinetterie laiton brossé encastrée. Remplacement de la baignoire par un receveur de douche avec paroi profilé doré. Meuble vasque blanc avec façade 3D et miroir encadré laiton.",
+    description: "AVANT : Baignoire datée et espace peu fonctionnel. APRÈS : Transformation en salle de bain au style Black & White raffiné. Carrelage effet marbre et mosaïque hexagonale (Leroy Merlin), meuble vasque blanc façade 3D (Ikea), miroirs encadrés laiton (Maisons du Monde), robinetterie laiton brossé encastrée (MaSalleDeBain.com). Remplacement de la baignoire par un receveur de douche avec paroi profilé doré.",
     coverImage: charenton4,
     photos: [
       // APRÈS — SALLE DE BAIN
@@ -493,7 +493,7 @@ const albums: Album[] = [
     id: "charenton-wc",
     title: "WC Mosaïque hexagonale & Laiton",
     location: "Charenton-le-Pont (94)",
-    description: "AVANT : WC séparé avec réservoir apparent et équipements datés. APRÈS : WC suspendu moderne avec mur en mosaïque hexagonale effet marbre (Leroy Merlin), plaque Geberit, placard suspendu sur-mesure et carrelage grand format effet marbre au sol. Robinetterie et accessoires MaSalleDeBain.com.",
+    description: "AVANT : WC séparé avec réservoir apparent et équipements datés. APRÈS : WC suspendu moderne avec mur en mosaïque hexagonale effet marbre et carrelage grand format au sol (Leroy Merlin), plaque Geberit, placard suspendu sur-mesure. Robinetterie et accessoires MaSalleDeBain.com.",
     coverImage: charenton19,
     photos: [
       { id: 1, image: charenton19, title: "Après — WC vue complète", description: "Placard suspendu, étagères et mosaïque hexagonale" },
