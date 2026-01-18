@@ -428,7 +428,7 @@ const albums: Album[] = [
     id: "vincennes-mr",
     title: "Salle de bain Monsieur",
     location: "Paris 12ème - Cours de Vincennes",
-    description: "AVANT : Salle de bain standard sans caractère. APRÈS : Salle de bain masculine haut de gamme. Plan Corian blanc, meuble sur-mesure Noyer de Bourgogne, miroir AICA. Paroi verrière Asealia Twenty Noir, robinetterie MaSalleDeBain.com. Buanderie et table à repasser dissimulées dans une colonne sur-mesure.",
+    description: "AVANT : Une buanderie sans rangement dédié à la toilette — un simple receveur posé, des éclaboussures permanentes, aucune ergonomie, aucun design. APRÈS : Salle de bain masculine haut de gamme. Plan Corian blanc, meuble sur-mesure Noyer de Bourgogne, miroir AICA. Paroi verrière Asealia Twenty Noir, robinetterie MaSalleDeBain.com. Buanderie et table à repasser dissimulées dans une colonne sur-mesure.",
     coverImage: vincennesMr1,
     review: {
       text: "Dès notre premier rendez-vous, Carina a su écouter nos besoins et adapter les aménagements. Elle a joué un rôle clé en gérant toutes les commandes et en coordonnant les équipes. Les délais ont été rigoureusement respectés. Son expertise et son professionnalisme ont été exemplaires tout au long du projet.",
