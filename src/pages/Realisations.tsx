@@ -147,7 +147,7 @@ import soisy1 from "@/assets/soisy-1.jpg";
 import soisy2 from "@/assets/soisy-2.jpg";
 import soisy3 from "@/assets/soisy-3.jpg";
 import soisyAvant from "@/assets/soisy-avant.jpg";
-// Soisy-sous-Montmorency SDB Parentale
+// Soisy-sous-Montmorency SDB Parentale 1er étage
 import soisySdb1 from "@/assets/soisy-sdb-1.jpg";
 import soisySdb2 from "@/assets/soisy-sdb-2.jpg";
 import soisySdb3 from "@/assets/soisy-sdb-3.jpg";
@@ -156,6 +156,14 @@ import soisySdb5 from "@/assets/soisy-sdb-5.jpg";
 import soisySdbAvant from "@/assets/soisy-sdb-avant.jpg";
 import soisySdbAvant2 from "@/assets/soisy-sdb-avant-2.jpg";
 import soisySdbAvant3 from "@/assets/soisy-sdb-avant-3.jpg";
+// Soisy-sous-Montmorency SDB Enfants 2ème étage
+import soisyEnfants1 from "@/assets/soisy-enfants-1.jpg";
+import soisyEnfants2 from "@/assets/soisy-enfants-2.jpg";
+import soisyEnfants3 from "@/assets/soisy-enfants-3.jpg";
+import soisyEnfants4 from "@/assets/soisy-enfants-4.jpg";
+import soisyEnfants5 from "@/assets/soisy-enfants-5.jpg";
+import soisyEnfantsAvant1 from "@/assets/soisy-enfants-avant-1.jpg";
+import soisyEnfantsAvant2 from "@/assets/soisy-enfants-avant-2.jpg";
 
 // Boulevard Saint-Germain
 import stgermain1 from "@/assets/stgermain-1.jpg";
@@ -721,7 +729,7 @@ const albums: Album[] = [
     id: "soisy-sdb",
     title: "Salle de bain 1er étage",
     location: "Soisy-sous-Montmorency (95)",
-    description: "AVANT : Salle de bain vétuste avec baignoire, bidet et WC sur podium, carrelage beige daté et peinture abîmée. APRÈS : Transformation en salle de bain moderne avec zellige bleu posé en chevron, meuble vasque sur mesure avec plan chêne, robinetterie noire encastrée, miroir rond LED, sèche-serviettes design noir et WC suspendu.",
+    description: "AVANT : Salle de bain vétuste avec baignoire, bidet et WC sur podium, carrelage beige daté et peinture abîmée. APRÈS : Transformation en salle de bain moderne avec zellige bleu posé en chevron, meuble vasque sur mesure avec plan chêne, robinetterie noire encastrée, miroir rond LED, sèche-serviettes design noir et WC suspendu. Ce projet a été repéré par Marie Claire Maison.",
     coverImage: soisySdb1,
     instagramLinks: [
       "https://www.instagram.com/reel/C84yeXvNnG6/"
@@ -740,6 +748,25 @@ const albums: Album[] = [
       { id: 6, image: soisySdbAvant, title: "Avant — État initial", description: "Baignoire, bidet et WC sur podium" },
       { id: 7, image: soisySdbAvant2, title: "Avant — Vue baignoire", description: "Carrelage beige daté" },
       { id: 8, image: soisySdbAvant3, title: "Avant — Vue bidet", description: "Équipements vétustes" },
+    ],
+  },
+  {
+    id: "soisy-enfants",
+    title: "Salle de bain 2ème étage — Enfants",
+    location: "Soisy-sous-Montmorency (95)",
+    description: "AVANT : Salle de bain très vétuste avec douche dégradée, WC sur pied et peinture écaillée. APRÈS : Salle de bain ludique pour enfants avec carrelage terrazzo hexagonal (sol et murs), baignoire avec pare-bain vitré à profilés dorés, double vasque avec meuble blanc et rangements corail, robinetterie dorée et niche encastrée dorée. Le mur de façade a été doublé pour aligner la cloison, permettre la pose du meuble et miroir, et améliorer le DPE. Placard corail intégré pour le rangement. Ce projet a été repéré par Marie Claire Maison.",
+    coverImage: soisyEnfants5,
+    instagramLinks: [
+      "https://www.instagram.com/reel/C84yeXvNnG6/"
+    ],
+    photos: [
+      { id: 1, image: soisyEnfants5, title: "Après — Vue d'ensemble", description: "Baignoire, double vasque et rangements corail" },
+      { id: 2, image: soisyEnfants2, title: "Après — Double vasque", description: "Meuble blanc, robinetterie dorée et terrazzo" },
+      { id: 3, image: soisyEnfants3, title: "Après — Baignoire", description: "Pare-bain doré et niche encastrée" },
+      { id: 4, image: soisyEnfants4, title: "Après — Vue latérale", description: "Sèche-serviettes et harmonie terrazzo" },
+      { id: 5, image: soisyEnfants1, title: "Après — WC suspendu", description: "Placard corail et rangement intégré" },
+      { id: 6, image: soisyEnfantsAvant1, title: "Avant — Douche", description: "Douche vétuste et peinture écaillée" },
+      { id: 7, image: soisyEnfantsAvant2, title: "Avant — WC", description: "WC sur pied et sol dégradé" },
     ],
   },
   {
