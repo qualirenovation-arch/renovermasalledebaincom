@@ -227,19 +227,19 @@ const DegatsEaux = () => {
               {/* Vignettes photos cliquables */}
               <div className="mt-4 pt-4 border-t border-blue-100">
                 <p className="text-xs text-muted-foreground mb-2">📷 Cliquez pour agrandir</p>
-                <div className="flex flex-wrap gap-1">
+                <div className="flex flex-wrap gap-2">
                   {juliaImages.map((img, index) => (
                     <button
                       key={index}
                       onClick={() => setSelectedImage(img)}
-                      className="relative w-8 h-8 rounded overflow-hidden border border-white shadow-sm hover:shadow-md hover:scale-110 transition-all cursor-pointer"
+                      className="relative w-16 h-16 rounded-lg overflow-hidden border-2 border-white shadow-sm hover:shadow-md hover:scale-105 transition-all cursor-pointer"
                     >
                       <img 
                         src={img.src} 
                         alt={img.alt}
                         className="w-full h-full object-cover"
                       />
-                      <span className={`absolute bottom-0 left-0 right-0 h-1 ${img.type === 'avant' ? 'bg-amber-500' : 'bg-green-500'}`} />
+                      <span className={`absolute bottom-0 left-0 right-0 h-1.5 ${img.type === 'avant' ? 'bg-amber-500' : 'bg-green-500'}`} />
                     </button>
                   ))}
                 </div>
