@@ -12,20 +12,20 @@ const fadeInUp = {
 // Vidéos conseils sur les dégâts des eaux
 const degatsEauxVideos = [
   {
+    id: "degats-eaux-2",
+    title: "Dégât des eaux : les bons réflexes",
+    description: "Découvrez nos conseils d'experts pour éviter les sinistres et protéger votre rénovation.",
+    tip: "👉 Les points essentiels à surveiller pour une installation pérenne.",
+    videoSrc: "/videos/degats-eaux-2.mp4",
+    views: "15.8k",
+  },
+  {
     id: "degats-eaux-1",
     title: "Prévenir les dégâts des eaux",
     description: "Un dégât des eaux peut ruiner une rénovation et entraîner des frais considérables. La clé : des raccords de qualité, une étanchéité parfaite et des contrôles réguliers.",
     tip: "👉 Dans cette vidéo, je vous montre les erreurs à éviter et les bonnes pratiques à adopter.",
     videoSrc: "/videos/degats-eaux-1.mp4",
     views: "3.7k",
-  },
-  {
-    id: "degats-eaux-2",
-    title: "Conseils dégâts des eaux",
-    description: "Découvrez nos conseils d'experts pour éviter les sinistres et protéger votre rénovation.",
-    tip: "👉 Les points essentiels à surveiller pour une installation pérenne.",
-    videoSrc: "/videos/degats-eaux-2.mp4",
-    views: "",
   },
 ];
 
