@@ -210,6 +210,9 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Section Témoignages - Slider compact */}
+      <TestimonialsSlider />
+
       {/* Section "Douche ou baignoire ?" */}
       <section className="section-padding bg-background">
         <div className="container-custom">
@@ -519,9 +522,6 @@ export default function Index() {
           </motion.div>
         </div>
       </section>
-
-      {/* Section Témoignages - Slider compact */}
-      <TestimonialsSlider />
 
       {/* CTA Final */}
       <section className="section-padding bg-foreground text-background">
