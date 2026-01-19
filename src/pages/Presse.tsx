@@ -270,13 +270,13 @@ export default function Presse() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-muted/30 overflow-hidden">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-8 md:mb-12"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
               Chronologie des parutions
@@ -286,11 +286,94 @@ export default function Presse() {
             </p>
           </motion.div>
 
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-primary via-primary/50 to-primary/20 hidden md:block" />
+          {/* Mobile Horizontal Timeline */}
+          <div className="md:hidden">
+            <div className="relative">
+              {/* Horizontal timeline line */}
+              <div className="absolute top-8 left-0 right-0 h-0.5 bg-gradient-to-r from-primary/20 via-primary to-primary/20" />
+              
+              {/* Scroll hint */}
+              <div className="flex items-center justify-center gap-2 mb-6 text-sm text-muted-foreground">
+                <motion.span
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ repeat: Infinity, duration: 1.5 }}
+                >
+                  ←
+                </motion.span>
+                <span>Glissez pour explorer</span>
+                <motion.span
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ repeat: Infinity, duration: 1.5 }}
+                >
+                  →
+                </motion.span>
+              </div>
 
-            <div className="space-y-8 md:space-y-0">
+              {/* Scrollable container */}
+              <div className="overflow-x-auto pb-6 -mx-4 px-4 scrollbar-hide">
+                <div className="flex gap-4" style={{ width: 'max-content' }}>
+                  {presseAlbums.map((album, index) => (
+                    <motion.div
+                      key={album.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.05 }}
+                      className="relative flex flex-col items-center"
+                      style={{ width: '280px' }}
+                    >
+                      {/* Timeline Node */}
+                      <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg border-4 border-background z-10 mb-4">
+                        <span className="text-xs font-bold">
+                          {album.publishDate?.split(' ').slice(-1)[0] || ''}
+                        </span>
+                      </div>
+
+                      {/* Content Card */}
+                      <div 
+                        className="bg-background rounded-xl p-5 shadow-lg border border-border/50 hover:border-primary/30 transition-all cursor-pointer group w-full"
+                        onClick={() => setSelectedAlbum(album)}
+                      >
+                        <div className="flex items-center justify-between gap-2 mb-3">
+                          <span className="px-2 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full truncate">
+                            {album.source}
+                          </span>
+                          <span className="text-xs text-muted-foreground whitespace-nowrap">
+                            {album.publishDate}
+                          </span>
+                        </div>
+                        <h3 className="font-display text-base font-semibold mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                          {album.title}
+                        </h3>
+                        {album.journalist && (
+                          <p className="text-xs text-muted-foreground italic mb-2">
+                            Par {album.journalist}
+                          </p>
+                        )}
+                        <a 
+                          href={album.externalLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="inline-flex items-center gap-1 text-xs text-primary hover:underline"
+                        >
+                          <ExternalLink className="w-3 h-3" />
+                          Lire l'article
+                        </a>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Vertical Timeline */}
+          <div className="hidden md:block relative">
+            {/* Timeline line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-primary via-primary/50 to-primary/20" />
+
+            <div className="space-y-0">
               {presseAlbums.map((album, index) => {
                 const isLeft = index % 2 === 0;
                 return (
@@ -300,15 +383,15 @@ export default function Presse() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ delay: index * 0.1 }}
-                    className={`relative flex items-center md:justify-center ${isLeft ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                    className={`relative flex items-center justify-center ${isLeft ? 'flex-row' : 'flex-row-reverse'}`}
                   >
                     {/* Content Card */}
-                    <div className={`w-full md:w-5/12 ${isLeft ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'}`}>
+                    <div className={`w-5/12 ${isLeft ? 'pr-12 text-right' : 'pl-12 text-left'}`}>
                       <div 
                         className="bg-background rounded-xl p-6 shadow-lg border border-border/50 hover:border-primary/30 transition-all cursor-pointer group"
                         onClick={() => setSelectedAlbum(album)}
                       >
-                        <div className={`flex items-center gap-3 mb-3 ${isLeft ? 'md:justify-end' : 'md:justify-start'}`}>
+                        <div className={`flex items-center gap-3 mb-3 ${isLeft ? 'justify-end' : 'justify-start'}`}>
                           <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full">
                             {album.source}
                           </span>
@@ -326,7 +409,7 @@ export default function Presse() {
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={(e) => e.stopPropagation()}
-                          className={`inline-flex items-center gap-1 mt-3 text-sm text-primary hover:underline ${isLeft ? 'md:flex-row-reverse' : ''}`}
+                          className={`inline-flex items-center gap-1 mt-3 text-sm text-primary hover:underline ${isLeft ? 'flex-row-reverse' : ''}`}
                         >
                           <ExternalLink className="w-3 h-3" />
                           Lire l'article
@@ -335,7 +418,7 @@ export default function Presse() {
                     </div>
 
                     {/* Timeline Node */}
-                    <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center justify-center">
+                    <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
                       <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg border-4 border-background z-10">
                         <div className="text-center">
                           <div className="text-xs font-bold leading-tight">
@@ -345,17 +428,10 @@ export default function Presse() {
                       </div>
                     </div>
 
-                    {/* Date Label (visible on desktop) */}
-                    <div className={`hidden md:block w-5/12 ${isLeft ? 'md:pl-12 text-left' : 'md:pr-12 text-right'}`}>
+                    {/* Date Label */}
+                    <div className={`w-5/12 ${isLeft ? 'pl-12 text-left' : 'pr-12 text-right'}`}>
                       <span className="inline-block px-4 py-2 bg-primary/5 text-primary font-medium rounded-full text-sm">
                         📅 {album.publishDate}
-                      </span>
-                    </div>
-
-                    {/* Mobile date badge */}
-                    <div className="absolute -top-3 left-4 md:hidden">
-                      <span className="inline-block px-3 py-1 bg-primary text-primary-foreground text-xs font-semibold rounded-full">
-                        {album.publishDate}
                       </span>
                     </div>
                   </motion.div>
