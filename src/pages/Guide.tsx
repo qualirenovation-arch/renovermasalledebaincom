@@ -158,9 +158,9 @@ const Guide = () => {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {/* Vidéo 1 - Vasque à poser */}
-              <div className="bg-background rounded-2xl overflow-hidden shadow-lg border border-primary/20">
+              <div className="bg-background rounded-xl overflow-hidden shadow-md border border-primary/10">
                 <video 
                   className="w-full aspect-[9/16] object-cover"
                   controls
@@ -170,14 +170,13 @@ const Guide = () => {
                   <source src="/videos/vasque-a-poser-1.mp4" type="video/mp4" />
                   Votre navigateur ne supporte pas la lecture vidéo.
                 </video>
-                <div className="p-4">
-                  <h3 className="font-semibold text-lg text-foreground">Comment choisir votre vasque à poser</h3>
-                  <p className="text-sm text-muted-foreground">Les critères essentiels pour bien choisir</p>
+                <div className="p-3">
+                  <h3 className="font-semibold text-sm text-foreground line-clamp-2">Comment choisir votre vasque à poser</h3>
                 </div>
               </div>
               
-              {/* Vidéo 2 - Vasque à poser suite */}
-              <div className="bg-background rounded-2xl overflow-hidden shadow-lg border border-primary/20">
+              {/* Vidéo 2 - Carrelage meuble vasque */}
+              <div className="bg-background rounded-xl overflow-hidden shadow-md border border-primary/10">
                 <video 
                   className="w-full aspect-[9/16] object-cover"
                   controls
@@ -187,9 +186,8 @@ const Guide = () => {
                   <source src="/videos/vasque-a-poser-2.mp4" type="video/mp4" />
                   Votre navigateur ne supporte pas la lecture vidéo.
                 </video>
-                <div className="p-4">
-                  <h3 className="font-semibold text-lg text-foreground">Faut-il carreler toute hauteur devant le meuble vasque ?</h3>
-                  <p className="text-sm text-muted-foreground">Pas forcément ! S'il y a un miroir toute hauteur, le carrelage derrière n'a aucun intérêt technique et augmente inutilement le devis.</p>
+                <div className="p-3">
+                  <h3 className="font-semibold text-sm text-foreground line-clamp-2">Faut-il carreler toute hauteur devant le meuble vasque ?</h3>
                 </div>
               </div>
             </div>
