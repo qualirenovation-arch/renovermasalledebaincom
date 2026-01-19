@@ -18,6 +18,7 @@ import presse18h39Joints from "@/assets/guide-joint-noir.webp";
 import presseElleSoisy from "@/assets/presse-elle-soisy.jpg";
 import presseHouzzEau from "@/assets/presse-houzz-eau.png";
 import presse18h39Wc from "@/assets/presse-18h39-wc.png";
+import soisy1 from "@/assets/soisy-1.jpg";
 
 // ========================================
 // Structure "base de données" : parutions_presse
@@ -70,6 +71,18 @@ const parutions_presse: ParutionPresse[] = [
     type: "article",
     image: stMande1,
     journalist: "Agnès Carpentier",
+  },
+  {
+    id: "houzz-powder-rooms-2024",
+    date_publication: "2024-12-17",
+    media: "Houzz",
+    titre_article: "The Top 10 New Powder Rooms of 2024",
+    extrait_seo: "Le WC du rez-de-chaussée de notre projet Soisy-sous-Montmorency sélectionné parmi les 10 plus beaux powder rooms de 2024 par Houzz. Une reconnaissance internationale de notre savoir-faire.",
+    url_article: "https://www.houzz.fr/magazine/the-top-10-new-powder-rooms-of-2024-stsetivw-vs~178983127",
+    type: "article",
+    image: soisy1,
+    journalist: "Becky Harris",
+    location: "Soisy-sous-Montmorency (95)",
   },
   {
     id: "houzz-eau-2024",
