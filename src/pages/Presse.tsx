@@ -19,6 +19,7 @@ import presseElleSoisy from "@/assets/presse-elle-soisy.jpg";
 import presseHouzzEau from "@/assets/presse-houzz-eau.png";
 import presse18h39Wc from "@/assets/presse-18h39-wc.png";
 import soisy1 from "@/assets/soisy-1.jpg";
+import presseHouzzBuanderie from "@/assets/presse-houzz-buanderie.png";
 
 // ========================================
 // Structure "base de données" : parutions_presse
@@ -95,6 +96,17 @@ const parutions_presse: ParutionPresse[] = [
     image: presseHouzzEau,
     journalist: "Anne-Laure Sizun",
     location: "Paris 19ème - Avenue Laumière",
+  },
+  {
+    id: "houzz-buanderie-2023",
+    date_publication: "2023-01-23",
+    media: "Houzz",
+    titre_article: "Photothèque : 50 coins buanderie mixent lave-linge et sèche-linge",
+    extrait_seo: "Notre solution d'intégration buanderie dans un placard de salle de bains mise en avant. Lave-linge et sèche-linge superposés pour optimiser l'espace dans les petits appartements parisiens.",
+    url_article: "https://www.houzz.fr/magazine/phototheque-50-coins-buanderie-mixent-lave-linge-et-seche-linge-stsetivw-vs~118282733",
+    type: "article",
+    image: presseHouzzBuanderie,
+    journalist: "Claire Tardy",
   },
   {
     id: "marie-claire-adresses-2024",
