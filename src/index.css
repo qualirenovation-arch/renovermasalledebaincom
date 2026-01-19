@@ -200,12 +200,23 @@
   }
 
   .card-hover {
-    @apply transition-all duration-300;
+    @apply transition-all duration-300 border-2 border-transparent;
   }
 
   .card-hover:hover {
     box-shadow: var(--shadow-lg);
     transform: translateY(-4px);
+    border-color: hsl(var(--gold) / 0.4);
+  }
+
+  /* Premium card with bronze border on hover */
+  .card-premium {
+    @apply bg-card rounded-2xl transition-all duration-300 border border-transparent;
+  }
+
+  .card-premium:hover {
+    border-color: hsl(var(--gold) / 0.5);
+    box-shadow: 0 8px 30px hsl(var(--gold) / 0.12);
   }
 
   .btn-cta {
