@@ -19,7 +19,14 @@ const degatsEauxVideos = [
     videoSrc: "/videos/degats-eaux-1.mp4",
     views: "3.7k",
   },
-  // Ajoutez d'autres vidéos ici au fur et à mesure
+  {
+    id: "degats-eaux-2",
+    title: "Conseils dégâts des eaux",
+    description: "Découvrez nos conseils d'experts pour éviter les sinistres et protéger votre rénovation.",
+    tip: "👉 Les points essentiels à surveiller pour une installation pérenne.",
+    videoSrc: "/videos/degats-eaux-2.mp4",
+    views: "",
+  },
 ];
 
 export default function DegatsEaux() {
