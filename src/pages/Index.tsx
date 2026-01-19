@@ -85,7 +85,7 @@ export default function Index() {
   // Récupérer les dernières actualités
   const latestPresse = presseNews.slice(0, 1)[0];
   const latestGuide = guideConseils.slice(0, 1)[0];
-  const latestVideo = videoConseils.find(v => v.instagramUrl && !v.instagramUrl.includes("VOTRE_LIEN_ICI"));
+  const latestVideo = videoConseils.find(v => (v.instagramUrl && !v.instagramUrl.includes("VOTRE_LIEN_ICI")) || v.link);
 
   return (
     <Layout>
@@ -122,16 +122,27 @@ export default function Index() {
             <span className="hidden lg:block text-border">|</span>
             
             {latestVideo && (
-              <a 
-                href={latestVideo.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden lg:flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
-              >
-                <Video className="w-4 h-4 text-primary" />
-                <span className="font-medium text-foreground">Vidéo :</span>
-                <span className="group-hover:underline line-clamp-1">{latestVideo.title}</span>
-              </a>
+              latestVideo.link ? (
+                <Link 
+                  to={latestVideo.link}
+                  className="hidden lg:flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
+                >
+                  <Video className="w-4 h-4 text-primary" />
+                  <span className="font-medium text-foreground">Vidéo :</span>
+                  <span className="group-hover:underline line-clamp-1">{latestVideo.title}</span>
+                </Link>
+              ) : (
+                <a 
+                  href={latestVideo.instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hidden lg:flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
+                >
+                  <Video className="w-4 h-4 text-primary" />
+                  <span className="font-medium text-foreground">Vidéo :</span>
+                  <span className="group-hover:underline line-clamp-1">{latestVideo.title}</span>
+                </a>
+              )
             )}
           </div>
         </div>

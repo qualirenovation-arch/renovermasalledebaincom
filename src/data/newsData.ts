@@ -91,7 +91,7 @@ export const videoConseils = [
     id: "video-vasque-a-poser",
     title: "Comment choisir votre vasque à poser",
     description: "Les critères essentiels pour bien choisir votre vasque à poser",
-    instagramUrl: "https://www.instagram.com/reel/DTqBs2bDKsN/",
+    link: "/guide-travaux#videos-conseils",
     category: "Meuble vasque",
   },
   // === DOUCHE ===
