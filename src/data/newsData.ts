@@ -1,6 +1,15 @@
 // Actualités Presse - Données réelles depuis Presse.tsx
 export const presseNews = [
   {
+    id: "presse-18h39-wc-suspendus",
+    title: "Toilettes suspendues : l'expertise terrain en rénovation",
+    source: "18h39",
+    date: "Janvier 2025",
+    journalist: "Rédaction 18h39",
+    link: "/presse",
+    externalLink: "https://www.18h39.fr/travaux-avant-apres/transformer-espace-chez-soi/comment-installer-des-toilettes-suspendues-vous-explique-tout.html",
+  },
+  {
     id: "presse-18h39-joints",
     title: "Interview : Joints de couleur pour sublimer votre carrelage",
     source: "18h39",
