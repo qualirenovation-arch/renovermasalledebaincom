@@ -8,6 +8,7 @@ import vincennesMr1 from "@/assets/vincennes-mr-1.jpg";
 import nicolasRoretDouche from "@/assets/nicolas-roret-douche.jpg";
 import { presseNews, guideConseils, videoConseils } from "@/data/newsData";
 import { TestimonialsSlider } from "@/components/home/TestimonialsSlider";
+import { Recompenses } from "@/components/layout/Recompenses";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -522,6 +523,9 @@ export default function Index() {
           </motion.div>
         </div>
       </section>
+
+      {/* Distinctions Houzz */}
+      <Recompenses />
 
       {/* CTA Final */}
       <section className="section-padding bg-foreground text-background">
