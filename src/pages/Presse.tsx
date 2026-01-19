@@ -26,6 +26,7 @@ import presseMarieClaireAdresses from "@/assets/presse-marie-claire-adresses.png
 import presseHouzzSoisy from "@/assets/presse-houzz-soisy.png";
 import presseHouzzBois from "@/assets/presse-houzz-bois.jpg";
 import presse18h39Joints from "@/assets/guide-joint-noir.webp";
+import presseElleSoisy from "@/assets/presse-elle-soisy.jpg";
 
 interface Photo {
   id: number;
@@ -49,6 +50,21 @@ interface Album {
 }
 
 const presseAlbums: Album[] = [
+  // Octobre 2025 - Elle salle de bains pour deux
+  {
+    id: "presse-elle-soisy",
+    title: "Les astuces des architectes pour aménager une salle de bains pour deux",
+    location: "Soisy-sous-Montmorency (95)",
+    description: "Notre projet de salle de bains parentale à Soisy-sous-Montmorency est à nouveau mis à l'honneur dans Elle Déco. Les architectes partagent leurs astuces pour aménager une salle de bains fonctionnelle et élégante pour deux personnes. Zellige bleu en chevron, robinetterie noire et plan vasque en bois : un agencement pensé pour le quotidien.",
+    coverImage: presseElleSoisy,
+    externalLink: "https://www.elle.fr/Deco/Pieces/Salle-de-bain/Les-astuces-des-architectes-pour-amenager-une-salle-de-bains-pour-deux",
+    source: "Elle Décoration",
+    publishDate: "17 octobre 2025",
+    journalist: "Cyrine Ben Romdhane",
+    photos: [
+      { id: 1, image: presseElleSoisy, title: "SDB parentale Soisy", description: "Zellige bleu, robinetterie noire et plan bois" },
+    ],
+  },
   // Décembre 2017 - Toilettes suspendues 18h39
   {
     id: "presse-18h39-wc-suspendus",
