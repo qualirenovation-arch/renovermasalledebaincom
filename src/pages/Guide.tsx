@@ -220,26 +220,6 @@ const Guide = () => {
                 </div>
               </div>
               
-              {/* Vidéo 4 - Dégâts des eaux */}
-              <div className="bg-background rounded-xl overflow-hidden shadow-md border border-primary/10">
-                <video 
-                  className="w-full aspect-[9/16] object-cover"
-                  controls
-                  preload="metadata"
-                  playsInline
-                >
-                  <source src="/videos/degats-eaux-1.mp4" type="video/mp4" />
-                  Votre navigateur ne supporte pas la lecture vidéo.
-                </video>
-                <div className="p-3">
-                  <h3 className="font-semibold text-sm text-foreground">Comment éviter un dégât des eaux ?</h3>
-                  <p className="text-xs text-muted-foreground mt-1">Un dégât des eaux peut ruiner une rénovation et entraîner des frais considérables. La clé : des raccords de qualité, une étanchéité parfaite et des contrôles réguliers.</p>
-                  <p className="text-xs text-primary mt-2">👉 Dans cette vidéo, je vous montre les erreurs à éviter et les bonnes pratiques à adopter.</p>
-                  <p className="text-xs text-muted-foreground mt-2 flex items-center gap-1">
-                    <Eye className="w-3 h-3" /> 3.7k vues
-                  </p>
-                </div>
-              </div>
             </div>
           </motion.div>
         </div>
