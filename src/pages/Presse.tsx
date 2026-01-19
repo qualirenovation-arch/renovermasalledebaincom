@@ -10,6 +10,9 @@ import stMande1 from "@/assets/st-mande-1.jpg";
 import stMande2 from "@/assets/st-mande-2.jpg";
 import stMande3 from "@/assets/st-mande-3.jpg";
 
+// Charonne - WC bleu
+import charonne1 from "@/assets/charonne-1.jpg";
+
 // Carina Nahmani - Article Maître d'œuvre
 import carinaNahmani from "@/assets/carina-nahmani-1.jpg";
 
@@ -46,19 +49,19 @@ interface Album {
 }
 
 const presseAlbums: Album[] = [
-  // Janvier 2025 - Toilettes suspendues 18h39
+  // Décembre 2017 - Toilettes suspendues 18h39
   {
     id: "presse-18h39-wc-suspendus",
     title: "Comment installer des toilettes suspendues : on vous explique tout",
     location: "Chantiers Darcet & Rue Bièvre",
     description: "Toilettes suspendues : l'expertise terrain en rénovation. Dans cet article de 18h39, plusieurs de nos réalisations mettent en lumière notre savoir-faire en rénovation, avec l'expertise de Carina Nahmani, maître d'œuvre, notamment sur l'analyse du système d'évacuation — une étape clé pour des travaux durables et maîtrisés. Les chantiers Darcet et Rue Bièvre sont mis à l'honneur.",
-    coverImage: presseElleWc,
+    coverImage: charonne1,
     externalLink: "https://www.18h39.fr/travaux-avant-apres/transformer-espace-chez-soi/comment-installer-des-toilettes-suspendues-vous-explique-tout.html",
     source: "18h39",
-    publishDate: "Janvier 2025",
-    journalist: "Rédaction 18h39",
+    publishDate: "27 décembre 2017",
+    journalist: "Matthieu M.",
     photos: [
-      { id: 1, image: presseElleWc, title: "Toilettes suspendues", description: "Chantiers Darcet & Rue Bièvre mis à l'honneur" },
+      { id: 1, image: charonne1, title: "Toilettes suspendues", description: "Chantiers Darcet & Rue Bièvre mis à l'honneur" },
     ],
   },
   // Janvier 2025 - Interview 18h39
