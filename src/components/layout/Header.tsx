@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Droplets } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -11,6 +11,7 @@ const navItems = [
   { label: "Réalisations", path: "/realisations" },
   { label: "🚧 Chantiers en cours", path: "/realisations#chantiers-en-cours" },
   { label: "📖 Guide travaux", path: "/guide-travaux" },
+  { label: "💧 Dégâts des eaux", path: "/degats-eaux" },
   { label: "Demande de devis", path: "/devis" },
 ];
 
@@ -62,20 +63,8 @@ export function Header() {
               ))}
             </nav>
 
-            {/* Dégâts des eaux + CTA Button - Desktop */}
+            {/* CTA Button - Desktop */}
             <div className="hidden lg:flex items-center gap-4">
-              <Link 
-                to="/degats-eaux" 
-                className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  location.pathname === "/degats-eaux"
-                    ? "bg-blue-100 text-blue-700"
-                    : "text-foreground hover:bg-blue-50"
-                }`}
-              >
-                <Droplets className="w-4 h-4" />
-                Dégâts des eaux
-              </Link>
-              
               <Button variant="cta" size="lg" asChild>
                 <Link to="/devis">Devis gratuit</Link>
               </Button>
