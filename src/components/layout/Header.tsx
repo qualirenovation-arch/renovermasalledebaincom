@@ -75,7 +75,7 @@ export function Header() {
             </nav>
 
             {/* CTA Button - Desktop */}
-            <div className="hidden lg:flex items-center gap-4">
+            <div className="hidden lg:flex items-center gap-4 ml-6">
               <Button variant="cta" size="lg" asChild>
                 <Link to="/devis">Devis gratuit</Link>
               </Button>
