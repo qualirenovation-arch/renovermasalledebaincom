@@ -64,7 +64,7 @@ const presseAlbums: Album[] = [
       { id: 1, image: charonne1, title: "Toilettes suspendues", description: "Chantiers Darcet & Rue Bièvre mis à l'honneur" },
     ],
   },
-  // Janvier 2025 - Interview 18h39
+  // Février 2018 - Interview 18h39
   {
     id: "presse-18h39-joints",
     title: "Joints de couleur : comment mettre en valeur votre carrelage",
@@ -73,8 +73,8 @@ const presseAlbums: Album[] = [
     coverImage: presse18h39Joints,
     externalLink: "https://www.18h39.fr/inspiration-maison/tendances-deco/idee-deco-optez-pour-des-joints-de-couleurs-pour-mettre-en-valeur-votre-carrelage.html",
     source: "18h39",
-    publishDate: "Janvier 2025",
-    journalist: "Rédaction 18h39",
+    publishDate: "6 février 2018",
+    journalist: "Pauline Delcourt",
     photos: [
       { id: 1, image: presse18h39Joints, title: "Joints colorés", description: "L'art du détail qui fait toute la différence" },
     ],
