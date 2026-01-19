@@ -1,6 +1,15 @@
 // Actualités Presse - Données réelles depuis Presse.tsx
 export const presseNews = [
   {
+    id: "presse-18h39-joints",
+    title: "Interview : Joints de couleur pour sublimer votre carrelage",
+    source: "18h39",
+    date: "Janvier 2025",
+    journalist: "Rédaction 18h39",
+    link: "/presse",
+    externalLink: "https://www.18h39.fr/inspiration-maison/tendances-deco/idee-deco-optez-pour-des-joints-de-couleurs-pour-mettre-en-valeur-votre-carrelage.html",
+  },
+  {
     id: "presse-houzz-soisy",
     title: "Maison de maître 1900 rénovée de A à Z",
     source: "Houzz",
