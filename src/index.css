@@ -11,12 +11,12 @@
 
 @layer base {
   :root {
-    /* Core backgrounds - Soft warm white with blue undertone */
-    --background: 220 20% 98%;
+    /* Core backgrounds - Pure white */
+    --background: 0 0% 100%;
     --foreground: 210 40% 15%;
 
     /* Card surfaces - Subtle warm white */
-    --card: 220 25% 97%;
+    --card: 0 0% 99%;
     --card-foreground: 210 40% 15%;
 
     /* Popover */
