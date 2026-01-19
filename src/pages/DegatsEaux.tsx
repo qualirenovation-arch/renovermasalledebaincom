@@ -226,22 +226,20 @@ const DegatsEaux = () => {
 
               {/* Vignettes photos cliquables */}
               <div className="mt-4 pt-4 border-t border-blue-100">
-                <p className="text-xs text-muted-foreground mb-3">📷 Cliquez pour agrandir</p>
-                <div className="flex flex-wrap gap-2">
+                <p className="text-xs text-muted-foreground mb-2">📷 Cliquez pour agrandir</p>
+                <div className="flex flex-wrap gap-1">
                   {juliaImages.map((img, index) => (
                     <button
                       key={index}
                       onClick={() => setSelectedImage(img)}
-                      className="relative w-14 h-14 rounded-lg overflow-hidden border-2 border-white shadow-sm hover:shadow-md hover:scale-105 transition-all cursor-pointer"
+                      className="relative w-8 h-8 rounded overflow-hidden border border-white shadow-sm hover:shadow-md hover:scale-110 transition-all cursor-pointer"
                     >
                       <img 
                         src={img.src} 
                         alt={img.alt}
                         className="w-full h-full object-cover"
                       />
-                      <span className={`absolute bottom-0 left-0 right-0 text-[8px] font-medium text-white text-center py-0.5 ${img.type === 'avant' ? 'bg-amber-600/90' : 'bg-green-600/90'}`}>
-                        {img.type === 'avant' ? 'Avant' : 'Après'}
-                      </span>
+                      <span className={`absolute bottom-0 left-0 right-0 h-1 ${img.type === 'avant' ? 'bg-amber-500' : 'bg-green-500'}`} />
                     </button>
                   ))}
                 </div>
@@ -297,68 +295,6 @@ const DegatsEaux = () => {
         </div>
       </section>
 
-      {/* Section Nos chantiers dégâts des eaux */}
-      <section className="py-12 md:py-16 bg-stone-100">
-        <div className="container-custom">
-          <motion.div
-            className="text-center mb-10"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="font-display text-2xl md:text-3xl font-bold mb-4 text-foreground">
-              🔧 Nos chantiers dégâts des eaux
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Découvrez comment nous transformons des sinistres en rénovations d'exception
-            </p>
-          </motion.div>
-
-          {/* Chantier Quai de Jemmapes */}
-          <motion.div
-            className="bg-white rounded-xl overflow-hidden shadow-md border border-border/30 mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <div className="p-6 border-b border-border/30">
-              <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                <MapPin className="w-4 h-4" />
-                <span>Paris 10ème — Quai de Jemmapes</span>
-              </div>
-              <h3 className="font-display text-xl font-bold text-foreground">
-                Rénovation après sinistre — Style contemporain
-              </h3>
-              <p className="text-muted-foreground text-sm mt-2">
-                Suite à un dégât des eaux venu de l'étage supérieur, cette salle de bain a été entièrement repensée avec des finitions haut de gamme : vasque en pierre naturelle, meuble bois et noir mat, robinetterie design.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
-              <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
-                <img 
-                  src={jemmapesApres1} 
-                  alt="Après — Vue d'ensemble de la salle de bain rénovée Quai de Jemmapes"
-                  className="w-full h-full object-cover"
-                />
-                <span className="absolute top-3 left-3 bg-green-600 text-white text-xs font-medium px-2 py-1 rounded">
-                  Après
-                </span>
-              </div>
-              <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
-                <img 
-                  src={jemmapesApres2} 
-                  alt="Après — Détail vasque en pierre naturelle et meuble bois"
-                  className="w-full h-full object-cover"
-                />
-                <span className="absolute top-3 left-3 bg-green-600 text-white text-xs font-medium px-2 py-1 rounded">
-                  Après
-                </span>
-              </div>
-            </div>
-          </motion.div>
-
-        </div>
-      </section>
 
       {/* Section Conseils pratiques */}
       <section className="py-10 md:py-14 bg-stone-50">
