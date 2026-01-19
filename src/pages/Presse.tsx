@@ -142,6 +142,23 @@ const presseAlbums: Album[] = [
       { id: 1, image: presseMarieClaireAdresses, title: "QualiRénovation", description: "Adresse incontournable Marie Claire Maison" },
     ],
   },
+  // Mai 2023 - Salle de bains en longueur
+  {
+    id: "presse-houzz-longueur",
+    title: "Comment aménager une salle de bains en longueur",
+    location: "Saint-Mandé (94)",
+    description: "Les niches murales sont un vrai atout gain de place dans les petites salles de bains en longueur et permettent de ranger les objets du quotidien tout en les ayant à portée de main. Cela évite aussi d'avoir des meubles de rangement ou étagères qui empiéteraient sur la largeur. Vous pouvez choisir de les carreler comme votre douche ou de les peindre dans une tonalité différente pour créer un contraste.",
+    coverImage: stMande1,
+    externalLink: "https://www.houzz.fr/magazine/comment-amenager-une-salle-de-bains-en-longueur-stsetivw-vs~118616070",
+    source: "Houzz",
+    publishDate: "25 mai 2023",
+    journalist: "Anne Ambaud",
+    photos: [
+      { id: 1, image: stMande1, title: "Niches murales", description: "Astuce gain de place dans une salle de bains en longueur" },
+      { id: 2, image: stMande2, title: "Vue d'ensemble", description: "Aménagement optimisé" },
+      { id: 3, image: stMande3, title: "Détails finitions", description: "Rangements intégrés" },
+    ],
+  },
   // Octobre 2022
   {
     id: "presse-maitre-oeuvre",
