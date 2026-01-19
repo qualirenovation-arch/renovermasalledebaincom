@@ -160,7 +160,7 @@ const parutions_presse: ParutionPresse[] = [
     extrait_seo: "Entre gagner de la place ou bien définir les fonctions, le débat fait rage. Découvrez les arguments des deux camps pour savoir si les WC ont leur place dans votre salle de bains.",
     url_article: "https://www.houzz.fr/magazine/pour-ou-contre-les-wc-dans-la-salle-de-bains-stsetivw-vs~137229363",
     type: "article",
-    image: stMande1,
+    image: presseHouzzEau,
     journalist: "Claire Tardy",
   },
   {
