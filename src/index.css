@@ -13,42 +13,42 @@
   :root {
     /* Core backgrounds - Pure white */
     --background: 0 0% 100%;
-    --foreground: 210 40% 15%;
+    --foreground: 0 0% 15%;
 
-    /* Card surfaces - Subtle warm white */
-    --card: 0 0% 99%;
-    --card-foreground: 210 40% 15%;
+    /* Card surfaces - Subtle warm gray */
+    --card: 30 5% 99%;
+    --card-foreground: 0 0% 15%;
 
     /* Popover */
-    --popover: 220 20% 98%;
-    --popover-foreground: 210 40% 15%;
+    --popover: 30 5% 98%;
+    --popover-foreground: 0 0% 15%;
 
-    /* Primary - Deep blue anthracite (like logo) */
-    --primary: 210 35% 22%;
-    --primary-foreground: 45 50% 95%;
+    /* Primary - Pure gray anthracite (like masalledebain.com) */
+    --primary: 0 0% 20%;
+    --primary-foreground: 0 0% 98%;
 
-    /* Secondary - Soft blue-gray */
-    --secondary: 215 25% 92%;
-    --secondary-foreground: 210 35% 22%;
+    /* Secondary - Soft warm gray */
+    --secondary: 30 5% 93%;
+    --secondary-foreground: 0 0% 20%;
 
-    /* Muted - Light blue-gray */
-    --muted: 215 20% 94%;
-    --muted-foreground: 210 20% 45%;
+    /* Muted - Light warm gray */
+    --muted: 30 3% 95%;
+    --muted-foreground: 0 0% 40%;
 
-    /* Accent - Warm gold/bronze (like logo) */
-    --accent: 43 65% 48%;
-    --accent-foreground: 210 35% 15%;
+    /* Accent - Warm bronze/gold (like masalledebain.com) */
+    --accent: 35 55% 45%;
+    --accent-foreground: 0 0% 98%;
 
-    /* Gold - Luxurious gold tones */
-    --gold: 43 70% 50%;
-    --gold-light: 45 60% 75%;
-    --gold-dark: 38 65% 40%;
-    --gold-foreground: 210 35% 12%;
+    /* Gold/Bronze - Luxurious tones */
+    --gold: 35 60% 48%;
+    --gold-light: 38 50% 70%;
+    --gold-dark: 30 55% 38%;
+    --gold-foreground: 0 0% 12%;
 
-    /* Deep blue variations */
-    --navy: 210 45% 18%;
-    --navy-light: 210 30% 35%;
-    --navy-foreground: 45 50% 95%;
+    /* Anthracite variations (pure gray, no blue) */
+    --navy: 0 0% 18%;
+    --navy-light: 0 0% 35%;
+    --navy-foreground: 0 0% 98%;
 
     /* Wood tones - Rich walnut */
     --wood: 25 40% 35%;
@@ -75,19 +75,19 @@
     --destructive-foreground: 0 0% 100%;
 
     /* Borders and inputs */
-    --border: 215 25% 88%;
-    --input: 215 25% 88%;
-    --ring: 43 60% 60%;
+    --border: 30 5% 88%;
+    --input: 30 5% 88%;
+    --ring: 35 50% 55%;
 
     --radius: 0.75rem;
 
-    /* Premium Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(210 45% 18% / 0.92), hsl(210 35% 28% / 0.85));
-    --gradient-card: linear-gradient(180deg, hsl(220 25% 97%), hsl(215 20% 94%));
-    --gradient-cta: linear-gradient(135deg, hsl(43 70% 50%), hsl(38 65% 42%));
-    --gradient-gold: linear-gradient(135deg, hsl(45 70% 55%), hsl(38 65% 45%));
-    --gradient-navy: linear-gradient(180deg, hsl(210 45% 18%), hsl(210 40% 25%));
-    --gradient-stone: linear-gradient(180deg, hsl(220 15% 95%), hsl(215 20% 92%));
+    /* Premium Gradients - Pure gray anthracite + bronze */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 18% / 0.92), hsl(0 0% 28% / 0.85));
+    --gradient-card: linear-gradient(180deg, hsl(30 5% 98%), hsl(30 3% 95%));
+    --gradient-cta: linear-gradient(135deg, hsl(35 60% 48%), hsl(30 55% 40%));
+    --gradient-gold: linear-gradient(135deg, hsl(38 55% 52%), hsl(30 55% 42%));
+    --gradient-navy: linear-gradient(180deg, hsl(0 0% 18%), hsl(0 0% 25%));
+    --gradient-stone: linear-gradient(180deg, hsl(30 5% 96%), hsl(30 3% 93%));
 
     /* Premium Shadows */
     --shadow-sm: 0 2px 8px hsl(210 40% 15% / 0.06);
