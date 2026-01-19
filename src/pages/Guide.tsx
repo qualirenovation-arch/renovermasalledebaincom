@@ -188,8 +188,8 @@ const Guide = () => {
                   Votre navigateur ne supporte pas la lecture vidéo.
                 </video>
                 <div className="p-4">
-                  <h3 className="font-semibold text-lg text-foreground">Vasque à poser : la suite</h3>
-                  <p className="text-sm text-muted-foreground">Conseils complémentaires pour votre projet</p>
+                  <h3 className="font-semibold text-lg text-foreground">Faut-il carreler toute hauteur devant le meuble vasque ?</h3>
+                  <p className="text-sm text-muted-foreground">Pas forcément ! S'il y a un miroir toute hauteur, le carrelage derrière n'a aucun intérêt technique et augmente inutilement le devis.</p>
                 </div>
               </div>
             </div>
