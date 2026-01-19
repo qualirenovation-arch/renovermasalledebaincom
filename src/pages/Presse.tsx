@@ -153,6 +153,17 @@ const parutions_presse: ParutionPresse[] = [
     journalist: "Cécile Debise",
   },
   {
+    id: "houzz-wc-sdb-2021",
+    date_publication: "2021-07-05",
+    media: "Houzz",
+    titre_article: "Pour ou contre les WC dans la salle de bains ?",
+    extrait_seo: "Entre gagner de la place ou bien définir les fonctions, le débat fait rage. Découvrez les arguments des deux camps pour savoir si les WC ont leur place dans votre salle de bains.",
+    url_article: "https://www.houzz.fr/magazine/pour-ou-contre-les-wc-dans-la-salle-de-bains-stsetivw-vs~137229363",
+    type: "article",
+    image: stMande1,
+    journalist: "Claire Tardy",
+  },
+  {
     id: "houzz-bois-2021",
     date_publication: "2021-06-15",
     media: "Houzz",
