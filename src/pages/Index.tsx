@@ -137,29 +137,27 @@ export default function Index() {
         </div>
       </div>
 
-      {/* Hero Section - Style épuré beige */}
-      <section className="bg-stone py-16 md:py-24">
+      {/* Hero Section - Style épuré beige - Compact */}
+      <section className="bg-stone py-10 md:py-14">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground leading-tight">
+              <h1 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-foreground leading-tight">
                 RÉNOVEZ VOTRE<br />
-                SALLE DE<br />
-                <span className="italic font-normal">BAIN</span>
+                SALLE DE <span className="italic font-normal">BAIN</span>
               </h1>
-              <p className="text-muted-foreground text-lg md:text-xl mb-8">
-                Conception et réalisation<br />
-                de salles de bain sur mesure
+              <p className="text-muted-foreground text-base md:text-lg mb-6">
+                Conception et réalisation de salles de bain sur mesure
               </p>
               <Button 
                 variant="default" 
-                size="lg" 
+                size="default" 
                 asChild 
-                className="bg-[hsl(38,50%,50%)] hover:bg-[hsl(38,50%,45%)] text-white rounded-md px-8"
+                className="bg-[hsl(38,50%,50%)] hover:bg-[hsl(38,50%,45%)] text-white rounded-md px-6"
               >
                 <Link to="/devis">
                   DEMANDER UN DEVIS
@@ -173,7 +171,7 @@ export default function Index() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden">
+              <div className="aspect-[4/3] rounded-xl overflow-hidden">
                 <img
                   src={jemmapes1}
                   alt="Douche à l'italienne moderne"
