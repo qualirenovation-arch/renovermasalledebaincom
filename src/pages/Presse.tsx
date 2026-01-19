@@ -269,261 +269,161 @@ export default function Presse() {
         </div>
       </section>
 
-      {/* Timeline Section */}
-      <section className="py-16 bg-muted/30 overflow-hidden">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-8 md:mb-12"
-          >
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-              Chronologie des parutions
-            </h2>
-            <p className="text-muted-foreground">
-              Notre expertise reconnue dans les médias depuis 2017
-            </p>
-          </motion.div>
-
-          {/* Mobile Horizontal Timeline */}
-          <div className="md:hidden">
-            <div className="relative">
-              {/* Horizontal timeline line */}
-              <div className="absolute top-8 left-0 right-0 h-0.5 bg-gradient-to-r from-primary/20 via-primary to-primary/20" />
-              
-              {/* Scroll hint */}
-              <div className="flex items-center justify-center gap-2 mb-6 text-sm text-muted-foreground">
-                <motion.span
-                  animate={{ x: [0, 5, 0] }}
-                  transition={{ repeat: Infinity, duration: 1.5 }}
-                >
-                  ←
-                </motion.span>
-                <span>Glissez pour explorer</span>
-                <motion.span
-                  animate={{ x: [0, 5, 0] }}
-                  transition={{ repeat: Infinity, duration: 1.5 }}
-                >
-                  →
-                </motion.span>
-              </div>
-
-              {/* Scrollable container */}
-              <div className="overflow-x-auto pb-6 -mx-4 px-4 scrollbar-hide">
-                <div className="flex gap-4" style={{ width: 'max-content' }}>
-                  {presseAlbums.map((album, index) => (
-                    <motion.div
-                      key={album.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.05 }}
-                      className="relative flex flex-col items-center"
-                      style={{ width: '280px' }}
-                    >
-                      {/* Timeline Node */}
-                      <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg border-4 border-background z-10 mb-4">
-                        <span className="text-xs font-bold">
-                          {album.publishDate?.split(' ').slice(-1)[0] || ''}
-                        </span>
-                      </div>
-
-                      {/* Content Card */}
-                      <div 
-                        className="bg-background rounded-xl p-5 shadow-lg border border-border/50 hover:border-primary/30 transition-all cursor-pointer group w-full"
-                        onClick={() => setSelectedAlbum(album)}
-                      >
-                        <div className="flex items-center justify-between gap-2 mb-3">
-                          <span className="px-2 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full truncate">
-                            {album.source}
-                          </span>
-                          <span className="text-xs text-muted-foreground whitespace-nowrap">
-                            {album.publishDate}
-                          </span>
-                        </div>
-                        <h3 className="font-display text-base font-semibold mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                          {album.title}
-                        </h3>
-                        {album.journalist && (
-                          <p className="text-xs text-muted-foreground italic mb-2">
-                            Par {album.journalist}
-                          </p>
-                        )}
-                        <a 
-                          href={album.externalLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                          className="inline-flex items-center gap-1 text-xs text-primary hover:underline"
-                        >
-                          <ExternalLink className="w-3 h-3" />
-                          Lire l'article
-                        </a>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Desktop Vertical Timeline */}
-          <div className="hidden md:block relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-primary via-primary/50 to-primary/20" />
-
-            <div className="space-y-0">
-              {presseAlbums.map((album, index) => {
-                const isLeft = index % 2 === 0;
-                return (
-                  <motion.div
-                    key={album.id}
-                    initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
-                    transition={{ delay: index * 0.1 }}
-                    className={`relative flex items-center justify-center ${isLeft ? 'flex-row' : 'flex-row-reverse'}`}
-                  >
-                    {/* Content Card */}
-                    <div className={`w-5/12 ${isLeft ? 'pr-12 text-right' : 'pl-12 text-left'}`}>
-                      <div 
-                        className="bg-background rounded-xl p-6 shadow-lg border border-border/50 hover:border-primary/30 transition-all cursor-pointer group"
-                        onClick={() => setSelectedAlbum(album)}
-                      >
-                        <div className={`flex items-center gap-3 mb-3 ${isLeft ? 'justify-end' : 'justify-start'}`}>
-                          <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full">
-                            {album.source}
-                          </span>
-                        </div>
-                        <h3 className="font-display text-lg font-semibold mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                          {album.title}
-                        </h3>
-                        {album.journalist && (
-                          <p className="text-sm text-muted-foreground italic">
-                            Par {album.journalist}
-                          </p>
-                        )}
-                        <a 
-                          href={album.externalLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                          className={`inline-flex items-center gap-1 mt-3 text-sm text-primary hover:underline ${isLeft ? 'flex-row-reverse' : ''}`}
-                        >
-                          <ExternalLink className="w-3 h-3" />
-                          Lire l'article
-                        </a>
-                      </div>
-                    </div>
-
-                    {/* Timeline Node */}
-                    <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-                      <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg border-4 border-background z-10">
-                        <div className="text-center">
-                          <div className="text-xs font-bold leading-tight">
-                            {album.publishDate?.split(' ').slice(-1)[0] || ''}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Date Label */}
-                    <div className={`w-5/12 ${isLeft ? 'pl-12 text-left' : 'pr-12 text-right'}`}>
-                      <span className="inline-block px-4 py-2 bg-primary/5 text-primary font-medium rounded-full text-sm">
-                        📅 {album.publishDate}
-                      </span>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Albums Grid */}
+      {/* Albums - Scroll horizontal mobile, Grid desktop */}
       <section className="section-padding">
         <div className="container-custom">
           <AnimatePresence mode="wait">
             {!selectedAlbum ? (
-              <motion.div
-                key="albums"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-              >
-                {presseAlbums.map((album, index) => (
-                  <motion.div
-                    key={album.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="group cursor-pointer"
-                    onClick={() => setSelectedAlbum(album)}
-                  >
-                    <div className="card-elevated overflow-hidden">
-                      <div className="aspect-[4/3] overflow-hidden relative">
-                        <img 
-                          src={album.coverImage} 
-                          alt={album.title}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                        />
-                        <div className="absolute top-4 left-4 px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">
-                          {album.source || "📰 Presse"}
-                        </div>
-                        {album.publishDate && (
-                          <div className="absolute top-4 right-4 px-3 py-1 bg-white/90 text-foreground text-xs font-medium rounded-full">
-                            {album.publishDate}
+              <>
+                {/* Mobile: Horizontal scroll */}
+                <motion.div
+                  key="albums-mobile"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="md:hidden"
+                >
+                  {/* Scroll hint */}
+                  <div className="flex items-center justify-center gap-2 mb-4 text-sm text-muted-foreground">
+                    <motion.span
+                      animate={{ x: [0, 5, 0] }}
+                      transition={{ repeat: Infinity, duration: 1.5 }}
+                    >
+                      ←
+                    </motion.span>
+                    <span>Glissez pour explorer</span>
+                    <motion.span
+                      animate={{ x: [0, 5, 0] }}
+                      transition={{ repeat: Infinity, duration: 1.5 }}
+                    >
+                      →
+                    </motion.span>
+                  </div>
+
+                  <div className="overflow-x-auto pb-4 -mx-4 px-4 scrollbar-hide">
+                    <div className="flex gap-4" style={{ width: 'max-content' }}>
+                      {presseAlbums.map((album, index) => (
+                        <motion.div
+                          key={album.id}
+                          initial={{ opacity: 0, x: 20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: index * 0.05 }}
+                          className="group cursor-pointer"
+                          style={{ width: '300px' }}
+                          onClick={() => setSelectedAlbum(album)}
+                        >
+                          <div className="card-elevated overflow-hidden h-full">
+                            <div className="aspect-[4/3] overflow-hidden relative">
+                              <img 
+                                src={album.coverImage} 
+                                alt={album.title}
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                              />
+                              <div className="absolute top-3 left-3 px-2 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">
+                                {album.source || "📰 Presse"}
+                              </div>
+                              {album.publishDate && (
+                                <div className="absolute top-3 right-3 px-2 py-1 bg-background/90 text-foreground text-xs font-medium rounded-full">
+                                  {album.publishDate}
+                                </div>
+                              )}
+                            </div>
+                            <div className="p-4">
+                              <h3 className="font-display text-base font-semibold mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                                {album.title}
+                              </h3>
+                              {album.journalist && (
+                                <p className="text-xs text-muted-foreground italic">
+                                  Par {album.journalist}
+                                </p>
+                              )}
+                            </div>
                           </div>
-                        )}
-                        <div className="absolute bottom-4 right-4 px-3 py-1 bg-black/60 text-white text-xs font-medium rounded-full">
-                          {album.photos.length} photo{album.photos.length > 1 ? "s" : ""}
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Desktop: Grid layout */}
+                <motion.div
+                  key="albums-desktop"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                  {presseAlbums.map((album, index) => (
+                    <motion.div
+                      key={album.id}
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      className="group cursor-pointer"
+                      onClick={() => setSelectedAlbum(album)}
+                    >
+                      <div className="card-elevated overflow-hidden">
+                        <div className="aspect-[4/3] overflow-hidden relative">
+                          <img 
+                            src={album.coverImage} 
+                            alt={album.title}
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          />
+                          <div className="absolute top-4 left-4 px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">
+                            {album.source || "📰 Presse"}
+                          </div>
+                          {album.publishDate && (
+                            <div className="absolute top-4 right-4 px-3 py-1 bg-background/90 text-foreground text-xs font-medium rounded-full">
+                              {album.publishDate}
+                            </div>
+                          )}
+                          <div className="absolute bottom-4 right-4 px-3 py-1 bg-foreground/60 text-background text-xs font-medium rounded-full">
+                            {album.photos.length} photo{album.photos.length > 1 ? "s" : ""}
+                          </div>
+                        </div>
+                        <div className="p-6">
+                          <p className="text-sm text-primary font-medium mb-2">{album.location}</p>
+                          <h3 className="font-display text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                            {album.title}
+                          </h3>
+                          <p className="text-muted-foreground text-sm line-clamp-2">
+                            {album.description}
+                          </p>
+                          {album.journalist && (
+                            <p className="text-xs text-muted-foreground mt-2 italic">
+                              Par {album.journalist}
+                            </p>
+                          )}
+                          {album.instagramLink && (
+                            <a 
+                              href={album.instagramLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={(e) => e.stopPropagation()}
+                              className="inline-flex items-center gap-1 mt-3 text-sm text-primary hover:underline"
+                            >
+                              <ExternalLink className="w-3 h-3" />
+                              Voir sur Instagram
+                            </a>
+                          )}
+                          {album.externalLink && (
+                            <a 
+                              href={album.externalLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={(e) => e.stopPropagation()}
+                              className="inline-flex items-center gap-1 mt-3 text-sm text-primary hover:underline"
+                            >
+                              <ExternalLink className="w-3 h-3" />
+                              Lire l'article
+                            </a>
+                          )}
                         </div>
                       </div>
-                      <div className="p-6">
-                        <p className="text-sm text-primary font-medium mb-2">{album.location}</p>
-                        <h3 className="font-display text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-                          {album.title}
-                        </h3>
-                        <p className="text-muted-foreground text-sm line-clamp-2">
-                          {album.description}
-                        </p>
-                        {album.journalist && (
-                          <p className="text-xs text-muted-foreground mt-2 italic">
-                            Par {album.journalist}
-                          </p>
-                        )}
-                        {album.instagramLink && (
-                          <a 
-                            href={album.instagramLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={(e) => e.stopPropagation()}
-                            className="inline-flex items-center gap-1 mt-3 text-sm text-primary hover:underline"
-                          >
-                            <ExternalLink className="w-3 h-3" />
-                            Voir sur Instagram
-                          </a>
-                        )}
-                        {album.externalLink && (
-                          <a 
-                            href={album.externalLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={(e) => e.stopPropagation()}
-                            className="inline-flex items-center gap-1 mt-3 text-sm text-primary hover:underline"
-                          >
-                            <ExternalLink className="w-3 h-3" />
-                            Lire l'article
-                          </a>
-                        )}
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </motion.div>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </>
             ) : (
               <motion.div
                 key="photos"
