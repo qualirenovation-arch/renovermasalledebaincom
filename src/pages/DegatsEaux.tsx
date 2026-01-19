@@ -1,7 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import { Eye, AlertTriangle, Shield, Droplets } from "lucide-react";
+import { Eye, AlertTriangle, Shield, Droplets, CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -55,6 +55,92 @@ export default function DegatsEaux() {
             <p className="text-muted-foreground text-lg md:text-xl">
               Prévention, bonnes pratiques et conseils d'experts pour éviter les sinistres
             </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section explicative mobile-optimisée */}
+      <section className="py-8 md:py-12 bg-background">
+        <div className="container-custom">
+          <motion.div
+            className="max-w-2xl mx-auto space-y-6 md:space-y-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            {/* Accroche percutante */}
+            <div className="text-center">
+              <p className="text-2xl md:text-3xl font-display font-bold text-foreground leading-tight">
+                😱 Appartement inondé ?
+              </p>
+              <p className="text-lg md:text-xl text-primary font-medium mt-1">
+                Voilà ce que personne ne vous dit…
+              </p>
+            </div>
+
+            {/* Texte simplifié */}
+            <div className="space-y-3 text-center">
+              <p className="text-muted-foreground text-base">
+                Après un dégât des eaux, beaucoup appellent une entreprise de rénovation.
+              </p>
+              <p className="text-red-600 font-medium flex items-center justify-center gap-2">
+                <span>❌</span> Mauvaise idée : elle se contente souvent d'exécuter des travaux.
+              </p>
+            </div>
+
+            {/* Notre différence */}
+            <div className="bg-primary/5 rounded-xl p-4 md:p-6 border border-primary/10">
+              <p className="text-foreground font-semibold text-center mb-1">
+                👉 Chez QualiRénovation, nous allons plus loin.
+              </p>
+              <p className="text-primary font-medium text-center">
+                Nous avons un maître d'œuvre intégré.
+              </p>
+            </div>
+
+            {/* Liste des avantages */}
+            <div className="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-border/50">
+              <h3 className="font-semibold text-foreground mb-4 text-center text-sm uppercase tracking-wide">
+                Ce que ça change pour vous
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground text-sm md:text-base">Des devis complets (pas de réparations partielles)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground text-sm md:text-base">Un accompagnement avec l'assurance et le syndic</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground text-sm md:text-base">Une prise en charge globale si le logement est inhabitable</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground text-sm md:text-base">Une coordination complète jusqu'à la remise en état finale</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Phrase résultat */}
+            <div className="bg-gradient-to-r from-amber-50 to-amber-100/50 rounded-xl p-4 md:p-6 border border-amber-200/50">
+              <p className="text-center text-foreground font-medium flex items-center justify-center gap-2 flex-wrap">
+                <Sparkles className="w-5 h-5 text-amber-500" />
+                <span>Vous êtes indemnisé, accompagné et votre logement est remis en état correctement.</span>
+              </p>
+            </div>
+
+            {/* Différenciation finale */}
+            <div className="text-center space-y-2 pt-2">
+              <p className="text-muted-foreground flex items-center justify-center gap-2">
+                <ArrowRight className="w-4 h-4" />
+                <span>Une entreprise répare.</span>
+              </p>
+              <p className="text-primary font-semibold">
+                Nous défendons vos intérêts et pilotons votre projet de A à Z.
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
