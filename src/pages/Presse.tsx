@@ -22,6 +22,7 @@ import presseMarieClaireAvant from "@/assets/presse-marie-claire-2.jpg";
 import presseMarieClaireAdresses from "@/assets/presse-marie-claire-adresses.png";
 import presseHouzzSoisy from "@/assets/presse-houzz-soisy.png";
 import presseHouzzBois from "@/assets/presse-houzz-bois.jpg";
+import presse18h39Joints from "@/assets/guide-joint-noir.webp";
 
 interface Photo {
   id: number;
@@ -45,6 +46,21 @@ interface Album {
 }
 
 const presseAlbums: Album[] = [
+  // Janvier 2025 - Interview 18h39
+  {
+    id: "presse-18h39-joints",
+    title: "Joints de couleur : comment mettre en valeur votre carrelage",
+    location: "Interview 18h39",
+    description: "Depuis longtemps, Carina Nahmani est une référence dans le monde de la rénovation. Découvrez son interview exclusive pour 18h39, média de référence en tendances déco. Un sujet passionnant sur les joints de carrelage colorés : longtemps considérés comme purement techniques, ils deviennent un véritable levier esthétique. Couleur, contraste ou continuité — bien choisis, ils subliment le carrelage et structurent l'espace.",
+    coverImage: presse18h39Joints,
+    externalLink: "https://www.18h39.fr/inspiration-maison/tendances-deco/idee-deco-optez-pour-des-joints-de-couleurs-pour-mettre-en-valeur-votre-carrelage.html",
+    source: "18h39",
+    publishDate: "Janvier 2025",
+    journalist: "Rédaction 18h39",
+    photos: [
+      { id: 1, image: presse18h39Joints, title: "Joints colorés", description: "L'art du détail qui fait toute la différence" },
+    ],
+  },
   // Janvier 2025
   {
     id: "presse-houzz-soisy",
