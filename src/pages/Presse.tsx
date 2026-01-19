@@ -16,7 +16,7 @@ import presseHouzzSoisy from "@/assets/presse-houzz-soisy.png";
 import presseHouzzBois from "@/assets/presse-houzz-bois.jpg";
 import presse18h39Joints from "@/assets/guide-joint-noir.webp";
 import presseElleSoisy from "@/assets/presse-elle-soisy.jpg";
-import presseHouzzEau from "@/assets/presse-houzz-eau.png";
+import presseHouzzEau from "@/assets/presse-houzz-laumiere.png";
 import presse18h39Wc from "@/assets/presse-18h39-wc.png";
 import soisy1 from "@/assets/soisy-1.jpg";
 import presseHouzzBuanderie from "@/assets/presse-houzz-buanderie.png";
