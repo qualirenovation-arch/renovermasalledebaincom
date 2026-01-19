@@ -149,16 +149,16 @@ const DegatsEaux = () => {
               </div>
             </div>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-              Dégâts des eaux
+              Dégât des eaux ? Et si c'était l'occasion de faire mieux ? ✨
             </h1>
             <p className="text-muted-foreground text-lg md:text-xl">
-              Prévention, bonnes pratiques et conseils d'experts pour éviter les sinistres
+              Galère… ou opportunité de transformer votre espace ?
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Section explicative - mobile optimisée */}
+      {/* Section Notre approche */}
       <section className="py-10 md:py-14 bg-background">
         <div className="container-custom">
           <motion.div
@@ -167,7 +167,7 @@ const DegatsEaux = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            {/* Accroche percutante */}
+            {/* Notre philosophie */}
             <div className="text-center mb-8">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -176,40 +176,49 @@ const DegatsEaux = () => {
                 className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-4"
               >
                 <Sparkles className="w-4 h-4" />
-                Appartement inondé ?
+                Notre philosophie
               </motion.div>
-              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">
-                Ne restez pas seul face au sinistre
-              </h2>
-              <p className="text-muted-foreground">
-                Nous défendons vos intérêts face aux assurances et aux syndics
+              <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
+                Chez QualiRénovation by QualiConcept, on ne se contente pas de « remettre en état ».
+                On vous aide à <strong className="text-foreground">transformer un sinistre en opportunité</strong> : 
+                repenser l'espace, améliorer le confort, s'adapter à vos besoins.
               </p>
             </div>
 
-            {/* Liste d'avantages avec icônes */}
-            <div className="space-y-4 mb-8">
-              {[
-                "Accompagnement dès la déclaration du sinistre",
-                "Assistance aux réunions d'expertise",
-                "Devis complets et conformes pour l'assurance",
-                "Coordination avec le syndic et les voisins",
-                "Remise en état complète de votre salle de bain"
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-start gap-3 bg-white rounded-lg p-3 shadow-sm border border-border/30"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-foreground text-sm md:text-base">{item}</span>
-                </motion.div>
-              ))}
-            </div>
+            {/* Témoignage Julia */}
+            <motion.div
+              className="bg-gradient-to-br from-blue-50 to-white rounded-xl p-6 border border-blue-100 mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+                <span className="text-xl">✨</span> L'exemple de Julia
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                C'est exactement ce qui s'est passé pour Julia, une locataire dont le studio a été sinistré.
+                Aujourd'hui, elle retrouve un logement plus beau, mieux pensé, avec une nouvelle cuisine 
+                et une pièce de vie optimisée.
+              </p>
+              <p className="text-foreground font-medium mt-3">
+                ➡️ Ce qui était une vraie galère est devenu une chance de réinventer son espace de vie.
+              </p>
+              <div className="mt-4 pt-4 border-t border-blue-100">
+                <p className="text-sm text-muted-foreground flex items-center gap-2">
+                  <span>📲</span> Retrouvez le live du chantier sur notre compte Instagram : 
+                  <a 
+                    href="https://www.instagram.com/qualirenovation__travaux/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline font-medium"
+                  >
+                    @qualirenovation__travaux
+                  </a>
+                </p>
+              </div>
+            </motion.div>
 
-            {/* Mise en avant valeur ajoutée */}
+            {/* Avec QualiRénovation */}
             <motion.div
               className="bg-gradient-to-br from-stone-100 to-stone-50 rounded-xl p-6 border border-stone-200"
               initial={{ opacity: 0, y: 20 }}
@@ -221,16 +230,83 @@ const DegatsEaux = () => {
                   <Shield className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-2">
-                    Plus qu'un simple exécutant
+                  <h3 className="font-semibold text-foreground mb-3">
+                    🙋‍♀️ Avec QualiRénovation, vous n'êtes pas seuls
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    En tant que maître d'œuvre, nous ne nous contentons pas de réaliser les travaux. 
-                    Nous pilotons l'ensemble du projet : coordination des intervenants, suivi administratif 
-                    avec l'assurance, et défense de vos intérêts jusqu'à la remise en état finale.
-                  </p>
+                  <div className="space-y-2">
+                    {[
+                      "On vous accompagne dans les démarches avec votre assurance",
+                      "On défend vos intérêts lors des expertises",
+                      "On chiffre les travaux au plus juste",
+                      "On vous propose des solutions durables et parfois… bien meilleures qu'avant !"
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-start gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground text-sm">{item}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section Conseils pratiques */}
+      <section className="py-10 md:py-14 bg-stone-50">
+        <div className="container-custom">
+          <motion.div
+            className="max-w-md mx-auto md:max-w-3xl"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="text-center mb-8">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">
+                📋 Nos conseils en cas de dégât des eaux
+              </h2>
+            </div>
+
+            <div className="space-y-4">
+              {[
+                { num: "1️⃣", text: "Déclarez le sinistre à votre assurance rapidement." },
+                { num: "2️⃣", text: "Faites intervenir un professionnel pour identifier et réparer la fuite." },
+                { num: "3️⃣", text: "Contactez votre syndic : il faut déterminer si la fuite est privative ou commune." },
+                { num: "4️⃣", text: "Organisez la recherche de fuite, surtout si des voisins sont concernés (et parfois... récalcitrants)." },
+                { num: "5️⃣", text: "Attendez le passage de l'expert pour valider le périmètre des travaux." }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="flex items-start gap-3 bg-white rounded-lg p-4 shadow-sm border border-border/30"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <span className="text-xl flex-shrink-0">{item.num}</span>
+                  <span className="text-foreground">{item.text}</span>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <motion.div
+              className="text-center mt-8"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+            >
+              <p className="text-muted-foreground mb-4">
+                📞 Une question ? Un sinistre à gérer ?
+              </p>
+              <Link to="/devis">
+                <Button variant="cta" size="lg" className="group">
+                  Contactez-nous
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </motion.div>
           </motion.div>
         </div>
