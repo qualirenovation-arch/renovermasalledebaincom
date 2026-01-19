@@ -47,7 +47,7 @@ export function Header() {
               />
               <div className="flex flex-col leading-tight">
                 <span className="font-display text-lg md:text-xl font-semibold text-navy">
-                  renovermasalledebain
+                  renovermasalledebain.com
                 </span>
                 <span className="text-xs md:text-sm font-medium text-gold-dark">
                   by QualiRénovation
