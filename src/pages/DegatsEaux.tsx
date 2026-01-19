@@ -1,10 +1,11 @@
 import { Layout } from "@/components/layout/Layout";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import { Eye, AlertTriangle, Shield, Droplets, CheckCircle2, ArrowRight, Sparkles, ClipboardList, HardHat, HelpCircle, ChevronDown, MapPin } from "lucide-react";
+import { Eye, AlertTriangle, Shield, Droplets, CheckCircle2, ArrowRight, Sparkles, ClipboardList, HardHat, HelpCircle, ChevronDown, MapPin, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 // Images chantiers dégâts des eaux
 import jemmapesApres1 from "@/assets/jemmapes-apres-1.jpg";
@@ -116,10 +117,20 @@ const FAQItem = ({ question, answer, isOpen, onToggle, index }: {
 
 const DegatsEaux = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string; type: 'avant' | 'apres' } | null>(null);
 
   const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
+
+  // Images Julia (Sergent Bauchart)
+  const juliaImages = [
+    { src: bauchartAvant1, alt: "Avant — État des lieux après sinistre", type: 'avant' as const },
+    { src: bauchartAvant2, alt: "Avant — Traces de moisissures", type: 'avant' as const },
+    { src: bauchartAvant3, alt: "Avant — Démolition plomberie", type: 'avant' as const },
+    { src: bauchartApres1, alt: "Après — Cuisine rénovée", type: 'apres' as const },
+    { src: bauchartApres2, alt: "Après — Vue évier", type: 'apres' as const },
+  ];
 
   // Generate JSON-LD for FAQ
   const faqJsonLd = {
@@ -202,7 +213,7 @@ const DegatsEaux = () => {
               viewport={{ once: true }}
             >
               <h3 className="font-semibold text-foreground mb-3 flex items-center gap-2">
-                <span className="text-xl">✨</span> L'exemple de Julia
+                <span className="text-xl">✨</span> L'exemple de Julia — Paris 12ème
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 C'est exactement ce qui s'est passé pour Julia, une locataire dont le studio a été sinistré.
@@ -212,6 +223,30 @@ const DegatsEaux = () => {
               <p className="text-foreground font-medium mt-3">
                 ➡️ Ce qui était une vraie galère est devenu une chance de réinventer son espace de vie.
               </p>
+
+              {/* Vignettes photos cliquables */}
+              <div className="mt-4 pt-4 border-t border-blue-100">
+                <p className="text-xs text-muted-foreground mb-3">📷 Cliquez pour agrandir</p>
+                <div className="flex flex-wrap gap-2">
+                  {juliaImages.map((img, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setSelectedImage(img)}
+                      className="relative w-14 h-14 rounded-lg overflow-hidden border-2 border-white shadow-sm hover:shadow-md hover:scale-105 transition-all cursor-pointer"
+                    >
+                      <img 
+                        src={img.src} 
+                        alt={img.alt}
+                        className="w-full h-full object-cover"
+                      />
+                      <span className={`absolute bottom-0 left-0 right-0 text-[8px] font-medium text-white text-center py-0.5 ${img.type === 'avant' ? 'bg-amber-600/90' : 'bg-green-600/90'}`}>
+                        {img.type === 'avant' ? 'Avant' : 'Après'}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
               <div className="mt-4 pt-4 border-t border-blue-100">
                 <p className="text-sm text-muted-foreground flex items-center gap-2">
                   <span>📲</span> Retrouvez le live du chantier sur notre compte Instagram : 
@@ -322,91 +357,6 @@ const DegatsEaux = () => {
             </div>
           </motion.div>
 
-          {/* Chantier Sergent Bauchart */}
-          <motion.div
-            className="bg-white rounded-xl overflow-hidden shadow-md border border-border/30"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-          >
-            <div className="p-6 border-b border-border/30">
-              <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                <MapPin className="w-4 h-4" />
-                <span>Paris 12ème — Rue du Sergent Bauchart</span>
-              </div>
-              <h3 className="font-display text-xl font-bold text-foreground">
-                Rénovation complète après sinistre — Studio Julia
-              </h3>
-              <p className="text-muted-foreground text-sm mt-2">
-                Ce studio a été entièrement rénové après un dégât des eaux important. La cuisine a été repensée avec des finitions modernes : meuble blanc, plan de travail imitation bois, optimisation des rangements.
-              </p>
-            </div>
-            
-            {/* Photos AVANT */}
-            <div className="p-4 border-b border-border/20">
-              <p className="text-sm font-medium text-muted-foreground mb-3">État avant travaux</p>
-              <div className="grid grid-cols-3 gap-3">
-                <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
-                  <img 
-                    src={bauchartAvant1} 
-                    alt="Avant — État des lieux après sinistre rue du Sergent Bauchart"
-                    className="w-full h-full object-cover"
-                  />
-                  <span className="absolute top-2 left-2 bg-amber-600 text-white text-xs font-medium px-2 py-1 rounded">
-                    Avant
-                  </span>
-                </div>
-                <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
-                  <img 
-                    src={bauchartAvant2} 
-                    alt="Avant — Traces de moisissures et plomberie apparente"
-                    className="w-full h-full object-cover"
-                  />
-                  <span className="absolute top-2 left-2 bg-amber-600 text-white text-xs font-medium px-2 py-1 rounded">
-                    Avant
-                  </span>
-                </div>
-                <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
-                  <img 
-                    src={bauchartAvant3} 
-                    alt="Avant — Démolition et accès à la plomberie"
-                    className="w-full h-full object-cover"
-                  />
-                  <span className="absolute top-2 left-2 bg-amber-600 text-white text-xs font-medium px-2 py-1 rounded">
-                    Avant
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Photos APRÈS */}
-            <div className="p-4">
-              <p className="text-sm font-medium text-muted-foreground mb-3">Résultat final</p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
-                  <img 
-                    src={bauchartApres1} 
-                    alt="Après — Cuisine rénovée vue équipements"
-                    className="w-full h-full object-cover"
-                  />
-                  <span className="absolute top-2 left-2 bg-green-600 text-white text-xs font-medium px-2 py-1 rounded">
-                    Après
-                  </span>
-                </div>
-                <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
-                  <img 
-                    src={bauchartApres2} 
-                    alt="Après — Cuisine rénovée vue évier"
-                    className="w-full h-full object-cover"
-                  />
-                  <span className="absolute top-2 left-2 bg-green-600 text-white text-xs font-medium px-2 py-1 rounded">
-                    Après
-                  </span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 
@@ -713,6 +663,25 @@ const DegatsEaux = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Lightbox pour les photos */}
+      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+        <DialogContent className="max-w-3xl p-2 bg-black/95 border-none">
+          {selectedImage && (
+            <div className="relative">
+              <img 
+                src={selectedImage.src} 
+                alt={selectedImage.alt}
+                className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+              />
+              <span className={`absolute top-4 left-4 text-sm font-medium text-white px-3 py-1 rounded ${selectedImage.type === 'avant' ? 'bg-amber-600' : 'bg-green-600'}`}>
+                {selectedImage.type === 'avant' ? 'Avant' : 'Après'}
+              </span>
+              <p className="text-white/80 text-center text-sm mt-3">{selectedImage.alt}</p>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
 
     </Layout>
   );
