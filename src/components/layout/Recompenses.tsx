@@ -1,127 +1,113 @@
-import { Star, ThumbsUp, Volume2 } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
-// Badge "Best of Houzz" component
-const HouzzPrixBadge = ({ 
+// Badge "Best of Houzz" - Design moderne et compact
+const HouzzBadge = ({ 
   year, 
-  category, 
-  variant = "main" 
+  category 
 }: { 
   year: string; 
   category: "Photo" | "Service"; 
-  variant?: "main" | "small";
 }) => {
-  const isMain = variant === "main";
+  const isPhoto = category === "Photo";
   
-  if (isMain) {
-    return (
-      <div className="flex flex-col items-center">
-        <div className="relative w-16 h-20 bg-[#4CAF50] rounded-t-lg flex flex-col items-center justify-center text-white shadow-md">
-          {/* Houzz logo */}
-          <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-5 h-5 bg-white rounded flex items-center justify-center">
-            <span className="text-[#4CAF50] font-bold text-[10px]">h</span>
-          </div>
-          <span className="text-2xl font-bold mt-3">{year}</span>
-          <span className="text-[8px] uppercase tracking-wide">Best of Houzz</span>
-          <span className="text-[7px]">{category}</span>
-        </div>
-        {/* Ribbon effect */}
-        <div className="flex">
-          <div className="w-0 h-0 border-l-[8px] border-l-transparent border-t-[8px] border-t-[#388E3C]"></div>
-          <div className="w-0 h-0 border-r-[8px] border-r-transparent border-t-[8px] border-t-[#388E3C]"></div>
-        </div>
-      </div>
-    );
-  }
-
-  // Small variant for older years
   return (
-    <div className="flex flex-col items-center bg-white rounded-lg shadow-sm border border-gray-200 p-2 min-w-[65px]">
-      <span className="text-[8px] text-gray-500 uppercase">Best of</span>
-      <div className="flex items-center gap-0.5">
-        <span className="text-[#4CAF50] font-bold text-[10px]">h</span>
-        <span className="text-[10px] font-medium text-gray-700">houzz</span>
+    <div className="flex flex-col items-center group">
+      <div className="relative w-12 h-14 bg-gradient-to-b from-[#7ac142] to-[#5a9a32] rounded-t-md flex flex-col items-center justify-center text-white shadow-md group-hover:shadow-lg transition-shadow">
+        {/* Houzz logo */}
+        <div className="absolute -top-0.5 left-1/2 -translate-x-1/2 w-4 h-4 bg-white rounded-sm flex items-center justify-center shadow-sm">
+          <span className="text-[#7ac142] font-bold text-[8px]">h</span>
+        </div>
+        <span className="text-lg font-bold mt-2 leading-none">{year}</span>
+        <span className="text-[5px] uppercase tracking-wider opacity-90">Best of</span>
       </div>
-      <span className="text-sm font-bold text-gray-800">{year}</span>
-      <span className="text-[8px] text-white bg-[#4CAF50] px-2 py-0.5 rounded uppercase tracking-wide">
+      {/* Ribbon */}
+      <div className="flex">
+        <div className="w-0 h-0 border-l-[6px] border-l-transparent border-t-[5px] border-t-[#4a8a2a]"></div>
+        <div className="w-0 h-0 border-r-[6px] border-r-transparent border-t-[5px] border-t-[#4a8a2a]"></div>
+      </div>
+      {/* Category label */}
+      <span className={`text-[9px] font-medium mt-1 px-2 py-0.5 rounded-full ${
+        isPhoto 
+          ? "bg-amber-100 text-amber-700" 
+          : "bg-emerald-100 text-emerald-700"
+      }`}>
         {category}
       </span>
     </div>
   );
 };
 
-// Badge Houzz (icons)
-const HouzzBadge = ({ 
-  type, 
-  value 
+// Icon badges (Pro, Star, etc.)
+const HouzzIconBadge = ({ 
+  type 
 }: { 
   type: "pro" | "star" | "influence" | "recommended" | "saves";
-  value?: string;
 }) => {
-  const baseClasses = "w-14 h-14 rounded-lg flex flex-col items-center justify-center shadow-sm";
-  
-  switch (type) {
-    case "pro":
-      return (
-        <div className={`${baseClasses} bg-[#4CAF50] text-white`}>
-          <span className="text-[7px] uppercase">J'utilise</span>
-          <span className="font-bold text-[10px]">HOUZZ</span>
-          <span className="text-[8px] bg-white text-[#4CAF50] px-1.5 rounded font-medium">PRO</span>
-        </div>
-      );
-    case "star":
-      return (
-        <div className={`${baseClasses} bg-[#FFC107]`}>
-          <Star className="w-6 h-6 text-white fill-white" />
-          <span className="text-white font-bold text-sm">{value || "5"}</span>
-        </div>
-      );
-    case "influence":
-      return (
-        <div className={`${baseClasses} bg-[#4CAF50] text-white`}>
-          <div className="flex items-center gap-0.5 mb-1">
-            <span className="font-bold text-[10px]">h</span>
-            <span className="text-[9px]">houzz</span>
-          </div>
-          <Volume2 className="w-5 h-5" />
-        </div>
-      );
-    case "recommended":
-      return (
-        <div className={`${baseClasses} bg-[#4CAF50] text-white`}>
-          <div className="flex items-center gap-0.5 mb-1">
-            <span className="font-bold text-[10px]">h</span>
-            <span className="text-[9px]">houzz</span>
-          </div>
-          <ThumbsUp className="w-5 h-5" />
-        </div>
-      );
-    case "saves":
-      return (
-        <div className={`${baseClasses} bg-[#4CAF50] text-white`}>
-          <div className="flex items-center gap-0.5">
-            <span className="font-bold text-[10px]">h</span>
-            <span className="text-[9px]">houzz</span>
-          </div>
-          <span className="text-lg font-bold">{value || "25K"}</span>
-          <span className="text-[7px] uppercase">Ajouts</span>
-        </div>
-      );
-    default:
-      return null;
-  }
+  const configs = {
+    pro: {
+      bg: "bg-gradient-to-b from-[#7ac142] to-[#5a9a32]",
+      content: (
+        <>
+          <span className="text-[6px] uppercase opacity-80">Pro</span>
+          <span className="font-bold text-xs">houzz</span>
+        </>
+      )
+    },
+    star: {
+      bg: "bg-gradient-to-b from-amber-400 to-amber-500",
+      content: (
+        <>
+          <span className="text-lg">★</span>
+          <span className="text-[10px] font-bold">5/5</span>
+        </>
+      )
+    },
+    influence: {
+      bg: "bg-gradient-to-b from-[#7ac142] to-[#5a9a32]",
+      content: (
+        <>
+          <span className="text-[6px] uppercase opacity-80">Influence</span>
+          <span className="text-sm">📢</span>
+        </>
+      )
+    },
+    recommended: {
+      bg: "bg-gradient-to-b from-[#7ac142] to-[#5a9a32]",
+      content: (
+        <>
+          <span className="text-[6px] uppercase opacity-80">Recommandé</span>
+          <span className="text-sm">👍</span>
+        </>
+      )
+    },
+    saves: {
+      bg: "bg-gradient-to-b from-[#7ac142] to-[#5a9a32]",
+      content: (
+        <>
+          <span className="font-bold text-sm">25K</span>
+          <span className="text-[6px] uppercase opacity-80">Ajouts</span>
+        </>
+      )
+    }
+  };
+
+  const config = configs[type];
+
+  return (
+    <div className={`w-10 h-10 ${config.bg} rounded-lg flex flex-col items-center justify-center text-white shadow-md`}>
+      {config.content}
+    </div>
+  );
 };
 
 export function Recompenses() {
-  const mainPrix = [
+  const allBadges = [
     { year: "2025", category: "Photo" as const },
     { year: "2024", category: "Photo" as const },
     { year: "2023", category: "Service" as const },
     { year: "2023", category: "Photo" as const },
     { year: "2022", category: "Service" as const },
     { year: "2022", category: "Photo" as const },
-  ];
-
-  const smallPrix = [
     { year: "2021", category: "Photo" as const },
     { year: "2020", category: "Photo" as const },
     { year: "2020", category: "Service" as const },
@@ -130,68 +116,51 @@ export function Recompenses() {
   ];
 
   return (
-    <section className="py-16 bg-stone border-t border-border">
+    <section className="py-8 bg-stone/50 border-t border-border/50">
       <div className="container-custom">
-        <h2 className="font-display text-2xl md:text-3xl font-semibold mb-10 text-center">
-          Récompenses
-        </h2>
+        {/* Header - minimal */}
+        <div className="flex items-center justify-center gap-3 mb-6">
+          <div className="h-px w-12 bg-border"></div>
+          <h2 className="text-sm font-medium text-muted-foreground tracking-wide uppercase">
+            Reconnu par Houzz
+          </h2>
+          <div className="h-px w-12 bg-border"></div>
+        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Prix Houzz */}
-          <div>
-            <h3 className="text-lg font-medium text-foreground mb-6">
-              11 Prix Houzz
-            </h3>
-            
-            {/* Main badges (2022-2025) */}
-            <div className="flex flex-wrap gap-3 mb-6">
-              {mainPrix.map((prix, index) => (
-                <HouzzPrixBadge 
-                  key={`main-${index}`}
-                  year={prix.year} 
-                  category={prix.category}
-                  variant="main"
-                />
-              ))}
-            </div>
-
-            {/* Small badges (2019-2021) */}
-            <div className="flex flex-wrap gap-2">
-              {smallPrix.map((prix, index) => (
-                <HouzzPrixBadge 
-                  key={`small-${index}`}
-                  year={prix.year} 
-                  category={prix.category}
-                  variant="small"
-                />
-              ))}
-            </div>
+        {/* Single row of badges */}
+        <div className="flex flex-wrap items-end justify-center gap-3 md:gap-4">
+          {/* Year badges */}
+          {allBadges.map((badge, index) => (
+            <HouzzBadge 
+              key={`${badge.year}-${badge.category}-${index}`}
+              year={badge.year} 
+              category={badge.category}
+            />
+          ))}
+          
+          {/* Separator */}
+          <div className="hidden md:block w-px h-12 bg-border/60 mx-2"></div>
+          
+          {/* Icon badges */}
+          <div className="flex gap-2 mt-4 md:mt-0">
+            <HouzzIconBadge type="pro" />
+            <HouzzIconBadge type="star" />
+            <HouzzIconBadge type="recommended" />
+            <HouzzIconBadge type="saves" />
           </div>
+        </div>
 
-          {/* Badges Houzz */}
-          <div>
-            <h3 className="text-lg font-medium text-foreground mb-6">
-              6 Badges Houzz
-            </h3>
-            
-            <div className="flex flex-wrap gap-3">
-              <HouzzBadge type="pro" />
-              <HouzzBadge type="star" value="5" />
-              <HouzzBadge type="influence" />
-              <HouzzBadge type="recommended" />
-              <HouzzBadge type="saves" value="25K" />
-            </div>
-
-            {/* Link to Houzz profile */}
-            <a 
-              href="https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 mt-6 text-sm text-wood hover:underline font-medium"
-            >
-              Voir notre profil Houzz →
-            </a>
-          </div>
+        {/* Link to Houzz */}
+        <div className="flex justify-center mt-5">
+          <a 
+            href="https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-wood transition-colors"
+          >
+            Voir notre profil
+            <ExternalLink className="w-3 h-3" />
+          </a>
         </div>
       </div>
     </section>
