@@ -2,10 +2,11 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { ArrowRight, Phone, Pencil, Gem, Wrench, Play, Sparkles, ChevronRight } from "lucide-react";
+import { ArrowRight, Phone, Pencil, Gem, Wrench, Play, Sparkles, ChevronRight, Newspaper, BookOpen, Video } from "lucide-react";
 import jemmapes1 from "@/assets/jemmapes-1.jpg";
 import vincennesMr1 from "@/assets/vincennes-mr-1.jpg";
 import nicolasRoretDouche from "@/assets/nicolas-roret-douche.jpg";
+import { presseNews, guideConseils, videoConseils } from "@/data/newsData";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -79,8 +80,61 @@ const styleTags = [
 ];
 
 export default function Index() {
+  // Récupérer les dernières actualités
+  const latestPresse = presseNews.slice(0, 1)[0];
+  const latestGuide = guideConseils.slice(0, 1)[0];
+  const latestVideo = videoConseils.find(v => v.instagramUrl && !v.instagramUrl.includes("VOTRE_LIEN_ICI"));
+
   return (
     <Layout>
+      {/* Bandeau Actualités */}
+      <div className="bg-gradient-to-r from-primary/10 via-accent/20 to-primary/10 border-b border-border">
+        <div className="container-custom py-3">
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 text-sm">
+            {latestPresse && (
+              <a 
+                href={latestPresse.externalLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
+              >
+                <Newspaper className="w-4 h-4 text-primary" />
+                <span className="hidden sm:inline font-medium text-foreground">Presse :</span>
+                <span className="group-hover:underline line-clamp-1">{latestPresse.source} — {latestPresse.title}</span>
+              </a>
+            )}
+            
+            <span className="hidden md:block text-border">|</span>
+            
+            {latestGuide && (
+              <Link 
+                to={latestGuide.link}
+                className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
+              >
+                <BookOpen className="w-4 h-4 text-primary" />
+                <span className="hidden sm:inline font-medium text-foreground">Guide :</span>
+                <span className="group-hover:underline line-clamp-1">{latestGuide.title}</span>
+              </Link>
+            )}
+            
+            <span className="hidden lg:block text-border">|</span>
+            
+            {latestVideo && (
+              <a 
+                href={latestVideo.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden lg:flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
+              >
+                <Video className="w-4 h-4 text-primary" />
+                <span className="font-medium text-foreground">Vidéo :</span>
+                <span className="group-hover:underline line-clamp-1">{latestVideo.title}</span>
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+
       {/* Hero Section - Style épuré beige */}
       <section className="bg-stone py-16 md:py-24">
         <div className="container-custom">

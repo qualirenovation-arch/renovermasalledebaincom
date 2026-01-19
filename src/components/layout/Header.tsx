@@ -1,14 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Newspaper, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, Droplets } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-import { NewsColumn } from "./NewsColumn";
 
 const navItems = [
   { label: "Accueil", path: "/" },
@@ -68,20 +62,19 @@ export function Header() {
               ))}
             </nav>
 
-            {/* News Column + CTA Button - Desktop */}
+            {/* Dégâts des eaux + CTA Button - Desktop */}
             <div className="hidden lg:flex items-center gap-4">
-              <Popover>
-                <PopoverTrigger asChild>
-                  <button className="flex items-center gap-1.5 px-3 py-2 rounded-full text-sm font-medium text-foreground hover:bg-secondary transition-all duration-300">
-                    <Newspaper className="w-4 h-4" />
-                    Actualités
-                    <ChevronDown className="w-3 h-3" />
-                  </button>
-                </PopoverTrigger>
-                <PopoverContent align="end" className="w-auto p-0 border-border shadow-xl">
-                  <NewsColumn />
-                </PopoverContent>
-              </Popover>
+              <Link 
+                to="/degats-eaux" 
+                className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  location.pathname === "/degats-eaux"
+                    ? "bg-blue-100 text-blue-700"
+                    : "text-foreground hover:bg-blue-50"
+                }`}
+              >
+                <Droplets className="w-4 h-4" />
+                Dégâts des eaux
+              </Link>
               
               <Button variant="cta" size="lg" asChild>
                 <Link to="/devis">Devis gratuit</Link>
