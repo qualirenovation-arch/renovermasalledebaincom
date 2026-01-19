@@ -10,6 +10,7 @@ const navItems = [
   { label: "À propos", path: "/a-propos" },
   { label: "Pourquoi nous", path: "/pourquoi-nous" },
   { label: "Réalisations", path: "/realisations" },
+  { label: "Presse", path: "/presse#parutions" },
   { label: "Guide travaux", path: "/guide-travaux" },
   { label: "Dégâts des eaux", path: "/degats-eaux" },
 ];
