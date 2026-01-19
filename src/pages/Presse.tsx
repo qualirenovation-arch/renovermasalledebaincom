@@ -34,6 +34,7 @@ interface ParutionPresse {
   type: "article" | "interview" | "reportage";
   image?: string;
   journalist?: string;
+  location?: string; // Paris 19ème - Avenue Laumière
 }
 
 const parutions_presse: ParutionPresse[] = [
@@ -80,6 +81,7 @@ const parutions_presse: ParutionPresse[] = [
     type: "article",
     image: presseHouzzEau,
     journalist: "Anne-Laure Sizun",
+    location: "Paris 19ème - Avenue Laumière",
   },
   {
     id: "marie-claire-adresses-2024",
@@ -338,12 +340,15 @@ export default function Presse() {
                     {article.extrait_seo}
                   </p>
 
-                  {/* Journaliste (optionnel) */}
-                  {article.journalist && (
-                    <p className="text-xs text-muted-foreground/70 italic">
-                      Par {article.journalist}
-                    </p>
-                  )}
+                  {/* Journaliste + Location (optionnel) */}
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground/70">
+                    {article.journalist && (
+                      <span className="italic">Par {article.journalist}</span>
+                    )}
+                    {article.location && (
+                      <span className="font-medium text-primary/70">📍 {article.location}</span>
+                    )}
+                  </div>
 
                   {/* CTA : Lire l'article */}
                   <a
