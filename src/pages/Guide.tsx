@@ -193,7 +193,7 @@ const Guide = () => {
                 </div>
               </div>
               
-              {/* Vidéo 3 - VMC */}
+              {/* Vidéo 3 - VMC + rangement malin */}
               <div className="bg-background rounded-xl overflow-hidden shadow-md border border-primary/10">
                 <video 
                   className="w-full aspect-[9/16] object-cover"
@@ -205,7 +205,9 @@ const Guide = () => {
                   Votre navigateur ne supporte pas la lecture vidéo.
                 </video>
                 <div className="p-3">
-                  <h3 className="font-semibold text-sm text-foreground line-clamp-2">L'intérêt de la VMC en salle de bain</h3>
+                  <h3 className="font-semibold text-sm text-foreground">VMC WC + rangement malin : le combo gagnant ✨</h3>
+                  <p className="text-xs text-muted-foreground mt-1">En conservant la VMC collective et en intégrant l'accès dans la menuiserie, on a pu créer un placard au-dessus des WC, sans compromettre la ventilation.</p>
+                  <p className="text-xs text-primary mt-2">👉 Plus de rangements, une solution propre, conforme… et futée.</p>
                 </div>
               </div>
               
