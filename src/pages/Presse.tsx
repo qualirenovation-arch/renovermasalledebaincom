@@ -16,6 +16,7 @@ import presseHouzzSoisy from "@/assets/presse-houzz-soisy.png";
 import presseHouzzBois from "@/assets/presse-houzz-bois.jpg";
 import presse18h39Joints from "@/assets/guide-joint-noir.webp";
 import presseElleSoisy from "@/assets/presse-elle-soisy.jpg";
+import presseHouzzEau from "@/assets/presse-houzz-eau.png";
 
 // ========================================
 // Structure "base de données" : parutions_presse
@@ -67,6 +68,17 @@ const parutions_presse: ParutionPresse[] = [
     type: "article",
     image: stMande1,
     journalist: "Agnès Carpentier",
+  },
+  {
+    id: "houzz-eau-2024",
+    date_publication: "2024-10-31",
+    media: "Houzz",
+    titre_article: "9 aménagements pour économiser l'eau au quotidien",
+    extrait_seo: "La double plaque de commande des WC mise à l'honneur dans cet article Houzz. Un aménagement simple et efficace pour réduire sa consommation d'eau au quotidien dans la salle de bain.",
+    url_article: "https://www.houzz.fr/magazine/9-amenagements-pour-economiser-l-eau-au-quotidien-stsetivw-vs~169904445",
+    type: "article",
+    image: presseHouzzEau,
+    journalist: "Anne-Laure Sizun",
   },
   {
     id: "marie-claire-adresses-2024",
