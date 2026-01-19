@@ -1,9 +1,10 @@
 import { Layout } from "@/components/layout/Layout";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import { Eye, AlertTriangle, Shield, Droplets, CheckCircle2, ArrowRight, Sparkles, ClipboardList, HardHat } from "lucide-react";
+import { Eye, AlertTriangle, Shield, Droplets, CheckCircle2, ArrowRight, Sparkles, ClipboardList, HardHat, HelpCircle, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -31,12 +32,108 @@ const degatsEauxVideos = [
   },
 ];
 
-export default function DegatsEaux() {
+// FAQ Data
+const faqData = [
+  {
+    question: "Que faire en priorité si mon appartement est inondé ?",
+    answer: "La première étape est de déclarer le sinistre à votre assurance. Il est ensuite indispensable d'identifier l'origine de la fuite en contactant le voisin concerné et le syndic afin d'organiser une recherche de fuite. Tant que la cause n'est pas réparée par le responsable, l'assurance ne peut pas valider la remise en état définitive."
+  },
+  {
+    question: "Pourquoi la recherche de fuite est-elle indispensable ?",
+    answer: "Parce que l'assurance exige que la cause du dégât des eaux soit clairement identifiée et réparée avant toute indemnisation des travaux de remise en état."
+  },
+  {
+    question: "Qui doit réparer l'origine du dégât des eaux ?",
+    answer: "Le responsable du sinistre : le voisin si la fuite provient de son logement, ou le syndic si les parties communes sont concernées."
+  },
+  {
+    question: "Assistez-vous aux réunions d'expertise ?",
+    answer: "Oui. Nous assistons aux réunions d'expertise afin de défendre techniquement votre dossier et de faire reconnaître l'ensemble des dommages."
+  },
+  {
+    question: "Quel est le rôle d'un expert d'assuré ?",
+    answer: "L'expert d'assuré intervient uniquement dans votre intérêt. Il chiffre précisément les dégâts, négocie avec l'assurance et vise une indemnisation juste et complète."
+  },
+  {
+    question: "Mon assurance peut-elle sous-estimer les travaux ?",
+    answer: "Oui. Certains postes peuvent être oubliés ou minorés. C'est pourquoi nous établissons des devis complets et cohérents avec la réalité du chantier."
+  },
+  {
+    question: "Puis-je être relogé pendant les travaux ?",
+    answer: "Oui, si votre logement est inhabitable et si votre contrat le prévoit. Nous vous accompagnons pour faire valoir ce droit."
+  },
+  {
+    question: "Pourquoi faire appel à un maître d'œuvre après un dégât des eaux ?",
+    answer: "Parce qu'un maître d'œuvre ne se contente pas d'exécuter : il conçoit, coordonne, anticipe et défend vos intérêts jusqu'à la remise en état finale."
+  }
+];
+
+// FAQ Item Component
+const FAQItem = ({ question, answer, isOpen, onToggle, index }: {
+  question: string;
+  answer: string;
+  isOpen: boolean;
+  onToggle: () => void;
+  index: number;
+}) => (
+  <motion.div
+    className="border-b border-border/50 last:border-b-0"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay: index * 0.05 }}
+  >
+    <button
+      onClick={onToggle}
+      className="w-full flex items-center justify-between py-4 text-left hover:bg-muted/30 transition-colors px-2 rounded-lg"
+    >
+      <span className="font-medium text-foreground pr-4">{question}</span>
+      <ChevronDown 
+        className={`w-5 h-5 text-muted-foreground transition-transform duration-300 flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`}
+      />
+    </button>
+    <motion.div
+      initial={false}
+      animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+      className="overflow-hidden"
+    >
+      <p className="pb-4 px-2 text-muted-foreground leading-relaxed">
+        {answer}
+      </p>
+    </motion.div>
+  </motion.div>
+);
+
+const DegatsEaux = () => {
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+
+  const toggleFAQ = (index: number) => {
+    setOpenFAQ(openFAQ === index ? null : index);
+  };
+
+  // Generate JSON-LD for FAQ
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqData.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  };
+
   return (
     <Layout>
       <Helmet>
-        <title>Dégâts des eaux : prévention et conseils | renovermasalledebain.com</title>
-        <meta name="description" content="Découvrez nos conseils d'experts pour prévenir les dégâts des eaux lors de la rénovation de votre salle de bain. Vidéos explicatives et bonnes pratiques." />
+        <title>Dégâts des eaux - Conseils et prévention | QualiRénovation</title>
+        <meta name="description" content="Conseils d'experts pour prévenir et gérer les dégâts des eaux. Découvrez nos bonnes pratiques et vidéos conseils pour protéger votre salle de bain." />
+        <script type="application/ld+json">
+          {JSON.stringify(faqJsonLd)}
+        </script>
       </Helmet>
 
       {/* Hero Section */}
@@ -61,88 +158,80 @@ export default function DegatsEaux() {
         </div>
       </section>
 
-      {/* Section explicative mobile-optimisée */}
-      <section className="py-8 md:py-12 bg-background">
+      {/* Section explicative - mobile optimisée */}
+      <section className="py-10 md:py-14 bg-background">
         <div className="container-custom">
           <motion.div
-            className="max-w-md mx-auto px-4 space-y-5"
+            className="max-w-md mx-auto md:max-w-3xl"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
             {/* Accroche percutante */}
-            <div className="text-center">
-              <p className="text-2xl md:text-3xl font-display font-bold text-foreground leading-tight">
-                😱 Appartement inondé ?
-              </p>
-              <p className="text-lg md:text-xl text-primary font-medium mt-1">
-                Voilà ce que personne ne vous dit…
-              </p>
-            </div>
-
-            {/* Texte simplifié */}
-            <div className="space-y-3 text-center">
-              <p className="text-muted-foreground text-base">
-                Après un dégât des eaux, beaucoup appellent une entreprise de rénovation.
-              </p>
-              <p className="text-red-600 font-medium flex items-center justify-center gap-2">
-                <span>❌</span> Mauvaise idée : elle se contente souvent d'exécuter des travaux.
-              </p>
-            </div>
-
-            {/* Notre différence */}
-            <div className="bg-primary/5 rounded-xl p-4 md:p-6 border border-primary/10">
-              <p className="text-foreground font-semibold text-center mb-1">
-                👉 Chez QualiRénovation, nous allons plus loin.
-              </p>
-              <p className="text-primary font-medium text-center">
-                Nous avons un maître d'œuvre intégré.
+            <div className="text-center mb-8">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-4"
+              >
+                <Sparkles className="w-4 h-4" />
+                Appartement inondé ?
+              </motion.div>
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">
+                Ne restez pas seul face au sinistre
+              </h2>
+              <p className="text-muted-foreground">
+                Nous défendons vos intérêts face aux assurances et aux syndics
               </p>
             </div>
 
-            {/* Liste des avantages */}
-            <div className="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-border/50">
-              <h3 className="font-semibold text-foreground mb-4 text-center text-sm uppercase tracking-wide">
-                Ce que ça change pour vous
-              </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground text-sm md:text-base">Des devis complets (pas de réparations partielles)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground text-sm md:text-base">Un accompagnement avec l'assurance et le syndic</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground text-sm md:text-base">Une prise en charge globale si le logement est inhabitable</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground text-sm md:text-base">Une coordination complète jusqu'à la remise en état finale</span>
-                </li>
-              </ul>
+            {/* Liste d'avantages avec icônes */}
+            <div className="space-y-4 mb-8">
+              {[
+                "Accompagnement dès la déclaration du sinistre",
+                "Assistance aux réunions d'expertise",
+                "Devis complets et conformes pour l'assurance",
+                "Coordination avec le syndic et les voisins",
+                "Remise en état complète de votre salle de bain"
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="flex items-start gap-3 bg-white rounded-lg p-3 shadow-sm border border-border/30"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span className="text-foreground text-sm md:text-base">{item}</span>
+                </motion.div>
+              ))}
             </div>
 
-            {/* Phrase résultat */}
-            <div className="bg-gradient-to-r from-amber-50 to-amber-100/50 rounded-xl p-4 md:p-6 border border-amber-200/50">
-              <p className="text-center text-foreground font-medium flex items-center justify-center gap-2 flex-wrap">
-                <Sparkles className="w-5 h-5 text-amber-500" />
-                <span>Vous êtes indemnisé, accompagné et votre logement est remis en état correctement.</span>
-              </p>
-            </div>
-
-            {/* Différenciation finale */}
-            <div className="text-center space-y-2 pt-2">
-              <p className="text-muted-foreground flex items-center justify-center gap-2">
-                <ArrowRight className="w-4 h-4" />
-                <span>Une entreprise répare.</span>
-              </p>
-              <p className="text-primary font-semibold">
-                Nous défendons vos intérêts et pilotons votre projet de A à Z.
-              </p>
-            </div>
+            {/* Mise en avant valeur ajoutée */}
+            <motion.div
+              className="bg-gradient-to-br from-stone-100 to-stone-50 rounded-xl p-6 border border-stone-200"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-stone-800 flex items-center justify-center flex-shrink-0">
+                  <Shield className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-2">
+                    Plus qu'un simple exécutant
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    En tant que maître d'œuvre, nous ne nous contentons pas de réaliser les travaux. 
+                    Nous pilotons l'ensemble du projet : coordination des intervenants, suivi administratif 
+                    avec l'assurance, et défense de vos intérêts jusqu'à la remise en état finale.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -198,97 +287,42 @@ export default function DegatsEaux() {
               </div>
               <h3 className="font-semibold text-lg text-foreground mb-2">Prise en charge globale</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Devis complets, accompagnement assurance habitation et coordination des travaux jusqu'à la remise en état finale.
+                Devis complets, accompagnement assurance et coordination des travaux jusqu'à la remise en état finale.
               </p>
             </motion.div>
           </div>
-
+          
           {/* Texte SEO sous les blocs */}
-          <motion.div
-            className="mt-10 text-center max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+          <motion.p
+            className="text-center text-muted-foreground mt-8 max-w-3xl mx-auto text-sm md:text-base leading-relaxed"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-8">
-              Après un dégât des eaux, faire appel à une structure avec maître d'œuvre intégré permet d'assurer une remise en état conforme, une meilleure prise en charge par l'assurance et une coordination complète des travaux, notamment lorsque le logement est inhabitable.
-            </p>
-            
-            <Button asChild variant="default" size="lg" className="bg-primary hover:bg-primary/90">
-              <Link to="/devis" className="flex items-center gap-2">
-                <ArrowRight className="w-4 h-4" />
-                Être accompagné après un dégât des eaux
-              </Link>
-            </Button>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section Vidéos Conseils */}
-      <section className="section-padding bg-background">
-        <div className="container-custom">
+            Après un dégât des eaux, faire appel à une structure avec maître d'œuvre intégré permet d'assurer une remise en état conforme, une meilleure prise en charge par l'assurance et une coordination complète des travaux, notamment lorsque le logement est inhabitable.
+          </motion.p>
+          
+          {/* CTA */}
           <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
+            className="text-center mt-8"
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ delay: 0.5 }}
           >
-            <h2 className="font-display text-2xl md:text-3xl font-semibold mb-4">
-              Vidéos Conseils
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Nos conseils d'experts en vidéo pour prévenir les dégâts des eaux et protéger votre rénovation.
-            </p>
+            <Link to="/devis">
+              <Button variant="cta" size="lg" className="group">
+                Être accompagné après un dégât des eaux
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
           </motion.div>
-
-          {/* Grille de vidéos */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {degatsEauxVideos.map((video, index) => (
-              <motion.div
-                key={video.id}
-                className="bg-stone rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <div className="aspect-[9/16] bg-muted relative">
-                  <video
-                    src={video.videoSrc}
-                    className="w-full h-full object-cover"
-                    controls
-                    preload="metadata"
-                    playsInline
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-foreground line-clamp-2 mb-2">{video.title}</h3>
-                  <p className="text-xs text-muted-foreground mb-2">{video.description}</p>
-                  <p className="text-xs text-primary mb-3">{video.tip}</p>
-                  <p className="text-xs text-muted-foreground flex items-center gap-1">
-                    <Eye className="w-3 h-3" /> {video.views} vues
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {degatsEauxVideos.length === 1 && (
-            <motion.p
-              className="text-center text-muted-foreground mt-8 italic"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-            >
-              D'autres vidéos conseils arrivent bientôt...
-            </motion.p>
-          )}
         </div>
       </section>
 
-      {/* Section conseils texte */}
-      <section className="section-padding bg-stone">
+      {/* Section FAQ - Dégât des eaux & assurance */}
+      <section className="py-12 md:py-16 bg-background">
         <div className="container-custom">
           <motion.div
             className="max-w-3xl mx-auto"
@@ -296,54 +330,159 @@ export default function DegatsEaux() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display text-2xl md:text-3xl font-semibold mb-8 text-center">
-              Les bonnes pratiques
+            {/* Header FAQ */}
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center">
+                <HelpCircle className="w-6 h-6 text-blue-600" />
+              </div>
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">
+                  FAQ – Dégât des eaux & assurance
+                </h2>
+                <p className="text-muted-foreground text-sm mt-1">
+                  Réponses aux questions les plus fréquentes
+                </p>
+              </div>
+            </div>
+
+            {/* FAQ Items */}
+            <div className="bg-white rounded-xl border border-border/50 shadow-sm p-4 md:p-6">
+              {faqData.map((item, index) => (
+                <FAQItem
+                  key={index}
+                  question={item.question}
+                  answer={item.answer}
+                  isOpen={openFAQ === index}
+                  onToggle={() => toggleFAQ(index)}
+                  index={index}
+                />
+              ))}
+            </div>
+
+            {/* CTA sous la FAQ */}
+            <motion.div
+              className="text-center mt-8"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+            >
+              <Link to="/devis">
+                <Button variant="cta" size="lg" className="group">
+                  Être accompagné après un dégât des eaux
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section Vidéos Conseils */}
+      <section className="py-12 md:py-16 bg-stone-50">
+        <div className="container-custom">
+          <motion.div
+            className="text-center mb-10"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="font-display text-2xl md:text-3xl font-bold mb-4 text-foreground">
+              Vidéos conseils
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Nos experts partagent leurs conseils pour prévenir les dégâts des eaux
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {degatsEauxVideos.map((video, index) => (
+              <motion.div
+                key={video.id}
+                className="bg-white rounded-xl overflow-hidden shadow-sm border border-border/50"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <div className="aspect-[9/16] bg-stone-100">
+                  <video
+                    src={video.videoSrc}
+                    className="w-full h-full object-cover"
+                    controls
+                    playsInline
+                    preload="metadata"
+                  />
+                </div>
+                <div className="p-4">
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
+                    <Eye className="w-3 h-3" />
+                    <span>{video.views} vues</span>
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">{video.title}</h3>
+                  <p className="text-sm text-muted-foreground">{video.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section Bonnes Pratiques */}
+      <section className="py-12 md:py-16 bg-background">
+        <div className="container-custom">
+          <motion.div
+            className="max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="font-display text-2xl md:text-3xl font-bold mb-8 text-center text-foreground">
+              Bonnes pratiques pour éviter les dégâts des eaux
             </h2>
             
-            <div className="space-y-6">
-              <div className="bg-white rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-3 flex items-center gap-2">
-                  <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm font-bold">1</span>
-                  Utilisez des raccords de qualité
-                </h3>
-                <p className="text-muted-foreground text-sm pl-10">
-                  Privilégiez les raccords à sertir ou à compression de marques reconnues. Évitez les raccords à visser bas de gamme qui peuvent céder avec le temps.
-                </p>
-              </div>
-              
-              <div className="bg-white rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-3 flex items-center gap-2">
-                  <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm font-bold">2</span>
-                  Assurez une étanchéité parfaite
-                </h3>
-                <p className="text-muted-foreground text-sm pl-10">
-                  Sous le carrelage de douche, appliquez un système d'étanchéité liquide (SEL) ou une membrane (SPEC) conforme au DTU 52.2.
-                </p>
-              </div>
-              
-              <div className="bg-white rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-3 flex items-center gap-2">
-                  <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm font-bold">3</span>
-                  Faites des tests de pression
-                </h3>
-                <p className="text-muted-foreground text-sm pl-10">
-                  Avant de refermer les murs, testez la pression de vos canalisations pendant 24h minimum pour détecter toute fuite.
-                </p>
-              </div>
-              
-              <div className="bg-white rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-3 flex items-center gap-2">
-                  <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm font-bold">4</span>
-                  Conservez l'accès aux vannes
-                </h3>
-                <p className="text-muted-foreground text-sm pl-10">
-                  Gardez toujours un accès facile aux vannes d'arrêt et aux raccords pour pouvoir intervenir rapidement en cas de problème.
-                </p>
-              </div>
+            <div className="space-y-4">
+              {[
+                {
+                  title: "Raccords de qualité",
+                  description: "Utilisez des raccords multicouches sertis, jamais de raccords à compression dans les zones encastrées."
+                },
+                {
+                  title: "Étanchéité parfaite",
+                  description: "Appliquez un SPEC (Système de Protection à l'Eau sous Carrelage) dans toutes les zones humides."
+                },
+                {
+                  title: "Contrôles réguliers",
+                  description: "Vérifiez l'état des joints, des raccords et des équipements sanitaires tous les ans."
+                },
+                {
+                  title: "Vannes d'arrêt accessibles",
+                  description: "Installez des vannes d'arrêt individuelles pour pouvoir couper l'eau rapidement en cas de fuite."
+                },
+                {
+                  title: "Détecteurs de fuite",
+                  description: "Équipez les zones à risque de détecteurs de fuite connectés pour une alerte immédiate."
+                }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white rounded-lg p-5 shadow-sm border border-border/30"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm">{item.description}</p>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>
       </section>
+
     </Layout>
   );
-}
+};
+
+export default DegatsEaux;
