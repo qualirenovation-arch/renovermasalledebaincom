@@ -18,7 +18,7 @@ const footerLinks = {
     path: "/faq"
   }, {
     label: "Presse",
-    path: "/presse"
+    path: "/presse#parutions"
   }, {
     label: "Demande de devis",
     path: "/devis"
