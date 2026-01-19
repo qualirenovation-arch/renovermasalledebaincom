@@ -7,6 +7,7 @@ import jemmapes1 from "@/assets/jemmapes-1.jpg";
 import vincennesMr1 from "@/assets/vincennes-mr-1.jpg";
 import nicolasRoretDouche from "@/assets/nicolas-roret-douche.jpg";
 import { presseNews, guideConseils, videoConseils } from "@/data/newsData";
+import { TestimonialsSlider } from "@/components/home/TestimonialsSlider";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -519,30 +520,8 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Section Témoignage client */}
-      <section className="section-padding bg-accent/20">
-        <div className="container-custom">
-          <motion.div 
-            className="max-w-3xl mx-auto text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <p className="text-sm text-wood font-medium mb-4">★★★★★ Avis client vérifié</p>
-            <a 
-              href="https://www.houzz.fr/viewReview/2076669/qualirenovation-by-qualiconcept-review" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="block hover:opacity-80 transition-opacity"
-            >
-              <blockquote className="font-display text-xl md:text-2xl italic mb-6 text-foreground">
-                "Je recommande avec beaucoup d'enthousiasme les prestations de QualiConcept. Carina a géré mon chantier avec beaucoup de professionnalisme et de rigueur, elle est très à l'écoute de ses clients. Le chantier a été livré dans le délai imparti, avec des finitions soignées et beaucoup de créativité."
-              </blockquote>
-              <p className="text-wood font-semibold">— Marie C. <span className="underline ml-2">Voir sur Houzz →</span></p>
-            </a>
-          </motion.div>
-        </div>
-      </section>
+      {/* Section Témoignages - Slider compact */}
+      <TestimonialsSlider />
 
       {/* CTA Final */}
       <section className="section-padding bg-foreground text-background">
