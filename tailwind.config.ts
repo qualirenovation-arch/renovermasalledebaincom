@@ -63,12 +63,24 @@ export default {
           DEFAULT: "hsl(var(--cta))",
           foreground: "hsl(var(--cta-foreground))",
         },
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          light: "hsl(var(--gold-light))",
+          dark: "hsl(var(--gold-dark))",
+          foreground: "hsl(var(--gold-foreground))",
+        },
+        navy: {
+          DEFAULT: "hsl(var(--navy))",
+          light: "hsl(var(--navy-light))",
+          foreground: "hsl(var(--navy-foreground))",
+        },
         tag: {
           beige: "hsl(var(--tag-beige))",
           mint: "hsl(var(--tag-mint))",
           blue: "hsl(var(--tag-blue))",
           peach: "hsl(var(--tag-peach))",
           terracotta: "hsl(var(--tag-terracotta))",
+          gold: "hsl(var(--tag-gold))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

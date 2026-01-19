@@ -46,10 +46,10 @@ export function Header() {
                 className="h-10 md:h-12 w-auto"
               />
               <div className="flex flex-col leading-tight">
-                <span className="font-display text-lg md:text-xl font-semibold text-[#2c3e50]">
+                <span className="font-display text-lg md:text-xl font-semibold text-navy">
                   renovermasalledebain
                 </span>
-                <span className="text-xs md:text-sm font-medium text-[#b8860b]">
+                <span className="text-xs md:text-sm font-medium text-gold-dark">
                   by QualiRénovation
                 </span>
               </div>
