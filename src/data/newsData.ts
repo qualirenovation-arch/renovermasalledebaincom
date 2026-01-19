@@ -86,12 +86,20 @@ export const guideConseils = [
 
 // Vidéos Conseils - Explications avantages/inconvénients
 export const videoConseils = [
+  // === MEUBLE VASQUE === (mis en avant)
+  {
+    id: "video-vasque-a-poser",
+    title: "Comment choisir votre vasque à poser",
+    description: "Les critères essentiels pour bien choisir votre vasque à poser",
+    instagramUrl: "https://www.instagram.com/reel/DTqBs2bDKsN/",
+    category: "Meuble vasque",
+  },
   // === DOUCHE ===
   {
     id: "video-douche-italienne",
     title: "Douche italienne : avantages et inconvénients",
     description: "Tout ce qu'il faut savoir avant de choisir une douche à l'italienne",
-    instagramUrl: "https://www.instagram.com/reel/DTqBs2bDKsN/",
+    instagramUrl: "https://www.instagram.com/reel/VOTRE_LIEN_ICI/",
     category: "Douche",
   },
   {
@@ -152,13 +160,6 @@ export const videoConseils = [
     id: "video-meuble-suspendu",
     title: "Meuble suspendu ou sur pieds ?",
     description: "Le choix qui change tout pour l'entretien",
-    instagramUrl: "https://www.instagram.com/reel/VOTRE_LIEN_ICI/",
-    category: "Meuble vasque",
-  },
-  {
-    id: "video-vasque-a-poser",
-    title: "Comment choisir votre vasque à poser",
-    description: "Les critères essentiels pour bien choisir votre vasque à poser",
     instagramUrl: "https://www.instagram.com/reel/VOTRE_LIEN_ICI/",
     category: "Meuble vasque",
   },
