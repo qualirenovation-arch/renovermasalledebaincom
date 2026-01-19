@@ -40,10 +40,20 @@ export function Header() {
         <div className="container-custom">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2">
-              <span className="font-display text-xl md:text-2xl font-semibold text-primary">
-                renovermasalledebain.com
-              </span>
+            <Link to="/" className="flex items-center gap-3">
+              <img 
+                src="/src/assets/logos/qualirenovation-logo.png" 
+                alt="QualiRénovation Logo" 
+                className="h-10 md:h-12 w-auto"
+              />
+              <div className="flex flex-col leading-tight">
+                <span className="font-display text-lg md:text-xl font-semibold text-[#2c3e50]">
+                  renovermasalledebain
+                </span>
+                <span className="text-xs md:text-sm font-medium text-[#b8860b]">
+                  by QualiRénovation
+                </span>
+              </div>
             </Link>
 
             {/* Desktop Navigation */}
