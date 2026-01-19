@@ -39,17 +39,17 @@ export function Header() {
         <div className="container-custom">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-4">
               <img 
                 src={qualirenovationLogo} 
                 alt="QualiRénovation Logo" 
-                className="h-10 md:h-12 w-auto"
+                className="h-12 md:h-16 w-auto"
               />
               <div className="flex flex-col leading-tight">
-                <span className="font-display text-lg md:text-xl font-semibold text-navy">
+                <span className="font-display text-xl md:text-2xl font-semibold text-navy">
                   renovermasalledebain.com
                 </span>
-                <span className="text-xs md:text-sm font-medium text-gold-dark">
+                <span className="text-sm md:text-base font-medium text-gold-dark">
                   by QualiRénovation
                 </span>
               </div>

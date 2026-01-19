@@ -50,6 +50,10 @@
     --navy-light: 0 0% 35%;
     --navy-foreground: 0 0% 98%;
 
+    /* Logo blue - Deep professional blue matching QualiRénovation logo */
+    --logo-blue: 210 65% 35%;
+    --logo-blue-foreground: 0 0% 100%;
+
     /* Wood tones - Rich walnut */
     --wood: 25 40% 35%;
     --wood-foreground: 45 50% 95%;
