@@ -252,9 +252,23 @@ export default function Presse() {
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">
               Nos projets dans les médias
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-6">
               Depuis 2017, nos réalisations sont régulièrement mises en avant dans la presse déco.
             </p>
+            <div className="text-left max-w-3xl mx-auto space-y-4 mb-8 text-muted-foreground">
+              <p>
+                À travers cette rubrique presse, vous découvrirez bien plus que des articles : des idées concrètes, des choix techniques expliqués et des inspirations utiles pour bien préparer votre projet de rénovation, notamment de salle de bains.
+              </p>
+              <p>
+                C'est aussi l'occasion de voir comment nous travaillons : avec exigence, méthode et une vraie attention portée à chaque détail, du premier choix esthétique jusqu'à la mise en œuvre.
+              </p>
+              <p>
+                En parcourant ces parutions, vous avez l'assurance de faire appel à une entreprise qui prend votre projet à cœur, avec toute la maîtrise nécessaire pour transformer vos idées en un espace durable et bien pensé.
+              </p>
+              <p className="text-primary/80 italic">
+                ✨ Et puis, soyons honnêtes : feuilleter de beaux projets, c'est aussi une excellente façon de se projeter… et de commencer à rêver un peu avant les travaux.
+              </p>
+            </div>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="inline-flex items-center gap-2 bg-background border border-border px-6 py-3 rounded-full shadow-sm">
                 <span className="text-2xl font-bold text-primary">{sortedParutions.length}</span>
