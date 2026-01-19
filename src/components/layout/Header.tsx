@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import qualirenovationLogo from "@/assets/logos/qualirenovation-logo.png";
 
 const navItems = [
   { label: "Accueil", path: "/" },
@@ -42,7 +43,7 @@ export function Header() {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3">
               <img 
-                src="/src/assets/logos/qualirenovation-logo.png" 
+                src={qualirenovationLogo} 
                 alt="QualiRénovation Logo" 
                 className="h-10 md:h-12 w-auto"
               />
