@@ -1,4 +1,5 @@
 import { ExternalLink } from "lucide-react";
+import houzzBadge2019 from "@/assets/logos/houzz-badge-2019.png";
 
 // Badge officiel Houzz - Style rectangulaire/vertical
 const HouzzBadge = ({ 
@@ -42,6 +43,22 @@ const HouzzBadge = ({
   );
 };
 
+// Badge officiel Houzz image
+const HouzzOfficialBadge = () => (
+  <a 
+    href="https://www.houzz.fr/pro/qualirenovation" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="transition-transform hover:scale-105"
+  >
+    <img 
+      src={houzzBadge2019} 
+      alt="Badge Houzz" 
+      className="w-20 h-20 object-contain"
+    />
+  </a>
+);
+
 export function Recompenses() {
   const badges = [
     { year: "2025", category: "Design" as const },
@@ -67,6 +84,9 @@ export function Recompenses() {
 
         {/* Ligne de badges alignés */}
         <div className="flex flex-wrap items-end justify-center gap-3 md:gap-4">
+          {/* Badge officiel Houzz cliquable */}
+          <HouzzOfficialBadge />
+          
           {badges.map((badge, index) => (
             <HouzzBadge 
               key={`${badge.year}-${badge.category}-${index}`}
