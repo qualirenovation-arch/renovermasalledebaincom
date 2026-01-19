@@ -12,6 +12,8 @@ import jemmapesApres2 from "@/assets/jemmapes-apres-2.jpg";
 import bauchartAvant1 from "@/assets/bauchart-avant-1.jpg";
 import bauchartAvant2 from "@/assets/bauchart-avant-2.jpg";
 import bauchartAvant3 from "@/assets/bauchart-avant-3.jpg";
+import bauchartApres1 from "@/assets/bauchart-apres-1.jpg";
+import bauchartApres2 from "@/assets/bauchart-apres-2.jpg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -331,45 +333,77 @@ const DegatsEaux = () => {
             <div className="p-6 border-b border-border/30">
               <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                 <MapPin className="w-4 h-4" />
-                <span>Paris 8ème — Rue du Sergent Bauchart</span>
+                <span>Paris 12ème — Rue du Sergent Bauchart</span>
               </div>
               <h3 className="font-display text-xl font-bold text-foreground">
-                Sinistre en cours — Démolition et préparation
+                Rénovation complète après sinistre — Studio Julia
               </h3>
               <p className="text-muted-foreground text-sm mt-2">
-                Phase de démolition après un dégât des eaux important. Les photos montrent l'état des lieux avant rénovation : traces d'humidité, moisissures au plafond, plomberie à reprendre intégralement.
+                Ce studio a été entièrement rénové après un dégât des eaux important. La cuisine a été repensée avec des finitions modernes : meuble blanc, plan de travail imitation bois, optimisation des rangements.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
-              <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
-                <img 
-                  src={bauchartAvant1} 
-                  alt="Avant — État des lieux après sinistre rue du Sergent Bauchart"
-                  className="w-full h-full object-cover"
-                />
-                <span className="absolute top-3 left-3 bg-amber-600 text-white text-xs font-medium px-2 py-1 rounded">
-                  Avant
-                </span>
+            
+            {/* Photos AVANT */}
+            <div className="p-4 border-b border-border/20">
+              <p className="text-sm font-medium text-muted-foreground mb-3">État avant travaux</p>
+              <div className="grid grid-cols-3 gap-3">
+                <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
+                  <img 
+                    src={bauchartAvant1} 
+                    alt="Avant — État des lieux après sinistre rue du Sergent Bauchart"
+                    className="w-full h-full object-cover"
+                  />
+                  <span className="absolute top-2 left-2 bg-amber-600 text-white text-xs font-medium px-2 py-1 rounded">
+                    Avant
+                  </span>
+                </div>
+                <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
+                  <img 
+                    src={bauchartAvant2} 
+                    alt="Avant — Traces de moisissures et plomberie apparente"
+                    className="w-full h-full object-cover"
+                  />
+                  <span className="absolute top-2 left-2 bg-amber-600 text-white text-xs font-medium px-2 py-1 rounded">
+                    Avant
+                  </span>
+                </div>
+                <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
+                  <img 
+                    src={bauchartAvant3} 
+                    alt="Avant — Démolition et accès à la plomberie"
+                    className="w-full h-full object-cover"
+                  />
+                  <span className="absolute top-2 left-2 bg-amber-600 text-white text-xs font-medium px-2 py-1 rounded">
+                    Avant
+                  </span>
+                </div>
               </div>
-              <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
-                <img 
-                  src={bauchartAvant2} 
-                  alt="Avant — Traces de moisissures et plomberie apparente"
-                  className="w-full h-full object-cover"
-                />
-                <span className="absolute top-3 left-3 bg-amber-600 text-white text-xs font-medium px-2 py-1 rounded">
-                  Avant
-                </span>
-              </div>
-              <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
-                <img 
-                  src={bauchartAvant3} 
-                  alt="Avant — Démolition et accès à la plomberie"
-                  className="w-full h-full object-cover"
-                />
-                <span className="absolute top-3 left-3 bg-amber-600 text-white text-xs font-medium px-2 py-1 rounded">
-                  Avant
-                </span>
+            </div>
+
+            {/* Photos APRÈS */}
+            <div className="p-4">
+              <p className="text-sm font-medium text-muted-foreground mb-3">Résultat final</p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
+                  <img 
+                    src={bauchartApres1} 
+                    alt="Après — Cuisine rénovée vue équipements"
+                    className="w-full h-full object-cover"
+                  />
+                  <span className="absolute top-2 left-2 bg-green-600 text-white text-xs font-medium px-2 py-1 rounded">
+                    Après
+                  </span>
+                </div>
+                <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
+                  <img 
+                    src={bauchartApres2} 
+                    alt="Après — Cuisine rénovée vue évier"
+                    className="w-full h-full object-cover"
+                  />
+                  <span className="absolute top-2 left-2 bg-green-600 text-white text-xs font-medium px-2 py-1 rounded">
+                    Après
+                  </span>
+                </div>
               </div>
             </div>
           </motion.div>
