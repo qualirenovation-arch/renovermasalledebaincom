@@ -1,7 +1,9 @@
 import { Layout } from "@/components/layout/Layout";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import { Eye, AlertTriangle, Shield, Droplets, CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
+import { Eye, AlertTriangle, Shield, Droplets, CheckCircle2, ArrowRight, Sparkles, ClipboardList, HardHat } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -145,52 +147,81 @@ export default function DegatsEaux() {
         </div>
       </section>
 
-      {/* Alertes importantes */}
-      <section className="py-12 bg-amber-50/50 border-y border-amber-200/50">
+      {/* Section SEO - 3 blocs horizontaux */}
+      <section className="py-12 md:py-16 bg-stone-50">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Bloc 1 - Risque majeur */}
             <motion.div
-              className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-sm"
+              className="bg-white rounded-xl p-6 shadow-sm border border-border/30 flex flex-col h-full"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              <AlertTriangle className="w-8 h-8 text-amber-500 flex-shrink-0" />
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Risque majeur</h3>
-                <p className="text-sm text-muted-foreground">Un dégât des eaux peut coûter plusieurs milliers d'euros et affecter les voisins.</p>
+              <div className="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center mb-4">
+                <AlertTriangle className="w-6 h-6 text-amber-600" />
               </div>
+              <h3 className="font-semibold text-lg text-foreground mb-2">Risque majeur</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Un dégât des eaux peut rendre un logement inhabitable et entraîner des coûts importants s'il est mal géré.
+              </p>
             </motion.div>
             
+            {/* Bloc 2 - Maîtrise d'œuvre intégrée */}
             <motion.div
-              className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-sm"
+              className="bg-white rounded-xl p-6 shadow-sm border border-border/30 flex flex-col h-full"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              <Shield className="w-8 h-8 text-green-500 flex-shrink-0" />
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Prévention</h3>
-                <p className="text-sm text-muted-foreground">Des raccords de qualité et une étanchéité parfaite sont essentiels.</p>
+              <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center mb-4">
+                <HardHat className="w-6 h-6 text-green-600" />
               </div>
+              <h3 className="font-semibold text-lg text-foreground mb-2">Maîtrise d'œuvre intégrée</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Nous pilotons la remise en état complète avec un maître d'œuvre intégré, au-delà d'une simple exécution de travaux.
+              </p>
             </motion.div>
             
+            {/* Bloc 3 - Prise en charge globale */}
             <motion.div
-              className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-sm"
+              className="bg-white rounded-xl p-6 shadow-sm border border-border/30 flex flex-col h-full"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
             >
-              <Droplets className="w-8 h-8 text-blue-500 flex-shrink-0" />
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Contrôles réguliers</h3>
-                <p className="text-sm text-muted-foreground">Vérifiez régulièrement vos installations pour anticiper les problèmes.</p>
+              <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-4">
+                <ClipboardList className="w-6 h-6 text-blue-600" />
               </div>
+              <h3 className="font-semibold text-lg text-foreground mb-2">Prise en charge globale</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Devis complets, accompagnement assurance habitation et coordination des travaux jusqu'à la remise en état finale.
+              </p>
             </motion.div>
           </div>
+
+          {/* Texte SEO sous les blocs */}
+          <motion.div
+            className="mt-10 text-center max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+          >
+            <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-8">
+              Après un dégât des eaux, faire appel à une structure avec maître d'œuvre intégré permet d'assurer une remise en état conforme, une meilleure prise en charge par l'assurance et une coordination complète des travaux, notamment lorsque le logement est inhabitable.
+            </p>
+            
+            <Button asChild variant="default" size="lg" className="bg-primary hover:bg-primary/90">
+              <Link to="/devis" className="flex items-center gap-2">
+                <ArrowRight className="w-4 h-4" />
+                Être accompagné après un dégât des eaux
+              </Link>
+            </Button>
+          </motion.div>
         </div>
       </section>
 
