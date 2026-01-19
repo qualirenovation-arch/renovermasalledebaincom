@@ -10,10 +10,8 @@ const navItems = [
   { label: "À propos", path: "/a-propos" },
   { label: "Pourquoi nous", path: "/pourquoi-nous" },
   { label: "Réalisations", path: "/realisations" },
-  { label: "🚧 Chantiers en cours", path: "/realisations#chantiers-en-cours" },
-  { label: "📖 Guide travaux", path: "/guide-travaux" },
-  { label: "💧 Dégâts des eaux", path: "/degats-eaux" },
-  { label: "Demande de devis", path: "/devis" },
+  { label: "Guide travaux", path: "/guide-travaux" },
+  { label: "Dégâts des eaux", path: "/degats-eaux" },
 ];
 
 export function Header() {
@@ -58,12 +56,12 @@ export function Header() {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-1 ml-auto">
+            <nav className="hidden xl:flex items-center gap-1 ml-auto">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  className={`px-3 py-2 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap ${
                     location.pathname === item.path
                       ? "bg-primary text-primary-foreground"
                       : "text-foreground hover:bg-secondary"
@@ -75,7 +73,7 @@ export function Header() {
             </nav>
 
             {/* CTA Button - Desktop */}
-            <div className="hidden lg:flex items-center gap-4 ml-6">
+            <div className="hidden xl:flex items-center ml-4">
               <Button variant="cta" size="lg" asChild>
                 <Link to="/devis">Devis gratuit</Link>
               </Button>
@@ -83,7 +81,7 @@ export function Header() {
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden p-2 text-foreground"
+              className="xl:hidden p-2 text-foreground"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Menu"
             >
@@ -99,7 +97,7 @@ export function Header() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-background border-t border-border overflow-hidden"
+              className="xl:hidden bg-background border-t border-border overflow-hidden"
             >
               <nav className="container-custom py-4 flex flex-col gap-2">
                 {navItems.map((item) => (
