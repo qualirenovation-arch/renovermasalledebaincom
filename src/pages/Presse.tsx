@@ -325,7 +325,7 @@ export default function Presse() {
       </section>
 
       {/* Articles Grid - Tri automatique par date DESC */}
-      <section className="section-padding">
+      <section id="parutions" className="section-padding scroll-mt-24">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {sortedParutions.map((article, index) => (

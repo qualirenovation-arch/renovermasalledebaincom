@@ -117,7 +117,7 @@ export function NewsColumn() {
       {/* Boutons d'action */}
       <div className="pt-3 border-t border-border flex gap-2">
         <Link
-          to="/presse"
+          to="/presse#parutions"
           className="flex-1 text-center text-xs font-medium text-primary hover:text-primary/80 transition-colors py-2 px-3 rounded-lg bg-primary/5 hover:bg-primary/10"
         >
           Presse

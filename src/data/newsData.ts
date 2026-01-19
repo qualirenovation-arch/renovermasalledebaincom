@@ -6,7 +6,7 @@ export const presseNews = [
     source: "Elle Décoration",
     date: "Octobre 2025",
     journalist: "Cyrine Ben Romdhane",
-    link: "/presse",
+    link: "/presse#parutions",
     externalLink: "https://www.elle.fr/Deco/Pieces/Salle-de-bain/Les-astuces-des-architectes-pour-amenager-une-salle-de-bains-pour-deux",
   },
   {
@@ -15,7 +15,7 @@ export const presseNews = [
     source: "18h39",
     date: "Février 2018",
     journalist: "Pauline Delcourt",
-    link: "/presse",
+    link: "/presse#parutions",
     externalLink: "https://www.18h39.fr/inspiration-maison/tendances-deco/idee-deco-optez-pour-des-joints-de-couleurs-pour-mettre-en-valeur-votre-carrelage.html",
   },
   {
@@ -24,7 +24,7 @@ export const presseNews = [
     source: "18h39",
     date: "Décembre 2017",
     journalist: "Matthieu M.",
-    link: "/presse",
+    link: "/presse#parutions",
     externalLink: "https://www.18h39.fr/travaux-avant-apres/transformer-espace-chez-soi/comment-installer-des-toilettes-suspendues-vous-explique-tout.html",
   },
   {
@@ -33,7 +33,7 @@ export const presseNews = [
     source: "Houzz",
     date: "Janvier 2025",
     journalist: "Agnès Carpentier",
-    link: "/presse",
+    link: "/presse#parutions",
     externalLink: "https://www.houzz.fr/magazine/avant-apres-a-soisy-une-maison-de-maitre-1900-renovee-de-a-a-z-stsetivw-vs~176073945",
   },
   {
@@ -42,7 +42,7 @@ export const presseNews = [
     source: "Marie Claire Maison",
     date: "Novembre 2024",
     journalist: "Rédaction Marie Claire",
-    link: "/presse",
+    link: "/presse#parutions",
     externalLink: "http://adresses-incontournables-maison.marieclaire.fr/dossier/qualirenovation-by-qualiconcept/",
   },
   {
@@ -51,7 +51,7 @@ export const presseNews = [
     source: "Houzz",
     date: "Janvier 2025",
     journalist: "Agnès Carpentier",
-    link: "/presse",
+    link: "/presse#parutions",
     externalLink: "https://www.houzz.fr/magazine/avant-apres-apres-une-renovation-complete-ce-couple-economise-de-lenergie-stsetivw-vs~176074108",
   },
   {
@@ -60,7 +60,7 @@ export const presseNews = [
     source: "Houzz",
     date: "Octobre 2022",
     journalist: "Agnès Carpentier",
-    link: "/presse",
+    link: "/presse#parutions",
     externalLink: "https://www.houzz.fr/magazine/pourquoi-est-il-judicieux-de-faire-appel-a-un-maitre-d-oeuvre-stsetivw-vs~87724005",
   },
 ];
