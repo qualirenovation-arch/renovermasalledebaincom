@@ -17,6 +17,7 @@ import presseHouzzBois from "@/assets/presse-houzz-bois.jpg";
 import presse18h39Joints from "@/assets/guide-joint-noir.webp";
 import presseElleSoisy from "@/assets/presse-elle-soisy.jpg";
 import presseHouzzEau from "@/assets/presse-houzz-eau.png";
+import presse18h39Wc from "@/assets/presse-18h39-wc.png";
 
 // ========================================
 // Structure "base de données" : parutions_presse
@@ -176,7 +177,7 @@ const parutions_presse: ParutionPresse[] = [
     extrait_seo: "L'expertise terrain en rénovation : plusieurs de nos réalisations mettent en lumière notre savoir-faire. Carina Nahmani analyse le système d'évacuation, une étape clé pour des travaux durables.",
     url_article: "https://www.18h39.fr/travaux-avant-apres/transformer-espace-chez-soi/comment-installer-des-toilettes-suspendues-vous-explique-tout.html",
     type: "article",
-    image: charonne1,
+    image: presse18h39Wc,
     journalist: "Matthieu M.",
   },
 ];
