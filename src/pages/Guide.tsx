@@ -187,7 +187,9 @@ const Guide = () => {
                   Votre navigateur ne supporte pas la lecture vidéo.
                 </video>
                 <div className="p-3">
-                  <h3 className="font-semibold text-sm text-foreground line-clamp-2">Faut-il carreler toute hauteur devant le meuble vasque ?</h3>
+                  <h3 className="font-semibold text-sm text-foreground">Faut-il carreler toute hauteur devant le meuble vasque ?</h3>
+                  <p className="text-xs text-muted-foreground mt-1">Réponse : Pas forcément. S'il y a un miroir toute hauteur, le carrelage derrière n'a aucun intérêt technique, ne se voit pas et augmente inutilement le devis.</p>
+                  <p className="text-xs text-primary mt-2">👉 Je vous explique tout dans la vidéo, pour faire les bons choix et garder un budget maîtrisé.</p>
                 </div>
               </div>
               
