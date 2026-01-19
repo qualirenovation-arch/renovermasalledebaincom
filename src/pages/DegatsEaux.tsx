@@ -63,7 +63,7 @@ export default function DegatsEaux() {
       <section className="py-8 md:py-12 bg-background">
         <div className="container-custom">
           <motion.div
-            className="max-w-2xl mx-auto space-y-6 md:space-y-8"
+            className="max-w-md mx-auto px-4 space-y-5"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
