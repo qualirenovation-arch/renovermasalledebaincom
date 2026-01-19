@@ -269,161 +269,88 @@ export default function Presse() {
         </div>
       </section>
 
-      {/* Albums - Scroll horizontal mobile, Grid desktop */}
+      {/* Albums Grid */}
       <section className="section-padding">
         <div className="container-custom">
           <AnimatePresence mode="wait">
             {!selectedAlbum ? (
-              <>
-                {/* Mobile: Horizontal scroll */}
-                <motion.div
-                  key="albums-mobile"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="md:hidden"
-                >
-                  {/* Scroll hint */}
-                  <div className="flex items-center justify-center gap-2 mb-4 text-sm text-muted-foreground">
-                    <motion.span
-                      animate={{ x: [0, 5, 0] }}
-                      transition={{ repeat: Infinity, duration: 1.5 }}
-                    >
-                      ←
-                    </motion.span>
-                    <span>Glissez pour explorer</span>
-                    <motion.span
-                      animate={{ x: [0, 5, 0] }}
-                      transition={{ repeat: Infinity, duration: 1.5 }}
-                    >
-                      →
-                    </motion.span>
-                  </div>
-
-                  <div className="overflow-x-auto pb-4 -mx-4 px-4 scrollbar-hide">
-                    <div className="flex gap-4" style={{ width: 'max-content' }}>
-                      {presseAlbums.map((album, index) => (
-                        <motion.div
-                          key={album.id}
-                          initial={{ opacity: 0, x: 20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: index * 0.05 }}
-                          className="group cursor-pointer"
-                          style={{ width: '300px' }}
-                          onClick={() => setSelectedAlbum(album)}
-                        >
-                          <div className="card-elevated overflow-hidden h-full">
-                            <div className="aspect-[4/3] overflow-hidden relative">
-                              <img 
-                                src={album.coverImage} 
-                                alt={album.title}
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                              />
-                              <div className="absolute top-3 left-3 px-2 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">
-                                {album.source || "📰 Presse"}
-                              </div>
-                              {album.publishDate && (
-                                <div className="absolute top-3 right-3 px-2 py-1 bg-background/90 text-foreground text-xs font-medium rounded-full">
-                                  {album.publishDate}
-                                </div>
-                              )}
-                            </div>
-                            <div className="p-4">
-                              <h3 className="font-display text-base font-semibold mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                                {album.title}
-                              </h3>
-                              {album.journalist && (
-                                <p className="text-xs text-muted-foreground italic">
-                                  Par {album.journalist}
-                                </p>
-                              )}
-                            </div>
-                          </div>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* Desktop: Grid layout */}
-                <motion.div
-                  key="albums-desktop"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-                >
-                  {presseAlbums.map((album, index) => (
-                    <motion.div
-                      key={album.id}
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                      className="group cursor-pointer"
-                      onClick={() => setSelectedAlbum(album)}
-                    >
-                      <div className="card-elevated overflow-hidden">
-                        <div className="aspect-[4/3] overflow-hidden relative">
-                          <img 
-                            src={album.coverImage} 
-                            alt={album.title}
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                          />
-                          <div className="absolute top-4 left-4 px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">
-                            {album.source || "📰 Presse"}
-                          </div>
-                          {album.publishDate && (
-                            <div className="absolute top-4 right-4 px-3 py-1 bg-background/90 text-foreground text-xs font-medium rounded-full">
-                              {album.publishDate}
-                            </div>
-                          )}
-                          <div className="absolute bottom-4 right-4 px-3 py-1 bg-foreground/60 text-background text-xs font-medium rounded-full">
-                            {album.photos.length} photo{album.photos.length > 1 ? "s" : ""}
-                          </div>
+              <motion.div
+                key="albums-grid"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+              >
+                {presseAlbums.map((album, index) => (
+                  <motion.div
+                    key={album.id}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="group cursor-pointer"
+                    onClick={() => setSelectedAlbum(album)}
+                  >
+                    <div className="card-elevated overflow-hidden">
+                      <div className="aspect-[4/3] overflow-hidden relative">
+                        <img 
+                          src={album.coverImage} 
+                          alt={album.title}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <div className="absolute top-4 left-4 px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">
+                          {album.source || "📰 Presse"}
                         </div>
-                        <div className="p-6">
-                          <p className="text-sm text-primary font-medium mb-2">{album.location}</p>
-                          <h3 className="font-display text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-                            {album.title}
-                          </h3>
-                          <p className="text-muted-foreground text-sm line-clamp-2">
-                            {album.description}
-                          </p>
-                          {album.journalist && (
-                            <p className="text-xs text-muted-foreground mt-2 italic">
-                              Par {album.journalist}
-                            </p>
-                          )}
-                          {album.instagramLink && (
-                            <a 
-                              href={album.instagramLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              onClick={(e) => e.stopPropagation()}
-                              className="inline-flex items-center gap-1 mt-3 text-sm text-primary hover:underline"
-                            >
-                              <ExternalLink className="w-3 h-3" />
-                              Voir sur Instagram
-                            </a>
-                          )}
-                          {album.externalLink && (
-                            <a 
-                              href={album.externalLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              onClick={(e) => e.stopPropagation()}
-                              className="inline-flex items-center gap-1 mt-3 text-sm text-primary hover:underline"
-                            >
-                              <ExternalLink className="w-3 h-3" />
-                              Lire l'article
-                            </a>
-                          )}
+                        {album.publishDate && (
+                          <div className="absolute top-4 right-4 px-3 py-1 bg-background/90 text-foreground text-xs font-medium rounded-full">
+                            {album.publishDate}
+                          </div>
+                        )}
+                        <div className="absolute bottom-4 right-4 px-3 py-1 bg-foreground/60 text-background text-xs font-medium rounded-full">
+                          {album.photos.length} photo{album.photos.length > 1 ? "s" : ""}
                         </div>
                       </div>
-                    </motion.div>
-                  ))}
-                </motion.div>
-              </>
+                      <div className="p-6">
+                        <p className="text-sm text-primary font-medium mb-2">{album.location}</p>
+                        <h3 className="font-display text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                          {album.title}
+                        </h3>
+                        <p className="text-muted-foreground text-sm line-clamp-2">
+                          {album.description}
+                        </p>
+                        {album.journalist && (
+                          <p className="text-xs text-muted-foreground mt-2 italic">
+                            Par {album.journalist}
+                          </p>
+                        )}
+                        {album.instagramLink && (
+                          <a 
+                            href={album.instagramLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="inline-flex items-center gap-1 mt-3 text-sm text-primary hover:underline"
+                          >
+                            <ExternalLink className="w-3 h-3" />
+                            Voir sur Instagram
+                          </a>
+                        )}
+                        {album.externalLink && (
+                          <a 
+                            href={album.externalLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="inline-flex items-center gap-1 mt-3 text-sm text-primary hover:underline"
+                          >
+                            <ExternalLink className="w-3 h-3" />
+                            Lire l'article
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
             ) : (
               <motion.div
                 key="photos"
