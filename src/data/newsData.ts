@@ -1,6 +1,15 @@
 // Actualités Presse - Données réelles depuis Presse.tsx
 export const presseNews = [
   {
+    id: "presse-elle-soisy",
+    title: "Salle de bains pour deux : astuces d'architectes",
+    source: "Elle Décoration",
+    date: "Octobre 2025",
+    journalist: "Cyrine Ben Romdhane",
+    link: "/presse",
+    externalLink: "https://www.elle.fr/Deco/Pieces/Salle-de-bain/Les-astuces-des-architectes-pour-amenager-une-salle-de-bains-pour-deux",
+  },
+  {
     id: "presse-18h39-wc-suspendus",
     title: "Toilettes suspendues : l'expertise terrain en rénovation",
     source: "18h39",
