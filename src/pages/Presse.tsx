@@ -65,21 +65,6 @@ const presseAlbums: Album[] = [
       { id: 1, image: presseElleSoisy, title: "SDB parentale Soisy", description: "Zellige bleu, robinetterie noire et plan bois" },
     ],
   },
-  // Décembre 2017 - Toilettes suspendues 18h39
-  {
-    id: "presse-18h39-wc-suspendus",
-    title: "Comment installer des toilettes suspendues : on vous explique tout",
-    location: "Chantiers Darcet & Rue Bièvre",
-    description: "Toilettes suspendues : l'expertise terrain en rénovation. Dans cet article de 18h39, plusieurs de nos réalisations mettent en lumière notre savoir-faire en rénovation, avec l'expertise de Carina Nahmani, maître d'œuvre, notamment sur l'analyse du système d'évacuation — une étape clé pour des travaux durables et maîtrisés. Les chantiers Darcet et Rue Bièvre sont mis à l'honneur.",
-    coverImage: charonne1,
-    externalLink: "https://www.18h39.fr/travaux-avant-apres/transformer-espace-chez-soi/comment-installer-des-toilettes-suspendues-vous-explique-tout.html",
-    source: "18h39",
-    publishDate: "27 décembre 2017",
-    journalist: "Matthieu M.",
-    photos: [
-      { id: 1, image: charonne1, title: "Toilettes suspendues", description: "Chantiers Darcet & Rue Bièvre mis à l'honneur" },
-    ],
-  },
   // Février 2018 - Interview 18h39
   {
     id: "presse-18h39-joints",
@@ -93,6 +78,21 @@ const presseAlbums: Album[] = [
     journalist: "Pauline Delcourt",
     photos: [
       { id: 1, image: presse18h39Joints, title: "Joints colorés", description: "L'art du détail qui fait toute la différence" },
+    ],
+  },
+  // Décembre 2017 - Toilettes suspendues 18h39
+  {
+    id: "presse-18h39-wc-suspendus",
+    title: "Comment installer des toilettes suspendues : on vous explique tout",
+    location: "Chantiers Darcet & Rue Bièvre",
+    description: "Toilettes suspendues : l'expertise terrain en rénovation. Dans cet article de 18h39, plusieurs de nos réalisations mettent en lumière notre savoir-faire en rénovation, avec l'expertise de Carina Nahmani, maître d'œuvre, notamment sur l'analyse du système d'évacuation — une étape clé pour des travaux durables et maîtrisés. Les chantiers Darcet et Rue Bièvre sont mis à l'honneur.",
+    coverImage: charonne1,
+    externalLink: "https://www.18h39.fr/travaux-avant-apres/transformer-espace-chez-soi/comment-installer-des-toilettes-suspendues-vous-explique-tout.html",
+    source: "18h39",
+    publishDate: "27 décembre 2017",
+    journalist: "Matthieu M.",
+    photos: [
+      { id: 1, image: charonne1, title: "Toilettes suspendues", description: "Chantiers Darcet & Rue Bièvre mis à l'honneur" },
     ],
   },
   // Janvier 2025

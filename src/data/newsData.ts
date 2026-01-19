@@ -10,15 +10,6 @@ export const presseNews = [
     externalLink: "https://www.elle.fr/Deco/Pieces/Salle-de-bain/Les-astuces-des-architectes-pour-amenager-une-salle-de-bains-pour-deux",
   },
   {
-    id: "presse-18h39-wc-suspendus",
-    title: "Toilettes suspendues : l'expertise terrain en rénovation",
-    source: "18h39",
-    date: "Décembre 2017",
-    journalist: "Matthieu M.",
-    link: "/presse",
-    externalLink: "https://www.18h39.fr/travaux-avant-apres/transformer-espace-chez-soi/comment-installer-des-toilettes-suspendues-vous-explique-tout.html",
-  },
-  {
     id: "presse-18h39-joints",
     title: "Interview : Joints de couleur pour sublimer votre carrelage",
     source: "18h39",
@@ -26,6 +17,15 @@ export const presseNews = [
     journalist: "Pauline Delcourt",
     link: "/presse",
     externalLink: "https://www.18h39.fr/inspiration-maison/tendances-deco/idee-deco-optez-pour-des-joints-de-couleurs-pour-mettre-en-valeur-votre-carrelage.html",
+  },
+  {
+    id: "presse-18h39-wc-suspendus",
+    title: "Toilettes suspendues : l'expertise terrain en rénovation",
+    source: "18h39",
+    date: "Décembre 2017",
+    journalist: "Matthieu M.",
+    link: "/presse",
+    externalLink: "https://www.18h39.fr/travaux-avant-apres/transformer-espace-chez-soi/comment-installer-des-toilettes-suspendues-vous-explique-tout.html",
   },
   {
     id: "presse-houzz-soisy",
