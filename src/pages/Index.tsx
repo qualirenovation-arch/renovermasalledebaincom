@@ -524,6 +524,9 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Distinctions Houzz */}
+      <Recompenses />
+
 
       {/* CTA Final */}
       <section className="section-padding bg-foreground text-background">
