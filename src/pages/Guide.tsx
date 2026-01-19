@@ -173,7 +173,7 @@ const Guide = () => {
                 <div className="p-3">
                   <h3 className="font-semibold text-sm text-foreground line-clamp-2">Comment choisir votre vasque à poser</h3>
                   <p className="text-xs text-muted-foreground mt-2 flex items-center gap-1">
-                    <Eye className="w-3 h-3" /> 2.4k vues
+                    <Eye className="w-3 h-3" /> 17.4k vues
                   </p>
                 </div>
               </div>
@@ -194,7 +194,7 @@ const Guide = () => {
                   <p className="text-xs text-muted-foreground mt-1">Réponse : Pas forcément. S'il y a un miroir toute hauteur, le carrelage derrière n'a aucun intérêt technique, ne se voit pas et augmente inutilement le devis.</p>
                   <p className="text-xs text-primary mt-2">👉 Je vous explique tout dans la vidéo, pour faire les bons choix et garder un budget maîtrisé.</p>
                   <p className="text-xs text-muted-foreground mt-2 flex items-center gap-1">
-                    <Eye className="w-3 h-3" /> 1.8k vues
+                    <Eye className="w-3 h-3" /> 15.9k vues
                   </p>
                 </div>
               </div>
@@ -215,7 +215,7 @@ const Guide = () => {
                   <p className="text-xs text-muted-foreground mt-1">En conservant la VMC collective et en intégrant l'accès dans la menuiserie, on a pu créer un placard au-dessus des WC, sans compromettre la ventilation.</p>
                   <p className="text-xs text-primary mt-2">👉 Plus de rangements, une solution propre, conforme… et futée.</p>
                   <p className="text-xs text-muted-foreground mt-2 flex items-center gap-1">
-                    <Eye className="w-3 h-3" /> 3.1k vues
+                    <Eye className="w-3 h-3" /> 59.5k vues
                   </p>
                 </div>
               </div>
@@ -236,7 +236,7 @@ const Guide = () => {
                   <p className="text-xs text-muted-foreground mt-1">Un dégât des eaux peut ruiner une rénovation et entraîner des frais considérables. La clé : des raccords de qualité, une étanchéité parfaite et des contrôles réguliers.</p>
                   <p className="text-xs text-primary mt-2">👉 Dans cette vidéo, je vous montre les erreurs à éviter et les bonnes pratiques à adopter.</p>
                   <p className="text-xs text-muted-foreground mt-2 flex items-center gap-1">
-                    <Eye className="w-3 h-3" /> 5.2k vues
+                    <Eye className="w-3 h-3" /> 3.7k vues
                   </p>
                 </div>
               </div>
