@@ -1,6 +1,6 @@
 import { ExternalLink } from "lucide-react";
 
-// Badge unifié "Best of Houzz" - Même taille pour tous
+// Badge officiel Houzz - Style rectangulaire/vertical
 const HouzzBadge = ({ 
   year, 
   category 
@@ -8,23 +8,36 @@ const HouzzBadge = ({
   year: string; 
   category: "Design" | "Service"; 
 }) => {
+  const categoryColor = category === "Design" ? "#7ac142" : "#4a90a4";
+  
   return (
     <div className="flex flex-col items-center">
-      {/* Badge principal */}
-      <div className="w-14 h-14 rounded-full bg-[#7ac142] flex items-center justify-center text-white shadow-sm border-2 border-white/20">
+      {/* Badge rectangulaire vertical style officiel */}
+      <div 
+        className="w-16 h-20 rounded-sm flex flex-col items-center justify-between py-2 px-1 shadow-sm"
+        style={{ backgroundColor: categoryColor }}
+      >
+        {/* Année */}
+        <span className="text-white text-lg font-bold leading-none">{year}</span>
+        
+        {/* Séparateur */}
+        <div className="w-10 h-px bg-white/40" />
+        
+        {/* Best of Houzz - plus visible */}
         <div className="text-center">
-          <span className="block text-base font-bold leading-none">{year.slice(-2)}</span>
-          <span className="block text-[6px] uppercase tracking-wider opacity-90 mt-0.5">Best of</span>
+          <span className="block text-white text-[8px] font-semibold uppercase tracking-wide leading-tight">
+            Best of
+          </span>
+          <span className="block text-white text-[9px] font-bold uppercase tracking-wider leading-tight">
+            Houzz
+          </span>
         </div>
+        
+        {/* Catégorie */}
+        <span className="text-white/90 text-[7px] uppercase tracking-wide font-medium">
+          {category}
+        </span>
       </div>
-      {/* Label catégorie */}
-      <span className={`text-[10px] font-medium mt-1.5 ${
-        category === "Design" 
-          ? "text-amber-600" 
-          : "text-emerald-600"
-      }`}>
-        {category}
-      </span>
     </div>
   );
 };
@@ -45,15 +58,15 @@ export function Recompenses() {
   ];
 
   return (
-    <section className="py-12">
+    <section className="py-10">
       <div className="container-custom">
         {/* Titre sobre et visible */}
-        <h2 className="text-center text-lg font-semibold text-foreground/80 tracking-wide mb-8">
-          Distinctions
+        <h2 className="text-center text-base font-semibold text-foreground tracking-wide mb-6 uppercase">
+          Récompenses
         </h2>
 
         {/* Ligne de badges alignés */}
-        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+        <div className="flex flex-wrap items-end justify-center gap-3 md:gap-4">
           {badges.map((badge, index) => (
             <HouzzBadge 
               key={`${badge.year}-${badge.category}-${index}`}
@@ -64,7 +77,7 @@ export function Recompenses() {
         </div>
 
         {/* Lien discret vers Houzz */}
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center mt-6">
           <a 
             href="https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept" 
             target="_blank" 
