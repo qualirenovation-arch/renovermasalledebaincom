@@ -30,6 +30,12 @@ import gallery23 from "@/assets/gallery-23.jpg";
 import gallery24 from "@/assets/gallery-24.jpg";
 import gallery25 from "@/assets/gallery-25.jpg";
 
+// Saint-Maur Enfants
+import stMaurEnfants1 from "@/assets/st-maur-enfants-1.jpg";
+import stMaurEnfants2 from "@/assets/st-maur-enfants-2.jpg";
+import stMaurEnfants3 from "@/assets/st-maur-enfants-3.jpg";
+import stMaurEnfantsAvant1 from "@/assets/st-maur-enfants-avant-1.jpg";
+
 // Paris 17ème Suite Parentale - AVANT
 import paris17Avant1 from "@/assets/paris17-1.jpg";
 import paris17Avant2 from "@/assets/paris17-2.jpg";
@@ -725,6 +731,19 @@ const albums: Album[] = [
       { id: 6, image: gallery23, title: "Avant — Détails", description: "Carrelage ancien" },
       { id: 7, image: gallery24, title: "Travaux — Rénovation", description: "Phase de transformation" },
       { id: 8, image: gallery25, title: "Après — Finitions", description: "Dernières touches" },
+    ],
+  },
+  {
+    id: "saint-maur-enfants",
+    title: "SDB & WC Enfants — Tebrick Bleu",
+    location: "Saint-Maur-des-Fossés (94) - Av. du Nord",
+    description: "AVANT : WC vétuste avec peinture écaillée et carrelage désuet. APRÈS : Petite salle de bain enfants optimisée avec meuble vasque effet bois, robinetterie Horus nickel mat, porte de douche blanche et carrelage tebrick bleu combiné à un carrelage beige mat. WC suspendu avec placard bois sur-mesure au-dessus et niche décorative. Un projet compact mais plein de charme !",
+    coverImage: stMaurEnfants3,
+    photos: [
+      { id: 1, image: stMaurEnfants3, title: "Après — Meuble vasque", description: "Effet bois et robinetterie Horus nickel mat" },
+      { id: 2, image: stMaurEnfants1, title: "Après — Douche", description: "Tebrick bleu et carrelage beige mat" },
+      { id: 3, image: stMaurEnfants2, title: "Après — WC suspendu", description: "Placard bois sur-mesure et niche" },
+      { id: 4, image: stMaurEnfantsAvant1, title: "Avant — WC vétuste", description: "État initial à rénover" },
     ],
   },
   {
