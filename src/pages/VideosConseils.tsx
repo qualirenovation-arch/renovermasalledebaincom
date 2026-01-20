@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { PlayCircle, Filter, ExternalLink } from "lucide-react";
 import { videoConseils } from "@/data/newsData";
@@ -149,7 +150,7 @@ export default function VideosConseils() {
             Contactez-nous pour un conseil personnalisé.
           </p>
           <Button asChild size="lg" className="rounded-full">
-            <a href="/devis">Demander un devis gratuit</a>
+            <Link to="/devis#devis-form">Demander un devis gratuit</Link>
           </Button>
         </div>
       </section>

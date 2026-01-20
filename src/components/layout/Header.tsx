@@ -86,7 +86,7 @@ export function Header() {
             {/* CTA Button - Desktop */}
             <div className="hidden xl:flex items-center ml-4">
               <Button variant="cta" size="lg" asChild>
-                <Link to="/devis">Devis gratuit</Link>
+                <Link to="/devis#devis-form">Devis gratuit</Link>
               </Button>
             </div>
 
@@ -94,7 +94,7 @@ export function Header() {
             <div className="xl:hidden flex items-center gap-2">
               {/* CTA visible hors burger sur mobile */}
               <Button variant="cta" size="sm" asChild className="text-xs px-3 py-2">
-                <Link to="/devis">Devis</Link>
+                <Link to="/devis#devis-form">Devis</Link>
               </Button>
               
               <button

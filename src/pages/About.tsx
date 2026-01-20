@@ -503,7 +503,7 @@ export default function About() {
               votre salle de bain.
             </p>
             <Button variant="cta" size="xl" asChild>
-              <Link to="/devis">
+              <Link to="/devis#devis-form">
                 Demander un devis gratuit
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>

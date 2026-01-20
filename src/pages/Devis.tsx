@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Layout } from "@/components/layout/Layout";
 import { useToast } from "@/hooks/use-toast";
+import { useDevisScrollOnMount } from "@/hooks/useDevisNavigation";
 import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { 
@@ -251,6 +252,9 @@ export default function Devis() {
   const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
+  
+  // Handle scroll on mount when hash is present
+  useDevisScrollOnMount();
 
   const handleChange = (field: keyof FormData, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -427,7 +431,7 @@ export default function Devis() {
       </section>
 
       {/* Form Section - Mobile optimisé */}
-      <section className="py-8 md:py-12 bg-background">
+      <section id="devis-form" className="py-8 md:py-12 bg-background scroll-mt-24 md:scroll-mt-28">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
             {/* Form */}

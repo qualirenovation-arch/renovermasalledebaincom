@@ -172,7 +172,7 @@ export default function Index() {
                 asChild 
                 className="bg-[hsl(38,50%,50%)] hover:bg-[hsl(38,50%,45%)] text-white rounded-md px-8 w-full sm:w-auto"
               >
-                <Link to="/devis">
+                <Link to="/devis#devis-form">
                   DEMANDER UN DEVIS GRATUIT
                 </Link>
               </Button>
@@ -484,7 +484,7 @@ export default function Index() {
                 asChild
                 className="bg-[hsl(38,50%,50%)] hover:bg-[hsl(38,50%,45%)] text-white rounded-md w-full sm:w-auto"
               >
-                <Link to="/devis">
+                <Link to="/devis#devis-form">
                   Devis gratuit
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>

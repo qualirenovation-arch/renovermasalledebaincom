@@ -22,7 +22,7 @@ const footerLinks = {
     path: "/presse#parutions"
   }, {
     label: "Demande de devis",
-    path: "/devis"
+    path: "/devis#devis-form"
   }],
   services: ["Création de douche à l'italienne", "Rénovation salle de bain", "Étanchéité garantie", "Pose de carrelage", "Installation receveur", "Parois sur mesure"]
 };
