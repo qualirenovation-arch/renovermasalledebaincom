@@ -21,6 +21,7 @@ import {
   Building2,
   Home
 } from "lucide-react";
+import { FormProgressBar } from "@/components/devis/FormProgressBar";
 import chateletDoreImage from "@/assets/chatelet-dore.jpg";
 import chateletNoirImage from "@/assets/chatelet-noir.jpg";
 import chateletChromeImage from "@/assets/chatelet-chrome.jpg";
@@ -441,6 +442,9 @@ export default function Devis() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
+              {/* Barre de progression */}
+              <FormProgressBar formData={formData} />
+
               <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
                 {/* Informations personnelles */}
                 <div className="card-elevated p-5 md:p-8">
