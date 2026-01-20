@@ -20,6 +20,7 @@ import presseHouzzEau from "@/assets/presse-houzz-laumiere.png";
 import presse18h39Wc from "@/assets/presse-18h39-wc.png";
 import soisy1 from "@/assets/soisy-1.jpg";
 import presseHouzzBuanderie from "@/assets/presse-houzz-buanderie.png";
+import soisyEnfants1 from "@/assets/soisy-enfants-1.jpg";
 
 // ========================================
 // Structure "base de données" : parutions_presse
@@ -83,6 +84,18 @@ const parutions_presse: ParutionPresse[] = [
     type: "article",
     image: soisy1,
     journalist: "Becky Harris",
+    location: "Soisy-sous-Montmorency (95)",
+  },
+  {
+    id: "houzz-terrazzo-2024",
+    date_publication: "2024-11-08",
+    media: "Houzz",
+    titre_article: "Comment intégrer du terrazzo dans la salle de bains ?",
+    extrait_seo: "Le terrazzo dans tous ses états : inspirations pour une salle de bains moderne et élégante. Notre projet à Soisy-sous-Montmorency illustre l'utilisation du terrazzo hexagonal avec robinetterie dorée dans la salle de bains des enfants.",
+    url_article: "https://www.houzz.fr/magazine/comment-integrer-du-terrazzo-dans-la-salle-de-bains-stsetivw-vs~177628691",
+    type: "article",
+    image: soisyEnfants1,
+    journalist: "Lucas Beyssier",
     location: "Soisy-sous-Montmorency (95)",
   },
   {
