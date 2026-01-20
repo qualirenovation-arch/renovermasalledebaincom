@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -27,12 +27,26 @@ const desktopNavItems = [
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-      {/* Top Banner - Hidden on mobile for space */}
-      <div className="hidden md:block bg-primary text-primary-foreground py-2 px-4">
+      {/* Top Banner - Hidden on mobile and when scrolled */}
+      <div 
+        className={`hidden md:block bg-primary text-primary-foreground py-2 px-4 transition-all duration-300 ${
+          isScrolled ? "h-0 py-0 overflow-hidden opacity-0" : "h-auto opacity-100"
+        }`}
+      >
         <div className="container-custom flex justify-center md:justify-between items-center text-sm">
           <span className="hidden md:block">Spécialiste de la rénovation de votre salle de bain</span>
           <a 
@@ -46,7 +60,9 @@ export function Header() {
       </div>
 
       {/* Main Header */}
-      <header className="sticky top-0 md:top-[40px] z-50 bg-background/95 backdrop-blur-md border-b border-border">
+      <header className={`sticky z-50 bg-background/95 backdrop-blur-md border-b border-border transition-all duration-300 ${
+        isScrolled ? "top-0" : "top-0 md:top-[40px]"
+      }`}>
         <div className="container-custom">
           <div className="flex items-center justify-between h-14 md:h-20">
             {/* Logo - Compact on mobile */}
