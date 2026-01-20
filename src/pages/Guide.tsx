@@ -1385,6 +1385,54 @@ const Guide = () => {
                   Toujours. Une trappe d'accès est indispensable pour intervenir rapidement en cas de problème.
                 </p>
               </div>
+              <div className="bg-background rounded-xl p-6 shadow-sm">
+                <h3 className="font-semibold text-lg mb-2">
+                  ❓ L'électricité est-elle toujours conforme lors d'une rénovation de salle de bain ?
+                </h3>
+                <div className="text-muted-foreground space-y-3">
+                  <p>
+                    Lors d'une rénovation de salle de bain, l'installation électrique est systématiquement vérifiée et remise aux normes en vigueur. Cela inclut le respect des volumes de sécurité (zones où certains équipements sont interdits), la mise à la terre de tous les éléments conducteurs, les protections au tableau électrique (disjoncteur différentiel 30mA) et la conformité globale de l'installation selon la norme NF C 15-100.
+                  </p>
+                  <p>
+                    Certains équipements comme le chauffe-eau, le sèche-serviette ou le plancher chauffant nécessitent un raccordement direct au tableau avec une ligne dédiée et un disjoncteur adapté, ce qui peut entraîner des travaux électriques supplémentaires hors périmètre initial. Ces points sont identifiés en amont lors de notre visite technique.
+                  </p>
+                  <p className="font-medium text-foreground">
+                    Le beau est important, mais la conformité et la sécurité sont des obligations légales non négociables.
+                  </p>
+                </div>
+              </div>
+              <div className="bg-background rounded-xl p-6 shadow-sm">
+                <h3 className="font-semibold text-lg mb-2">
+                  ❓ Le sèche-serviette est-il seulement un accessoire ?
+                </h3>
+                <div className="text-muted-foreground space-y-3">
+                  <p>
+                    Le sèche-serviette n'est pas qu'un accessoire décoratif, c'est un véritable élément de confort thermique. Il participe activement au chauffage de la pièce, limite l'humidité ambiante et améliore considérablement le confort au quotidien en offrant des serviettes toujours sèches et tièdes.
+                  </p>
+                  <p>
+                    Le choix du modèle dépend de la surface de votre salle de bain, de vos habitudes d'utilisation et de l'implantation prévue. Les modèles électriques sont les plus répandus, avec ou sans soufflerie intégrée pour un appoint rapide de chaleur. L'emplacement doit être pensé dès la conception du projet pour ne pas gêner la circulation et optimiser le confort d'utilisation.
+                  </p>
+                  <p className="font-medium text-foreground">
+                    Un sèche-serviette bien dimensionné et bien positionné transforme l'expérience quotidienne de votre salle de bain.
+                  </p>
+                </div>
+              </div>
+              <div className="bg-background rounded-xl p-6 shadow-sm">
+                <h3 className="font-semibold text-lg mb-2">
+                  ❓ Pourquoi les finitions et profilés sont-ils si importants ?
+                </h3>
+                <div className="text-muted-foreground space-y-3">
+                  <p>
+                    Les profilés de finition (angles, chants, jonctions carrelage-paroi, nez de marche) jouent un rôle clé dans le rendu final d'une salle de bain. Ils assurent à la fois la protection des matériaux contre les chocs et l'humidité, et la cohérence esthétique de l'ensemble.
+                  </p>
+                  <p>
+                    Les profilés sont idéalement assortis aux robinetteries, accessoires et finitions générales de la pièce : noir mat, chrome brillant, inox brossé, laiton vieilli ou doré selon l'ambiance recherchée. Cette harmonie des détails crée une unité visuelle qui renforce l'impression de qualité.
+                  </p>
+                  <p className="font-medium text-foreground">
+                    Ce sont souvent ces détails discrets qui font la différence entre une salle de bain correcte et une salle de bain réellement aboutie.
+                  </p>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
