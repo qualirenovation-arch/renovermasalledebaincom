@@ -51,6 +51,7 @@ const parutions_presse: ParutionPresse[] = [
     type: "article",
     image: presseElleSoisy,
     journalist: "Cyrine Ben Romdhane",
+    location: "Soisy-sous-Montmorency (95)",
   },
   {
     id: "houzz-soisy-2025",
@@ -62,6 +63,7 @@ const parutions_presse: ParutionPresse[] = [
     type: "reportage",
     image: presseHouzzSoisy,
     journalist: "Agnès Carpentier",
+    location: "Soisy-sous-Montmorency (95)",
   },
   {
     id: "houzz-economies-gaz-2025",
@@ -73,6 +75,7 @@ const parutions_presse: ParutionPresse[] = [
     type: "article",
     image: stMande1,
     journalist: "Agnès Carpentier",
+    location: "Saint-Mandé (94)",
   },
   {
     id: "houzz-powder-rooms-2024",
@@ -120,6 +123,7 @@ const parutions_presse: ParutionPresse[] = [
     type: "article",
     image: presseHouzzBuanderie,
     journalist: "Claire Tardy",
+    location: "Paris",
   },
   {
     id: "marie-claire-adresses-2024",
@@ -142,6 +146,7 @@ const parutions_presse: ParutionPresse[] = [
     type: "article",
     image: stMande1,
     journalist: "Anne Ambaud",
+    location: "Saint-Mandé (94)",
   },
   {
     id: "houzz-maitre-oeuvre-2022",
@@ -164,6 +169,7 @@ const parutions_presse: ParutionPresse[] = [
     type: "article",
     image: presseElleWc,
     journalist: "Cécile Debise",
+    location: "Paris",
   },
   {
     id: "houzz-wc-sdb-2021",
@@ -175,6 +181,7 @@ const parutions_presse: ParutionPresse[] = [
     type: "article",
     image: presseHouzzEau,
     journalist: "Claire Tardy",
+    location: "Paris 19ème - Avenue Laumière",
   },
   {
     id: "houzz-bois-2021",
@@ -186,6 +193,7 @@ const parutions_presse: ParutionPresse[] = [
     type: "article",
     image: presseHouzzBois,
     journalist: "Rédaction Houzz",
+    location: "Paris",
   },
   {
     id: "marie-claire-contemporaine-2021",
@@ -197,6 +205,7 @@ const parutions_presse: ParutionPresse[] = [
     type: "article",
     image: presseMarieClaireApres,
     journalist: "Rédaction Marie Claire",
+    location: "Paris",
   },
   {
     id: "houzz-trois-pieces-2019",
@@ -208,6 +217,7 @@ const parutions_presse: ParutionPresse[] = [
     type: "reportage",
     image: presseMarieClaireApres,
     journalist: "Agnès Carpentier",
+    location: "Paris",
   },
   {
     id: "18h39-joints-2018",
@@ -230,6 +240,7 @@ const parutions_presse: ParutionPresse[] = [
     type: "article",
     image: presse18h39Wc,
     journalist: "Matthieu M.",
+    location: "Paris 11ème - Rue de Charonne",
   },
 ];
 
