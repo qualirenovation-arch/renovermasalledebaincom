@@ -304,9 +304,11 @@ export default function Presse() {
               <p>
                 En parcourant ces parutions, vous avez l'assurance de faire appel à une entreprise qui prend votre projet à cœur, avec toute la maîtrise nécessaire pour transformer vos idées en un espace durable et bien pensé.
               </p>
-              <p className="text-primary/80 italic">
-                ✨ Et puis, soyons honnêtes : feuilleter de beaux projets, c'est aussi une excellente façon de se projeter… et de commencer à rêver un peu avant les travaux.
-              </p>
+              <div className="mt-6 p-5 bg-gradient-to-r from-accent/10 via-accent/5 to-transparent border-l-4 border-accent rounded-r-xl">
+                <p className="text-foreground italic text-lg leading-relaxed">
+                  ✨ Et puis, soyons honnêtes : feuilleter de beaux projets, c'est aussi une excellente façon de se projeter… et de commencer à rêver un peu avant les travaux.
+                </p>
+              </div>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="inline-flex items-center gap-2 bg-background border border-border px-6 py-3 rounded-full shadow-sm">
