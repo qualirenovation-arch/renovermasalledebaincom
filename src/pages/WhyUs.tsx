@@ -477,7 +477,7 @@ export default function WhyUs() {
               Nous vous répondons sous 24h.
             </p>
             <Button variant="cta" size="xl" asChild>
-              <Link to="/devis">
+              <Link to="/devis#devis-form">
                 Demander un devis gratuit
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>

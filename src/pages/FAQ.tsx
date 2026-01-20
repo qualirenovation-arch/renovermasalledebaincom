@@ -373,7 +373,7 @@ export default function FAQ() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta" size="xl" asChild>
-                <Link to="/devis">
+                <Link to="/devis#devis-form">
                   Demander un devis gratuit
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>

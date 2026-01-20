@@ -26,7 +26,7 @@ export function MobileStickyNav() {
           Appeler
         </a>
         <Link
-          to="/devis"
+          to="/devis#devis-form"
           className="flex-1 flex items-center justify-center gap-2 bg-cta hover:bg-cta-hover text-white py-3 px-4 rounded-xl font-medium text-sm transition-all active:scale-95"
         >
           <Mail className="w-4 h-4" />

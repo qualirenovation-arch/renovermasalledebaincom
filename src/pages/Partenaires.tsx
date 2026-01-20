@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { motion } from "framer-motion";
 
@@ -133,14 +134,17 @@ export default function Partenaires() {
             <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
               Contactez-nous pour discuter d'un partenariat et rejoindre notre réseau de professionnels.
             </p>
-            <motion.a
-              href="/devis"
-              className="inline-block bg-accent text-accent-foreground px-8 py-4 rounded-full font-semibold hover:bg-accent/90 transition-colors"
+            <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
-              Nous contacter
-            </motion.a>
+              <Link
+                to="/devis#devis-form"
+                className="inline-block bg-accent text-accent-foreground px-8 py-4 rounded-full font-semibold hover:bg-accent/90 transition-colors"
+              >
+                Nous contacter
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
       </section>
