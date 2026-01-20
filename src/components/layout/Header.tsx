@@ -135,9 +135,9 @@ export function Header() {
                 {/* Quick access phone on mobile menu */}
                 <a 
                   href="tel:+33659764685"
-                  className="flex items-center gap-2 px-4 py-3 text-base font-medium text-foreground hover:bg-secondary rounded-lg mt-2 border-t border-border pt-4"
+                  className="flex items-center justify-center gap-3 px-4 py-4 text-lg font-semibold text-primary hover:bg-secondary rounded-lg mt-2 border-t border-border pt-5"
                 >
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-6 h-6" />
                   06 59 76 46 85
                 </a>
               </nav>
