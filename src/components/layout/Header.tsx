@@ -46,7 +46,7 @@ export function Header() {
       </div>
 
       {/* Main Header */}
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+      <header className="sticky top-0 md:top-[40px] z-50 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container-custom">
           <div className="flex items-center justify-between h-14 md:h-20">
             {/* Logo - Compact on mobile */}
