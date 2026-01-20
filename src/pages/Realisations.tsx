@@ -34,6 +34,7 @@ import gallery25 from "@/assets/gallery-25.jpg";
 import stMaurEnfants1 from "@/assets/st-maur-enfants-1.jpg";
 import stMaurEnfants2 from "@/assets/st-maur-enfants-2.jpg";
 import stMaurEnfants3 from "@/assets/st-maur-enfants-3.jpg";
+import stMaurEnfants4 from "@/assets/st-maur-enfants-4.jpg";
 import stMaurEnfantsAvant1 from "@/assets/st-maur-enfants-avant-1.jpg";
 
 // Paris 17ème Suite Parentale - AVANT
@@ -741,7 +742,7 @@ const albums: Album[] = [
     coverImage: stMaurEnfants3,
     photos: [
       { id: 1, image: stMaurEnfants3, title: "Après — Meuble vasque", description: "Horus Elsa nickel mat (02 208 NM)" },
-      { id: 2, image: stMaurEnfants1, title: "Après — Douche", description: "Tbrick Cerulean et Etna Crema Mat" },
+      { id: 2, image: stMaurEnfants4, title: "Après — Douche", description: "Tbrick Cerulean et Horus Equinox inox brossé" },
       { id: 3, image: stMaurEnfants2, title: "Après — WC suspendu", description: "Tbrick Cerulean et placard bois" },
       { id: 4, image: stMaurEnfantsAvant1, title: "Avant — WC vétuste", description: "État initial à rénover" },
     ],
