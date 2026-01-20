@@ -737,7 +737,7 @@ const albums: Album[] = [
     id: "saint-maur-enfants",
     title: "SDB & WC Enfants — Tebrick Bleu",
     location: "Saint-Maur-des-Fossés (94) - Av. du Nord",
-    description: "AVANT : WC vétuste avec peinture écaillée et carrelage désuet. APRÈS : Petite salle de bain enfants optimisée avec meuble vasque effet bois, robinetterie Horus nickel mat, porte de douche blanche. Carrelages : Tbrick Cerulean 5,2x16cm (murs douche et WC) et Etna Crema Mat 60x120cm antidérapant (sol et fond douche). WC suspendu avec placard bois sur-mesure au-dessus et niche décorative. Un projet compact mais plein de charme !",
+    description: "AVANT : WC vétuste avec peinture écaillée et carrelage désuet. APRÈS : Petite salle de bain enfants optimisée avec meuble vasque effet bois, robinetterie Horus nickel mat (CMR), porte de douche blanche. Carrelages (Parquet Carrelage) : Tbrick Cerulean 5,2x16cm (murs douche et WC) et Etna Crema Mat 60x120cm antidérapant (sol et fond douche). WC suspendu avec placard bois sur-mesure au-dessus et niche décorative. Un projet compact mais plein de charme !",
     coverImage: stMaurEnfants3,
     photos: [
       { id: 1, image: stMaurEnfants3, title: "Après — Meuble vasque", description: "Effet bois et robinetterie Horus nickel mat" },
