@@ -385,55 +385,51 @@ export default function Devis() {
 
   return (
     <Layout>
-      {/* Hero */}
-      <section className="relative py-20 md:py-28 bg-stone">
+      {/* Hero - Compact pour mobile */}
+      <section className="relative py-10 md:py-20 bg-stone">
         <div className="container-custom">
           <motion.div 
-            className="max-w-3xl"
+            className="max-w-3xl text-center md:text-left"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="tag-mint inline-flex items-center gap-2 mb-6">
+            <span className="tag-mint inline-flex items-center gap-2 mb-4">
               <CalendarCheck className="w-4 h-4" />
-              Visite technique gratuite
+              Visite gratuite
             </span>
-            <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6">
-              Planifiez votre RDV sur site
+            <h1 className="font-display text-2xl md:text-4xl lg:text-5xl font-semibold mb-3 md:mb-6">
+              Demandez votre devis
             </h1>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              Remplissez ce formulaire pour obtenir un <strong>rendez-vous gratuit</strong> avec notre équipe. 
-              Nous viendrons étudier votre projet directement chez vous.
+            <p className="text-muted-foreground text-sm md:text-lg leading-relaxed">
+              RDV gratuit chez vous pour étudier votre projet.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Avantages rapides */}
-      <section className="py-8 border-b border-border bg-background">
+      {/* Avantages rapides - Compact */}
+      <section className="py-4 md:py-8 border-b border-border bg-background">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8">
             {[
-              { icon: Pencil, title: "Conception sur mesure", desc: "Des solutions personnalisées" },
-              { icon: Gem, title: "Matériaux de qualité", desc: "Durables et esthétiques" },
-              { icon: Wrench, title: "Installation professionnelle", desc: "Experts qualifiés" }
+              { icon: Pencil, title: "Sur mesure" },
+              { icon: Gem, title: "Qualité" },
+              { icon: Wrench, title: "Experts" }
             ].map((item, index) => (
-              <div key={index} className="flex items-center gap-4">
-                <item.icon className="w-8 h-8 text-foreground flex-shrink-0" strokeWidth={1.5} />
-                <div>
-                  <h3 className="font-semibold text-sm">{item.title}</h3>
-                  <p className="text-muted-foreground text-xs">{item.desc}</p>
-                </div>
+              <div key={index} className="flex items-center gap-2">
+                <item.icon className="w-5 h-5 md:w-6 md:h-6 text-foreground" strokeWidth={1.5} />
+                <span className="font-medium text-sm">{item.title}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Form Section */}
-      <section className="section-padding bg-background">
+      {/* Form Section - Mobile optimisé */}
+      <section className="py-8 md:py-12 bg-background">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
             {/* Form */}
             <motion.div 
               className="lg:col-span-2"
@@ -441,9 +437,9 @@ export default function Devis() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <form onSubmit={handleSubmit} className="space-y-8">
+              <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
                 {/* Informations personnelles */}
-                <div className="card-elevated p-8">
+                <div className="card-elevated p-5 md:p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-beige))] flex items-center justify-center">
                       <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">

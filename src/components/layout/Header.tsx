@@ -5,7 +5,17 @@ import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import qualirenovationLogo from "@/assets/logos/qualirenovation-logo.png";
 
-const navItems = [
+// Navigation simplifiée pour mobile (max 5 entrées)
+const mobileNavItems = [
+  { label: "Accueil", path: "/" },
+  { label: "Réalisations", path: "/realisations" },
+  { label: "Guide travaux", path: "/guide-travaux" },
+  { label: "À propos", path: "/a-propos" },
+  { label: "Avis", path: "/presse#parutions" },
+];
+
+// Navigation desktop complète
+const desktopNavItems = [
   { label: "Accueil", path: "/" },
   { label: "À propos", path: "/a-propos" },
   { label: "Pourquoi nous", path: "/pourquoi-nous" },
@@ -21,8 +31,8 @@ export function Header() {
 
   return (
     <>
-      {/* Top Banner */}
-      <div className="bg-primary text-primary-foreground py-2 px-4">
+      {/* Top Banner - Hidden on mobile for space */}
+      <div className="hidden md:block bg-primary text-primary-foreground py-2 px-4">
         <div className="container-custom flex justify-center md:justify-between items-center text-sm">
           <span className="hidden md:block">Spécialiste de la rénovation de votre salle de bain</span>
           <a 
@@ -38,19 +48,19 @@ export function Header() {
       {/* Main Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container-custom">
-          <div className="flex items-center justify-between h-16 md:h-20">
-            {/* Logo */}
-            <Link to="/" className="flex items-center gap-4">
+          <div className="flex items-center justify-between h-14 md:h-20">
+            {/* Logo - Compact on mobile */}
+            <Link to="/" className="flex items-center gap-2 md:gap-4">
               <img 
                 src={qualirenovationLogo} 
                 alt="QualiRénovation Logo" 
-                className="h-12 md:h-16 w-auto"
+                className="h-10 md:h-16 w-auto"
               />
               <div className="flex flex-col leading-tight">
-                <span className="font-display text-xl md:text-2xl font-semibold text-navy">
-                  renovermasalledebain.com
+                <span className="font-display text-base md:text-2xl font-semibold text-navy">
+                  renovermasalledebain<span className="hidden sm:inline">.com</span>
                 </span>
-                <span className="text-sm md:text-base font-medium text-gold-dark">
+                <span className="text-xs md:text-base font-medium text-gold-dark hidden sm:block">
                   by QualiRénovation
                 </span>
               </div>
@@ -58,7 +68,7 @@ export function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden xl:flex items-center gap-1 ml-auto">
-              {navItems.map((item) => (
+              {desktopNavItems.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
@@ -80,18 +90,25 @@ export function Header() {
               </Button>
             </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              className="xl:hidden p-2 text-foreground"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Menu"
-            >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            {/* Mobile: CTA + Menu burger */}
+            <div className="xl:hidden flex items-center gap-2">
+              {/* CTA visible hors burger sur mobile */}
+              <Button variant="cta" size="sm" asChild className="text-xs px-3 py-2">
+                <Link to="/devis">Devis</Link>
+              </Button>
+              
+              <button
+                className="p-2 text-foreground"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label="Menu"
+              >
+                {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu - Simplified */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
@@ -100,8 +117,8 @@ export function Header() {
               exit={{ opacity: 0, height: 0 }}
               className="xl:hidden bg-background border-t border-border overflow-hidden"
             >
-              <nav className="container-custom py-4 flex flex-col gap-2">
-                {navItems.map((item) => (
+              <nav className="container-custom py-3 flex flex-col gap-1">
+                {mobileNavItems.map((item) => (
                   <Link
                     key={item.path}
                     to={item.path}
@@ -115,11 +132,14 @@ export function Header() {
                     {item.label}
                   </Link>
                 ))}
-                <Button variant="cta" size="lg" className="mt-2" asChild>
-                  <Link to="/devis" onClick={() => setIsMenuOpen(false)}>
-                    Devis gratuit
-                  </Link>
-                </Button>
+                {/* Quick access phone on mobile menu */}
+                <a 
+                  href="tel:+33659764685"
+                  className="flex items-center gap-2 px-4 py-3 text-base font-medium text-foreground hover:bg-secondary rounded-lg mt-2 border-t border-border pt-4"
+                >
+                  <Phone className="w-5 h-5" />
+                  06 59 76 46 85
+                </a>
               </nav>
             </motion.div>
           )}
