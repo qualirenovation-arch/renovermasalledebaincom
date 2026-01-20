@@ -356,87 +356,42 @@ const DegatsEaux = () => {
       </section>
 
       {/* Section SEO - 3 blocs horizontaux */}
-      <section className="py-12 md:py-16 bg-stone-50">
+      <section className="py-8 md:py-12 bg-background">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
             {/* Bloc 1 - Risque majeur */}
-            <motion.div
-              className="bg-white rounded-xl p-6 shadow-sm border border-border/30 flex flex-col h-full"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-            >
-              <div className="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center mb-4">
-                <AlertTriangle className="w-6 h-6 text-amber-600" />
+            <div className="bg-white rounded-xl p-5 shadow-sm border border-border/30">
+              <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center mb-3">
+                <AlertTriangle className="w-5 h-5 text-amber-600" />
               </div>
-              <h3 className="font-semibold text-lg text-foreground mb-2">Risque majeur</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Un dégât des eaux peut rendre un logement inhabitable et entraîner des coûts importants s'il est mal géré.
+              <h3 className="font-semibold text-foreground mb-1">Risque majeur</h3>
+              <p className="text-muted-foreground text-sm">
+                Un dégât des eaux peut rendre un logement inhabitable.
               </p>
-            </motion.div>
+            </div>
             
             {/* Bloc 2 - Maîtrise d'œuvre intégrée */}
-            <motion.div
-              className="bg-white rounded-xl p-6 shadow-sm border border-border/30 flex flex-col h-full"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-            >
-              <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center mb-4">
-                <HardHat className="w-6 h-6 text-green-600" />
+            <div className="bg-white rounded-xl p-5 shadow-sm border border-border/30">
+              <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-3">
+                <HardHat className="w-5 h-5 text-green-600" />
               </div>
-              <h3 className="font-semibold text-lg text-foreground mb-2">Maîtrise d'œuvre intégrée</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Nous pilotons la remise en état complète avec un maître d'œuvre intégré, au-delà d'une simple exécution de travaux.
+              <h3 className="font-semibold text-foreground mb-1">Maîtrise d'œuvre</h3>
+              <p className="text-muted-foreground text-sm">
+                Pilotage complet de la remise en état par un maître d'œuvre.
               </p>
-            </motion.div>
+            </div>
             
             {/* Bloc 3 - Prise en charge globale */}
-            <motion.div
-              className="bg-white rounded-xl p-6 shadow-sm border border-border/30 flex flex-col h-full"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-            >
-              <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-4">
-                <ClipboardList className="w-6 h-6 text-blue-600" />
+            <div className="bg-white rounded-xl p-5 shadow-sm border border-border/30">
+              <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mb-3">
+                <ClipboardList className="w-5 h-5 text-blue-600" />
               </div>
-              <h3 className="font-semibold text-lg text-foreground mb-2">Prise en charge globale</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Devis complets, accompagnement assurance et coordination des travaux jusqu'à la remise en état finale.
+              <h3 className="font-semibold text-foreground mb-1">Prise en charge</h3>
+              <p className="text-muted-foreground text-sm">
+                Devis, assurance et coordination jusqu'à la remise en état.
               </p>
-            </motion.div>
+            </div>
           </div>
-          
-          {/* Texte SEO sous les blocs */}
-          <motion.p
-            className="text-center text-muted-foreground mt-8 max-w-3xl mx-auto text-sm md:text-base leading-relaxed"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-          >
-            Après un dégât des eaux, faire appel à une structure avec maître d'œuvre intégré permet d'assurer une remise en état conforme, une meilleure prise en charge par l'assurance et une coordination complète des travaux, notamment lorsque le logement est inhabitable.
-          </motion.p>
-          
-          {/* CTA */}
-          <motion.div
-            className="text-center mt-8"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.5 }}
-          >
-            <Link to="/devis">
-              <Button variant="cta" size="lg" className="group">
-                Être accompagné après un dégât des eaux
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-          </motion.div>
         </div>
       </section>
 
@@ -498,33 +453,19 @@ const DegatsEaux = () => {
       </section>
 
       {/* Section Vidéos Conseils */}
-      <section className="py-12 md:py-16 bg-stone-50">
+      <section className="py-8 md:py-12 bg-stone-50">
         <div className="container-custom">
-          <motion.div
-            className="text-center mb-10"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="font-display text-2xl md:text-3xl font-bold mb-4 text-foreground">
-              Vidéos conseils
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Nos experts partagent leurs conseils pour prévenir les dégâts des eaux
-            </p>
-          </motion.div>
+          <h2 className="font-display text-xl md:text-2xl font-bold mb-6 text-center text-foreground">
+            🎬 Vidéos conseils
+          </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {degatsEauxVideos.map((video, index) => (
-              <motion.div
+          <div className="grid grid-cols-2 gap-4 max-w-2xl mx-auto">
+            {degatsEauxVideos.map((video) => (
+              <div
                 key={video.id}
                 className="bg-white rounded-xl overflow-hidden shadow-sm border border-border/50"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
               >
-                <div className="aspect-[9/16] bg-stone-100">
+                <div className="aspect-[9/16]">
                   <video
                     src={video.videoSrc}
                     className="w-full h-full object-cover"
@@ -533,70 +474,12 @@ const DegatsEaux = () => {
                     preload="metadata"
                   />
                 </div>
-                <div className="p-4">
-                  <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
-                    <Eye className="w-3 h-3" />
-                    <span>{video.views} vues</span>
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2">{video.title}</h3>
-                  <p className="text-sm text-muted-foreground">{video.description}</p>
+                <div className="p-3">
+                  <h3 className="font-medium text-sm text-foreground">{video.title}</h3>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Section Bonnes Pratiques */}
-      <section className="py-12 md:py-16 bg-background">
-        <div className="container-custom">
-          <motion.div
-            className="max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="font-display text-2xl md:text-3xl font-bold mb-8 text-center text-foreground">
-              Bonnes pratiques pour éviter les dégâts des eaux
-            </h2>
-            
-            <div className="space-y-4">
-              {[
-                {
-                  title: "Raccords de qualité",
-                  description: "Utilisez des raccords multicouches sertis, jamais de raccords à compression dans les zones encastrées."
-                },
-                {
-                  title: "Étanchéité parfaite",
-                  description: "Appliquez un SPEC (Système de Protection à l'Eau sous Carrelage) dans toutes les zones humides."
-                },
-                {
-                  title: "Contrôles réguliers",
-                  description: "Vérifiez l'état des joints, des raccords et des équipements sanitaires tous les ans."
-                },
-                {
-                  title: "Vannes d'arrêt accessibles",
-                  description: "Installez des vannes d'arrêt individuelles pour pouvoir couper l'eau rapidement en cas de fuite."
-                },
-                {
-                  title: "Détecteurs de fuite",
-                  description: "Équipez les zones à risque de détecteurs de fuite connectés pour une alerte immédiate."
-                }
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white rounded-lg p-5 shadow-sm border border-border/30"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm">{item.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
         </div>
       </section>
 
