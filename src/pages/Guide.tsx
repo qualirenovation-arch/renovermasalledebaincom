@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, AlertTriangle, Droplets, Shield, Wrench, Sparkles, Eye, Users, Home, Phone, Paintbrush, Wind, HardHat, Building, Hammer, Ruler, HelpCircle, Play } from "lucide-react";
+import { ArrowRight, CheckCircle, AlertTriangle, Droplets, Shield, Wrench, Sparkles, Eye, Users, Home, Phone, Paintbrush, Wind, HardHat, Building, Hammer, Ruler, HelpCircle, Play, Lightbulb } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 // Images
@@ -1065,6 +1065,149 @@ const Guide = () => {
         </div>
       </section>
 
+      {/* Section 14 - Éclairage */}
+      <section className="py-16 bg-accent/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
+                14
+              </div>
+              <h2 className="text-2xl md:text-3xl font-serif text-foreground">
+                Éclairage : les spots adaptés à la salle de bain
+              </h2>
+            </div>
+            <div className="bg-background rounded-2xl p-8 shadow-sm">
+              <Lightbulb className="w-10 h-10 text-primary mb-4" />
+              
+              <div className="space-y-6">
+                {/* Norme IP */}
+                <div>
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">La norme IP : une obligation en salle de bain</h3>
+                  <p className="text-muted-foreground mb-3">
+                    En salle de bain, l'éclairage doit respecter la norme NF C 15-100 qui définit des zones de sécurité. Les spots doivent avoir un <strong>indice IP adapté</strong> :
+                  </p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span><strong>Zone 0</strong> (dans la baignoire/douche) : IP67 minimum</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span><strong>Zone 1</strong> (au-dessus de la baignoire/douche) : IP44 ou IP65</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span><strong>Zone 2</strong> (60 cm autour) : IP44 minimum</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Notre choix */}
+                <div className="bg-primary/10 rounded-xl p-5">
+                  <h3 className="font-semibold text-lg mb-3 text-primary">Notre choix : les spots sans collerette</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Nous privilégions les <strong>spots encastrés sans collerette</strong> (aussi appelés "trimless") pour un rendu épuré et contemporain. Le spot disparaît complètement dans le plafond, ne laissant visible que la source lumineuse.
+                  </p>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <p className="font-medium text-foreground mb-2">Nos recommandations :</p>
+                      <ul className="space-y-1.5 text-muted-foreground text-sm">
+                        <li className="flex items-center gap-2">
+                          <Sparkles className="w-4 h-4 text-primary" />
+                          <span><strong>4000K</strong> – blanc neutre, idéal pour la salle de bain</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <Sparkles className="w-4 h-4 text-primary" />
+                          <span><strong>500 lumens</strong> – puissance suffisante pour un éclairage confortable</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <Sparkles className="w-4 h-4 text-primary" />
+                          <span><strong>IP44 ou IP65</strong> selon l'emplacement</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <p className="font-medium text-foreground mb-2">Avantages vs spots traditionnels :</p>
+                      <ul className="space-y-1.5 text-muted-foreground text-sm">
+                        <li className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-mint" />
+                          <span>Pas de collerette apparente (plus discret)</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-mint" />
+                          <span>Finition plafond parfaitement lisse</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-mint" />
+                          <span>Moins de poussière accumulée</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-mint" />
+                          <span>Design contemporain et intemporel</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Différence avec spots traditionnels */}
+                <div>
+                  <h3 className="font-semibold text-lg mb-3 text-foreground">Spot sans collerette vs spot traditionnel</h3>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="bg-accent/50 rounded-xl p-4">
+                      <p className="font-medium text-foreground mb-2">Spot traditionnel avec collerette :</p>
+                      <ul className="space-y-1.5 text-muted-foreground text-sm">
+                        <li className="flex items-center gap-2">
+                          <AlertTriangle className="w-4 h-4 text-orange-500" />
+                          <span>Anneau métallique visible autour du spot</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <AlertTriangle className="w-4 h-4 text-orange-500" />
+                          <span>Accumule la poussière et les traces</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <AlertTriangle className="w-4 h-4 text-orange-500" />
+                          <span>Aspect plus "industriel"</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="bg-mint/10 rounded-xl p-4">
+                      <p className="font-medium text-foreground mb-2">Spot sans collerette (trimless) :</p>
+                      <ul className="space-y-1.5 text-muted-foreground text-sm">
+                        <li className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-mint" />
+                          <span>Intégration totale dans le plafond</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-mint" />
+                          <span>Entretien facilité</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-mint" />
+                          <span>Effet haut de gamme et épuré</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-primary/10 rounded-xl p-4 mt-4">
+                  <p className="text-primary font-medium">
+                    💡 Un bon éclairage, c'est un équilibre entre technique, esthétique et confort visuel au quotidien.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Résumé */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
@@ -1191,6 +1334,22 @@ const Guide = () => {
                   </ul>
                   <p className="font-medium text-foreground">
                     Le choix dépend de vos goûts, de votre budget et des contraintes techniques de votre salle de bain.
+                  </p>
+                </div>
+              </div>
+              <div className="bg-background rounded-xl p-6 shadow-sm">
+                <h4 className="font-semibold text-lg mb-2">
+                  ❓ Quels spots choisir pour une salle de bain ?
+                </h4>
+                <div className="text-muted-foreground space-y-2">
+                  <p>
+                    L'éclairage de salle de bain doit respecter la norme NF C 15-100. Nous recommandons des <strong>spots sans collerette</strong> (trimless) pour un rendu épuré.
+                  </p>
+                  <p>
+                    Nos préconisations : <strong>4000K</strong> (blanc neutre, ni trop chaud ni trop froid), <strong>500 lumens</strong> par spot, et un <strong>indice IP44 minimum</strong> (IP65 au-dessus de la douche).
+                  </p>
+                  <p className="font-medium text-foreground">
+                    Contrairement aux spots traditionnels avec collerette métallique, les spots sans collerette s'intègrent parfaitement au plafond pour un effet haut de gamme.
                   </p>
                 </div>
               </div>
