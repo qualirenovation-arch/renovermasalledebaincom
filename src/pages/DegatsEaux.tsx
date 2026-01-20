@@ -157,328 +157,169 @@ const DegatsEaux = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-blue-50 to-background py-12 md:py-16">
+      <section className="bg-gradient-to-b from-blue-50 to-background py-10 md:py-12">
         <div className="container-custom">
-          <motion.div
-            className="text-center max-w-3xl mx-auto"
-            {...fadeInUp}
-          >
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
-                <Droplets className="w-8 h-8 text-blue-600" />
-              </div>
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-4">
+              <Droplets className="w-7 h-7 text-blue-600" />
             </div>
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+            <h1 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-foreground">
               Dégât des eaux ? Et si c'était l'occasion de faire mieux ? ✨
             </h1>
-            <p className="text-muted-foreground text-lg md:text-xl">
-              Galère… ou opportunité de transformer votre espace ?
+            <p className="text-muted-foreground text-lg">
+              On vous aide à transformer un sinistre en opportunité.
             </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section Notre approche */}
-      <section className="py-10 md:py-14 bg-background">
-        <div className="container-custom">
-          <motion.div
-            className="max-w-md mx-auto md:max-w-3xl"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            {/* Notre philosophie */}
-            <div className="text-center mb-8">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-4"
-              >
-                <Sparkles className="w-4 h-4" />
-                Notre philosophie
-              </motion.div>
-              <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
-                Chez QualiRénovation by QualiConcept, on ne se contente pas de « remettre en état ».
-                On vous aide à <strong className="text-foreground">transformer un sinistre en opportunité</strong> : 
-                repenser l'espace, améliorer le confort, s'adapter à vos besoins.
-              </p>
-            </div>
-
-            {/* Témoignage Julia */}
-            <motion.div
-              className="bg-gradient-to-br from-blue-50 to-white rounded-xl p-6 border border-blue-100 mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="font-semibold text-foreground mb-3 flex items-center gap-2">
-                <span className="text-xl">✨</span> L'exemple de Julia — Paris 12ème
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                C'est exactement ce qui s'est passé pour Julia, une locataire dont le studio a été sinistré.
-                Aujourd'hui, elle retrouve un logement plus beau, mieux pensé, avec une nouvelle cuisine 
-                et une pièce de vie optimisée.
-              </p>
-              <p className="text-foreground font-medium mt-3">
-                ➡️ Ce qui était une vraie galère est devenu une chance de réinventer son espace de vie.
-              </p>
-
-              {/* Vignettes photos cliquables */}
-              <div className="mt-4 pt-4 border-t border-blue-100">
-                <p className="text-xs text-muted-foreground mb-2">📷 Cliquez pour agrandir</p>
-                <div className="flex flex-wrap gap-2">
-                  {juliaImages.map((img, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setSelectedImage(img)}
-                      className="relative w-16 h-16 rounded-lg overflow-hidden border-2 border-white shadow-sm hover:shadow-md hover:scale-105 transition-all cursor-pointer"
-                    >
-                      <img 
-                        src={img.src} 
-                        alt={img.alt}
-                        className="w-full h-full object-cover"
-                      />
-                      <span className={`absolute bottom-0 left-0 right-0 h-1.5 ${img.type === 'avant' ? 'bg-amber-500' : 'bg-green-500'}`} />
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-4 pt-4 border-t border-blue-100">
-                <p className="text-sm text-muted-foreground flex items-center gap-2">
-                  <span>📲</span> Retrouvez le live du chantier sur notre compte Instagram : 
-                  <a 
-                    href="https://www.instagram.com/qualirenovation__travaux/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline font-medium"
-                  >
-                    @qualirenovation__travaux
-                  </a>
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Avec QualiRénovation */}
-            <motion.div
-              className="bg-gradient-to-br from-stone-100 to-stone-50 rounded-xl p-6 border border-stone-200"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-stone-800 flex items-center justify-center flex-shrink-0">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-3">
-                    🙋‍♀️ Avec QualiRénovation, vous n'êtes pas seuls
-                  </h3>
-                  <div className="space-y-2">
-                    {[
-                      "On vous accompagne dans les démarches avec votre assurance",
-                      "On défend vos intérêts lors des expertises",
-                      "On chiffre les travaux au plus juste",
-                      "On vous propose des solutions durables et parfois… bien meilleures qu'avant !"
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground text-sm">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-
-      {/* Section Conseils pratiques */}
-      <section className="py-10 md:py-14 bg-stone-50">
-        <div className="container-custom">
-          <motion.div
-            className="max-w-md mx-auto md:max-w-3xl"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <div className="text-center mb-8">
-              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">
-                📋 Nos conseils en cas de dégât des eaux
-              </h2>
-            </div>
-
-            <div className="space-y-4">
-              {[
-                { num: "1️⃣", text: "Déclarez le sinistre à votre assurance rapidement." },
-                { num: "2️⃣", text: "Faites intervenir un professionnel pour identifier et réparer la fuite." },
-                { num: "3️⃣", text: "Contactez votre syndic : il faut déterminer si la fuite est privative ou commune." },
-                { num: "4️⃣", text: "Organisez la recherche de fuite, surtout si des voisins sont concernés (et parfois... récalcitrants)." },
-                { num: "5️⃣", text: "Attendez le passage de l'expert pour valider le périmètre des travaux." }
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-start gap-3 bg-white rounded-lg p-4 shadow-sm border border-border/30"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <span className="text-xl flex-shrink-0">{item.num}</span>
-                  <span className="text-foreground">{item.text}</span>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* CTA */}
-            <motion.div
-              className="text-center mt-8"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
-            >
-              <p className="text-muted-foreground mb-4">
-                📞 Une question ? Un sinistre à gérer ?
-              </p>
-              <Link to="/devis">
-                <Button variant="cta" size="lg" className="group">
-                  Contactez-nous
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section SEO - 3 blocs horizontaux */}
-      <section className="py-8 md:py-12 bg-background">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-            {/* Bloc 1 - Risque majeur */}
-            <div className="bg-white rounded-xl p-5 shadow-sm border border-border/30">
-              <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center mb-3">
-                <AlertTriangle className="w-5 h-5 text-amber-600" />
-              </div>
-              <h3 className="font-semibold text-foreground mb-1">Risque majeur</h3>
-              <p className="text-muted-foreground text-sm">
-                Un dégât des eaux peut rendre un logement inhabitable.
-              </p>
-            </div>
-            
-            {/* Bloc 2 - Maîtrise d'œuvre intégrée */}
-            <div className="bg-white rounded-xl p-5 shadow-sm border border-border/30">
-              <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-3">
-                <HardHat className="w-5 h-5 text-green-600" />
-              </div>
-              <h3 className="font-semibold text-foreground mb-1">Maîtrise d'œuvre</h3>
-              <p className="text-muted-foreground text-sm">
-                Pilotage complet de la remise en état par un maître d'œuvre.
-              </p>
-            </div>
-            
-            {/* Bloc 3 - Prise en charge globale */}
-            <div className="bg-white rounded-xl p-5 shadow-sm border border-border/30">
-              <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mb-3">
-                <ClipboardList className="w-5 h-5 text-blue-600" />
-              </div>
-              <h3 className="font-semibold text-foreground mb-1">Prise en charge</h3>
-              <p className="text-muted-foreground text-sm">
-                Devis, assurance et coordination jusqu'à la remise en état.
-              </p>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Section FAQ - Dégât des eaux & assurance */}
-      <section className="py-12 md:py-16 bg-background">
-        <div className="container-custom">
-          <motion.div
-            className="max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            {/* Header FAQ */}
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center">
-                <HelpCircle className="w-6 h-6 text-blue-600" />
-              </div>
-              <div>
-                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">
-                  FAQ – Dégât des eaux & assurance
-                </h2>
-                <p className="text-muted-foreground text-sm mt-1">
-                  Réponses aux questions les plus fréquentes
-                </p>
-              </div>
-            </div>
-
-            {/* FAQ Items */}
-            <div className="bg-white rounded-xl border border-border/50 shadow-sm p-4 md:p-6">
-              {faqData.map((item, index) => (
-                <FAQItem
-                  key={index}
-                  question={item.question}
-                  answer={item.answer}
-                  isOpen={openFAQ === index}
-                  onToggle={() => toggleFAQ(index)}
-                  index={index}
-                />
-              ))}
-            </div>
-
-            {/* CTA sous la FAQ */}
-            <motion.div
-              className="text-center mt-8"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-            >
-              <Link to="/devis">
-                <Button variant="cta" size="lg" className="group">
-                  Être accompagné après un dégât des eaux
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section Vidéos Conseils */}
-      <section className="py-8 md:py-12 bg-stone-50">
+      {/* Section Vidéos Conseils - EN HAUT */}
+      <section className="py-8 md:py-10 bg-background">
         <div className="container-custom">
           <h2 className="font-display text-xl md:text-2xl font-bold mb-6 text-center text-foreground">
-            🎬 Vidéos conseils
+            🎬 Nos conseils en vidéo
           </h2>
-
-          <div className="grid grid-cols-2 gap-4 max-w-2xl mx-auto">
+          <div className="grid grid-cols-2 gap-4 max-w-xl mx-auto">
             {degatsEauxVideos.map((video) => (
-              <div
-                key={video.id}
-                className="bg-white rounded-xl overflow-hidden shadow-sm border border-border/50"
-              >
+              <div key={video.id} className="bg-white rounded-xl overflow-hidden shadow-sm border border-border/50">
                 <div className="aspect-[9/16]">
-                  <video
-                    src={video.videoSrc}
-                    className="w-full h-full object-cover"
-                    controls
-                    playsInline
-                    preload="metadata"
-                  />
+                  <video src={video.videoSrc} className="w-full h-full object-cover" controls playsInline preload="metadata" />
                 </div>
                 <div className="p-3">
                   <h3 className="font-medium text-sm text-foreground">{video.title}</h3>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3 blocs SEO */}
+      <section className="py-6 md:py-8 bg-stone-50">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 max-w-3xl mx-auto">
+            <div className="bg-white rounded-lg p-4 shadow-sm border border-border/30 flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center flex-shrink-0">
+                <AlertTriangle className="w-5 h-5 text-amber-600" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-sm text-foreground">Risque majeur</h3>
+                <p className="text-muted-foreground text-xs">Logement inhabitable</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg p-4 shadow-sm border border-border/30 flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0">
+                <HardHat className="w-5 h-5 text-green-600" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-sm text-foreground">Maîtrise d'œuvre</h3>
+                <p className="text-muted-foreground text-xs">Pilotage complet</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg p-4 shadow-sm border border-border/30 flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
+                <ClipboardList className="w-5 h-5 text-blue-600" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-sm text-foreground">Prise en charge</h3>
+                <p className="text-muted-foreground text-xs">Assurance & travaux</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Conseils pratiques */}
+      <section className="py-8 md:py-10 bg-background">
+        <div className="container-custom max-w-2xl mx-auto">
+          <h2 className="font-display text-xl md:text-2xl font-bold text-foreground mb-4 text-center">
+            📋 Que faire en cas de dégât des eaux ?
+          </h2>
+          <div className="space-y-2">
+            {[
+              "1️⃣ Déclarez le sinistre à votre assurance rapidement.",
+              "2️⃣ Faites intervenir un professionnel pour identifier la fuite.",
+              "3️⃣ Contactez votre syndic si la fuite est commune.",
+              "4️⃣ Organisez la recherche de fuite avec les voisins concernés.",
+              "5️⃣ Attendez le passage de l'expert avant de commencer les travaux."
+            ].map((text, index) => (
+              <div key={index} className="bg-white rounded-lg p-3 shadow-sm border border-border/30 text-sm text-foreground">
+                {text}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ condensée */}
+      <section className="py-8 md:py-10 bg-stone-50">
+        <div className="container-custom max-w-2xl mx-auto">
+          <h2 className="font-display text-xl md:text-2xl font-bold text-foreground mb-4 flex items-center gap-2">
+            <HelpCircle className="w-6 h-6 text-blue-600" />
+            FAQ – Assurance & dégât des eaux
+          </h2>
+          <div className="bg-white rounded-xl border border-border/50 shadow-sm divide-y divide-border/50">
+            {faqData.map((item, index) => (
+              <button
+                key={index}
+                onClick={() => toggleFAQ(index)}
+                className="w-full text-left p-4 hover:bg-muted/30 transition-colors"
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <span className="font-medium text-sm text-foreground">{item.question}</span>
+                  <ChevronDown className={`w-4 h-4 text-muted-foreground flex-shrink-0 transition-transform ${openFAQ === index ? 'rotate-180' : ''}`} />
+                </div>
+                {openFAQ === index && (
+                  <p className="text-sm text-muted-foreground mt-2 pr-6">{item.answer}</p>
+                )}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Témoignage Julia - EN BAS */}
+      <section className="py-8 md:py-10 bg-background">
+        <div className="container-custom max-w-2xl mx-auto">
+          <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl p-5 border border-blue-100">
+            <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+              <span>✨</span> L'exemple de Julia — Paris 12ème
+            </h3>
+            <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+              Julia, locataire d'un studio sinistré, a transformé cette galère en opportunité : 
+              nouvelle cuisine, espace de vie optimisé. Ce qui était un cauchemar est devenu une chance.
+            </p>
+            
+            {/* Vignettes photos */}
+            <div className="flex flex-wrap gap-2 mb-3">
+              {juliaImages.map((img, index) => (
+                <button
+                  key={index}
+                  onClick={() => setSelectedImage(img)}
+                  className="relative w-14 h-14 rounded-lg overflow-hidden border-2 border-white shadow-sm hover:shadow-md hover:scale-105 transition-all"
+                >
+                  <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
+                  <span className={`absolute bottom-0 left-0 right-0 h-1 ${img.type === 'avant' ? 'bg-amber-500' : 'bg-green-500'}`} />
+                </button>
+              ))}
+            </div>
+
+            <p className="text-xs text-muted-foreground">
+              📲 Suivez le chantier sur{' '}
+              <a href="https://www.instagram.com/qualirenovation__travaux/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">
+                @qualirenovation__travaux
+              </a>
+            </p>
+          </div>
+
+          {/* CTA final */}
+          <div className="text-center mt-6">
+            <Link to="/devis">
+              <Button variant="cta" size="lg" className="group">
+                Être accompagné après un dégât des eaux
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
