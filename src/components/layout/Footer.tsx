@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin } from "lucide-react";
+import qualirenovationLogo from "@/assets/logos/qualirenovation-logo-new.png";
 const footerLinks = {
   navigation: [{
     label: "Accueil",
@@ -31,7 +32,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <h3 className="font-display font-semibold mb-4 text-lg">renovermasalledebain.com</h3>
+            <Link to="/" className="inline-block mb-4">
+              <img 
+                src={qualirenovationLogo} 
+                alt="QualiRénovation Logo" 
+                className="h-16 w-auto"
+              />
+            </Link>
             <p className="text-primary-foreground/80 mb-2 leading-relaxed">
               <strong>6 rue d'Armaillé, 75017 Paris</strong>
             </p>
