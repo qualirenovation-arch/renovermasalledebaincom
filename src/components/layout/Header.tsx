@@ -40,11 +40,11 @@ export function Header() {
   }, []);
 
   return (
-    <>
+    <div className="sticky top-0 z-50">
       {/* Top Banner - Hidden on mobile and when scrolled */}
       <div 
-        className={`hidden md:block bg-primary text-primary-foreground py-2 px-4 transition-all duration-300 ${
-          isScrolled ? "h-0 py-0 overflow-hidden opacity-0" : "h-auto opacity-100"
+        className={`hidden md:block bg-primary text-primary-foreground px-4 transition-all duration-300 ${
+          isScrolled ? "h-0 py-0 overflow-hidden opacity-0" : "py-2 opacity-100"
         }`}
       >
         <div className="container-custom flex justify-center md:justify-between items-center text-sm">
@@ -60,9 +60,7 @@ export function Header() {
       </div>
 
       {/* Main Header */}
-      <header className={`sticky z-50 bg-background/95 backdrop-blur-md border-b border-border transition-all duration-300 ${
-        isScrolled ? "top-0" : "top-0 md:top-[40px]"
-      }`}>
+      <header className="bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container-custom">
           <div className="flex items-center justify-between h-14 md:h-20">
             {/* Logo - Compact on mobile */}
@@ -161,6 +159,6 @@ export function Header() {
           )}
         </AnimatePresence>
       </header>
-    </>
+    </div>
   );
 }
