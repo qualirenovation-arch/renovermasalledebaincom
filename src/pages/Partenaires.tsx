@@ -55,6 +55,8 @@ const partners = [
   { name: "Schneider", url: "https://www.se.com/fr", description: "Solutions électriques" },
   { name: "Corston", url: "#", description: "Appareillages électriques" },
   { name: "David B", url: "https://www.davidb.fr", description: "Salles de bain design" },
+  { name: "CMR", url: "https://www.cmr-bain.fr", description: "Robinetterie et équipements sanitaires" },
+  { name: "Envie de Bain", url: "https://www.enviedebain.fr", description: "Showroom salle de bain" },
 ];
 
 export default function Partenaires() {
