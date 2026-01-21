@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, AlertTriangle, Droplets, Shield, Wrench, Sparkles, Eye, Users, Home, Phone, Paintbrush, Wind, HardHat, Building, Hammer, Ruler, HelpCircle, Play, Lightbulb } from "lucide-react";
+import { ArrowRight, CheckCircle, AlertTriangle, Droplets, Shield, Wrench, Sparkles, Eye, Users, Home, Phone, Paintbrush, Wind, HardHat, Building, Hammer, Ruler, HelpCircle, Play, Lightbulb, Thermometer, Flame } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 // Images
@@ -940,127 +940,85 @@ const Guide = () => {
                 14
               </div>
               <h2 className="text-2xl md:text-3xl font-serif text-foreground">
-                Éclairage : les spots adaptés à la salle de bain
+                Éclairage, chauffage & confort
               </h2>
             </div>
             <div className="bg-background rounded-2xl p-8 shadow-sm">
-              <Lightbulb className="w-10 h-10 text-primary mb-4" />
-              
-              <div className="space-y-6">
-                {/* Norme IP */}
+              <div className="space-y-8">
+                {/* Spots */}
                 <div>
-                  <h3 className="font-semibold text-lg mb-2 text-foreground">La norme IP : une obligation en salle de bain</h3>
+                  <div className="flex items-center gap-3 mb-3">
+                    <Lightbulb className="w-8 h-8 text-primary" />
+                    <h3 className="font-semibold text-lg text-foreground">Spots sans collerette (trimless)</h3>
+                  </div>
                   <p className="text-muted-foreground mb-3">
-                    En salle de bain, l'éclairage doit respecter la norme NF C 15-100 qui définit des zones de sécurité. Les spots doivent avoir un <strong>indice IP adapté</strong> :
+                    Nous privilégions les spots encastrés sans collerette pour un rendu épuré. Le spot disparaît dans le plafond, ne laissant visible que la lumière.
                   </p>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span><strong>Zone 0</strong> (dans la baignoire/douche) : IP67 minimum</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span><strong>Zone 1</strong> (au-dessus de la baignoire/douche) : IP44 ou IP65</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span><strong>Zone 2</strong> (60 cm autour) : IP44 minimum</span>
-                    </li>
-                  </ul>
-                </div>
-
-                {/* Notre choix */}
-                <div className="bg-primary/10 rounded-xl p-5">
-                  <h3 className="font-semibold text-lg mb-3 text-primary">Notre choix : les spots sans collerette</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Nous privilégions les <strong>spots encastrés sans collerette</strong> (aussi appelés "trimless") pour un rendu épuré et contemporain. Le spot disparaît complètement dans le plafond, ne laissant visible que la source lumineuse.
-                  </p>
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                      <p className="font-medium text-foreground mb-2">Nos recommandations :</p>
-                      <ul className="space-y-1.5 text-muted-foreground text-sm">
-                        <li className="flex items-center gap-2">
-                          <Sparkles className="w-4 h-4 text-primary" />
-                          <span><strong>4000K</strong> – blanc neutre, idéal pour la salle de bain</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <Sparkles className="w-4 h-4 text-primary" />
-                          <span><strong>500 lumens</strong> – puissance suffisante pour un éclairage confortable</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <Sparkles className="w-4 h-4 text-primary" />
-                          <span><strong>IP44 ou IP65</strong> selon l'emplacement</span>
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <p className="font-medium text-foreground mb-2">Avantages vs spots traditionnels :</p>
-                      <ul className="space-y-1.5 text-muted-foreground text-sm">
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-mint" />
-                          <span>Pas de collerette apparente (plus discret)</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-mint" />
-                          <span>Finition plafond parfaitement lisse</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-mint" />
-                          <span>Moins de poussière accumulée</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-mint" />
-                          <span>Design contemporain et intemporel</span>
-                        </li>
-                      </ul>
-                    </div>
+                  <div className="flex flex-wrap gap-3 text-sm">
+                    <span className="bg-primary/10 text-primary px-3 py-1 rounded-full font-medium">4000K blanc neutre</span>
+                    <span className="bg-primary/10 text-primary px-3 py-1 rounded-full font-medium">500 lumens</span>
+                    <span className="bg-primary/10 text-primary px-3 py-1 rounded-full font-medium">IP44/IP65 selon zone</span>
+                    <span className="bg-mint/20 text-mint px-3 py-1 rounded-full font-medium">Norme NF C 15-100</span>
                   </div>
                 </div>
 
-                {/* Différence avec spots traditionnels */}
-                <div>
-                  <h3 className="font-semibold text-lg mb-3 text-foreground">Spot sans collerette vs spot traditionnel</h3>
+                {/* Sèche-serviette */}
+                <div className="border-t border-border pt-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <Thermometer className="w-8 h-8 text-primary" />
+                    <h3 className="font-semibold text-lg text-foreground">Sèche-serviette</h3>
+                  </div>
+                  <p className="text-muted-foreground mb-3">
+                    Indispensable pour le confort thermique de la salle de bain. Il chauffe la pièce et sèche vos serviettes, réduisant l'humidité ambiante.
+                  </p>
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div className="bg-accent/50 rounded-xl p-4">
-                      <p className="font-medium text-foreground mb-2">Spot traditionnel avec collerette :</p>
-                      <ul className="space-y-1.5 text-muted-foreground text-sm">
-                        <li className="flex items-center gap-2">
-                          <AlertTriangle className="w-4 h-4 text-orange-500" />
-                          <span>Anneau métallique visible autour du spot</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <AlertTriangle className="w-4 h-4 text-orange-500" />
-                          <span>Accumule la poussière et les traces</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <AlertTriangle className="w-4 h-4 text-orange-500" />
-                          <span>Aspect plus "industriel"</span>
-                        </li>
+                      <p className="font-medium text-foreground mb-2">Électrique :</p>
+                      <ul className="space-y-1 text-muted-foreground text-sm">
+                        <li>• Installation simple, idéal en rénovation</li>
+                        <li>• Programmation et minuterie possibles</li>
+                        <li>• Puissance : 500W à 1000W selon surface</li>
                       </ul>
                     </div>
-                    <div className="bg-mint/10 rounded-xl p-4">
-                      <p className="font-medium text-foreground mb-2">Spot sans collerette (trimless) :</p>
-                      <ul className="space-y-1.5 text-muted-foreground text-sm">
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-mint" />
-                          <span>Intégration totale dans le plafond</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-mint" />
-                          <span>Entretien facilité</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-mint" />
-                          <span>Effet haut de gamme et épuré</span>
-                        </li>
+                    <div className="bg-accent/50 rounded-xl p-4">
+                      <p className="font-medium text-foreground mb-2">Mixte (eau + électrique) :</p>
+                      <ul className="space-y-1 text-muted-foreground text-sm">
+                        <li>• Raccordé au chauffage central</li>
+                        <li>• Résistance pour l'intersaison</li>
+                        <li>• Plus économique à l'usage</li>
                       </ul>
                     </div>
                   </div>
+                  <p className="text-primary font-medium mt-3 text-sm">
+                    💡 Prévoir une ligne électrique dédiée (norme NF C 15-100).
+                  </p>
                 </div>
 
-                <div className="bg-primary/10 rounded-xl p-4 mt-4">
-                  <p className="text-primary font-medium">
-                    💡 Un bon éclairage, c'est un équilibre entre technique, esthétique et confort visuel au quotidien.
+                {/* Chauffe-eau */}
+                <div className="border-t border-border pt-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <Flame className="w-8 h-8 text-primary" />
+                    <h3 className="font-semibold text-lg text-foreground">Chauffe-eau</h3>
+                  </div>
+                  <p className="text-muted-foreground mb-3">
+                    Si votre chauffe-eau est dans la salle de bain, la rénovation est l'occasion idéale de le remplacer ou de l'optimiser.
+                  </p>
+                  <div className="grid sm:grid-cols-3 gap-3">
+                    <div className="bg-accent/50 rounded-xl p-4 text-center">
+                      <p className="font-medium text-foreground mb-1">Cumulus électrique</p>
+                      <p className="text-muted-foreground text-sm">100L à 200L, économique à l'achat</p>
+                    </div>
+                    <div className="bg-accent/50 rounded-xl p-4 text-center">
+                      <p className="font-medium text-foreground mb-1">Thermodynamique</p>
+                      <p className="text-muted-foreground text-sm">70% d'économie, éligible aides</p>
+                    </div>
+                    <div className="bg-accent/50 rounded-xl p-4 text-center">
+                      <p className="font-medium text-foreground mb-1">Instantané</p>
+                      <p className="text-muted-foreground text-sm">Compact, eau chaude à la demande</p>
+                    </div>
+                  </div>
+                  <p className="text-primary font-medium mt-3 text-sm">
+                    💡 Ligne électrique dédiée obligatoire. Prévoir un accès pour la maintenance.
                   </p>
                 </div>
               </div>
