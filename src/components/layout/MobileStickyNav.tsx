@@ -1,6 +1,8 @@
-import { Phone, Mail } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Phone, Calendar } from "lucide-react";
+import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
+
+const CAL_BOOKING_URL = "https://cal.com/votre-conseiller-travaux-siw706/30min";
 
 export function MobileStickyNav() {
   const location = useLocation();
@@ -25,13 +27,15 @@ export function MobileStickyNav() {
           <Phone className="w-4 h-4" />
           Appeler
         </a>
-        <Link
-          to="/devis#devis-form"
+        <a
+          href={CAL_BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex-1 flex items-center justify-center gap-2 bg-cta hover:bg-cta-hover text-white py-3 px-4 rounded-xl font-medium text-sm transition-all active:scale-95"
         >
-          <Mail className="w-4 h-4" />
-          Devis gratuit
-        </Link>
+          <Calendar className="w-4 h-4" />
+          Réserver un créneau
+        </a>
       </div>
     </motion.div>
   );
