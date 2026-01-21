@@ -55,6 +55,11 @@ export function Footer() {
               <a href="https://www.linkedin.com/in/carina-nahmani-b30619167/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors" aria-label="LinkedIn">
                 <Linkedin className="w-5 h-5" />
               </a>
+              <a href="https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors" aria-label="Houzz">
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.5 4.5v5.54h4v9.46h-8v-9.46h4V4.5z"/>
+                </svg>
+              </a>
             </div>
           </div>
 
