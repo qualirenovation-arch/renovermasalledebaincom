@@ -10,6 +10,7 @@ import guideJointNoir from "@/assets/guide-joint-noir.webp";
 import guideJointAssorti from "@/assets/guide-joint-assorti.webp";
 import guideProfilFinition from "@/assets/guide-profil-finition.webp";
 import butteschaumont6 from "@/assets/buttes-chaumont-6.jpg";
+import cielDePluiePlafond from "@/assets/chatelet-ciel-pluie-plafond.jpg";
 
 const Guide = () => {
   // FAQ Schema for SEO
@@ -899,9 +900,35 @@ const Guide = () => {
                 Robinetterie encastrée : anticiper dès la conception
               </h2>
             </div>
-            <div className="bg-accent/30 rounded-xl p-6">
-              <p className="text-muted-foreground mb-3">Impose : doublage mural, anticipation dès conception, pose irréprochable.</p>
-              <p className="text-primary font-medium text-sm">👉 Ce choix se fait avant les cloisons et le carrelage.</p>
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="bg-accent/30 rounded-xl p-6">
+                <p className="text-muted-foreground mb-3">Impose : doublage mural, anticipation dès conception, pose irréprochable.</p>
+                <ul className="space-y-2 text-muted-foreground text-sm mt-4">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <span>Mitigeur encastré thermostatique</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <span>Ciel de pluie encastré plafond</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <span>Douchette à main complémentaire</span>
+                  </li>
+                </ul>
+                <p className="text-primary font-medium text-sm mt-4">👉 Ce choix se fait avant les cloisons et le carrelage.</p>
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src={cielDePluiePlafond} 
+                  alt="Ciel de pluie encastré au plafond avec robinetterie noire" 
+                  className="w-full h-72 object-cover"
+                />
+                <p className="bg-foreground text-background text-sm p-3 text-center">
+                  Ciel de pluie encastré plafond — finition noire mate
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
