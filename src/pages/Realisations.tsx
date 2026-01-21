@@ -1221,10 +1221,10 @@ const albums: Album[] = [
     coverImage: coursVincennesMadame1,
     photos: [
       { id: 1, image: coursVincennesMadame1, title: "Après — Douche italienne", description: "Douche XXL et meuble vasque noir" },
-      { id: 2, image: coursVincennesMadame2, title: "Après — Placard sur-mesure", description: "Rangement serviettes + panière linge sale coulissante" },
+      { id: 2, image: coursVincennesMadame2, title: "Après — Placard ouvert", description: "Emplacement idéal pour serviettes et panière coulissante" },
       { id: 3, image: coursVincennesMadame3, title: "Après — Meuble vasque", description: "Meuble noir et sèche-serviettes design" },
       { id: 4, image: coursVincennesMadame4, title: "Après — Niche douche", description: "Niche mosaïque et robinetterie encastrée" },
-      { id: 5, image: coursVincennesMadame5, title: "Après — Paroi vitrée", description: "Douche italienne avec paroi fixe" },
+      { id: 5, image: coursVincennesMadame5, title: "Après — WC et placard", description: "WC suspendu et rangement sur-mesure" },
       { id: 6, image: coursVincennesMadameAvant1, title: "Avant — Cabine douche", description: "Cabine arrondie et carrelage gris" },
       { id: 7, image: coursVincennesMadameAvant2, title: "Avant — Salle de bain", description: "Ancien aménagement sans rangement" },
       { id: 8, image: coursVincennesMadameAvant3, title: "Avant — Espace WC", description: "Espace au-dessus du WC non exploité" },
