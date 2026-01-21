@@ -153,12 +153,12 @@ export const videoConseils = [
   },
   // === ROBINETTERIE ===
   {
-    id: "video-ciel-de-pluie",
-    title: "Ciel de pluie : le luxe dans votre douche",
-    description: "Découvrez les avantages et contraintes d'une douche de tête encastrée plafond",
-    videoUrl: "/videos/ciel-de-pluie-1.mp4",
-    link: "/guide-travaux#robinetterie",
-    category: "Robinetterie",
+    id: "video-acces-plomberie",
+    title: "Accès plomberie : à ne pas oublier !",
+    description: "Les points d'accès de votre salle de bain qui doivent rester accessibles en cas d'engorgement",
+    videoUrl: "/videos/acces-plomberie-1.mp4",
+    link: "/guide-travaux#plomberie",
+    category: "Plomberie",
   },
   {
     id: "video-robinetterie-finitions",
