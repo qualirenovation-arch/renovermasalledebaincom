@@ -416,6 +416,7 @@ import generalLeclercSchluter1 from "@/assets/general-leclerc-schluter-1.jpg";
 import generalLeclercSchluter2 from "@/assets/general-leclerc-schluter-2.jpg";
 import generalLeclercSchluter3 from "@/assets/general-leclerc-schluter-3.jpg";
 import generalLeclercWc1 from "@/assets/general-leclerc-wc-1.jpg";
+import generalLeclercWc2 from "@/assets/general-leclerc-wc-2.jpg";
 import generalLeclercWcTravaux1 from "@/assets/general-leclerc-wc-travaux-1.jpg";
 
 interface Photo {
@@ -631,8 +632,9 @@ const albums: Album[] = [
     description: "Solution gain de place idéale : le chauffe-eau est dissimulé au-dessus du WC suspendu dans un placard technique sur-mesure. Ce placard peut également accueillir les nourrices (collecteur) et le compteur d'eau. Carreaux de ciment au sol, carrelage noir mat en fond et papier peint rayé pour un style graphique.",
     coverImage: generalLeclercWc1,
     photos: [
-      { id: 1, image: generalLeclercWc1, title: "Après — WC & placard technique", description: "Chauffe-eau dissimulé, carreaux de ciment et style graphique" },
-      { id: 2, image: generalLeclercWcTravaux1, title: "Travaux — Installation chauffe-eau", description: "Chauffe-eau Thermor suspendu au-dessus du WC, nourrices et arrivées" },
+      { id: 1, image: generalLeclercWc1, title: "Après — WC & placard fermé", description: "Chauffe-eau dissimulé, carreaux de ciment et style graphique" },
+      { id: 2, image: generalLeclercWc2, title: "Après — Placard ouvert", description: "Chauffe-eau Thermor accessible, arrivées d'eau et groupe de sécurité" },
+      { id: 3, image: generalLeclercWcTravaux1, title: "Travaux — Installation chauffe-eau", description: "Chauffe-eau Thermor suspendu au-dessus du WC, nourrices et arrivées" },
     ],
   },
   {
