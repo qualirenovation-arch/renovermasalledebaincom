@@ -1164,9 +1164,9 @@ const albums: Album[] = [
   },
   {
     id: "cours-vincennes-wc",
-    title: "WC — Rangement Optimisé en Marbre Onyx",
+    title: "WC — Gain de Place & Marbre Onyx",
     location: "Paris 12ème - Cours de Vincennes",
-    description: "AVANT : WC basique avec rangement insuffisant et espace mal exploité. APRÈS : Transformation astucieuse avec création d'un rangement sur la gauche pour le lave-mains et les produits, et d'un grand placard au-dessus du WC suspendu. L'ensemble est habillé de marbre onyx (sol, murs et fond des rangements) pour un rendu luxueux. L'astuce : plus de rangement sans déborder sur la circulation, en exploitant chaque centimètre vertical. Niche ouverte avec fond marbre pour les objets du quotidien, placard fermé pour le stock.",
+    description: "AVANT : Un WC classique, fonctionnel mais sans âme, avec un manque criant de rangements. APRÈS : Une transformation astucieuse qui prouve qu'un petit espace peut devenir un écrin de luxe. Nous avons créé un meuble sur-mesure à gauche du lave-mains pour ranger produits et effets personnels, ainsi qu'un grand placard au-dessus du WC suspendu. L'ensemble est habillé de marbre onyx du sol au plafond — y compris le fond des rangements — pour une esthétique résolument haut de gamme. L'astuce : maximiser le stockage en exploitant chaque centimètre vertical, sans jamais déborder sur la circulation. Résultat : un espace pratique et élégant.",
     coverImage: coursVincennesWc1,
     photos: [
       { id: 1, image: coursVincennesWcVideo1, title: "Vidéo — Visite", description: "Découvrez l'aménagement optimisé", isVideo: true },
