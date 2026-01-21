@@ -1217,11 +1217,11 @@ const albums: Album[] = [
     id: "cours-vincennes-madame",
     title: "SDB Madame — Rangements Sur-mesure",
     location: "Paris 12ème - Cours de Vincennes",
-    description: "AVANT : Une salle de bain grise et datée avec une cabine de douche arrondie et aucun rangement au-dessus du WC. APRÈS : Un espace repensé dans la même harmonie marbre noir/gris que le reste de l'appartement. Le plus : un meuble de rangement sur-mesure au-dessus du WC pour les produits de beauté — on n'a jamais assez de place ! Carrelage grand format effet pierre, meuble vasque noir, douche italienne XXL avec niche mosaïque et sèche-serviettes design. Résultat : une salle de bain fonctionnelle et cohérente avec le style de Madame.",
+    description: "AVANT : Une salle de bain grise et datée avec une cabine de douche arrondie et aucun rangement au-dessus du WC. APRÈS : Un espace repensé dans la même harmonie marbre noir/gris que le reste de l'appartement. L'astuce gain de place : un placard au-dessus du WC intègre à la fois le rangement pour les serviettes ET une panière coulissante pour le linge sale — pas de bordel, tout est prévu et le rangement est optimisé ! Carrelage grand format effet pierre, meuble vasque noir, douche italienne XXL avec niche mosaïque et sèche-serviettes design. Résultat : une salle de bain ultra-fonctionnelle et cohérente avec le style de Madame.",
     coverImage: coursVincennesMadame1,
     photos: [
       { id: 1, image: coursVincennesMadame1, title: "Après — Vue d'ensemble", description: "Douche XXL et meuble vasque noir" },
-      { id: 2, image: coursVincennesMadame2, title: "Après — Angle WC", description: "WC suspendu et meuble rangement au-dessus" },
+      { id: 2, image: coursVincennesMadame2, title: "Après — Rangement WC", description: "Placard serviettes + panière linge sale coulissante" },
       { id: 3, image: coursVincennesMadame3, title: "Après — Vasque et rangement", description: "Meuble noir et sèche-serviettes design" },
       { id: 4, image: coursVincennesMadame4, title: "Après — Détail douche", description: "Niche mosaïque et robinetterie encastrée" },
       { id: 5, image: coursVincennesMadame5, title: "Après — Paroi vitrée", description: "Douche italienne avec paroi fixe" },
