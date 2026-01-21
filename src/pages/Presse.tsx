@@ -261,19 +261,41 @@ const formatDate = (dateStr: string): string => {
   });
 };
 
-// Badge couleur par média
-const getMediaColor = (media: string): string => {
+// Logo et style par média
+const getMediaLogo = (media: string): React.ReactNode => {
   switch (media) {
     case "Elle Décoration":
-      return "bg-rose-100 text-rose-800 dark:bg-rose-900/30 dark:text-rose-300";
+      return (
+        <div className="flex items-center gap-1.5 px-3 py-1.5 bg-rose-50 dark:bg-rose-900/20 rounded-full">
+          <span className="font-serif font-bold text-rose-700 dark:text-rose-300 text-sm tracking-wide uppercase">ELLE</span>
+          <span className="text-rose-500 dark:text-rose-400 text-[10px] font-medium">Décoration</span>
+        </div>
+      );
     case "Marie Claire Maison":
-      return "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300";
+      return (
+        <div className="flex items-center gap-1 px-3 py-1.5 bg-purple-50 dark:bg-purple-900/20 rounded-full">
+          <span className="font-serif font-bold text-purple-700 dark:text-purple-300 text-sm tracking-tight">marie claire</span>
+          <span className="text-purple-500 dark:text-purple-400 text-[10px] font-medium">maison</span>
+        </div>
+      );
     case "Houzz":
-      return "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300";
+      return (
+        <div className="flex items-center px-3 py-1.5 bg-emerald-50 dark:bg-emerald-900/20 rounded-full">
+          <span className="font-bold text-emerald-700 dark:text-emerald-300 text-sm tracking-tight">houzz</span>
+        </div>
+      );
     case "18h39":
-      return "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300";
+      return (
+        <div className="flex items-center px-3 py-1.5 bg-amber-50 dark:bg-amber-900/20 rounded-full">
+          <span className="font-bold text-amber-700 dark:text-amber-300 text-sm">18h39</span>
+        </div>
+      );
     default:
-      return "bg-muted text-muted-foreground";
+      return (
+        <div className="px-3 py-1.5 bg-muted rounded-full">
+          <span className="text-muted-foreground text-sm">{media}</span>
+        </div>
+      );
   }
 };
 
@@ -383,9 +405,7 @@ export default function Presse() {
                 <div className="p-5 md:p-6 space-y-4">
                   {/* Date + Média (discret) */}
                   <div className="flex items-center justify-between gap-3 flex-wrap">
-                    <span className={`px-3 py-1 text-xs font-semibold rounded-full ${getMediaColor(article.media)}`}>
-                      {article.media}
-                    </span>
+                    {getMediaLogo(article.media)}
                     <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
                       <Calendar className="w-3.5 h-3.5" />
                       {formatDate(article.date_publication)}
