@@ -62,15 +62,7 @@ const Guide = () => {
         "name": "Comment garantissez-vous l'étanchéité d'une douche à l'italienne ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "L'étanchéité est une obligation DTU (DTU 52.2). Nous utilisons des systèmes certifiés Schlüter, Wedi et Weber, posés selon les règles de l'art. Chaque douche bénéficie d'une garantie étanchéité 10 ans et de notre garantie décennale MIC Assurances."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Pourquoi l'étanchéité sous carrelage est-elle obligatoire ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "L'étanchéité est obligatoire selon le DTU pour les pièces humides. Il existe deux systèmes : le SEL (Système d'Étanchéité Liquide) et le SPEC (Système de Protection à l'Eau sous Carrelage). Nous utilisons les produits Weber Aquastop."
+          "text": "Obligation DTU 52.2 : nous utilisons des systèmes certifiés (Schlüter, Wedi, Weber Aquastop) avec SEL/SPEC et bandes d'étanchéité. Garantie 10 ans + décennale MIC Assurances."
         }
       },
       {
@@ -1290,33 +1282,14 @@ const Guide = () => {
               </div>
               <div className="bg-background rounded-xl p-6 shadow-sm">
                 <h4 className="font-semibold text-lg mb-2">
-                  ❓ Comment garantissez-vous l'étanchéité d'une douche à l'italienne ?
+                  ❓ Comment garantissez-vous l'étanchéité ?
                 </h4>
                 <div className="text-muted-foreground space-y-2">
                   <p>
-                    L'étanchéité est une <strong>obligation DTU</strong> (référence DTU 52.2 pour les revêtements céramiques en locaux humides).
-                  </p>
-                  <p>
-                    Nous utilisons des systèmes certifiés Schlüter, Wedi et Weber, posés selon les règles de l'art. Nous vous envoyons systématiquement les <strong>photos de la mise en œuvre</strong> (application SEL/SPEC, bandes d'étanchéité, raccords) pour vous garantir un travail conforme.
+                    Obligation DTU 52.2 : nous appliquons un système <strong>SEL/SPEC</strong> (Weber Aquastop) sur murs et sol avant carrelage. Photos de mise en œuvre envoyées systématiquement.
                   </p>
                   <p className="font-medium text-foreground">
-                    Chaque douche bénéficie d'une garantie étanchéité 10 ans et de notre garantie décennale MIC Assurances.
-                  </p>
-                </div>
-              </div>
-              <div className="bg-background rounded-xl p-6 shadow-sm">
-                <h4 className="font-semibold text-lg mb-2">
-                  ❓ Pourquoi l'étanchéité sous carrelage est-elle obligatoire ?
-                </h4>
-                <div className="text-muted-foreground space-y-2">
-                  <p>
-                    L'étanchéité (la peinture bleue visible sur nos photos de chantier) est obligatoire selon le DTU pour les pièces humides. Appliquée sur les murs ET le sol avant la pose du carrelage, elle crée une barrière imperméable qui protège votre appartement et celui de vos voisins contre les infiltrations d'eau.
-                  </p>
-                  <p>
-                    Il existe deux systèmes : le <strong>SEL</strong> (Système d'Étanchéité Liquide) appliqué au rouleau ou à la brosse, et le <strong>SPEC</strong> (Système de Protection à l'Eau sous Carrelage) qui comprend des bandes et manchettes à coller aux angles et traversées.
-                  </p>
-                  <p className="font-medium text-foreground">
-                    Nous utilisons les produits Weber Aquastop, marque pionnière et innovante dans notre métier.
+                    Garantie étanchéité 10 ans + décennale MIC Assurances.
                   </p>
                 </div>
               </div>
