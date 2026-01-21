@@ -1211,22 +1211,6 @@ const Guide = () => {
                   </p>
                 </div>
               </div>
-              <div className="bg-background rounded-xl p-6 shadow-sm">
-                <h4 className="font-semibold text-lg mb-2">
-                  ❓ Quels spots choisir pour une salle de bain ?
-                </h4>
-                <div className="text-muted-foreground space-y-2">
-                  <p>
-                    L'éclairage de salle de bain doit respecter la norme NF C 15-100. Nous recommandons des <strong>spots sans collerette</strong> (trimless) pour un rendu épuré.
-                  </p>
-                  <p>
-                    Nos préconisations : <strong>4000K</strong> (blanc neutre, ni trop chaud ni trop froid), <strong>500 lumens</strong> par spot, et un <strong>indice IP44 minimum</strong> (IP65 au-dessus de la douche).
-                  </p>
-                  <p className="font-medium text-foreground">
-                    Contrairement aux spots traditionnels avec collerette métallique, les spots sans collerette s'intègrent parfaitement au plafond pour un effet haut de gamme.
-                  </p>
-                </div>
-              </div>
             </div>
 
             {/* Sous-section Questions techniques */}
@@ -1272,22 +1256,6 @@ const Guide = () => {
                   </p>
                   <p className="font-medium text-foreground">
                     Le beau est important, mais la conformité et la sécurité sont des obligations légales non négociables.
-                  </p>
-                </div>
-              </div>
-              <div className="bg-background rounded-xl p-6 shadow-sm">
-                <h3 className="font-semibold text-lg mb-2">
-                  ❓ Le sèche-serviette est-il seulement un accessoire ?
-                </h3>
-                <div className="text-muted-foreground space-y-3">
-                  <p>
-                    Le sèche-serviette n'est pas qu'un accessoire décoratif, c'est un véritable élément de confort thermique. Il participe activement au chauffage de la pièce, limite l'humidité ambiante et améliore considérablement le confort au quotidien en offrant des serviettes toujours sèches et tièdes.
-                  </p>
-                  <p>
-                    Le choix du modèle dépend de la surface de votre salle de bain, de vos habitudes d'utilisation et de l'implantation prévue. Les modèles électriques sont les plus répandus, avec ou sans soufflerie intégrée pour un appoint rapide de chaleur. L'emplacement doit être pensé dès la conception du projet pour ne pas gêner la circulation et optimiser le confort d'utilisation.
-                  </p>
-                  <p className="font-medium text-foreground">
-                    Un sèche-serviette bien dimensionné et bien positionné transforme l'expérience quotidienne de votre salle de bain.
                   </p>
                 </div>
               </div>
