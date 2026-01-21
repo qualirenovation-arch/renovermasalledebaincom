@@ -1191,7 +1191,7 @@ const albums: Album[] = [
     id: "cours-vincennes-sdb",
     title: "SDB — VMC Raccordée & Design Noir & Blanc",
     location: "Paris 12ème - Cours de Vincennes",
-    description: "AVANT : Une salle de bain vieillissante avec cabine de douche arrondie, mobilier vert d'eau et éclairage au plafond dépassé. APRÈS : Une transformation radicale dans un esprit contemporain noir et blanc. Carrelage Équipe style métro noir et blanc, meuble vasque suspendu noir (masalledebain.com) et robinetterie noire. Le plus technique : la bouche de VMC a été déplacée dans le faux plafond et raccordée à la gaine technique de l'immeuble (jamais supprimée !), garantissant une ventilation optimale et silencieuse. Paroi de douche verrière style atelier et miroir rond rétroéclairé complètent l'ensemble. Résultat : un espace élégant et parfaitement ventilé.",
+    description: "AVANT : Une salle de bain vieillissante avec cabine de douche arrondie, mobilier vert d'eau et VMC visible sur le mur au-dessus du placard. APRÈS : Une transformation radicale dans un esprit contemporain noir et blanc. Carrelage Équipe style métro noir et blanc, meuble vasque suspendu noir (masalledebain.com) et robinetterie noire. L'astuce technique : la bouche de VMC a été déplacée dans le faux plafond, ce qui a permis de créer un placard plus grand au-dessus du WC sans sacrifier la ventilation. Paroi de douche verrière style atelier et miroir rond rétroéclairé complètent l'ensemble. Résultat : un espace élégant, optimisé et parfaitement ventilé.",
     coverImage: coursVincennesSdb1,
     photos: [
       { id: 1, image: coursVincennesSdb1, title: "Après — Vue d'ensemble", description: "Douche italienne et meuble vasque noir" },
