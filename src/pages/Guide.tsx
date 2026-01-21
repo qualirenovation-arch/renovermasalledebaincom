@@ -213,6 +213,27 @@ const Guide = () => {
                 </div>
               </div>
               
+              {/* Vidéo 4 - Accès évacuation */}
+              <div className="bg-background rounded-xl overflow-hidden shadow-md border border-primary/10">
+                <video 
+                  className="w-full aspect-[9/16] object-cover"
+                  controls
+                  preload="metadata"
+                  playsInline
+                >
+                  <source src="/videos/acces-evacuation-1.mp4" type="video/mp4" />
+                  Votre navigateur ne supporte pas la lecture vidéo.
+                </video>
+                <div className="p-3">
+                  <h3 className="font-semibold text-sm text-foreground">Accès évacuation : indispensable en cas d'engorgement 🔧</h3>
+                  <p className="text-xs text-muted-foreground mt-1">L'accès aux évacuations doit toujours rester accessible. En cas d'engorgement, une trappe permet d'intervenir sans tout casser.</p>
+                  <p className="text-xs text-primary mt-2">👉 Un détail essentiel à prévoir dès la conception.</p>
+                  <p className="text-xs text-muted-foreground mt-2 flex items-center gap-1">
+                    <Eye className="w-3 h-3" /> 8.2k vues
+                  </p>
+                </div>
+              </div>
+              
             </div>
           </motion.div>
         </div>
