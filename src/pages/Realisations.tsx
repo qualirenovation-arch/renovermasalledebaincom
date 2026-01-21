@@ -1176,7 +1176,7 @@ const albums: Album[] = [
     id: "cours-vincennes-wc",
     title: "WC — Lave-mains Design & Marbre Onyx",
     location: "Paris 12ème - Cours de Vincennes",
-    description: "AVANT : Un WC basique sans lave-mains, obligeant les invités à entrer dans la salle de bain. APRÈS : Un espace WC autonome et très fonctionnel. Le plus : l'intégration d'un lave-mains design avec rangement sur-mesure à gauche, permettant aux invités de se laver les mains sans passer par la salle de bain. Un grand placard au-dessus du WC suspendu offre un stockage généreux. L'ensemble est habillé de marbre onyx du sol au plafond pour une esthétique luxueuse. Résultat : un espace pratique, élégant et totalement indépendant.",
+    description: "AVANT : Un WC basique sans lave-mains, obligeant les invités à entrer dans la salle de bain, avec une VMC visible sur le mur au-dessus du placard. APRÈS : Un espace WC autonome et très fonctionnel. Le plus : l'intégration d'un lave-mains design avec rangement sur-mesure à gauche, permettant aux invités de se laver les mains sans passer par la salle de bain. L'astuce technique : la bouche de VMC a été déplacée dans le faux plafond, ce qui a permis de créer un placard plus grand au-dessus du WC sans sacrifier la ventilation. L'ensemble est habillé de marbre onyx du sol au plafond pour une esthétique luxueuse. Résultat : un espace pratique, élégant et totalement indépendant.",
     coverImage: coursVincennesWc1,
     photos: [
       { id: 1, image: coursVincennesWcVideo1, title: "Vidéo — Visite", description: "Découvrez l'aménagement optimisé", isVideo: true },
@@ -1189,9 +1189,9 @@ const albums: Album[] = [
   },
   {
     id: "cours-vincennes-sdb",
-    title: "SDB — VMC Raccordée & Design Noir & Blanc",
+    title: "SDB — Design Noir & Blanc Style Métro",
     location: "Paris 12ème - Cours de Vincennes",
-    description: "AVANT : Une salle de bain vieillissante avec cabine de douche arrondie, mobilier vert d'eau et VMC visible sur le mur au-dessus du placard. APRÈS : Une transformation radicale dans un esprit contemporain noir et blanc. Carrelage Équipe style métro noir et blanc, meuble vasque suspendu noir (masalledebain.com) et robinetterie noire. L'astuce technique : la bouche de VMC a été déplacée dans le faux plafond, ce qui a permis de créer un placard plus grand au-dessus du WC sans sacrifier la ventilation. Paroi de douche verrière style atelier et miroir rond rétroéclairé complètent l'ensemble. Résultat : un espace élégant, optimisé et parfaitement ventilé.",
+    description: "AVANT : Une salle de bain vieillissante avec cabine de douche arrondie et mobilier vert d'eau. APRÈS : Une transformation radicale dans un esprit contemporain noir et blanc. Carrelage Équipe style métro noir et blanc, meuble vasque suspendu noir (masalledebain.com) et robinetterie noire. Paroi de douche verrière style atelier et miroir rond rétroéclairé complètent l'ensemble. Résultat : un espace élégant et moderne.",
     coverImage: coursVincennesSdb1,
     photos: [
       { id: 1, image: coursVincennesSdb1, title: "Après — Vue d'ensemble", description: "Douche italienne et meuble vasque noir" },
