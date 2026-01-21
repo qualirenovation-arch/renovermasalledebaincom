@@ -134,7 +134,7 @@ const parutions_presse: ParutionPresse[] = [
     media: "Marie Claire Maison",
     titre_article: "La rénovation d'intérieur avec transparence et expertise",
     extrait_seo: "QualiRénovation sélectionnée parmi les adresses incontournables Marie Claire Maison. Une entreprise spécialisée en Île-de-France, reconnue pour le travail pointilleux de ses artisans et sa grande transparence.",
-    url_article: "http://adresses-incontournables-maison.marieclaire.fr/dossier/qualirenovation-by-qualiconcept/",
+    url_article: "https://www.marieclaire.fr/maison/adresses-incontournables/dossier/qualirenovation-by-qualiconcept/",
     type: "article",
     image: presseMarieClaireAdresses,
     journalist: "Rédaction Marie Claire",
