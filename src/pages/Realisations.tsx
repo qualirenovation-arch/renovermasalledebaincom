@@ -403,6 +403,16 @@ import charentonAvant6 from "@/assets/charenton-avant-6.jpg";
 import charentonAvant7 from "@/assets/charenton-avant-7.jpg";
 import charentonAvant8 from "@/assets/charenton-avant-8.jpg";
 
+// Charenton-le-Pont - Général Leclerc
+import generalLeclerc1 from "@/assets/general-leclerc-1.jpg";
+import generalLeclerc2 from "@/assets/general-leclerc-2.jpg";
+import generalLeclerc3 from "@/assets/general-leclerc-3.jpg";
+import generalLeclerc4 from "@/assets/general-leclerc-4.jpg";
+import generalLeclerc5 from "@/assets/general-leclerc-5.jpg";
+import generalLeclerc6 from "@/assets/general-leclerc-6.jpg";
+import generalLeclerc7 from "@/assets/general-leclerc-7.jpg";
+import generalLeclerc8 from "@/assets/general-leclerc-8.jpg";
+
 interface Photo {
   id: number;
   image: string;
@@ -587,6 +597,23 @@ const albums: Album[] = [
       { id: 6, image: charenton2, title: "Après — Niche WC", description: "Niche et accessoires MaSalleDeBain.com" },
       { id: 7, image: charenton12, title: "Après — Finitions", description: "Sèche-serviettes et WC" },
       { id: 8, image: charentonAvant8, title: "Avant — WC ancien", description: "WC avec réservoir apparent" },
+    ],
+  },
+  {
+    id: "general-leclerc",
+    title: "Duo Douche & Baignoire — Style Bois et Blanc",
+    location: "Charenton-le-Pont (94) - Rue du Général Leclerc",
+    description: "Rénovation complète pour un jeune couple avec bébé. Le défi : intégrer à la fois une douche à l'italienne ET une baignoire pour le bain du bébé, le tout au centimètre près. Carrelage mix blanc et bois aspect avec niches intégrées, robinetterie chromée encastrée, meuble vasque en bois avec vasque à poser, WC suspendu avec placard technique pour le chauffe-eau et carreaux de ciment au sol.",
+    coverImage: generalLeclerc6,
+    photos: [
+      { id: 1, image: generalLeclerc6, title: "Après — Vue d'ensemble", description: "Vasque, baignoire et douche en harmonie" },
+      { id: 2, image: generalLeclerc2, title: "Après — Baignoire & Douche", description: "Duo optimisé au centimètre près" },
+      { id: 3, image: generalLeclerc3, title: "Après — Baignoire détail", description: "Carrelage bois et niches intégrées" },
+      { id: 4, image: generalLeclerc4, title: "Après — Robinetterie baignoire", description: "Chrome encastré sur carrelage bois" },
+      { id: 5, image: generalLeclerc5, title: "Après — Vasque à poser", description: "Plan bois et robinetterie chromée" },
+      { id: 6, image: generalLeclerc7, title: "Après — Douche à l'italienne", description: "Robinetterie encastrée et ciel de pluie" },
+      { id: 7, image: generalLeclerc8, title: "Après — Niches rangement", description: "Double niche pratique et sèche-serviettes" },
+      { id: 8, image: generalLeclerc1, title: "Après — WC suspendu", description: "Placard technique, chauffe-eau dissimulé et carreaux de ciment" },
     ],
   },
   {
