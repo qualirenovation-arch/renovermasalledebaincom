@@ -21,6 +21,7 @@ import presse18h39Wc from "@/assets/presse-18h39-wc.png";
 import soisy1 from "@/assets/soisy-1.jpg";
 import presseHouzzBuanderie from "@/assets/presse-houzz-buanderie.png";
 import terrazzoSoisyEnfants from "@/assets/terrazzo-soisy-enfants.jpg";
+import generalLeclerc3 from "@/assets/general-leclerc-3.jpg";
 
 // ========================================
 // Structure "base de données" : parutions_presse
@@ -184,16 +185,16 @@ const parutions_presse: ParutionPresse[] = [
     location: "Paris 19ème - Avenue Laumière",
   },
   {
-    id: "houzz-bois-2021",
+    id: "houzz-bois-charenton-2021",
     date_publication: "2021-06-15",
     media: "Houzz",
     titre_article: "Photothèque : 50 salles de bains réchauffées grâce au bois",
-    extrait_seo: "Le bois comme matériau de référence pour créer une atmosphère zen et spa. Qu'il soit brut ou imitation, il apporte chaleur et nature à la salle de bains, transformant la pièce en havre de paix.",
+    extrait_seo: "Notre projet Charenton-le-Pont mis à l'honneur : duo douche/baignoire pour jeune couple, carrelage mix blanc et bois aspect, robinetterie chromée encastrée et étanchéité Schluter. Un défi technique au centimètre près pour intégrer baignoire bébé et douche italienne.",
     url_article: "https://www.houzz.fr/magazine/phototheque-50-salles-de-bains-rechauffees-grace-au-bois-stsetivw-vs~121061583",
     type: "article",
-    image: presseHouzzBois,
+    image: generalLeclerc3,
     journalist: "Rédaction Houzz",
-    location: "Paris",
+    location: "Charenton-le-Pont (94) - Rue du Général Leclerc",
   },
   {
     id: "marie-claire-contemporaine-2021",
