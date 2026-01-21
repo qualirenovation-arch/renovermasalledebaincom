@@ -412,6 +412,9 @@ import generalLeclerc5 from "@/assets/general-leclerc-5.jpg";
 import generalLeclerc6 from "@/assets/general-leclerc-6.jpg";
 import generalLeclerc7 from "@/assets/general-leclerc-7.jpg";
 import generalLeclerc8 from "@/assets/general-leclerc-8.jpg";
+import generalLeclercSchluter1 from "@/assets/general-leclerc-schluter-1.jpg";
+import generalLeclercSchluter2 from "@/assets/general-leclerc-schluter-2.jpg";
+import generalLeclercSchluter3 from "@/assets/general-leclerc-schluter-3.jpg";
 
 interface Photo {
   id: number;
@@ -614,6 +617,9 @@ const albums: Album[] = [
       { id: 6, image: generalLeclerc7, title: "Après — Douche à l'italienne", description: "Robinetterie encastrée et ciel de pluie" },
       { id: 7, image: generalLeclerc8, title: "Après — Niches rangement", description: "Double niche pratique et sèche-serviettes" },
       { id: 8, image: generalLeclerc1, title: "Après — WC suspendu", description: "Placard technique, chauffe-eau dissimulé et carreaux de ciment" },
+      { id: 9, image: generalLeclercSchluter1, title: "Travaux — Étanchéité Schluter", description: "Système d'étanchéité sous carrelage conforme DTU" },
+      { id: 10, image: generalLeclercSchluter2, title: "Travaux — Bandes d'étanchéité", description: "Jonctions et angles protégés" },
+      { id: 11, image: generalLeclercSchluter3, title: "Travaux — Protection complète", description: "Étanchéité finalisée avant pose carrelage" },
     ],
   },
   {
