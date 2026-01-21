@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin } from "lucide-react";
 import qualirenovationLogo from "@/assets/logos/qualirenovation-logo-new.png";
+import houzzLogo from "@/assets/logos/houzz-logo.png";
 const footerLinks = {
   navigation: [{
     label: "Accueil",
@@ -56,9 +57,7 @@ export function Footer() {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a href="https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors" aria-label="Houzz">
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M1.333 9.667H7.667V24h8.666V9.667h6.334V0H1.333v9.667z"/>
-                </svg>
+                <img src={houzzLogo} alt="Houzz" className="w-5 h-5 object-contain" />
               </a>
             </div>
           </div>
