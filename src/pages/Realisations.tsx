@@ -1160,7 +1160,20 @@ const albums: Album[] = [
       text: "J'ai fait appel à Qualirenovation pour 2 projets de rénovation et les résultats sont excellents à tous points de vue (tant sur le rendu que sur le déroulement) : Carina partage de très bonnes idées, s'adapte aux besoins de ses clients, est ultra-disponible pour le suivi et pour trouver des solutions ! Je suis ravie et j'ai hâte de faire à nouveau appel à elle pour un futur projet « Saretta »!!",
       author: "Sarah C.",
       link: "https://www.houzz.fr/viewReview/1886768/qualirenovation-by-qualiconcept-review"
-    },
+  },
+  {
+    id: "cours-vincennes-wc",
+    title: "WC — Rangement Optimisé en Marbre Onyx",
+    location: "Paris 12ème - Cours de Vincennes",
+    description: "AVANT : WC basique avec rangement insuffisant et espace mal exploité. APRÈS : Transformation astucieuse avec création d'un rangement sur la gauche pour le lave-mains et les produits, et d'un grand placard au-dessus du WC suspendu. L'ensemble est habillé de marbre onyx (sol, murs et fond des rangements) pour un rendu luxueux. L'astuce : plus de rangement sans déborder sur la circulation, en exploitant chaque centimètre vertical. Niche ouverte avec fond marbre pour les objets du quotidien, placard fermé pour le stock.",
+    coverImage: coursVincennesWc1,
+    photos: [
+      { id: 1, image: coursVincennesWcVideo1, title: "Vidéo — Visite", description: "Découvrez l'aménagement optimisé", isVideo: true },
+      { id: 2, image: coursVincennesWc1, title: "Après — Vue d'ensemble", description: "WC suspendu, niche ouverte et placard marbre onyx" },
+      { id: 3, image: coursVincennesWc2, title: "Après — Rangement latéral", description: "Lave-mains et rangement à gauche" },
+      { id: 4, image: coursVincennesWc3, title: "Après — Placard ouvert", description: "Espace de stockage au-dessus du WC" },
+      { id: 5, image: coursVincennesWcAvant1, title: "Avant — État initial", description: "WC à rénover et optimiser" },
+    ],
   },
 ];
 
