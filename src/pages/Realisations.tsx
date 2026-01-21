@@ -115,6 +115,13 @@ import vincennesMrAvant7 from "@/assets/vincennes-mr-avant-7.jpg";
 import vincennesMrAvant8 from "@/assets/vincennes-mr-avant-8.jpg";
 import vincennesMrAvant9 from "@/assets/vincennes-mr-avant-9.jpg";
 
+// WC Cours de Vincennes
+import coursVincennesWc1 from "@/assets/cours-vincennes-wc-1.jpg";
+import coursVincennesWc2 from "@/assets/cours-vincennes-wc-2.jpg";
+import coursVincennesWc3 from "@/assets/cours-vincennes-wc-3.jpg";
+import coursVincennesWcAvant1 from "@/assets/cours-vincennes-wc-avant-1.jpg";
+const coursVincennesWcVideo1 = "/videos/cours-vincennes-wc-1.mp4";
+
 // Chantiers en cours
 import butteschaumont1 from "@/assets/buttes-chaumont-1.jpg";
 import butteschaumont2 from "@/assets/buttes-chaumont-2.jpg";
