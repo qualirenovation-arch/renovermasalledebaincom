@@ -40,7 +40,7 @@ export function Header() {
   }, []);
 
   return (
-    <div className="sticky top-0 z-50">
+    <div className={`sticky top-0 z-50 transition-shadow duration-300 ${isScrolled ? "shadow-lg" : ""}`}>
       {/* Top Banner - Hidden on mobile and when scrolled */}
       <div 
         className={`hidden md:block bg-primary text-primary-foreground px-4 transition-all duration-300 ${
