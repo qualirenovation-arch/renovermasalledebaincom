@@ -1174,9 +1174,9 @@ const albums: Album[] = [
   },
   {
     id: "cours-vincennes-wc",
-    title: "WC — Gain de Place & Marbre Onyx",
+    title: "WC — Lave-mains Design & Marbre Onyx",
     location: "Paris 12ème - Cours de Vincennes",
-    description: "AVANT : Un WC classique, fonctionnel mais sans âme, avec un manque criant de rangements. APRÈS : Une transformation astucieuse qui prouve qu'un petit espace peut devenir un écrin de luxe. Nous avons créé un meuble sur-mesure à gauche du lave-mains pour ranger produits et effets personnels, ainsi qu'un grand placard au-dessus du WC suspendu. L'ensemble est habillé de marbre onyx du sol au plafond — y compris le fond des rangements — pour une esthétique résolument haut de gamme. L'astuce : maximiser le stockage en exploitant chaque centimètre vertical, sans jamais déborder sur la circulation. Résultat : un espace pratique et élégant.",
+    description: "AVANT : Un WC basique sans lave-mains, obligeant les invités à entrer dans la salle de bain. APRÈS : Un espace WC autonome et très fonctionnel. Le plus : l'intégration d'un lave-mains design avec rangement sur-mesure à gauche, permettant aux invités de se laver les mains sans passer par la salle de bain. Un grand placard au-dessus du WC suspendu offre un stockage généreux. L'ensemble est habillé de marbre onyx du sol au plafond pour une esthétique luxueuse. Résultat : un espace pratique, élégant et totalement indépendant.",
     coverImage: coursVincennesWc1,
     photos: [
       { id: 1, image: coursVincennesWcVideo1, title: "Vidéo — Visite", description: "Découvrez l'aménagement optimisé", isVideo: true },
