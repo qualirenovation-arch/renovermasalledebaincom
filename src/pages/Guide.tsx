@@ -217,8 +217,82 @@ const Guide = () => {
         </div>
       </section>
 
+      {/* Sommaire cliquable */}
+      <section className="py-8 bg-background border-b border-border">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-5xl mx-auto"
+          >
+            <h2 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+              📋 Sommaire
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+              <a href="#section-1" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
+                <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">1</span>
+                <span className="line-clamp-1">Visite chantier</span>
+              </a>
+              <a href="#section-2" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
+                <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">2</span>
+                <span className="line-clamp-1">Démolition</span>
+              </a>
+              <a href="#section-3" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
+                <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">3</span>
+                <span className="line-clamp-1">Fonte & syndic</span>
+              </a>
+              <a href="#section-4" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
+                <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">4</span>
+                <span className="line-clamp-1">Maître d'œuvre</span>
+              </a>
+              <a href="#section-5" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
+                <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">5</span>
+                <span className="line-clamp-1">Chacun son métier</span>
+              </a>
+              <a href="#section-6" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
+                <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">6</span>
+                <span className="line-clamp-1">Plomberie</span>
+              </a>
+              <a href="#section-7" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
+                <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">7</span>
+                <span className="line-clamp-1">Étanchéité</span>
+              </a>
+              <a href="#section-8" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
+                <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">8</span>
+                <span className="line-clamp-1">Receveur & baignoire</span>
+              </a>
+              <a href="#section-9" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
+                <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">9</span>
+                <span className="line-clamp-1">Joints & finitions</span>
+              </a>
+              <a href="#section-10" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
+                <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">10</span>
+                <span className="line-clamp-1">Robinetterie</span>
+              </a>
+              <a href="#section-11" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
+                <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">11</span>
+                <span className="line-clamp-1">Baignoire & receveur</span>
+              </a>
+              <a href="#section-12" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
+                <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">12</span>
+                <span className="line-clamp-1">Peinture</span>
+              </a>
+              <a href="#section-13" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
+                <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">13</span>
+                <span className="line-clamp-1">VMC</span>
+              </a>
+              <a href="#section-14" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
+                <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">14</span>
+                <span className="line-clamp-1">Éclairage & chauffage</span>
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Section 1 - Visite initiale */}
-      <section className="py-16 bg-accent/20">
+      <section id="section-1" className="py-16 bg-accent/20 scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -296,7 +370,7 @@ const Guide = () => {
       </section>
 
       {/* Section 2 - Démolition */}
-      <section className="py-16 bg-background">
+      <section id="section-2" className="py-16 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -342,7 +416,7 @@ const Guide = () => {
       </section>
 
       {/* Section 3 - Colonnes en fonte & syndic */}
-      <section className="py-16 bg-accent/20">
+      <section id="section-3" className="py-16 bg-accent/20 scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -397,7 +471,7 @@ const Guide = () => {
       </section>
 
       {/* Section 4 - Rôle du maître d'œuvre */}
-      <section className="py-16 bg-primary text-primary-foreground">
+      <section id="section-4" className="py-16 bg-primary text-primary-foreground scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -472,7 +546,7 @@ const Guide = () => {
       </section>
 
       {/* Section 5 - Maître d'œuvre intégré : chacun son métier */}
-      <section className="py-16 bg-background">
+      <section id="section-5" className="py-16 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -556,7 +630,7 @@ const Guide = () => {
       </section>
 
       {/* Section 6 - Plomberie */}
-      <section className="py-16 bg-accent/20">
+      <section id="section-6" className="py-16 bg-accent/20 scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -608,7 +682,7 @@ const Guide = () => {
       </section>
 
       {/* Section 7 - Étanchéité */}
-      <section className="py-16 bg-background">
+      <section id="section-7" className="py-16 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -666,7 +740,7 @@ const Guide = () => {
       </section>
 
       {/* Section 8 - Receveur & baignoire */}
-      <section className="py-16 bg-accent/20">
+      <section id="section-8" className="py-16 bg-accent/20 scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -734,7 +808,7 @@ const Guide = () => {
       </section>
 
       {/* Section 9 - Joints & finitions */}
-      <section className="py-16 bg-background">
+      <section id="section-9" className="py-16 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -809,7 +883,7 @@ const Guide = () => {
       </section>
 
       {/* Section 10 - Robinetterie encastrée */}
-      <section className="py-16 bg-accent/20">
+      <section id="section-10" className="py-16 bg-accent/20 scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -834,7 +908,7 @@ const Guide = () => {
       </section>
 
       {/* Section 11 - Baignoire & receveur matériaux */}
-      <section className="py-16 bg-background">
+      <section id="section-11" className="py-16 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -873,7 +947,7 @@ const Guide = () => {
       </section>
 
       {/* Section 12 - Peinture */}
-      <section className="py-16 bg-accent/20">
+      <section id="section-12" className="py-16 bg-accent/20 scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -900,7 +974,7 @@ const Guide = () => {
       </section>
 
       {/* Section 13 - VMC */}
-      <section className="py-16 bg-background">
+      <section id="section-13" className="py-16 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -927,7 +1001,7 @@ const Guide = () => {
       </section>
 
       {/* Section 14 - Éclairage */}
-      <section className="py-16 bg-accent/30">
+      <section id="section-14" className="py-16 bg-accent/30 scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
