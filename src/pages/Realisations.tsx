@@ -115,6 +115,13 @@ import vincennesMrAvant7 from "@/assets/vincennes-mr-avant-7.jpg";
 import vincennesMrAvant8 from "@/assets/vincennes-mr-avant-8.jpg";
 import vincennesMrAvant9 from "@/assets/vincennes-mr-avant-9.jpg";
 
+// WC Cours de Vincennes
+import coursVincennesWc1 from "@/assets/cours-vincennes-wc-1.jpg";
+import coursVincennesWc2 from "@/assets/cours-vincennes-wc-2.jpg";
+import coursVincennesWc3 from "@/assets/cours-vincennes-wc-3.jpg";
+import coursVincennesWcAvant1 from "@/assets/cours-vincennes-wc-avant-1.jpg";
+const coursVincennesWcVideo1 = "/videos/cours-vincennes-wc-1.mp4";
+
 // Chantiers en cours
 import butteschaumont1 from "@/assets/buttes-chaumont-1.jpg";
 import butteschaumont2 from "@/assets/buttes-chaumont-2.jpg";
@@ -1154,6 +1161,20 @@ const albums: Album[] = [
       author: "Sarah C.",
       link: "https://www.houzz.fr/viewReview/1886768/qualirenovation-by-qualiconcept-review"
     },
+  },
+  {
+    id: "cours-vincennes-wc",
+    title: "WC — Rangement Optimisé en Marbre Onyx",
+    location: "Paris 12ème - Cours de Vincennes",
+    description: "AVANT : WC basique avec rangement insuffisant et espace mal exploité. APRÈS : Transformation astucieuse avec création d'un rangement sur la gauche pour le lave-mains et les produits, et d'un grand placard au-dessus du WC suspendu. L'ensemble est habillé de marbre onyx (sol, murs et fond des rangements) pour un rendu luxueux. L'astuce : plus de rangement sans déborder sur la circulation, en exploitant chaque centimètre vertical. Niche ouverte avec fond marbre pour les objets du quotidien, placard fermé pour le stock.",
+    coverImage: coursVincennesWc1,
+    photos: [
+      { id: 1, image: coursVincennesWcVideo1, title: "Vidéo — Visite", description: "Découvrez l'aménagement optimisé", isVideo: true },
+      { id: 2, image: coursVincennesWc1, title: "Après — Vue d'ensemble", description: "WC suspendu, niche ouverte et placard marbre onyx" },
+      { id: 3, image: coursVincennesWc2, title: "Après — Rangement latéral", description: "Lave-mains et rangement à gauche" },
+      { id: 4, image: coursVincennesWc3, title: "Après — Placard ouvert", description: "Espace de stockage au-dessus du WC" },
+      { id: 5, image: coursVincennesWcAvant1, title: "Avant — État initial", description: "WC à rénover et optimiser" },
+    ],
   },
 ];
 
