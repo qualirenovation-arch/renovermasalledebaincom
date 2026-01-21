@@ -415,6 +415,8 @@ import generalLeclerc8 from "@/assets/general-leclerc-8.jpg";
 import generalLeclercSchluter1 from "@/assets/general-leclerc-schluter-1.jpg";
 import generalLeclercSchluter2 from "@/assets/general-leclerc-schluter-2.jpg";
 import generalLeclercSchluter3 from "@/assets/general-leclerc-schluter-3.jpg";
+import generalLeclercWc1 from "@/assets/general-leclerc-wc-1.jpg";
+import generalLeclercWcTravaux1 from "@/assets/general-leclerc-wc-travaux-1.jpg";
 
 interface Photo {
   id: number;
@@ -620,6 +622,17 @@ const albums: Album[] = [
       { id: 9, image: generalLeclercSchluter1, title: "Travaux — Étanchéité Schluter", description: "Système d'étanchéité sous carrelage conforme DTU" },
       { id: 10, image: generalLeclercSchluter2, title: "Travaux — Bandes d'étanchéité", description: "Jonctions et angles protégés" },
       { id: 11, image: generalLeclercSchluter3, title: "Travaux — Protection complète", description: "Étanchéité finalisée avant pose carrelage" },
+    ],
+  },
+  {
+    id: "general-leclerc-wc",
+    title: "WC — Astuce Chauffe-eau Dissimulé",
+    location: "Charenton-le-Pont (94) - Rue du Général Leclerc",
+    description: "Solution gain de place idéale : le chauffe-eau est dissimulé au-dessus du WC suspendu dans un placard technique sur-mesure. Ce placard peut également accueillir les nourrices (collecteur) et le compteur d'eau. Carreaux de ciment au sol, carrelage noir mat en fond et papier peint rayé pour un style graphique.",
+    coverImage: generalLeclercWc1,
+    photos: [
+      { id: 1, image: generalLeclercWc1, title: "Après — WC & placard technique", description: "Chauffe-eau dissimulé, carreaux de ciment et style graphique" },
+      { id: 2, image: generalLeclercWcTravaux1, title: "Travaux — Installation chauffe-eau", description: "Chauffe-eau Thermor suspendu au-dessus du WC, nourrices et arrivées" },
     ],
   },
   {
