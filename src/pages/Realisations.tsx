@@ -393,6 +393,7 @@ import coursVincennesSdb4 from "@/assets/cours-vincennes-sdb-4.jpg";
 import coursVincennesSdb5 from "@/assets/cours-vincennes-sdb-5.jpg";
 import coursVincennesSdbAvant1 from "@/assets/cours-vincennes-sdb-avant-1.jpg";
 import coursVincennesSdbAvant2 from "@/assets/cours-vincennes-sdb-avant-2.jpg";
+import coursVincennesWcAvant2 from "@/assets/cours-vincennes-wc-avant-2.jpg";
 
 // Charenton-le-Pont (94)
 import charenton1 from "@/assets/charenton-1.jpg";
@@ -1183,13 +1184,14 @@ const albums: Album[] = [
       { id: 3, image: coursVincennesWc2, title: "Après — Rangement latéral", description: "Lave-mains et rangement à gauche" },
       { id: 4, image: coursVincennesWc3, title: "Après — Placard ouvert", description: "Espace de stockage au-dessus du WC" },
       { id: 5, image: coursVincennesWcAvant1, title: "Avant — État initial", description: "WC à rénover et optimiser" },
+      { id: 6, image: coursVincennesWcAvant2, title: "Avant — WC d'origine", description: "Placard existant et WC suspendu avant transformation" },
     ],
   },
   {
     id: "cours-vincennes-sdb",
     title: "SDB — VMC Raccordée & Design Noir & Blanc",
     location: "Paris 12ème - Cours de Vincennes",
-    description: "AVANT : Une salle de bain vieillissante avec cabine de douche arrondie, mobilier vert d'eau et éclairage au plafond dépassé. APRÈS : Une transformation radicale dans un esprit contemporain noir et blanc. Carrelage mural format vertical gris clair, mur d'accent noir dans la douche avec niche encastrée, meuble vasque suspendu noir et robinetterie noire. Le plus technique : la VMC est désormais raccordée à la gaine technique de l'immeuble via un faux plafond, garantissant une ventilation optimale et silencieuse. Paroi de douche verrière style atelier et miroir rond rétroéclairé complètent l'ensemble. Résultat : un espace élégant et parfaitement ventilé.",
+    description: "AVANT : Une salle de bain vieillissante avec cabine de douche arrondie, mobilier vert d'eau et éclairage au plafond dépassé. APRÈS : Une transformation radicale dans un esprit contemporain noir et blanc. Carrelage Équipe style métro noir et blanc, meuble vasque suspendu noir (masalledebain.com) et robinetterie noire. Le plus technique : la VMC est désormais raccordée à la gaine technique de l'immeuble via un faux plafond, garantissant une ventilation optimale et silencieuse. Paroi de douche verrière style atelier et miroir rond rétroéclairé complètent l'ensemble. Résultat : un espace élégant et parfaitement ventilé.",
     coverImage: coursVincennesSdb1,
     photos: [
       { id: 1, image: coursVincennesSdb1, title: "Après — Vue d'ensemble", description: "Douche italienne et meuble vasque noir" },
