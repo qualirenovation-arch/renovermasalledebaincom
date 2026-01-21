@@ -301,24 +301,24 @@ export default function Presse() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-28 bg-gradient-to-br from-primary/10 via-accent/5 to-transparent">
+      <section className="relative py-10 md:py-14 bg-gradient-to-br from-primary/10 via-accent/5 to-transparent">
         <div className="container-custom text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
+            <span className="inline-block px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-3">
               <Newspaper className="w-4 h-4 inline mr-2" />
               Presse & Médias
             </span>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-3 text-balance">
               Nos projets dans les médias
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-6">
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
               Depuis 2017, nos réalisations sont régulièrement mises en avant dans la presse déco.
             </p>
-            <div className="text-left max-w-3xl mx-auto space-y-4 mb-8 text-muted-foreground">
+            <div className="text-left max-w-2xl mx-auto space-y-2 mb-5 text-muted-foreground text-sm leading-snug">
               <p>
                 À travers cette rubrique presse, vous découvrirez bien plus que des articles : des idées concrètes, des choix techniques expliqués et des inspirations utiles pour bien préparer votre projet de rénovation, notamment de salle de bains.
               </p>
@@ -328,22 +328,22 @@ export default function Presse() {
               <p>
                 En parcourant ces parutions, vous avez l'assurance de faire appel à une entreprise qui prend votre projet à cœur, avec toute la maîtrise nécessaire pour transformer vos idées en un espace durable et bien pensé.
               </p>
-              <div className="mt-6 p-5 bg-gradient-to-r from-accent/10 via-accent/5 to-transparent border-l-4 border-accent rounded-r-xl">
-                <p className="text-foreground italic text-lg leading-relaxed">
+              <div className="mt-3 p-3 bg-gradient-to-r from-accent/10 via-accent/5 to-transparent border-l-4 border-accent rounded-r-xl">
+                <p className="text-foreground italic text-base leading-snug">
                   ✨ Et puis, soyons honnêtes : feuilleter de beaux projets, c'est aussi une excellente façon de se projeter… et de commencer à rêver un peu avant les travaux.
                 </p>
               </div>
             </div>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="inline-flex items-center gap-2 bg-background border border-border px-6 py-3 rounded-full shadow-sm">
-                <span className="text-2xl font-bold text-primary">{sortedParutions.length}</span>
-                <span className="text-sm text-muted-foreground">articles publiés</span>
+            <div className="flex flex-wrap justify-center gap-3">
+              <div className="inline-flex items-center gap-2 bg-background border border-border px-4 py-2 rounded-full shadow-sm">
+                <span className="text-xl font-bold text-primary">{sortedParutions.length}</span>
+                <span className="text-xs text-muted-foreground">articles publiés</span>
               </div>
-              <div className="inline-flex items-center gap-2 bg-background border border-border px-6 py-3 rounded-full shadow-sm">
-                <span className="text-2xl font-bold text-primary">
+              <div className="inline-flex items-center gap-2 bg-background border border-border px-4 py-2 rounded-full shadow-sm">
+                <span className="text-xl font-bold text-primary">
                   {new Set(parutions_presse.map(p => p.media)).size}
                 </span>
-                <span className="text-sm text-muted-foreground">médias différents</span>
+                <span className="text-xs text-muted-foreground">médias différents</span>
               </div>
             </div>
           </motion.div>
