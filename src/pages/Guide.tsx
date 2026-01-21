@@ -752,106 +752,56 @@ const Guide = () => {
             </div>
 
             {/* Joint mortier */}
-            <div className="mb-12">
-              <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
-                🧱 Le joint mortier <span className="text-muted-foreground font-normal">(entre les carreaux)</span>
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                C'est lui qui donne la lecture du carrelage. Deux choix possibles :
-              </p>
+            <div className="mb-10">
+              <h3 className="text-xl font-semibold mb-4">🧱 Joint mortier</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="group">
-                  <div className="rounded-2xl overflow-hidden shadow-lg mb-4">
+                  <div className="rounded-2xl overflow-hidden shadow-lg mb-3">
                     <img 
                       src={guideJointAssorti} 
-                      alt="Joint assorti au carrelage salle de bain" 
-                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                      alt="Joint assorti au carrelage" 
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <h4 className="font-semibold text-lg mb-2">Joint assorti au carrelage</h4>
-                  <p className="text-muted-foreground">
-                    → Rendu uniforme, doux et élégant
-                  </p>
+                  <p className="text-muted-foreground text-sm"><strong>Joint assorti</strong> → Rendu uniforme et élégant</p>
                 </div>
                 <div className="group">
-                  <div className="rounded-2xl overflow-hidden shadow-lg mb-4">
+                  <div className="rounded-2xl overflow-hidden shadow-lg mb-3">
                     <img 
                       src={guideJointNoir} 
-                      alt="Joint contrasté foncé carrelage" 
-                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                      alt="Joint contrasté foncé" 
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <h4 className="font-semibold text-lg mb-2">Joint plus foncé</h4>
-                  <p className="text-muted-foreground">
-                    → Fait ressortir la forme du carreau, souligne la pose et le calepinage
-                  </p>
+                  <p className="text-muted-foreground text-sm"><strong>Joint foncé</strong> → Souligne la pose et le calepinage</p>
                 </div>
               </div>
             </div>
 
             {/* Joint silicone */}
-            <div className="mb-12 bg-background rounded-2xl p-8 shadow-sm">
-              <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                🧼 Le joint silicone <span className="text-muted-foreground font-normal">(angles & zones d'eau)</span>
-              </h3>
-              <p className="text-muted-foreground mb-4">
-                Utilisé dans les angles, autour des receveurs, baignoires, parois et pare-bains.
+            <div className="mb-10 bg-background rounded-xl p-6 shadow-sm">
+              <h3 className="text-lg font-semibold mb-3">🧼 Joint silicone (angles & zones d'eau)</h3>
+              <p className="text-muted-foreground text-sm mb-3">
+                Souple, absorbe les mouvements, garantit l'étanchéité. À refaire dès la moindre fissure.
               </p>
-              <p className="text-muted-foreground mb-4">
-                → Il est souple, absorbe les mouvements et garantit l'étanchéité.
+              <p className="text-primary font-medium text-sm">
+                ✨ Conseil : silicone assorti au carrelage pour une finition discrète.
               </p>
-              <div className="flex items-start gap-3 p-4 bg-amber-50 border border-amber-200 rounded-xl mb-4">
-                <AlertTriangle className="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" />
-                <p className="text-amber-800">
-                  Le joint silicone doit rester : propre, continu, sans fissure. À la moindre fissure : on refait immédiatement.
-                </p>
-              </div>
-              <div className="bg-primary/10 rounded-xl p-4 border border-primary/20">
-                <p className="font-medium text-primary">
-                  ✨ Bonne pratique : joint silicone assorti au carrelage, à la faïence ou à la paroi de douche → finition discrète et propre.
-                </p>
-              </div>
             </div>
 
             {/* Profils de finition */}
-            <div>
-              <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
-                🔲 Les profils de finition
-              </h3>
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <p className="text-muted-foreground mb-4">
-                    Les profils ne servent pas seulement à protéger : ils participent au design global.
-                  </p>
-                  <p className="font-medium mb-4">Nous les choisissons :</p>
-                  <ul className="space-y-2 mb-6">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-600" />
-                      <span>Assortis à la robinetterie</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-600" />
-                      <span>En cohérence avec la paroi de douche ou le pare-bain</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-600" />
-                      <span>Carrés ou arrondis selon l'ambiance</span>
-                    </li>
-                  </ul>
-                  <p className="text-primary font-medium">
-                    → Le profil doit s'intégrer, pas attirer l'œil.
-                  </p>
-                </div>
-                <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <img 
-                    src={guideProfilFinition} 
-                    alt="Profil de finition Schlüter assorti robinetterie" 
-                    className="w-full h-80 object-cover"
-                  />
-                  <p className="bg-foreground text-background text-sm p-3 text-center">
-                    Profil Schlüter assorti à la robinetterie
-                  </p>
-                </div>
+            <div className="grid md:grid-cols-2 gap-6 items-center">
+              <div>
+                <h3 className="text-lg font-semibold mb-3">🔲 Profils de finition</h3>
+                <p className="text-muted-foreground text-sm mb-3">Choisis assortis à la robinetterie et paroi de douche.</p>
+                <p className="text-primary font-medium text-sm">→ Le profil doit s'intégrer, pas attirer l'œil.</p>
+              </div>
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src={guideProfilFinition} 
+                  alt="Profil Schlüter assorti robinetterie" 
+                  className="w-full h-48 object-cover"
+                />
               </div>
             </div>
           </motion.div>
@@ -875,30 +825,9 @@ const Guide = () => {
                 Robinetterie encastrée : anticiper dès la conception
               </h2>
             </div>
-            <div className="bg-accent/30 rounded-2xl p-8">
-              <Ruler className="w-10 h-10 text-primary mb-4" />
-              <p className="text-lg text-muted-foreground mb-4">
-                La robinetterie encastrée impose :
-              </p>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span>Un doublage mural</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span>Une anticipation dès la conception</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span>Une pose irréprochable</span>
-                </li>
-              </ul>
-              <div className="bg-primary/10 rounded-xl p-4">
-                <p className="text-primary font-medium">
-                  👉 Ce choix se fait avant les cloisons et le carrelage.
-                </p>
-              </div>
+            <div className="bg-accent/30 rounded-xl p-6">
+              <p className="text-muted-foreground mb-3">Impose : doublage mural, anticipation dès conception, pose irréprochable.</p>
+              <p className="text-primary font-medium text-sm">👉 Ce choix se fait avant les cloisons et le carrelage.</p>
             </div>
           </motion.div>
         </div>
@@ -921,46 +850,24 @@ const Guide = () => {
                 Choisir sa baignoire et son receveur
               </h2>
             </div>
-            <div className="grid md:grid-cols-3 gap-6 mb-6">
-              <div className="bg-background rounded-2xl p-6 shadow-sm text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🛁</span>
-                </div>
-                <h3 className="font-semibold text-lg mb-2">Acrylique</h3>
-                <p className="text-muted-foreground text-sm">Léger, confortable, bon rapport qualité-prix</p>
+            <div className="grid grid-cols-3 gap-4 mb-4">
+              <div className="bg-background rounded-xl p-4 shadow-sm text-center">
+                <span className="text-xl">🛁</span>
+                <p className="font-semibold text-sm mt-2">Acrylique</p>
+                <p className="text-muted-foreground text-xs">Léger, bon rapport qualité-prix</p>
               </div>
-              <div className="bg-background rounded-2xl p-6 shadow-sm text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">⚫</span>
-                </div>
-                <h3 className="font-semibold text-lg mb-2">Fonte</h3>
-                <p className="text-muted-foreground text-sm">Durable, excellente inertie thermique</p>
+              <div className="bg-background rounded-xl p-4 shadow-sm text-center">
+                <span className="text-xl">⚫</span>
+                <p className="font-semibold text-sm mt-2">Fonte</p>
+                <p className="text-muted-foreground text-xs">Durable, inertie thermique</p>
               </div>
-              <div className="bg-background rounded-2xl p-6 shadow-sm text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">✨</span>
-                </div>
-                <h3 className="font-semibold text-lg mb-2">Composites</h3>
-                <p className="text-muted-foreground text-sm">Design, pose exigeante</p>
+              <div className="bg-background rounded-xl p-4 shadow-sm text-center">
+                <span className="text-xl">✨</span>
+                <p className="font-semibold text-sm mt-2">Composites</p>
+                <p className="text-muted-foreground text-xs">Design, pose exigeante</p>
               </div>
             </div>
-            <div className="bg-background rounded-xl p-6 shadow-sm">
-              <p className="text-muted-foreground">Le choix dépend :</p>
-              <ul className="mt-3 space-y-2">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
-                  <span>De la structure du sol</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
-                  <span>De l'usage réel</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
-                  <span>Du confort recherché</span>
-                </li>
-              </ul>
-            </div>
+            <p className="text-muted-foreground text-sm">Choix selon : structure du sol, usage réel, confort recherché.</p>
           </motion.div>
         </div>
       </section>
@@ -982,30 +889,11 @@ const Guide = () => {
                 Peinture salle de bain : un produit adapté à l'humidité
               </h2>
             </div>
-            <div className="bg-accent/30 rounded-2xl p-8">
-              <Paintbrush className="w-10 h-10 text-primary mb-4" />
-              <p className="text-lg text-muted-foreground mb-4">
-                En salle de bain, nous utilisons exclusivement :
+            <div className="bg-accent/30 rounded-xl p-6">
+              <p className="text-muted-foreground text-sm mb-3">
+                Peinture spéciale pièces humides, résistante à la condensation, lessivable.
               </p>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span>Une peinture <strong>spéciale pièces humides</strong></span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span>Résistante à la condensation</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span>Lessivable</span>
-                </li>
-              </ul>
-              <div className="bg-primary/10 rounded-xl p-4">
-                <p className="text-primary font-medium">
-                  👉 Unikalo – Aqualine Satin, pour sa tenue et sa durabilité.
-                </p>
-              </div>
+              <p className="text-primary font-medium text-sm">👉 Unikalo – Aqualine Satin.</p>
             </div>
           </motion.div>
         </div>
@@ -1028,30 +916,11 @@ const Guide = () => {
                 VMC et ventilation : protéger la salle de bain dans le temps
               </h2>
             </div>
-            <div className="bg-background rounded-2xl p-8 shadow-sm">
-              <Wind className="w-10 h-10 text-primary mb-4" />
-              <p className="text-lg text-muted-foreground mb-4">
-                Sans ventilation :
+            <div className="bg-background rounded-xl p-6 shadow-sm">
+              <p className="text-muted-foreground text-sm mb-2">
+                Sans VMC : humidité stagnante, moisissures, dégradation prématurée.
               </p>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-center gap-3 text-red-700">
-                  <AlertTriangle className="w-5 h-5" />
-                  <span>Humidité stagnante</span>
-                </li>
-                <li className="flex items-center gap-3 text-red-700">
-                  <AlertTriangle className="w-5 h-5" />
-                  <span>Moisissures</span>
-                </li>
-                <li className="flex items-center gap-3 text-red-700">
-                  <AlertTriangle className="w-5 h-5" />
-                  <span>Dégradation prématurée</span>
-                </li>
-              </ul>
-              <div className="bg-primary/10 rounded-xl p-4">
-                <p className="text-primary font-medium">
-                  👉 Une VMC bien pensée protège toute la salle de bain.
-                </p>
-              </div>
+              <p className="text-primary font-medium text-sm">👉 Une VMC bien pensée protège toute la salle de bain.</p>
             </div>
           </motion.div>
         </div>
