@@ -385,6 +385,15 @@ import bobillotAvant1 from "@/assets/bobillot-avant-1.jpg";
 import bobillotAvant2 from "@/assets/bobillot-avant-2.jpg";
 import bobillotAvant3 from "@/assets/bobillot-avant-3.jpg";
 
+// Cours de Vincennes Paris 12ème - SDB
+import coursVincennesSdb1 from "@/assets/cours-vincennes-sdb-1.jpg";
+import coursVincennesSdb2 from "@/assets/cours-vincennes-sdb-2.jpg";
+import coursVincennesSdb3 from "@/assets/cours-vincennes-sdb-3.jpg";
+import coursVincennesSdb4 from "@/assets/cours-vincennes-sdb-4.jpg";
+import coursVincennesSdb5 from "@/assets/cours-vincennes-sdb-5.jpg";
+import coursVincennesSdbAvant1 from "@/assets/cours-vincennes-sdb-avant-1.jpg";
+import coursVincennesSdbAvant2 from "@/assets/cours-vincennes-sdb-avant-2.jpg";
+
 // Charenton-le-Pont (94)
 import charenton1 from "@/assets/charenton-1.jpg";
 import charenton2 from "@/assets/charenton-2.jpg";
@@ -1174,6 +1183,22 @@ const albums: Album[] = [
       { id: 3, image: coursVincennesWc2, title: "Après — Rangement latéral", description: "Lave-mains et rangement à gauche" },
       { id: 4, image: coursVincennesWc3, title: "Après — Placard ouvert", description: "Espace de stockage au-dessus du WC" },
       { id: 5, image: coursVincennesWcAvant1, title: "Avant — État initial", description: "WC à rénover et optimiser" },
+    ],
+  },
+  {
+    id: "cours-vincennes-sdb",
+    title: "SDB — VMC Raccordée & Design Noir & Blanc",
+    location: "Paris 12ème - Cours de Vincennes",
+    description: "AVANT : Une salle de bain vieillissante avec cabine de douche arrondie, mobilier vert d'eau et éclairage au plafond dépassé. APRÈS : Une transformation radicale dans un esprit contemporain noir et blanc. Carrelage mural format vertical gris clair, mur d'accent noir dans la douche avec niche encastrée, meuble vasque suspendu noir et robinetterie noire. Le plus technique : la VMC est désormais raccordée à la gaine technique de l'immeuble via un faux plafond, garantissant une ventilation optimale et silencieuse. Paroi de douche verrière style atelier et miroir rond rétroéclairé complètent l'ensemble. Résultat : un espace élégant et parfaitement ventilé.",
+    coverImage: coursVincennesSdb1,
+    photos: [
+      { id: 1, image: coursVincennesSdb1, title: "Après — Vue d'ensemble", description: "Douche italienne et meuble vasque noir" },
+      { id: 2, image: coursVincennesSdb2, title: "Après — Vasque et douche", description: "Miroir rond rétroéclairé et paroi verrière" },
+      { id: 3, image: coursVincennesSdb3, title: "Après — Vue vasque", description: "Robinetterie noire et meuble suspendu" },
+      { id: 4, image: coursVincennesSdb4, title: "Après — Détail miroir", description: "Miroir LED avec interrupteur tactile" },
+      { id: 5, image: coursVincennesSdb5, title: "Après — Niche douche", description: "Niche encastrée carrelage noir" },
+      { id: 6, image: coursVincennesSdbAvant1, title: "Avant — Vue générale", description: "Cabine arrondie et meuble vert d'eau" },
+      { id: 7, image: coursVincennesSdbAvant2, title: "Avant — Autre angle", description: "Ancien aménagement à remplacer" },
     ],
   },
 ];
