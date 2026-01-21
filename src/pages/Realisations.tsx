@@ -1620,6 +1620,54 @@ export default function Realisations() {
                     </motion.div>
                   ))}
                 </div>
+
+                {/* Navigation entre projets */}
+                {(() => {
+                  const currentIndex = currentAlbums.findIndex(a => a.id === selectedAlbum.id);
+                  const prevAlbum = currentIndex > 0 ? currentAlbums[currentIndex - 1] : null;
+                  const nextAlbum = currentIndex < currentAlbums.length - 1 ? currentAlbums[currentIndex + 1] : null;
+                  
+                  return (
+                    <motion.div 
+                      className="mt-12 pt-8 border-t border-border"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.3 }}
+                    >
+                      <div className="flex justify-between items-center gap-4">
+                        {prevAlbum ? (
+                          <button
+                            onClick={() => setSelectedAlbum(prevAlbum)}
+                            className="flex items-center gap-3 px-5 py-3 rounded-xl bg-secondary hover:bg-secondary/80 transition-all group flex-1 max-w-xs"
+                          >
+                            <ChevronLeft className="w-5 h-5 text-wood group-hover:-translate-x-1 transition-transform" />
+                            <div className="text-left">
+                              <p className="text-xs text-muted-foreground">Projet précédent</p>
+                              <p className="text-sm font-medium truncate">{prevAlbum.title}</p>
+                            </div>
+                          </button>
+                        ) : (
+                          <div className="flex-1 max-w-xs" />
+                        )}
+                        
+                        {nextAlbum ? (
+                          <button
+                            onClick={() => setSelectedAlbum(nextAlbum)}
+                            className="flex items-center gap-3 px-5 py-3 rounded-xl bg-secondary hover:bg-secondary/80 transition-all group flex-1 max-w-xs justify-end"
+                          >
+                            <div className="text-right">
+                              <p className="text-xs text-muted-foreground">Projet suivant</p>
+                              <p className="text-sm font-medium truncate">{nextAlbum.title}</p>
+                            </div>
+                            <ChevronRight className="w-5 h-5 text-wood group-hover:translate-x-1 transition-transform" />
+                          </button>
+                        ) : (
+                          <div className="flex-1 max-w-xs" />
+                        )}
+                      </div>
+                    </motion.div>
+                  );
+                })()}
               </motion.div>
             )}
           </AnimatePresence>
