@@ -1217,7 +1217,7 @@ const albums: Album[] = [
     id: "cours-vincennes-madame",
     title: "SDB Madame — Rangements Sur-mesure",
     location: "Paris 12ème - Cours de Vincennes",
-    description: "AVANT : Une salle de bain grise et datée avec une cabine de douche arrondie et aucun rangement au-dessus du WC. APRÈS : Un espace repensé dans la même harmonie marbre noir/gris que le reste de l'appartement. L'astuce gain de place : un placard au-dessus du WC intègre à la fois le rangement pour les serviettes ET une panière coulissante pour le linge sale — pas de bordel, tout est prévu et le rangement est optimisé ! Carrelage grand format effet pierre, meuble vasque noir, douche italienne XXL avec niche mosaïque et sèche-serviettes design. Résultat : une salle de bain ultra-fonctionnelle et cohérente avec le style de Madame.",
+    description: "AVANT : Salle de bain grise et datée, cabine de douche arrondie, aucun rangement. APRÈS : Salle de bain repensée dans une harmonie marbre noir/gris. Placard au-dessus des WC avec rangement serviettes et panière à linge coulissante. Douche à l'italienne XXL, meuble vasque noir et carrelage grand format effet pierre. 👉 Gain de place, style et fonctionnalité réunis.",
     coverImage: coursVincennesMadame1,
     photos: [
       { id: 1, image: coursVincennesMadame1, title: "Après — Vue d'ensemble", description: "Douche XXL et meuble vasque noir" },
