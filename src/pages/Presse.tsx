@@ -22,6 +22,7 @@ import soisy1 from "@/assets/soisy-1.jpg";
 import presseHouzzBuanderie from "@/assets/presse-houzz-buanderie.png";
 import terrazzoSoisyEnfants from "@/assets/terrazzo-soisy-enfants.jpg";
 import generalLeclerc3 from "@/assets/general-leclerc-3.jpg";
+import presseHouzzZerodechet from "@/assets/presse-houzz-zerodechet.jpg";
 
 // ========================================
 // Structure "base de données" : parutions_presse
@@ -183,6 +184,17 @@ const parutions_presse: ParutionPresse[] = [
     image: presseHouzzEau,
     journalist: "Claire Tardy",
     location: "Paris 19ème - Avenue Laumière",
+  },
+  {
+    id: "houzz-zerodechet-2021",
+    date_publication: "2021-03-22",
+    media: "Houzz",
+    titre_article: "Objectif zéro déchet : une salle de bains vertueuse en 10 étapes",
+    extrait_seo: "Économies d'eau et éco-gestes dans la salle de bain. Une douche consomme 20 à 60 litres contre 120 à 250 litres pour un bain. Nos douches à l'italienne illustrent comment allier design et responsabilité environnementale.",
+    url_article: "https://www.houzz.fr/magazine/objectif-zero-dechet-une-salle-de-bains-vertueuse-en-10-etapes-stsetivw-vs~116349905",
+    type: "article",
+    image: presseHouzzZerodechet,
+    journalist: "Aurélie Roman",
   },
   {
     id: "houzz-bois-charenton-2021",
