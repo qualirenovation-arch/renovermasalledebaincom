@@ -11,7 +11,7 @@ import charonne1 from "@/assets/charonne-1.jpg";
 import carinaNahmani from "@/assets/carina-nahmani-1.jpg";
 import presseElleWc from "@/assets/presse-elle-wc-suspendus.jpg";
 import presseMarieClaireApres from "@/assets/presse-marie-claire-1.jpg";
-import presseMarieClaireAdresses from "@/assets/presse-marie-claire-adresses.png";
+import presseMarieClaireAdresses from "@/assets/presse-marie-claire-auteuil.png";
 import presseHouzzSoisy from "@/assets/presse-houzz-soisy.png";
 import presseHouzzBois from "@/assets/presse-houzz-bois.jpg";
 import presse18h39Joints from "@/assets/guide-joint-noir.webp";
