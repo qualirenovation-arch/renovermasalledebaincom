@@ -23,6 +23,7 @@ import presseHouzzBuanderie from "@/assets/presse-houzz-buanderie.png";
 import terrazzoSoisyEnfants from "@/assets/terrazzo-soisy-enfants.jpg";
 import generalLeclerc3 from "@/assets/general-leclerc-3.jpg";
 import presseHouzzZerodechet from "@/assets/presse-houzz-zerodechet.jpg";
+import houzzLogo from "@/assets/logos/houzz-logo.png";
 
 // ========================================
 // Structure "base de données" : parutions_presse
@@ -293,9 +294,15 @@ const getMediaLogo = (media: string): React.ReactNode => {
       );
     case "Houzz":
       return (
-        <div className="flex items-center px-3 py-1.5 bg-emerald-50 dark:bg-emerald-900/20 rounded-full">
+        <a 
+          href="https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-50 dark:bg-emerald-900/20 rounded-full hover:bg-emerald-100 dark:hover:bg-emerald-900/30 transition-colors"
+        >
+          <img src={houzzLogo} alt="Houzz" className="w-4 h-4" />
           <span className="font-bold text-emerald-700 dark:text-emerald-300 text-sm tracking-tight">houzz</span>
-        </div>
+        </a>
       );
     case "18h39":
       return (
