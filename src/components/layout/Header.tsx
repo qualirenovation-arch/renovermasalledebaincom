@@ -71,10 +71,10 @@ export function Header() {
                 className="h-10 md:h-16 w-auto"
               />
               <div className="flex flex-col leading-tight">
-                <span className="font-display text-lg md:text-3xl font-bold text-navy">
+                <span className="font-display text-base md:text-xl font-bold text-navy">
                   RenoverMaSalleDeBain<span className="hidden sm:inline">.com</span>
                 </span>
-                <span className="text-sm md:text-lg font-semibold text-gold-dark hidden sm:block">
+                <span className="text-xs md:text-sm font-semibold text-gold-dark hidden sm:block">
                   by QualiRénovation
                 </span>
               </div>
