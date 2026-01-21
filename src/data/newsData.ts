@@ -153,6 +153,14 @@ export const videoConseils = [
   },
   // === ROBINETTERIE ===
   {
+    id: "video-ciel-de-pluie",
+    title: "Ciel de pluie : le luxe dans votre douche",
+    description: "Découvrez les avantages et contraintes d'une douche de tête encastrée plafond",
+    videoUrl: "/videos/ciel-de-pluie-1.mp4",
+    link: "/guide-travaux#robinetterie",
+    category: "Robinetterie",
+  },
+  {
     id: "video-robinetterie-finitions",
     title: "Chrome, noir mat ou doré : quelle finition choisir ?",
     description: "Avantages et inconvénients de chaque finition de robinetterie",
