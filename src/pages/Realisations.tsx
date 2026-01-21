@@ -395,6 +395,16 @@ import coursVincennesSdbAvant1 from "@/assets/cours-vincennes-sdb-avant-1.jpg";
 import coursVincennesSdbAvant2 from "@/assets/cours-vincennes-sdb-avant-2.jpg";
 import coursVincennesWcAvant2 from "@/assets/cours-vincennes-wc-avant-2.jpg";
 
+// Cours de Vincennes Paris 12ème - SDB Madame
+import coursVincennesMadame1 from "@/assets/cours-vincennes-madame-1.jpg";
+import coursVincennesMadame2 from "@/assets/cours-vincennes-madame-2.jpg";
+import coursVincennesMadame3 from "@/assets/cours-vincennes-madame-3.jpg";
+import coursVincennesMadame4 from "@/assets/cours-vincennes-madame-4.jpg";
+import coursVincennesMadame5 from "@/assets/cours-vincennes-madame-5.jpg";
+import coursVincennesMadameAvant1 from "@/assets/cours-vincennes-madame-avant-1.jpg";
+import coursVincennesMadameAvant2 from "@/assets/cours-vincennes-madame-avant-2.jpg";
+import coursVincennesMadameAvant3 from "@/assets/cours-vincennes-madame-avant-3.jpg";
+
 // Charenton-le-Pont (94)
 import charenton1 from "@/assets/charenton-1.jpg";
 import charenton2 from "@/assets/charenton-2.jpg";
@@ -1201,6 +1211,23 @@ const albums: Album[] = [
       { id: 5, image: coursVincennesSdb5, title: "Après — Niche douche", description: "Niche encastrée carrelage noir" },
       { id: 6, image: coursVincennesSdbAvant1, title: "Avant — Vue générale", description: "Cabine arrondie et meuble vert d'eau" },
       { id: 7, image: coursVincennesSdbAvant2, title: "Avant — Autre angle", description: "Ancien aménagement à remplacer" },
+    ],
+  },
+  {
+    id: "cours-vincennes-madame",
+    title: "SDB Madame — Rangements Sur-mesure",
+    location: "Paris 12ème - Cours de Vincennes",
+    description: "AVANT : Une salle de bain grise et datée avec une cabine de douche arrondie et aucun rangement au-dessus du WC. APRÈS : Un espace repensé dans la même harmonie marbre noir/gris que le reste de l'appartement. Le plus : un meuble de rangement sur-mesure au-dessus du WC pour les produits de beauté — on n'a jamais assez de place ! Carrelage grand format effet pierre, meuble vasque noir, douche italienne XXL avec niche mosaïque et sèche-serviettes design. Résultat : une salle de bain fonctionnelle et cohérente avec le style de Madame.",
+    coverImage: coursVincennesMadame1,
+    photos: [
+      { id: 1, image: coursVincennesMadame1, title: "Après — Vue d'ensemble", description: "Douche XXL et meuble vasque noir" },
+      { id: 2, image: coursVincennesMadame2, title: "Après — Angle WC", description: "WC suspendu et meuble rangement au-dessus" },
+      { id: 3, image: coursVincennesMadame3, title: "Après — Vasque et rangement", description: "Meuble noir et sèche-serviettes design" },
+      { id: 4, image: coursVincennesMadame4, title: "Après — Détail douche", description: "Niche mosaïque et robinetterie encastrée" },
+      { id: 5, image: coursVincennesMadame5, title: "Après — Paroi vitrée", description: "Douche italienne avec paroi fixe" },
+      { id: 6, image: coursVincennesMadameAvant1, title: "Avant — Douche cabine", description: "Cabine arrondie et carrelage gris" },
+      { id: 7, image: coursVincennesMadameAvant2, title: "Avant — Vue générale", description: "Ancien aménagement sans rangement" },
+      { id: 8, image: coursVincennesMadameAvant3, title: "Avant — Angle WC", description: "Espace au-dessus du WC non exploité" },
     ],
   },
 ];
