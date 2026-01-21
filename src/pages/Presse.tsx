@@ -20,7 +20,7 @@ import presseHouzzEau from "@/assets/presse-houzz-laumiere.png";
 import presse18h39Wc from "@/assets/presse-18h39-wc.png";
 import soisy1 from "@/assets/soisy-1.jpg";
 import presseHouzzBuanderie from "@/assets/presse-houzz-buanderie.png";
-import soisyEnfants1 from "@/assets/soisy-enfants-1.jpg";
+import terrazzoSoisyEnfants from "@/assets/terrazzo-soisy-enfants.jpg";
 
 // ========================================
 // Structure "base de données" : parutions_presse
@@ -97,7 +97,7 @@ const parutions_presse: ParutionPresse[] = [
     extrait_seo: "Le terrazzo dans tous ses états : inspirations pour une salle de bains moderne et élégante. Notre projet à Soisy-sous-Montmorency illustre l'utilisation du terrazzo hexagonal avec robinetterie dorée dans la salle de bains des enfants.",
     url_article: "https://www.houzz.fr/magazine/comment-integrer-du-terrazzo-dans-la-salle-de-bains-stsetivw-vs~177628691",
     type: "article",
-    image: soisyEnfants1,
+    image: terrazzoSoisyEnfants,
     journalist: "Lucas Beyssier",
     location: "Soisy-sous-Montmorency (95)",
   },
