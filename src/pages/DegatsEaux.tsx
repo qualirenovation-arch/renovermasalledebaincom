@@ -31,6 +31,7 @@ const degatsEauxVideos = [
     description: "Découvrez nos conseils d'experts pour éviter les sinistres et protéger votre rénovation.",
     tip: "👉 Les points essentiels à surveiller pour une installation pérenne.",
     videoSrc: "/videos/degats-eaux-2.mp4",
+    poster: "/videos/posters/degats-eaux-2.jpg",
     views: "15.8k",
   },
   {
@@ -39,6 +40,7 @@ const degatsEauxVideos = [
     description: "Un dégât des eaux peut ruiner une rénovation et entraîner des frais considérables. La clé : des raccords de qualité, une étanchéité parfaite et des contrôles réguliers.",
     tip: "👉 Dans cette vidéo, je vous montre les erreurs à éviter et les bonnes pratiques à adopter.",
     videoSrc: "/videos/degats-eaux-1.mp4",
+    poster: "/videos/posters/degats-eaux-1.jpg",
     views: "3.7k",
   },
 ];
@@ -185,6 +187,7 @@ const DegatsEaux = () => {
               <div key={video.id} className="bg-background rounded-xl overflow-hidden shadow-sm border border-border/50">
                 <LazyVideo 
                   src={video.videoSrc}
+                  poster={video.poster}
                   className="aspect-[9/16]"
                   title={video.title}
                 />

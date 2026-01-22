@@ -157,6 +157,7 @@ const Guide = () => {
               <div className="bg-background rounded-xl overflow-hidden shadow-md border border-primary/10">
                 <LazyVideo 
                   src="/videos/vasque-a-poser-1.mp4"
+                  poster="/videos/posters/vasque-a-poser-1.jpg"
                   className="w-full aspect-[9/16]"
                   title="Comment choisir votre vasque à poser"
                 />
@@ -172,6 +173,7 @@ const Guide = () => {
               <div className="bg-background rounded-xl overflow-hidden shadow-md border border-primary/10">
                 <LazyVideo 
                   src="/videos/vasque-a-poser-2.mp4"
+                  poster="/videos/posters/vasque-a-poser-2.jpg"
                   className="w-full aspect-[9/16]"
                   title="Faut-il carreler toute hauteur devant le meuble vasque ?"
                 />
@@ -189,6 +191,7 @@ const Guide = () => {
               <div className="bg-background rounded-xl overflow-hidden shadow-md border border-primary/10">
                 <LazyVideo 
                   src="/videos/vmc-1.mp4"
+                  poster="/videos/posters/vmc-1.jpg"
                   className="w-full aspect-[9/16]"
                   title="VMC WC + rangement malin : le combo gagnant"
                 />
@@ -206,6 +209,7 @@ const Guide = () => {
               <div className="bg-background rounded-xl overflow-hidden shadow-md border border-primary/10">
                 <LazyVideo 
                   src="/videos/acces-evacuation-1.mp4"
+                  poster="/videos/posters/acces-evacuation-1.jpg"
                   className="w-full aspect-[9/16]"
                   title="Accès évacuation : indispensable en cas d'engorgement"
                 />
