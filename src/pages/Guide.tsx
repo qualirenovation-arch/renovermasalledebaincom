@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { LazyVideo } from "@/components/ui/lazy-video";
 import { ArrowRight, CheckCircle, AlertTriangle, Droplets, Shield, Wrench, Sparkles, Eye, Users, Home, Phone, Paintbrush, Wind, HardHat, Building, Hammer, Ruler, HelpCircle, Play, Lightbulb, Thermometer, Flame } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
@@ -154,15 +155,11 @@ const Guide = () => {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {/* Vidéo 1 - Vasque à poser */}
               <div className="bg-background rounded-xl overflow-hidden shadow-md border border-primary/10">
-                <video 
-                  className="w-full aspect-[9/16] object-cover"
-                  controls
-                  preload="metadata"
-                  playsInline
-                >
-                  <source src="/videos/vasque-a-poser-1.mp4" type="video/mp4" />
-                  Votre navigateur ne supporte pas la lecture vidéo.
-                </video>
+                <LazyVideo 
+                  src="/videos/vasque-a-poser-1.mp4"
+                  className="w-full aspect-[9/16]"
+                  title="Comment choisir votre vasque à poser"
+                />
                 <div className="p-3">
                   <h3 className="font-semibold text-sm text-foreground line-clamp-2">Comment choisir votre vasque à poser</h3>
                   <p className="text-xs text-muted-foreground mt-2 flex items-center gap-1">
@@ -173,15 +170,11 @@ const Guide = () => {
               
               {/* Vidéo 2 - Carrelage meuble vasque */}
               <div className="bg-background rounded-xl overflow-hidden shadow-md border border-primary/10">
-                <video 
-                  className="w-full aspect-[9/16] object-cover"
-                  controls
-                  preload="metadata"
-                  playsInline
-                >
-                  <source src="/videos/vasque-a-poser-2.mp4" type="video/mp4" />
-                  Votre navigateur ne supporte pas la lecture vidéo.
-                </video>
+                <LazyVideo 
+                  src="/videos/vasque-a-poser-2.mp4"
+                  className="w-full aspect-[9/16]"
+                  title="Faut-il carreler toute hauteur devant le meuble vasque ?"
+                />
                 <div className="p-3">
                   <h3 className="font-semibold text-sm text-foreground">Faut-il carreler toute hauteur devant le meuble vasque ?</h3>
                   <p className="text-xs text-muted-foreground mt-1">Réponse : Pas forcément. S'il y a un miroir toute hauteur, le carrelage derrière n'a aucun intérêt technique, ne se voit pas et augmente inutilement le devis.</p>
@@ -194,15 +187,11 @@ const Guide = () => {
               
               {/* Vidéo 3 - VMC + rangement malin */}
               <div className="bg-background rounded-xl overflow-hidden shadow-md border border-primary/10">
-                <video 
-                  className="w-full aspect-[9/16] object-cover"
-                  controls
-                  preload="metadata"
-                  playsInline
-                >
-                  <source src="/videos/vmc-1.mp4" type="video/mp4" />
-                  Votre navigateur ne supporte pas la lecture vidéo.
-                </video>
+                <LazyVideo 
+                  src="/videos/vmc-1.mp4"
+                  className="w-full aspect-[9/16]"
+                  title="VMC WC + rangement malin : le combo gagnant"
+                />
                 <div className="p-3">
                   <h3 className="font-semibold text-sm text-foreground">VMC WC + rangement malin : le combo gagnant ✨</h3>
                   <p className="text-xs text-muted-foreground mt-1">En conservant la VMC collective et en intégrant l'accès dans la menuiserie, on a pu créer un placard au-dessus des WC, sans compromettre la ventilation.</p>
@@ -215,15 +204,11 @@ const Guide = () => {
               
               {/* Vidéo 4 - Accès évacuation */}
               <div className="bg-background rounded-xl overflow-hidden shadow-md border border-primary/10">
-                <video 
-                  className="w-full aspect-[9/16] object-cover"
-                  controls
-                  preload="metadata"
-                  playsInline
-                >
-                  <source src="/videos/acces-evacuation-1.mp4" type="video/mp4" />
-                  Votre navigateur ne supporte pas la lecture vidéo.
-                </video>
+                <LazyVideo 
+                  src="/videos/acces-evacuation-1.mp4"
+                  className="w-full aspect-[9/16]"
+                  title="Accès évacuation : indispensable en cas d'engorgement"
+                />
                 <div className="p-3">
                   <h3 className="font-semibold text-sm text-foreground">Accès évacuation : indispensable en cas d'engorgement 🔧</h3>
                   <p className="text-xs text-muted-foreground mt-1">L'accès aux évacuations doit toujours rester accessible. En cas d'engorgement, une trappe permet d'intervenir sans tout casser.</p>

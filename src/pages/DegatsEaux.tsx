@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { LazyVideo } from "@/components/ui/lazy-video";
 
 // Images chantiers dégâts des eaux
 import jemmapesApres1 from "@/assets/jemmapes-apres-1.jpg";
@@ -181,10 +182,12 @@ const DegatsEaux = () => {
           </h2>
           <div className="grid grid-cols-2 gap-4 max-w-xl mx-auto">
             {degatsEauxVideos.map((video) => (
-              <div key={video.id} className="bg-white rounded-xl overflow-hidden shadow-sm border border-border/50">
-                <div className="aspect-[9/16]">
-                  <video src={video.videoSrc} className="w-full h-full object-cover" controls playsInline preload="metadata" />
-                </div>
+              <div key={video.id} className="bg-background rounded-xl overflow-hidden shadow-sm border border-border/50">
+                <LazyVideo 
+                  src={video.videoSrc}
+                  className="aspect-[9/16]"
+                  title={video.title}
+                />
                 <div className="p-3">
                   <h3 className="font-medium text-sm text-foreground">{video.title}</h3>
                 </div>
