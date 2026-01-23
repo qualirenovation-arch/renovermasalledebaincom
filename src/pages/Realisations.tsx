@@ -1210,7 +1210,8 @@ const albums: Album[] = [
       { id: 7, image: soisyEnfantsAvant2, title: "Avant — Vue générale", description: "Espace avant aménagement" },
     ],
   },
-];
+  // ========== PARIS 12ème (75012) ==========
+  {
     id: "vincennes-mr",
     title: "Salle de bain Monsieur",
     location: "Paris 12ème - Cours de Vincennes",
