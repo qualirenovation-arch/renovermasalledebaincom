@@ -1336,7 +1336,7 @@ const Guide = () => {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="group">
-                <a href="tel:+33612345678">
+                <a href="tel:+33659764685">
                   <Phone className="mr-2 w-4 h-4" />
                   Nous appeler
                 </a>
