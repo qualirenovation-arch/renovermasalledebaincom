@@ -335,10 +335,10 @@ export default function Presse() {
   return (
     <Layout>
       <Helmet>
-        <title>Presse & Médias | QualiRénovation - Nos projets dans Elle, Houzz, Marie Claire</title>
+        <title>Presse & Médias | Qualiconcept - Nos projets dans Elle, Houzz, Marie Claire</title>
         <meta 
           name="description" 
-          content="Découvrez les articles de presse mettant en avant nos réalisations. Elle Décoration, Marie Claire Maison, Houzz, 18h39 : QualiRénovation, référence en rénovation salle de bain Paris."
+          content="Découvrez les articles de presse mettant en avant nos réalisations. Elle Décoration, Marie Claire Maison, Houzz, 18h39 : Qualiconcept, référence en rénovation salle de bain Paris."
         />
       </Helmet>
 

@@ -75,7 +75,7 @@ export function Header() {
                   RenoverMaSalleDeBain<span className="hidden sm:inline">.com</span>
                 </span>
                 <span className="text-xs md:text-sm font-semibold text-gold-dark hidden sm:block">
-                  by QualiRénovation
+                  by Qualiconcept
                 </span>
               </div>
             </Link>
