@@ -499,40 +499,46 @@ export default function Devis() {
 
   return (
     <Layout>
-      {/* Hero - Compact pour mobile */}
-      <section className="relative py-10 md:py-20 bg-stone">
-        <div className="container-custom">
+      {/* Hero - Premium design */}
+      <section className="relative py-12 md:py-20 bg-gradient-to-b from-stone to-background overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-gold rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary rounded-full blur-3xl" />
+        </div>
+        <div className="container-custom relative">
           <motion.div 
             className="max-w-3xl text-center md:text-left"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="tag-mint inline-flex items-center gap-2 mb-4">
+            <span className="tag-mint inline-flex items-center gap-2 mb-5">
               <CalendarCheck className="w-4 h-4" />
               Visite gratuite
             </span>
-            <h1 className="font-display text-2xl md:text-4xl lg:text-5xl font-semibold mb-3 md:mb-6">
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6 tracking-tight">
               Demandez votre devis
             </h1>
-            <p className="text-muted-foreground text-sm md:text-lg leading-relaxed">
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-xl">
               RDV gratuit chez vous pour étudier votre projet.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Avantages rapides - Compact */}
-      <section className="py-4 md:py-8 border-b border-border bg-background">
+      {/* Avantages rapides - Premium pills */}
+      <section className="py-6 md:py-8 bg-background border-b border-border/50">
         <div className="container-custom">
-          <div className="flex flex-wrap justify-center gap-4 md:gap-8">
+          <div className="flex flex-wrap justify-center gap-3 md:gap-6">
             {[
               { icon: Pencil, title: "Sur mesure" },
-              { icon: Gem, title: "Qualité" },
-              { icon: Wrench, title: "Experts" }
+              { icon: Gem, title: "Qualité premium" },
+              { icon: Wrench, title: "Experts certifiés" }
             ].map((item, index) => (
-              <div key={index} className="flex items-center gap-2">
-                <item.icon className="w-5 h-5 md:w-6 md:h-6 text-foreground" strokeWidth={1.5} />
+              <div key={index} className="flex items-center gap-2.5 px-4 py-2.5 bg-card rounded-full border border-border/50 shadow-sm">
+                <div className="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center">
+                  <item.icon className="w-4 h-4 text-gold" strokeWidth={1.5} />
+                </div>
                 <span className="font-medium text-sm">{item.title}</span>
               </div>
             ))}
@@ -540,10 +546,10 @@ export default function Devis() {
         </div>
       </section>
 
-      {/* Form Section - Mobile optimisé */}
-      <section id="devis-form" className="py-8 md:py-12 bg-background scroll-mt-24 md:scroll-mt-28">
+      {/* Form Section - Premium layout */}
+      <section id="devis-form" className="py-10 md:py-16 bg-background scroll-mt-24 md:scroll-mt-28">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
             {/* Form */}
             <motion.div 
               className="lg:col-span-2"
