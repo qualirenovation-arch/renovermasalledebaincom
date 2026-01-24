@@ -16,6 +16,7 @@ import baignoireRangementNiches from "@/assets/baignoire-rangement-niches.jpg";
 import baignoireRangementTiroirs from "@/assets/baignoire-rangement-tiroirs.jpg";
 import nicolasRoretDouche from "@/assets/nicolas-roret-douche.jpg";
 import receveursDouche from "@/assets/receveurs-douche.jpg";
+import boulogne5 from "@/assets/boulogne-5.jpg";
 
 const Guide = () => {
   // FAQ Schema for SEO
@@ -817,16 +818,28 @@ const Guide = () => {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              {/* Photo */}
-              <div className="relative rounded-2xl overflow-hidden shadow-lg group">
-                <img 
-                  src={nicolasRoretDouche} 
-                  alt="Niche encastrée dans une douche - Projet Nicolas Roret" 
-                  className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                  <p className="text-white text-sm font-medium">Niche encastrée — Projet Nicolas Roret</p>
+            <div className="grid md:grid-cols-2 gap-6 items-start">
+              {/* Photos */}
+              <div className="grid grid-cols-2 gap-3">
+                <div className="relative rounded-xl overflow-hidden shadow-lg group">
+                  <img 
+                    src={boulogne5} 
+                    alt="Niche au-dessus de la baignoire - Projet Boulogne" 
+                    className="w-full h-40 md:h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
+                    <p className="text-white text-xs font-medium">Boulogne — Baignoire</p>
+                  </div>
+                </div>
+                <div className="relative rounded-xl overflow-hidden shadow-lg group">
+                  <img 
+                    src={nicolasRoretDouche} 
+                    alt="Niche encastrée dans une douche - Projet Nicolas Roret" 
+                    className="w-full h-40 md:h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
+                    <p className="text-white text-xs font-medium">Nicolas Roret — Douche</p>
+                  </div>
                 </div>
               </div>
 
