@@ -76,9 +76,9 @@ const comparison = [{
 export default function WhyUs() {
   return <Layout>
       {/* Hero */}
-      <section className="relative py-24 md:py-32">
+      <section className="relative py-16 md:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-stone" />
-        <div className="relative container-custom">
+        <div className="relative container-custom px-4 md:px-6">
           <motion.div className="max-w-3xl" initial={{
           opacity: 0,
           y: 30
@@ -91,8 +91,8 @@ export default function WhyUs() {
             <span className="inline-block px-4 py-2 rounded-full bg-accent/30 text-wood text-sm font-medium mb-6">
               Pourquoi nous choisir
             </span>
-            <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6">
-              La différence avec renovermasalledebain.com  
+            <h1 className="font-display text-3xl md:text-5xl font-semibold mb-6 break-words">
+              La différence avec renovermasalledebain.com
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed">Découvrez pourquoi les  clients nous font confiance pour renover leur salle de bain</p>
           </motion.div>
