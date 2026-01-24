@@ -821,12 +821,12 @@ const Guide = () => {
               {/* Photo */}
               <div className="relative rounded-2xl overflow-hidden shadow-lg group">
                 <img 
-                  src={baignoireRangementNiches} 
-                  alt="Niche encastrée dans une douche - Rangement intégré" 
+                  src={nicolasRoretDouche} 
+                  alt="Niche encastrée dans une douche - Projet Nicolas Roret" 
                   className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                  <p className="text-white text-sm font-medium">Niche encastrée — Projet réel</p>
+                  <p className="text-white text-sm font-medium">Niche encastrée — Projet Nicolas Roret</p>
                 </div>
               </div>
 
