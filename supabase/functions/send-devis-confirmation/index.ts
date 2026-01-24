@@ -103,7 +103,7 @@ const handler = async (req: Request): Promise<Response> => {
             <div class="footer">
               <p><strong>Rénover Ma Salle de Bain</strong></p>
               <p>Paris et Île-de-France</p>
-              <p>📞 01 86 65 64 93 | ✉️ gestion@renovermasalledebain.com</p>
+              <p>📞 06 59 76 46 85 | ✉️ gestion@renovermasalledebain.com</p>
             </div>
           </body>
           </html>
