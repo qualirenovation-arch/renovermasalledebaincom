@@ -11,6 +11,7 @@ import { useDevisScrollOnMount } from "@/hooks/useDevisNavigation";
 import { Checkbox } from "@/components/ui/checkbox";
 import { supabase } from "@/integrations/supabase/client";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { 
   Upload, 
   Phone, 
@@ -1082,41 +1083,50 @@ export default function Devis() {
                       </div>
                     )}
 
-                    {/* Finitions robinetterie - toujours visible */}
+                    {/* Finitions robinetterie - sélecteur déroulant */}
                     <div>
                       <Label className="text-sm font-semibold text-foreground mb-3 block">✨ Finitions robinetterie</Label>
                       <p className="text-muted-foreground text-sm mb-4">Personnalisez votre robinetterie avec des finitions élégantes et durables.</p>
                       
+                      <Select 
+                        value={formData.finitionsRobinetterie[0] || ""} 
+                        onValueChange={(value) => {
+                          setFormData(prev => ({ ...prev, finitionsRobinetterie: [value] }));
+                        }}
+                      >
+                        <SelectTrigger className="w-full md:w-80">
+                          <SelectValue placeholder="Choisir une finition..." />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {finitionsOptions.map((option) => (
+                            <SelectItem key={option.value} value={option.value}>
+                              {option.label}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
 
-                      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-3">
-                        {finitionsOptions.map((option) => (
-                          <div 
-                            key={option.value} 
-                            className={`flex flex-col items-center gap-2 p-2 rounded-xl border-2 transition-all cursor-pointer ${
-                              (formData.finitionsRobinetterie).includes(option.value) 
-                                ? 'border-foreground bg-foreground/5' 
-                                : 'border-border bg-card hover:border-foreground/30'
-                            }`}
-                            onClick={() => handleCheckboxChange("finitionsRobinetterie", option.value, !formData.finitionsRobinetterie.includes(option.value))}
-                          >
-                            <div className="relative w-full aspect-square overflow-hidden rounded-lg">
-                              <img 
-                                src={option.image} 
-                                alt={`Finition ${option.label}`}
-                                className="w-full h-full object-cover"
-                              />
-                              {formData.finitionsRobinetterie.includes(option.value) && (
-                                <div className="absolute top-1 right-1 w-5 h-5 bg-foreground rounded-full flex items-center justify-center">
-                                  <svg className="w-3 h-3 text-background" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                                  </svg>
+                      {/* Affichage de l'image de la finition sélectionnée */}
+                      {formData.finitionsRobinetterie.length > 0 && formData.finitionsRobinetterie[0] && (
+                        <div className="mt-4">
+                          {(() => {
+                            const selectedFinition = finitionsOptions.find(opt => opt.value === formData.finitionsRobinetterie[0]);
+                            if (!selectedFinition) return null;
+                            return (
+                              <div className="flex flex-col items-center gap-3">
+                                <div className="w-48 h-48 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg">
+                                  <img 
+                                    src={selectedFinition.image} 
+                                    alt={`Finition ${selectedFinition.label}`}
+                                    className="w-full h-full object-cover"
+                                  />
                                 </div>
-                              )}
-                            </div>
-                            <span className="font-medium text-xs text-center leading-tight">{option.label}</span>
-                          </div>
-                        ))}
-                      </div>
+                                <span className="text-sm font-medium text-foreground">{selectedFinition.label}</span>
+                              </div>
+                            );
+                          })()}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
