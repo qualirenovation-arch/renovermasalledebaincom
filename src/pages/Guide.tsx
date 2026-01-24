@@ -927,6 +927,25 @@ const Guide = () => {
                   </div>
                 </div>
 
+                {/* Contrainte copropriété vs maison */}
+                <div className="bg-amber-50 border border-amber-200 rounded-xl p-5">
+                  <div className="flex items-start gap-3">
+                    <Building className="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">🏢 En copropriété : une contrainte technique majeure</h4>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        C'est la <strong>hauteur de la culotte</strong> (raccord à la colonne d'évacuation de l'immeuble) qui détermine si votre douche sera de <strong>plain-pied</strong> ou <strong>sur pied</strong>. Cette contrainte est incompressible et doit être évaluée dès la visite technique.
+                      </p>
+                      <div className="flex items-start gap-3 mt-3 pt-3 border-t border-amber-200">
+                        <Home className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                        <p className="text-sm text-muted-foreground">
+                          <strong className="text-foreground">🏠 En maison individuelle :</strong> beaucoup plus de liberté ! On peut généralement réaliser une douche de plain-pied sans contrainte, car l'évacuation peut être adaptée.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="bg-primary/5 rounded-lg p-4 border border-primary/10">
                   <p className="text-primary font-medium text-sm">
                     💡 Le choix du receveur dépend de la hauteur de réservation disponible (espace sous le sol), du type de siphon possible, de vos goûts esthétiques et de votre budget.
