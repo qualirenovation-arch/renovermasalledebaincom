@@ -343,29 +343,29 @@ export default function WhyUs() {
         }} viewport={{
           once: true
         }}>
-            <div className="card-elevated overflow-hidden">
+            <div className="card-elevated overflow-hidden overflow-x-auto">
               {/* Header */}
-              <div className="grid grid-cols-3 bg-primary text-primary-foreground p-4 font-semibold">
-                <div>Caractéristique</div>
-                <div className="text-center">Atelier Douche Design</div>
-                <div className="text-center">Entreprises standards</div>
+              <div className="grid grid-cols-[1fr_auto_auto] md:grid-cols-3 bg-primary text-primary-foreground p-3 md:p-4 font-semibold min-w-0">
+                <div className="text-xs md:text-base pr-2">Caractéristique</div>
+                <div className="text-center text-xs md:text-base px-2 md:px-4 whitespace-nowrap">Nous</div>
+                <div className="text-center text-xs md:text-base px-2 md:px-4 whitespace-nowrap">Autres</div>
               </div>
               
               {/* Rows */}
-              {comparison.map((row, index) => <div key={index} className={`grid grid-cols-3 p-4 items-center ${index % 2 === 0 ? 'bg-background' : 'bg-muted/30'}`}>
-                  <div className="text-foreground">{row.feature}</div>
-                  <div className="flex justify-center">
-                    {row.us ? <div className="w-8 h-8 rounded-full bg-cta/20 flex items-center justify-center">
-                        <Check className="w-5 h-5 text-cta" />
-                      </div> : <div className="w-8 h-8 rounded-full bg-destructive/20 flex items-center justify-center">
-                        <X className="w-5 h-5 text-destructive" />
+              {comparison.map((row, index) => <div key={index} className={`grid grid-cols-[1fr_auto_auto] md:grid-cols-3 p-3 md:p-4 items-center min-w-0 ${index % 2 === 0 ? 'bg-background' : 'bg-muted/30'}`}>
+                  <div className="text-foreground text-sm md:text-base pr-2 break-words">{row.feature}</div>
+                  <div className="flex justify-center px-2 md:px-4">
+                    {row.us ? <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-cta/20 flex items-center justify-center">
+                        <Check className="w-4 h-4 md:w-5 md:h-5 text-cta" />
+                      </div> : <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-destructive/20 flex items-center justify-center">
+                        <X className="w-4 h-4 md:w-5 md:h-5 text-destructive" />
                       </div>}
                   </div>
-                  <div className="flex justify-center">
-                    {row.others ? <div className="w-8 h-8 rounded-full bg-cta/20 flex items-center justify-center">
-                        <Check className="w-5 h-5 text-cta" />
-                      </div> : <div className="w-8 h-8 rounded-full bg-destructive/20 flex items-center justify-center">
-                        <X className="w-5 h-5 text-destructive" />
+                  <div className="flex justify-center px-2 md:px-4">
+                    {row.others ? <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-cta/20 flex items-center justify-center">
+                        <Check className="w-4 h-4 md:w-5 md:h-5 text-cta" />
+                      </div> : <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-destructive/20 flex items-center justify-center">
+                        <X className="w-4 h-4 md:w-5 md:h-5 text-destructive" />
                       </div>}
                   </div>
                 </div>)}
