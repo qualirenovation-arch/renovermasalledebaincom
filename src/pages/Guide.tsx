@@ -799,6 +799,86 @@ const Guide = () => {
         </div>
       </section>
 
+      {/* Section 7bis - Les niches */}
+      <section id="section-niches" className="py-16 bg-accent/20 scroll-mt-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-5xl mx-auto"
+          >
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+                <Sparkles className="w-6 h-6 text-primary" />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-serif text-foreground">
+                Une niche, c'est quoi ?
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              {/* Photo */}
+              <div className="relative rounded-2xl overflow-hidden shadow-lg group">
+                <img 
+                  src={baignoireRangementNiches} 
+                  alt="Niche encastrée dans une douche - Rangement intégré" 
+                  className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                  <p className="text-white text-sm font-medium">Niche encastrée — Projet réel</p>
+                </div>
+              </div>
+
+              {/* Explication */}
+              <div className="space-y-4">
+                <div className="bg-background rounded-xl p-6 shadow-sm border border-primary/10">
+                  <h3 className="font-semibold text-lg mb-3 flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary" />
+                    Définition
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Une <strong>niche</strong> est un renfoncement créé dans le mur de la douche ou de la baignoire. 
+                    Elle permet de ranger shampoings, savons et produits sans encombrer l'espace.
+                  </p>
+                </div>
+
+                <div className="bg-background rounded-xl p-6 shadow-sm border border-primary/10">
+                  <h3 className="font-semibold text-lg mb-3 flex items-center gap-2">
+                    <Sparkles className="w-5 h-5 text-primary" />
+                    À quoi ça sert ?
+                  </h3>
+                  <ul className="text-muted-foreground space-y-2">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                      <span><strong>Gain de place</strong> : pas de panier suspendu ni d'étagère au sol</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                      <span><strong>Design épuré</strong> : rangement invisible intégré au carrelage</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                      <span><strong>Entretien facile</strong> : pas d'accessoire à nettoyer autour</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                      <span><strong>Durabilité</strong> : intégrée au mur, elle ne bouge pas et ne rouille pas</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-primary/10 rounded-lg p-4">
+                  <p className="text-primary font-medium text-sm">
+                    💡 Une niche bien positionnée (à hauteur d'épaule) change le confort au quotidien.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Section 8 - Joints & finitions */}
       <section id="section-8" className="py-16 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
