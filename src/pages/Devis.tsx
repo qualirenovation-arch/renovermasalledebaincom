@@ -1,4 +1,5 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useCallback } from "react";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -246,13 +247,36 @@ const styleCarrelageOptions = [
   { label: "Naturel (pierre, sable…)", value: "naturel" },
 ];
 
+// hCaptcha site key
+const HCAPTCHA_SITE_KEY = "4eb7dd7b-5f9b-4d21-9b79-0a91e4e6dbe7";
+
 export default function Devis() {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const captchaRef = useRef<HCaptcha>(null);
   const { toast } = useToast();
+
+  // hCaptcha handlers
+  const onCaptchaVerify = useCallback((token: string) => {
+    setCaptchaToken(token);
+  }, []);
+
+  const onCaptchaExpire = useCallback(() => {
+    setCaptchaToken(null);
+  }, []);
+
+  const onCaptchaError = useCallback(() => {
+    setCaptchaToken(null);
+    toast({
+      title: "Erreur de vérification",
+      description: "Le captcha a échoué. Veuillez réessayer.",
+      variant: "destructive",
+    });
+  }, [toast]);
   
   // Handle scroll on mount when hash is present
   useDevisScrollOnMount();
@@ -310,10 +334,24 @@ export default function Devis() {
       return;
     }
 
+    // Validate hCaptcha
+    if (!captchaToken) {
+      toast({
+        title: "Vérification requise",
+        description: "Veuillez compléter la vérification anti-spam.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
     await new Promise(resolve => setTimeout(resolve, 1500));
     setIsSubmitting(false);
     setIsSubmitted(true);
+    
+    // Reset captcha after submission
+    setCaptchaToken(null);
+    captchaRef.current?.resetCaptcha();
     
     toast({
       title: "Demande envoyée !",
@@ -1170,11 +1208,33 @@ export default function Devis() {
                   />
                 </div>
 
+                {/* hCaptcha verification */}
+                <div className="card-elevated p-6 flex flex-col items-center">
+                  <p className="text-sm text-muted-foreground mb-4 text-center">
+                    Vérification anti-spam requise
+                  </p>
+                  <HCaptcha
+                    ref={captchaRef}
+                    sitekey={HCAPTCHA_SITE_KEY}
+                    onVerify={onCaptchaVerify}
+                    onExpire={onCaptchaExpire}
+                    onError={onCaptchaError}
+                  />
+                  {captchaToken && (
+                    <p className="text-sm text-green-600 mt-2 flex items-center gap-1">
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                      Vérification réussie
+                    </p>
+                  )}
+                </div>
+
                 <Button 
                   type="submit" 
                   size="lg" 
                   className="w-full bg-[hsl(38,50%,50%)] hover:bg-[hsl(38,50%,45%)] text-white rounded-xl py-6 text-lg"
-                  disabled={isSubmitting}
+                  disabled={isSubmitting || !captchaToken}
                 >
                   <CalendarCheck className="w-5 h-5 mr-2" />
                   {isSubmitting ? "Envoi en cours..." : "Demander mon RDV gratuit sur site"}
