@@ -16,7 +16,7 @@ import baignoireRangementNiches from "@/assets/baignoire-rangement-niches.jpg";
 import baignoireRangementTiroirs from "@/assets/baignoire-rangement-tiroirs.jpg";
 import nicolasRoretDouche from "@/assets/nicolas-roret-douche.jpg";
 import receveursDouche from "@/assets/receveurs-douche.jpg";
-import boulogne5 from "@/assets/boulogne-5.jpg";
+import boulogne3 from "@/assets/boulogne-3.jpg";
 
 const Guide = () => {
   // FAQ Schema for SEO
@@ -829,8 +829,8 @@ const Guide = () => {
               <div className="grid grid-cols-2 gap-3">
                 <div className="relative rounded-xl overflow-hidden shadow-lg group">
                   <img 
-                    src={boulogne5} 
-                    alt="Niche au-dessus de la baignoire - Projet Boulogne" 
+                    src={boulogne3} 
+                    alt="Niche au-dessus de la baignoire - Projet Boulogne"
                     className="w-full h-40 md:h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
