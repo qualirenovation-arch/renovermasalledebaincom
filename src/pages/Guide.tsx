@@ -275,7 +275,7 @@ const Guide = () => {
               </a>
               <a href="#section-10" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
                 <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">10</span>
-                <span className="line-clamp-1">Baignoire & receveur</span>
+                <span className="line-clamp-1">Choisir sa baignoire</span>
               </a>
               <a href="#section-11" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
                 <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">11</span>
@@ -929,7 +929,7 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* Section 10 - Baignoire & receveur matériaux */}
+      {/* Section 10 - Choisir sa baignoire */}
       <section id="section-10" className="py-16 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
@@ -943,27 +943,123 @@ const Guide = () => {
                 10
               </div>
               <h2 className="text-2xl md:text-3xl font-serif text-foreground">
-                Choisir sa baignoire et son receveur
+                Choisir sa baignoire
               </h2>
             </div>
-            <div className="grid grid-cols-3 gap-4 mb-4">
-              <div className="bg-background rounded-xl p-4 shadow-sm text-center">
-                <span className="text-xl">🛁</span>
-                <p className="font-semibold text-sm mt-2">Acrylique</p>
-                <p className="text-muted-foreground text-xs">Léger, bon rapport qualité-prix</p>
-              </div>
-              <div className="bg-background rounded-xl p-4 shadow-sm text-center">
-                <span className="text-xl">⚫</span>
-                <p className="font-semibold text-sm mt-2">Fonte</p>
-                <p className="text-muted-foreground text-xs">Durable, inertie thermique</p>
-              </div>
-              <div className="bg-background rounded-xl p-4 shadow-sm text-center">
-                <span className="text-xl">✨</span>
-                <p className="font-semibold text-sm mt-2">Composites</p>
-                <p className="text-muted-foreground text-xs">Design, pose exigeante</p>
+
+            {/* Définition rapide */}
+            <div className="bg-accent/30 rounded-xl p-4 mb-6">
+              <div className="flex items-start gap-3">
+                <HelpCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className="font-semibold text-sm text-foreground">C'est quoi une baignoire ?</p>
+                  <p className="text-muted-foreground text-xs mt-1">Un équipement de bain permettant l'immersion complète du corps. Choix selon l'espace, le confort souhaité et la structure du sol (poids à supporter).</p>
+                </div>
               </div>
             </div>
-            <p className="text-muted-foreground text-sm">Choix selon : structure du sol, usage réel, confort recherché.</p>
+
+            {/* Types de baignoires - Grille compacte */}
+            <div className="mb-6">
+              <h3 className="font-semibold text-sm mb-3 flex items-center gap-2">
+                <Ruler className="w-4 h-4 text-primary" />
+                Types de baignoires
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div className="bg-background border border-border rounded-lg p-3 text-center">
+                  <span className="text-lg">📐</span>
+                  <p className="font-medium text-xs mt-1">Droite</p>
+                  <p className="text-muted-foreground text-[10px]">Standard, tous espaces</p>
+                </div>
+                <div className="bg-background border border-border rounded-lg p-3 text-center">
+                  <span className="text-lg">🔲</span>
+                  <p className="font-medium text-xs mt-1">Îlot</p>
+                  <p className="text-muted-foreground text-[10px]">Design, espace dégagé</p>
+                </div>
+                <div className="bg-background border border-border rounded-lg p-3 text-center">
+                  <span className="text-lg">📐</span>
+                  <p className="font-medium text-xs mt-1">D'angle</p>
+                  <p className="text-muted-foreground text-[10px]">Optimise les coins</p>
+                </div>
+                <div className="bg-background border border-border rounded-lg p-3 text-center">
+                  <span className="text-lg">🚿</span>
+                  <p className="font-medium text-xs mt-1">Bain-douche</p>
+                  <p className="text-muted-foreground text-[10px]">Combo 2-en-1</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Matériaux - Badges compacts */}
+            <div className="mb-6">
+              <h3 className="font-semibold text-sm mb-3 flex items-center gap-2">
+                <Droplets className="w-4 h-4 text-primary" />
+                Matériaux
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                <span className="inline-flex items-center gap-1 px-3 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-medium">
+                  🛁 Acrylique — Léger, bon rapport qualité-prix
+                </span>
+                <span className="inline-flex items-center gap-1 px-3 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-medium">
+                  ⚫ Fonte — Durable, inertie thermique, lourd
+                </span>
+                <span className="inline-flex items-center gap-1 px-3 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-medium">
+                  ✨ Solid Surface — Design haut de gamme
+                </span>
+                <span className="inline-flex items-center gap-1 px-3 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-medium">
+                  🔩 Acier émaillé — Robuste, économique
+                </span>
+              </div>
+            </div>
+
+            {/* Rangements sous baignoire - Nouveau bloc */}
+            <div className="bg-green-50 border border-green-200 rounded-xl p-5 mb-6">
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Home className="w-5 h-5 text-green-700" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-green-800 mb-2">💡 Gain de place : rangements sous baignoire</h4>
+                  <p className="text-green-700 text-sm mb-3">
+                    L'espace sous la baignoire est souvent perdu. Avec une conception adaptée, on peut créer :
+                  </p>
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="bg-white/80 rounded-lg p-3">
+                      <p className="font-medium text-xs text-green-800">🗄️ Tiroirs intégrés</p>
+                      <p className="text-green-600 text-[10px]">Produits, serviettes, jouets enfants</p>
+                    </div>
+                    <div className="bg-white/80 rounded-lg p-3">
+                      <p className="font-medium text-xs text-green-800">📦 Niches latérales</p>
+                      <p className="text-green-600 text-[10px]">Accès facile, esthétique épurée</p>
+                    </div>
+                    <div className="bg-white/80 rounded-lg p-3">
+                      <p className="font-medium text-xs text-green-800">🚪 Trappe d'accès</p>
+                      <p className="text-green-600 text-[10px]">Maintenance siphon + rangement</p>
+                    </div>
+                    <div className="bg-white/80 rounded-lg p-3">
+                      <p className="font-medium text-xs text-green-800">🧺 Tablier amovible</p>
+                      <p className="text-green-600 text-[10px]">Stockage linge, paniers</p>
+                    </div>
+                  </div>
+                  <p className="text-green-700 text-xs mt-3 font-medium">
+                    👉 Dans les petites salles de bain, chaque cm² compte. La baignoire devient un vrai meuble de rangement.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Contrainte poids - Alerte */}
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
+              <div className="flex items-start gap-3">
+                <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-amber-800 text-sm">⚠️ Attention au poids</p>
+                  <p className="text-amber-700 text-xs mt-1">
+                    Une baignoire remplie + utilisateur = 300 à 400 kg. Vérifier la structure du sol (plancher bois, dalle béton). 
+                    La fonte est particulièrement lourde (80-120 kg à vide).
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </motion.div>
         </div>
       </section>
