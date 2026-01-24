@@ -3,7 +3,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LazyVideo } from "@/components/ui/lazy-video";
-import { ArrowRight, CheckCircle, AlertTriangle, Droplets, Shield, Wrench, Sparkles, Eye, Users, Home, Phone, Paintbrush, Wind, HardHat, Building, Hammer, Ruler, HelpCircle, Play, Lightbulb, Thermometer, Flame } from "lucide-react";
+import { ArrowRight, CheckCircle, AlertTriangle, Droplets, Shield, Wrench, Sparkles, Eye, Users, Home, Phone, Paintbrush, Wind, HardHat, Building, Hammer, Ruler, HelpCircle, Play, Lightbulb, Thermometer, Flame, ExternalLink } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 // Images
@@ -547,6 +547,19 @@ const Guide = () => {
               <div className="bg-primary-foreground/10 rounded-xl p-4">
                 <p className="text-sm font-medium">✔️ Chantier qui avance</p>
               </div>
+            </div>
+            
+            {/* Lien vers l'article Houzz */}
+            <div className="mt-8 text-center">
+              <a 
+                href="https://www.houzz.fr/magazine/pourquoi-est-il-judicieux-de-faire-appel-a-un-maitre-d-oeuvre-stsetivw-vs~87724005"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary-foreground/90 hover:text-primary-foreground underline underline-offset-4 transition-colors"
+              >
+                <ExternalLink className="w-4 h-4" />
+                <span>Lire l'interview Houzz : "Pourquoi faire appel à un maître d'œuvre ?"</span>
+              </a>
             </div>
           </motion.div>
         </div>
