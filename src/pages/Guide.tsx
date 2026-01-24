@@ -71,14 +71,6 @@ const Guide = () => {
           "text": "Obligation DTU 52.2 : nous utilisons des systèmes certifiés (Schlüter, Wedi, Weber Aquastop) avec SEL/SPEC et bandes d'étanchéité. Garantie 10 ans + décennale MIC Assurances."
         }
       },
-      {
-        "@type": "Question",
-        "name": "Quel receveur de douche choisir ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nous proposons différents types de receveurs : extra-plat en résine, à carreler, en acier recoupable, ou douche maçonnée traditionnelle. Le choix dépend de vos goûts, budget et contraintes techniques."
-        }
-      }
     ]
   };
 
@@ -1338,23 +1330,6 @@ const Guide = () => {
                   </p>
                   <p className="font-medium text-foreground">
                     Garantie étanchéité 10 ans + décennale MIC Assurances.
-                  </p>
-                </div>
-              </div>
-              <div className="bg-background rounded-xl p-6 shadow-sm">
-                <h4 className="font-semibold text-lg mb-2">
-                  ❓ Quel receveur de douche choisir ?
-                </h4>
-                <div className="text-muted-foreground space-y-2">
-                  <p>Nous proposons différents types de receveurs de douche :</p>
-                  <ul className="list-disc list-inside space-y-1 ml-2">
-                    <li>Receveur extra-plat en résine</li>
-                    <li>Receveur à carreler pour un rendu 100% personnalisé</li>
-                    <li>Receveur en acier recoupable (ajustable aux dimensions exactes)</li>
-                    <li>Douche maçonnée traditionnelle</li>
-                  </ul>
-                  <p className="font-medium text-foreground">
-                    Le choix dépend de vos goûts, de votre budget et des contraintes techniques de votre salle de bain.
                   </p>
                 </div>
               </div>
