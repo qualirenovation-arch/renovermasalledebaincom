@@ -14,6 +14,8 @@ import butteschaumont6 from "@/assets/buttes-chaumont-6.jpg";
 import cielDePluiePlafond from "@/assets/chatelet-ciel-pluie-plafond.jpg";
 import baignoireRangementNiches from "@/assets/baignoire-rangement-niches.jpg";
 import baignoireRangementTiroirs from "@/assets/baignoire-rangement-tiroirs.jpg";
+import nicolasRoretDouche from "@/assets/nicolas-roret-douche.jpg";
+import receveursDouche from "@/assets/receveurs-douche.jpg";
 
 const Guide = () => {
   // FAQ Schema for SEO
@@ -717,6 +719,30 @@ const Guide = () => {
               <h2 className="text-2xl md:text-3xl font-serif text-foreground">
                 Receveur de douche : le bon choix
               </h2>
+            </div>
+
+            {/* Photos de receveurs - Galerie */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg group">
+                <img 
+                  src={nicolasRoretDouche} 
+                  alt="Douche italienne avec receveur extra-plat - Projet Nicolas Roret" 
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                  <p className="text-white text-sm font-medium">Receveur extra-plat — Projet réel</p>
+                </div>
+              </div>
+              <div className="relative rounded-2xl overflow-hidden shadow-lg group">
+                <img 
+                  src={receveursDouche} 
+                  alt="Différents types de receveurs de douche" 
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                  <p className="text-white text-sm font-medium">Types de receveurs disponibles</p>
+                </div>
+              </div>
             </div>
 
             {/* Définition + rôle condensés */}
