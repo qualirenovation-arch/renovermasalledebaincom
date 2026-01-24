@@ -262,6 +262,12 @@ const Guide = () => {
                 <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">7</span>
                 <span className="line-clamp-1">Receveur & baignoire</span>
               </a>
+              <a href="#section-niches" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
+                <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">
+                  <Sparkles className="w-3 h-3" />
+                </span>
+                <span className="line-clamp-1">Les niches</span>
+              </a>
               <a href="#section-8" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
                 <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">8</span>
                 <span className="line-clamp-1">Joints & finitions</span>
