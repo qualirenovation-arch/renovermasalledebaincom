@@ -713,231 +713,89 @@ const Guide = () => {
                 7
               </div>
               <h2 className="text-2xl md:text-3xl font-serif text-foreground">
-                Receveur et baignoire : pose, accès et maintenance
+                Receveur de douche : le bon choix
               </h2>
             </div>
 
-            {/* Encadré explicatif : Qu'est-ce qu'un receveur de douche ? */}
-            <div className="bg-background rounded-2xl p-6 md:p-8 shadow-sm border border-primary/10 mb-8">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <HelpCircle className="w-5 h-5 text-primary" />
-                </div>
+            {/* Définition + rôle condensés */}
+            <div className="bg-background rounded-2xl p-6 shadow-sm border border-primary/10 mb-6">
+              <div className="flex items-start gap-3 mb-4">
+                <HelpCircle className="w-6 h-6 text-primary flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Qu'est-ce qu'un receveur de douche ?</h3>
                   <p className="text-muted-foreground">
-                    Le <strong>receveur de douche</strong> (aussi appelé "bac à douche") est la base sur laquelle vous vous tenez lorsque vous prenez votre douche. C'est l'élément qui <strong>collecte l'eau</strong> et la dirige vers la bonde d'évacuation.
+                    Le <strong>receveur</strong> (bac à douche) collecte l'eau et la dirige vers l'évacuation. Il assure <strong>étanchéité</strong>, <strong>sécurité antidérapante</strong> et <strong>confort</strong>.
                   </p>
                 </div>
               </div>
               
-              <div className="space-y-6 ml-0 md:ml-14">
+              {/* Types d'installation + Matériaux en grille compacte */}
+              <div className="grid md:grid-cols-2 gap-4 mb-4">
                 <div>
-                  <h4 className="font-medium text-foreground mb-2">🎯 À quoi sert-il ?</h4>
-                  <ul className="space-y-2 text-muted-foreground text-sm">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span><strong>Étanchéité :</strong> il empêche l'eau de s'infiltrer dans le sol et les murs adjacents</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span><strong>Évacuation :</strong> sa pente intégrée guide l'eau vers la bonde pour un écoulement optimal</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span><strong>Sécurité :</strong> sa surface antidérapante limite les risques de glissade</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span><strong>Confort :</strong> il offre une surface stable et agréable sous les pieds</span>
-                    </li>
-                  </ul>
-                </div>
-
-                {/* Types d'installation */}
-                <div>
-                  <h4 className="font-medium text-foreground mb-3">🔧 Types d'installation</h4>
-                  <div className="grid sm:grid-cols-2 gap-3">
-                    <div className="bg-accent/30 rounded-lg p-3 border-l-4 border-primary/50">
-                      <p className="font-medium text-sm text-foreground">Surélevé</p>
-                      <p className="text-xs text-muted-foreground">Le plus simple à poser. Siphon horizontal. Marche &gt; 5 cm.</p>
-                    </div>
-                    <div className="bg-accent/30 rounded-lg p-3 border-l-4 border-primary/50">
-                      <p className="font-medium text-sm text-foreground">À poser</p>
-                      <p className="text-xs text-muted-foreground">Installation rapide sur surface plane. Évacuation verticale. Marche &lt; 5 cm.</p>
-                    </div>
-                    <div className="bg-accent/30 rounded-lg p-3 border-l-4 border-primary/50">
-                      <p className="font-medium text-sm text-foreground">À encastrer</p>
-                      <p className="text-xs text-muted-foreground">Accès de plain-pied. Idéal en neuf ou rénovation complète.</p>
-                    </div>
-                    <div className="bg-accent/30 rounded-lg p-3 border-l-4 border-primary/50">
-                      <p className="font-medium text-sm text-foreground">À carreler</p>
-                      <p className="text-xs text-muted-foreground">Douche italienne parfaite. Mousse polystyrène étanche, pentes intégrées.</p>
-                    </div>
+                  <h4 className="font-medium text-foreground mb-2 text-sm">🔧 Installation</h4>
+                  <div className="space-y-1 text-xs">
+                    <p><strong>Surélevé</strong> : simple, siphon horizontal, marche &gt;5cm</p>
+                    <p><strong>À poser</strong> : rapide, évacuation verticale, marche &lt;5cm</p>
+                    <p><strong>À encastrer</strong> : plain-pied, idéal rénovation complète</p>
+                    <p><strong>À carreler</strong> : douche italienne, pentes intégrées</p>
                   </div>
                 </div>
-
-                {/* Matériaux */}
                 <div>
-                  <h4 className="font-medium text-foreground mb-3">📦 Matériaux</h4>
-                  <div className="grid sm:grid-cols-2 gap-3">
-                    <div className="bg-background rounded-lg p-4 shadow-sm border">
-                      <p className="font-semibold text-sm text-foreground mb-1">Grès émaillé (Céramique)</p>
-                      <div className="flex flex-wrap gap-1 mb-2">
-                        <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">Résistant</span>
-                        <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">Facile entretien</span>
-                      </div>
-                      <p className="text-xs text-muted-foreground">Très lourd (30-45 kg+). Glissant sans traitement.</p>
-                    </div>
-                    <div className="bg-background rounded-lg p-4 shadow-sm border">
-                      <p className="font-semibold text-sm text-foreground mb-1">Acrylique</p>
-                      <div className="flex flex-wrap gap-1 mb-2">
-                        <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">Léger</span>
-                        <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">Antidérapant naturel</span>
-                      </div>
-                      <p className="text-xs text-muted-foreground">Sensible aux rayures.</p>
-                    </div>
-                    <div className="bg-background rounded-lg p-4 shadow-sm border">
-                      <p className="font-semibold text-sm text-foreground mb-1">Résine (Béton de synthèse)</p>
-                      <div className="flex flex-wrap gap-1 mb-2">
-                        <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">Extra-plat</span>
-                        <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">Durable</span>
-                      </div>
-                      <p className="text-xs text-muted-foreground">Teinté dans la masse. Déclinaisons : Biotec, Luxtone, Acrystone.</p>
-                    </div>
-                    <div className="bg-background rounded-lg p-4 shadow-sm border">
-                      <p className="font-semibold text-sm text-foreground mb-1">Pierre naturelle (Ardoise)</p>
-                      <div className="flex flex-wrap gap-1 mb-2">
-                        <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">Haut de gamme</span>
-                        <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">Antibactérien</span>
-                      </div>
-                      <p className="text-xs text-muted-foreground">Antidérapante naturellement. Lourde.</p>
-                    </div>
-                    <div className="bg-background rounded-lg p-4 shadow-sm border sm:col-span-2">
-                      <p className="font-semibold text-sm text-foreground mb-1">Acier émaillé</p>
-                      <div className="flex flex-wrap gap-1 mb-2">
-                        <span className="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded">Dimensions exactes</span>
-                        <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">Résistant</span>
-                      </div>
-                      <p className="text-xs text-muted-foreground">Ajustable aux dimensions exactes sur commande. Idéal pour les espaces atypiques.</p>
-                    </div>
+                  <h4 className="font-medium text-foreground mb-2 text-sm">📦 Matériaux</h4>
+                  <div className="space-y-1 text-xs">
+                    <p><strong>Résine</strong> : extra-plat, durable, le plus courant</p>
+                    <p><strong>Acrylique</strong> : léger, antidérapant, sensible rayures</p>
+                    <p><strong>Grès émaillé</strong> : résistant, lourd, glissant</p>
+                    <p><strong>Acier émaillé</strong> : dimensions exactes sur commande</p>
                   </div>
                 </div>
+              </div>
 
-                {/* Dimensions */}
-                <div>
-                  <h4 className="font-medium text-foreground mb-3">📐 Dimensions courantes</h4>
-                  <div className="grid grid-cols-3 gap-3">
-                    <div className="bg-accent/20 rounded-lg p-3 text-center">
-                      <span className="text-2xl mb-1 block">◻️</span>
-                      <p className="font-medium text-sm">Carré</p>
-                      <p className="text-xs text-muted-foreground">70×70 à 120×120 cm</p>
-                    </div>
-                    <div className="bg-accent/20 rounded-lg p-3 text-center">
-                      <span className="text-2xl mb-1 block">▭</span>
-                      <p className="font-medium text-sm">Rectangulaire</p>
-                      <p className="text-xs text-muted-foreground">70×90 à 180×90 cm</p>
-                    </div>
-                    <div className="bg-accent/20 rounded-lg p-3 text-center">
-                      <span className="text-2xl mb-1 block">◔</span>
-                      <p className="font-medium text-sm">Quart de cercle</p>
-                      <p className="text-xs text-muted-foreground">80 à 110 cm</p>
-                    </div>
-                  </div>
-                </div>
+              {/* Dimensions compactes */}
+              <div className="flex flex-wrap gap-2 mb-4 text-xs">
+                <span className="bg-accent/50 px-3 py-1 rounded-full">◻️ Carré : 70×70 à 120×120</span>
+                <span className="bg-accent/50 px-3 py-1 rounded-full">▭ Rectangulaire : 70×90 à 180×90</span>
+                <span className="bg-accent/50 px-3 py-1 rounded-full">◔ Quart de cercle : 80 à 110</span>
+              </div>
 
-                {/* Évacuation */}
-                <div>
-                  <h4 className="font-medium text-foreground mb-3">💧 Évacuation & accessoires</h4>
-                  <div className="bg-accent/30 rounded-xl p-4">
-                    <div className="grid sm:grid-cols-3 gap-4 text-sm">
-                      <div>
-                        <p className="font-medium text-foreground">Siphon</p>
-                        <p className="text-xs text-muted-foreground">Vertical (espace dessous) ou horizontal (espace réduit)</p>
-                      </div>
-                      <div>
-                        <p className="font-medium text-foreground">Bonde</p>
-                        <p className="text-xs text-muted-foreground">Extra-plate recommandée. Ø 90 mm min. pour receveur à carreler</p>
-                      </div>
-                      <div>
-                        <p className="font-medium text-foreground">Pieds réglables</p>
-                        <p className="text-xs text-muted-foreground">Ajustent le niveau et créent la pente (90 à 125 mm)</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              {/* Évacuation condensée */}
+              <div className="bg-accent/30 rounded-lg p-3 text-xs">
+                <strong>💧 Évacuation :</strong> Siphon vertical ou horizontal selon espace • Bonde extra-plate (Ø90mm min.) • Pieds réglables 90-125mm
+              </div>
+            </div>
 
-                {/* Contrainte copropriété vs maison */}
-                <div className="bg-amber-50 border border-amber-200 rounded-xl p-5">
-                  <div className="flex items-start gap-3">
-                    <Building className="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">🏢 En copropriété : une contrainte technique majeure</h4>
-                      <p className="text-sm text-muted-foreground mb-3">
-                        C'est la <strong>hauteur de la culotte</strong> (raccord à la colonne d'évacuation de l'immeuble) qui détermine si votre douche sera de <strong>plain-pied</strong> ou <strong>sur pied</strong>. Cette contrainte est incompressible et doit être évaluée dès la visite technique.
-                      </p>
-                      <div className="flex items-start gap-3 mt-3 pt-3 border-t border-amber-200">
-                        <Home className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                        <p className="text-sm text-muted-foreground">
-                          <strong className="text-foreground">🏠 En maison individuelle :</strong> beaucoup plus de liberté ! On peut généralement réaliser une douche de plain-pied sans contrainte, car l'évacuation peut être adaptée.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-primary/5 rounded-lg p-4 border border-primary/10">
-                  <p className="text-primary font-medium text-sm">
-                    💡 Le choix du receveur dépend de la hauteur de réservation disponible (espace sous le sol), du type de siphon possible, de vos goûts esthétiques et de votre budget.
+            {/* Contrainte copropriété vs maison - IMPORTANT */}
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6">
+              <div className="flex items-start gap-3">
+                <Building className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                <div className="text-sm">
+                  <p className="mb-2">
+                    <strong className="text-foreground">🏢 Copropriété :</strong> la <strong>hauteur de la culotte</strong> (raccord colonne immeuble) détermine si plain-pied ou sur pied possible. Contrainte incompressible.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">🏠 Maison :</strong> liberté totale, évacuation adaptable.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-accent/30 rounded-2xl p-6">
-                <Droplets className="w-8 h-8 text-primary mb-4" />
-                <h3 className="font-semibold text-lg mb-3">Sous le receveur</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
-                    <span>Très souvent carrelage sous le receveur</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
-                    <span>Étanchéité continue</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
-                    <span>Bonde toujours accessible</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
-                    <span>Trappe carrelée ou grille selon la hauteur</span>
-                  </li>
-                </ul>
+            {/* Maintenance */}
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="bg-accent/30 rounded-xl p-4">
+                <h3 className="font-semibold text-sm mb-2 flex items-center gap-2">
+                  <Droplets className="w-4 h-4 text-primary" /> Sous le receveur
+                </h3>
+                <p className="text-xs text-muted-foreground">Carrelage dessous • Étanchéité continue • Bonde accessible • Trappe carrelée</p>
               </div>
-              <div className="bg-accent/30 rounded-2xl p-6">
-                <Home className="w-8 h-8 text-primary mb-4" />
-                <h3 className="font-semibold text-lg mb-3">Sous la baignoire</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
-                    <span>Trappe d'accès à carreler</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
-                    <span>Emplacement aligné avec la bonde</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <AlertTriangle className="w-4 h-4 text-amber-600" />
-                    <span>Attention aux meubles qui bloquent l'accès</span>
-                  </li>
-                </ul>
+              <div className="bg-accent/30 rounded-xl p-4">
+                <h3 className="font-semibold text-sm mb-2 flex items-center gap-2">
+                  <Home className="w-4 h-4 text-primary" /> Sous la baignoire
+                </h3>
+                <p className="text-xs text-muted-foreground">Trappe d'accès carrelée • Alignée avec la bonde • Attention meubles bloquants</p>
               </div>
             </div>
-            <div className="mt-6 bg-primary/10 rounded-xl p-4 text-center">
-              <p className="text-primary font-medium">
+            
+            <div className="mt-4 bg-primary/10 rounded-lg p-3 text-center">
+              <p className="text-primary font-medium text-sm">
                 👉 Tout ce qui peut fuir doit rester accessible.
               </p>
             </div>
