@@ -791,7 +791,7 @@ const Guide = () => {
                 </div>
               </div>
               
-              <div className="space-y-4 ml-0 md:ml-14">
+              <div className="space-y-6 ml-0 md:ml-14">
                 <div>
                   <h4 className="font-medium text-foreground mb-2">🎯 À quoi sert-il ?</h4>
                   <ul className="space-y-2 text-muted-foreground text-sm">
@@ -814,31 +814,122 @@ const Guide = () => {
                   </ul>
                 </div>
 
+                {/* Types d'installation */}
                 <div>
-                  <h4 className="font-medium text-foreground mb-2">📦 Les différents types de receveurs</h4>
+                  <h4 className="font-medium text-foreground mb-3">🔧 Types d'installation</h4>
                   <div className="grid sm:grid-cols-2 gap-3">
-                    <div className="bg-accent/30 rounded-lg p-3">
-                      <p className="font-medium text-sm text-foreground">Receveur extra-plat en résine</p>
-                      <p className="text-xs text-muted-foreground">Le plus répandu. Fin (3 cm), moderne, facile à poser.</p>
+                    <div className="bg-accent/30 rounded-lg p-3 border-l-4 border-primary/50">
+                      <p className="font-medium text-sm text-foreground">Surélevé</p>
+                      <p className="text-xs text-muted-foreground">Le plus simple à poser. Siphon horizontal. Marche &gt; 5 cm.</p>
                     </div>
-                    <div className="bg-accent/30 rounded-lg p-3">
-                      <p className="font-medium text-sm text-foreground">Receveur à carreler</p>
-                      <p className="text-xs text-muted-foreground">Permet un carrelage continu sol/douche. Esthétique haut de gamme.</p>
+                    <div className="bg-accent/30 rounded-lg p-3 border-l-4 border-primary/50">
+                      <p className="font-medium text-sm text-foreground">À poser</p>
+                      <p className="text-xs text-muted-foreground">Installation rapide sur surface plane. Évacuation verticale. Marche &lt; 5 cm.</p>
                     </div>
-                    <div className="bg-accent/30 rounded-lg p-3">
-                      <p className="font-medium text-sm text-foreground">Receveur en acier émaillé</p>
-                      <p className="text-xs text-muted-foreground">Ajustable aux dimensions exactes. Idéal pour les espaces atypiques.</p>
+                    <div className="bg-accent/30 rounded-lg p-3 border-l-4 border-primary/50">
+                      <p className="font-medium text-sm text-foreground">À encastrer</p>
+                      <p className="text-xs text-muted-foreground">Accès de plain-pied. Idéal en neuf ou rénovation complète.</p>
                     </div>
-                    <div className="bg-accent/30 rounded-lg p-3">
-                      <p className="font-medium text-sm text-foreground">Douche maçonnée</p>
-                      <p className="text-xs text-muted-foreground">Réalisée sur mesure. Totalement intégrée au sol (douche italienne).</p>
+                    <div className="bg-accent/30 rounded-lg p-3 border-l-4 border-primary/50">
+                      <p className="font-medium text-sm text-foreground">À carreler</p>
+                      <p className="text-xs text-muted-foreground">Douche italienne parfaite. Mousse polystyrène étanche, pentes intégrées.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Matériaux */}
+                <div>
+                  <h4 className="font-medium text-foreground mb-3">📦 Matériaux</h4>
+                  <div className="grid sm:grid-cols-2 gap-3">
+                    <div className="bg-background rounded-lg p-4 shadow-sm border">
+                      <p className="font-semibold text-sm text-foreground mb-1">Grès émaillé (Céramique)</p>
+                      <div className="flex flex-wrap gap-1 mb-2">
+                        <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">Résistant</span>
+                        <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">Facile entretien</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground">Très lourd (30-45 kg+). Glissant sans traitement.</p>
+                    </div>
+                    <div className="bg-background rounded-lg p-4 shadow-sm border">
+                      <p className="font-semibold text-sm text-foreground mb-1">Acrylique</p>
+                      <div className="flex flex-wrap gap-1 mb-2">
+                        <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">Léger</span>
+                        <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">Antidérapant naturel</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground">Sensible aux rayures.</p>
+                    </div>
+                    <div className="bg-background rounded-lg p-4 shadow-sm border">
+                      <p className="font-semibold text-sm text-foreground mb-1">Résine (Béton de synthèse)</p>
+                      <div className="flex flex-wrap gap-1 mb-2">
+                        <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">Extra-plat</span>
+                        <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">Durable</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground">Teinté dans la masse. Déclinaisons : Biotec, Luxtone, Acrystone.</p>
+                    </div>
+                    <div className="bg-background rounded-lg p-4 shadow-sm border">
+                      <p className="font-semibold text-sm text-foreground mb-1">Pierre naturelle (Ardoise)</p>
+                      <div className="flex flex-wrap gap-1 mb-2">
+                        <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">Haut de gamme</span>
+                        <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">Antibactérien</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground">Antidérapante naturellement. Lourde.</p>
+                    </div>
+                    <div className="bg-background rounded-lg p-4 shadow-sm border sm:col-span-2">
+                      <p className="font-semibold text-sm text-foreground mb-1">Acier émaillé</p>
+                      <div className="flex flex-wrap gap-1 mb-2">
+                        <span className="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded">Dimensions exactes</span>
+                        <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">Résistant</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground">Ajustable aux dimensions exactes sur commande. Idéal pour les espaces atypiques.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Dimensions */}
+                <div>
+                  <h4 className="font-medium text-foreground mb-3">📐 Dimensions courantes</h4>
+                  <div className="grid grid-cols-3 gap-3">
+                    <div className="bg-accent/20 rounded-lg p-3 text-center">
+                      <span className="text-2xl mb-1 block">◻️</span>
+                      <p className="font-medium text-sm">Carré</p>
+                      <p className="text-xs text-muted-foreground">70×70 à 120×120 cm</p>
+                    </div>
+                    <div className="bg-accent/20 rounded-lg p-3 text-center">
+                      <span className="text-2xl mb-1 block">▭</span>
+                      <p className="font-medium text-sm">Rectangulaire</p>
+                      <p className="text-xs text-muted-foreground">70×90 à 180×90 cm</p>
+                    </div>
+                    <div className="bg-accent/20 rounded-lg p-3 text-center">
+                      <span className="text-2xl mb-1 block">◔</span>
+                      <p className="font-medium text-sm">Quart de cercle</p>
+                      <p className="text-xs text-muted-foreground">80 à 110 cm</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Évacuation */}
+                <div>
+                  <h4 className="font-medium text-foreground mb-3">💧 Évacuation & accessoires</h4>
+                  <div className="bg-accent/30 rounded-xl p-4">
+                    <div className="grid sm:grid-cols-3 gap-4 text-sm">
+                      <div>
+                        <p className="font-medium text-foreground">Siphon</p>
+                        <p className="text-xs text-muted-foreground">Vertical (espace dessous) ou horizontal (espace réduit)</p>
+                      </div>
+                      <div>
+                        <p className="font-medium text-foreground">Bonde</p>
+                        <p className="text-xs text-muted-foreground">Extra-plate recommandée. Ø 90 mm min. pour receveur à carreler</p>
+                      </div>
+                      <div>
+                        <p className="font-medium text-foreground">Pieds réglables</p>
+                        <p className="text-xs text-muted-foreground">Ajustent le niveau et créent la pente (90 à 125 mm)</p>
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 <div className="bg-primary/5 rounded-lg p-4 border border-primary/10">
                   <p className="text-primary font-medium text-sm">
-                    💡 Le choix du receveur dépend de la hauteur de réservation disponible (espace sous le sol), de vos goûts esthétiques et de votre budget.
+                    💡 Le choix du receveur dépend de la hauteur de réservation disponible (espace sous le sol), du type de siphon possible, de vos goûts esthétiques et de votre budget.
                   </p>
                 </div>
               </div>
