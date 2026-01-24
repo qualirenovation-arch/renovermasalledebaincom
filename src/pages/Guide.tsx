@@ -1184,154 +1184,103 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* Section 11 - Peinture */}
+      {/* Sections 11, 12, 13 - Finitions & Confort (condensées) */}
       <section id="section-11" className="py-16 bg-accent/20 scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
+            className="max-w-5xl mx-auto"
           >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
-                11
-              </div>
+            <div className="text-center mb-8">
+              <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+                Finitions & Confort
+              </span>
               <h2 className="text-2xl md:text-3xl font-serif text-foreground">
-                Peinture salle de bain : un produit adapté à l'humidité
+                Peinture, VMC & Éclairage
               </h2>
             </div>
-            <div className="bg-accent/30 rounded-xl p-6">
-              <p className="text-muted-foreground text-sm mb-3">
-                Peinture spéciale pièces humides, résistante à la condensation, lessivable.
-              </p>
-              <p className="text-primary font-medium text-sm">👉 Unikalo – Aqualine Satin.</p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
-      {/* Section 12 - VMC */}
-      <section id="section-12" className="py-16 bg-background scroll-mt-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
-                12
-              </div>
-              <h2 className="text-2xl md:text-3xl font-serif text-foreground">
-                VMC et ventilation : protéger la salle de bain dans le temps
-              </h2>
-            </div>
-            <div className="bg-background rounded-xl p-6 shadow-sm">
-              <p className="text-muted-foreground text-sm mb-2">
-                Sans VMC : humidité stagnante, moisissures, dégradation prématurée.
-              </p>
-              <p className="text-primary font-medium text-sm">👉 Une VMC bien pensée protège toute la salle de bain.</p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 13 - Éclairage */}
-      <section id="section-13" className="py-16 bg-accent/30 scroll-mt-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
-                13
-              </div>
-              <h2 className="text-2xl md:text-3xl font-serif text-foreground">
-                Éclairage, chauffage & confort
-              </h2>
-            </div>
-            <div className="bg-background rounded-2xl p-8 shadow-sm">
-              <div className="space-y-8">
-                {/* Spots */}
-                <div>
-                  <div className="flex items-center gap-3 mb-3">
-                    <Lightbulb className="w-8 h-8 text-primary" />
-                    <h3 className="font-semibold text-lg text-foreground">Spots sans collerette (trimless)</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              {/* Section 11 - Peinture */}
+              <div id="section-11-content" className="bg-background rounded-2xl p-6 shadow-sm border border-primary/10">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold">
+                    11
                   </div>
-                  <p className="text-muted-foreground mb-3">
-                    Nous privilégions les spots encastrés sans collerette pour un rendu épuré. Le spot disparaît dans le plafond, ne laissant visible que la lumière.
+                  <h3 className="font-semibold text-lg">Peinture</h3>
+                </div>
+                <div className="space-y-3">
+                  <p className="text-muted-foreground text-sm">
+                    Peinture spéciale pièces humides, résistante à la condensation, lessivable.
                   </p>
-                  <div className="flex flex-wrap gap-3 text-sm">
-                    <span className="bg-primary/10 text-primary px-3 py-1 rounded-full font-medium">4000K blanc neutre</span>
-                    <span className="bg-primary/10 text-primary px-3 py-1 rounded-full font-medium">500 lumens</span>
-                    <span className="bg-primary/10 text-primary px-3 py-1 rounded-full font-medium">IP44/IP65 selon zone</span>
-                    <span className="bg-mint/20 text-mint px-3 py-1 rounded-full font-medium">Norme NF C 15-100</span>
+                  <div className="bg-primary/10 rounded-lg p-3">
+                    <p className="text-primary font-medium text-sm">👉 Unikalo – Aqualine Satin</p>
                   </div>
                 </div>
+              </div>
 
-                {/* Sèche-serviette */}
-                <div className="border-t border-border pt-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <Thermometer className="w-8 h-8 text-primary" />
-                    <h3 className="font-semibold text-lg text-foreground">Sèche-serviette</h3>
+              {/* Section 12 - VMC */}
+              <div id="section-12" className="bg-background rounded-2xl p-6 shadow-sm border border-primary/10 scroll-mt-20">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold">
+                    12
                   </div>
-                  <p className="text-muted-foreground mb-3">
-                    Indispensable pour le confort thermique de la salle de bain. Il chauffe la pièce et sèche vos serviettes, réduisant l'humidité ambiante.
-                  </p>
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div className="bg-accent/50 rounded-xl p-4">
-                      <p className="font-medium text-foreground mb-2">Électrique :</p>
-                      <ul className="space-y-1 text-muted-foreground text-sm">
-                        <li>• Installation simple, idéal en rénovation</li>
-                        <li>• Programmation et minuterie possibles</li>
-                        <li>• Puissance : 500W à 1000W selon surface</li>
-                      </ul>
-                    </div>
-                    <div className="bg-accent/50 rounded-xl p-4">
-                      <p className="font-medium text-foreground mb-2">Mixte (eau + électrique) :</p>
-                      <ul className="space-y-1 text-muted-foreground text-sm">
-                        <li>• Raccordé au chauffage central</li>
-                        <li>• Résistance pour l'intersaison</li>
-                        <li>• Plus économique à l'usage</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <p className="text-primary font-medium mt-3 text-sm">
-                    💡 Prévoir une ligne électrique dédiée (norme NF C 15-100).
-                  </p>
+                  <h3 className="font-semibold text-lg">VMC</h3>
                 </div>
+                <div className="space-y-3">
+                  <p className="text-muted-foreground text-sm">
+                    Sans VMC : humidité stagnante, moisissures, dégradation prématurée.
+                  </p>
+                  <div className="bg-primary/10 rounded-lg p-3">
+                    <p className="text-primary font-medium text-sm">👉 Une VMC bien pensée protège toute la salle de bain</p>
+                  </div>
+                </div>
+              </div>
 
-                {/* Chauffe-eau */}
-                <div className="border-t border-border pt-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <Flame className="w-8 h-8 text-primary" />
-                    <h3 className="font-semibold text-lg text-foreground">Chauffe-eau</h3>
+              {/* Section 13 - Éclairage */}
+              <div id="section-13" className="bg-background rounded-2xl p-6 shadow-sm border border-primary/10 scroll-mt-20">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold">
+                    13
                   </div>
-                  <p className="text-muted-foreground mb-3">
-                    Si votre chauffe-eau est dans la salle de bain, la rénovation est l'occasion idéale de le remplacer ou de l'optimiser.
-                  </p>
-                  <div className="grid sm:grid-cols-3 gap-3">
-                    <div className="bg-accent/50 rounded-xl p-4 text-center">
-                      <p className="font-medium text-foreground mb-1">Cumulus électrique</p>
-                      <p className="text-muted-foreground text-sm">100L à 200L, économique à l'achat</p>
-                    </div>
-                    <div className="bg-accent/50 rounded-xl p-4 text-center">
-                      <p className="font-medium text-foreground mb-1">Thermodynamique</p>
-                      <p className="text-muted-foreground text-sm">70% d'économie, éligible aides</p>
-                    </div>
-                    <div className="bg-accent/50 rounded-xl p-4 text-center">
-                      <p className="font-medium text-foreground mb-1">Instantané</p>
-                      <p className="text-muted-foreground text-sm">Compact, eau chaude à la demande</p>
-                    </div>
+                  <h3 className="font-semibold text-lg">Éclairage & chauffage</h3>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex flex-wrap gap-2 text-xs">
+                    <span className="bg-accent px-2 py-1 rounded-full">Spots trimless</span>
+                    <span className="bg-accent px-2 py-1 rounded-full">4000K</span>
+                    <span className="bg-accent px-2 py-1 rounded-full">IP44/65</span>
                   </div>
-                  <p className="text-primary font-medium mt-3 text-sm">
-                    💡 Ligne électrique dédiée obligatoire. Prévoir un accès pour la maintenance.
+                  <p className="text-muted-foreground text-sm">
+                    Sèche-serviette électrique ou mixte. Chauffe-eau accessible.
                   </p>
+                  <div className="bg-primary/10 rounded-lg p-3">
+                    <p className="text-primary font-medium text-sm">👉 Norme NF C 15-100</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Détails complémentaires en accordéon */}
+            <div className="mt-8 bg-background rounded-2xl p-6 shadow-sm">
+              <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
+                <Lightbulb className="w-5 h-5 text-primary" />
+                Détails techniques
+              </h3>
+              <div className="grid sm:grid-cols-3 gap-4">
+                <div className="bg-accent/30 rounded-xl p-4">
+                  <p className="font-medium text-sm mb-2">🔆 Spots</p>
+                  <p className="text-muted-foreground text-xs">500 lumens, blanc neutre 4000K, encastrés sans collerette</p>
+                </div>
+                <div className="bg-accent/30 rounded-xl p-4">
+                  <p className="font-medium text-sm mb-2">🌡️ Sèche-serviette</p>
+                  <p className="text-muted-foreground text-xs">Électrique (500-1000W) ou mixte raccordé au chauffage</p>
+                </div>
+                <div className="bg-accent/30 rounded-xl p-4">
+                  <p className="font-medium text-sm mb-2">🔥 Chauffe-eau</p>
+                  <p className="text-muted-foreground text-xs">Cumulus, thermodynamique (70% économie) ou instantané</p>
                 </div>
               </div>
             </div>
