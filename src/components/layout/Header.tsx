@@ -40,18 +40,18 @@ export function Header() {
   }, []);
 
   return (
-    <div className={`sticky top-0 z-50 transition-shadow duration-300 ${isScrolled ? "shadow-lg" : ""}`}>
+    <div className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "shadow-[0_4px_20px_-4px_hsl(0_0%_0%/0.1)]" : ""}`}>
       {/* Top Banner - Hidden on mobile and when scrolled */}
       <div 
         className={`hidden md:block bg-primary text-primary-foreground px-4 transition-all duration-300 ${
-          isScrolled ? "h-0 py-0 overflow-hidden opacity-0" : "py-2 opacity-100"
+          isScrolled ? "h-0 py-0 overflow-hidden opacity-0" : "py-2.5 opacity-100"
         }`}
       >
         <div className="container-custom flex justify-center md:justify-between items-center text-sm">
-          <span className="hidden md:block">Spécialiste de la rénovation de votre salle de bain</span>
+          <span className="hidden md:block font-medium tracking-wide">Spécialiste de la rénovation de votre salle de bain</span>
           <a 
             href="tel:+33659764685" 
-            className="flex items-center gap-2 font-semibold hover:text-accent transition-colors"
+            className="flex items-center gap-2 font-bold hover:text-gold transition-colors"
           >
             <Phone className="w-4 h-4" />
             06 59 76 46 85
@@ -60,18 +60,18 @@ export function Header() {
       </div>
 
       {/* Main Header */}
-      <header className="bg-background/95 backdrop-blur-md border-b border-border">
+      <header className="bg-background/98 backdrop-blur-xl border-b border-border/50">
         <div className="container-custom">
-          <div className="flex items-center justify-between h-14 md:h-20">
+          <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo - Compact on mobile */}
-            <Link to="/" className="flex items-center gap-2 md:gap-4">
+            <Link to="/" className="flex items-center gap-3 md:gap-4 group">
               <img 
                 src={qualirenovationLogo} 
                 alt="QualiRénovation Logo" 
-                className="h-10 md:h-16 w-auto"
+                className="h-11 md:h-16 w-auto transition-transform duration-300 group-hover:scale-105"
               />
               <div className="flex flex-col leading-tight">
-                <span className="font-display text-base md:text-xl font-bold text-navy">
+                <span className="font-display text-base md:text-xl font-bold text-navy tracking-tight">
                   RenoverMaSalleDeBain<span className="hidden sm:inline">.com</span>
                 </span>
                 <span className="text-xs md:text-sm font-semibold text-gold-dark hidden sm:block">
@@ -86,10 +86,10 @@ export function Header() {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`px-3 py-2 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap ${
+                  className={`px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap ${
                     location.pathname === item.path
-                      ? "bg-primary text-primary-foreground"
-                      : "text-foreground hover:bg-secondary"
+                      ? "bg-primary text-primary-foreground shadow-sm"
+                      : "text-foreground hover:bg-secondary hover:text-foreground"
                   }`}
                 >
                   {item.label}

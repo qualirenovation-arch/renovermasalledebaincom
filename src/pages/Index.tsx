@@ -148,29 +148,29 @@ export default function Index() {
         </div>
       </div>
 
-      {/* Hero Section - Mobile-first compact */}
-      <section className="bg-stone py-8 md:py-14">
+      {/* Hero Section - Premium design */}
+      <section className="bg-gradient-to-b from-stone to-background py-10 md:py-16 lg:py-20">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="text-center lg:text-left"
             >
-              <h1 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 text-foreground leading-tight">
+              <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-foreground leading-[1.1] tracking-tight">
                 RÉNOVEZ VOTRE<br />
-                SALLE DE <span className="italic font-normal">BAIN</span>
+                SALLE DE <span className="italic font-normal text-gold">BAIN</span>
               </h1>
-              <p className="text-muted-foreground text-base md:text-lg mb-4 md:mb-6">
+              <p className="text-muted-foreground text-base md:text-lg lg:text-xl mb-6 md:mb-8 leading-relaxed max-w-lg lg:max-w-none">
                 Conception et réalisation sur mesure à Paris & Île-de-France
               </p>
               {/* CTA visible sans scroll sur mobile */}
               <Button 
-                variant="default" 
+                variant="gold" 
                 size="lg" 
                 asChild 
-                className="bg-[hsl(38,50%,50%)] hover:bg-[hsl(38,50%,45%)] text-white rounded-md px-8 w-full sm:w-auto"
+                className="rounded-full px-10 w-full sm:w-auto text-base"
               >
                 <Link to="/devis#devis-form">
                   DEMANDER UN DEVIS GRATUIT
@@ -180,42 +180,44 @@ export default function Index() {
             
             <motion.div
               className="relative order-first lg:order-last"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
             >
-              <div className="aspect-[4/3] rounded-xl overflow-hidden">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-[0_20px_60px_-15px_hsl(0_0%_0%/0.2)]">
                 <img
                   src={jemmapes1}
                   alt="Douche à l'italienne moderne"
-                  className="w-full h-full object-cover object-[25%_center]"
+                  className="w-full h-full object-cover object-[25%_center] hover:scale-105 transition-transform duration-700"
                   loading="eager"
                 />
               </div>
+              {/* Decorative element */}
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-gold/10 -z-10 hidden lg:block" />
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Section avantages - Mobile: cartes verticales */}
-      <section className="py-8 md:py-12 border-y border-border">
+      {/* Section avantages - Premium cards */}
+      <section className="py-10 md:py-16 bg-background">
         <div className="container-custom">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
             {advantages.map((item, index) => (
               <motion.div
                 key={index}
-                className="flex items-start gap-3 md:gap-4 p-4 md:p-0 bg-secondary/30 md:bg-transparent rounded-xl md:rounded-none"
+                className="flex items-start gap-4 p-5 md:p-6 bg-card rounded-2xl border border-border/50 shadow-sm hover:shadow-md hover:border-gold/30 transition-all duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <div className="flex-shrink-0">
-                  <item.icon className="w-7 h-7 md:w-8 md:h-8 text-foreground" strokeWidth={1.5} />
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center">
+                  <item.icon className="w-6 h-6 text-gold" strokeWidth={1.5} />
                 </div>
                 <div>
-                  <h3 className="font-display font-semibold text-base md:text-lg mb-0.5 md:mb-1">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm">{item.description}</p>
+                  <h3 className="font-display font-semibold text-base md:text-lg mb-1">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -327,26 +329,27 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Section Réalisations - Mobile: scroll horizontal */}
-      <section className="py-10 md:py-16 bg-stone">
+      {/* Section Réalisations - Premium gallery */}
+      <section className="py-12 md:py-20 bg-gradient-to-b from-stone to-background">
         <div className="container-custom">
           <motion.div 
-            className="text-center mb-6 md:mb-8"
+            className="text-center mb-8 md:mb-12"
             {...fadeInUp}
             viewport={{ once: true }}
             whileInView="animate"
             initial="initial"
           >
-            <h2 className="font-display text-xl md:text-3xl lg:text-4xl mb-2 md:mb-4">
+            <div className="section-divider" />
+            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold mb-3 md:mb-4">
               Nos plus belles réalisations
             </h2>
-            <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-sm md:text-lg max-w-2xl mx-auto">
               Inspirez-vous de nos projets réalisés avec soin et élégance.
             </p>
           </motion.div>
 
           {/* Tags de style - scrollable sur mobile */}
-          <div className="flex gap-2 mb-6 md:mb-10 overflow-x-auto pb-2 scrollbar-hide md:justify-center md:flex-wrap">
+          <div className="flex gap-2 mb-8 md:mb-12 overflow-x-auto pb-2 scrollbar-hide md:justify-center md:flex-wrap">
             {styleTags.map((tag, index) => (
               <span key={index} className={`${tag.className} whitespace-nowrap flex-shrink-0`}>
                 {tag.label}
@@ -355,7 +358,7 @@ export default function Index() {
           </div>
 
           {/* Carrousel mobile / Grille desktop */}
-          <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:pb-0">
+          <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:pb-0">
             {[
               { img: jemmapes1, style: "Élégance parisienne", location: "Paris 10ème", tag: "Douche italienne", borderClass: "photo-card-beige" },
               { img: vincennesMr1, style: "Contemporain épuré", location: "Vincennes", tag: "Finitions soignées", borderClass: "photo-card-terracotta" },
@@ -363,35 +366,35 @@ export default function Index() {
             ].map((project, index) => (
               <motion.div
                 key={index}
-                className="group min-w-[75vw] md:min-w-0 snap-center"
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                className="group min-w-[80vw] md:min-w-0 snap-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: index * 0.15 }}
               >
-                <div className={`aspect-[3/4] ${project.borderClass} mb-3 md:mb-4`}>
+                <div className={`aspect-[3/4] ${project.borderClass} mb-4 md:mb-5 overflow-hidden`}>
                   <img
                     src={project.img}
                     alt={`${project.style} ${project.location}`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
                 </div>
-                <h3 className="font-display text-base md:text-lg font-semibold text-wood">{project.style}</h3>
-                <p className="text-foreground text-sm mb-1 md:mb-2">{project.location}</p>
+                <h3 className="font-display text-lg md:text-xl font-semibold text-foreground mb-1">{project.style}</h3>
+                <p className="text-muted-foreground text-sm mb-2">{project.location}</p>
                 <span className="tag-beige text-xs">{project.tag}</span>
               </motion.div>
             ))}
           </div>
 
           <motion.div 
-            className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mt-8 md:mt-12"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10 md:mt-14"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            <Button variant="outline" size="default" asChild className="rounded-md w-full sm:w-auto">
+            <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
               <Link to="/realisations">
                 Voir tous nos projets
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -399,9 +402,9 @@ export default function Index() {
             </Button>
             <Button 
               variant="default" 
-              size="default" 
+              size="lg" 
               asChild 
-              className="bg-gradient-to-r from-primary to-primary-foreground/80 hover:opacity-90 text-white rounded-md w-full sm:w-auto"
+              className="w-full sm:w-auto"
             >
               <a 
                 href="https://www.instagram.com/reel/DEc8OANsV-j/" 
@@ -416,43 +419,45 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Section Projet personnalisé - Compact mobile */}
-      <section className="py-10 md:py-16 bg-accent/30">
+      {/* Section Projet personnalisé - Premium cards */}
+      <section className="py-12 md:py-20 bg-background">
         <div className="container-custom">
           <motion.div 
-            className="text-center max-w-3xl mx-auto mb-8 md:mb-14"
+            className="text-center max-w-3xl mx-auto mb-10 md:mb-16"
             {...fadeInUp}
             viewport={{ once: true }}
             whileInView="animate"
             initial="initial"
           >
-            <h2 className="font-display text-xl md:text-3xl lg:text-4xl font-semibold mb-2 md:mb-4">
+            <div className="section-divider" />
+            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold mb-3 md:mb-4">
               Un projet personnalisé
             </h2>
-            <p className="text-muted-foreground text-sm md:text-lg">
+            <p className="text-muted-foreground text-base md:text-lg">
               Nous vous accompagnons de A à Z.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
             {[
-              { icon: "💬", title: "Conseils personnalisés" },
-              { icon: "📦", title: "Choix matériaux" },
-              { icon: "✓", title: "Garantie décennale" },
-              { icon: "⏱", title: "Délais respectés" }
+              { icon: "💬", title: "Conseils personnalisés", desc: "Écoute & expertise" },
+              { icon: "📦", title: "Choix matériaux", desc: "Qualité premium" },
+              { icon: "✓", title: "Garantie décennale", desc: "Sérénité totale" },
+              { icon: "⏱", title: "Délais respectés", desc: "Planning maîtrisé" }
             ].map((item, index) => (
               <motion.div
                 key={index}
-                className="text-center"
+                className="text-center p-5 md:p-6 bg-card rounded-2xl border border-border/50 hover:border-gold/30 hover:shadow-lg transition-all duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-foreground/20 flex items-center justify-center mx-auto mb-2 md:mb-4 text-xl md:text-2xl">
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gold/10 flex items-center justify-center mx-auto mb-3 md:mb-4 text-2xl md:text-3xl">
                   {item.icon}
                 </div>
-                <h3 className="font-display text-xs md:text-base font-semibold">{item.title}</h3>
+                <h3 className="font-display text-sm md:text-base font-semibold mb-1">{item.title}</h3>
+                <p className="text-muted-foreground text-xs md:text-sm hidden md:block">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -463,8 +468,8 @@ export default function Index() {
       <Recompenses />
 
 
-      {/* CTA Final - Mobile optimisé */}
-      <section className="py-12 md:py-16 bg-foreground text-background">
+      {/* CTA Final - Premium dark section */}
+      <section className="py-14 md:py-20 bg-primary text-primary-foreground">
         <div className="container-custom text-center">
           <motion.div
             className="max-w-2xl mx-auto"
@@ -472,17 +477,19 @@ export default function Index() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display text-xl md:text-3xl lg:text-4xl font-semibold mb-3 md:mb-4">
+            <div className="w-16 h-1 rounded-full bg-gold mx-auto mb-6" />
+            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 md:mb-5">
               Prêt à transformer votre salle de bain ?
             </h2>
-            <p className="text-background/70 text-sm md:text-lg mb-6 md:mb-8">
+            <p className="text-primary-foreground/70 text-base md:text-lg mb-8 md:mb-10">
               Visite technique gratuite • Accompagnement de A à Z
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
+                variant="gold"
                 size="lg" 
                 asChild
-                className="bg-[hsl(38,50%,50%)] hover:bg-[hsl(38,50%,45%)] text-white rounded-md w-full sm:w-auto"
+                className="w-full sm:w-auto"
               >
                 <Link to="/devis#devis-form">
                   Devis gratuit
@@ -493,7 +500,7 @@ export default function Index() {
                 variant="outline" 
                 size="lg" 
                 asChild
-                className="border-background/30 text-background hover:bg-background/10 rounded-md w-full sm:w-auto"
+                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto"
               >
                 <a href="tel:+33659764685">
                   <Phone className="w-5 h-5 mr-2" />
