@@ -480,7 +480,7 @@ const albums: Album[] = [
     id: "temple",
     title: "Style masculin — Bois & Noir",
     location: "Paris 3ème - Rue du Temple",
-    description: "AVANT : Salle de bain vétuste avec baignoire, lavabo sur pied et carrelage blanc/bleu dégradé. APRÈS : Transformation complète pour un appartement au masculin. Douche à l'italienne avec receveur extra-plat et paroi fixe noire, meuble vasque en bois clair avec plan blanc, robinetterie noire mate, miroir rond LED. Lave-linge intégré sous le plan vasque. WC suspendu avec chauffe-eau dissimulé dans le placard au-dessus.",
+    description: "AVANT : Salle de bain vétuste, peu fonctionnelle et sans optimisation. APRÈS : Salle de bain repensée dans un style masculin et contemporain — douche à l'italienne, meuble vasque sur mesure, robinetterie noire mate. 👉 Le détail qui change tout : lave-linge intégré et dissimulé derrière une porte — une approche de conception, pas de simple exécution. Envie d'y être ? Faites votre demande de devis et devenez le prochain projet affiché sur notre plan interactif – chantiers en cours.",
     coverImage: temple1,
     photos: [
       { id: 1, image: temple1, title: "Après — Vue d'ensemble", description: "Douche à l'italienne, paroi fixe noire et meuble bois" },
