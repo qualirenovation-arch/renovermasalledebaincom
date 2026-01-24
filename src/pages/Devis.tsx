@@ -49,6 +49,20 @@ import baignoiresImage from "@/assets/baignoires-styles.jpg";
 import robinetterieAppliqueImage from "@/assets/robinetterie-applique.jpg";
 import robinetterieEncastreImage from "@/assets/robinetterie-encastre.jpg";
 import robinetterieSurGorgeImage from "@/assets/robinetterie-sur-gorge.jpg";
+import finitionChromeImage from "@/assets/finition-chrome.jpg";
+import finitionInoxImage from "@/assets/finition-inox.jpg";
+import finitionInoxBrosseImage from "@/assets/finition-inox-brosse.jpg";
+import finitionNickelImage from "@/assets/finition-nickel.jpg";
+import finitionNickelBrosseImage from "@/assets/finition-nickel-brosse.jpg";
+import finitionNoirMatImage from "@/assets/finition-noir-mat.jpg";
+import finitionGrisAnthraciteImage from "@/assets/finition-gris-anthracite.jpg";
+import finitionLaitonImage from "@/assets/finition-laiton.jpg";
+import finitionLaitonBrosseImage from "@/assets/finition-laiton-brosse.jpg";
+import finitionOrImage from "@/assets/finition-or.jpg";
+import finitionOrBrosseImage from "@/assets/finition-or-brosse.jpg";
+import finitionCuivreImage from "@/assets/finition-cuivre.jpg";
+import finitionBlancImage from "@/assets/finition-blanc.jpg";
+import finitionBlancMatImage from "@/assets/finition-blanc-mat.jpg";
 
 interface FormData {
   prenom: string;
@@ -235,20 +249,20 @@ const robinetterieMLaverOptions = [
 ];
 
 const finitionsOptions = [
-  { label: "Chrome", value: "chrome" },
-  { label: "Inox", value: "inox" },
-  { label: "Inox brossé", value: "inox-brosse" },
-  { label: "Nickel", value: "nickel" },
-  { label: "Nickel brossé", value: "nickel-brosse" },
-  { label: "Noir mat", value: "noir-mat" },
-  { label: "Gris anthracite", value: "gris-anthracite" },
-  { label: "Laiton", value: "laiton" },
-  { label: "Laiton brossé", value: "laiton-brosse" },
-  { label: "Or", value: "or" },
-  { label: "Or brossé", value: "or-brosse" },
-  { label: "Cuivre", value: "cuivre" },
-  { label: "Blanc", value: "blanc" },
-  { label: "Blanc mat", value: "blanc-mat" },
+  { label: "Chrome", value: "chrome", image: finitionChromeImage },
+  { label: "Inox", value: "inox", image: finitionInoxImage },
+  { label: "Inox brossé", value: "inox-brosse", image: finitionInoxBrosseImage },
+  { label: "Nickel", value: "nickel", image: finitionNickelImage },
+  { label: "Nickel brossé", value: "nickel-brosse", image: finitionNickelBrosseImage },
+  { label: "Noir mat", value: "noir-mat", image: finitionNoirMatImage },
+  { label: "Gris anthracite", value: "gris-anthracite", image: finitionGrisAnthraciteImage },
+  { label: "Laiton", value: "laiton", image: finitionLaitonImage },
+  { label: "Laiton brossé", value: "laiton-brosse", image: finitionLaitonBrosseImage },
+  { label: "Or", value: "or", image: finitionOrImage },
+  { label: "Or brossé", value: "or-brosse", image: finitionOrBrosseImage },
+  { label: "Cuivre", value: "cuivre", image: finitionCuivreImage },
+  { label: "Blanc", value: "blanc", image: finitionBlancImage },
+  { label: "Blanc mat", value: "blanc-mat", image: finitionBlancMatImage },
 ];
 
 const styleCarrelageOptions = [
@@ -1124,22 +1138,32 @@ export default function Devis() {
                         </div>
                       </div>
 
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-3">
                         {finitionsOptions.map((option) => (
                           <div 
                             key={option.value} 
-                            className={`flex items-center gap-2 px-4 py-3 rounded-xl border-2 transition-all cursor-pointer ${
+                            className={`flex flex-col items-center gap-2 p-2 rounded-xl border-2 transition-all cursor-pointer ${
                               (formData.finitionsRobinetterie).includes(option.value) 
                                 ? 'border-foreground bg-foreground/5' 
                                 : 'border-border bg-card hover:border-foreground/30'
                             }`}
                             onClick={() => handleCheckboxChange("finitionsRobinetterie", option.value, !formData.finitionsRobinetterie.includes(option.value))}
                           >
-                            <Checkbox 
-                              checked={formData.finitionsRobinetterie.includes(option.value)}
-                              className="pointer-events-none"
-                            />
-                            <span className="font-medium text-sm">{option.label}</span>
+                            <div className="relative w-full aspect-square overflow-hidden rounded-lg">
+                              <img 
+                                src={option.image} 
+                                alt={`Finition ${option.label}`}
+                                className="w-full h-full object-cover"
+                              />
+                              {formData.finitionsRobinetterie.includes(option.value) && (
+                                <div className="absolute top-1 right-1 w-5 h-5 bg-foreground rounded-full flex items-center justify-center">
+                                  <svg className="w-3 h-3 text-background" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                  </svg>
+                                </div>
+                              )}
+                            </div>
+                            <span className="font-medium text-xs text-center leading-tight">{option.label}</span>
                           </div>
                         ))}
                       </div>
