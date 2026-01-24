@@ -173,24 +173,24 @@ const ascenseurOptions = [
 
 // Options avec pictogrammes
 const wcOptions = [
-  { label: "WC suspendu", value: "wc-suspendu" },
-  { label: "WC classique (au sol)", value: "wc-classique" },
-  { label: "Ne pas remplacer les WC", value: "wc-non" },
+  { label: "WC suspendu", value: "wc-suspendu", image: wcTypesImage },
+  { label: "WC classique (au sol)", value: "wc-classique", image: wcTypesImage },
+  { label: "Ne pas remplacer les WC", value: "wc-non", image: null },
 ];
 
 const meubleVasqueOptions = [
-  { label: "Vasque seule (sans meuble)", value: "vasque-seule" },
-  { label: "Meuble suspendu", value: "meuble-suspendu" },
-  { label: "Meuble sur pieds", value: "meuble-pieds" },
-  { label: "Simple vasque", value: "simple-vasque" },
-  { label: "Double vasque", value: "double-vasque" },
+  { label: "Vasque seule (sans meuble)", value: "vasque-seule", image: vasqueSuspendueImage },
+  { label: "Meuble suspendu", value: "meuble-suspendu", image: meubleSuspenduImage },
+  { label: "Meuble sur pieds", value: "meuble-pieds", image: meubleSurPiedsImage },
+  { label: "Simple vasque", value: "simple-vasque", image: meubleSimpleVasqueImage },
+  { label: "Double vasque", value: "double-vasque", image: meubleDoubleVasqueImage },
 ];
 
 const porteOptions = [
-  { label: "Paroi fixe", value: "fixe" },
-  { label: "Porte de douche battante", value: "battante" },
-  { label: "Porte de douche coulissante", value: "coulissante" },
-  { label: "Porte de douche pliable", value: "pliable" },
+  { label: "Paroi fixe", value: "fixe", image: totsParoiItalienneImage },
+  { label: "Porte de douche battante", value: "battante", image: totsPortePivotanteImage },
+  { label: "Porte de douche coulissante", value: "coulissante", image: totsPorteCoulissanteImage },
+  { label: "Porte de douche pliable", value: "pliable", image: totsPortePliableImage },
 ];
 
 const typeDoucheOptions = [
@@ -199,30 +199,30 @@ const typeDoucheOptions = [
 ];
 
 const typePommeauOptions = [
-  { value: "pommeau-main", label: "Pommeau à main uniquement" },
-  { value: "pommeau-fixe", label: "Pommeau fixe (plafonnier ou mural)" },
-  { value: "pommeau-combo", label: "Pommeau fixe + douchette à main" },
-  { value: "colonne", label: "Colonne de douche complète" },
+  { value: "pommeau-main", label: "Pommeau à main uniquement", image: chateletDouchetteImage },
+  { value: "pommeau-fixe", label: "Pommeau fixe (plafonnier ou mural)", image: chateletCielPluieImage },
+  { value: "pommeau-combo", label: "Pommeau fixe + douchette à main", image: chateletColonneImage },
+  { value: "colonne", label: "Colonne de douche complète", image: chateletEncastreImage },
 ];
 
 const typeReceveurOptions = [
-  { label: "Receveur à poser", value: "a-poser" },
-  { label: "Receveur à carreler", value: "a-carreler" },
-  { label: "Receveur à encastrer", value: "a-encastrer" },
-  { label: "Receveur en résine", value: "resine" },
-  { label: "Receveur en acrylique", value: "acrylique" },
+  { label: "Receveur à poser", value: "a-poser", image: receveursImage },
+  { label: "Receveur à carreler", value: "a-carreler", image: receveursImage },
+  { label: "Receveur à encastrer", value: "a-encastrer", image: receveursImage },
+  { label: "Receveur en résine", value: "resine", image: receveursImage },
+  { label: "Receveur en acrylique", value: "acrylique", image: receveursImage },
 ];
 
 const typeBaignoireOptions = [
-  { label: "Baignoire en fonte", value: "fonte" },
-  { label: "Baignoire en acier", value: "acier" },
-  { label: "Baignoire en résine / acrylique", value: "resine" },
+  { label: "Baignoire en fonte", value: "fonte", image: baignoiresImage },
+  { label: "Baignoire en acier", value: "acier", image: baignoiresImage },
+  { label: "Baignoire en résine / acrylique", value: "resine", image: baignoiresImage },
 ];
 
 const robinetterieBaignoireOptions = [
-  { value: "applique", label: "En applique (sur le mur)" },
-  { value: "encastre", label: "Encastré (dans le mur)" },
-  { value: "sur-gorge", label: "Sur gorge (sur le rebord)" },
+  { value: "applique", label: "En applique (sur le mur)", image: robinetterieAppliqueImage },
+  { value: "encastre", label: "Encastré (dans le mur)", image: robinetterieEncastreImage },
+  { value: "sur-gorge", label: "Sur gorge (sur le rebord)", image: robinetterieSurGorgeImage },
 ];
 
 const emplacementMachineOptions = [
@@ -723,16 +723,32 @@ export default function Devis() {
                     <div className="mt-6 pt-6 border-t border-border">
                       <Label className="text-sm font-medium text-muted-foreground mb-3 block">Type de receveur</Label>
                       
-                      {/* Image de référence receveurs */}
-                      <div className="mb-4 rounded-2xl overflow-hidden">
-                        <img 
-                          src={receveursImage} 
-                          alt="Types de receveurs - À poser, À carreler, Encastré, Résine, Acrylique" 
-                          className="w-full h-auto"
-                        />
-                      </div>
+                      <Select 
+                        value={formData.typeReceveur[0] || ""} 
+                        onValueChange={(value) => setFormData(prev => ({ ...prev, typeReceveur: [value] }))}
+                      >
+                        <SelectTrigger className="w-full md:w-80">
+                          <SelectValue placeholder="Choisir un type de receveur..." />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {typeReceveurOptions.map((option) => (
+                            <SelectItem key={option.value} value={option.value}>
+                              {option.label}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
 
-                      <CheckboxGroup options={typeReceveurOptions} field="typeReceveur" columns={3} />
+                      {formData.typeReceveur.length > 0 && formData.typeReceveur[0] && (
+                        <div className="mt-4 flex flex-col items-center gap-3">
+                          <div className="w-48 h-48 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg">
+                            <img src={receveursImage} alt="Types de receveurs" className="w-full h-full object-cover" />
+                          </div>
+                          <span className="text-sm font-medium text-foreground">
+                            {typeReceveurOptions.find(opt => opt.value === formData.typeReceveur[0])?.label}
+                          </span>
+                        </div>
+                      )}
                     </div>
                   )}
 
@@ -741,16 +757,32 @@ export default function Devis() {
                     <div className="mt-6 pt-6 border-t border-border">
                       <Label className="text-sm font-medium text-muted-foreground mb-3 block">Style de baignoire</Label>
                       
-                      {/* Image de référence baignoires */}
-                      <div className="mb-4 rounded-2xl overflow-hidden">
-                        <img 
-                          src={baignoiresImage} 
-                          alt="Styles de baignoires - Fonte, Acier émaillé, Résine/Acrylique" 
-                          className="w-full h-auto"
-                        />
-                      </div>
+                      <Select 
+                        value={formData.typeBaignoire[0] || ""} 
+                        onValueChange={(value) => setFormData(prev => ({ ...prev, typeBaignoire: [value] }))}
+                      >
+                        <SelectTrigger className="w-full md:w-80">
+                          <SelectValue placeholder="Choisir un style de baignoire..." />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {typeBaignoireOptions.map((option) => (
+                            <SelectItem key={option.value} value={option.value}>
+                              {option.label}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
 
-                      <CheckboxGroup options={typeBaignoireOptions} field="typeBaignoire" />
+                      {formData.typeBaignoire.length > 0 && formData.typeBaignoire[0] && (
+                        <div className="mt-4 flex flex-col items-center gap-3">
+                          <div className="w-48 h-48 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg">
+                            <img src={baignoiresImage} alt="Styles de baignoires" className="w-full h-full object-cover" />
+                          </div>
+                          <span className="text-sm font-medium text-foreground">
+                            {typeBaignoireOptions.find(opt => opt.value === formData.typeBaignoire[0])?.label}
+                          </span>
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
@@ -765,16 +797,32 @@ export default function Devis() {
                   </h2>
                   <p className="text-muted-foreground text-sm mb-6">Choisissez le type de WC adapté à votre salle de bain.</p>
                   
-                  {/* Image de référence */}
-                  <div className="mb-6 rounded-2xl overflow-hidden">
-                    <img 
-                      src={wcTypesImage} 
-                      alt="Types de WC - WC Suspendu, WC Classique" 
-                      className="w-full h-auto"
-                    />
-                  </div>
+                  <Select 
+                    value={formData.wcType[0] || ""} 
+                    onValueChange={(value) => setFormData(prev => ({ ...prev, wcType: [value] }))}
+                  >
+                    <SelectTrigger className="w-full md:w-80">
+                      <SelectValue placeholder="Choisir un type de WC..." />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {wcOptions.map((option) => (
+                        <SelectItem key={option.value} value={option.value}>
+                          {option.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
 
-                  <CheckboxGroup options={wcOptions} field="wcType" />
+                  {formData.wcType.length > 0 && formData.wcType[0] && formData.wcType[0] !== "wc-non" && (
+                    <div className="mt-4 flex flex-col items-center gap-3">
+                      <div className="w-48 h-48 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg">
+                        <img src={wcTypesImage} alt="Types de WC" className="w-full h-full object-cover" />
+                      </div>
+                      <span className="text-sm font-medium text-foreground">
+                        {wcOptions.find(opt => opt.value === formData.wcType[0])?.label}
+                      </span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Meuble vasque */}
@@ -787,54 +835,38 @@ export default function Devis() {
                   </h2>
                   <p className="text-muted-foreground text-sm mb-6">Découvrez les options de meubles vasques disponibles.</p>
                   
-                  {/* Images de référence - Meubles vasque */}
-                  <div className="mb-6">
-                    <p className="text-xs text-muted-foreground mb-3 text-center">Gamme Tots — tots.fr</p>
-                    <div className="grid grid-cols-2 md:grid-cols-5 gap-3 rounded-2xl overflow-hidden">
-                      <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
-                        <img 
-                          src={vasqueSuspendueImage} 
-                          alt="Vasque suspendue design" 
-                          className="w-full h-full object-cover"
-                        />
-                        <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Vasque seule</span>
-                      </div>
-                      <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
-                        <img 
-                          src={meubleSuspenduImage} 
-                          alt="Meuble suspendu avec vasque" 
-                          className="w-full h-full object-cover"
-                        />
-                        <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Suspendu</span>
-                      </div>
-                      <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
-                        <img 
-                          src={meubleSurPiedsImage} 
-                          alt="Meuble sur pieds avec vasque" 
-                          className="w-full h-full object-cover"
-                        />
-                        <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Sur pieds</span>
-                      </div>
-                      <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
-                        <img 
-                          src={meubleSimpleVasqueImage} 
-                          alt="Meuble simple vasque" 
-                          className="w-full h-full object-cover"
-                        />
-                        <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Simple vasque</span>
-                      </div>
-                      <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
-                        <img 
-                          src={meubleDoubleVasqueImage} 
-                          alt="Meuble double vasque" 
-                          className="w-full h-full object-cover"
-                        />
-                        <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Double vasque</span>
-                      </div>
-                    </div>
-                  </div>
+                  <Select 
+                    value={formData.meubleVasque[0] || ""} 
+                    onValueChange={(value) => setFormData(prev => ({ ...prev, meubleVasque: [value] }))}
+                  >
+                    <SelectTrigger className="w-full md:w-80">
+                      <SelectValue placeholder="Choisir un type de meuble vasque..." />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {meubleVasqueOptions.map((option) => (
+                        <SelectItem key={option.value} value={option.value}>
+                          {option.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
 
-                  <CheckboxGroup options={meubleVasqueOptions} field="meubleVasque" />
+                  {formData.meubleVasque.length > 0 && formData.meubleVasque[0] && (
+                    <div className="mt-4 flex flex-col items-center gap-3">
+                      {(() => {
+                        const selectedOption = meubleVasqueOptions.find(opt => opt.value === formData.meubleVasque[0]);
+                        if (!selectedOption) return null;
+                        return (
+                          <>
+                            <div className="w-48 h-64 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg">
+                              <img src={selectedOption.image} alt={selectedOption.label} className="w-full h-full object-cover" />
+                            </div>
+                            <span className="text-sm font-medium text-foreground">{selectedOption.label}</span>
+                          </>
+                        );
+                      })()}
+                    </div>
+                  )}
                 </div>
 
                 {/* Paroi de douche */}
@@ -847,46 +879,38 @@ export default function Devis() {
                   </h2>
                   <p className="text-muted-foreground text-sm mb-6">Choisissez le type de paroi adapté à votre espace.</p>
                   
-                  {/* Images de référence - Gamme Tots */}
-                  <div className="mb-6">
-                    <p className="text-xs text-muted-foreground mb-3 text-center">Gamme Tots — tots.fr</p>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 rounded-2xl overflow-hidden">
-                      <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
-                        <img 
-                          src={totsParoiItalienneImage} 
-                          alt="Paroi fixe à l'italienne" 
-                          className="w-full h-full object-cover"
-                        />
-                        <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Paroi fixe</span>
-                      </div>
-                      <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
-                        <img 
-                          src={totsPortePivotanteImage} 
-                          alt="Porte de douche pivotante" 
-                          className="w-full h-full object-cover"
-                        />
-                        <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Pivotante</span>
-                      </div>
-                      <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
-                        <img 
-                          src={totsPorteCoulissanteImage} 
-                          alt="Porte de douche coulissante" 
-                          className="w-full h-full object-cover"
-                        />
-                        <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Coulissante</span>
-                      </div>
-                      <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
-                        <img 
-                          src={totsPortePliableImage} 
-                          alt="Porte de douche pliable" 
-                          className="w-full h-full object-cover"
-                        />
-                        <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Pliable</span>
-                      </div>
-                    </div>
-                  </div>
+                  <Select 
+                    value={formData.porteDouche[0] || ""} 
+                    onValueChange={(value) => setFormData(prev => ({ ...prev, porteDouche: [value] }))}
+                  >
+                    <SelectTrigger className="w-full md:w-80">
+                      <SelectValue placeholder="Choisir un type de paroi..." />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {porteOptions.map((option) => (
+                        <SelectItem key={option.value} value={option.value}>
+                          {option.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
 
-                  <CheckboxGroup options={porteOptions} field="porteDouche" />
+                  {formData.porteDouche.length > 0 && formData.porteDouche[0] && (
+                    <div className="mt-4 flex flex-col items-center gap-3">
+                      {(() => {
+                        const selectedOption = porteOptions.find(opt => opt.value === formData.porteDouche[0]);
+                        if (!selectedOption) return null;
+                        return (
+                          <>
+                            <div className="w-48 h-64 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg">
+                              <img src={selectedOption.image} alt={selectedOption.label} className="w-full h-full object-cover" />
+                            </div>
+                            <span className="text-sm font-medium text-foreground">{selectedOption.label}</span>
+                          </>
+                        );
+                      })()}
+                    </div>
+                  )}
                 </div>
 
                 {/* Section Robinetterie centralisée */}
@@ -935,65 +959,38 @@ export default function Devis() {
                           <div>
                             <Label className="text-sm text-muted-foreground mb-3 block">Style de pommeau</Label>
                             
-                            {/* Images de référence pommeaux - Gamme Châtelet */}
-                            <div className="mb-4">
-                              <p className="text-xs text-muted-foreground mb-3 text-center">Gamme Châtelet — masalledebain.com</p>
-                              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 rounded-2xl overflow-hidden">
-                                <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
-                                  <img 
-                                    src={chateletDouchetteImage} 
-                                    alt="Douchette à main tube Châtelet" 
-                                    className="w-full h-full object-cover"
-                                  />
-                                  <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Douchette</span>
-                                </div>
-                                <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
-                                  <img 
-                                    src={chateletCielPluieImage} 
-                                    alt="Ciel de pluie Châtelet" 
-                                    className="w-full h-full object-cover"
-                                  />
-                                  <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Ciel de pluie</span>
-                                </div>
-                                <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
-                                  <img 
-                                    src={chateletColonneImage} 
-                                    alt="Colonne de douche Châtelet" 
-                                    className="w-full h-full object-cover"
-                                  />
-                                  <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Colonne</span>
-                                </div>
-                                <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
-                                  <img 
-                                    src={chateletEncastreImage} 
-                                    alt="Douche encastrée Châtelet" 
-                                    className="w-full h-full object-cover"
-                                  />
-                                  <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Encastré</span>
-                                </div>
-                              </div>
-                            </div>
-
-                            <RadioGroup 
+                            <Select 
                               value={formData.typePommeau} 
                               onValueChange={(value) => handleChange("typePommeau", value)}
-                              className="grid grid-cols-1 md:grid-cols-2 gap-4"
                             >
-                              {typePommeauOptions.map((option) => (
-                                <div 
-                                  key={option.value} 
-                                  className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
-                                    formData.typePommeau === option.value 
-                                      ? 'border-foreground bg-foreground/5' 
-                                      : 'border-border bg-card hover:border-foreground/30'
-                                  }`}
-                                  onClick={() => handleChange("typePommeau", option.value)}
-                                >
-                                  <RadioGroupItem value={option.value} id={`pommeau-${option.value}`} className="pointer-events-none" />
-                                  <Label htmlFor={`pommeau-${option.value}`} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
-                                </div>
-                              ))}
-                            </RadioGroup>
+                              <SelectTrigger className="w-full md:w-80">
+                                <SelectValue placeholder="Choisir un style de pommeau..." />
+                              </SelectTrigger>
+                              <SelectContent>
+                                {typePommeauOptions.map((option) => (
+                                  <SelectItem key={option.value} value={option.value}>
+                                    {option.label}
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+
+                            {formData.typePommeau && (
+                              <div className="mt-4 flex flex-col items-center gap-3">
+                                {(() => {
+                                  const selectedOption = typePommeauOptions.find(opt => opt.value === formData.typePommeau);
+                                  if (!selectedOption) return null;
+                                  return (
+                                    <>
+                                      <div className="w-48 h-64 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg">
+                                        <img src={selectedOption.image} alt={selectedOption.label} className="w-full h-full object-cover" />
+                                      </div>
+                                      <span className="text-sm font-medium text-foreground">{selectedOption.label}</span>
+                                    </>
+                                  );
+                                })()}
+                              </div>
+                            )}
                           </div>
                         </div>
                       </div>
@@ -1003,57 +1000,38 @@ export default function Devis() {
                     <div className="p-4 rounded-xl bg-muted/30">
                       <Label className="text-sm font-semibold text-foreground mb-3 block">🛁 Robinetterie baignoire</Label>
                       
-                      {/* Images de référence robinetterie baignoire */}
-                      <div className="mb-4">
-                        <p className="text-xs text-muted-foreground mb-3 text-center">Types d'installation</p>
-                        <div className="grid grid-cols-3 gap-3 rounded-2xl overflow-hidden">
-                          <div className="relative aspect-square overflow-hidden rounded-xl">
-                            <img 
-                              src={robinetterieAppliqueImage} 
-                              alt="Robinetterie en applique" 
-                              className="w-full h-full object-cover"
-                            />
-                            <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">En applique</span>
-                          </div>
-                          <div className="relative aspect-square overflow-hidden rounded-xl">
-                            <img 
-                              src={robinetterieEncastreImage} 
-                              alt="Robinetterie encastrée" 
-                              className="w-full h-full object-cover"
-                            />
-                            <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Encastré</span>
-                          </div>
-                          <div className="relative aspect-square overflow-hidden rounded-xl">
-                            <img 
-                              src={robinetterieSurGorgeImage} 
-                              alt="Robinetterie sur gorge" 
-                              className="w-full h-full object-cover"
-                            />
-                            <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Sur gorge</span>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <RadioGroup 
+                      <Select 
                         value={formData.robinetterieBaignoire} 
                         onValueChange={(value) => handleChange("robinetterieBaignoire", value)}
-                        className="grid grid-cols-1 md:grid-cols-3 gap-4"
                       >
-                        {robinetterieBaignoireOptions.map((option) => (
-                          <div 
-                            key={option.value} 
-                            className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer ${
-                              formData.robinetterieBaignoire === option.value 
-                                ? 'border-foreground bg-foreground/5' 
-                                : 'border-border bg-card hover:border-foreground/30'
-                            }`}
-                            onClick={() => handleChange("robinetterieBaignoire", option.value)}
-                          >
-                            <RadioGroupItem value={option.value} id={`baignoire-rob-${option.value}`} className="pointer-events-none" />
-                            <Label htmlFor={`baignoire-rob-${option.value}`} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
-                          </div>
-                        ))}
-                      </RadioGroup>
+                        <SelectTrigger className="w-full md:w-80">
+                          <SelectValue placeholder="Choisir un type de robinetterie..." />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {robinetterieBaignoireOptions.map((option) => (
+                            <SelectItem key={option.value} value={option.value}>
+                              {option.label}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+
+                      {formData.robinetterieBaignoire && (
+                        <div className="mt-4 flex flex-col items-center gap-3">
+                          {(() => {
+                            const selectedOption = robinetterieBaignoireOptions.find(opt => opt.value === formData.robinetterieBaignoire);
+                            if (!selectedOption) return null;
+                            return (
+                              <>
+                                <div className="w-48 h-48 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg">
+                                  <img src={selectedOption.image} alt={selectedOption.label} className="w-full h-full object-cover" />
+                                </div>
+                                <span className="text-sm font-medium text-foreground">{selectedOption.label}</span>
+                              </>
+                            );
+                          })()}
+                        </div>
+                      )}
                     </div>
 
                     {/* Robinetterie machine à laver - conditionnel */}
