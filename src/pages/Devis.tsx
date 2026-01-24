@@ -235,10 +235,20 @@ const robinetterieMLaverOptions = [
 ];
 
 const finitionsOptions = [
-  { label: "Laiton brossé", value: "laiton", color: "bg-[#C9A962]", description: "Chaleureux et raffiné" },
-  { label: "Nickel brossé", value: "nickel", color: "bg-[#A0A0A0]", description: "Discret et chic" },
-  { label: "Noir mat", value: "noir", color: "bg-[#2D2D2D]", description: "Graphique et moderne" },
-  { label: "Chromé", value: "chrome", color: "bg-[#D4D4D4]", description: "Lumineux et classique" },
+  { label: "Chrome", value: "chrome" },
+  { label: "Inox", value: "inox" },
+  { label: "Inox brossé", value: "inox-brosse" },
+  { label: "Nickel", value: "nickel" },
+  { label: "Nickel brossé", value: "nickel-brosse" },
+  { label: "Noir mat", value: "noir-mat" },
+  { label: "Gris anthracite", value: "gris-anthracite" },
+  { label: "Laiton", value: "laiton" },
+  { label: "Laiton brossé", value: "laiton-brosse" },
+  { label: "Or", value: "or" },
+  { label: "Or brossé", value: "or-brosse" },
+  { label: "Cuivre", value: "cuivre" },
+  { label: "Blanc", value: "blanc" },
+  { label: "Blanc mat", value: "blanc-mat" },
 ];
 
 const styleCarrelageOptions = [
