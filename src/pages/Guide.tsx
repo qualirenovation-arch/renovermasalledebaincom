@@ -255,42 +255,38 @@ const Guide = () => {
               </a>
               <a href="#section-5" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
                 <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">5</span>
-                <span className="line-clamp-1">Chacun son métier</span>
+                <span className="line-clamp-1">Plomberie</span>
               </a>
               <a href="#section-6" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
                 <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">6</span>
-                <span className="line-clamp-1">Plomberie</span>
+                <span className="line-clamp-1">Étanchéité</span>
               </a>
               <a href="#section-7" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
                 <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">7</span>
-                <span className="line-clamp-1">Étanchéité</span>
+                <span className="line-clamp-1">Receveur & baignoire</span>
               </a>
               <a href="#section-8" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
                 <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">8</span>
-                <span className="line-clamp-1">Receveur & baignoire</span>
+                <span className="line-clamp-1">Joints & finitions</span>
               </a>
               <a href="#section-9" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
                 <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">9</span>
-                <span className="line-clamp-1">Joints & finitions</span>
+                <span className="line-clamp-1">Robinetterie</span>
               </a>
               <a href="#section-10" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
                 <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">10</span>
-                <span className="line-clamp-1">Robinetterie</span>
+                <span className="line-clamp-1">Baignoire & receveur</span>
               </a>
               <a href="#section-11" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
                 <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">11</span>
-                <span className="line-clamp-1">Baignoire & receveur</span>
+                <span className="line-clamp-1">Peinture</span>
               </a>
               <a href="#section-12" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
                 <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">12</span>
-                <span className="line-clamp-1">Peinture</span>
+                <span className="line-clamp-1">VMC</span>
               </a>
               <a href="#section-13" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
                 <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">13</span>
-                <span className="line-clamp-1">VMC</span>
-              </a>
-              <a href="#section-14" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
-                <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">14</span>
                 <span className="line-clamp-1">Éclairage & chauffage</span>
               </a>
             </div>
@@ -477,7 +473,7 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* Section 4 - Rôle du maître d'œuvre */}
+      {/* Section 4 - Maître d'œuvre : votre allié de A à Z */}
       <section id="section-4" className="py-16 bg-primary text-primary-foreground scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
@@ -491,71 +487,99 @@ const Guide = () => {
                 4
               </div>
               <h2 className="text-2xl md:text-3xl font-serif">
-                Le rôle du maître d'œuvre : vous n'êtes jamais seul
+                Maître d'œuvre : votre allié de A à Z
               </h2>
             </div>
-            <div className="grid md:grid-cols-2 gap-8">
+            
+            {/* Introduction condensée */}
+            <div className="bg-primary-foreground/10 rounded-2xl p-6 mb-8">
+              <p className="text-lg mb-4">
+                👉 <strong>Votre présence n'est pas nécessaire sur le chantier.</strong> Je gère, je coordonne, je vous informe.
+              </p>
+              <p className="opacity-90">
+                Ce n'est pas une obligation légale, mais c'est inclus dans notre prestation car nous ne sommes pas des exécutants : 
+                <span className="font-semibold"> nous sommes des experts en rénovation</span>.
+              </p>
+            </div>
+
+            {/* Grille des avantages */}
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div>
-                <Users className="w-10 h-10 mb-4" />
-                <h3 className="text-xl font-semibold mb-4">En tant que maître d'œuvre :</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5" />
-                    <span>Je vous assiste dans les démarches auprès du syndic</span>
+                <Users className="w-8 h-8 mb-3" />
+                <h3 className="text-lg font-semibold mb-3">Ce que je fais pour vous :</h3>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4" />
+                    <span>Assistance démarches syndic</span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5" />
-                    <span>J'échange directement avec les interlocuteurs</span>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4" />
+                    <span>Coordination artisans & intervenants</span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5" />
-                    <span>J'assiste aux rendez-vous avec le plombier</span>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4" />
+                    <span>Gestion des décisions techniques</span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5" />
-                    <span>Je coordonne les décisions techniques</span>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4" />
+                    <span>Sélection & commande des produits</span>
                   </li>
                 </ul>
               </div>
-              <div className="bg-primary-foreground/10 rounded-2xl p-6">
-                <HardHat className="w-10 h-10 mb-4" />
-                <h3 className="text-xl font-semibold mb-4">Chantier en cours ?</h3>
-                <p className="text-lg mb-4">
-                  👉 Votre présence n'est pas nécessaire.
-                </p>
-                <p className="opacity-90">
-                  Je gère, je coordonne, je vous informe.
-                </p>
-                <p className="mt-4 italic opacity-80">
-                  💬 C'est l'un des grands avantages d'être accompagné par un maître d'œuvre.
-                </p>
+              <div>
+                <Ruler className="w-8 h-8 mb-3" />
+                <h3 className="text-lg font-semibold mb-3">Ce que vous gagnez :</h3>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4" />
+                    <span>Un interlocuteur unique</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4" />
+                    <span>Compatibilité technique vérifiée</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4" />
+                    <span>Délais et livraisons coordonnés</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4" />
+                    <span>Aucune décision laissée au hasard</span>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div className="mt-8 grid sm:grid-cols-5 gap-4 text-center">
-              <div className="bg-primary-foreground/10 rounded-xl p-4">
-                <p className="text-sm font-medium">✔️ Un interlocuteur unique</p>
+
+            {/* Résumé en badges */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+              <div className="bg-primary-foreground/10 rounded-xl p-3 text-center">
+                <p className="text-xs font-medium">✔️ Gestion imprévus</p>
               </div>
-              <div className="bg-primary-foreground/10 rounded-xl p-4">
-                <p className="text-sm font-medium">✔️ Gestion sereine des imprévus</p>
+              <div className="bg-primary-foreground/10 rounded-xl p-3 text-center">
+                <p className="text-xs font-medium">✔️ Représentation syndic</p>
               </div>
-              <div className="bg-primary-foreground/10 rounded-xl p-4">
-                <p className="text-sm font-medium">✔️ Coordination artisans</p>
+              <div className="bg-primary-foreground/10 rounded-xl p-3 text-center">
+                <p className="text-xs font-medium">✔️ Chantier fluide</p>
               </div>
-              <div className="bg-primary-foreground/10 rounded-xl p-4">
-                <p className="text-sm font-medium">✔️ Représentation syndic</p>
+              <div className="bg-primary-foreground/10 rounded-xl p-3 text-center">
+                <p className="text-xs font-medium">✔️ Sérénité garantie</p>
               </div>
-              <div className="bg-primary-foreground/10 rounded-xl p-4">
-                <p className="text-sm font-medium">✔️ Chantier qui avance</p>
-              </div>
+            </div>
+
+            {/* Citation finale */}
+            <div className="bg-primary-foreground/20 rounded-xl p-4 text-center">
+              <p className="font-medium italic">
+                🧠 Chacun son métier. Le maître d'œuvre ne fait pas "à peu près" : c'est l'art de bien faire, avec méthode et anticipation.
+              </p>
             </div>
             
             {/* Lien vers l'article Houzz */}
-            <div className="mt-8 text-center">
+            <div className="mt-6 text-center">
               <a 
                 href="https://www.houzz.fr/magazine/pourquoi-est-il-judicieux-de-faire-appel-a-un-maitre-d-oeuvre-stsetivw-vs~87724005"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary-foreground/90 hover:text-primary-foreground underline underline-offset-4 transition-colors"
+                className="inline-flex items-center gap-2 text-primary-foreground/90 hover:text-primary-foreground underline underline-offset-4 transition-colors text-sm"
               >
                 <ExternalLink className="w-4 h-4" />
                 <span>Lire l'interview Houzz : "Pourquoi faire appel à un maître d'œuvre ?"</span>
@@ -565,8 +589,8 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* Section 5 - Maître d'œuvre intégré : chacun son métier */}
-      <section id="section-5" className="py-16 bg-background scroll-mt-20">
+      {/* Section 5 - Plomberie */}
+      <section id="section-5" className="py-16 bg-accent/20 scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -577,90 +601,6 @@ const Guide = () => {
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
                 5
-              </div>
-              <h2 className="text-2xl md:text-3xl font-serif text-foreground">
-                Maître d'œuvre intégré : chacun son métier
-              </h2>
-            </div>
-            <motion.div 
-              className="bg-accent/50 rounded-xl p-6 border-l-4 border-primary cursor-pointer group hover:bg-accent/70 transition-all duration-300 hover:shadow-lg hover:border-l-8 mb-6"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <p className="text-foreground font-semibold mb-3 flex items-center gap-2">
-                <motion.span
-                  animate={{ rotate: [0, 15, -15, 0] }}
-                  transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
-                >
-                  <HelpCircle className="w-6 h-6 text-primary group-hover:text-primary/80 transition-colors" />
-                </motion.span>
-                Est-ce une obligation d'avoir un maître d'œuvre ?
-              </p>
-              <p className="text-muted-foreground mb-3">
-                👉 <span className="font-medium">Non, ce n'est pas une obligation légale.</span>
-              </p>
-              <p className="text-muted-foreground">
-                Mais c'est inclus dans notre prestation car nous ne sommes pas des exécutants : 
-                <span className="text-primary font-medium"> nous sommes des experts en rénovation</span>. 
-                Notre rôle est de concevoir, coordonner et garantir la réussite de votre projet de A à Z.
-              </p>
-            </motion.div>
-            <div className="bg-accent/30 rounded-2xl p-8">
-              <Ruler className="w-10 h-10 text-primary mb-4" />
-              <p className="text-lg text-muted-foreground mb-6">
-                👉 Avec un maître d'œuvre intégré, tout est pensé avec vous et pour vous.
-                Nous validons et sélectionnons ensemble chaque achat, nous gérons les commandes et les livraisons, et nous maîtrisons chaque choix du début à la fin.
-              </p>
-              <div className="grid sm:grid-cols-2 gap-4 mb-6">
-                <div className="flex items-center gap-3 bg-background rounded-xl p-4">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span>Produits adaptés au projet</span>
-                </div>
-                <div className="flex items-center gap-3 bg-background rounded-xl p-4">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span>Compatibilité technique vérifiée</span>
-                </div>
-                <div className="flex items-center gap-3 bg-background rounded-xl p-4">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span>Délais et livraisons coordonnés</span>
-                </div>
-                <div className="flex items-center gap-3 bg-background rounded-xl p-4">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span>Aucune décision laissée au hasard</span>
-                </div>
-              </div>
-              <div className="bg-primary/10 border border-primary/20 rounded-xl p-6 mb-6">
-                <p className="text-foreground font-semibold mb-2">🧠 Chacun son métier.</p>
-                <p className="text-muted-foreground">
-                  Même si vous êtes un excellent bricoleur, notre rôle n'est pas l'improvisation.
-                  Le maître d'œuvre ne fait pas "à peu près" :
-                </p>
-                <p className="text-primary font-medium mt-2">
-                  👉 C'est l'art de bien faire, dans les règles, avec méthode, anticipation… et sérénité.
-                </p>
-              </div>
-              <div className="bg-background rounded-xl p-4 border border-primary/20">
-                <p className="text-primary font-medium italic">
-                  💬 Résultat : un chantier fluide, maîtrisé, et un projet qui traverse le temps sans mauvaise surprise 😉
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 6 - Plomberie */}
-      <section id="section-6" className="py-16 bg-accent/20 scroll-mt-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
-                6
               </div>
               <h2 className="text-2xl md:text-3xl font-serif text-foreground">
                 Plomberie : refaire entièrement pour éviter les fuites
@@ -701,8 +641,8 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* Section 7 - Étanchéité */}
-      <section id="section-7" className="py-16 bg-background scroll-mt-20">
+      {/* Section 6 - Étanchéité */}
+      <section id="section-6" className="py-16 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -712,7 +652,7 @@ const Guide = () => {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
-                7
+                6
               </div>
               <h2 className="text-2xl md:text-3xl font-serif text-foreground">
                 Étanchéité salle de bain : la base invisible
@@ -759,8 +699,8 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* Section 8 - Receveur & baignoire */}
-      <section id="section-8" className="py-16 bg-accent/20 scroll-mt-20">
+      {/* Section 7 - Receveur & baignoire */}
+      <section id="section-7" className="py-16 bg-accent/20 scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -770,7 +710,7 @@ const Guide = () => {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
-                8
+                7
               </div>
               <h2 className="text-2xl md:text-3xl font-serif text-foreground">
                 Receveur et baignoire : pose, accès et maintenance
@@ -1005,8 +945,8 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* Section 9 - Joints & finitions */}
-      <section id="section-9" className="py-16 bg-background scroll-mt-20">
+      {/* Section 8 - Joints & finitions */}
+      <section id="section-8" className="py-16 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1016,7 +956,7 @@ const Guide = () => {
           >
             <div className="flex items-center gap-4 mb-8">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
-                9
+                8
               </div>
               <h2 className="text-2xl md:text-3xl font-serif text-foreground">
                 Joints, profils et finitions : le diable se cache dans le détail
@@ -1080,8 +1020,8 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* Section 10 - Robinetterie encastrée */}
-      <section id="section-10" className="py-16 bg-accent/20 scroll-mt-20">
+      {/* Section 9 - Robinetterie encastrée */}
+      <section id="section-9" className="py-16 bg-accent/20 scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1091,7 +1031,7 @@ const Guide = () => {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
-                10
+                9
               </div>
               <h2 className="text-2xl md:text-3xl font-serif text-foreground">
                 Robinetterie encastrée : anticiper dès la conception
@@ -1131,8 +1071,8 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* Section 11 - Baignoire & receveur matériaux */}
-      <section id="section-11" className="py-16 bg-background scroll-mt-20">
+      {/* Section 10 - Baignoire & receveur matériaux */}
+      <section id="section-10" className="py-16 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1142,7 +1082,7 @@ const Guide = () => {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
-                11
+                10
               </div>
               <h2 className="text-2xl md:text-3xl font-serif text-foreground">
                 Choisir sa baignoire et son receveur
@@ -1170,8 +1110,8 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* Section 12 - Peinture */}
-      <section id="section-12" className="py-16 bg-accent/20 scroll-mt-20">
+      {/* Section 11 - Peinture */}
+      <section id="section-11" className="py-16 bg-accent/20 scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1181,7 +1121,7 @@ const Guide = () => {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
-                12
+                11
               </div>
               <h2 className="text-2xl md:text-3xl font-serif text-foreground">
                 Peinture salle de bain : un produit adapté à l'humidité
@@ -1197,8 +1137,8 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* Section 13 - VMC */}
-      <section id="section-13" className="py-16 bg-background scroll-mt-20">
+      {/* Section 12 - VMC */}
+      <section id="section-12" className="py-16 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1208,7 +1148,7 @@ const Guide = () => {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
-                13
+                12
               </div>
               <h2 className="text-2xl md:text-3xl font-serif text-foreground">
                 VMC et ventilation : protéger la salle de bain dans le temps
@@ -1224,8 +1164,8 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* Section 14 - Éclairage */}
-      <section id="section-14" className="py-16 bg-accent/30 scroll-mt-20">
+      {/* Section 13 - Éclairage */}
+      <section id="section-13" className="py-16 bg-accent/30 scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1235,7 +1175,7 @@ const Guide = () => {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
-                14
+                13
               </div>
               <h2 className="text-2xl md:text-3xl font-serif text-foreground">
                 Éclairage, chauffage & confort
