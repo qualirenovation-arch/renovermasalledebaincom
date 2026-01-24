@@ -50,29 +50,29 @@ export function Header() {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 md:gap-4 group">
+          <Link to="/" className="flex items-center gap-2.5 md:gap-3 group flex-shrink-0">
             <img 
               src={qualirenovationLogo} 
               alt="Qualiconcept Logo" 
-              className="h-11 md:h-14 w-auto transition-transform duration-300 group-hover:scale-105"
+              className="h-10 md:h-12 w-auto transition-transform duration-300 group-hover:scale-105"
             />
             <div className="flex flex-col leading-tight">
-              <span className="font-display text-base md:text-xl font-bold text-navy tracking-tight">
-                RenoverMaSalleDeBain<span className="hidden sm:inline">.com</span>
+              <span className="font-display text-sm md:text-base font-bold text-navy tracking-tight whitespace-nowrap">
+                RenoverMaSalleDeBain<span className="hidden lg:inline">.com</span>
               </span>
-              <span className="text-xs md:text-sm font-semibold text-gold-dark hidden sm:block">
+              <span className="text-xs font-semibold text-gold-dark hidden sm:block">
                 by Qualiconcept
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center gap-1 ml-auto">
+          <nav className="hidden xl:flex items-center gap-1 ml-8">
             {desktopNavItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap ${
+                className={`px-3 py-2.5 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap ${
                   location.pathname === item.path
                     ? "bg-primary text-primary-foreground shadow-sm"
                     : "text-foreground hover:bg-secondary hover:text-foreground"
