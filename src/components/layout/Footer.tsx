@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
 import qualirenovationLogo from "@/assets/logos/qualirenovation-logo-new.png";
 import houzzLogo from "@/assets/logos/houzz-logo.png";
 const footerLinks = {
@@ -47,8 +47,8 @@ export function Footer() {
               Spécialiste de la rénovation de salle de bain et douche à l'italienne à Paris et en Île-de-France.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors" aria-label="Facebook">
-                <Facebook className="w-5 h-5" />
+              <a href="https://wa.me/33659764685" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center hover:bg-[#20BD5A] transition-colors" aria-label="WhatsApp">
+                <MessageCircle className="w-5 h-5 text-white" />
               </a>
               <a href="https://www.instagram.com/qualirenovation__travaux/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors" aria-label="Instagram">
                 <Instagram className="w-5 h-5" />
