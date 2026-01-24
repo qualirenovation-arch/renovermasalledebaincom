@@ -450,13 +450,33 @@ export default function Devis() {
                 Merci pour votre demande. Notre équipe vous recontactera sous 24h 
                 pour planifier une <strong>visite technique gratuite sur site</strong>.
               </p>
-              <Button variant="outline" size="lg" onClick={() => {
-                setIsSubmitted(false);
-                setFormData(initialFormData);
-                setUploadedFiles([]);
-              }}>
-                Faire une nouvelle demande
-              </Button>
+              
+              {/* Info email confirmation */}
+              <div className="bg-accent/30 rounded-xl p-6 mb-8 text-left">
+                <div className="flex items-start gap-3">
+                  <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-medium text-foreground mb-1">Email de confirmation envoyé</p>
+                    <p className="text-muted-foreground text-sm">
+                      Vous allez recevoir un récapitulatif de votre demande à l'adresse email indiquée, 
+                      avec les détails de votre projet et les prochaines étapes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button variant="default" size="lg" asChild>
+                  <a href="/">Retourner sur le site</a>
+                </Button>
+                <Button variant="outline" size="lg" onClick={() => {
+                  setIsSubmitted(false);
+                  setFormData(initialFormData);
+                  setUploadedFiles([]);
+                }}>
+                  Faire une nouvelle demande
+                </Button>
+              </div>
             </motion.div>
           </div>
         </section>
