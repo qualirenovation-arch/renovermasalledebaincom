@@ -763,6 +763,74 @@ const Guide = () => {
                 Receveur et baignoire : pose, accès et maintenance
               </h2>
             </div>
+
+            {/* Encadré explicatif : Qu'est-ce qu'un receveur de douche ? */}
+            <div className="bg-background rounded-2xl p-6 md:p-8 shadow-sm border border-primary/10 mb-8">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <HelpCircle className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Qu'est-ce qu'un receveur de douche ?</h3>
+                  <p className="text-muted-foreground">
+                    Le <strong>receveur de douche</strong> (aussi appelé "bac à douche") est la base sur laquelle vous vous tenez lorsque vous prenez votre douche. C'est l'élément qui <strong>collecte l'eau</strong> et la dirige vers la bonde d'évacuation.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="space-y-4 ml-0 md:ml-14">
+                <div>
+                  <h4 className="font-medium text-foreground mb-2">🎯 À quoi sert-il ?</h4>
+                  <ul className="space-y-2 text-muted-foreground text-sm">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span><strong>Étanchéité :</strong> il empêche l'eau de s'infiltrer dans le sol et les murs adjacents</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span><strong>Évacuation :</strong> sa pente intégrée guide l'eau vers la bonde pour un écoulement optimal</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span><strong>Sécurité :</strong> sa surface antidérapante limite les risques de glissade</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span><strong>Confort :</strong> il offre une surface stable et agréable sous les pieds</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="font-medium text-foreground mb-2">📦 Les différents types de receveurs</h4>
+                  <div className="grid sm:grid-cols-2 gap-3">
+                    <div className="bg-accent/30 rounded-lg p-3">
+                      <p className="font-medium text-sm text-foreground">Receveur extra-plat en résine</p>
+                      <p className="text-xs text-muted-foreground">Le plus répandu. Fin (3 cm), moderne, facile à poser.</p>
+                    </div>
+                    <div className="bg-accent/30 rounded-lg p-3">
+                      <p className="font-medium text-sm text-foreground">Receveur à carreler</p>
+                      <p className="text-xs text-muted-foreground">Permet un carrelage continu sol/douche. Esthétique haut de gamme.</p>
+                    </div>
+                    <div className="bg-accent/30 rounded-lg p-3">
+                      <p className="font-medium text-sm text-foreground">Receveur en acier émaillé</p>
+                      <p className="text-xs text-muted-foreground">Recoupable sur mesure. Idéal pour les espaces atypiques.</p>
+                    </div>
+                    <div className="bg-accent/30 rounded-lg p-3">
+                      <p className="font-medium text-sm text-foreground">Douche maçonnée</p>
+                      <p className="text-xs text-muted-foreground">Réalisée sur mesure. Totalement intégrée au sol (douche italienne).</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-primary/5 rounded-lg p-4 border border-primary/10">
+                  <p className="text-primary font-medium text-sm">
+                    💡 Le choix du receveur dépend de la hauteur de réservation disponible (espace sous le sol), de vos goûts esthétiques et de votre budget.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-accent/30 rounded-2xl p-6">
                 <Droplets className="w-8 h-8 text-primary mb-4" />
