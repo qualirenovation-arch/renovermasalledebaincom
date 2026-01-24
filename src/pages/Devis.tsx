@@ -741,32 +741,34 @@ export default function Devis() {
                     <div className="mt-6 pt-6 border-t border-border">
                       <Label className="text-sm font-medium text-muted-foreground mb-3 block">Style de baignoire</Label>
                       
-                      <Select 
-                        value={formData.typeBaignoire[0] || ""} 
-                        onValueChange={(value) => setFormData(prev => ({ ...prev, typeBaignoire: [value] }))}
-                      >
-                        <SelectTrigger className="w-full md:w-80">
-                          <SelectValue placeholder="Choisir un style de baignoire..." />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {typeBaignoireOptions.map((option) => (
-                            <SelectItem key={option.value} value={option.value}>
-                              {option.label}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
+                      <div className="flex flex-col md:flex-row md:items-start gap-4">
+                        <Select 
+                          value={formData.typeBaignoire[0] || ""} 
+                          onValueChange={(value) => setFormData(prev => ({ ...prev, typeBaignoire: [value] }))}
+                        >
+                          <SelectTrigger className="w-full md:w-72">
+                            <SelectValue placeholder="Choisir un style de baignoire..." />
+                          </SelectTrigger>
+                          <SelectContent>
+                            {typeBaignoireOptions.map((option) => (
+                              <SelectItem key={option.value} value={option.value}>
+                                {option.label}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
 
-                      {formData.typeBaignoire.length > 0 && formData.typeBaignoire[0] && (
-                        <div className="mt-4 flex flex-col items-center gap-3">
-                          <div className="w-48 h-48 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg">
-                            <img src={baignoiresImage} alt="Styles de baignoires" className="w-full h-full object-cover" />
+                        {formData.typeBaignoire.length > 0 && formData.typeBaignoire[0] && (
+                          <div className="flex items-center gap-3">
+                            <div className="w-32 h-32 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg shrink-0">
+                              <img src={baignoiresImage} alt="Styles de baignoires" className="w-full h-full object-cover" />
+                            </div>
+                            <span className="text-sm font-medium text-foreground">
+                              {typeBaignoireOptions.find(opt => opt.value === formData.typeBaignoire[0])?.label}
+                            </span>
                           </div>
-                          <span className="text-sm font-medium text-foreground">
-                            {typeBaignoireOptions.find(opt => opt.value === formData.typeBaignoire[0])?.label}
-                          </span>
-                        </div>
-                      )}
+                        )}
+                      </div>
                     </div>
                   )}
                 </div>
@@ -801,40 +803,40 @@ export default function Devis() {
                     </div>
                     Meuble vasque souhaité
                   </h2>
-                  <p className="text-muted-foreground text-sm mb-6">Découvrez les options de meubles vasques disponibles.</p>
+                  <p className="text-muted-foreground text-sm mb-4">Découvrez les options de meubles vasques disponibles.</p>
                   
-                  <Select 
-                    value={formData.meubleVasque[0] || ""} 
-                    onValueChange={(value) => setFormData(prev => ({ ...prev, meubleVasque: [value] }))}
-                  >
-                    <SelectTrigger className="w-full md:w-80">
-                      <SelectValue placeholder="Choisir un type de meuble vasque..." />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {meubleVasqueOptions.map((option) => (
-                        <SelectItem key={option.value} value={option.value}>
-                          {option.label}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+                  <div className="flex flex-col md:flex-row md:items-start gap-4">
+                    <Select 
+                      value={formData.meubleVasque[0] || ""} 
+                      onValueChange={(value) => setFormData(prev => ({ ...prev, meubleVasque: [value] }))}
+                    >
+                      <SelectTrigger className="w-full md:w-72">
+                        <SelectValue placeholder="Choisir un type de meuble vasque..." />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {meubleVasqueOptions.map((option) => (
+                          <SelectItem key={option.value} value={option.value}>
+                            {option.label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
 
-                  {formData.meubleVasque.length > 0 && formData.meubleVasque[0] && (
-                    <div className="mt-4 flex flex-col items-center gap-3">
-                      {(() => {
+                    {formData.meubleVasque.length > 0 && formData.meubleVasque[0] && (
+                      (() => {
                         const selectedOption = meubleVasqueOptions.find(opt => opt.value === formData.meubleVasque[0]);
                         if (!selectedOption) return null;
                         return (
-                          <>
-                            <div className="w-48 h-64 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg">
+                          <div className="flex items-center gap-3">
+                            <div className="w-28 h-36 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg shrink-0">
                               <img src={selectedOption.image} alt={selectedOption.label} className="w-full h-full object-cover" />
                             </div>
                             <span className="text-sm font-medium text-foreground">{selectedOption.label}</span>
-                          </>
+                          </div>
                         );
-                      })()}
-                    </div>
-                  )}
+                      })()
+                    )}
+                  </div>
                 </div>
 
                 {/* Paroi de douche */}
@@ -845,40 +847,40 @@ export default function Devis() {
                     </div>
                     Paroi de douche souhaitée
                   </h2>
-                  <p className="text-muted-foreground text-sm mb-6">Choisissez le type de paroi adapté à votre espace.</p>
+                  <p className="text-muted-foreground text-sm mb-4">Choisissez le type de paroi adapté à votre espace.</p>
                   
-                  <Select 
-                    value={formData.porteDouche[0] || ""} 
-                    onValueChange={(value) => setFormData(prev => ({ ...prev, porteDouche: [value] }))}
-                  >
-                    <SelectTrigger className="w-full md:w-80">
-                      <SelectValue placeholder="Choisir un type de paroi..." />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {porteOptions.map((option) => (
-                        <SelectItem key={option.value} value={option.value}>
-                          {option.label}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+                  <div className="flex flex-col md:flex-row md:items-start gap-4">
+                    <Select 
+                      value={formData.porteDouche[0] || ""} 
+                      onValueChange={(value) => setFormData(prev => ({ ...prev, porteDouche: [value] }))}
+                    >
+                      <SelectTrigger className="w-full md:w-72">
+                        <SelectValue placeholder="Choisir un type de paroi..." />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {porteOptions.map((option) => (
+                          <SelectItem key={option.value} value={option.value}>
+                            {option.label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
 
-                  {formData.porteDouche.length > 0 && formData.porteDouche[0] && (
-                    <div className="mt-4 flex flex-col items-center gap-3">
-                      {(() => {
+                    {formData.porteDouche.length > 0 && formData.porteDouche[0] && (
+                      (() => {
                         const selectedOption = porteOptions.find(opt => opt.value === formData.porteDouche[0]);
                         if (!selectedOption) return null;
                         return (
-                          <>
-                            <div className="w-48 h-64 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg">
+                          <div className="flex items-center gap-3">
+                            <div className="w-28 h-36 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg shrink-0">
                               <img src={selectedOption.image} alt={selectedOption.label} className="w-full h-full object-cover" />
                             </div>
                             <span className="text-sm font-medium text-foreground">{selectedOption.label}</span>
-                          </>
+                          </div>
                         );
-                      })()}
-                    </div>
-                  )}
+                      })()
+                    )}
+                  </div>
                 </div>
 
                 {/* Section Robinetterie centralisée */}
@@ -927,38 +929,38 @@ export default function Devis() {
                           <div>
                             <Label className="text-sm text-muted-foreground mb-3 block">Style de pommeau</Label>
                             
-                            <Select 
-                              value={formData.typePommeau} 
-                              onValueChange={(value) => handleChange("typePommeau", value)}
-                            >
-                              <SelectTrigger className="w-full md:w-80">
-                                <SelectValue placeholder="Choisir un style de pommeau..." />
-                              </SelectTrigger>
-                              <SelectContent>
-                                {typePommeauOptions.map((option) => (
-                                  <SelectItem key={option.value} value={option.value}>
-                                    {option.label}
-                                  </SelectItem>
-                                ))}
-                              </SelectContent>
-                            </Select>
+                            <div className="flex flex-col md:flex-row md:items-start gap-4">
+                              <Select 
+                                value={formData.typePommeau} 
+                                onValueChange={(value) => handleChange("typePommeau", value)}
+                              >
+                                <SelectTrigger className="w-full md:w-72">
+                                  <SelectValue placeholder="Choisir un style de pommeau..." />
+                                </SelectTrigger>
+                                <SelectContent>
+                                  {typePommeauOptions.map((option) => (
+                                    <SelectItem key={option.value} value={option.value}>
+                                      {option.label}
+                                    </SelectItem>
+                                  ))}
+                                </SelectContent>
+                              </Select>
 
-                            {formData.typePommeau && (
-                              <div className="mt-4 flex flex-col items-center gap-3">
-                                {(() => {
+                              {formData.typePommeau && (
+                                (() => {
                                   const selectedOption = typePommeauOptions.find(opt => opt.value === formData.typePommeau);
                                   if (!selectedOption) return null;
                                   return (
-                                    <>
-                                      <div className="w-48 h-64 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg">
+                                    <div className="flex items-center gap-3">
+                                      <div className="w-28 h-36 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg shrink-0">
                                         <img src={selectedOption.image} alt={selectedOption.label} className="w-full h-full object-cover" />
                                       </div>
                                       <span className="text-sm font-medium text-foreground">{selectedOption.label}</span>
-                                    </>
+                                    </div>
                                   );
-                                })()}
-                              </div>
-                            )}
+                                })()
+                              )}
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -968,38 +970,38 @@ export default function Devis() {
                     <div className="p-4 rounded-xl bg-muted/30">
                       <Label className="text-sm font-semibold text-foreground mb-3 block">🛁 Robinetterie baignoire</Label>
                       
-                      <Select 
-                        value={formData.robinetterieBaignoire} 
-                        onValueChange={(value) => handleChange("robinetterieBaignoire", value)}
-                      >
-                        <SelectTrigger className="w-full md:w-80">
-                          <SelectValue placeholder="Choisir un type de robinetterie..." />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {robinetterieBaignoireOptions.map((option) => (
-                            <SelectItem key={option.value} value={option.value}>
-                              {option.label}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
+                      <div className="flex flex-col md:flex-row md:items-start gap-4">
+                        <Select 
+                          value={formData.robinetterieBaignoire} 
+                          onValueChange={(value) => handleChange("robinetterieBaignoire", value)}
+                        >
+                          <SelectTrigger className="w-full md:w-72">
+                            <SelectValue placeholder="Choisir un type de robinetterie..." />
+                          </SelectTrigger>
+                          <SelectContent>
+                            {robinetterieBaignoireOptions.map((option) => (
+                              <SelectItem key={option.value} value={option.value}>
+                                {option.label}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
 
-                      {formData.robinetterieBaignoire && (
-                        <div className="mt-4 flex flex-col items-center gap-3">
-                          {(() => {
+                        {formData.robinetterieBaignoire && (
+                          (() => {
                             const selectedOption = robinetterieBaignoireOptions.find(opt => opt.value === formData.robinetterieBaignoire);
                             if (!selectedOption) return null;
                             return (
-                              <>
-                                <div className="w-48 h-48 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg">
+                              <div className="flex items-center gap-3">
+                                <div className="w-28 h-28 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg shrink-0">
                                   <img src={selectedOption.image} alt={selectedOption.label} className="w-full h-full object-cover" />
                                 </div>
                                 <span className="text-sm font-medium text-foreground">{selectedOption.label}</span>
-                              </>
+                              </div>
                             );
-                          })()}
-                        </div>
-                      )}
+                          })()
+                        )}
+                      </div>
                     </div>
 
                     {/* Robinetterie machine à laver - conditionnel */}
@@ -1034,33 +1036,32 @@ export default function Devis() {
                       <Label className="text-sm font-semibold text-foreground mb-3 block">✨ Finitions robinetterie</Label>
                       <p className="text-muted-foreground text-sm mb-4">Personnalisez votre robinetterie avec des finitions élégantes et durables.</p>
                       
-                      <Select 
-                        value={formData.finitionsRobinetterie[0] || ""} 
-                        onValueChange={(value) => {
-                          setFormData(prev => ({ ...prev, finitionsRobinetterie: [value] }));
-                        }}
-                      >
-                        <SelectTrigger className="w-full md:w-80">
-                          <SelectValue placeholder="Choisir une finition..." />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {finitionsOptions.map((option) => (
-                            <SelectItem key={option.value} value={option.value}>
-                              {option.label}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
+                      <div className="flex flex-col md:flex-row md:items-start gap-4">
+                        <Select 
+                          value={formData.finitionsRobinetterie[0] || ""} 
+                          onValueChange={(value) => {
+                            setFormData(prev => ({ ...prev, finitionsRobinetterie: [value] }));
+                          }}
+                        >
+                          <SelectTrigger className="w-full md:w-72">
+                            <SelectValue placeholder="Choisir une finition..." />
+                          </SelectTrigger>
+                          <SelectContent>
+                            {finitionsOptions.map((option) => (
+                              <SelectItem key={option.value} value={option.value}>
+                                {option.label}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
 
-                      {/* Affichage de l'image de la finition sélectionnée */}
-                      {formData.finitionsRobinetterie.length > 0 && formData.finitionsRobinetterie[0] && (
-                        <div className="mt-4">
-                          {(() => {
+                        {formData.finitionsRobinetterie.length > 0 && formData.finitionsRobinetterie[0] && (
+                          (() => {
                             const selectedFinition = finitionsOptions.find(opt => opt.value === formData.finitionsRobinetterie[0]);
                             if (!selectedFinition) return null;
                             return (
-                              <div className="flex flex-col items-center gap-3">
-                                <div className="w-48 h-48 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg">
+                              <div className="flex items-center gap-3">
+                                <div className="w-28 h-28 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg shrink-0">
                                   <img 
                                     src={selectedFinition.image} 
                                     alt={`Finition ${selectedFinition.label}`}
@@ -1070,9 +1071,9 @@ export default function Devis() {
                                 <span className="text-sm font-medium text-foreground">{selectedFinition.label}</span>
                               </div>
                             );
-                          })()}
-                        </div>
-                      )}
+                          })()
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
