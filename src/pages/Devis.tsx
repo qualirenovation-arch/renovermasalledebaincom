@@ -723,32 +723,16 @@ export default function Devis() {
                     <div className="mt-6 pt-6 border-t border-border">
                       <Label className="text-sm font-medium text-muted-foreground mb-3 block">Type de receveur</Label>
                       
-                      <Select 
-                        value={formData.typeReceveur[0] || ""} 
-                        onValueChange={(value) => setFormData(prev => ({ ...prev, typeReceveur: [value] }))}
-                      >
-                        <SelectTrigger className="w-full md:w-80">
-                          <SelectValue placeholder="Choisir un type de receveur..." />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {typeReceveurOptions.map((option) => (
-                            <SelectItem key={option.value} value={option.value}>
-                              {option.label}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
+                      {/* Image de référence receveurs */}
+                      <div className="mb-4 rounded-2xl overflow-hidden">
+                        <img 
+                          src={receveursImage} 
+                          alt="Types de receveurs - À poser, À carreler, Encastré, Résine, Acrylique" 
+                          className="w-full h-auto"
+                        />
+                      </div>
 
-                      {formData.typeReceveur.length > 0 && formData.typeReceveur[0] && (
-                        <div className="mt-4 flex flex-col items-center gap-3">
-                          <div className="w-48 h-48 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg">
-                            <img src={receveursImage} alt="Types de receveurs" className="w-full h-full object-cover" />
-                          </div>
-                          <span className="text-sm font-medium text-foreground">
-                            {typeReceveurOptions.find(opt => opt.value === formData.typeReceveur[0])?.label}
-                          </span>
-                        </div>
-                      )}
+                      <CheckboxGroup options={typeReceveurOptions} field="typeReceveur" columns={3} />
                     </div>
                   )}
 
@@ -797,32 +781,16 @@ export default function Devis() {
                   </h2>
                   <p className="text-muted-foreground text-sm mb-6">Choisissez le type de WC adapté à votre salle de bain.</p>
                   
-                  <Select 
-                    value={formData.wcType[0] || ""} 
-                    onValueChange={(value) => setFormData(prev => ({ ...prev, wcType: [value] }))}
-                  >
-                    <SelectTrigger className="w-full md:w-80">
-                      <SelectValue placeholder="Choisir un type de WC..." />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {wcOptions.map((option) => (
-                        <SelectItem key={option.value} value={option.value}>
-                          {option.label}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+                  {/* Image de référence */}
+                  <div className="mb-6 rounded-2xl overflow-hidden">
+                    <img 
+                      src={wcTypesImage} 
+                      alt="Types de WC - WC Suspendu, WC Classique" 
+                      className="w-full h-auto"
+                    />
+                  </div>
 
-                  {formData.wcType.length > 0 && formData.wcType[0] && formData.wcType[0] !== "wc-non" && (
-                    <div className="mt-4 flex flex-col items-center gap-3">
-                      <div className="w-48 h-48 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg">
-                        <img src={wcTypesImage} alt="Types de WC" className="w-full h-full object-cover" />
-                      </div>
-                      <span className="text-sm font-medium text-foreground">
-                        {wcOptions.find(opt => opt.value === formData.wcType[0])?.label}
-                      </span>
-                    </div>
-                  )}
+                  <CheckboxGroup options={wcOptions} field="wcType" />
                 </div>
 
                 {/* Meuble vasque */}
