@@ -150,7 +150,7 @@ const DegatsEaux = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Dégâts des eaux - Conseils et prévention | QualiRénovation</title>
+        <title>Dégâts des eaux - Conseils et prévention | Qualiconcept</title>
         <meta name="description" content="Conseils d'experts pour prévenir et gérer les dégâts des eaux. Découvrez nos bonnes pratiques et vidéos conseils pour protéger votre salle de bain." />
         <script type="application/ld+json">
           {JSON.stringify(faqJsonLd)}

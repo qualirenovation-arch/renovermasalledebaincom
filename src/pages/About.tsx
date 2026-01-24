@@ -232,7 +232,7 @@ export default function About() {
             >
               <img 
                 src={teamPhoto} 
-                alt="L'équipe QualiRénovation sur chantier" 
+                alt="L'équipe Qualiconcept sur chantier" 
                 className="w-full h-full object-cover"
               />
             </motion.div>

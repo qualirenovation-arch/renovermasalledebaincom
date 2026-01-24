@@ -83,7 +83,7 @@ export default function MentionsLegales() {
                 Les informations contenues sur ce site sont aussi précises que possible et le site est périodiquement mis à jour, mais peut toutefois contenir des inexactitudes, des omissions ou des lacunes.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                QualiRénovation by QualiConcept ne pourra être tenue responsable des dommages directs ou indirects résultant de l'accès ou de l'utilisation de ce site, y compris l'inaccessibilité, les pertes de données, détériorations, destructions ou virus qui pourraient affecter l'équipement informatique de l'utilisateur.
+                Qualiconcept ne pourra être tenue responsable des dommages directs ou indirects résultant de l'accès ou de l'utilisation de ce site, y compris l'inaccessibilité, les pertes de données, détériorations, destructions ou virus qui pourraient affecter l'équipement informatique de l'utilisateur.
               </p>
             </section>
 
@@ -93,7 +93,7 @@ export default function MentionsLegales() {
                 Liens hypertextes
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Le site renovermasalledebain.com peut contenir des liens vers d'autres sites internet. QualiRénovation by QualiConcept n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.
+                Le site renovermasalledebain.com peut contenir des liens vers d'autres sites internet. Qualiconcept n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.
               </p>
             </section>
 

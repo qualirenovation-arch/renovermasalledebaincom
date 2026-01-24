@@ -1018,7 +1018,7 @@ const albums: Album[] = [
     id: "st-ouen",
     title: "Deuxième chance — On conçoit, on ne pose pas",
     location: "Saint-Ouen (93) - Rue Pablo Picasso",
-    description: "AVANT (1ère rénovation ratée) : Plan de 169 cm avec 1 seule vasque, trappe visible, mitigeur mal placé, lave-linge bloqué, pas de faux plafond. Le client fait appel à QualiRénovation car sa SDB n'était pas fonctionnelle. APRÈS : Transformation totale ! Double vasque en pierre naturelle sur plan chêne verni marin, trappe invisible, faux plafond avec spots LED, meuble noir mat avec tiroir linge sale intégré (le clou du projet !), miroirs LED design et murs orange. Une charte graphique audacieuse et surtout FONCTIONNELLE.",
+    description: "AVANT (1ère rénovation ratée) : Plan de 169 cm avec 1 seule vasque, trappe visible, mitigeur mal placé, lave-linge bloqué, pas de faux plafond. Le client fait appel à Qualiconcept car sa SDB n'était pas fonctionnelle. APRÈS : Transformation totale ! Double vasque en pierre naturelle sur plan chêne verni marin, trappe invisible, faux plafond avec spots LED, meuble noir mat avec tiroir linge sale intégré (le clou du projet !), miroirs LED design et murs orange. Une charte graphique audacieuse et surtout FONCTIONNELLE.",
     coverImage: stOuen3,
     instagramLink: "https://www.instagram.com/reel/DKISLTuMLAY/",
     photos: [

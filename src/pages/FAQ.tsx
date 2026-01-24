@@ -347,7 +347,7 @@ export default function FAQ() {
                 </li>
               </ul>
               <p className="mt-6 text-muted-foreground italic">
-                Chez QualiRénovation by QualiConcept, on ne fait pas que rénover un lieu : 
+                Chez Qualiconcept, on ne fait pas que rénover un lieu : 
                 <span className="text-primary font-medium"> on vous accompagne, sereinement, du début à la fin.</span>
               </p>
             </motion.div>
