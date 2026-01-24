@@ -12,6 +12,8 @@ import guideJointAssorti from "@/assets/guide-joint-assorti.webp";
 import guideProfilFinition from "@/assets/guide-profil-finition.webp";
 import butteschaumont6 from "@/assets/buttes-chaumont-6.jpg";
 import cielDePluiePlafond from "@/assets/chatelet-ciel-pluie-plafond.jpg";
+import baignoireRangementNiches from "@/assets/baignoire-rangement-niches.jpg";
+import baignoireRangementTiroirs from "@/assets/baignoire-rangement-tiroirs.jpg";
 
 const Guide = () => {
   // FAQ Schema for SEO
@@ -1016,11 +1018,36 @@ const Guide = () => {
                 <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <Home className="w-5 h-5 text-green-700" />
                 </div>
-                <div>
+                <div className="flex-1">
                   <h4 className="font-semibold text-green-800 mb-2">💡 Gain de place : rangements sous baignoire</h4>
                   <p className="text-green-700 text-sm mb-3">
                     L'espace sous la baignoire est souvent perdu. Avec une conception adaptée, on peut créer :
                   </p>
+                  
+                  {/* Images illustratives */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div className="relative rounded-lg overflow-hidden">
+                      <img 
+                        src={baignoireRangementNiches} 
+                        alt="Baignoire avec niches de rangement intégrées" 
+                        className="w-full h-40 object-cover"
+                      />
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
+                        <p className="text-white text-xs font-medium">Niches ouvertes - Design épuré</p>
+                      </div>
+                    </div>
+                    <div className="relative rounded-lg overflow-hidden">
+                      <img 
+                        src={baignoireRangementTiroirs} 
+                        alt="Baignoire avec tiroirs de rangement intégrés" 
+                        className="w-full h-40 object-cover"
+                      />
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
+                        <p className="text-white text-xs font-medium">Tiroirs intégrés - Accès pratique</p>
+                      </div>
+                    </div>
+                  </div>
+                  
                   <div className="grid grid-cols-2 gap-3">
                     <div className="bg-white/80 rounded-lg p-3">
                       <p className="font-medium text-xs text-green-800">🗄️ Tiroirs intégrés</p>
