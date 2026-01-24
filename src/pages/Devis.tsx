@@ -25,6 +25,7 @@ import {
   Home
 } from "lucide-react";
 import { FormProgressBar } from "@/components/devis/FormProgressBar";
+import { AddressAutocomplete } from "@/components/ui/address-autocomplete";
 // Images de référence Châtelet supprimées - chaque finition a maintenant sa propre photo
 import stylesCarrelageImage from "@/assets/styles-carrelage-fr.jpg";
 import totsParoiItalienneImage from "@/assets/tots-paroi-italienne.jpg";
@@ -73,6 +74,8 @@ interface FormData {
   nom: string;
   email: string;
   telephone: string;
+  adresse: string;
+  ville: string;
   codePostal: string;
   dimensionPiece: string;
   typeLogement: string;
@@ -101,6 +104,8 @@ const initialFormData: FormData = {
   nom: "",
   email: "",
   telephone: "",
+  adresse: "",
+  ville: "",
   codePostal: "",
   dimensionPiece: "",
   typeLogement: "",
@@ -607,8 +612,38 @@ export default function Devis() {
                         className="rounded-xl"
                       />
                     </div>
+                    
+                    {/* Adresse avec autocomplétion */}
+                    <div className="space-y-2 md:col-span-2">
+                      <Label htmlFor="adresse">Adresse du chantier *</Label>
+                      <AddressAutocomplete
+                        id="adresse"
+                        value={formData.adresse}
+                        onChange={(value) => handleChange("adresse", value)}
+                        onAddressSelect={(address) => {
+                          if (address.city) handleChange("ville", address.city);
+                          if (address.postcode) handleChange("codePostal", address.postcode);
+                        }}
+                        placeholder="Commencez à taper votre adresse..."
+                        required
+                        className="rounded-xl"
+                      />
+                    </div>
+                    
+                    {/* Ville et Code Postal sur la même ligne */}
                     <div className="space-y-2">
-                      <Label htmlFor="codePostal">Code postal du chantier *</Label>
+                      <Label htmlFor="ville">Ville *</Label>
+                      <Input
+                        id="ville"
+                        value={formData.ville}
+                        onChange={(e) => handleChange("ville", e.target.value)}
+                        placeholder="Paris"
+                        required
+                        className="rounded-xl"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="codePostal">Code postal *</Label>
                       <Input
                         id="codePostal"
                         value={formData.codePostal}
@@ -618,6 +653,7 @@ export default function Devis() {
                         className="rounded-xl"
                       />
                     </div>
+                    
                     <div className="space-y-2 md:col-span-2">
                       <Label htmlFor="dimensionPiece">Quelle est la dimension de votre pièce ? (en m²)</Label>
                       <Input
