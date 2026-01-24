@@ -814,7 +814,7 @@ const Guide = () => {
                     </div>
                     <div className="bg-accent/30 rounded-lg p-3">
                       <p className="font-medium text-sm text-foreground">Receveur en acier émaillé</p>
-                      <p className="text-xs text-muted-foreground">Recoupable sur mesure. Idéal pour les espaces atypiques.</p>
+                      <p className="text-xs text-muted-foreground">Ajustable aux dimensions exactes. Idéal pour les espaces atypiques.</p>
                     </div>
                     <div className="bg-accent/30 rounded-lg p-3">
                       <p className="font-medium text-sm text-foreground">Douche maçonnée</p>
