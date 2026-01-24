@@ -249,7 +249,7 @@ const styleCarrelageOptions = [
 ];
 
 // hCaptcha site key
-const HCAPTCHA_SITE_KEY = "4eb7dd7b-5f9b-4d21-9b79-0a91e4e6dbe7";
+const HCAPTCHA_SITE_KEY = "00684ab0-a304-443e-bce6-2abe6892f1fa";
 
 export default function Devis() {
   const [formData, setFormData] = useState<FormData>(initialFormData);
