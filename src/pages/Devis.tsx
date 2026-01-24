@@ -46,6 +46,9 @@ import chateletEncastreImage from "@/assets/chatelet-encastre-inox.jpg";
 import chateletCielPluieImage from "@/assets/chatelet-ciel-pluie-plafond.jpg";
 import receveursImage from "@/assets/receveurs-douche.jpg";
 import baignoiresImage from "@/assets/baignoires-styles.jpg";
+import robinetterieAppliqueImage from "@/assets/robinetterie-applique.jpg";
+import robinetterieEncastreImage from "@/assets/robinetterie-encastre.jpg";
+import robinetterieSurGorgeImage from "@/assets/robinetterie-sur-gorge.jpg";
 
 interface FormData {
   prenom: string;
@@ -978,6 +981,38 @@ export default function Devis() {
                     {/* Robinetterie baignoire - toujours visible */}
                     <div className="p-4 rounded-xl bg-muted/30">
                       <Label className="text-sm font-semibold text-foreground mb-3 block">🛁 Robinetterie baignoire</Label>
+                      
+                      {/* Images de référence robinetterie baignoire */}
+                      <div className="mb-4">
+                        <p className="text-xs text-muted-foreground mb-3 text-center">Types d'installation</p>
+                        <div className="grid grid-cols-3 gap-3 rounded-2xl overflow-hidden">
+                          <div className="relative aspect-square overflow-hidden rounded-xl">
+                            <img 
+                              src={robinetterieAppliqueImage} 
+                              alt="Robinetterie en applique" 
+                              className="w-full h-full object-cover"
+                            />
+                            <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">En applique</span>
+                          </div>
+                          <div className="relative aspect-square overflow-hidden rounded-xl">
+                            <img 
+                              src={robinetterieEncastreImage} 
+                              alt="Robinetterie encastrée" 
+                              className="w-full h-full object-cover"
+                            />
+                            <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Encastré</span>
+                          </div>
+                          <div className="relative aspect-square overflow-hidden rounded-xl">
+                            <img 
+                              src={robinetterieSurGorgeImage} 
+                              alt="Robinetterie sur gorge" 
+                              className="w-full h-full object-cover"
+                            />
+                            <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Sur gorge</span>
+                          </div>
+                        </div>
+                      </div>
+                      
                       <RadioGroup 
                         value={formData.robinetterieBaignoire} 
                         onValueChange={(value) => handleChange("robinetterieBaignoire", value)}
@@ -1079,20 +1114,22 @@ export default function Devis() {
                         </div>
                       </div>
 
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                         {finitionsOptions.map((option) => (
                           <div 
                             key={option.value} 
-                            className={`flex flex-col items-center gap-3 p-5 rounded-xl border-2 transition-all cursor-pointer ${
+                            className={`flex items-center gap-2 px-4 py-3 rounded-xl border-2 transition-all cursor-pointer ${
                               (formData.finitionsRobinetterie).includes(option.value) 
                                 ? 'border-foreground bg-foreground/5' 
                                 : 'border-border bg-card hover:border-foreground/30'
                             }`}
                             onClick={() => handleCheckboxChange("finitionsRobinetterie", option.value, !formData.finitionsRobinetterie.includes(option.value))}
                           >
-                            <div className={`w-16 h-16 rounded-full ${option.color}`} />
-                            <span className="font-semibold text-center">{option.label}</span>
-                            <span className="text-xs text-muted-foreground text-center">{option.description}</span>
+                            <Checkbox 
+                              checked={formData.finitionsRobinetterie.includes(option.value)}
+                              className="pointer-events-none"
+                            />
+                            <span className="font-medium text-sm">{option.label}</span>
                           </div>
                         ))}
                       </div>
