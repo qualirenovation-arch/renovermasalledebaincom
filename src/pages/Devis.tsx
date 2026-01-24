@@ -60,6 +60,13 @@ import finitionOrBrosseImage from "@/assets/finition-or-brosse.jpg";
 import finitionCuivreImage from "@/assets/finition-cuivre.jpg";
 import finitionBlancImage from "@/assets/finition-blanc.jpg";
 import finitionBlancMatImage from "@/assets/finition-blanc-mat.jpg";
+import carrelageZelligeImage from "@/assets/carrelage-zellige.jpg";
+import carrelageMarbeImage from "@/assets/carrelage-marbre.jpg";
+import carrelageBetonImage from "@/assets/carrelage-beton.jpg";
+import carrelageTerazzoImage from "@/assets/carrelage-terrazzo.jpg";
+import carrelageMetroImage from "@/assets/carrelage-metro.jpg";
+import carrelageGraphiqueImage from "@/assets/carrelage-graphique.jpg";
+import carrelageNaturelImage from "@/assets/carrelage-naturel.jpg";
 
 interface FormData {
   prenom: string;
@@ -263,13 +270,13 @@ const finitionsOptions = [
 ];
 
 const styleCarrelageOptions = [
-  { label: "Zellige", value: "zellige" },
-  { label: "Effet marbre", value: "marbre" },
-  { label: "Béton ciré", value: "beton" },
-  { label: "Terrazzo", value: "terrazzo" },
-  { label: "Métro / biseauté", value: "metro" },
-  { label: "Graphique / géométrique", value: "graphique" },
-  { label: "Naturel (pierre, sable…)", value: "naturel" },
+  { label: "Zellige", value: "zellige", image: carrelageZelligeImage },
+  { label: "Effet marbre", value: "marbre", image: carrelageMarbeImage },
+  { label: "Béton ciré", value: "beton", image: carrelageBetonImage },
+  { label: "Terrazzo", value: "terrazzo", image: carrelageTerazzoImage },
+  { label: "Métro / biseauté", value: "metro", image: carrelageMetroImage },
+  { label: "Graphique / géométrique", value: "graphique", image: carrelageGraphiqueImage },
+  { label: "Naturel (pierre, sable…)", value: "naturel", image: carrelageNaturelImage },
 ];
 
 // hCaptcha site key
@@ -1138,18 +1145,59 @@ export default function Devis() {
                     </div>
                     Finitions et ambiance souhaitées
                   </h2>
-                  <p className="text-muted-foreground text-sm mb-6">Choisissez le style de carrelage qui correspond à vos envies.</p>
+                  <p className="text-muted-foreground text-sm mb-6">Sélectionnez un ou plusieurs styles qui vous inspirent.</p>
                   
-                  {/* Image de référence */}
-                  <div className="mb-6 rounded-2xl overflow-hidden">
-                    <img 
-                      src={stylesCarrelageImage} 
-                      alt="Styles de carrelage - Zellige, Marbre, Béton ciré, Terrazzo, Métro, Graphique, Naturel" 
-                      className="w-full h-auto"
-                    />
+                  {/* Grille de boutons image cliquables */}
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    {styleCarrelageOptions.map((option) => {
+                      const isSelected = formData.styleCarrelage.includes(option.value);
+                      return (
+                        <div
+                          key={option.value}
+                          onClick={() => handleCheckboxChange("styleCarrelage", option.value, !isSelected)}
+                          className={`relative cursor-pointer rounded-xl overflow-hidden border-3 transition-all duration-200 hover:scale-[1.02] ${
+                            isSelected 
+                              ? 'border-foreground ring-2 ring-foreground/20 shadow-lg' 
+                              : 'border-border hover:border-foreground/40'
+                          }`}
+                        >
+                          <div className="aspect-square">
+                            <img 
+                              src={option.image} 
+                              alt={option.label} 
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <div className={`absolute inset-0 flex items-end justify-center p-3 bg-gradient-to-t from-black/70 via-black/20 to-transparent`}>
+                            <span className="text-white text-sm font-medium text-center drop-shadow-md">
+                              {option.label}
+                            </span>
+                          </div>
+                          {isSelected && (
+                            <div className="absolute top-2 right-2 w-6 h-6 rounded-full bg-foreground flex items-center justify-center">
+                              <svg className="w-4 h-4 text-background" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                              </svg>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
                   </div>
-
-                  <CheckboxGroup options={styleCarrelageOptions} field="styleCarrelage" columns={3} />
+                  
+                  {formData.styleCarrelage.length > 0 && (
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      <span className="text-sm text-muted-foreground">Sélection :</span>
+                      {formData.styleCarrelage.map((value) => {
+                        const option = styleCarrelageOptions.find(o => o.value === value);
+                        return (
+                          <span key={value} className="text-sm font-medium bg-foreground/10 px-3 py-1 rounded-full">
+                            {option?.label}
+                          </span>
+                        );
+                      })}
+                    </div>
+                  )}
                 </div>
 
                 {/* Upload fichiers */}
