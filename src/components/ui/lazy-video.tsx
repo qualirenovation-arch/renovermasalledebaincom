@@ -24,7 +24,9 @@ export function LazyVideo({
   const [isVisible, setIsVisible] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
+  const [thumbnailUrl, setThumbnailUrl] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const previewVideoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -47,17 +49,56 @@ export function LazyVideo({
     return () => observer.disconnect();
   }, []);
 
+  // Extract first frame from video as thumbnail
+  useEffect(() => {
+    if (!isVisible || poster || thumbnailUrl) return;
+
+    const video = document.createElement('video');
+    video.crossOrigin = 'anonymous';
+    video.muted = true;
+    video.preload = 'metadata';
+    
+    video.onloadeddata = () => {
+      video.currentTime = 0.1; // Seek to 0.1s to get a frame
+    };
+    
+    video.onseeked = () => {
+      try {
+        const canvas = document.createElement('canvas');
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        const ctx = canvas.getContext('2d');
+        if (ctx) {
+          ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+          const dataUrl = canvas.toDataURL('image/jpeg', 0.8);
+          setThumbnailUrl(dataUrl);
+        }
+      } catch (e) {
+        console.log('Could not generate thumbnail');
+      }
+    };
+
+    video.src = src;
+    video.load();
+
+    return () => {
+      video.src = '';
+    };
+  }, [isVisible, src, poster, thumbnailUrl]);
+
   const handlePlay = () => {
     setShowVideo(true);
   };
 
-  // Generate a simple poster from video title or use placeholder
+  // Default placeholder while loading thumbnail
   const defaultPoster = `data:image/svg+xml,${encodeURIComponent(`
     <svg xmlns="http://www.w3.org/2000/svg" width="270" height="480" viewBox="0 0 270 480">
       <rect fill="#1a1a1a" width="270" height="480"/>
       <polygon fill="#ffffff" opacity="0.8" points="120,200 120,280 180,240" />
     </svg>
   `)}`;
+
+  const displayPoster = poster || thumbnailUrl || defaultPoster;
 
   return (
     <div ref={containerRef} className={`relative ${className}`}>
@@ -74,7 +115,7 @@ export function LazyVideo({
           aria-label={`Lire la vidéo${title ? `: ${title}` : ''}`}
         >
           <img 
-            src={poster || defaultPoster} 
+            src={displayPoster} 
             alt={title || "Aperçu vidéo"}
             className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
             loading="lazy"
