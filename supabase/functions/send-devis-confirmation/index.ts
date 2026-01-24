@@ -190,9 +190,15 @@ const handler = async (req: Request): Promise<Response> => {
       }
     );
   } catch (error: any) {
+    // Log detailed error server-side only for debugging
     console.error("Error in send-devis-confirmation function:", error);
+    console.error("Stack trace:", error.stack);
+    
+    // Return generic error message to client - never expose internal details
     return new Response(
-      JSON.stringify({ error: error.message }),
+      JSON.stringify({ 
+        error: "Une erreur est survenue lors du traitement de votre demande. Veuillez réessayer." 
+      }),
       {
         status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders },
