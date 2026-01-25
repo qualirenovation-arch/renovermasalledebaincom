@@ -41,9 +41,9 @@ export default function About() {
       {/* Hero */}
       <section className="relative py-24 md:py-32">
         <div className="absolute inset-0 bg-stone" />
-        <div className="relative container-custom">
+        <div className="relative container-custom px-4">
           <motion.div 
-            className="max-w-3xl"
+            className="max-w-3xl mx-auto md:mx-0 text-center md:text-left"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -51,10 +51,10 @@ export default function About() {
             <span className="inline-block px-4 py-2 rounded-full bg-accent/30 text-wood text-sm font-medium mb-6">
               À propos de nous
             </span>
-            <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6">
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">
               20 ans d'expertise chantier au service de vos projets
             </h1>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
               Qualirenovation by Qualiconcept, société créée en 2019, met à votre disposition 
               une maître d'œuvre expérimentée pour transformer votre salle de bain.
             </p>

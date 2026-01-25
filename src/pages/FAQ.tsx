@@ -251,9 +251,9 @@ export default function FAQ() {
       {/* Hero */}
       <section className="relative py-24 md:py-32">
         <div className="absolute inset-0 bg-stone" />
-        <div className="relative container-custom">
+        <div className="relative container-custom px-4">
           <motion.div 
-            className="max-w-3xl"
+            className="max-w-3xl mx-auto md:mx-0 text-center md:text-left"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -261,10 +261,10 @@ export default function FAQ() {
             <span className="inline-block px-4 py-2 rounded-full bg-accent/30 text-wood text-sm font-medium mb-6">
               Foire aux questions
             </span>
-            <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6">
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">
               Questions fréquentes sur la rénovation de salle de bain
             </h1>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
               Retrouvez les réponses à vos questions sur la création de douche à l'italienne, 
               la rénovation de salle de bain à Paris et nos services clé en main.
             </p>

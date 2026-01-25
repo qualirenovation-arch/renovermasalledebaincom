@@ -79,7 +79,7 @@ export default function WhyUs() {
       <section className="relative py-16 md:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-stone" />
         <div className="relative container-custom px-4 md:px-6">
-          <motion.div className="max-w-3xl" initial={{
+          <motion.div className="max-w-3xl mx-auto md:mx-0 text-center md:text-left" initial={{
           opacity: 0,
           y: 30
         }} animate={{
@@ -91,10 +91,10 @@ export default function WhyUs() {
             <span className="inline-block px-4 py-2 rounded-full bg-accent/30 text-wood text-sm font-medium mb-6">
               Pourquoi nous choisir
             </span>
-            <h1 className="font-display text-3xl md:text-5xl font-semibold mb-6 break-words">
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 break-words">
               La différence avec renovermasalledebain.com
             </h1>
-            <p className="text-muted-foreground text-lg leading-relaxed">Découvrez pourquoi les  clients nous font confiance pour renover leur salle de bain</p>
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">Découvrez pourquoi les clients nous font confiance pour rénover leur salle de bain</p>
           </motion.div>
         </div>
       </section>
