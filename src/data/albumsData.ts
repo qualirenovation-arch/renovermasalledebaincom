@@ -755,7 +755,6 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 5, image: coursVincennesSdb5, title: "Après — Détails", description: "Finitions noires" },
       { id: 6, image: coursVincennesSdbAvant1, title: "Avant — Baignoire", description: "Baignoire sabot à remplacer" },
       { id: 7, image: coursVincennesSdbAvant2, title: "Avant — Vue générale", description: "Salle de bain à rénover" },
-      { id: 8, image: coursVincennesWcAvant2, title: "Avant — WC", description: "WC attenant" },
     ],
   },
   {
