@@ -1346,9 +1346,9 @@ export default function Realisations() {
       {/* Hero */}
       <section className="relative py-24 md:py-32">
         <div className="absolute inset-0 bg-stone" />
-        <div className="relative container-custom">
+        <div className="relative container-custom px-4">
           <motion.div 
-            className="max-w-3xl"
+            className="max-w-3xl mx-auto md:mx-0 text-center md:text-left"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -1356,15 +1356,15 @@ export default function Realisations() {
             <span className="inline-block px-4 py-2 rounded-full bg-accent/30 text-wood text-sm font-medium mb-6">
               Nos réalisations
             </span>
-            <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6">
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">
               Découvrez nos chantiers
             </h1>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
               Du loft parisien au pavillon de banlieue, chaque projet raconte une métamorphose. 
               Parcourez nos albums pour découvrir nos rénovations de salle de bain, 
               avec notre maître d'œuvre Carina qui supervise chaque étape.
             </p>
-            <p className="text-wood font-medium text-xl italic">
+            <p className="text-wood font-medium text-lg md:text-xl italic">
               Et vous, team receveur minimaliste ou baignoire cocooning ?
             </p>
           </motion.div>
