@@ -744,7 +744,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     slug: "projet-paris-12-cours-vincennes-sdb-subway",
     title: "SDB — Subway & Noir",
     location: "Paris 12ème - Cours de Vincennes",
-    description: "AVANT : Salle de bain datée avec baignoire sabot et carrelage blanc uniforme. APRÈS : Rénovation contemporaine avec carrelage métro blanc, joints noirs, robinetterie noire mate et meuble vasque design. Douche à l'italienne avec receveur extra-plat.",
+    description: "Salle de bain garçon : noir & blanc, esprit contemporain\n\nPensée pour le garçon de la maison, cette salle de bain a été entièrement transformée pour gagner en confort, modernité et durabilité. Fini le receveur d'angle et le meuble vert daté : place à une douche spacieuse, un carrelage noir & blanc esprit subway et des lignes nettes, faciles à vivre au quotidien.\n\nLe meuble suspendu, la robinetterie noire mate et le miroir rétro-éclairé composent un ensemble sobre et graphique, parfaitement adapté à un univers masculin et évolutif.\n\nRésultat : une salle de bain fonctionnelle, contemporaine et intemporelle, pensée pour accompagner un enfant aujourd'hui… et un adulte demain.",
     coverImage: coursVincennesSdb1,
     photos: [
       { id: 1, image: coursVincennesSdb1, title: "Après — Vue d'ensemble", description: "Douche italienne et meuble noir" },
