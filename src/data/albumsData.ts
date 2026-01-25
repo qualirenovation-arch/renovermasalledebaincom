@@ -425,7 +425,7 @@ import armandCarrel6 from "@/assets/armand-carrel-6.jpg";
 import armandCarrel7 from "@/assets/armand-carrel-7.jpg";
 import armandCarrel8 from "@/assets/armand-carrel-8.jpg";
 
-// Bauchart Paris 8ème
+// Sergent Beauchart Paris 12ème
 import bauchartApres1 from "@/assets/bauchart-apres-1.jpg";
 import bauchartApres2 from "@/assets/bauchart-apres-2.jpg";
 import bauchartAvant1 from "@/assets/bauchart-avant-1.jpg";
@@ -599,18 +599,18 @@ export const albums: Album[] = [
     ],
   },
   {
-    id: "bauchart",
-    slug: "projet-paris-8-bauchart-renovation",
-    title: "Rénovation Rue de Bauchart",
-    location: "Paris 8ème - Rue de Bauchart",
-    description: "AVANT : Salle de bain datée avec baignoire encastrée et carrelage beige. APRÈS : Transformation moderne avec douche à l'italienne, carrelage grand format et robinetterie contemporaine.",
+    id: "sergent-beauchart",
+    slug: "projet-paris-12-sergent-beauchart-degat-eaux",
+    title: "Dégât des eaux : du chaos à la transformation",
+    location: "Paris 12ème - Rue Sergent Beauchart",
+    description: "Dégât des eaux en cuisine ou en salle de bain ? Vous n'êtes pas seul. Regardez l'avant / après.\n\nParce qu'un dégât des eaux, c'est toujours un coup dur… mais aussi souvent le point de départ d'un projet mieux pensé, plus fonctionnel, plus durable.\n\n👉 Diagnostic\n👉 Reprise technique\n👉 Optimisation de l'espace\n👉 Finitions propres et pérennes\n\nDu chaos à une pièce transformée. Oui, c'est possible. Et non, vous n'êtes clairement pas seul.",
     coverImage: bauchartApres1,
     photos: [
-      { id: 1, image: bauchartApres1, title: "Après — Vue d'ensemble", description: "Douche italienne moderne" },
-      { id: 2, image: bauchartApres2, title: "Après — Détails", description: "Finitions soignées" },
-      { id: 3, image: bauchartAvant1, title: "Avant — Vue générale", description: "Baignoire et carrelage beige" },
-      { id: 4, image: bauchartAvant2, title: "Avant — Baignoire", description: "Espace à transformer" },
-      { id: 5, image: bauchartAvant3, title: "Avant — Détail", description: "Équipements datés" },
+      { id: 1, image: bauchartApres1, title: "Après — Cuisine rénovée", description: "Transformation complète après sinistre" },
+      { id: 2, image: bauchartApres2, title: "Après — Vue évier", description: "Finitions soignées et durables" },
+      { id: 3, image: bauchartAvant1, title: "Avant — État des lieux", description: "Dégâts après sinistre" },
+      { id: 4, image: bauchartAvant2, title: "Avant — Traces de moisissures", description: "Dommages à traiter" },
+      { id: 5, image: bauchartAvant3, title: "Avant — Démolition", description: "Reprise technique nécessaire" },
     ],
   },
   // ========== PARIS 9ÈME (75009) ==========
