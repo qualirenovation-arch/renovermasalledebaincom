@@ -532,9 +532,9 @@ export const albums: Album[] = [
   },
   {
     id: "rue-des-puits",
-    slug: "projet-paris-5-rue-des-puits-terrazzo",
+    slug: "projet-suresnes-rue-des-puits-terrazzo",
     title: "Terrazzo & Robinetterie Dorée",
-    location: "Paris 5ème - Rue des Puits",
+    location: "Suresnes (92) - Rue des Puits",
     description: "AVANT : Salle de bain datée avec carrelage mosaïque et baignoire. APRÈS : Transformation luxueuse avec sol terrazzo, robinetterie dorée, double vasque et miroirs ronds rétroéclairés. Douche à l'italienne avec paroi fixe et niches intégrées.",
     coverImage: ruePuits1,
     photos: [
