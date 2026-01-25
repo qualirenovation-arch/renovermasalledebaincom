@@ -453,6 +453,10 @@ import soisyEnfants5 from "@/assets/soisy-enfants-5.jpg";
 import soisyEnfantsAvant1 from "@/assets/soisy-enfants-avant-1.jpg";
 import soisyEnfantsAvant2 from "@/assets/soisy-enfants-avant-2.jpg";
 
+// Place Daumesnil Paris 12ème
+import placeDaumesnil1 from "@/assets/place-daumesnil-1.jpg";
+import placeDaumesnil2 from "@/assets/place-daumesnil-2.jpg";
+
 // Vitry-sur-Seine
 import vitryApres1 from "@/assets/vitry-apres-1.jpg";
 import vitryApres2 from "@/assets/vitry-apres-2.jpg";
@@ -779,6 +783,21 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 7, image: coursVincennesMadameAvant1, title: "Avant — Cabine douche", description: "Cabine arrondie et carrelage gris" },
       { id: 8, image: coursVincennesMadameAvant2, title: "Avant — Salle de bain", description: "Ancien aménagement sans rangement" },
       { id: 9, image: coursVincennesMadameAvant3, title: "Avant — Espace WC", description: "Espace au-dessus du WC non exploité" },
+    ],
+  },
+  {
+    id: "place-daumesnil",
+    slug: "projet-paris-12-place-daumesnil-bleu-mineral-beton",
+    title: "Bleu minéral & béton urbain : le WC devient manifeste",
+    location: "Paris 12ème - Place Daumesnil",
+    description: "Dans cet appartement de la rue de Reuilly, le WC se transforme en terrain d'expression sobre et graphique. Le sol en béton tech, minéral et contemporain, dialogue avec un carreau ciment Paris Rivoli 25×25 cm en mur face, apportant rythme et profondeur à l'espace. La palette, dominée par des nuances claires et minérales, installe une atmosphère urbaine, presque architecturale.\n\nMais derrière l'esthétique, l'intelligence du plan. Le WC est déplacé dans l'autre sens, la porte devient coulissante, et l'ancien emplacement libéré permet d'encastrer le frigo côté cuisine. La gaine technique, repensée et intégrée côté cuisine, s'efface visuellement sans rien céder à la rigueur technique.\n\nUn projet précis et élégant, où le bleu minéral et le béton dessinent un WC discret mais affirmé — et prouvent qu'un espace secondaire peut, à lui seul, rééquilibrer tout un appartement parisien.",
+    coverImage: placeDaumesnil2,
+    instagramLink: "https://www.instagram.com/reel/C_aaIoPNMBz/",
+    photos: [
+      { id: 1, image: "/videos/place-daumesnil-1.mp4", title: "Vidéo — Visite", description: "Découvrez la transformation complète", isVideo: true },
+      { id: 2, image: "/videos/place-daumesnil-2.mp4", title: "Vidéo — Détails", description: "Focus sur les finitions", isVideo: true },
+      { id: 3, image: placeDaumesnil2, title: "Après — WC suspendu", description: "Carreau ciment Paris Rivoli et placard intégré" },
+      { id: 4, image: placeDaumesnil1, title: "Après — Lave-mains d'angle", description: "Meuble chêne et miroir doré" },
     ],
   },
   // ========== PARIS 13ÈME (75013) ==========
