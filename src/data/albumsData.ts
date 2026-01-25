@@ -415,6 +415,16 @@ import laTourAvant5 from "@/assets/la-tour-avant-5.jpg";
 // Courbevoie Lalyre
 import courbevoieLalyreAvant1 from "@/assets/courbevoie-lalyre-avant-1.jpg";
 
+// Armand Carrel Paris 19ème
+import armandCarrel1 from "@/assets/armand-carrel-1.jpg";
+import armandCarrel2 from "@/assets/armand-carrel-2.jpg";
+import armandCarrel3 from "@/assets/armand-carrel-3.jpg";
+import armandCarrel4 from "@/assets/armand-carrel-4.jpg";
+import armandCarrel5 from "@/assets/armand-carrel-5.jpg";
+import armandCarrel6 from "@/assets/armand-carrel-6.jpg";
+import armandCarrel7 from "@/assets/armand-carrel-7.jpg";
+import armandCarrel8 from "@/assets/armand-carrel-8.jpg";
+
 // Bauchart Paris 8ème
 import bauchartApres1 from "@/assets/bauchart-apres-1.jpg";
 import bauchartApres2 from "@/assets/bauchart-apres-2.jpg";
@@ -981,6 +991,25 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 5, image: gallery15, title: "Après — Vasque", description: "Meuble suspendu blanc" },
       { id: 6, image: gallery16, title: "Après — Sol terrazzo", description: "Finition élégante" },
       { id: 7, image: gallery17, title: "Après — Robinetterie", description: "Mitigeur chromé design" },
+    ],
+  },
+  // ========== PARIS 19ÈME (75019) ==========
+  {
+    id: "armand-carrel",
+    slug: "projet-paris-19-armand-carrel-mosaique-geometrique",
+    title: "Mosaïque géométrique & Noir mat",
+    location: "Paris 19ème - Rue Armand Carrel",
+    description: "Rénovation complète d'une salle de bain avec un style industriel élégant. Baignoire avec pare-bain verrière, meuble double vasque chêne avec robinetterie noire mate, WC suspendu avec mosaïque géométrique marbre, douche avec colonne design et niches intégrées, buanderie avec lave-linge et sèche-linge superposés dissimulés dans un placard.",
+    coverImage: armandCarrel1,
+    photos: [
+      { id: 1, image: armandCarrel1, title: "Après — Double vasque", description: "Meuble chêne et robinetterie noire mate" },
+      { id: 2, image: armandCarrel2, title: "Après — Vue d'ensemble", description: "Baignoire verrière et meuble vasque" },
+      { id: 3, image: armandCarrel3, title: "Après — Salle de bain complète", description: "Vue avec WC suspendu mosaïque" },
+      { id: 4, image: armandCarrel4, title: "Après — WC suspendu", description: "Mosaïque géométrique marbre" },
+      { id: 5, image: armandCarrel5, title: "Après — Douche et rangements", description: "Paroi vitrée et placard intégré" },
+      { id: 6, image: armandCarrel6, title: "Après — Douche italienne", description: "Colonne noire et rangement" },
+      { id: 7, image: armandCarrel7, title: "Après — Détail douche", description: "Colonne design et niches mosaïque" },
+      { id: 8, image: armandCarrel8, title: "Après — Buanderie intégrée", description: "Lave-linge et sèche-linge superposés" },
     ],
   },
   // ========== BOIS-COLOMBES (92270) ==========
