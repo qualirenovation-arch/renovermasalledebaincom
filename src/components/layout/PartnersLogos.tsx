@@ -9,6 +9,7 @@ import weberLogo from "@/assets/logos/weber.svg";
 import legrandLogo from "@/assets/logos/legrand.svg";
 import schneiderLogo from "@/assets/logos/schneider.svg";
 import atlanticLogo from "@/assets/logos/atlantic.svg";
+import pointpLogo from "@/assets/logos/pointp.svg";
 
 // Partner data with real SVG logos and text fallbacks
 const partners = [
@@ -28,6 +29,11 @@ const partners = [
     logo: weberLogo,
   },
   { 
+    name: "Point.P", 
+    url: "https://www.pointp.fr",
+    logo: pointpLogo,
+  },
+  { 
     name: "Legrand", 
     url: "https://www.legrand.fr",
     logo: legrandLogo,
@@ -43,40 +49,34 @@ const partners = [
     logo: atlanticLogo,
   },
   { 
+    name: "Cedeo", 
+    url: "https://www.cedeo.fr",
+    textLogo: "CEDEO",
+    style: "font-bold text-sm"
+  },
+  { 
+    name: "La Plateforme du Bâtiment", 
+    url: "https://www.laplateforme.com",
+    textLogo: "LA PLATEFORME",
+    style: "font-semibold text-[10px] tracking-wide leading-tight text-center"
+  },
+  { 
     name: "Wedi", 
     url: "https://www.wedi.de/fr",
     textLogo: "wedi",
-    style: "font-bold text-lg lowercase"
+    style: "font-bold text-base lowercase"
   },
   { 
     name: "Mapei", 
     url: "https://www.mapei.com/fr",
     textLogo: "MAPEI",
-    style: "font-bold text-base tracking-wide"
+    style: "font-bold text-sm tracking-wide"
   },
   { 
     name: "Kerakoll", 
     url: "https://www.kerakoll.com/fr",
     textLogo: "KERAKOLL",
-    style: "font-semibold text-sm tracking-wide"
-  },
-  { 
-    name: "Cedeo", 
-    url: "https://www.cedeo.fr",
-    textLogo: "CEDEO",
-    style: "font-bold text-base"
-  },
-  { 
-    name: "Espace Aubade", 
-    url: "https://www.frenchaubade.fr",
-    textLogo: "ESPACE AUBADE",
-    style: "font-medium text-xs tracking-wide"
-  },
-  { 
-    name: "Hudson Reed", 
-    url: "https://www.hudsonreed.fr",
-    textLogo: "HUDSON REED",
-    style: "font-medium text-xs tracking-wider"
+    style: "font-semibold text-xs tracking-wide"
   },
 ];
 
