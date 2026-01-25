@@ -612,10 +612,17 @@ export const albums: Album[] = [
   {
     id: "taitbout",
     slug: "projet-paris-9-taitbout-haussmannien",
-    title: "Rénovation haussmannienne",
+    title: "Douche à l'italienne et carrelage effet pierre",
+    subtitle: "Finition mate antidérapante",
     location: "Paris 9ème - Rue Taitbout",
-    description: "AVANT : Salle de bain classique dans un immeuble haussmannien avec baignoire et équipements datés. APRÈS : Transformation élégante en douche à l'italienne avec receveur extra-plat, paroi vitrée, carrelage contemporain et robinetterie moderne. Optimisation de l'espace pour un résultat lumineux et fonctionnel.",
+    description: `Cette salle de bain parisienne a été entièrement repensée pour offrir un confort d'usage durable, en tenant compte du fait qu'avec le temps, la baignoire devient peu pratique au quotidien. Elle a été remplacée par une douche à l'italienne de plain-pied, plus accessible et plus sécurisante.
+
+L'agencement optimise chaque mètre carré : une buanderie discrète sous le rampant transforme un volume perdu en espace fonctionnel, tandis qu'un banc sous la fenêtre apporte confort et praticité.
+Le sol et les murs sont habillés d'un carrelage effet pierre, en finition mate antidérapante au sol, créant une ambiance minérale, douce et intemporelle, avec une attention particulière portée aux joints et aux profilés de finition.
+
+Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie et valoriser durablement un appartement parisien.`,
     coverImage: taitbout5,
+    ctaButton: { label: "Valoriser mon bien – Demander un devis", link: "/devis" },
     photos: [
       { id: 1, image: taitbout5, title: "Après — Vue douche", description: "Douche à l'italienne avec paroi vitrée" },
       { id: 2, image: taitbout6, title: "Après — Vue d'ensemble", description: "Salle de bain rénovée" },
