@@ -535,7 +535,7 @@ export const albums: Album[] = [
     slug: "projet-suresnes-rue-des-puits-terrazzo",
     title: "La vie en bleu",
     location: "Suresnes (92) - Rue des Puits",
-    description: "Le bleu donne le ton. Aux murs, le carrelage Onyx Blue poli 60×60 cm crée une ambiance minérale et apaisante. Au sol, le Magda Marfil 60×120 cm apporte lumière et équilibre.\n\nMeuble IKEA customisé, plan effet marbre, double vasque en verre et robinetterie chromée : un ensemble raffiné où bleu profond, beige lumineux et bois naturel s'harmonisent pour bien commencer la journée.",
+    description: "Cette salle de bain contemporaine joue sur le contraste entre un carrelage aspect marbre Onyx Blue au mur et un carrelage beige Magda Marfil au sol, pour une ambiance élégante et lumineuse.\n\nUn meuble IKEA en bois entièrement customisé, surmonté d'un plan de travail effet marbre et équipé d'une double vasque en verre, structure l'espace avec légèreté. La robinetterie chromée et le miroir rétroéclairé renforcent le confort et la luminosité.\n\n👉 Le vrai plus : la machine à laver est dissimulée dans un placard à l'entrée de la salle de bain, offrant un espace fluide, épuré et parfaitement optimisé.\n\nUne rénovation pensée pour allier design, fonctionnalité et gain de place.",
     coverImage: ruePuits1,
     photos: [
       { id: 1, image: ruePuits1, title: "Après — Double vasque", description: "Meuble bois et miroirs ronds LED" },
