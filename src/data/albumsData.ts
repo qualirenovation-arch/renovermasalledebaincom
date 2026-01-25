@@ -533,9 +533,9 @@ export const albums: Album[] = [
   {
     id: "rue-des-puits",
     slug: "projet-suresnes-rue-des-puits-terrazzo",
-    title: "Terrazzo & Robinetterie Dorée",
+    title: "La vie en bleu",
     location: "Suresnes (92) - Rue des Puits",
-    description: "Adieu le carrelage mosaïque des années 90 et la baignoire encastrée sans charme. Place à une salle de bain résolument contemporaine où le terrazzo grand format dialogue avec la chaleur du bois naturel.\n\nLe duo de miroirs ronds rétroéclairés surplombe un meuble double vasque suspendu aux lignes épurées, tandis que la robinetterie dorée apporte une touche précieuse sans ostentation.\n\nCôté douche, l'espace s'ouvre généreusement derrière une paroi vitrée fixe. Les niches encastrées offrent un rangement malin, et le mitigeur thermostatique doré parfait l'ensemble avec élégance.",
+    description: "La vie en bleu pour commencer la journée.\n\nDans cette salle de bain, le bleu donne immédiatement le ton. Aux murs, le carrelage aspect marbre Onyx Blue poli 60×60 cm enveloppe l'espace de nuances profondes et minérales, créant une ambiance à la fois contemporaine et apaisante.\n\nAu sol, le carrelage aspect marbre Magda Marfil poli 60×120 cm apporte lumière et équilibre. Son beige veiné adoucit la composition et renforce la sensation d'espace grâce à son grand format.\n\nLe regard se pose sur un meuble IKEA en bois entièrement customisé, surmonté d'un plan de travail effet marbre, qui structure élégamment la pièce. La double vasque en verre apporte légèreté et transparence, tandis que la robinetterie chromée capte la lumière avec subtilité. Le miroir rétroéclairé vient parfaire l'ensemble, offrant un éclairage doux et flatteur.\n\nRésultat : une salle de bain raffinée et équilibrée, où le contraste entre bleu profond, beige lumineux et bois naturel crée un cadre élégant pour bien commencer la journée.",
     coverImage: ruePuits1,
     photos: [
       { id: 1, image: ruePuits1, title: "Après — Double vasque", description: "Meuble bois et miroirs ronds LED" },
