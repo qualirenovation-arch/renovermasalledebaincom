@@ -463,6 +463,7 @@ interface Review {
 interface Album {
   id: string;
   title: string;
+  subtitle?: string;
   location: string;
   description: string;
   coverImage: string;
@@ -471,6 +472,7 @@ interface Album {
   review?: Review;
   instagramLink?: string;
   instagramLinks?: string[];
+  ctaButton?: { label: string; link: string };
 }
 
 // Albums classés par code postal (Paris 3ème → 17ème, puis banlieue 92 → 93 → 94 → 95)
@@ -579,19 +581,21 @@ const albums: Album[] = [
   },
   {
     id: "faubourg-stdenis",
-    title: "Élégance dorée",
+    title: "Projet Faubourg Saint-Denis",
+    subtitle: "Noir & Marbre, l'élégance parisienne intemporelle",
     location: "Paris 10ème - Rue du Faubourg Saint-Denis",
-    description: "AVANT : Combles inexploités et espace perdu. APRÈS : Création d'une salle de bain élégante sous combles. Carrelage effet marbre blanc, double vasque suspendue avec robinetterie dorée, paroi verrière noire et poutres apparentes. Un mariage réussi entre charme ancien et modernité.",
+    description: "Cette salle de bain parisienne a été entièrement repensée dans un esprit chic, sobre et intemporel, où le contraste du noir et la noblesse du marbre blanc créent une atmosphère élégante et durable.\n\nLe carrelage grand format effet marbre apporte lumière et profondeur, tandis que les lignes épurées assurent une esthétique facile à projeter dans le temps.\n\nL'agencement a été optimisé pour offrir un confort maximal au quotidien : douche à l'italienne avec porte en verre, meuble double vasque suspendu et circulations fluides, parfaitement adaptées aux volumes parisiens.\n\nQue ce soit pour y habiter, pour le louer ou pour le remettre à la vente, ce type de salle de bain constitue un véritable levier de valeur immobilière, séduisant immédiatement occupants comme acquéreurs.",
     coverImage: faubourgStmartin3,
     instagramLink: "https://www.instagram.com/reel/DNQDsKnojLb/",
+    ctaButton: { label: "Valoriser mon bien – Demander un devis", link: "/devis" },
     photos: [
-      { id: 1, image: faubourgStmartin3, title: "Après — Double vasque", description: "Meuble suspendu et robinetterie dorée" },
-      { id: 2, image: faubourgStmartin4, title: "Après — Détail robinetterie", description: "Double robinetterie dorée élégante" },
+      { id: 1, image: faubourgStmartin3, title: "Après — Double vasque", description: "Meuble suspendu double vasque" },
+      { id: 2, image: faubourgStmartin4, title: "Après — Détail robinetterie", description: "Robinetterie noire élégante" },
       { id: 3, image: faubourgStmartin1, title: "Après — Vue d'ensemble", description: "Douche et vasque sous combles" },
-      { id: 4, image: faubourgStmartin6, title: "Après — Colonne de douche", description: "Robinetterie dorée effet marbre" },
+      { id: 4, image: faubourgStmartin6, title: "Après — Colonne de douche", description: "Robinetterie noire effet marbre" },
       { id: 5, image: faubourgStmartin5, title: "Après — WC suspendu", description: "Poutres apparentes et effet marbre" },
       { id: 6, image: faubourgStmartin2, title: "Après — Vue globale", description: "Optimisation sous pente" },
-      { id: 7, image: faubourgStmartin7, title: "Après — Détail douche", description: "Paroi noire et ciel de pluie doré" },
+      { id: 7, image: faubourgStmartin7, title: "Après — Détail douche", description: "Paroi noire et ciel de pluie" },
     ],
   },
   // ========== PARIS 11ÈME (75011) ==========
@@ -1551,8 +1555,28 @@ export default function Realisations() {
                 {/* Album header */}
                 <div className="mb-8">
                   <p className="text-sm text-wood font-medium mb-2">{selectedAlbum.location}</p>
-                  <h2 className="font-display text-3xl font-semibold mb-4">{selectedAlbum.title}</h2>
-                  <p className="text-muted-foreground max-w-3xl">{selectedAlbum.description}</p>
+                  <h2 className="font-display text-3xl font-semibold mb-2">{selectedAlbum.title}</h2>
+                  {selectedAlbum.subtitle && (
+                    <h3 className="font-display text-lg md:text-xl text-wood italic mb-4">{selectedAlbum.subtitle}</h3>
+                  )}
+                  <p className="text-muted-foreground max-w-3xl whitespace-pre-line">{selectedAlbum.description}</p>
+                  
+                  {/* CTA Button */}
+                  {selectedAlbum.ctaButton && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.2 }}
+                      className="mt-6"
+                    >
+                      <a 
+                        href={selectedAlbum.ctaButton.link}
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-wood to-wood-light text-white rounded-lg hover:opacity-90 transition-opacity font-medium shadow-lg"
+                      >
+                        {selectedAlbum.ctaButton.label}
+                      </a>
+                    </motion.div>
+                  )}
                   
                   {/* Avis client */}
                   {selectedAlbum.review && (
