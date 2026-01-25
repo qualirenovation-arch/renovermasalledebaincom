@@ -535,7 +535,7 @@ export const albums: Album[] = [
     slug: "projet-suresnes-rue-des-puits-terrazzo",
     title: "Terrazzo & Robinetterie Dorée",
     location: "Suresnes (92) - Rue des Puits",
-    description: "AVANT : Salle de bain datée avec carrelage mosaïque et baignoire. APRÈS : Transformation luxueuse avec sol terrazzo, robinetterie dorée, double vasque et miroirs ronds rétroéclairés. Douche à l'italienne avec paroi fixe et niches intégrées.",
+    description: "Adieu le carrelage mosaïque des années 90 et la baignoire encastrée sans charme. Place à une salle de bain résolument contemporaine où le terrazzo grand format dialogue avec la chaleur du bois naturel.\n\nLe duo de miroirs ronds rétroéclairés surplombe un meuble double vasque suspendu aux lignes épurées, tandis que la robinetterie dorée apporte une touche précieuse sans ostentation.\n\nCôté douche, l'espace s'ouvre généreusement derrière une paroi vitrée fixe. Les niches encastrées offrent un rangement malin, et le mitigeur thermostatique doré parfait l'ensemble avec élégance.",
     coverImage: ruePuits1,
     photos: [
       { id: 1, image: ruePuits1, title: "Après — Double vasque", description: "Meuble bois et miroirs ronds LED" },
