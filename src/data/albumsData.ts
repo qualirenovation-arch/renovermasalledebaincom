@@ -542,7 +542,7 @@ export const albums: Album[] = [
       { id: 2, image: ruePuits2, title: "Après — Vue d'ensemble", description: "Sol terrazzo et robinetterie dorée" },
       { id: 3, image: ruePuits3, title: "Après — Douche italienne", description: "Paroi fixe et niches intégrées" },
       { id: 4, image: ruePuits4, title: "Après — Détail robinetterie", description: "Mitigeur doré encastré" },
-      { id: 5, image: ruePuits5, title: "Après — WC suspendu", description: "Finitions soignées" },
+      { id: 5, image: ruePuits5, title: "Après — Baignoire", description: "Baignoire avec tablier carrelé" },
       { id: 6, image: ruePuits6, title: "Après — Vue générale", description: "Harmonie terrazzo et bois" },
       { id: 7, image: ruePuits7, title: "Après — Rangements", description: "Colonnes de rangement intégrées" },
       { id: 8, image: ruePuits8, title: "Après — Détail sol", description: "Terrazzo grand format" },
@@ -551,7 +551,7 @@ export const albums: Album[] = [
       { id: 11, image: ruePuitsAvant1, title: "Avant — Vue d'ensemble", description: "Salle de bain à transformer" },
       { id: 12, image: ruePuitsAvant2, title: "Avant — Baignoire", description: "Baignoire et mosaïque" },
       { id: 13, image: ruePuitsAvant3, title: "Avant — Détail", description: "Carrelage daté" },
-      { id: 14, image: ruePuitsAvant4, title: "Avant — WC", description: "WC à rénover" },
+      { id: 14, image: ruePuitsAvant4, title: "Avant — Détail carrelage", description: "Ancien carrelage à rénover" },
     ],
   },
   // ========== PARIS 6ÈME (75006) ==========
