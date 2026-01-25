@@ -48,7 +48,6 @@ const partnerCategories: PartnerCategory[] = [
       { name: "Wedi", url: "https://www.wedi.de/fr", description: "Panneaux de construction étanches" },
       { name: "Mapei", url: "https://www.mapei.com/fr", description: "Colles et produits chimiques" },
       { name: "Kerakoll", url: "https://www.kerakoll.com/fr", description: "Colles et joints écologiques" },
-      { name: "Ceramic Plus", url: "#", description: "Carrelages et faïences" },
       { name: "Ceramica.fr", url: "https://www.ceramica.fr", description: "Carrelages et céramiques" },
       { name: "Parquet-Carrelage.com", url: "https://www.parquet-carrelage.com", description: "Revêtements de sol" },
     ],
