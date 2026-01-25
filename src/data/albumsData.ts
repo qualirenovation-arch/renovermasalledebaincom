@@ -605,6 +605,10 @@ export const albums: Album[] = [
     location: "Paris 12ème - Rue Sergent Beauchart",
     description: "Dégât des eaux en cuisine ou en salle de bain ? Vous n'êtes pas seul. Regardez l'avant / après.\n\nParce qu'un dégât des eaux, c'est toujours un coup dur… mais aussi souvent le point de départ d'un projet mieux pensé, plus fonctionnel, plus durable.\n\n👉 Diagnostic\n👉 Reprise technique\n👉 Optimisation de l'espace\n👉 Finitions propres et pérennes\n\nDu chaos à une pièce transformée. Oui, c'est possible. Et non, vous n'êtes clairement pas seul.",
     coverImage: bauchartApres1,
+    ctaButton: {
+      label: "Découvrez notre service suite à un dégât des eaux",
+      link: "/degats-eaux"
+    },
     photos: [
       { id: 1, image: bauchartApres1, title: "Après — Cuisine rénovée", description: "Transformation complète après sinistre" },
       { id: 2, image: bauchartApres2, title: "Après — Vue évier", description: "Finitions soignées et durables" },
