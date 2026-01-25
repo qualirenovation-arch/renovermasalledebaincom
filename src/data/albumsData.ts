@@ -551,7 +551,7 @@ export const albums: Album[] = [
       { id: 11, image: ruePuitsAvant1, title: "Avant — Vue d'ensemble", description: "Salle de bain à transformer" },
       { id: 12, image: ruePuitsAvant2, title: "Avant — Baignoire", description: "Baignoire et mosaïque" },
       { id: 13, image: ruePuitsAvant3, title: "Avant — Détail", description: "Carrelage daté" },
-      { id: 14, image: ruePuitsAvant4, title: "Avant — Détail carrelage", description: "Ancien carrelage à rénover" },
+      { id: 14, image: ruePuitsAvant4, title: "Avant — Baignoire", description: "Baignoire à rénover" },
     ],
   },
   // ========== PARIS 6ÈME (75006) ==========
