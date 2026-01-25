@@ -1246,24 +1246,6 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   // ========== VINCENNES (94300) ==========
   {
-    id: "vincennes",
-    slug: "projet-vincennes-94-renovation",
-    title: "Rénovation Vincennes",
-    location: "Vincennes (94)",
-    description: "AVANT : Salle de bain datée avec baignoire et carrelage mosaïque. APRÈS : Transformation moderne avec douche à l'italienne, carrelage grand format et robinetterie contemporaine.",
-    coverImage: vincennes1,
-    review: {
-      text: "Carina a été exceptionnelle du début à la fin. Son écoute, son professionnalisme et sa créativité ont fait toute la différence. Nous sommes ravis du résultat et la recommandons chaudement.",
-      author: "Jean Claude / Claire",
-      link: "https://www.houzz.fr/viewReview/2045892/qualirenovation-by-qualiconcept-review"
-    },
-    photos: [
-      { id: 1, image: vincennes1, title: "Après — Vue d'ensemble", description: "Douche italienne moderne" },
-      { id: 2, image: vincennes2, title: "Après — Détails", description: "Finitions soignées" },
-      { id: 3, image: vincennes3, title: "Après — Vue complète", description: "Transformation réussie" },
-    ],
-  },
-  {
     id: "vincennes-mr",
     slug: "projet-vincennes-94-sdb-monsieur",
     title: "SDB Garçon — Noir & Blanc contemporain",
