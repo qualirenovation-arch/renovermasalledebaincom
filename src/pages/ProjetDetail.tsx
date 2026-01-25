@@ -265,8 +265,12 @@ const ProjetDetail = () => {
               Vous souhaitez une salle de bain similaire ?
             </h2>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Nos experts vous accompagnent de A à Z dans votre projet de rénovation. 
-              Demandez votre devis gratuit et sans engagement.
+              Que ce soit pour y habiter, pour le louer ou pour le remettre à la vente, une salle de bain bien pensée constitue un véritable levier de valeur immobilière, en séduisant immédiatement occupants comme acquéreurs.
+            </p>
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+              Nos experts vous accompagnent de A à Z dans votre projet de rénovation.
+              <br />
+              👉 Demandez votre devis gratuit et sans engagement.
             </p>
             <Link
               to="/devis"
