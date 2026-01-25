@@ -65,12 +65,15 @@ const partnerCategories: PartnerCategory[] = [
     ],
   },
   {
-    title: "Robinetterie",
+    title: "Robinetterie & Équipements",
     icon: "🔧",
     partners: [
       { name: "Horus", url: "https://www.hfrob.fr", description: "Robinetterie française haut de gamme" },
       { name: "Hudson Reed", url: "https://www.hudsonreed.fr", description: "Robinetterie et douches design" },
       { name: "CMR", url: "https://www.cmr-bain.fr", description: "Robinetterie et équipements sanitaires" },
+      { name: "MaSalleDeBain.com", url: "https://www.masalledebain.com", description: "Équipements sanitaires" },
+      { name: "Rue du Bain", url: "https://www.ruedubain.com", description: "Équipements de salle de bain" },
+      { name: "Reuter", url: "https://www.reuter.com", description: "Équipements sanitaires premium" },
     ],
   },
   {
@@ -115,9 +118,6 @@ const partnerCategories: PartnerCategory[] = [
       { name: "Leroy Merlin", url: "https://www.leroymerlin.fr", description: "Grande surface de bricolage" },
       { name: "IKEA", url: "https://www.ikea.com/fr", description: "Mobilier et accessoires" },
       { name: "ManoMano", url: "https://www.manomano.fr", description: "Bricolage et jardinage" },
-      { name: "MaSalleDeBain.com", url: "https://www.masalledebain.com", description: "Équipements sanitaires" },
-      { name: "Rue du Bain", url: "https://www.ruedubain.com", description: "Équipements de salle de bain" },
-      { name: "Reuter", url: "https://www.reuter.com", description: "Équipements sanitaires premium" },
     ],
   },
   {
