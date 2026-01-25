@@ -999,7 +999,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     slug: "projet-paris-19-armand-carrel-mosaique-geometrique",
     title: "Mosaïque géométrique & Noir mat",
     location: "Paris 19ème - Rue Armand Carrel",
-    description: "Rénovation complète d'une salle de bain avec un style industriel élégant. Baignoire avec pare-bain verrière, meuble double vasque chêne avec robinetterie noire mate, WC suspendu avec mosaïque géométrique marbre, douche avec colonne design et niches intégrées, buanderie avec lave-linge et sèche-linge superposés dissimulés dans un placard.",
+    description: "Une salle de bain tout-en-un, parfaitement maîtrisée\n\nDans cette pièce, tout est réuni : un WC, une baignoire, une douche avec receveur, et même une buanderie. Chaque fonction a été intégrée avec précision pour créer un espace complet, pratique et agréable à vivre, sans compromis sur le confort.\n\nL'agencement a été pensé pour permettre une cohabitation fluide au quotidien, que ce soit pour une utilisation familiale ou simultanée. Les volumes sont optimisés, les circulations sont naturelles, et chaque zone trouve sa place avec évidence.\n\nRésultat : une salle de bain ultra-fonctionnelle, où rien ne manque et où chaque mètre carré est intelligemment exploité — un vrai défi parisien relevé avec succès.",
     coverImage: armandCarrel1,
     photos: [
       { id: 1, image: armandCarrel1, title: "Après — Double vasque", description: "Meuble chêne et robinetterie noire mate" },
