@@ -2,175 +2,81 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-// Partner data with SVG paths where available
+// Import SVG logos
+import schluterLogo from "@/assets/logos/schluter.svg";
+import geberitLogo from "@/assets/logos/geberit.svg";
+import weberLogo from "@/assets/logos/weber.svg";
+import legrandLogo from "@/assets/logos/legrand.svg";
+import schneiderLogo from "@/assets/logos/schneider.svg";
+import atlanticLogo from "@/assets/logos/atlantic.svg";
+
+// Partner data with real SVG logos and text fallbacks
 const partners = [
   { 
-    name: "Schlüter", 
+    name: "Schlüter-Systems", 
     url: "https://www.schluter.fr",
-    svg: (
-      <svg viewBox="0 0 120 40" className="w-full h-full" role="img" aria-label="Schlüter-Systems">
-        <title>Schlüter-Systems</title>
-        <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle" 
-          className="fill-current font-bold text-[14px] tracking-tight" 
-          style={{ fontFamily: 'system-ui, sans-serif' }}>
-          SCHLÜTER
-        </text>
-      </svg>
-    )
-  },
-  { 
-    name: "Weber", 
-    url: "https://www.weber.fr",
-    svg: (
-      <svg viewBox="0 0 100 40" className="w-full h-full" role="img" aria-label="Weber">
-        <title>Weber</title>
-        <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle" 
-          className="fill-current font-bold text-[16px] tracking-wide" 
-          style={{ fontFamily: 'system-ui, sans-serif' }}>
-          WEBER
-        </text>
-      </svg>
-    )
+    logo: schluterLogo,
   },
   { 
     name: "Geberit", 
     url: "https://www.geberit.fr",
-    svg: (
-      <svg viewBox="0 0 100 40" className="w-full h-full" role="img" aria-label="Geberit">
-        <title>Geberit</title>
-        <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle" 
-          className="fill-current font-semibold text-[14px]" 
-          style={{ fontFamily: 'system-ui, sans-serif' }}>
-          GEBERIT
-        </text>
-      </svg>
-    )
+    logo: geberitLogo,
   },
   { 
-    name: "Wedi", 
-    url: "https://www.wedi.de/fr",
-    svg: (
-      <svg viewBox="0 0 80 40" className="w-full h-full" role="img" aria-label="Wedi">
-        <title>Wedi</title>
-        <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle" 
-          className="fill-current font-bold text-[18px]" 
-          style={{ fontFamily: 'system-ui, sans-serif' }}>
-          wedi
-        </text>
-      </svg>
-    )
-  },
-  { 
-    name: "Mapei", 
-    url: "https://www.mapei.com/fr",
-    svg: (
-      <svg viewBox="0 0 100 40" className="w-full h-full" role="img" aria-label="Mapei">
-        <title>Mapei</title>
-        <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle" 
-          className="fill-current font-bold text-[16px] tracking-wide" 
-          style={{ fontFamily: 'system-ui, sans-serif' }}>
-          MAPEI
-        </text>
-      </svg>
-    )
-  },
-  { 
-    name: "Kerakoll", 
-    url: "https://www.kerakoll.com/fr",
-    svg: (
-      <svg viewBox="0 0 100 40" className="w-full h-full" role="img" aria-label="Kerakoll">
-        <title>Kerakoll</title>
-        <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle" 
-          className="fill-current font-semibold text-[13px]" 
-          style={{ fontFamily: 'system-ui, sans-serif' }}>
-          KERAKOLL
-        </text>
-      </svg>
-    )
-  },
-  { 
-    name: "Cedeo", 
-    url: "https://www.cedeo.fr",
-    svg: (
-      <svg viewBox="0 0 100 40" className="w-full h-full" role="img" aria-label="Cedeo">
-        <title>Cedeo</title>
-        <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle" 
-          className="fill-current font-bold text-[16px]" 
-          style={{ fontFamily: 'system-ui, sans-serif' }}>
-          CEDEO
-        </text>
-      </svg>
-    )
-  },
-  { 
-    name: "Aubade", 
-    url: "https://www.frenchaubade.fr",
-    svg: (
-      <svg viewBox="0 0 100 40" className="w-full h-full" role="img" aria-label="Espace Aubade">
-        <title>Espace Aubade</title>
-        <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle" 
-          className="fill-current font-medium text-[12px] tracking-wide" 
-          style={{ fontFamily: 'system-ui, sans-serif' }}>
-          ESPACE AUBADE
-        </text>
-      </svg>
-    )
+    name: "Weber", 
+    url: "https://www.weber.fr",
+    logo: weberLogo,
   },
   { 
     name: "Legrand", 
     url: "https://www.legrand.fr",
-    svg: (
-      <svg viewBox="0 0 100 40" className="w-full h-full" role="img" aria-label="Legrand">
-        <title>Legrand</title>
-        <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle" 
-          className="fill-current font-semibold text-[14px]" 
-          style={{ fontFamily: 'system-ui, sans-serif' }}>
-          LEGRAND
-        </text>
-      </svg>
-    )
+    logo: legrandLogo,
   },
   { 
     name: "Schneider Electric", 
     url: "https://www.se.com/fr",
-    svg: (
-      <svg viewBox="0 0 100 40" className="w-full h-full" role="img" aria-label="Schneider Electric">
-        <title>Schneider Electric</title>
-        <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle" 
-          className="fill-current font-semibold text-[10px]" 
-          style={{ fontFamily: 'system-ui, sans-serif' }}>
-          SCHNEIDER
-        </text>
-      </svg>
-    )
+    logo: schneiderLogo,
   },
   { 
     name: "Atlantic", 
     url: "https://www.atlantic.fr",
-    svg: (
-      <svg viewBox="0 0 100 40" className="w-full h-full" role="img" aria-label="Atlantic">
-        <title>Atlantic</title>
-        <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle" 
-          className="fill-current font-bold text-[14px]" 
-          style={{ fontFamily: 'system-ui, sans-serif' }}>
-          ATLANTIC
-        </text>
-      </svg>
-    )
+    logo: atlanticLogo,
+  },
+  { 
+    name: "Wedi", 
+    url: "https://www.wedi.de/fr",
+    textLogo: "wedi",
+    style: "font-bold text-lg lowercase"
+  },
+  { 
+    name: "Mapei", 
+    url: "https://www.mapei.com/fr",
+    textLogo: "MAPEI",
+    style: "font-bold text-base tracking-wide"
+  },
+  { 
+    name: "Kerakoll", 
+    url: "https://www.kerakoll.com/fr",
+    textLogo: "KERAKOLL",
+    style: "font-semibold text-sm tracking-wide"
+  },
+  { 
+    name: "Cedeo", 
+    url: "https://www.cedeo.fr",
+    textLogo: "CEDEO",
+    style: "font-bold text-base"
+  },
+  { 
+    name: "Espace Aubade", 
+    url: "https://www.frenchaubade.fr",
+    textLogo: "ESPACE AUBADE",
+    style: "font-medium text-xs tracking-wide"
   },
   { 
     name: "Hudson Reed", 
     url: "https://www.hudsonreed.fr",
-    svg: (
-      <svg viewBox="0 0 120 40" className="w-full h-full" role="img" aria-label="Hudson Reed">
-        <title>Hudson Reed</title>
-        <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle" 
-          className="fill-current font-medium text-[12px] tracking-wide" 
-          style={{ fontFamily: 'system-ui, sans-serif' }}>
-          HUDSON REED
-        </text>
-      </svg>
-    )
+    textLogo: "HUDSON REED",
+    style: "font-medium text-xs tracking-wider"
   },
 ];
 
@@ -227,10 +133,19 @@ export function PartnersLogos() {
               variants={itemVariants}
               whileHover={{ scale: 1.02, y: -2 }}
               aria-label={`Visiter le site de ${partner.name}`}
+              title={partner.name}
             >
-              <div className="w-full h-8 md:h-10 text-muted-foreground/70 group-hover:text-primary transition-colors duration-300">
-                {partner.svg}
-              </div>
+              {partner.logo ? (
+                <img 
+                  src={partner.logo} 
+                  alt={partner.name}
+                  className="w-full h-8 md:h-10 object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300"
+                />
+              ) : (
+                <span className={`text-muted-foreground/70 group-hover:text-primary transition-colors duration-300 ${partner.style || ''}`}>
+                  {partner.textLogo}
+                </span>
+              )}
             </motion.a>
           ))}
         </motion.div>
