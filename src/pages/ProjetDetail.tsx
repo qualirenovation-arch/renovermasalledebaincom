@@ -90,7 +90,7 @@ const ProjetDetail = () => {
             {album.subtitle && (
               <h2 className="font-display text-lg md:text-xl text-wood italic mb-4">{album.subtitle}</h2>
             )}
-            <p className="text-muted-foreground max-w-3xl whitespace-pre-line">{album.description}</p>
+            <p className="text-muted-foreground max-w-3xl whitespace-pre-line text-sm md:text-base leading-relaxed">{album.description}</p>
             
             {/* CTA Button */}
             {album.ctaButton && (
