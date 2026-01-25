@@ -20,6 +20,10 @@ export default function Realisations() {
   const [selectedAlbum, setSelectedAlbum] = useState<Album | null>(null);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
 
+  // Defensive: ensure the "completed" list never includes in-progress entries
+  // (even if data is accidentally mixed)
+  const completedAlbums = albums.filter((a) => !a.isInProgress);
+
   // Determine if we should show the in-progress view based on URL hash
   useEffect(() => {
     if (location.hash === "#chantiers-en-cours") {
@@ -35,7 +39,7 @@ export default function Realisations() {
     }
   }, [selectedAlbum]);
 
-  const currentAlbums = viewMode === "completed" ? albums : inProgressAlbums;
+  const currentAlbums = viewMode === "completed" ? completedAlbums : inProgressAlbums;
 
   // Keyboard navigation for lightbox
   useEffect(() => {
@@ -118,7 +122,7 @@ export default function Realisations() {
                   : "bg-secondary text-foreground hover:bg-secondary/80"
               }`}
             >
-              Réalisations terminées ({albums.length})
+              Réalisations terminées ({completedAlbums.length})
             </button>
             <button
               onClick={() => {
