@@ -1394,15 +1394,14 @@ Les lignes graphiques sont adoucies par un plan vasque en bois, choisi pour sa c
 Une verrière intérieure, placée au-dessus du meuble vasque, diffuse la lumière naturelle.
 La buanderie disparaît dans un placard discret, pour préserver l'harmonie visuelle.
 Un projet pensé pour une vie de famille, où esthétique et fonctionnalité cohabitent avec justesse.`,
-    coverImage: "/projects/saint-maurice/verdun-1.jpg",
+    coverImage: "/projects/saint-maurice/verdun-2.jpg",
     photos: [
-      { id: 1, image: "/projects/saint-maurice/verdun-1.jpg", title: "Vue d'ensemble", description: "Baignoire, verrière et meuble vasque bois" },
-      { id: 2, image: "/projects/saint-maurice/verdun-2.jpg", title: "Baignoire et sèche-serviettes", description: "Carrelage blanc et listel noir graphique" },
-      { id: 3, image: "/projects/saint-maurice/verdun-3.jpg", title: "Verrière et miroirs", description: "Double miroir rond, vasque et robinetterie rétro" },
-      { id: 4, image: "/projects/saint-maurice/verdun-4.jpg", title: "Robinetterie Pullman", description: "Détail de la colonne thermostatique style vintage" },
-      { id: 5, image: "/projects/saint-maurice/verdun-5.jpg", title: "Buanderie intégrée", description: "Lave-linge et sèche-linge empilés, dissimulés" },
-      { id: 6, image: "/projects/saint-maurice/verdun-6.jpg", title: "Vue générale", description: "Harmonie noir, blanc et bois naturel" },
-      { id: 7, image: "/projects/saint-maurice/verdun-7.jpg", title: "Verrière depuis le salon", description: "Lumière naturelle diffusée dans la salle de bain" },
+      { id: 1, image: "/projects/saint-maurice/verdun-2.jpg", title: "Baignoire et sèche-serviettes", description: "Carrelage blanc et listel noir graphique" },
+      { id: 2, image: "/projects/saint-maurice/verdun-3.jpg", title: "Verrière et miroirs", description: "Double miroir rond, vasque et robinetterie rétro" },
+      { id: 3, image: "/projects/saint-maurice/verdun-4.jpg", title: "Robinetterie Pullman", description: "Détail de la colonne thermostatique style vintage" },
+      { id: 4, image: "/projects/saint-maurice/verdun-5.jpg", title: "Buanderie intégrée", description: "Lave-linge et sèche-linge empilés, dissimulés" },
+      { id: 5, image: "/projects/saint-maurice/verdun-6.jpg", title: "Vue générale", description: "Harmonie noir, blanc et bois naturel" },
+      { id: 6, image: "/projects/saint-maurice/verdun-7.jpg", title: "Verrière depuis le salon", description: "Lumière naturelle diffusée dans la salle de bain" },
     ],
   },
 ];
