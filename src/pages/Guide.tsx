@@ -1506,6 +1506,22 @@ const Guide = () => {
                   </div>
                 </div>
               </div>
+              <div className="bg-background rounded-xl p-6 shadow-sm border-l-4 border-amber-500">
+                <h3 className="font-semibold text-lg mb-2">
+                  ⚠️ La plaque de déclenchement est-elle livrée en plusieurs couleurs ?
+                </h3>
+                <div className="text-muted-foreground space-y-3">
+                  <p>
+                    <strong>Attention :</strong> en règle générale, la plaque de déclenchement est livrée <strong>en blanc</strong> avec le bâti-support.
+                  </p>
+                  <p>
+                    👉 Pour un changement de couleur ou de finition, la plaque doit être <strong>rachetée séparément</strong>.
+                  </p>
+                  <p className="text-sm italic bg-accent/30 p-3 rounded-lg">
+                    💡 Info importante à valider en amont avec votre entrepreneur pour éviter les surprises.
+                  </p>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
