@@ -17,6 +17,7 @@ import baignoireRangementTiroirs from "@/assets/baignoire-rangement-tiroirs.jpg"
 import nicolasRoretDouche from "@/assets/nicolas-roret-douche.jpg";
 import receveursDouche from "@/assets/receveurs-douche.jpg";
 import boulogne3 from "@/assets/boulogne-3.jpg";
+import batiSupportGeberit from "@/assets/images/bati-support-geberit.png";
 
 const Guide = () => {
   // FAQ Schema for SEO
@@ -1449,13 +1450,22 @@ const Guide = () => {
                 <h3 className="font-semibold text-lg mb-2">
                   ❓ Qu'est-ce qu'un bâti-support ?
                 </h3>
-                <div className="text-muted-foreground space-y-3">
-                  <p>
-                    Un bâti-support est une structure métallique encastrée dans le mur qui permet d'installer un <strong>WC suspendu</strong>. Il supporte la cuvette, intègre le réservoir de chasse et reçoit la plaque de déclenchement.
-                  </p>
-                  <p>
-                    Il est toujours recouvert de BA13, qui peut être carrelé ou peint — nous recommandons le carrelage pour sa durabilité et sa facilité d'entretien.
-                  </p>
+                <div className="flex flex-col md:flex-row gap-6">
+                  <div className="text-muted-foreground space-y-3 flex-1">
+                    <p>
+                      Un bâti-support est une structure métallique encastrée dans le mur qui permet d'installer un <strong>WC suspendu</strong>. Il supporte la cuvette, intègre le réservoir de chasse et reçoit la plaque de déclenchement.
+                    </p>
+                    <p>
+                      Il est toujours recouvert de BA13, qui peut être carrelé ou peint — nous recommandons le carrelage pour sa durabilité et sa facilité d'entretien.
+                    </p>
+                  </div>
+                  <div className="flex-shrink-0">
+                    <img 
+                      src={batiSupportGeberit} 
+                      alt="Bâti-support Geberit Sigma pour WC suspendu" 
+                      className="w-40 md:w-48 h-auto object-contain rounded-lg"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
