@@ -1188,8 +1188,9 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     id: "general-leclerc",
     slug: "projet-charenton-94-general-leclerc-duo",
     title: "Duo Douche & Baignoire",
+    subtitle: "Salle de bain bois et blanc avec douche et baignoire : un duo élégant et fonctionnel",
     location: "Charenton-le-Pont (94) - Rue du Général Leclerc",
-    description: "AVANT : Salle de bain datée avec baignoire d'angle et carrelage mosaïque. APRÈS : Rénovation complète avec douche à l'italienne ET baignoire, carrelage grand format, robinetterie chromée et meuble vasque suspendu. Placard technique avec chauffe-eau accessible.",
+    description: "Cette salle de bain bois et blanc avec douche et baignoire incarne un équilibre parfait entre esthétisme contemporain et confort au quotidien. Le choix d'un duo douche-baignoire répond à tous les usages : une douche spacieuse et moderne pour les matins pressés, et une baignoire idéale pour les moments de détente.\n\nLe parement effet bois, utilisé en zone bain et douche, réchauffe visuellement la pièce et crée une ambiance naturelle, presque spa, tout en offrant la résistance et la facilité d'entretien du carrelage. En contraste, le blanc des murs et de la baignoire apporte luminosité et pureté, structurant l'espace avec élégance.\n\nPensée dans les moindres détails, cette salle de bain optimise chaque mètre carré sans compromis sur le style. Un aménagement durable et intemporel, qui valorise le logement et s'adapte aussi bien à une résidence principale qu'à un projet locatif ou patrimonial.",
     coverImage: generalLeclerc2,
     photos: [
       { id: 1, image: generalLeclerc2, title: "Après — Douche italienne", description: "Receveur extra-plat et paroi vitrée" },
