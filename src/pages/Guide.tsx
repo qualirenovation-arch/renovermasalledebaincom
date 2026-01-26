@@ -1538,6 +1538,19 @@ const Guide = () => {
                   </p>
                 </div>
               </div>
+              <div className="bg-background rounded-xl p-6 shadow-sm">
+                <h3 className="font-semibold text-lg mb-2">
+                  ❓ Existe-t-il des cuvettes de couleurs différentes ?
+                </h3>
+                <div className="text-muted-foreground space-y-3">
+                  <p>
+                    <strong>Oui.</strong> En plus du blanc, il existe des cuvettes en <strong>noir, gris, beige, sable</strong> ou autres finitions, selon les marques et les gammes.
+                  </p>
+                  <p className="text-sm italic bg-accent/30 p-3 rounded-lg">
+                    👉 Attention : les couleurs sont souvent en option et peuvent impacter le budget.
+                  </p>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
