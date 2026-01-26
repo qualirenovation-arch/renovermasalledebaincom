@@ -16,6 +16,9 @@ const footerLinks = {
     label: "Réalisations",
     path: "/realisations"
   }, {
+    label: "Partenaires",
+    path: "/partenaires"
+  }, {
     label: "FAQ",
     path: "/faq"
   }, {
