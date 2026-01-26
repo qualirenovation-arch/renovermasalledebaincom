@@ -12,6 +12,7 @@ import atlanticLogo from "@/assets/logos/atlantic.svg";
 import pointpLogo from "@/assets/logos/pointp.svg";
 import castoramaLogo from "@/assets/logos/castorama.svg";
 import rexelLogo from "@/assets/logos/rexel.svg";
+import asDecarreauxLogo from "@/assets/logos/as-decarreaux.svg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -53,7 +54,7 @@ const partnerCategories: PartnerCategory[] = [
       { name: "Ceramica.fr", url: "https://www.ceramica.fr", description: "Carrelages et céramiques" },
       { name: "Parquet-Carrelage.com", url: "https://www.parquet-carrelage.com", description: "Revêtements de sol" },
       { name: "Eiffel Carrelage", url: "#", description: "Carrelages professionnels" },
-      { name: "AS Decarreaux", url: "#", description: "Spécialiste carrelage" },
+      { name: "AS Decarreaux", url: "#", description: "Spécialiste carrelage", logo: asDecarreauxLogo },
     ],
   },
   {
