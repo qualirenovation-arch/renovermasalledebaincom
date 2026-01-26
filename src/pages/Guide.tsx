@@ -18,6 +18,9 @@ import nicolasRoretDouche from "@/assets/nicolas-roret-douche.jpg";
 import receveursDouche from "@/assets/receveurs-douche.jpg";
 import boulogne3 from "@/assets/boulogne-3.jpg";
 import batiSupportGeberit from "@/assets/images/bati-support-geberit.png";
+import plaqueGeberitNoir from "@/assets/images/plaque-geberit-noir.png";
+import plaqueGeberitLaiton from "@/assets/images/plaque-geberit-laiton.png";
+import plaqueGeberitChrome from "@/assets/images/plaque-geberit-chrome.png";
 
 const Guide = () => {
   // FAQ Schema for SEO
@@ -1464,6 +1467,41 @@ const Guide = () => {
                       src={batiSupportGeberit} 
                       alt="Bâti-support Geberit Sigma pour WC suspendu" 
                       className="w-40 md:w-48 h-auto object-contain rounded-lg"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="bg-background rounded-xl p-6 shadow-sm">
+                <h3 className="font-semibold text-lg mb-2">
+                  ❓ Qu'est-ce qu'une plaque de déclenchement ?
+                </h3>
+                <div className="flex flex-col md:flex-row gap-6">
+                  <div className="text-muted-foreground space-y-3 flex-1">
+                    <p>
+                      La plaque de déclenchement est le <strong>bouton de chasse d'eau visible</strong> sur un WC suspendu.
+                    </p>
+                    <p>
+                      Elle permet d'actionner la chasse (simple ou double débit) et donne accès au mécanisme pour la maintenance.
+                    </p>
+                    <p className="text-sm italic">
+                      👉 Elle se choisit en fonction du bâti-support installé : la compatibilité est à valider avec votre entrepreneur.
+                    </p>
+                  </div>
+                  <div className="flex gap-2 flex-shrink-0">
+                    <img 
+                      src={plaqueGeberitNoir} 
+                      alt="Plaque de déclenchement Geberit Sigma noire" 
+                      className="w-16 md:w-20 h-auto object-contain rounded-lg"
+                    />
+                    <img 
+                      src={plaqueGeberitLaiton} 
+                      alt="Plaque de déclenchement Geberit Sigma laiton brossé" 
+                      className="w-16 md:w-20 h-auto object-contain rounded-lg"
+                    />
+                    <img 
+                      src={plaqueGeberitChrome} 
+                      alt="Plaque de déclenchement Geberit Sigma chromée" 
+                      className="w-16 md:w-20 h-auto object-contain rounded-lg"
                     />
                   </div>
                 </div>
