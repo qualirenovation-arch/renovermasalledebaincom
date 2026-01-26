@@ -1522,6 +1522,22 @@ const Guide = () => {
                   </p>
                 </div>
               </div>
+              <div className="bg-background rounded-xl p-6 shadow-sm">
+                <h3 className="font-semibold text-lg mb-2">
+                  ❓ Qu'est-ce qu'une cuvette avec ou sans bride ?
+                </h3>
+                <div className="text-muted-foreground space-y-3">
+                  <p>
+                    <strong>Avec bride :</strong> cuvette classique avec un rebord intérieur, plus économique mais moins hygiénique.
+                  </p>
+                  <p>
+                    <strong>Sans bride :</strong> cuvette sans rebord, plus hygiénique, plus facile à nettoyer et aujourd'hui largement recommandée.
+                  </p>
+                  <p className="text-sm italic bg-accent/30 p-3 rounded-lg">
+                    💡 Nous recommandons systématiquement les cuvettes sans bride pour leur facilité d'entretien.
+                  </p>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
