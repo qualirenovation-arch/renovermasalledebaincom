@@ -57,10 +57,6 @@ const faqCategories = [
       {
         question: "Vérifiez-vous l'existant ?",
         answer: "Oui, systématiquement après la démolition : réseaux, évacuations, colonnes en fonte ou en plomb, accès techniques et compteurs. 👉 C'est le bon moment pour corriger, afin d'éviter de recasser plus tard."
-      },
-      {
-        question: "Qu'est-ce qu'un bâti-support ?",
-        answer: "Un bâti-support est une structure métallique encastrée dans le mur qui permet d'installer un WC suspendu. Il supporte la cuvette, intègre le réservoir de chasse et reçoit la plaque de déclenchement. Il est toujours recouvert de BA13, qui peut être carrelé ou peint — nous recommandons le carrelage pour sa durabilité et sa facilité d'entretien."
       }
     ]
   },

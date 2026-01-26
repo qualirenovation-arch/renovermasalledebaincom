@@ -1445,6 +1445,19 @@ const Guide = () => {
                   </p>
                 </div>
               </div>
+              <div className="bg-background rounded-xl p-6 shadow-sm">
+                <h3 className="font-semibold text-lg mb-2">
+                  ❓ Qu'est-ce qu'un bâti-support ?
+                </h3>
+                <div className="text-muted-foreground space-y-3">
+                  <p>
+                    Un bâti-support est une structure métallique encastrée dans le mur qui permet d'installer un <strong>WC suspendu</strong>. Il supporte la cuvette, intègre le réservoir de chasse et reçoit la plaque de déclenchement.
+                  </p>
+                  <p>
+                    Il est toujours recouvert de BA13, qui peut être carrelé ou peint — nous recommandons le carrelage pour sa durabilité et sa facilité d'entretien.
+                  </p>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
