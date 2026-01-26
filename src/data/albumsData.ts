@@ -1199,9 +1199,6 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 5, image: generalLeclerc6, title: "Après — Vue angle", description: "Optimisation de l'espace" },
       { id: 6, image: generalLeclerc7, title: "Après — Détails", description: "Robinetterie chromée" },
       { id: 7, image: generalLeclerc8, title: "Après — Rangements", description: "Colonnes intégrées" },
-      { id: 8, image: generalLeclercSchluter1, title: "Travaux — Profilés Schluter", description: "Finitions de qualité" },
-      { id: 9, image: generalLeclercSchluter2, title: "Travaux — Détail Schluter", description: "Angles parfaits" },
-      { id: 10, image: generalLeclercSchluter3, title: "Travaux — Pose", description: "Installation soignée" },
     ],
   },
   {
