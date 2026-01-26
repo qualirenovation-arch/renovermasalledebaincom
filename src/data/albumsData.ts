@@ -680,11 +680,11 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     ],
   },
   {
-    id: "faubourg-stdenis",
-    slug: "projet-paris-10-faubourg-saint-denis-noir-marbre",
-    title: "Projet Faubourg Saint-Denis",
+    id: "faubourg-stmartin",
+    slug: "projet-paris-10-faubourg-saint-martin-noir-marbre",
+    title: "Projet Faubourg Saint-Martin",
     subtitle: "Noir & Marbre, l'élégance parisienne intemporelle",
-    location: "Paris 10ème - Rue du Faubourg Saint-Denis",
+    location: "Paris 10ème - Rue du Faubourg Saint-Martin",
     description: "Cette salle de bain parisienne a été entièrement repensée dans un esprit chic, sobre et intemporel, où le contraste du noir et la noblesse du marbre blanc créent une atmosphère élégante et durable.\n\nLe carrelage grand format effet marbre apporte lumière et profondeur, tandis que les lignes épurées assurent une esthétique facile à projeter dans le temps.\n\nL'agencement a été optimisé pour offrir un confort maximal au quotidien : douche à l'italienne avec porte en verre, meuble double vasque suspendu et circulations fluides, parfaitement adaptées aux volumes parisiens.",
     coverImage: faubourgStmartin3,
     photos: [
