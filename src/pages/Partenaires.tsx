@@ -10,6 +10,8 @@ import legrandLogo from "@/assets/logos/legrand.svg";
 import schneiderLogo from "@/assets/logos/schneider.svg";
 import atlanticLogo from "@/assets/logos/atlantic.svg";
 import pointpLogo from "@/assets/logos/pointp.svg";
+import castoramaLogo from "@/assets/logos/castorama.svg";
+import rexelLogo from "@/assets/logos/rexel.svg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -50,6 +52,8 @@ const partnerCategories: PartnerCategory[] = [
       { name: "Kerakoll", url: "https://www.kerakoll.com/fr", description: "Colles et joints écologiques" },
       { name: "Ceramica.fr", url: "https://www.ceramica.fr", description: "Carrelages et céramiques" },
       { name: "Parquet-Carrelage.com", url: "https://www.parquet-carrelage.com", description: "Revêtements de sol" },
+      { name: "Eiffel Carrelage", url: "#", description: "Carrelages professionnels" },
+      { name: "AS Decarreaux", url: "#", description: "Spécialiste carrelage" },
     ],
   },
   {
@@ -84,6 +88,9 @@ const partnerCategories: PartnerCategory[] = [
       { name: "Schneider Electric", url: "https://www.se.com/fr", description: "Solutions électriques", logo: schneiderLogo },
       { name: "Atlantic", url: "https://www.atlantic.fr", description: "Chauffage et eau chaude", logo: atlanticLogo },
       { name: "Corston", url: "#", description: "Appareillages électriques design" },
+      { name: "Mdelec", url: "#", description: "Distribution électrique" },
+      { name: "Arnould", url: "#", description: "Appareillages électriques" },
+      { name: "Rexel", url: "https://www.rexel.fr", description: "Distribution matériel électrique", logo: rexelLogo },
     ],
   },
   {
@@ -118,6 +125,7 @@ const partnerCategories: PartnerCategory[] = [
       { name: "Leroy Merlin", url: "https://www.leroymerlin.fr", description: "Grande surface de bricolage" },
       { name: "IKEA", url: "https://www.ikea.com/fr", description: "Mobilier et accessoires" },
       { name: "ManoMano", url: "https://www.manomano.fr", description: "Bricolage et jardinage" },
+      { name: "Castorama", url: "https://www.castorama.fr", description: "Grande surface de bricolage", logo: castoramaLogo },
     ],
   },
   {
