@@ -510,7 +510,7 @@ export const albums: Album[] = [
   // ========== PARIS 3ÈME (75003) ==========
   {
     id: "temple",
-    slug: "projet-paris-3-temple-bois-noir",
+    slug: "salle-de-bain-paris-3-style-masculin-bois-noir",
     title: "Style masculin — Bois & Noir",
     location: "Paris 3ème - Rue du Temple",
     description: "AVANT : Salle de bain vétuste, peu fonctionnelle et sans optimisation. APRÈS : Salle de bain repensée dans un style masculin et contemporain — douche à l'italienne, meuble vasque sur mesure, robinetterie noire mate. 👉 Le détail qui change tout : lave-linge intégré et dissimulé derrière une porte — une approche de conception, pas de simple exécution. Envie d'y être ? Faites votre demande de devis et devenez le prochain projet affiché sur notre plan interactif – chantiers en cours.",
@@ -527,7 +527,7 @@ export const albums: Album[] = [
   // ========== PARIS 5ÈME (75005) ==========
   {
     id: "buffon",
-    slug: "projet-paris-5-buffon-optimisation",
+    slug: "salle-de-bain-paris-5-buffon-optimisation-maximale",
     title: "Optimisation maximale",
     location: "Paris 5ème - Rue Buffon",
     description: "AVANT : Salle de bain vétuste et mal agencée, espace perdu et rangements insuffisants. APRÈS : Pied-à-terre parisien familial hyper optimisé. Receveur extra-plat avec deux niches encastrées, porte coulissante gain de place, lave-linge dissimulé derrière une porte. Astuce : le chauffe-eau est positionné dans la gaine technique au-dessus du WC suspendu — invisible et accessible.",
@@ -546,7 +546,7 @@ export const albums: Album[] = [
   },
   {
     id: "rue-des-puits",
-    slug: "projet-suresnes-rue-des-puits-terrazzo",
+    slug: "salle-de-bain-suresnes-92-vie-en-bleu",
     title: "La vie en bleu",
     location: "Suresnes (92) - Rue des Puits",
     description: "Cette salle de bain contemporaine joue sur le contraste entre un carrelage aspect marbre Onyx Blue au mur et un carrelage beige Magda Marfil au sol, pour une ambiance élégante et lumineuse.\n\nUn meuble IKEA en bois entièrement customisé, surmonté d'un plan de travail effet marbre et équipé d'une double vasque en verre, structure l'espace avec légèreté. La robinetterie chromée et le miroir rétroéclairé renforcent le confort et la luminosité.\n\n👉 Le vrai plus : la machine à laver est dissimulée dans un placard à l'entrée de la salle de bain, offrant un espace fluide, épuré et parfaitement optimisé.\n\nUne rénovation pensée pour allier design, fonctionnalité et gain de place.",
@@ -566,7 +566,7 @@ export const albums: Album[] = [
   // ========== PARIS 6ÈME (75006) ==========
   {
     id: "saint-germain",
-    slug: "projet-paris-6-saint-germain-luxe",
+    slug: "salle-de-bain-paris-6-saint-germain-luxe",
     title: "Luxe discret Saint-Germain",
     location: "Paris 6ème - Boulevard Saint-Germain",
     description: "AVANT : Salle de bain vétuste avec baignoire sabot, carrelage en mauvais état et équipements datés. APRÈS : Rénovation haut de gamme avec douche à l'italienne, carrelage grand format effet pierre, robinetterie encastrée chromée et meuble vasque suspendu design.",
@@ -585,7 +585,7 @@ export const albums: Album[] = [
   // ========== PARIS 8ÈME (75008) ==========
   {
     id: "matignon",
-    slug: "projet-paris-8-matignon-rafraichissement",
+    slug: "salle-de-bain-paris-8-matignon-rafraichissement",
     title: "Rafraîchissement entre deux locations",
     location: "Paris 8ème - Avenue Matignon",
     description: "AVANT : Salle de bain dans son jus avec baignoire et vasque roses, carrelage marbre vieillot et papier peint daté. APRÈS : Transformation complète en espace épuré et moderne. Carrelage effet marbre grand format, douche à l'italienne avec robinetterie Grohe encastrée, double vasque contemporaine et WC suspendu.",
@@ -604,7 +604,7 @@ export const albums: Album[] = [
   },
   {
     id: "sergent-beauchart",
-    slug: "projet-paris-12-sergent-beauchart-degat-eaux",
+    slug: "salle-de-bain-paris-12-sergent-beauchart-degat-eaux",
     title: "Dégât des eaux : du chaos à la transformation",
     location: "Paris 12ème - Rue Sergent Beauchart",
     description: "Dégât des eaux en cuisine ou en salle de bain ? Vous n'êtes pas seul. Regardez l'avant / après.\n\nParce qu'un dégât des eaux, c'est toujours un coup dur… mais aussi souvent le point de départ d'un projet mieux pensé, plus fonctionnel, plus durable.\n\n👉 Diagnostic\n👉 Reprise technique\n👉 Optimisation de l'espace\n👉 Finitions propres et pérennes\n\nDu chaos à une pièce transformée. Oui, c'est possible. Et non, vous n'êtes clairement pas seul.",
@@ -624,7 +624,7 @@ export const albums: Album[] = [
   // ========== PARIS 9ÈME (75009) ==========
   {
     id: "taitbout",
-    slug: "projet-paris-9-taitbout-haussmannien",
+    slug: "salle-de-bain-paris-9-taitbout-douche-italienne",
     title: "Douche à l'italienne et carrelage effet pierre",
     subtitle: "Finition mate antidérapante",
     location: "Paris 9ème - Rue Taitbout",
@@ -654,7 +654,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== PARIS 10ÈME (75010) ==========
   {
     id: "paris10-jemmapes",
-    slug: "projet-paris-10-canal-saint-martin-masculin",
+    slug: "salle-de-bain-paris-10-canal-saint-martin-masculin",
     title: "Salle de bain au masculin",
     location: "Paris 10ème - Canal Saint-Martin",
     description: "AVANT : Salle de bain classique et impersonnelle. APRÈS : Salle de bain au style résolument masculin avec carrelage foncé, robinetterie noire mate et lignes épurées. Paroi vitrée minimaliste pour un effet loft.",
@@ -667,7 +667,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "paris10-dore",
-    slug: "projet-paris-10-faubourg-saint-denis-dore",
+    slug: "salle-de-bain-paris-10-faubourg-saint-denis-elegance-doree",
     title: "Élégance dorée",
     location: "Paris 10ème - Faubourg Saint-Denis",
     description: "AVANT : Salle de bain banale avec équipements standards. APRÈS : Salle de bain luxueuse avec robinetterie dorée laiton brossé, carrelage effet marbre onyx et finitions haut de gamme. Paroi vitrée à profilé doré et ciel de pluie encastré.",
@@ -681,7 +681,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "faubourg-stmartin",
-    slug: "projet-paris-10-faubourg-saint-martin-noir-marbre",
+    slug: "salle-de-bain-paris-10-faubourg-saint-martin-noir-marbre",
     title: "Projet Faubourg Saint-Martin",
     subtitle: "Noir & Marbre, l'élégance parisienne intemporelle",
     location: "Paris 10ème - Rue du Faubourg Saint-Martin",
@@ -700,7 +700,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== PARIS 11ÈME (75011) ==========
   {
     id: "charonne",
-    slug: "projet-paris-11-charonne-retro-noir-blanc",
+    slug: "salle-de-bain-paris-11-charonne-retro-noir-blanc",
     title: "Black & White — Robinetterie Rétro",
     location: "Paris 11ème - Rue de Charonne (Bastille)",
     description: "AVANT : Salle de bain datée avec carrelage blanc, cabine de douche et vasque en bois usée. APRÈS : Transformation spectaculaire pour ce pied-à-terre parisien. Carreaux fleuris inspiration carreaux de ciment (Neocim) au sol, métro noir mat et brillant aux murs avec pose en chevrons dans la douche et à l'anglaise côté vasque, séparation marquée par un profilé laiton. Lavabo colonne rétro et robinetterie dorée vintage. Papier peint nuages pour une atmosphère hôtel boutique. **Projet réalisé à distance** : le client avait préparé tous les rendus souhaités, nous avons respecté le cahier des charges à la lettre.",
@@ -717,7 +717,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "citeaux",
-    slug: "projet-paris-11-citeaux-petite-sdb",
+    slug: "salle-de-bain-paris-11-citeaux-petite-3m2",
     title: "Salle d'eau de 3m²",
     location: "Paris 11ème - Rue de Citeaux (Bastille)",
     description: "AVANT : Petite salle d'eau vétuste avec carrelage mosaïque au sol et bac à douche standard. APRÈS : Optimisation maximale de 3m² : douche à l'italienne avec receveur extra-plat, meuble vasque suspendu avec miroir et rangements, WC suspendu et finitions soignées.",
@@ -734,7 +734,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== PARIS 12ÈME (75012) ==========
   {
     id: "cours-vincennes-wc",
-    slug: "projet-paris-12-cours-vincennes-wc-onyx",
+    slug: "salle-de-bain-paris-12-cours-vincennes-wc-onyx",
     title: "WC — Onyx & Placard VMC",
     location: "Paris 12ème - Cours de Vincennes",
     description: "AVANT : WC basique avec équipement standard et aucun rangement. APRÈS : Transformation élégante avec carrelage effet onyx, WC suspendu Grohe et création d'un placard technique intégrant la VMC et les arrivées. Un petit espace optimisé au maximum.",
@@ -749,7 +749,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "cours-vincennes-sdb",
-    slug: "projet-paris-12-cours-vincennes-sdb-subway",
+    slug: "salle-de-bain-paris-12-cours-vincennes-garcon-noir-blanc",
     title: "Salle de bain garçon : noir & blanc, esprit contemporain",
     location: "Paris 12ème - Cours de Vincennes",
     description: "Salle de bain garçon : noir & blanc, esprit contemporain\n\nPensée pour le garçon de la maison, cette salle de bain a été entièrement transformée pour gagner en confort, modernité et durabilité. Fini le receveur d'angle et le meuble vert daté : place à une douche spacieuse, un carrelage noir & blanc esprit subway et des lignes nettes, faciles à vivre au quotidien.\n\nLe meuble suspendu, la robinetterie noire mate et le miroir rétro-éclairé composent un ensemble sobre et graphique, parfaitement adapté à un univers masculin et évolutif.\n\nRésultat : une salle de bain fonctionnelle, contemporaine et intemporelle, pensée pour accompagner un enfant aujourd'hui… et un adulte demain.",
@@ -767,7 +767,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "cours-vincennes-madame",
-    slug: "projet-paris-12-cours-vincennes-sdb-madame",
+    slug: "salle-de-bain-paris-12-cours-vincennes-madame-rangements",
     title: "SDB Madame — Rangements Sur-mesure",
     location: "Paris 12ème - Cours de Vincennes",
     description: "AVANT : Salle de bain grise et datée, cabine de douche arrondie, aucun rangement. APRÈS : Salle de bain repensée dans une harmonie marbre noir/gris. Placard au-dessus des WC avec rangement serviettes et panière à linge coulissante. Douche à l'italienne XXL, meuble vasque noir et carrelage grand format effet pierre. 👉 Gain de place, style et fonctionnalité réunis.",
@@ -787,7 +787,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "place-daumesnil",
-    slug: "projet-paris-12-place-daumesnil-bleu-mineral-beton",
+    slug: "salle-de-bain-paris-12-place-daumesnil-bleu-mineral-beton",
     title: "Bleu minéral & béton urbain : le WC devient manifeste",
     location: "Paris 12ème - Place Daumesnil",
     description: "Dans cet appartement de la rue de Reuilly, le WC se transforme en terrain d'expression sobre et graphique. Le sol en béton tech, minéral et contemporain, dialogue avec un carreau ciment Paris Rivoli 25×25 cm en mur face, apportant rythme et profondeur à l'espace. La palette, dominée par des nuances claires et minérales, installe une atmosphère urbaine, presque architecturale.\n\nMais derrière l'esthétique, l'intelligence du plan. Le WC est déplacé dans l'autre sens, la porte devient coulissante, et l'ancien emplacement libéré permet d'encastrer le frigo côté cuisine. La gaine technique, repensée et intégrée côté cuisine, s'efface visuellement sans rien céder à la rigueur technique.\n\nUn projet précis et élégant, où le bleu minéral et le béton dessinent un WC discret mais affirmé — et prouvent qu'un espace secondaire peut, à lui seul, rééquilibrer tout un appartement parisien.",
@@ -803,7 +803,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== PARIS 13ÈME (75013) ==========
   {
     id: "bobillot",
-    slug: "projet-paris-13-bobillot-renovation-location",
+    slug: "salle-de-bain-paris-13-bobillot-renovation-location",
     title: "Rénovation entre deux locations",
     location: "Paris 13ème - Rue Bobillot",
     description: "AVANT : Logement dégradé nécessitant une rénovation profonde pour améliorer le DPE et revaloriser le bien. Murs abîmés, tuyauteries apparentes, aucun équipement moderne. APRÈS : Rénovation complète cuisine et salle de bain. Ambiance chaleureuse avec teintes beige, bois et noir. Meuble vasque bois avec plan noir, robinetterie laiton brossé, carrelage zellige beige et chauffe-eau dissimulé au-dessus du WC suspendu pour un gain de place optimal.",
@@ -824,7 +824,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "nicolas-roret",
-    slug: "projet-paris-13-nicolas-roret-zellige-turquoise",
+    slug: "salle-de-bain-paris-13-nicolas-roret-zellige-turquoise",
     title: "Zellige turquoise & Or",
     location: "Paris 13ème - Rue Nicolas Roret",
     description: "AVANT : WC vétuste avec carrelage bleu abîmé, équipements datés et peinture écaillée. APRÈS : Transformation luxueuse avec douche italienne en zellige turquoise posé en chevron, paroi et robinetterie dorées, niches intégrées avec listel or, carrelage grand format effet marbre. WC suspendu assorti avec lave-mains doré, local technique optimisé intégrant chauffe-eau et lave-linge.",
@@ -854,7 +854,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "nicolas-roret-wc",
-    slug: "projet-paris-13-nicolas-roret-wc-laiton",
+    slug: "salle-de-bain-paris-13-nicolas-roret-wc-zellige-laiton",
     title: "WC Zellige turquoise & Laiton brossé",
     location: "Paris 13ème - Rue Nicolas Roret",
     description: "AVANT : WC vétuste avec carrelage bleu abîmé, équipements datés et peinture écaillée. APRÈS : WC suspendu luxueux avec zellige turquoise posé en chevron, lave-mains avec robinetterie laiton brossé, local technique optimisé intégrant chauffe-eau et lave-linge.",
@@ -870,7 +870,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== PARIS 15ÈME (75015) ==========
   {
     id: "amiral-roussin",
-    slug: "projet-paris-15-amiral-roussin-scandinave",
+    slug: "salle-de-bain-paris-15-amiral-roussin-scandinave",
     title: "Style scandinave",
     location: "Paris 15ème - Amiral Roussin",
     description: "AVANT : Salle de bain standard sans personnalité. APRÈS : Rénovation pour un jeune couple. Style scandinave épuré avec meuble vasque en chêne massif, robinetterie noire mate et receveur extra-plat. Buanderie intégrée dans le placard pour optimiser l'espace.",
@@ -889,7 +889,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "paris15-convention",
-    slug: "projet-paris-15-convention-hague-blue",
+    slug: "salle-de-bain-paris-15-convention-hague-blue",
     title: "Salle de douche & WC séparés",
     location: "Paris 15ème - Rue de la Convention",
     description: "AVANT : Receveur de douche mal positionné et espace non optimisé. APRÈS : Création d'une salle de douche et d'un WC séparé. Receveur XXL de 140 cm avec niche horizontale intégrée. Ambiance graphique avec le bleu Hague Blue de Farrow & Ball sur fond gris béton, réchauffée par des touches de bois pour un rendu contemporain et chaleureux.",
@@ -907,7 +907,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== PARIS 16ÈME (75016) ==========
   {
     id: "pierre-guerin",
-    slug: "projet-paris-16-pierre-guerin-masculin",
+    slug: "salle-de-bain-paris-16-pierre-guerin-masculin",
     title: "Style masculin — Pierre & Inox",
     location: "Paris 16ème - Rue Pierre Guérin",
     description: "Rénovation d'une salle de bain pour un appartement au masculin. Douche à l'italienne avec carrelage pierre naturelle, robinetterie encastrée chromée haut de gamme, niches de rangement intégrées et rangements sur-mesure avec buanderie dissimulée.",
@@ -927,7 +927,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "auteuil",
-    slug: "projet-paris-16-auteuil-parisien-chic",
+    slug: "salle-de-bain-paris-16-auteuil-parisien-chic",
     title: "Style Parisien Chic — SDB & WC",
     location: "Paris 16ème - Rue Boileau, Auteuil",
     description: "AVANT : Salle de bain datée avec carrelage mosaïque noir et escalier en travaux. APRÈS : Duplex entièrement repensé avec salle de bain sous escalier. Vasque rose poudré sur plan noir, robinetterie dorée encastrée, carrelage effet marbre, paroi coulissante noire. WC séparé avec mur bordeaux, affiche fashion et frise hexagonale cuivrée.",
@@ -945,7 +945,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "lauriston",
-    slug: "projet-paris-16-lauriston-elegance",
+    slug: "salle-de-bain-paris-16-lauriston-elegance",
     title: "Élégance parisienne",
     location: "Paris 16ème - Rue de Lauriston",
     description: "AVANT : Salle de bain datée avec baignoire et carrelage mosaïque. APRÈS : Transformation en espace contemporain avec douche à l'italienne, carrelage grand format effet pierre, robinetterie chromée et meuble vasque design.",
@@ -963,7 +963,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== PARIS 17ÈME (75017) ==========
   {
     id: "paris17-suite",
-    slug: "projet-paris-17-les-ternes-suite-parentale",
+    slug: "salle-de-bain-paris-17-les-ternes-suite-parentale",
     title: "Suite Parentale Les Ternes",
     location: "Paris 17ème - Les Ternes",
     description: "AVANT : Baignoire balnéo en panne depuis des années avec galets au sol, aucune paroi pour protéger de l'eau — la douche causait des éclaboussures sur le parquet, très peu pratique. APRÈS : Création d'une suite parentale luxueuse avec claustra bois sur mesure, douche à l'italienne en carrelage effet marbre, paroi et robinetterie dorées laiton brossé, niches intégrées et colonnes de rangement.",
@@ -992,7 +992,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "paris17-pereire",
-    slug: "projet-paris-17-pereire-degat-eaux",
+    slug: "salle-de-bain-paris-17-pereire-degat-eaux",
     title: "Rénovation après dégât des eaux",
     location: "Paris 17ème - Bd Pereire",
     description: "AVANT : Dégâts des eaux et malfaçons laissés par une précédente entreprise — infiltrations, moisissures et travaux bâclés. APRÈS : Intervention de Carina pour reprendre le chantier. Rénovation complète avec carrelage chevrons blancs tendance, sol terrazzo gris et robinetterie chromée. On vous explique tout sur ce chantier de rattrapage !",
@@ -1020,7 +1020,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== PARIS 19ÈME (75019) ==========
   {
     id: "armand-carrel",
-    slug: "projet-paris-19-armand-carrel-mosaique-geometrique",
+    slug: "salle-de-bain-paris-19-armand-carrel-mosaique-noir-mat",
     title: "Mosaïque géométrique & Noir mat",
     location: "Paris 19ème - Rue Armand Carrel",
     description: "Une salle de bain tout-en-un, parfaitement maîtrisée\n\nDans cette pièce, tout est réuni : un WC, une baignoire, une douche avec receveur, et même une buanderie. Chaque fonction a été intégrée avec précision pour créer un espace complet, pratique et agréable à vivre, sans compromis sur le confort.\n\nL'agencement a été pensé pour permettre une cohabitation fluide au quotidien, que ce soit pour une utilisation familiale ou simultanée. Les volumes sont optimisés, les circulations sont naturelles, et chaque zone trouve sa place avec évidence.\n\nRésultat : une salle de bain ultra-fonctionnelle, où rien ne manque et où chaque mètre carré est intelligemment exploité — un vrai défi parisien relevé avec succès.",
@@ -1039,7 +1039,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== BOIS-COLOMBES (92270) ==========
   {
     id: "bois-colombes",
-    slug: "projet-bois-colombes-92-renovation-complete",
+    slug: "salle-de-bain-bois-colombes-92-renovation-complete",
     title: "Rénovation complète Avant/Après",
     location: "Bois-Colombes (92)",
     description: "AVANT : Salle de bain datée avec baignoire et carrelage ancien, aucune optimisation de l'espace. APRÈS : Transformation complète avec douche à l'italienne XXL, carrelage effet béton, meuble double vasque suspendu et WC suspendu. Rangements optimisés et finitions haut de gamme.",
@@ -1070,7 +1070,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== BOULOGNE-BILLANCOURT (92100) ==========
   {
     id: "boulogne",
-    slug: "projet-boulogne-92-ambiance-marine",
+    slug: "salle-de-bain-boulogne-92-ambiance-marine",
     title: "Ambiance marine — SDB & WC",
     location: "Boulogne-Billancourt (92) - Av. du Maréchal de Lattre de Tassigny",
     description: "AVANT : Salle de bain et WC séparés mais vétustes, aucun rangement et équipements datés. APRÈS : Rénovation optimisée pour une mère célibataire avec un \"duo gagnant\" salle de bain et WC. Double vasque, carrelage 3D, tomettes hexagonales (Leroy Merlin), fresque marine et placard technique pour le chauffe-eau.",
@@ -1101,7 +1101,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== COURBEVOIE (92400) ==========
   {
     id: "courbevoie-becon",
-    slug: "projet-courbevoie-92-becon-sinistre",
+    slug: "salle-de-bain-courbevoie-92-becon-sinistre",
     title: "Rénovation après sinistre",
     location: "Courbevoie (92) - Bécon, Rue Saint-Guillaume",
     description: "AVANT : Sinistre lourd avec dégâts des eaux importants, moisissures et équipements détruits. APRÈS : Reprise complète du chantier avec terrazzo au sol, paroi vitrée, robinetterie chromée et meuble vasque teck. Transformation totale après un chantier de rattrapage exemplaire.",
@@ -1129,7 +1129,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== SAINT-OUEN (93400) ==========
   {
     id: "saint-ouen",
-    slug: "projet-saint-ouen-93-renovation",
+    slug: "salle-de-bain-saint-ouen-93-renovation",
     title: "Rénovation Saint-Ouen",
     location: "Saint-Ouen (93)",
     description: "AVANT : Salle de bain datée avec baignoire et carrelage ancien. APRÈS : Transformation moderne avec douche à l'italienne, carrelage grand format, robinetterie chromée et meuble vasque design.",
@@ -1153,7 +1153,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== CHARENTON-LE-PONT (94220) ==========
   {
     id: "charenton",
-    slug: "projet-charenton-94-renovation-complete",
+    slug: "salle-de-bain-charenton-94-renovation-complete",
     title: "Rénovation complète",
     location: "Charenton-le-Pont (94)",
     description: "AVANT : Salle de bain datée avec baignoire, carrelage mosaïque et équipements vétustes. APRÈS : Transformation luxueuse avec douche à l'italienne XXL, double vasque, carrelage grand format effet pierre et robinetterie chromée haut de gamme.",
@@ -1186,7 +1186,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "general-leclerc",
-    slug: "projet-charenton-94-general-leclerc-duo",
+    slug: "salle-de-bain-charenton-94-duo-douche-baignoire",
     title: "Duo Douche & Baignoire",
     subtitle: "Salle de bain bois et blanc avec douche et baignoire : un duo élégant et fonctionnel",
     location: "Charenton-le-Pont (94) - Rue du Général Leclerc",
@@ -1207,7 +1207,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "general-leclerc-wc",
-    slug: "projet-charenton-94-general-leclerc-wc",
+    slug: "salle-de-bain-charenton-94-wc-chauffe-eau-dissimule",
     title: "WC — Astuce Chauffe-eau Dissimulé",
     location: "Charenton-le-Pont (94) - Rue du Général Leclerc",
     description: "Solution gain de place idéale : le chauffe-eau est dissimulé au-dessus du WC suspendu dans un placard technique sur-mesure. Ce placard peut également accueillir les nourrices (collecteur) et le compteur d'eau. Carreaux de ciment au sol, carrelage noir mat en fond et papier peint rayé pour un style graphique.",
@@ -1221,7 +1221,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== SAINT-MANDÉ (94160) ==========
   {
     id: "st-mande",
-    slug: "projet-saint-mande-94-renovation",
+    slug: "salle-de-bain-saint-mande-94-renovation",
     title: "Rénovation Rue de l'Alouette",
     location: "Saint-Mandé (94) - Rue de l'Alouette",
     description: "AVANT : Salle de bain datée nécessitant une rénovation complète. APRÈS : Transformation en espace moderne avec douche à l'italienne, carrelage contemporain et robinetterie design. Un projet qui illustre notre savoir-faire en rénovation.",
@@ -1236,7 +1236,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== SAINT-MAUR-DES-FOSSÉS (94100) ==========
   {
     id: "saint-maur",
-    slug: "projet-saint-maur-94-renovation-avant-apres",
+    slug: "salle-de-bain-saint-maur-94-renovation-avant-apres",
     title: "Rénovation Avant/Après",
     location: "Saint-Maur-des-Fossés (94)",
     description: "AVANT : Salle de bain datée avec baignoire et carrelage ancien, espace mal exploité. APRÈS : Transformation complète en espace moderne avec douche à l'italienne, carrelage grand format contemporain et meuble vasque design.",
@@ -1255,7 +1255,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "saint-maur-enfants",
-    slug: "projet-saint-maur-94-sdb-enfants-coreenne",
+    slug: "salle-de-bain-saint-maur-94-enfants-inspiration-coreenne",
     title: "SDB & WC Enfants — Inspiration Coréenne",
     location: "Saint-Maur-des-Fossés (94) - Av. du Nord",
     description: "AVANT : Salle d'eau vétuste avec baignoire usée et carrelage dégradé. APRÈS : Transformation complète pour les enfants. Carrelage mural Tebrick bleu posé verticalement (Parquet Carrelage), meuble vasque effet bois, robinetterie Horus Elsa et Equinox (CMR), placard sur-mesure en sapin vernis chêne doré au-dessus du WC. Sol grès cérame Etna Crema antidérapant. Une élégance douce inspirée du design coréen.",
@@ -1271,7 +1271,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== VINCENNES (94300) ==========
   {
     id: "vincennes-mr",
-    slug: "projet-vincennes-94-sdb-monsieur",
+    slug: "salle-de-bain-vincennes-94-garcon-noir-blanc",
     title: "SDB Garçon — Noir & Blanc contemporain",
     location: "Vincennes (94) - Avenue de Paris",
     description: "Salle de bain garçon : noir & blanc, esprit contemporain\n\nPensée pour le garçon de la maison, cette salle de bain à Vincennes a été entièrement transformée pour gagner en confort, modernité et durabilité. Fini le receveur d'angle et le meuble vert daté : place à une douche spacieuse, un carrelage noir & blanc esprit subway et des lignes nettes, faciles à vivre au quotidien.\n\nLe meuble suspendu, la robinetterie noire mate et le miroir rétro-éclairé composent un ensemble sobre et graphique, parfaitement adapté à un univers masculin et évolutif.\n\nRésultat : une salle de bain fonctionnelle, contemporaine et intemporelle, pensée pour accompagner un enfant aujourd'hui… et un adulte demain.",
@@ -1303,7 +1303,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== VITRY-SUR-SEINE (94400) ==========
   {
     id: "vitry",
-    slug: "projet-vitry-94-renovation-avant-apres",
+    slug: "salle-de-bain-vitry-94-renovation-avant-apres",
     title: "Rénovation Avant/Après",
     location: "Vitry-sur-Seine (94)",
     description: "AVANT : Salle de bain très dégradée avec moisissures, carrelage abîmé et équipements vétustes. APRÈS : Transformation complète avec douche à l'italienne, carrelage grand format, robinetterie contemporaine et meuble vasque design.",
@@ -1328,7 +1328,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== SOISY-SOUS-MONTMORENCY (95230) ==========
   {
     id: "soisy",
-    slug: "projet-soisy-95-suite-parentale-maison-1900",
+    slug: "salle-de-bain-soisy-95-suite-parentale-maison-1900",
     title: "Suite parentale maison 1900",
     location: "Soisy-sous-Montmorency (95) - Maison 1900",
     description: "AVANT : Combles inexploités avec sol en béton brut et éclairage industriel provisoire. Espace perdu attendant d'être transformé. APRÈS : Création d'une suite parentale de luxe. Vasque à poser rose poudré, miroir rétroéclairé, robinetterie dorée et teinte terracotta. Sèche-serviettes doré, paroi vitrée fixe et banc en bois naturel dans la douche.",
@@ -1351,7 +1351,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "soisy-sdb",
-    slug: "projet-soisy-95-sdb-principale-rose-terracotta",
+    slug: "salle-de-bain-soisy-95-rose-terracotta",
     title: "SDB Principale — Rose & Terracotta",
     location: "Soisy-sous-Montmorency (95) - Maison 1900",
     description: "AVANT : Combles aménageables avec sol béton et éclairage provisoire. APRÈS : Salle de bain luxueuse aux teintes rose et terracotta. Baignoire îlot (Leroy Merlin), robinetterie dorée au sol, vasque à poser rose sur meuble bois, miroir ovale doré et frise carreaux de ciment (Parquet Carrelage). Douche à l'italienne avec banc bois et paroi fixe.",
@@ -1369,7 +1369,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "soisy-enfants",
-    slug: "projet-soisy-95-sdb-enfants-terrazzo-menthe",
+    slug: "salle-de-bain-soisy-95-enfants-terrazzo-menthe",
     title: "SDB Enfants — Terrazzo & Menthe",
     location: "Soisy-sous-Montmorency (95) - Maison 1900",
     description: "AVANT : Combles inachevés avec placo apparent et absence d'isolation. APRÈS : Salle de bain enfants colorée et joyeuse. Sol et murs en terrazzo vert menthe, meuble double vasque suspendu blanc, robinetterie chromée et paroi vitrée fixe. Niches de rangement intégrées et baignoire d'angle pour les enfants.",
@@ -1387,7 +1387,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== SAINT-MAURICE (94) ==========
   {
     id: "saint-maurice-verdun",
-    slug: "projet-saint-maurice-94-avenue-verdun-pullman",
+    slug: "salle-de-bain-saint-maurice-94-pullman-noir-blanc",
     title: "Inspiration Pullman — Noir & Blanc",
     location: "Saint-Maurice (94) - Avenue de Verdun",
     description: `Salle de bain à l'inspiration Pullman noir & blanc, au style rétro affirmé et intemporel.
