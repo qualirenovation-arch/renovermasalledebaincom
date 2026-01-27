@@ -510,8 +510,8 @@ export const albums: Album[] = [
   // ========== PARIS 3ÈME (75003) ==========
   {
     id: "temple",
-    slug: "salle-de-bain-paris-3-style-masculin-bois-noir",
-    title: "Style masculin — Bois & Noir",
+    slug: "salle-de-bain-paris-3-renovation-style-masculin-bois-noir",
+    title: "Rénovation salle de bain Paris 3ème — Style masculin en bois et noir",
     location: "Paris 3ème - Rue du Temple",
     description: "AVANT : Salle de bain vétuste, peu fonctionnelle et sans optimisation. APRÈS : Salle de bain repensée dans un style masculin et contemporain — douche à l'italienne, meuble vasque sur mesure, robinetterie noire mate. 👉 Le détail qui change tout : lave-linge intégré et dissimulé derrière une porte — une approche de conception, pas de simple exécution. Envie d'y être ? Faites votre demande de devis et devenez le prochain projet affiché sur notre plan interactif – chantiers en cours.",
     coverImage: temple1,
@@ -527,8 +527,8 @@ export const albums: Album[] = [
   // ========== PARIS 5ÈME (75005) ==========
   {
     id: "buffon",
-    slug: "salle-de-bain-paris-5-buffon-optimisation-maximale",
-    title: "Optimisation maximale",
+    slug: "salle-de-bain-paris-5-renovation-optimisation-petit-espace",
+    title: "Rénovation salle de bain Paris 5ème — Optimisation maximale d'un petit espace",
     location: "Paris 5ème - Rue Buffon",
     description: "AVANT : Salle de bain vétuste et mal agencée, espace perdu et rangements insuffisants. APRÈS : Pied-à-terre parisien familial hyper optimisé. Receveur extra-plat avec deux niches encastrées, porte coulissante gain de place, lave-linge dissimulé derrière une porte. Astuce : le chauffe-eau est positionné dans la gaine technique au-dessus du WC suspendu — invisible et accessible.",
     coverImage: buffon1,
@@ -546,8 +546,8 @@ export const albums: Album[] = [
   },
   {
     id: "rue-des-puits",
-    slug: "salle-de-bain-suresnes-92-vie-en-bleu",
-    title: "La vie en bleu",
+    slug: "salle-de-bain-suresnes-92-renovation-onyx-blue-marbre",
+    title: "Rénovation salle de bain Suresnes — La vie en bleu Onyx Blue et marbre",
     location: "Suresnes (92) - Rue des Puits",
     description: "Cette salle de bain contemporaine joue sur le contraste entre un carrelage aspect marbre Onyx Blue au mur et un carrelage beige Magda Marfil au sol, pour une ambiance élégante et lumineuse.\n\nUn meuble IKEA en bois entièrement customisé, surmonté d'un plan de travail effet marbre et équipé d'une double vasque en verre, structure l'espace avec légèreté. La robinetterie chromée et le miroir rétroéclairé renforcent le confort et la luminosité.\n\n👉 Le vrai plus : la machine à laver est dissimulée dans un placard à l'entrée de la salle de bain, offrant un espace fluide, épuré et parfaitement optimisé.\n\nUne rénovation pensée pour allier design, fonctionnalité et gain de place.",
     coverImage: ruePuits1,
@@ -566,8 +566,8 @@ export const albums: Album[] = [
   // ========== PARIS 6ÈME (75006) ==========
   {
     id: "saint-germain",
-    slug: "salle-de-bain-paris-6-saint-germain-luxe",
-    title: "Luxe discret Saint-Germain",
+    slug: "salle-de-bain-paris-6-renovation-luxe-saint-germain-douche-italienne",
+    title: "Rénovation salle de bain Paris 6ème — Luxe discret à Saint-Germain avec douche à l'italienne",
     location: "Paris 6ème - Boulevard Saint-Germain",
     description: "AVANT : Salle de bain vétuste avec baignoire sabot, carrelage en mauvais état et équipements datés. APRÈS : Rénovation haut de gamme avec douche à l'italienne, carrelage grand format effet pierre, robinetterie encastrée chromée et meuble vasque suspendu design.",
     coverImage: stGermain1,
@@ -585,8 +585,8 @@ export const albums: Album[] = [
   // ========== PARIS 8ÈME (75008) ==========
   {
     id: "matignon",
-    slug: "salle-de-bain-paris-8-matignon-rafraichissement",
-    title: "Rafraîchissement entre deux locations",
+    slug: "salle-de-bain-paris-8-renovation-locative-douche-italienne",
+    title: "Rénovation salle de bain Paris 8ème — Rafraîchissement locatif avec douche à l'italienne",
     location: "Paris 8ème - Avenue Matignon",
     description: "AVANT : Salle de bain dans son jus avec baignoire et vasque roses, carrelage marbre vieillot et papier peint daté. APRÈS : Transformation complète en espace épuré et moderne. Carrelage effet marbre grand format, douche à l'italienne avec robinetterie Grohe encastrée, double vasque contemporaine et WC suspendu.",
     coverImage: matignon1,
@@ -604,8 +604,8 @@ export const albums: Album[] = [
   },
   {
     id: "sergent-beauchart",
-    slug: "salle-de-bain-paris-12-sergent-beauchart-degat-eaux",
-    title: "Dégât des eaux : du chaos à la transformation",
+    slug: "salle-de-bain-paris-12-renovation-degat-des-eaux-transformation",
+    title: "Rénovation salle de bain Paris 12ème — Du dégât des eaux à la transformation complète",
     location: "Paris 12ème - Rue Sergent Beauchart",
     description: "Dégât des eaux en cuisine ou en salle de bain ? Vous n'êtes pas seul. Regardez l'avant / après.\n\nParce qu'un dégât des eaux, c'est toujours un coup dur… mais aussi souvent le point de départ d'un projet mieux pensé, plus fonctionnel, plus durable.\n\n👉 Diagnostic\n👉 Reprise technique\n👉 Optimisation de l'espace\n👉 Finitions propres et pérennes\n\nDu chaos à une pièce transformée. Oui, c'est possible. Et non, vous n'êtes clairement pas seul.",
     coverImage: bauchartApres1,
@@ -624,8 +624,8 @@ export const albums: Album[] = [
   // ========== PARIS 9ÈME (75009) ==========
   {
     id: "taitbout",
-    slug: "salle-de-bain-paris-9-taitbout-douche-italienne",
-    title: "Douche à l'italienne et carrelage effet pierre",
+    slug: "salle-de-bain-paris-9-renovation-douche-italienne-carrelage-pierre",
+    title: "Rénovation salle de bain Paris 9ème — Douche à l'italienne et carrelage effet pierre",
     subtitle: "Finition mate antidérapante",
     location: "Paris 9ème - Rue Taitbout",
     description: `Cette salle de bain parisienne a été entièrement repensée pour offrir un confort d'usage durable, en tenant compte du fait qu'avec le temps, la baignoire devient peu pratique au quotidien. Elle a été remplacée par une douche à l'italienne de plain-pied, plus accessible et plus sécurisante.
@@ -648,14 +648,14 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 9, image: taitbout12, title: "Après — Ensemble", description: "Vue finale de la pièce" },
       { id: 10, image: taitbout1, title: "Avant — Vue initiale", description: "Salle de bain avant travaux" },
       { id: 11, image: taitbout2, title: "Avant — Baignoire", description: "Baignoire à transformer" },
-      { id: 12, image: taitbout3, title: "Avant — Vue d'ensemble", description: "État des lieux initial" },
+      { id: 12, image: taitbout3, title: "Avant — Vue générale", description: "Configuration existante" },
     ],
   },
   // ========== PARIS 10ÈME (75010) ==========
   {
     id: "paris10-jemmapes",
-    slug: "salle-de-bain-paris-10-canal-saint-martin-masculin",
-    title: "Salle de bain au masculin",
+    slug: "salle-de-bain-paris-10-renovation-style-masculin-jemmapes",
+    title: "Rénovation salle de bain Paris 10ème — Style masculin au Canal Saint-Martin",
     location: "Paris 10ème - Canal Saint-Martin",
     description: "AVANT : Salle de bain classique et impersonnelle. APRÈS : Salle de bain au style résolument masculin avec carrelage foncé, robinetterie noire mate et lignes épurées. Paroi vitrée minimaliste pour un effet loft.",
     coverImage: jemmapes1,
@@ -667,8 +667,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "paris10-dore",
-    slug: "salle-de-bain-paris-10-faubourg-saint-denis-elegance-doree",
-    title: "Élégance dorée",
+    slug: "salle-de-bain-paris-10-renovation-elegance-doree-faubourg-saint-denis",
+    title: "Rénovation salle de bain Paris 10ème — Élégance dorée au Faubourg Saint-Denis",
     location: "Paris 10ème - Faubourg Saint-Denis",
     description: "AVANT : Salle de bain banale avec équipements standards. APRÈS : Salle de bain luxueuse avec robinetterie dorée laiton brossé, carrelage effet marbre onyx et finitions haut de gamme. Paroi vitrée à profilé doré et ciel de pluie encastré.",
     coverImage: gallery7,
@@ -681,8 +681,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "faubourg-stmartin",
-    slug: "salle-de-bain-paris-10-faubourg-saint-martin-noir-marbre",
-    title: "Projet Faubourg Saint-Martin",
+    slug: "salle-de-bain-paris-10-renovation-noir-marbre-faubourg-saint-martin",
+    title: "Rénovation salle de bain Paris 10ème — Noir et marbre au Faubourg Saint-Martin",
     subtitle: "Noir & Marbre, l'élégance parisienne intemporelle",
     location: "Paris 10ème - Rue du Faubourg Saint-Martin",
     description: "Cette salle de bain parisienne a été entièrement repensée dans un esprit chic, sobre et intemporel, où le contraste du noir et la noblesse du marbre blanc créent une atmosphère élégante et durable.\n\nLe carrelage grand format effet marbre apporte lumière et profondeur, tandis que les lignes épurées assurent une esthétique facile à projeter dans le temps.\n\nL'agencement a été optimisé pour offrir un confort maximal au quotidien : douche à l'italienne avec porte en verre, meuble double vasque suspendu et circulations fluides, parfaitement adaptées aux volumes parisiens.",
@@ -700,8 +700,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== PARIS 11ÈME (75011) ==========
   {
     id: "charonne",
-    slug: "salle-de-bain-paris-11-charonne-retro-noir-blanc",
-    title: "Black & White — Robinetterie Rétro",
+    slug: "salle-de-bain-paris-11-renovation-retro-noir-blanc-charonne",
+    title: "Rénovation salle de bain Paris 11ème — Style rétro noir et blanc à Charonne",
     location: "Paris 11ème - Rue de Charonne (Bastille)",
     description: "AVANT : Salle de bain datée avec carrelage blanc, cabine de douche et vasque en bois usée. APRÈS : Transformation spectaculaire pour ce pied-à-terre parisien. Carreaux fleuris inspiration carreaux de ciment (Neocim) au sol, métro noir mat et brillant aux murs avec pose en chevrons dans la douche et à l'anglaise côté vasque, séparation marquée par un profilé laiton. Lavabo colonne rétro et robinetterie dorée vintage. Papier peint nuages pour une atmosphère hôtel boutique. **Projet réalisé à distance** : le client avait préparé tous les rendus souhaités, nous avons respecté le cahier des charges à la lettre.",
     coverImage: charonne1,
@@ -717,8 +717,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "citeaux",
-    slug: "salle-de-bain-paris-11-citeaux-petite-3m2",
-    title: "Salle d'eau de 3m²",
+    slug: "salle-de-bain-paris-11-renovation-petite-surface-3m2",
+    title: "Rénovation salle de bain Paris 11ème — Optimisation d'une petite surface de 3m²",
     location: "Paris 11ème - Rue de Citeaux (Bastille)",
     description: "AVANT : Petite salle d'eau vétuste avec carrelage mosaïque au sol et bac à douche standard. APRÈS : Optimisation maximale de 3m² : douche à l'italienne avec receveur extra-plat, meuble vasque suspendu avec miroir et rangements, WC suspendu et finitions soignées.",
     coverImage: citeaux1,
@@ -734,8 +734,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== PARIS 12ÈME (75012) ==========
   {
     id: "cours-vincennes-wc",
-    slug: "salle-de-bain-paris-12-cours-vincennes-wc-onyx",
-    title: "WC — Onyx & Placard VMC",
+    slug: "salle-de-bain-paris-12-renovation-wc-design-onyx-blue",
+    title: "Rénovation WC Paris 12ème — Design contemporain en Onyx Blue",
     location: "Paris 12ème - Cours de Vincennes",
     description: "AVANT : WC basique avec équipement standard et aucun rangement. APRÈS : Transformation élégante avec carrelage effet onyx, WC suspendu Grohe et création d'un placard technique intégrant la VMC et les arrivées. Un petit espace optimisé au maximum.",
     coverImage: coursVincennesWc1,
@@ -749,8 +749,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "cours-vincennes-sdb",
-    slug: "salle-de-bain-paris-12-cours-vincennes-garcon-noir-blanc",
-    title: "Salle de bain garçon : noir & blanc, esprit contemporain",
+    slug: "salle-de-bain-paris-12-renovation-garcon-noir-blanc-contemporain",
+    title: "Rénovation salle de bain Paris 12ème — Salle de bain garçon noir et blanc contemporain",
     location: "Paris 12ème - Cours de Vincennes",
     description: "Salle de bain garçon : noir & blanc, esprit contemporain\n\nPensée pour le garçon de la maison, cette salle de bain a été entièrement transformée pour gagner en confort, modernité et durabilité. Fini le receveur d'angle et le meuble vert daté : place à une douche spacieuse, un carrelage noir & blanc esprit subway et des lignes nettes, faciles à vivre au quotidien.\n\nLe meuble suspendu, la robinetterie noire mate et le miroir rétro-éclairé composent un ensemble sobre et graphique, parfaitement adapté à un univers masculin et évolutif.\n\nRésultat : une salle de bain fonctionnelle, contemporaine et intemporelle, pensée pour accompagner un enfant aujourd'hui… et un adulte demain.",
     coverImage: coursVincennesSdb1,
@@ -767,8 +767,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "cours-vincennes-madame",
-    slug: "salle-de-bain-paris-12-cours-vincennes-madame-rangements",
-    title: "SDB Madame — Rangements Sur-mesure",
+    slug: "salle-de-bain-paris-12-renovation-madame-marbre-rangements",
+    title: "Rénovation salle de bain Paris 12ème — Salle de bain madame marbre gris et rangements",
     location: "Paris 12ème - Cours de Vincennes",
     description: "AVANT : Salle de bain grise et datée, cabine de douche arrondie, aucun rangement. APRÈS : Salle de bain repensée dans une harmonie marbre noir/gris. Placard au-dessus des WC avec rangement serviettes et panière à linge coulissante. Douche à l'italienne XXL, meuble vasque noir et carrelage grand format effet pierre. 👉 Gain de place, style et fonctionnalité réunis.",
     coverImage: coursVincennesMadame1,
@@ -787,8 +787,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "place-daumesnil",
-    slug: "salle-de-bain-paris-12-place-daumesnil-bleu-mineral-beton",
-    title: "Bleu minéral & béton urbain : le WC devient manifeste",
+    slug: "salle-de-bain-paris-12-renovation-bleu-mineral-beton-reuilly",
+    title: "Rénovation salle de bain Paris 12ème — Bleu minéral et béton urbain à Reuilly",
     location: "Paris 12ème - Place Daumesnil",
     description: "Dans cet appartement de la rue de Reuilly, le WC se transforme en terrain d'expression sobre et graphique. Le sol en béton tech, minéral et contemporain, dialogue avec un carreau ciment Paris Rivoli 25×25 cm en mur face, apportant rythme et profondeur à l'espace. La palette, dominée par des nuances claires et minérales, installe une atmosphère urbaine, presque architecturale.\n\nMais derrière l'esthétique, l'intelligence du plan. Le WC est déplacé dans l'autre sens, la porte devient coulissante, et l'ancien emplacement libéré permet d'encastrer le frigo côté cuisine. La gaine technique, repensée et intégrée côté cuisine, s'efface visuellement sans rien céder à la rigueur technique.\n\nUn projet précis et élégant, où le bleu minéral et le béton dessinent un WC discret mais affirmé — et prouvent qu'un espace secondaire peut, à lui seul, rééquilibrer tout un appartement parisien.",
     coverImage: placeDaumesnil2,
@@ -803,8 +803,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== PARIS 13ÈME (75013) ==========
   {
     id: "bobillot",
-    slug: "salle-de-bain-paris-13-bobillot-renovation-location",
-    title: "Rénovation entre deux locations",
+    slug: "salle-de-bain-paris-13-renovation-locative-zellige-beige",
+    title: "Rénovation salle de bain Paris 13ème — Rénovation locative avec zellige beige",
     location: "Paris 13ème - Rue Bobillot",
     description: "AVANT : Logement dégradé nécessitant une rénovation profonde pour améliorer le DPE et revaloriser le bien. Murs abîmés, tuyauteries apparentes, aucun équipement moderne. APRÈS : Rénovation complète cuisine et salle de bain. Ambiance chaleureuse avec teintes beige, bois et noir. Meuble vasque bois avec plan noir, robinetterie laiton brossé, carrelage zellige beige et chauffe-eau dissimulé au-dessus du WC suspendu pour un gain de place optimal.",
     coverImage: bobillot1,
@@ -824,8 +824,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "nicolas-roret",
-    slug: "salle-de-bain-paris-13-nicolas-roret-zellige-turquoise",
-    title: "Zellige turquoise & Or",
+    slug: "salle-de-bain-paris-13-renovation-zellige-turquoise-or",
+    title: "Rénovation salle de bain Paris 13ème — Zellige turquoise et robinetterie dorée",
     location: "Paris 13ème - Rue Nicolas Roret",
     description: "AVANT : WC vétuste avec carrelage bleu abîmé, équipements datés et peinture écaillée. APRÈS : Transformation luxueuse avec douche italienne en zellige turquoise posé en chevron, paroi et robinetterie dorées, niches intégrées avec listel or, carrelage grand format effet marbre. WC suspendu assorti avec lave-mains doré, local technique optimisé intégrant chauffe-eau et lave-linge.",
     coverImage: nicolasRoret5,
@@ -854,8 +854,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "nicolas-roret-wc",
-    slug: "salle-de-bain-paris-13-nicolas-roret-wc-zellige-laiton",
-    title: "WC Zellige turquoise & Laiton brossé",
+    slug: "salle-de-bain-paris-13-renovation-wc-zellige-turquoise-laiton",
+    title: "Rénovation WC Paris 13ème — Zellige turquoise et laiton brossé",
     location: "Paris 13ème - Rue Nicolas Roret",
     description: "AVANT : WC vétuste avec carrelage bleu abîmé, équipements datés et peinture écaillée. APRÈS : WC suspendu luxueux avec zellige turquoise posé en chevron, lave-mains avec robinetterie laiton brossé, local technique optimisé intégrant chauffe-eau et lave-linge.",
     coverImage: nicolasRoret11,
@@ -870,8 +870,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== PARIS 15ÈME (75015) ==========
   {
     id: "amiral-roussin",
-    slug: "salle-de-bain-paris-15-amiral-roussin-scandinave",
-    title: "Style scandinave",
+    slug: "salle-de-bain-paris-15-renovation-scandinave-buanderie-integree",
+    title: "Rénovation salle de bain Paris 15ème — Style scandinave avec buanderie intégrée",
     location: "Paris 15ème - Amiral Roussin",
     description: "AVANT : Salle de bain standard sans personnalité. APRÈS : Rénovation pour un jeune couple. Style scandinave épuré avec meuble vasque en chêne massif, robinetterie noire mate et receveur extra-plat. Buanderie intégrée dans le placard pour optimiser l'espace.",
     coverImage: amiralRoussin1,
@@ -889,8 +889,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "paris15-convention",
-    slug: "salle-de-bain-paris-15-convention-hague-blue",
-    title: "Salle de douche & WC séparés",
+    slug: "salle-de-bain-paris-15-renovation-douche-wc-separes-hague-blue",
+    title: "Rénovation salle de bain Paris 15ème — Douche et WC séparés en Hague Blue",
     location: "Paris 15ème - Rue de la Convention",
     description: "AVANT : Receveur de douche mal positionné et espace non optimisé. APRÈS : Création d'une salle de douche et d'un WC séparé. Receveur XXL de 140 cm avec niche horizontale intégrée. Ambiance graphique avec le bleu Hague Blue de Farrow & Ball sur fond gris béton, réchauffée par des touches de bois pour un rendu contemporain et chaleureux.",
     coverImage: convention1,
@@ -907,8 +907,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== PARIS 16ÈME (75016) ==========
   {
     id: "pierre-guerin",
-    slug: "salle-de-bain-paris-16-pierre-guerin-masculin",
-    title: "Style masculin — Pierre & Inox",
+    slug: "salle-de-bain-paris-16-renovation-masculine-pierre-inox",
+    title: "Rénovation salle de bain Paris 16ème — Style masculin en pierre et inox",
     location: "Paris 16ème - Rue Pierre Guérin",
     description: "Rénovation d'une salle de bain pour un appartement au masculin. Douche à l'italienne avec carrelage pierre naturelle, robinetterie encastrée chromée haut de gamme, niches de rangement intégrées et rangements sur-mesure avec buanderie dissimulée.",
     coverImage: pierreGuerin1,
@@ -927,8 +927,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "auteuil",
-    slug: "salle-de-bain-paris-16-auteuil-parisien-chic",
-    title: "Style Parisien Chic — SDB & WC",
+    slug: "salle-de-bain-paris-16-renovation-parisien-chic-auteuil",
+    title: "Rénovation salle de bain Paris 16ème — Style parisien chic à Auteuil",
     location: "Paris 16ème - Rue Boileau, Auteuil",
     description: "AVANT : Salle de bain datée avec carrelage mosaïque noir et escalier en travaux. APRÈS : Duplex entièrement repensé avec salle de bain sous escalier. Vasque rose poudré sur plan noir, robinetterie dorée encastrée, carrelage effet marbre, paroi coulissante noire. WC séparé avec mur bordeaux, affiche fashion et frise hexagonale cuivrée.",
     coverImage: auteuil1,
@@ -945,8 +945,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "lauriston",
-    slug: "salle-de-bain-paris-16-lauriston-elegance",
-    title: "Élégance parisienne",
+    slug: "salle-de-bain-paris-16-renovation-elegance-parisienne-lauriston",
+    title: "Rénovation salle de bain Paris 16ème — Élégance parisienne à Lauriston",
     location: "Paris 16ème - Rue de Lauriston",
     description: "AVANT : Salle de bain datée avec baignoire et carrelage mosaïque. APRÈS : Transformation en espace contemporain avec douche à l'italienne, carrelage grand format effet pierre, robinetterie chromée et meuble vasque design.",
     coverImage: lauriston1,
@@ -963,8 +963,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== PARIS 17ÈME (75017) ==========
   {
     id: "paris17-suite",
-    slug: "salle-de-bain-paris-17-les-ternes-suite-parentale",
-    title: "Suite Parentale Les Ternes",
+    slug: "salle-de-bain-paris-17-renovation-suite-parentale-claustra-bois",
+    title: "Rénovation salle de bain Paris 17ème — Suite parentale avec claustra bois aux Ternes",
     location: "Paris 17ème - Les Ternes",
     description: "AVANT : Baignoire balnéo en panne depuis des années avec galets au sol, aucune paroi pour protéger de l'eau — la douche causait des éclaboussures sur le parquet, très peu pratique. APRÈS : Création d'une suite parentale luxueuse avec claustra bois sur mesure, douche à l'italienne en carrelage effet marbre, paroi et robinetterie dorées laiton brossé, niches intégrées et colonnes de rangement.",
     coverImage: suiteParentaleCover,
@@ -992,8 +992,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "paris17-pereire",
-    slug: "salle-de-bain-paris-17-pereire-degat-eaux",
-    title: "Rénovation après dégât des eaux",
+    slug: "salle-de-bain-paris-17-renovation-degat-des-eaux-terrazzo",
+    title: "Rénovation salle de bain Paris 17ème — Du dégât des eaux au terrazzo contemporain",
     location: "Paris 17ème - Bd Pereire",
     description: "AVANT : Dégâts des eaux et malfaçons laissés par une précédente entreprise — infiltrations, moisissures et travaux bâclés. APRÈS : Intervention de Carina pour reprendre le chantier. Rénovation complète avec carrelage chevrons blancs tendance, sol terrazzo gris et robinetterie chromée. On vous explique tout sur ce chantier de rattrapage !",
     coverImage: gallery11,
@@ -1020,8 +1020,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== PARIS 19ÈME (75019) ==========
   {
     id: "armand-carrel",
-    slug: "salle-de-bain-paris-19-armand-carrel-mosaique-noir-mat",
-    title: "Mosaïque géométrique & Noir mat",
+    slug: "salle-de-bain-paris-19-renovation-tout-en-un-mosaique-noir-mat",
+    title: "Rénovation salle de bain Paris 19ème — Tout-en-un avec mosaïque géométrique et noir mat",
     location: "Paris 19ème - Rue Armand Carrel",
     description: "Une salle de bain tout-en-un, parfaitement maîtrisée\n\nDans cette pièce, tout est réuni : un WC, une baignoire, une douche avec receveur, et même une buanderie. Chaque fonction a été intégrée avec précision pour créer un espace complet, pratique et agréable à vivre, sans compromis sur le confort.\n\nL'agencement a été pensé pour permettre une cohabitation fluide au quotidien, que ce soit pour une utilisation familiale ou simultanée. Les volumes sont optimisés, les circulations sont naturelles, et chaque zone trouve sa place avec évidence.\n\nRésultat : une salle de bain ultra-fonctionnelle, où rien ne manque et où chaque mètre carré est intelligemment exploité — un vrai défi parisien relevé avec succès.",
     coverImage: armandCarrel1,
@@ -1039,8 +1039,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== BOIS-COLOMBES (92270) ==========
   {
     id: "bois-colombes",
-    slug: "salle-de-bain-bois-colombes-92-renovation-complete",
-    title: "Rénovation complète Avant/Après",
+    slug: "salle-de-bain-bois-colombes-92-renovation-complete-avant-apres",
+    title: "Rénovation salle de bain Bois-Colombes — Transformation complète avant/après",
     location: "Bois-Colombes (92)",
     description: "AVANT : Salle de bain datée avec baignoire et carrelage ancien, aucune optimisation de l'espace. APRÈS : Transformation complète avec douche à l'italienne XXL, carrelage effet béton, meuble double vasque suspendu et WC suspendu. Rangements optimisés et finitions haut de gamme.",
     coverImage: boisColombes1,
