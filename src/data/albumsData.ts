@@ -1259,9 +1259,9 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     coverImage: stMaurEnfants2,
     photos: [
       { id: 1, image: stMaurEnfants2, title: "Après — Meuble vasque", description: "Effet bois et robinetterie Horus" },
-      { id: 3, image: stMaurEnfants3, title: "Après — Détail carrelage", description: "Tebrick bleu pose verticale" },
-      { id: 4, image: stMaurEnfants4, title: "Après — WC suspendu", description: "Placard sapin vernis chêne doré" },
-      { id: 5, image: stMaurEnfantsAvant1, title: "Avant — Salle de bain", description: "Baignoire et carrelage dégradés" },
+      { id: 2, image: stMaurEnfants3, title: "Après — Receveur douche", description: "Tebrick bleu pose verticale" },
+      { id: 3, image: stMaurEnfants4, title: "Après — WC suspendu", description: "Placard sapin vernis chêne doré" },
+      { id: 4, image: stMaurEnfantsAvant1, title: "Avant — WC", description: "État avant travaux" },
     ],
   },
   // ========== VINCENNES (94300) ==========
