@@ -15,8 +15,9 @@ export const redirectMap: Record<string, string> = {
   "projet-suresnes-rue-des-puits-terrazzo": "salle-de-bain-suresnes-92-renovation-onyx-blue-marbre",
   "salle-de-bain-suresnes-92-vie-en-bleu": "salle-de-bain-suresnes-92-renovation-onyx-blue-marbre",
   
-  // Paris 6ème
-  "salle-de-bain-paris-6-saint-germain-luxe": "salle-de-bain-paris-6-renovation-luxe-saint-germain-douche-italienne",
+  // Paris 5ème
+  "salle-de-bain-paris-6-saint-germain-luxe": "salle-de-bain-paris-5-renovation-baignoire-saint-germain",
+  "salle-de-bain-paris-6-renovation-luxe-saint-germain-douche-italienne": "salle-de-bain-paris-5-renovation-baignoire-saint-germain",
   
   // Paris 8ème
   "salle-de-bain-paris-8-matignon-rafraichissement": "salle-de-bain-paris-8-renovation-locative-douche-italienne",
