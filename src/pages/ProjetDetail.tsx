@@ -82,6 +82,21 @@ const ProjetDetail = () => {
         <title>{album.title} | {album.location} | Rénovation Salle de Bain Paris</title>
         <meta name="description" content={album.description.slice(0, 160)} />
         <link rel="canonical" href={`https://renovermasalledebain.com/realisations/${album.slug}`} />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={`${album.title} | ${album.location}`} />
+        <meta property="og:description" content={album.description.slice(0, 200)} />
+        <meta property="og:url" content={`https://renovermasalledebain.com/realisations/${album.slug}`} />
+        <meta property="og:image" content={typeof album.coverImage === 'string' ? album.coverImage : `https://renovermasalledebain.com${album.coverImage}`} />
+        <meta property="og:site_name" content="Rénover ma Salle de Bain" />
+        <meta property="og:locale" content="fr_FR" />
+        
+        {/* Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${album.title} | ${album.location}`} />
+        <meta name="twitter:description" content={album.description.slice(0, 200)} />
+        <meta name="twitter:image" content={typeof album.coverImage === 'string' ? album.coverImage : `https://renovermasalledebain.com${album.coverImage}`} />
       </Helmet>
 
       <section className="section-padding pt-32 md:pt-40">
