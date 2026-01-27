@@ -6,11 +6,22 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, ChevronLeft, ChevronRight, X, ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { albums, getAlbumBySlug, Album, Photo } from "@/data/albumsData";
+import { getRedirectSlug } from "@/data/redirects";
 
 const ProjetDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
+  
+  // Check for redirect first
+  const redirectSlug = slug ? getRedirectSlug(slug) : null;
+  
+  // Redirect 301 to new URL if old slug is used
+  useEffect(() => {
+    if (redirectSlug) {
+      navigate(`/realisations/${redirectSlug}`, { replace: true });
+    }
+  }, [redirectSlug, navigate]);
   
   const album = slug ? getAlbumBySlug(slug) : null;
   
@@ -42,6 +53,11 @@ const ProjetDetail = () => {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [selectedPhotoIndex, album]);
+
+  // If redirecting, don't render anything
+  if (redirectSlug) {
+    return null;
+  }
 
   if (!album) {
     return (
