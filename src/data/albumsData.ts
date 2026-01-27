@@ -1043,7 +1043,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     title: "Rénovation salle de bain Bois-Colombes — Transformation complète avant/après",
     location: "Bois-Colombes (92)",
     description: "AVANT : Salle de bain datée avec baignoire et carrelage ancien, aucune optimisation de l'espace. APRÈS : Transformation complète avec douche à l'italienne XXL, carrelage effet béton, meuble double vasque suspendu et WC suspendu. Rangements optimisés et finitions haut de gamme.",
-    coverImage: boisColombes1,
+    coverImage: boisColombes11,
     instagramLink: "https://www.instagram.com/reel/DFvTfUlst9t/",
     review: {
       text: "Carina est une professionnelle exceptionnelle. Elle a su transformer notre salle de bain en un espace moderne et fonctionnel. Son expertise, sa créativité et son suivi rigoureux ont fait toute la différence. Nous sommes ravis du résultat et recommandons vivement ses services.",
@@ -1051,7 +1051,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       link: "https://www.houzz.fr/viewReview/2153287/qualirenovation-by-qualiconcept-review"
     },
     photos: [
-      { id: 1, image: boisColombes1, title: "Après — Vue d'ensemble", description: "Douche XXL et double vasque" },
+      { id: 1, image: boisColombes11, title: "Après — Vue générale", description: "Espace optimisé" },
       { id: 2, image: boisColombes2, title: "Après — Douche italienne", description: "Carrelage effet béton et paroi fixe" },
       { id: 3, image: boisColombes3, title: "Après — Double vasque", description: "Meuble suspendu design" },
       { id: 4, image: boisColombes4, title: "Après — Détail robinetterie", description: "Mitigeurs chromés" },
@@ -1061,7 +1061,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 8, image: boisColombes8, title: "Après — Paroi vitrée", description: "Verre trempé sécurit" },
       { id: 9, image: boisColombes9, title: "Après — Sèche-serviettes", description: "Design contemporain" },
       { id: 10, image: boisColombes10, title: "Après — Détails", description: "Finitions soignées" },
-      { id: 11, image: boisColombes11, title: "Après — Vue générale", description: "Espace optimisé" },
+      { id: 11, image: boisColombes1, title: "Avant — Vue d'ensemble", description: "Salle de bain avant travaux" },
       { id: 12, image: boisColombresAvant1, title: "Avant — Baignoire", description: "Baignoire et carrelage daté" },
       { id: 13, image: boisColombresAvant2, title: "Avant — Vue générale", description: "Salle de bain à transformer" },
       { id: 14, image: boisColombresAvant3, title: "Avant — WC", description: "WC à remplacer" },
