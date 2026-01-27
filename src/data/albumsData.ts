@@ -1256,10 +1256,9 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     title: "SDB & WC Enfants — Inspiration Coréenne",
     location: "Saint-Maur-des-Fossés (94) - Av. du Nord",
     description: "AVANT : Salle d'eau vétuste avec baignoire usée et carrelage dégradé. APRÈS : Transformation complète pour les enfants. Carrelage mural Tebrick bleu posé verticalement (Parquet Carrelage), meuble vasque effet bois, robinetterie Horus Elsa et Equinox (CMR), placard sur-mesure en sapin vernis chêne doré au-dessus du WC. Sol grès cérame Etna Crema antidérapant. Une élégance douce inspirée du design coréen.",
-    coverImage: stMaurEnfants1,
+    coverImage: stMaurEnfants2,
     photos: [
-      { id: 1, image: stMaurEnfants1, title: "Après — Vue d'ensemble", description: "Douche, meuble et carrelage bleu Tebrick" },
-      { id: 2, image: stMaurEnfants2, title: "Après — Meuble vasque", description: "Effet bois et robinetterie Horus" },
+      { id: 1, image: stMaurEnfants2, title: "Après — Meuble vasque", description: "Effet bois et robinetterie Horus" },
       { id: 3, image: stMaurEnfants3, title: "Après — Détail carrelage", description: "Tebrick bleu pose verticale" },
       { id: 4, image: stMaurEnfants4, title: "Après — WC suspendu", description: "Placard sapin vernis chêne doré" },
       { id: 5, image: stMaurEnfantsAvant1, title: "Avant — Salle de bain", description: "Baignoire et carrelage dégradés" },
