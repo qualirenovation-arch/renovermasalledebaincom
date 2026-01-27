@@ -1063,7 +1063,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 11, image: boisColombes1, title: "Avant — Vue d'ensemble", description: "Salle de bain avant travaux" },
       { id: 12, image: boisColombresAvant1, title: "Avant — Baignoire", description: "Baignoire et carrelage daté" },
       { id: 13, image: boisColombresAvant2, title: "Avant — Vue générale", description: "Salle de bain à transformer" },
-      { id: 14, image: boisColombresAvant3, title: "Avant — WC", description: "WC à remplacer" },
+      { id: 14, image: boisColombresAvant3, title: "Avant — Lave-linge", description: "Espace buanderie à intégrer" },
     ],
   },
   // ========== BOULOGNE-BILLANCOURT (92100) ==========
