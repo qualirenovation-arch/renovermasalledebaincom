@@ -563,13 +563,13 @@ export const albums: Album[] = [
       { id: 9, image: ruePuitsAvant3, title: "Avant — Détail", description: "Carrelage daté" },
     ],
   },
-  // ========== PARIS 6ÈME (75006) ==========
+  // ========== PARIS 5ÈME (75005) ==========
   {
     id: "saint-germain",
-    slug: "salle-de-bain-paris-6-renovation-luxe-saint-germain-douche-italienne",
-    title: "Rénovation salle de bain Paris 6ème — Luxe discret à Saint-Germain avec douche à l'italienne",
-    location: "Paris 6ème - Boulevard Saint-Germain",
-    description: "AVANT : Salle de bain vétuste avec baignoire sabot, carrelage en mauvais état et équipements datés. APRÈS : Rénovation haut de gamme avec douche à l'italienne, carrelage grand format effet pierre, robinetterie encastrée chromée et meuble vasque suspendu design.",
+    slug: "salle-de-bain-paris-5-renovation-baignoire-saint-germain",
+    title: "Rénovation salle de bain baignoire Paris 5 – Projet Saint-Germain",
+    location: "Paris 5ème - Quartier Saint-Germain",
+    description: "Dans cet appartement du Paris 5, la salle de bain familiale a été subtilement remise au goût du jour sans bouleverser son implantation. Les murs en zellige blanc, lumineux et vibrants, contrastent avec un sol Patrimony bleu au motif graphique inspiré des carreaux de ciment, choisi pour son esthétique et sa facilité d'entretien. La baignoire a été remplacée, la plomberie entièrement reprise et un extracteur d'air installé pour améliorer le confort au quotidien. Un nouveau miroir contemporain vient parfaire cette rénovation équilibrée, à la croisée du pratique et de l'élégance.",
     coverImage: stGermain1,
     photos: [
       { id: 1, image: stGermain1, title: "Après — Vue d'ensemble", description: "Douche italienne et meuble design" },
