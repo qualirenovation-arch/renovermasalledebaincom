@@ -1252,10 +1252,10 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "saint-maur-enfants",
-    slug: "salle-de-bain-saint-maur-94-renovation-enfants-inspiration-coreenne",
-    title: "SDB & WC Enfants — Inspiration Coréenne",
+    slug: "salle-de-bain-saint-maur-94-enfants-bleu-beige-ancienne-guinguette",
+    title: "Salle de bain enfant bleu et beige – ancienne guinguette à Saint-Maur",
     location: "Saint-Maur-des-Fossés (94) - Av. du Nord",
-    description: "AVANT : Salle d'eau vétuste avec baignoire usée et carrelage dégradé. APRÈS : Transformation complète pour les enfants. Carrelage mural Tebrick bleu posé verticalement (Parquet Carrelage), meuble vasque effet bois, robinetterie Horus Elsa et Equinox (CMR), placard sur-mesure en sapin vernis chêne doré au-dessus du WC. Sol grès cérame Etna Crema antidérapant. Une élégance douce inspirée du design coréen.",
+    description: "À l'origine, une seule salle de bain pour toute la famille dans cette ancienne guinguette transformée en maison familiale.\nNous avons créé une seconde salle de bain dédiée aux enfants, pensée pour le confort du quotidien, sans trahir l'âme du lieu.\n\nL'espace accueille désormais une douche avec receveur, un meuble vasque pratique et des WC séparés, dans une palette bleu et beige, en écho direct à la salle de bain des parents.\nUn choix volontaire pour conserver une cohérence esthétique dans toute la maison, tout en adaptant les usages.\n\nRésultat : une salle de bain fonctionnelle, lumineuse et douce, parfaitement intégrée à cette maison de caractère.\nComme quoi, même une ancienne guinguette peut s'offrir une organisation ultra contemporaine… sans perdre son charme 🍃",
     coverImage: stMaurEnfants3,
     photos: [
       { id: 1, image: stMaurEnfants3, title: "Après — Meuble vasque", description: "Effet bois et robinetterie Horus" },
