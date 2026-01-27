@@ -76,6 +76,12 @@ const ProjetDetail = () => {
 
   const currentPhoto = selectedPhotoIndex !== null ? album.photos[selectedPhotoIndex] : null;
 
+  // Generate OG image URL - use static OG image if available, otherwise fallback to cover
+  const getOgImageUrl = () => {
+    const staticOgPath = `/og/${album.slug}.jpg`;
+    return `https://renovermasalledebain.com${staticOgPath}`;
+  };
+
   return (
     <Layout>
       <Helmet>
@@ -88,15 +94,17 @@ const ProjetDetail = () => {
         <meta property="og:title" content={`${album.title} | ${album.location}`} />
         <meta property="og:description" content={album.description.slice(0, 200)} />
         <meta property="og:url" content={`https://renovermasalledebain.com/realisations/${album.slug}`} />
-        <meta property="og:image" content={typeof album.coverImage === 'string' ? album.coverImage : `https://renovermasalledebain.com${album.coverImage}`} />
+        <meta property="og:image" content={getOgImageUrl()} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="Rénover ma Salle de Bain" />
         <meta property="og:locale" content="fr_FR" />
         
         {/* Twitter Cards */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${album.title} | ${album.location}`} />
-        <meta name="twitter:description" content={album.description.slice(0, 200)} />
-        <meta name="twitter:image" content={typeof album.coverImage === 'string' ? album.coverImage : `https://renovermasalledebain.com${album.coverImage}`} />
+        <meta property="twitter:description" content={album.description.slice(0, 200)} />
+        <meta name="twitter:image" content={getOgImageUrl()} />
       </Helmet>
 
       <section className="section-padding pt-32 md:pt-40">
