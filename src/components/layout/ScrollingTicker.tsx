@@ -44,35 +44,38 @@ export function ScrollingTicker() {
   const duplicatedItems = [...tickerItems, ...tickerItems];
 
   return (
-    <div className="bg-secondary/50 border-b border-border/30 overflow-hidden py-2">
-      <motion.div
-        className="flex whitespace-nowrap"
-        animate={{
-          x: [0, -50 * tickerItems.length + "%"],
-        }}
-        transition={{
-          x: {
-            repeat: Infinity,
-            repeatType: "loop",
-            duration: 30,
-            ease: "linear",
-          },
-        }}
-      >
-        {duplicatedItems.map((item, index) => (
-          <Link
-            key={index}
-            to={item.link}
-            className="inline-flex items-center gap-2 px-6 text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <span className="inline-flex items-center gap-1.5 text-wood font-medium">
-              {getIcon(item.type)}
-              {getTypeLabel(item.type)} :
-            </span>
-            <span>{item.label}</span>
-          </Link>
-        ))}
-      </motion.div>
+    <div className="bg-secondary/30 border-b border-border/20 overflow-hidden">
+      <div className="relative">
+        <motion.div
+          className="flex whitespace-nowrap py-2.5"
+          animate={{
+            x: ["0%", "-50%"],
+          }}
+          transition={{
+            x: {
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: 40,
+              ease: "linear",
+            },
+          }}
+        >
+          {duplicatedItems.map((item, index) => (
+            <Link
+              key={index}
+              to={item.link}
+              className="inline-flex items-center gap-2 mx-8 text-sm text-muted-foreground hover:text-foreground transition-colors group"
+            >
+              <span className="inline-flex items-center gap-1.5 text-wood font-medium">
+                {getIcon(item.type)}
+                <span>{getTypeLabel(item.type)}</span>
+                <span className="text-muted-foreground/50">:</span>
+              </span>
+              <span className="group-hover:underline">{item.label}</span>
+            </Link>
+          ))}
+        </motion.div>
+      </div>
     </div>
   );
 }
