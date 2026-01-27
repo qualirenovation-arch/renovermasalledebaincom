@@ -1,5 +1,6 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Newspaper, BookOpen, Video } from "lucide-react";
 
 interface TickerItem {
@@ -40,40 +41,44 @@ const getTypeLabel = (type: TickerItem["type"]) => {
 };
 
 export function ScrollingTicker() {
-  // Duplicate items for seamless loop
-  const duplicatedItems = [...tickerItems, ...tickerItems];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % tickerItems.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const currentItem = tickerItems[currentIndex];
 
   return (
     <div className="bg-secondary/30 border-b border-border/20 overflow-hidden">
-      <motion.div
-        className="flex whitespace-nowrap py-2.5"
-        animate={{
-          x: ["0%", "-50%"],
-        }}
-        transition={{
-          x: {
-            repeat: Infinity,
-            repeatType: "loop",
-            duration: 35,
-            ease: "linear",
-          },
-        }}
-      >
-        {duplicatedItems.map((item, index) => (
-          <Link
-            key={index}
-            to={item.link}
-            className="inline-flex items-center gap-2 mx-10 text-sm text-muted-foreground hover:text-foreground transition-colors group"
+      <div className="container-custom py-2.5">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
+            className="flex justify-center"
           >
-            <span className="inline-flex items-center gap-1.5 text-wood font-medium">
-              {getIcon(item.type)}
-              <span>{getTypeLabel(item.type)}</span>
-              <span className="text-muted-foreground/50">:</span>
-            </span>
-            <span className="group-hover:underline">{item.label}</span>
-          </Link>
-        ))}
-      </motion.div>
+            <Link
+              to={currentItem.link}
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors group"
+            >
+              <span className="inline-flex items-center gap-1.5 text-wood font-medium">
+                {getIcon(currentItem.type)}
+                <span>{getTypeLabel(currentItem.type)}</span>
+                <span className="text-muted-foreground/50">:</span>
+              </span>
+              <span className="group-hover:underline">{currentItem.label}</span>
+            </Link>
+          </motion.div>
+        </AnimatePresence>
+      </div>
     </div>
   );
 }
