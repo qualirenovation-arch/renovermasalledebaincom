@@ -1039,10 +1039,10 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== BOIS-COLOMBES (92270) ==========
   {
     id: "bois-colombes",
-    slug: "salle-de-bain-bois-colombes-92-renovation-complete-avant-apres",
-    title: "Rénovation salle de bain Bois-Colombes — Transformation complète avant/après",
+    slug: "salle-de-bain-bois-colombes-92-terrazzo-mineral-vert-eau-laiton",
+    title: "Salle de bain graphique à Bois-Colombes : terrazzo minéral, vert d'eau et laiton",
     location: "Bois-Colombes (92)",
-    description: "AVANT : Salle de bain datée avec baignoire et carrelage ancien, aucune optimisation de l'espace. APRÈS : Transformation complète avec douche à l'italienne XXL, carrelage effet béton, meuble double vasque suspendu et WC suspendu. Rangements optimisés et finitions haut de gamme.",
+    description: "Dans cette salle de bain rénovée à Bois-Colombes, chaque détail a été repensé pour conjuguer esthétique, confort et technicité. Le sol en terrazzo à fond gris clair, ponctué d'éclats minéraux aux nuances ocre, vert et noir, structure l'espace avec caractère tout en conservant une belle luminosité.\n\nLes murs, habillés d'un vert d'eau inspiré de Teresa's Blue de Farrow & Ball, enveloppent la pièce d'une atmosphère douce et contemporaine, subtilement relevée par des finitions en laiton qui apportent une note élégante et intemporelle.\n\nDerrière ce décor soigné, la plomberie a été entièrement reprise pour s'adapter au nouvel aménagement. Les réseaux ont été déplacés et dissimulés dans un coffrage sur mesure, assurant une lecture visuelle épurée de la pièce, tout en restant accessibles pour la maintenance — un point essentiel dans une rénovation durable.\n\nL'agencement optimise chaque mètre carré : douche XXL, colonne de rangement toute hauteur, meuble vasque sur mesure avec plan continu intégrant la machine à laver, complété par des placards discrets et une panière à linge intégrée. Rien n'est laissé au hasard, ni visible, ni contraignant à l'usage.\n\nRésultat : une salle de bain contemporaine, graphique et parfaitement maîtrisée, où la technique s'efface au profit de l'esthétique, sans jamais être sacrifiée. Une rénovation pensée pour le quotidien… et pour durer.",
     coverImage: boisColombes11,
     instagramLink: "https://www.instagram.com/reel/DFvTfUlst9t/",
     review: {
