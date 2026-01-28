@@ -855,9 +855,9 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   {
     id: "nicolas-roret",
     slug: "salle-de-bain-paris-13-renovation-zellige-turquoise-or",
-    title: "Rénovation salle de bain Paris 13ème — Zellige turquoise et robinetterie dorée",
+    title: "Rénovation salle de bain Paris 13ᵉ — Zellige bejmat mat, tons vert Saint-Laurent et laiton brossé",
     location: "Paris 13ème - Rue Nicolas Roret",
-    description: "AVANT : WC vétuste avec carrelage bleu abîmé, équipements datés et peinture écaillée. APRÈS : Transformation luxueuse avec douche italienne en zellige turquoise posé en chevron, paroi et robinetterie dorées, niches intégrées avec listel or, carrelage grand format effet marbre. WC suspendu assorti avec lave-mains doré, local technique optimisé intégrant chauffe-eau et lave-linge.",
+    description: "Dans cet appartement parisien en rez-de-chaussée, la salle de bain d'origine concentrait tous les usages autour d'un unique point d'eau, générant inconfort et manque de lisibilité. La rénovation a permis de redonner une vraie fonction à chaque zone, sans modifier la surface existante.\n\nL'ensemble de la technique a été entièrement repensé : les réseaux ont été repris par la cave afin de rendre la plomberie totalement invisible, libérant les volumes et simplifiant la lecture de l'espace. Une buanderie sur mesure dissimule les éléments techniques tout en restant accessible, avec des rangements intégrés pensés pour le quotidien.\n\nCôté décoration, le projet se structure autour d'un zellige type bejmat en finition mate, décliné dans des tons vert Saint-Laurent. Plus épais et plus minéral que le zellige traditionnel brillant, le bejmat apporte une texture subtile et une écriture plus architecturale, tout en conservant l'authenticité de l'artisanat marocain.\n\nLe sol clair équilibre l'ensemble par sa luminosité, tandis que les finitions en laiton brossé réchauffent la palette et soulignent les lignes du projet avec élégance. Les menuiseries sur mesure enveloppent la technique et structurent l'espace avec cohérence.\n\nUne salle de bain pensée dans les moindres détails, où le confort et l'esthétique naissent de choix techniques invisibles, conçus en étroite collaboration avec les clients.",
     coverImage: nicolasRoret5,
     review: {
       text: "Carina est une architecte de talent, créative et toujours à l'écoute. Elle a su transformer notre petite salle de bain en un espace fonctionnel et esthétique, avec des matériaux de qualité et des finitions impeccables. Son suivi de chantier est rigoureux et elle sait gérer les imprévus avec professionnalisme.",
@@ -885,7 +885,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   {
     id: "nicolas-roret-wc",
     slug: "salle-de-bain-paris-13-renovation-wc-zellige-turquoise-laiton",
-    title: "Rénovation WC Paris 13ème — Zellige turquoise et laiton brossé",
+    title: "Rénovation WC Paris 13ᵉ — Zellige bejmat mat, tons vert Saint-Laurent et laiton brossé",
     location: "Paris 13ème - Rue Nicolas Roret",
     description: "AVANT : WC vétuste avec carrelage bleu abîmé, équipements datés et peinture écaillée. APRÈS : WC suspendu luxueux avec zellige turquoise posé en chevron, lave-mains avec robinetterie laiton brossé, local technique optimisé intégrant chauffe-eau et lave-linge.",
     coverImage: nicolasRoret11,
