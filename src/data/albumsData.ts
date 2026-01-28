@@ -332,6 +332,15 @@ import matignonAvant2 from "@/assets/matignon-avant-2.jpg";
 import matignonAvant3 from "@/assets/matignon-avant-3.jpg";
 import matignonAvant4 from "@/assets/matignon-avant-4.jpg";
 
+// Saint-Honoré Paris 8ème
+import stHonore1 from "@/assets/st-honore-1.jpg";
+import stHonore2 from "@/assets/st-honore-2.jpg";
+import stHonore3 from "@/assets/st-honore-3.jpg";
+import stHonore4 from "@/assets/st-honore-4.jpg";
+import stHonore5 from "@/assets/st-honore-5.jpg";
+import stHonore6 from "@/assets/st-honore-6.jpg";
+import stHonore7 from "@/assets/st-honore-7.jpg";
+
 // Bobillot Paris 13ème
 import bobillot1 from "@/assets/bobillot-1.jpg";
 import bobillot2 from "@/assets/bobillot-2.jpg";
@@ -600,6 +609,27 @@ export const albums: Album[] = [
       { id: 6, image: matignonAvant2, title: "Avant — Vue d'ensemble", description: "Salle de bain avec baignoire rose" },
       { id: 7, image: matignonAvant3, title: "Avant — Baignoire rose", description: "Vasque et baignoire roses datées" },
       { id: 8, image: matignonAvant4, title: "Avant — Détail", description: "Carrelage marbre et équipements vétustes" },
+    ],
+  },
+  {
+    id: "st-honore",
+    slug: "salle-de-bain-paris-8-renovation-degat-des-eaux-marbre-noir-mat",
+    title: "Rénovation salle de bain Paris 8ème — Du dégât des eaux à l'écrin de marbre noir mat",
+    location: "Paris 8ème - Rue du Faubourg Saint-Honoré",
+    description: "Quand la salle de bain de vos rêves se transforme en cauchemar… et inversement.\n\nAprès une rénovation récente, cette salle de bain haussmannienne a subi un dégât des eaux — le début des galères pour les propriétaires. Mais de ce sinistre est né un projet encore plus abouti.\n\nLe résultat : un espace luxueux en carrelage effet marbre blanc veiné, sublimé par des touches de noir mat sur la robinetterie, le sèche-serviettes et le meuble vasque suspendu. Baignoire îlot sculptural avec mitigeur sur pied, douche à l'italienne avec niche intégrée, WC suspendu avec douchette hygiénique — chaque détail respire l'élégance parisienne.\n\n👉 Un sinistre transformé en opportunité. Une salle de bain réinventée, plus belle qu'avant.",
+    coverImage: stHonore1,
+    ctaButton: {
+      label: "Découvrez notre service suite à un dégât des eaux",
+      link: "/degats-eaux"
+    },
+    photos: [
+      { id: 1, image: stHonore1, title: "Après — Baignoire îlot", description: "Baignoire sculptural et douche à l'italienne" },
+      { id: 2, image: stHonore2, title: "Après — Meuble vasque", description: "Double vasque noire et sèche-serviettes design" },
+      { id: 3, image: stHonore3, title: "Après — Robinetterie", description: "Mitigeur sur pied noir mat élégant" },
+      { id: 4, image: stHonore4, title: "Après — Douche italienne", description: "Paroi vitrée et niche encastrée" },
+      { id: 5, image: stHonore5, title: "Après — WC suspendu", description: "WC avec douchette hygiénique intégrée" },
+      { id: 6, image: stHonore6, title: "Après — Vue d'ensemble", description: "Harmonie marbre blanc et noir mat" },
+      { id: 7, image: stHonore7, title: "Après — Perspective baignoire", description: "Vue sur baignoire îlot et douche" },
     ],
   },
   {
