@@ -14,6 +14,7 @@ interface PartnerConfirmationRequest {
   companyName: string;
   trades: string[];
   zones: string[];
+  missingDocuments: string[];
   captchaToken: string;
 }
 
@@ -64,7 +65,7 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { partnerEmail, partnerName, companyName, trades, zones, captchaToken }: PartnerConfirmationRequest = await req.json();
+    const { partnerEmail, partnerName, companyName, trades, zones, missingDocuments, captchaToken }: PartnerConfirmationRequest = await req.json();
 
     // Verify captcha
     if (captchaToken) {
@@ -87,6 +88,20 @@ const handler = async (req: Request): Promise<Response> => {
 
     const tradesFormatted = trades.map(t => tradeLabels[t] || t).join(", ");
     const zonesFormatted = zones.map(z => zoneLabels[z] || z).join(", ");
+    const hasMissingDocs = missingDocuments && missingDocuments.length > 0;
+
+    // Build missing documents section for emails
+    const missingDocsSection = hasMissingDocs ? `
+      <div style="background-color: #fef3c7; border: 1px solid #f59e0b; padding: 15px; border-radius: 8px; margin: 20px 0;">
+        <p style="margin: 0 0 10px; font-weight: bold; color: #92400e;">📋 Documents en attente :</p>
+        <ul style="margin: 0; padding-left: 20px; color: #92400e;">
+          ${missingDocuments.map(doc => `<li>${doc}</li>`).join('')}
+        </ul>
+        <p style="margin: 10px 0 0; font-size: 14px; color: #92400e;">
+          Merci de nous transmettre ces documents dès que possible pour que nous puissions étudier votre dossier.
+        </p>
+      </div>
+    ` : '';
 
     // Email 1: Confirmation to partner
     const partnerEmailHtml = `
@@ -114,6 +129,7 @@ const handler = async (req: Request): Promise<Response> => {
               <p>Nous vous remercions pour votre candidature en tant que partenaire sous-traitant auprès de <strong>QualiRénovation by QualiConcept</strong>.</p>
               <p>Votre dossier a bien été reçu et sera étudié par notre équipe.<br>
               Si votre profil correspond à nos besoins, nous vous recontacterons pour un premier échange.</p>
+              ${missingDocsSection}
               <div class="highlight">
                 <p style="margin: 0;"><strong>📌 Important :</strong> Aucune intervention ne pourra être programmée sans validation complète du dossier.</p>
               </div>
@@ -131,6 +147,19 @@ const handler = async (req: Request): Promise<Response> => {
       </html>
     `;
 
+    // Build documents status for internal email
+    const allDocs = ['Kbis', 'URSSAF', 'RC Pro', 'Décennale', 'RIB'];
+    const docsStatusHtml = allDocs.map(doc => {
+      const isMissing = hasMissingDocs && missingDocuments.some(m => 
+        m.toLowerCase().includes(doc.toLowerCase()) || 
+        doc.toLowerCase().includes(m.toLowerCase().split(' ')[0])
+      );
+      if (isMissing) {
+        return `<p style="color: #dc2626;">❌ ${doc} (manquant)</p>`;
+      }
+      return `<p style="color: #22c55e;">✔ ${doc}</p>`;
+    }).join('');
+
     // Email 2: Internal notification
     const internalEmailHtml = `
       <!DOCTYPE html>
@@ -140,17 +169,16 @@ const handler = async (req: Request): Promise<Response> => {
           <style>
             body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; }
             .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-            .header { background-color: #1a1a1a; color: white; padding: 20px; text-align: center; }
+            .header { background-color: ${hasMissingDocs ? '#f59e0b' : '#1a1a1a'}; color: white; padding: 20px; text-align: center; }
             .content { padding: 20px; background-color: #f8f8f8; }
             .info-box { background: white; padding: 15px; border-radius: 8px; margin: 15px 0; }
             .label { font-weight: bold; color: #666; }
-            .check { color: #22c55e; }
           </style>
         </head>
         <body>
           <div class="container">
             <div class="header">
-              <h2 style="margin: 0;">🔔 Nouvelle candidature partenaire</h2>
+              <h2 style="margin: 0;">🔔 Nouvelle candidature partenaire ${hasMissingDocs ? '⚠️ DOSSIER INCOMPLET' : ''}</h2>
               <p style="margin: 5px 0 0; opacity: 0.8;">Sous-traitance</p>
             </div>
             <div class="content">
@@ -165,14 +193,15 @@ const handler = async (req: Request): Promise<Response> => {
               </div>
               
               <div class="info-box">
-                <p style="margin: 0 0 10px; font-weight: bold;">Documents reçus :</p>
-                <p class="check">✔ Kbis</p>
-                <p class="check">✔ URSSAF</p>
-                <p class="check">✔ RC Pro</p>
-                <p class="check">✔ Décennale</p>
-                <p class="check">✔ RIB</p>
-                <p class="check">✔ Photos réalisations</p>
+                <p style="margin: 0 0 10px; font-weight: bold;">Statut des documents :</p>
+                ${docsStatusHtml}
               </div>
+              
+              ${hasMissingDocs ? `
+              <div style="background-color: #fef3c7; border: 1px solid #f59e0b; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                <p style="margin: 0; font-weight: bold; color: #92400e;">⚠️ Action requise : Contacter le partenaire pour obtenir les documents manquants</p>
+              </div>
+              ` : ''}
               
               <p style="text-align: center; margin-top: 20px;">
                 <strong>👉 Consulter le dossier complet dans l'interface admin.</strong>

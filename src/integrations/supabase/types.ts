@@ -99,6 +99,7 @@ export type Database = {
       subcontractors: {
         Row: {
           accept_contact: boolean
+          annual_revenue: string | null
           autonomous_intervention: boolean
           certify_accuracy: boolean
           collaboration_type: string | null
@@ -116,6 +117,7 @@ export type Database = {
           internal_notes: string | null
           internal_rating: number | null
           linkedin_url: string | null
+          managed_people_count: number | null
           occupied_sites_experience: boolean
           phone: string
           presentation: string | null
@@ -130,6 +132,7 @@ export type Database = {
         }
         Insert: {
           accept_contact?: boolean
+          annual_revenue?: string | null
           autonomous_intervention?: boolean
           certify_accuracy?: boolean
           collaboration_type?: string | null
@@ -147,6 +150,7 @@ export type Database = {
           internal_notes?: string | null
           internal_rating?: number | null
           linkedin_url?: string | null
+          managed_people_count?: number | null
           occupied_sites_experience?: boolean
           phone: string
           presentation?: string | null
@@ -161,6 +165,7 @@ export type Database = {
         }
         Update: {
           accept_contact?: boolean
+          annual_revenue?: string | null
           autonomous_intervention?: boolean
           certify_accuracy?: boolean
           collaboration_type?: string | null
@@ -178,6 +183,7 @@ export type Database = {
           internal_notes?: string | null
           internal_rating?: number | null
           linkedin_url?: string | null
+          managed_people_count?: number | null
           occupied_sites_experience?: boolean
           phone?: string
           presentation?: string | null
