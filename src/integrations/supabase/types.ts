@@ -14,7 +14,184 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      subcontractor_documents: {
+        Row: {
+          created_at: string
+          document_type: string
+          expiry_date: string | null
+          file_name: string
+          file_path: string
+          id: string
+          status: Database["public"]["Enums"]["document_status"]
+          subcontractor_id: string
+          updated_at: string
+          upload_date: string
+        }
+        Insert: {
+          created_at?: string
+          document_type: string
+          expiry_date?: string | null
+          file_name: string
+          file_path: string
+          id?: string
+          status?: Database["public"]["Enums"]["document_status"]
+          subcontractor_id: string
+          updated_at?: string
+          upload_date?: string
+        }
+        Update: {
+          created_at?: string
+          document_type?: string
+          expiry_date?: string | null
+          file_name?: string
+          file_path?: string
+          id?: string
+          status?: Database["public"]["Enums"]["document_status"]
+          subcontractor_id?: string
+          updated_at?: string
+          upload_date?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "subcontractor_documents_subcontractor_id_fkey"
+            columns: ["subcontractor_id"]
+            isOneToOne: false
+            referencedRelation: "subcontractors"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      subcontractor_portfolio: {
+        Row: {
+          created_at: string
+          description: string | null
+          file_name: string
+          file_path: string
+          id: string
+          subcontractor_id: string
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          file_name: string
+          file_path: string
+          id?: string
+          subcontractor_id: string
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          file_name?: string
+          file_path?: string
+          id?: string
+          subcontractor_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "subcontractor_portfolio_subcontractor_id_fkey"
+            columns: ["subcontractor_id"]
+            isOneToOne: false
+            referencedRelation: "subcontractors"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      subcontractors: {
+        Row: {
+          accept_contact: boolean
+          autonomous_intervention: boolean
+          certify_accuracy: boolean
+          collaboration_type: string | null
+          company_name: string
+          contact_function: string
+          contact_name: string
+          created_at: string
+          email: string
+          employee_count: number
+          experience: string
+          facebook_url: string | null
+          houzz_url: string | null
+          id: string
+          instagram_url: string | null
+          internal_notes: string | null
+          internal_rating: number | null
+          linkedin_url: string | null
+          occupied_sites_experience: boolean
+          phone: string
+          presentation: string | null
+          status: Database["public"]["Enums"]["subcontractor_status"]
+          trade_other: string | null
+          trades: string[]
+          updated_at: string
+          website_url: string | null
+          works_as_subcontractor: boolean
+          zone_other: string | null
+          zones: string[]
+        }
+        Insert: {
+          accept_contact?: boolean
+          autonomous_intervention?: boolean
+          certify_accuracy?: boolean
+          collaboration_type?: string | null
+          company_name: string
+          contact_function: string
+          contact_name: string
+          created_at?: string
+          email: string
+          employee_count: number
+          experience: string
+          facebook_url?: string | null
+          houzz_url?: string | null
+          id?: string
+          instagram_url?: string | null
+          internal_notes?: string | null
+          internal_rating?: number | null
+          linkedin_url?: string | null
+          occupied_sites_experience?: boolean
+          phone: string
+          presentation?: string | null
+          status?: Database["public"]["Enums"]["subcontractor_status"]
+          trade_other?: string | null
+          trades?: string[]
+          updated_at?: string
+          website_url?: string | null
+          works_as_subcontractor?: boolean
+          zone_other?: string | null
+          zones?: string[]
+        }
+        Update: {
+          accept_contact?: boolean
+          autonomous_intervention?: boolean
+          certify_accuracy?: boolean
+          collaboration_type?: string | null
+          company_name?: string
+          contact_function?: string
+          contact_name?: string
+          created_at?: string
+          email?: string
+          employee_count?: number
+          experience?: string
+          facebook_url?: string | null
+          houzz_url?: string | null
+          id?: string
+          instagram_url?: string | null
+          internal_notes?: string | null
+          internal_rating?: number | null
+          linkedin_url?: string | null
+          occupied_sites_experience?: boolean
+          phone?: string
+          presentation?: string | null
+          status?: Database["public"]["Enums"]["subcontractor_status"]
+          trade_other?: string | null
+          trades?: string[]
+          updated_at?: string
+          website_url?: string | null
+          works_as_subcontractor?: boolean
+          zone_other?: string | null
+          zones?: string[]
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
@@ -23,7 +200,13 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      document_status: "valid" | "expiring_soon" | "expired" | "non_compliant"
+      subcontractor_status:
+        | "pending"
+        | "reviewing"
+        | "validated"
+        | "refused"
+        | "archived"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +333,15 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      document_status: ["valid", "expiring_soon", "expired", "non_compliant"],
+      subcontractor_status: [
+        "pending",
+        "reviewing",
+        "validated",
+        "refused",
+        "archived",
+      ],
+    },
   },
 } as const
