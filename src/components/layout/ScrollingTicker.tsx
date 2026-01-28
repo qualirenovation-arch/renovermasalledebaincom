@@ -12,12 +12,22 @@ interface TickerItem {
 }
 
 const tickerItems: TickerItem[] = [
+  // Presse
   { type: "presse", label: "Elle Décoration — Salle de bains pour deux : astuces d'architectes", link: "/presse#parutions" },
-  { type: "guide", label: "Étanchéité obligatoire DTU — ce qu'il faut savoir", link: "/guide-travaux#etancheite" },
-  { type: "video", label: "Faut-il carreler toute hauteur ?", link: "/guide-travaux#videos" },
-  { type: "guide", label: "VMC en salle de bain — éviter humidité & moisissures", link: "/guide-travaux#vmc" },
-  { type: "realisation", label: "Avant/Après — gain de place & rangements", link: "/realisations" },
-  { type: "conseil", label: "Quel joint pour un carrelage 120×60 ?", link: "/guide-travaux#joints" },
+  { type: "presse", label: "Houzz — Maison de maître 1900 rénovée de A à Z", link: "/presse#parutions" },
+  { type: "presse", label: "Marie Claire Maison — Rénovation avec transparence et expertise", link: "/presse#parutions" },
+  // Guide travaux
+  { type: "guide", label: "Étanchéité obligatoire DTU — SEL et SPEC sous carrelage", link: "/guide-travaux#etancheite" },
+  { type: "guide", label: "Douche ou baignoire : laquelle choisir ?", link: "/guide-travaux#douche-italienne" },
+  { type: "guide", label: "Faut-il refaire toute la plomberie ?", link: "/guide-travaux#plomberie" },
+  { type: "conseil", label: "Choisir sa robinetterie — finitions et compatibilité", link: "/guide-travaux#robinetterie" },
+  // Réalisations
+  { type: "realisation", label: "Paris 8ᵉ — Rénovation dégât des eaux, marbre et noir mat", link: "/realisations/salle-de-bain-paris-8-renovation-degat-des-eaux-marbre-noir-mat" },
+  { type: "realisation", label: "Paris 13ᵉ — Zellige bejmat vert Saint-Laurent et laiton", link: "/realisations/salle-de-bain-paris-13-renovation-zellige-turquoise-or" },
+  { type: "realisation", label: "Saint-Mandé — Économies d'énergie après rénovation", link: "/realisations/salle-de-bain-saint-mande-renovation-contemporaine-bois-marbre" },
+  // Vidéos
+  { type: "video", label: "Comment choisir votre vasque à poser", link: "/guide-travaux#videos-conseils" },
+  { type: "video", label: "Accès plomberie : à ne pas oublier !", link: "/guide-travaux#plomberie" },
 ];
 
 const getIcon = (type: TickerItem["type"]) => {
