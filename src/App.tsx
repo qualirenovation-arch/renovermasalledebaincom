@@ -19,6 +19,7 @@ import Photographe from "./pages/Photographe";
 import Guide from "./pages/Guide";
 import VideosConseils from "./pages/VideosConseils";
 import DegatsEaux from "./pages/DegatsEaux";
+import VisuelsHouzz from "./pages/VisuelsHouzz";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -46,6 +47,7 @@ const App = () => (
           <Route path="/guide-travaux" element={<Guide />} />
           <Route path="/videos-conseils" element={<VideosConseils />} />
           <Route path="/degats-eaux" element={<DegatsEaux />} />
+          <Route path="/visuels-houzz" element={<VisuelsHouzz />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
