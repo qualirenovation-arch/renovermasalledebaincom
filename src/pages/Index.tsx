@@ -177,7 +177,7 @@ export default function Index() {
                 <img
                   src={heroImage}
                   alt="Salle de bain moderne marbre blanc"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover object-[25%_center] hover:scale-105 transition-transform duration-700"
                   loading="eager"
                 />
               </div>
