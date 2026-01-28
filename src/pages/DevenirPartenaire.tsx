@@ -47,6 +47,8 @@ interface FormData {
   
   // Bloc 3: Organisation chantier
   employeeCount: string;
+  annualRevenue: string;
+  managedPeopleCount: string;
   worksAsSubcontractor: string;
   autonomousIntervention: string;
   occupiedSitesExperience: string;
@@ -83,6 +85,8 @@ const initialFormData: FormData = {
   tradeOther: "",
   experience: "",
   employeeCount: "",
+  annualRevenue: "",
+  managedPeopleCount: "",
   worksAsSubcontractor: "",
   autonomousIntervention: "",
   occupiedSitesExperience: "",
@@ -202,8 +206,26 @@ export default function DevenirPartenaire() {
     setPortfolioFiles(prev => prev.filter((_, i) => i !== index));
   };
 
-  // Check if all required documents are uploaded
-  const allDocumentsUploaded = Object.values(documents).every(doc => doc !== null);
+  // Check which documents are missing
+  const getMissingDocuments = () => {
+    const missing: string[] = [];
+    const docLabels: Record<string, string> = {
+      kbis: "Extrait Kbis",
+      urssaf: "Attestation URSSAF",
+      rc_pro: "RC Professionnelle",
+      decennale: "Assurance décennale",
+      rib: "RIB",
+    };
+    for (const [type, file] of Object.entries(documents)) {
+      if (!file) {
+        missing.push(docLabels[type] || type);
+      }
+    }
+    return missing;
+  };
+  
+  const missingDocuments = getMissingDocuments();
+  const hasAllDocuments = missingDocuments.length === 0;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -245,14 +267,7 @@ export default function DevenirPartenaire() {
       return;
     }
 
-    if (!allDocumentsUploaded) {
-      toast({
-        title: "Documents manquants",
-        description: "Tous les documents obligatoires doivent être téléchargés.",
-        variant: "destructive",
-      });
-      return;
-    }
+    // Documents are no longer blocking - we just track which are missing
 
     if (!formData.certifyAccuracy || !formData.acceptContact) {
       toast({
@@ -300,6 +315,8 @@ export default function DevenirPartenaire() {
           trade_other: formData.tradeOther || null,
           experience: formData.experience,
           employee_count: parseInt(formData.employeeCount) || 0,
+          annual_revenue: formData.annualRevenue || null,
+          managed_people_count: formData.managedPeopleCount ? parseInt(formData.managedPeopleCount) : null,
           works_as_subcontractor: formData.worksAsSubcontractor === 'oui',
           autonomous_intervention: formData.autonomousIntervention === 'oui',
           occupied_sites_experience: formData.occupiedSitesExperience === 'oui',
@@ -378,6 +395,7 @@ export default function DevenirPartenaire() {
           companyName: formData.companyName,
           trades: formData.trades,
           zones: formData.zones,
+          missingDocuments: missingDocuments,
           captchaToken,
         },
       });
@@ -633,19 +651,49 @@ export default function DevenirPartenaire() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="space-y-2">
-                  <Label htmlFor="employeeCount">Effectif de l'entreprise *</Label>
-                  <Input
-                    id="employeeCount"
-                    type="number"
-                    min="1"
-                    value={formData.employeeCount}
-                    onChange={(e) => handleChange('employeeCount', e.target.value)}
-                    placeholder="Nombre de salariés"
-                    required
-                  />
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="employeeCount">Effectif de l'entreprise *</Label>
+                    <Input
+                      id="employeeCount"
+                      type="number"
+                      min="1"
+                      value={formData.employeeCount}
+                      onChange={(e) => handleChange('employeeCount', e.target.value)}
+                      placeholder="Nombre de salariés"
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="annualRevenue">Chiffre d'affaires actuel</Label>
+                    <Select
+                      value={formData.annualRevenue}
+                      onValueChange={(value) => handleChange('annualRevenue', value)}
+                    >
+                      <SelectTrigger id="annualRevenue">
+                        <SelectValue placeholder="Sélectionnez" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="moins-100k">Moins de 100 000 €</SelectItem>
+                        <SelectItem value="100k-250k">100 000 € - 250 000 €</SelectItem>
+                        <SelectItem value="250k-500k">250 000 € - 500 000 €</SelectItem>
+                        <SelectItem value="500k-1m">500 000 € - 1 M€</SelectItem>
+                        <SelectItem value="plus-1m">Plus de 1 M€</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="managedPeopleCount">Personnes gérées</Label>
+                    <Input
+                      id="managedPeopleCount"
+                      type="number"
+                      min="0"
+                      value={formData.managedPeopleCount}
+                      onChange={(e) => handleChange('managedPeopleCount', e.target.value)}
+                      placeholder="Équipes / sous-traitants"
+                    />
+                  </div>
                 </div>
-
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="space-y-3">
                     <Label>Travaillez-vous en sous-traitance ?</Label>
@@ -704,25 +752,28 @@ export default function DevenirPartenaire() {
               </CardContent>
             </Card>
 
-            {/* BLOC 4 - Documents obligatoires */}
-            <Card className="border-2 border-destructive/20">
+            {/* BLOC 4 - Documents */}
+            <Card className={missingDocuments.length > 0 ? "border-2 border-amber-500/30" : "border-2 border-green-500/30"}>
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-destructive/10 flex items-center justify-center">
-                    <FileText className="w-5 h-5 text-destructive" />
+                  <div className={`w-10 h-10 rounded-full flex items-center justify-center ${missingDocuments.length > 0 ? 'bg-amber-500/10' : 'bg-green-500/10'}`}>
+                    <FileText className={`w-5 h-5 ${missingDocuments.length > 0 ? 'text-amber-600' : 'text-green-600'}`} />
                   </div>
-                  4. Documents obligatoires
-                  <span className="ml-2 text-sm font-normal text-destructive">
-                    (Upload bloquant)
+                  4. Documents
+                  <span className={`ml-2 text-sm font-normal ${missingDocuments.length > 0 ? 'text-amber-600' : 'text-green-600'}`}>
+                    {missingDocuments.length > 0 ? `(${missingDocuments.length} manquant${missingDocuments.length > 1 ? 's' : ''})` : '(Complet)'}
                   </span>
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="bg-destructive/5 border border-destructive/20 rounded-lg p-4 mb-6">
+                <div className={`border rounded-lg p-4 mb-6 ${missingDocuments.length > 0 ? 'bg-amber-500/5 border-amber-500/20' : 'bg-green-500/5 border-green-500/20'}`}>
                   <div className="flex items-start gap-3">
-                    <AlertCircle className="w-5 h-5 text-destructive mt-0.5" />
-                    <p className="text-sm text-destructive">
-                      <strong>Important :</strong> Le formulaire ne peut pas être envoyé si un document obligatoire est manquant.
+                    <AlertCircle className={`w-5 h-5 mt-0.5 ${missingDocuments.length > 0 ? 'text-amber-600' : 'text-green-600'}`} />
+                    <p className={`text-sm ${missingDocuments.length > 0 ? 'text-amber-700' : 'text-green-700'}`}>
+                      {missingDocuments.length > 0 
+                        ? <><strong>Note :</strong> Vous pouvez soumettre votre candidature même si des documents sont manquants. Nous vous contacterons pour compléter votre dossier.</>
+                        : <><strong>Parfait !</strong> Tous vos documents sont téléchargés.</>
+                      }
                     </p>
                   </div>
                 </div>
@@ -953,7 +1004,7 @@ export default function DevenirPartenaire() {
                   variant="cta"
                   size="xl"
                   className="w-full"
-                  disabled={isSubmitting || !allDocumentsUploaded || !formData.certifyAccuracy || !formData.acceptContact}
+                  disabled={isSubmitting || !formData.certifyAccuracy || !formData.acceptContact}
                 >
                   {isSubmitting ? (
                     <>
@@ -968,9 +1019,9 @@ export default function DevenirPartenaire() {
                   )}
                 </Button>
 
-                {!allDocumentsUploaded && (
-                  <p className="text-center text-sm text-destructive">
-                    Tous les documents obligatoires doivent être téléchargés pour soumettre le formulaire.
+                {missingDocuments.length > 0 && (
+                  <p className="text-center text-sm text-amber-600">
+                    Vous pourrez compléter votre dossier après l'envoi.
                   </p>
                 )}
               </CardContent>
