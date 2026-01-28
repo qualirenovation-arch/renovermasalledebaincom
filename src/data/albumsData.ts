@@ -623,13 +623,13 @@ export const albums: Album[] = [
       link: "/degats-eaux"
     },
     photos: [
-      { id: 1, image: stHonore1, title: "Après — Baignoire îlot", description: "Baignoire sculptural et douche à l'italienne" },
-      { id: 2, image: stHonore2, title: "Après — Meuble vasque", description: "Double vasque noire et sèche-serviettes design" },
-      { id: 3, image: stHonore3, title: "Après — Robinetterie", description: "Mitigeur sur pied noir mat élégant" },
-      { id: 4, image: stHonore4, title: "Après — Douche italienne", description: "Paroi vitrée et niche encastrée" },
-      { id: 5, image: stHonore5, title: "Après — WC suspendu", description: "WC avec douchette hygiénique intégrée" },
-      { id: 6, image: stHonore6, title: "Après — Vue d'ensemble", description: "Harmonie marbre blanc et noir mat" },
-      { id: 7, image: stHonore7, title: "Après — Perspective baignoire", description: "Vue sur baignoire îlot et douche" },
+      { id: 1, image: stHonore1, title: "Baignoire îlot", description: "Baignoire sculptural et douche à l'italienne" },
+      { id: 2, image: stHonore2, title: "Meuble vasque", description: "Double vasque noire et sèche-serviettes design" },
+      { id: 3, image: stHonore3, title: "Robinetterie", description: "Mitigeur sur pied noir mat élégant" },
+      { id: 4, image: stHonore4, title: "Douche italienne", description: "Paroi vitrée et niche encastrée" },
+      { id: 5, image: stHonore5, title: "WC suspendu", description: "WC avec douchette hygiénique intégrée" },
+      { id: 6, image: stHonore6, title: "Vue d'ensemble", description: "Harmonie marbre blanc et noir mat" },
+      { id: 7, image: stHonore7, title: "Perspective baignoire", description: "Vue sur baignoire îlot et douche" },
     ],
   },
   {
