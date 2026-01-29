@@ -11,7 +11,7 @@ const mobileNavItems = [
   { label: "Réalisations", path: "/realisations" },
   { label: "Guide travaux", path: "/guide-travaux" },
   { label: "À propos", path: "/a-propos" },
-  { label: "Avis", path: "/presse#parutions" },
+  { label: "Avis", path: "/avis" },
 ];
 
 // Navigation desktop complète
@@ -20,6 +20,7 @@ const desktopNavItems = [
   { label: "À propos", path: "/a-propos" },
   { label: "Pourquoi nous", path: "/pourquoi-nous" },
   { label: "Réalisations", path: "/realisations" },
+  { label: "Avis", path: "/avis" },
   { label: "Presse", path: "/presse#parutions" },
   { label: "Guide travaux", path: "/guide-travaux" },
   { label: "Dégâts des eaux", path: "/degats-eaux" },
