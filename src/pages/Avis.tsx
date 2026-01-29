@@ -134,7 +134,7 @@ export default function Avis() {
                 ))}
               </div>
               <h3 className="font-display text-xl md:text-2xl font-semibold mb-3">
-                + de 1000 avis 5 étoiles sur Houzz
+                Retrouvez plus de 40 avis sur Houzz
               </h3>
               <p className="text-muted-foreground mb-6">
                 Consultez l'ensemble de nos avis clients vérifiés directement sur notre profil Houzz professionnel.
