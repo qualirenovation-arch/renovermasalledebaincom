@@ -40,6 +40,13 @@ interface FormData {
   zones: string[];
   zoneOther: string;
   
+  // Bloc 1b: Informations légales
+  siret: string;
+  vatNumber: string;
+  managerFirstName: string;
+  managerLastName: string;
+  managerPhone: string;
+  
   // Bloc 2: Corps de métier
   trades: string[];
   tradeOther: string;
@@ -52,6 +59,10 @@ interface FormData {
   worksAsSubcontractor: string;
   autonomousIntervention: string;
   occupiedSitesExperience: string;
+  
+  // Bloc 4: Assurance
+  insuranceCompany: string;
+  insuranceContractNumber: string;
   
   // Bloc 6: Présence en ligne
   websiteUrl: string;
@@ -81,6 +92,11 @@ const initialFormData: FormData = {
   email: "",
   zones: [],
   zoneOther: "",
+  siret: "",
+  vatNumber: "",
+  managerFirstName: "",
+  managerLastName: "",
+  managerPhone: "",
   trades: [],
   tradeOther: "",
   experience: "",
@@ -90,6 +106,8 @@ const initialFormData: FormData = {
   worksAsSubcontractor: "",
   autonomousIntervention: "",
   occupiedSitesExperience: "",
+  insuranceCompany: "",
+  insuranceContractNumber: "",
   websiteUrl: "",
   instagramUrl: "",
   facebookUrl: "",
@@ -324,6 +342,11 @@ export default function DevenirPartenaire() {
           email: formData.email,
           zones: formData.zones,
           zone_other: formData.zoneOther || null,
+          siret: formData.siret || null,
+          vat_number: formData.vatNumber || null,
+          manager_first_name: formData.managerFirstName || null,
+          manager_last_name: formData.managerLastName || null,
+          manager_phone: formData.managerPhone || null,
           trades: formData.trades,
           trade_other: formData.tradeOther || null,
           experience: formData.experience,
@@ -333,6 +356,8 @@ export default function DevenirPartenaire() {
           works_as_subcontractor: formData.worksAsSubcontractor === 'oui',
           autonomous_intervention: formData.autonomousIntervention === 'oui',
           occupied_sites_experience: formData.occupiedSitesExperience === 'oui',
+          insurance_company: formData.insuranceCompany || null,
+          insurance_contract_number: formData.insuranceContractNumber || null,
           website_url: formData.websiteUrl || null,
           instagram_url: formData.instagramUrl || null,
           facebook_url: formData.facebookUrl || null,
@@ -634,6 +659,74 @@ export default function DevenirPartenaire() {
                     />
                   )}
                 </div>
+
+                {/* Informations légales */}
+                <div className="border-t pt-6 mt-6">
+                  <h3 className="font-medium mb-4 flex items-center gap-2">
+                    <FileText className="w-4 h-4" />
+                    Informations légales
+                  </h3>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="siret">Numéro SIRET</Label>
+                      <Input
+                        id="siret"
+                        value={formData.siret}
+                        onChange={(e) => handleChange('siret', e.target.value)}
+                        placeholder="XXX XXX XXX XXXXX"
+                        maxLength={17}
+                      />
+                      <p className="text-xs text-muted-foreground">14 chiffres (vérifiable sur Infogreffe/Pappers)</p>
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="vatNumber">Numéro de TVA intracommunautaire</Label>
+                      <Input
+                        id="vatNumber"
+                        value={formData.vatNumber}
+                        onChange={(e) => handleChange('vatNumber', e.target.value)}
+                        placeholder="FR XX XXX XXX XXX"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Gérant / Responsable chantier */}
+                <div className="border-t pt-6 mt-6">
+                  <h3 className="font-medium mb-4 flex items-center gap-2">
+                    <Users className="w-4 h-4" />
+                    Gérant / Responsable des chantiers
+                  </h3>
+                  <div className="grid md:grid-cols-3 gap-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="managerLastName">Nom du gérant</Label>
+                      <Input
+                        id="managerLastName"
+                        value={formData.managerLastName}
+                        onChange={(e) => handleChange('managerLastName', e.target.value)}
+                        placeholder="Nom"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="managerFirstName">Prénom du gérant</Label>
+                      <Input
+                        id="managerFirstName"
+                        value={formData.managerFirstName}
+                        onChange={(e) => handleChange('managerFirstName', e.target.value)}
+                        placeholder="Prénom"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="managerPhone">Téléphone du gérant</Label>
+                      <Input
+                        id="managerPhone"
+                        type="tel"
+                        value={formData.managerPhone}
+                        onChange={(e) => handleChange('managerPhone', e.target.value)}
+                        placeholder="06 XX XX XX XX"
+                      />
+                    </div>
+                  </div>
+                </div>
               </CardContent>
             </Card>
 
@@ -852,18 +945,80 @@ export default function DevenirPartenaire() {
                   </div>
                 </div>
 
-                <div className="grid gap-6">
-                  {documentTypes.map((doc) => (
+                {/* Insurance info section */}
+                <div className="border rounded-xl p-4 bg-muted/30 mb-6">
+                  <h3 className="font-medium mb-4 flex items-center gap-2">
+                    <FileText className="w-4 h-4" />
+                    Informations Assurance
+                  </h3>
+                  <div className="grid md:grid-cols-2 gap-4 mb-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="insuranceCompany">Chez qui êtes-vous assuré ?</Label>
+                      <Input
+                        id="insuranceCompany"
+                        value={formData.insuranceCompany}
+                        onChange={(e) => handleChange('insuranceCompany', e.target.value)}
+                        placeholder="Nom de votre assureur"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="insuranceContractNumber">Numéro de contrat</Label>
+                      <Input
+                        id="insuranceContractNumber"
+                        value={formData.insuranceContractNumber}
+                        onChange={(e) => handleChange('insuranceContractNumber', e.target.value)}
+                        placeholder="N° de contrat"
+                      />
+                    </div>
+                  </div>
+                  
+                  {/* RC Pro and Décennale uploads inline */}
+                  <div className="grid md:grid-cols-2 gap-4">
                     <DocumentUpload
-                      key={doc.type}
-                      type={doc.type}
-                      label={doc.label}
-                      help={doc.help}
-                      formats={doc.formats}
-                      file={documents[doc.type]}
-                      onFileChange={(file) => handleDocumentUpload(doc.type, file)}
+                      type="rc_pro"
+                      label="RC Professionnelle"
+                      help="Assurance responsabilité civile"
+                      formats="PDF"
+                      file={documents.rc_pro}
+                      onFileChange={(file) => handleDocumentUpload('rc_pro', file)}
                     />
-                  ))}
+                    <DocumentUpload
+                      type="decennale"
+                      label="Assurance décennale"
+                      help="Activités correspondantes aux travaux"
+                      formats="PDF"
+                      file={documents.decennale}
+                      onFileChange={(file) => handleDocumentUpload('decennale', file)}
+                    />
+                  </div>
+                </div>
+
+                {/* Other documents */}
+                <div className="grid gap-4">
+                  <DocumentUpload
+                    type="kbis"
+                    label="Extrait Kbis"
+                    help="Kbis de moins de 3 mois"
+                    formats="PDF"
+                    file={documents.kbis}
+                    onFileChange={(file) => handleDocumentUpload('kbis', file)}
+                  />
+                  <DocumentUpload
+                    type="urssaf"
+                    label="Attestation de vigilance URSSAF"
+                    help="Attestation de moins de 6 mois"
+                    formats="PDF"
+                    file={documents.urssaf}
+                    onFileChange={(file) => handleDocumentUpload('urssaf', file)}
+                  />
+                  <DocumentUpload
+                    type="rib"
+                    label="RIB de l'entreprise"
+                    help="Relevé d'identité bancaire"
+                    formats="PDF / JPG"
+                    file={documents.rib}
+                    onFileChange={(file) => handleDocumentUpload('rib', file)}
+                  />
                 </div>
               </CardContent>
             </Card>

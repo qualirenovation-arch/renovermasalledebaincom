@@ -114,17 +114,24 @@ export type Database = {
           houzz_url: string | null
           id: string
           instagram_url: string | null
+          insurance_company: string | null
+          insurance_contract_number: string | null
           internal_notes: string | null
           internal_rating: number | null
           linkedin_url: string | null
           managed_people_count: number | null
+          manager_first_name: string | null
+          manager_last_name: string | null
+          manager_phone: string | null
           occupied_sites_experience: boolean
           phone: string
           presentation: string | null
+          siret: string | null
           status: Database["public"]["Enums"]["subcontractor_status"]
           trade_other: string | null
           trades: string[]
           updated_at: string
+          vat_number: string | null
           website_url: string | null
           works_as_subcontractor: boolean
           zone_other: string | null
@@ -147,17 +154,24 @@ export type Database = {
           houzz_url?: string | null
           id?: string
           instagram_url?: string | null
+          insurance_company?: string | null
+          insurance_contract_number?: string | null
           internal_notes?: string | null
           internal_rating?: number | null
           linkedin_url?: string | null
           managed_people_count?: number | null
+          manager_first_name?: string | null
+          manager_last_name?: string | null
+          manager_phone?: string | null
           occupied_sites_experience?: boolean
           phone: string
           presentation?: string | null
+          siret?: string | null
           status?: Database["public"]["Enums"]["subcontractor_status"]
           trade_other?: string | null
           trades?: string[]
           updated_at?: string
+          vat_number?: string | null
           website_url?: string | null
           works_as_subcontractor?: boolean
           zone_other?: string | null
@@ -180,17 +194,24 @@ export type Database = {
           houzz_url?: string | null
           id?: string
           instagram_url?: string | null
+          insurance_company?: string | null
+          insurance_contract_number?: string | null
           internal_notes?: string | null
           internal_rating?: number | null
           linkedin_url?: string | null
           managed_people_count?: number | null
+          manager_first_name?: string | null
+          manager_last_name?: string | null
+          manager_phone?: string | null
           occupied_sites_experience?: boolean
           phone?: string
           presentation?: string | null
+          siret?: string | null
           status?: Database["public"]["Enums"]["subcontractor_status"]
           trade_other?: string | null
           trades?: string[]
           updated_at?: string
+          vat_number?: string | null
           website_url?: string | null
           works_as_subcontractor?: boolean
           zone_other?: string | null
