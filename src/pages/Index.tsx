@@ -85,64 +85,6 @@ export default function Index() {
 
   return (
     <Layout>
-      {/* Bandeau Actualités */}
-      <div className="bg-gradient-to-r from-primary/10 via-accent/20 to-primary/10 border-b border-border">
-        <div className="container-custom py-3">
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 text-sm">
-            {latestPresse && (
-              <a 
-                href={latestPresse.externalLink} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
-              >
-                <Newspaper className="w-4 h-4 text-primary" />
-                <span className="hidden sm:inline font-medium text-foreground">Presse :</span>
-                <span className="group-hover:underline line-clamp-1">{latestPresse.source} — {latestPresse.title}</span>
-              </a>
-            )}
-            
-            <span className="hidden md:block text-border">|</span>
-            
-            {latestGuide && (
-              <Link 
-                to={latestGuide.link}
-                className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
-              >
-                <BookOpen className="w-4 h-4 text-primary" />
-                <span className="hidden sm:inline font-medium text-foreground">Guide :</span>
-                <span className="group-hover:underline line-clamp-1">{latestGuide.title}</span>
-              </Link>
-            )}
-            
-            <span className="hidden lg:block text-border">|</span>
-            
-            {latestVideo && (
-              latestVideo.link ? (
-                <Link 
-                  to={latestVideo.link}
-                  className="hidden lg:flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
-                >
-                  <Video className="w-4 h-4 text-primary" />
-                  <span className="font-medium text-foreground">Vidéo :</span>
-                  <span className="group-hover:underline line-clamp-1">{latestVideo.title}</span>
-                </Link>
-              ) : (
-                <a 
-                  href={latestVideo.instagramUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hidden lg:flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
-                >
-                  <Video className="w-4 h-4 text-primary" />
-                  <span className="font-medium text-foreground">Vidéo :</span>
-                  <span className="group-hover:underline line-clamp-1">{latestVideo.title}</span>
-                </a>
-              )
-            )}
-          </div>
-        </div>
-      </div>
 
       {/* Hero Section - Premium design */}
       <section className="bg-gradient-to-b from-stone to-background py-12 md:py-20 lg:py-24">
