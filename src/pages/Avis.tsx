@@ -119,6 +119,37 @@ export default function Avis() {
               </motion.article>
             ))}
           </div>
+
+          {/* Lien vers tous les avis Houzz */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-12 text-center"
+          >
+            <div className="bg-accent/20 rounded-2xl p-8 md:p-10 border border-border/50 max-w-2xl mx-auto">
+              <div className="flex items-center justify-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-wood text-wood" />
+                ))}
+              </div>
+              <h3 className="font-display text-xl md:text-2xl font-semibold mb-3">
+                + de 1000 avis 5 étoiles sur Houzz
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                Consultez l'ensemble de nos avis clients vérifiés directement sur notre profil Houzz professionnel.
+              </p>
+              <a
+                href="https://www.houzz.fr/pro/qualiconcept/qualirenovation-by-qualiconcept"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#296189] hover:bg-[#1e4a66] text-white font-medium px-6 py-3 rounded-full transition-colors shadow-md hover:shadow-lg"
+              >
+                Voir tous les avis sur Houzz
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 
