@@ -1,1 +1,7 @@
 project_id = "wacqnrxbszvznfqiiuxm"
+
+[functions.send-devis-confirmation]
+verify_jwt = false
+
+[functions.setup-first-admin]
+verify_jwt = false
