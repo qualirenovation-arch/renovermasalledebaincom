@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { Header } from "./Header";
+import { ScrollingTicker } from "./ScrollingTicker";
 import { Footer } from "./Footer";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { MobileStickyNav } from "./MobileStickyNav";
@@ -13,6 +14,7 @@ export function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
+      <ScrollingTicker />
       <main className="flex-1 pb-16 md:pb-0">
         <PageTransition>{children}</PageTransition>
       </main>
