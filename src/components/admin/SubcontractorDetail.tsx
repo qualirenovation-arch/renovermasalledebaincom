@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { Tables } from "@/integrations/supabase/types";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -36,10 +36,15 @@ import {
   Users,
   Briefcase,
   Euro,
+  FileText,
+  AlertTriangle,
+  Download,
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { format } from "date-fns";
+import { format, isPast, isWithinInterval, addDays } from "date-fns";
 import { fr } from "date-fns/locale";
+
+type SubcontractorDocument = Tables<"subcontractor_documents">;
 
 type Subcontractor = Tables<"subcontractors">;
 type SubcontractorStatus = "pending" | "reviewing" | "validated" | "refused" | "archived";
@@ -75,7 +80,31 @@ export function SubcontractorDetail({
   const [internalNotes, setInternalNotes] = useState(subcontractor.internal_notes || "");
   const [internalRating, setInternalRating] = useState(subcontractor.internal_rating || 0);
   const [saving, setSaving] = useState(false);
+  const [documents, setDocuments] = useState<SubcontractorDocument[]>([]);
+  const [loadingDocs, setLoadingDocs] = useState(true);
   const { toast } = useToast();
+
+  // Fetch insurance documents
+  useEffect(() => {
+    const fetchDocuments = async () => {
+      try {
+        const { data, error } = await supabase
+          .from("subcontractor_documents")
+          .select("*")
+          .eq("subcontractor_id", subcontractor.id)
+          .in("document_type", ["rc_pro", "decennale"]);
+
+        if (error) throw error;
+        setDocuments(data || []);
+      } catch (error) {
+        console.error("Error fetching documents:", error);
+      } finally {
+        setLoadingDocs(false);
+      }
+    };
+
+    fetchDocuments();
+  }, [subcontractor.id]);
 
   const handleSave = async () => {
     setSaving(true);
@@ -114,6 +143,47 @@ export function SubcontractorDetail({
   const formatPhoneForWhatsApp = (phone: string) => {
     const cleaned = phone.replace(/\s+/g, "").replace(/^0/, "33");
     return cleaned.startsWith("+") ? cleaned.slice(1) : cleaned;
+  };
+
+  // Helper to get document expiry status
+  const getExpiryStatus = (expiryDate: string | null) => {
+    if (!expiryDate) return { status: "unknown", label: "Date inconnue", color: "bg-muted text-muted-foreground" };
+    
+    const date = new Date(expiryDate);
+    const now = new Date();
+    const in30Days = addDays(now, 30);
+    
+    if (isPast(date)) {
+      return { status: "expired", label: "Expiré", color: "bg-destructive/10 text-destructive border-destructive/20" };
+    }
+    if (isWithinInterval(date, { start: now, end: in30Days })) {
+      return { status: "expiring", label: "Expire bientôt", color: "bg-yellow-100 text-yellow-800 border-yellow-200" };
+    }
+    return { status: "valid", label: "Valide", color: "bg-green-100 text-green-800 border-green-200" };
+  };
+
+  // Helper to get document download URL
+  const getDocumentUrl = async (filePath: string) => {
+    const { data, error } = await supabase.storage
+      .from("subcontractor-files")
+      .createSignedUrl(filePath, 3600);
+    
+    if (error) {
+      toast({
+        title: "Erreur",
+        description: "Impossible de télécharger le document.",
+        variant: "destructive",
+      });
+      return null;
+    }
+    return data.signedUrl;
+  };
+
+  const handleDownload = async (doc: SubcontractorDocument) => {
+    const url = await getDocumentUrl(doc.file_path);
+    if (url) {
+      window.open(url, "_blank");
+    }
   };
 
   return (
@@ -361,6 +431,76 @@ export function SubcontractorDetail({
                   </div>
                 </>
               )}
+
+              {/* Insurance Documents */}
+              <Separator />
+              <div>
+                <h3 className="font-semibold mb-3 flex items-center gap-2">
+                  <FileText className="w-4 h-4" />
+                  Documents d'assurance
+                </h3>
+                {loadingDocs ? (
+                  <p className="text-sm text-muted-foreground">Chargement...</p>
+                ) : documents.length === 0 ? (
+                  <div className="p-4 bg-muted/50 rounded-lg flex items-center gap-3">
+                    <AlertTriangle className="w-5 h-5 text-yellow-600" />
+                    <p className="text-sm text-muted-foreground">
+                      Aucun document d'assurance téléchargé
+                    </p>
+                  </div>
+                ) : (
+                  <div className="space-y-3">
+                    {documents.map((doc) => {
+                      const expiryInfo = getExpiryStatus(doc.expiry_date);
+                      const docLabel = doc.document_type === "rc_pro" 
+                        ? "Responsabilité Civile Pro" 
+                        : "Garantie Décennale";
+                      
+                      return (
+                        <div
+                          key={doc.id}
+                          className="p-4 bg-muted/50 rounded-lg flex items-center justify-between gap-4"
+                        >
+                          <div className="flex items-center gap-3 min-w-0">
+                            <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                              <FileText className="w-5 h-5 text-primary" />
+                            </div>
+                            <div className="min-w-0">
+                              <p className="font-medium truncate">{docLabel}</p>
+                              <p className="text-sm text-muted-foreground truncate">
+                                {doc.file_name}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="flex items-center gap-3 shrink-0">
+                            <div className="text-right">
+                              {doc.expiry_date && (
+                                <p className="text-sm">
+                                  Expire le{" "}
+                                  <span className="font-medium">
+                                    {format(new Date(doc.expiry_date), "dd MMM yyyy", { locale: fr })}
+                                  </span>
+                                </p>
+                              )}
+                              <Badge className={`${expiryInfo.color} border mt-1`}>
+                                {expiryInfo.label}
+                              </Badge>
+                            </div>
+                            <Button
+                              variant="outline"
+                              size="icon"
+                              onClick={() => handleDownload(doc)}
+                              title="Télécharger"
+                            >
+                              <Download className="w-4 h-4" />
+                            </Button>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
 
               {/* Criteria */}
               <div>
