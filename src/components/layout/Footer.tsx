@@ -27,6 +27,9 @@ const footerLinks = {
   }, {
     label: "Demande de devis",
     path: "/devis#devis-form"
+  }, {
+    label: "Devenir partenaire",
+    path: "/devenir-partenaire"
   }],
   services: ["Création de douche à l'italienne", "Rénovation salle de bain", "Étanchéité garantie", "Pose de carrelage", "Installation receveur", "Parois sur mesure"]
 };
