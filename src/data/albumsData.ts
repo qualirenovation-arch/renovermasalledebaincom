@@ -785,6 +785,11 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     description: "Salle de bain garçon : noir & blanc, esprit contemporain\n\nPensée pour le garçon de la maison, cette salle de bain a été entièrement transformée pour gagner en confort, modernité et durabilité. Fini le receveur d'angle et le meuble vert daté : place à une douche spacieuse, un carrelage noir & blanc esprit subway et des lignes nettes, faciles à vivre au quotidien.\n\nLe meuble suspendu, la robinetterie noire mate et le miroir rétro-éclairé composent un ensemble sobre et graphique, parfaitement adapté à un univers masculin et évolutif.\n\nRésultat : une salle de bain fonctionnelle, contemporaine et intemporelle, pensée pour accompagner un enfant aujourd'hui… et un adulte demain.",
     coverImage: coursVincennesSdb1,
     instagramLink: "https://www.instagram.com/reel/C9PjaweN7-B/",
+    review: {
+      text: "Un grand merci à Carina et Thierry pour leur professionnalisme et leur écoute. La rénovation de notre salle de bain s'est déroulée parfaitement, avec un résultat qui dépasse nos attentes. Les rangements sur-mesure sont exactement ce dont nous avions besoin. Je recommande vivement !",
+      author: "Claire",
+      link: "https://www.houzz.fr/viewReview/2051925/qualirenovation-by-qualiconcept-review"
+    },
     photos: [
       { id: 1, image: coursVincennesSdb1, title: "Après — Vue d'ensemble", description: "Douche italienne et meuble noir" },
       { id: 2, image: coursVincennesSdb2, title: "Après — Carrelage métro", description: "Joints noirs et robinetterie noire" },
