@@ -15,7 +15,7 @@ export default function Avis() {
     <Layout>
       <Helmet>
         <title>Avis clients vérifiés | RenoverMaSalleDeBain.com</title>
-        <meta name="description" content="Découvrez les avis vérifiés par Houzz de nos clients. Plus de 1000 avis 5 étoiles pour nos rénovations de salles de bain à Paris et Île-de-France." />
+        <meta name="description" content="Découvrez les avis vérifiés par Houzz de nos clients. Plus de 40 avis 5 étoiles pour nos rénovations de salles de bain à Paris et Île-de-France." />
       </Helmet>
 
       {/* Hero Section */}
