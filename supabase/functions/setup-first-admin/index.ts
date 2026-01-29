@@ -13,17 +13,10 @@ Deno.serve(async (req) => {
   }
 
   try {
-    const { email, setup_key } = await req.json();
+    const { email } = await req.json();
 
-    // Validate setup key
-    const adminSetupKey = Deno.env.get("ADMIN_SETUP_KEY");
-    if (!adminSetupKey || setup_key !== adminSetupKey) {
-      console.error("Invalid or missing setup key");
-      return new Response(
-        JSON.stringify({ error: "Clé de configuration invalide" }),
-        { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
-    }
+    // Note: No secret key validation - protected by "no existing admin" check below
+    // This function can only promote the FIRST admin, then becomes unusable
 
     // Validate email
     if (!email || typeof email !== "string" || !email.includes("@")) {
