@@ -1344,6 +1344,11 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     location: "Vitry-sur-Seine (94)",
     description: "AVANT : Salle de bain très dégradée avec moisissures, carrelage abîmé et équipements vétustes. APRÈS : Transformation complète avec douche à l'italienne, carrelage grand format, robinetterie contemporaine et meuble vasque design.",
     coverImage: vitryApres1,
+    review: {
+      text: "Qualirenovation a rénové mon appartement (un deux pièces de 33m2) du sol au plafond. J'ai maintenant un magnifique parquet et une peinture bien faite. La plus grande réussite est la salle de bain, qui était vraiment laide et qui est maintenant digne d'un hôtel 5 étoiles. La cuisine et le salon ont totalement changé aussi. Carina a su optimiser chaque espace dans le salon et la chambre pour me permettre d'avoir beaucoup de rangement sans encombrer l'espace. Un grand merci !",
+      author: "Louise D.",
+      link: "https://www.houzz.fr/viewReview/1954300/qualirenovation-by-qualiconcept-review"
+    },
     photos: [
       { id: 1, image: vitryApres1, title: "Après — Vue d'ensemble", description: "Douche italienne moderne" },
       { id: 2, image: vitryApres2, title: "Après — Détails", description: "Finitions soignées" },
