@@ -808,11 +808,6 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     description: "AVANT : Salle de bain grise et datée, cabine de douche arrondie, aucun rangement. APRÈS : Salle de bain repensée dans une harmonie marbre noir/gris. Placard au-dessus des WC avec rangement serviettes et panière à linge coulissante. Douche à l'italienne XXL, meuble vasque noir et carrelage grand format effet pierre. 👉 Gain de place, style et fonctionnalité réunis.",
     coverImage: coursVincennesMadame1,
     instagramLink: "https://www.instagram.com/p/C9fbcS3tbDB/",
-    review: {
-      text: "J'ai eu le plaisir de rencontrer Carina par l'intermédiaire d'un ami pour entreprendre la rénovation de mes salles de bains. Dès notre premier rendez-vous, Carina a su écouter nos besoins et adapter les aménagements de chaque salle de bains. Elle était accompagnée de Thierry, son architecte partenaire, qui a dessiné sur mesure un meuble pour encastrer les machines, optimisant ainsi l'espace. Carina a joué un rôle clé dans le projet en gérant toutes les commandes nécessaires et en coordonnant les équipes sur le chantier. Les délais ont été rigoureusement respectés. Son expertise et son professionnalisme ont été exemplaires tout au long du projet.",
-      author: "Jean-Claude L.",
-      link: "https://www.houzz.fr/viewReview/2051925/qualirenovation-by-qualiconcept-review"
-    },
     photos: [
       { id: 1, image: "/videos/cours-vincennes-madame-1.mp4", title: "Vidéo — Visite", description: "Découvrez la transformation complète", isVideo: true },
       { id: 2, image: coursVincennesMadame1, title: "Après — Douche italienne", description: "Douche XXL et meuble vasque noir" },
