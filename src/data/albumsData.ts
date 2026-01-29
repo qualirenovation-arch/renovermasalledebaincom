@@ -1287,6 +1287,11 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     location: "Saint-Maur-des-Fossés (94) - Av. du Nord",
     description: "À l'origine, une seule salle de bain pour toute la famille dans cette ancienne guinguette transformée en maison familiale.\nNous avons créé une seconde salle de bain dédiée aux enfants, pensée pour le confort du quotidien, sans trahir l'âme du lieu.\n\nL'espace accueille désormais une douche avec receveur, un meuble vasque pratique et des WC séparés, dans une palette bleu et beige, en écho direct à la salle de bain des parents.\nUn choix volontaire pour conserver une cohérence esthétique dans toute la maison, tout en adaptant les usages.\n\nRésultat : une salle de bain fonctionnelle, lumineuse et douce, parfaitement intégrée à cette maison de caractère.\nComme quoi, même une ancienne guinguette peut s'offrir une organisation ultra contemporaine… sans perdre son charme 🍃",
     coverImage: stMaurEnfants3,
+    review: {
+      text: "Un grand merci à Carina et Thierry qui ont fait preuve de flexibilité et d'écoute dans la rénovation de l'étage de notre maison, pour un résultat qui tient compte de l'histoire du lieu et de nos souhaits. Carina a fait le maximum pour que nous puissions habiter dans la maison pendant les travaux tout en faisant face aux imprévus. Je souhaite à toute l'équipe de nombreux projets à venir !",
+      author: "Cristina C.",
+      link: "https://www.houzz.fr/viewReview/2190191/qualirenovation-by-qualiconcept-review"
+    },
     photos: [
       { id: 1, image: stMaurEnfants3, title: "Après — Meuble vasque", description: "Effet bois et robinetterie Horus" },
       { id: 2, image: stMaurEnfants4, title: "Après — Receveur douche", description: "Tebrick bleu pose verticale" },
