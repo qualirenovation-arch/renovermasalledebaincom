@@ -22,6 +22,7 @@ import DegatsEaux from "./pages/DegatsEaux";
 import VisuelsHouzz from "./pages/VisuelsHouzz";
 import DevenirPartenaire from "./pages/DevenirPartenaire";
 import Admin from "./pages/Admin";
+import AdminLogin from "./pages/AdminLogin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -52,6 +53,7 @@ const App = () => (
           <Route path="/visuels-houzz" element={<VisuelsHouzz />} />
           <Route path="/devenir-partenaire" element={<DevenirPartenaire />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
