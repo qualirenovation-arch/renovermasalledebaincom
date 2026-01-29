@@ -248,6 +248,58 @@ export function SubcontractorDetail({
 
               <Separator />
 
+              {/* Legal info */}
+              {(subcontractor.siret || subcontractor.vat_number) && (
+                <div>
+                  <h3 className="font-semibold mb-3 flex items-center gap-2">
+                    <Building2 className="w-4 h-4" />
+                    Informations légales
+                  </h3>
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    {subcontractor.siret && (
+                      <div className="p-3 bg-muted/50 rounded-lg">
+                        <p className="text-sm text-muted-foreground">SIRET</p>
+                        <p className="font-medium font-mono">{subcontractor.siret}</p>
+                      </div>
+                    )}
+                    {subcontractor.vat_number && (
+                      <div className="p-3 bg-muted/50 rounded-lg">
+                        <p className="text-sm text-muted-foreground">N° TVA</p>
+                        <p className="font-medium font-mono">{subcontractor.vat_number}</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* Manager info */}
+              {(subcontractor.manager_first_name || subcontractor.manager_last_name || subcontractor.manager_phone) && (
+                <div>
+                  <h3 className="font-semibold mb-3 flex items-center gap-2">
+                    <User className="w-4 h-4" />
+                    Gérant / Responsable chantier
+                  </h3>
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    {(subcontractor.manager_first_name || subcontractor.manager_last_name) && (
+                      <div className="p-3 bg-muted/50 rounded-lg">
+                        <p className="text-sm text-muted-foreground">Nom complet</p>
+                        <p className="font-medium">
+                          {subcontractor.manager_first_name} {subcontractor.manager_last_name}
+                        </p>
+                      </div>
+                    )}
+                    {subcontractor.manager_phone && (
+                      <div className="p-3 bg-muted/50 rounded-lg">
+                        <p className="text-sm text-muted-foreground">Téléphone</p>
+                        <p className="font-medium">{subcontractor.manager_phone}</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              <Separator />
+
               {/* Company details */}
               <div>
                 <h3 className="font-semibold mb-3 flex items-center gap-2">
@@ -282,6 +334,33 @@ export function SubcontractorDetail({
                   )}
                 </div>
               </div>
+
+              {/* Insurance info */}
+              {(subcontractor.insurance_company || subcontractor.insurance_contract_number) && (
+                <>
+                  <Separator />
+                  <div>
+                    <h3 className="font-semibold mb-3 flex items-center gap-2">
+                      <Briefcase className="w-4 h-4" />
+                      Assurance
+                    </h3>
+                    <div className="grid gap-4 sm:grid-cols-2">
+                      {subcontractor.insurance_company && (
+                        <div className="p-3 bg-muted/50 rounded-lg">
+                          <p className="text-sm text-muted-foreground">Assureur</p>
+                          <p className="font-medium">{subcontractor.insurance_company}</p>
+                        </div>
+                      )}
+                      {subcontractor.insurance_contract_number && (
+                        <div className="p-3 bg-muted/50 rounded-lg">
+                          <p className="text-sm text-muted-foreground">N° de contrat</p>
+                          <p className="font-medium">{subcontractor.insurance_contract_number}</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </>
+              )}
 
               {/* Criteria */}
               <div>
