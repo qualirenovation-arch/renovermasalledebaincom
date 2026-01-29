@@ -167,7 +167,34 @@ export default function DevenirPartenaire() {
   const [isRejected, setIsRejected] = useState(false);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const captchaRef = useRef<HCaptcha>(null);
+  const [siretError, setSiretError] = useState<string | null>(null);
   const { toast } = useToast();
+
+  // SIRET validation helper (must be exactly 14 digits)
+  const validateSiret = (siret: string): boolean => {
+    const cleanedSiret = siret.replace(/\s/g, '');
+    return /^\d{14}$/.test(cleanedSiret);
+  };
+
+  const handleSiretChange = (value: string) => {
+    // Allow digits and spaces only
+    const filtered = value.replace(/[^\d\s]/g, '');
+    handleChange('siret', filtered);
+    
+    // Clear error when empty
+    if (!filtered.trim()) {
+      setSiretError(null);
+      return;
+    }
+    
+    // Validate
+    const cleanedSiret = filtered.replace(/\s/g, '');
+    if (cleanedSiret.length > 0 && cleanedSiret.length !== 14) {
+      setSiretError(`${cleanedSiret.length}/14 chiffres`);
+    } else if (cleanedSiret.length === 14) {
+      setSiretError(null);
+    }
+  };
 
   // Check if candidacy should be rejected based on key questions
   const isCandidacyIneligible = 
@@ -290,6 +317,20 @@ export default function DevenirPartenaire() {
         variant: "destructive",
       });
       return;
+    }
+
+    // Validate SIRET format if provided
+    if (formData.siret.trim()) {
+      const cleanedSiret = formData.siret.replace(/\s/g, '');
+      if (!validateSiret(formData.siret)) {
+        setSiretError(`Format invalide (${cleanedSiret.length}/14 chiffres)`);
+        toast({
+          title: "Erreur de format",
+          description: "Le numéro SIRET doit comporter exactement 14 chiffres.",
+          variant: "destructive",
+        });
+        return;
+      }
     }
 
     // Check eligibility criteria - if not met, reject candidacy
@@ -672,11 +713,16 @@ export default function DevenirPartenaire() {
                       <Input
                         id="siret"
                         value={formData.siret}
-                        onChange={(e) => handleChange('siret', e.target.value)}
-                        placeholder="XXX XXX XXX XXXXX"
+                        onChange={(e) => handleSiretChange(e.target.value)}
+                        placeholder="123 456 789 01234"
                         maxLength={17}
+                        className={siretError ? "border-destructive" : ""}
                       />
-                      <p className="text-xs text-muted-foreground">14 chiffres (vérifiable sur Infogreffe/Pappers)</p>
+                      {siretError ? (
+                        <p className="text-xs text-destructive">{siretError}</p>
+                      ) : (
+                        <p className="text-xs text-muted-foreground">14 chiffres (vérifiable sur Infogreffe/Pappers)</p>
+                      )}
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="vatNumber">Numéro de TVA intracommunautaire</Label>
