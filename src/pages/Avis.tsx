@@ -39,7 +39,7 @@ export default function Avis() {
               <CheckCircle2 className="w-5 h-5 text-wood" />
               <span className="text-sm font-medium">Avis vérifiés par Houzz</span>
               <a 
-                href="https://www.houzz.fr/pro/qualiconcept/qualirenovation-by-qualiconcept" 
+                href="https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-primary hover:text-primary/80 transition-colors ml-1"
@@ -140,7 +140,7 @@ export default function Avis() {
                 Consultez l'ensemble de nos avis clients vérifiés directement sur notre profil Houzz professionnel.
               </p>
               <a
-                href="https://www.houzz.fr/pro/qualiconcept/qualirenovation-by-qualiconcept"
+                href="https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#296189] hover:bg-[#1e4a66] text-white font-medium px-6 py-3 rounded-full transition-colors shadow-md hover:shadow-lg"
