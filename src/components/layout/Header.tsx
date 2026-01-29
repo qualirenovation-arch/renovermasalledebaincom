@@ -54,7 +54,7 @@ export function Header() {
             <img 
               src={qualirenovationLogo} 
               alt="Qualiconcept Logo" 
-              className="h-16 md:h-18 lg:h-20 w-auto transition-transform duration-300 group-hover:scale-105"
+              className="h-16 md:h-18 lg:h-20 w-auto transition-transform duration-300 group-hover:scale-105 drop-shadow-md"
             />
             <div className="flex flex-col leading-tight">
               <span className="font-display text-sm md:text-base font-bold text-navy tracking-tight whitespace-nowrap">
