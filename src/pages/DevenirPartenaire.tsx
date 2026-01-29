@@ -146,9 +146,16 @@ export default function DevenirPartenaire() {
   const [portfolioFiles, setPortfolioFiles] = useState<File[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isRejected, setIsRejected] = useState(false);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const captchaRef = useRef<HCaptcha>(null);
   const { toast } = useToast();
+
+  // Check if candidacy should be rejected based on key questions
+  const isCandidacyIneligible = 
+    formData.worksAsSubcontractor === 'non' || 
+    formData.autonomousIntervention === 'non' || 
+    formData.occupiedSitesExperience === 'non';
 
   // hCaptcha handlers
   const onCaptchaVerify = useCallback((token: string) => {
@@ -264,6 +271,12 @@ export default function DevenirPartenaire() {
         description: "Veuillez indiquer l'effectif de votre entreprise.",
         variant: "destructive",
       });
+      return;
+    }
+
+    // Check eligibility criteria - if not met, reject candidacy
+    if (isCandidacyIneligible) {
+      setIsRejected(true);
       return;
     }
 
@@ -419,6 +432,49 @@ export default function DevenirPartenaire() {
       captchaRef.current?.resetCaptcha();
     }
   };
+
+  // Rejection screen when candidacy doesn't meet criteria
+  if (isRejected) {
+    return (
+      <Layout>
+        <section className="section-padding min-h-[70vh] flex items-center">
+          <div className="container-custom">
+            <motion.div 
+              className="max-w-2xl mx-auto text-center"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+            >
+              <div className="w-24 h-24 rounded-full bg-destructive/10 flex items-center justify-center mx-auto mb-8">
+                <AlertCircle className="w-12 h-12 text-destructive" />
+              </div>
+              <h1 className="font-display text-3xl md:text-4xl font-semibold mb-6">
+                Candidature non éligible
+              </h1>
+              <p className="text-muted-foreground text-lg mb-4">
+                Nous vous remercions de l'intérêt que vous portez à notre réseau de partenaires.
+              </p>
+              <p className="text-muted-foreground mb-8">
+                Malheureusement, votre profil ne correspond pas à nos critères de sélection actuels.<br />
+                Nous recherchons des entreprises capables de travailler en sous-traitance, en autonomie sur chantier et habituées aux chantiers occupés.
+              </p>
+              <div className="bg-muted/50 rounded-xl p-6 mb-8 text-left">
+                <p className="text-sm text-muted-foreground">
+                  <strong>📌 Note :</strong> Si votre situation évolue, n'hésitez pas à recandidater ultérieurement.
+                </p>
+              </div>
+              <Button 
+                onClick={() => window.location.href = '/'}
+                variant="cta"
+                size="lg"
+              >
+                Retour à l'accueil
+              </Button>
+            </motion.div>
+          </div>
+        </section>
+      </Layout>
+    );
+  }
 
   if (isSubmitted) {
     return (
@@ -749,6 +805,24 @@ export default function DevenirPartenaire() {
                     </RadioGroup>
                   </div>
                 </div>
+
+                {/* Warning message when criteria not met */}
+                {isCandidacyIneligible && (
+                  <div className="border-2 border-destructive/30 bg-destructive/5 rounded-xl p-4 mt-6">
+                    <div className="flex items-start gap-3">
+                      <AlertCircle className="w-5 h-5 text-destructive mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="font-medium text-destructive mb-1">
+                          Candidature non éligible
+                        </p>
+                        <p className="text-sm text-muted-foreground">
+                          Nous recherchons des entreprises capables de travailler en sous-traitance, en autonomie sur chantier et habituées aux chantiers occupés. 
+                          Si vous répondez "Non" à l'une de ces questions, votre candidature ne pourra pas être acceptée.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </CardContent>
             </Card>
 
