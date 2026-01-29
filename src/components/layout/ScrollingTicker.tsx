@@ -16,18 +16,32 @@ const tickerItems: TickerItem[] = [
   { type: "presse", label: "Elle Décoration — Salle de bains pour deux : astuces d'architectes", link: "/presse#parutions" },
   { type: "presse", label: "Houzz — Maison de maître 1900 rénovée de A à Z", link: "/presse#parutions" },
   { type: "presse", label: "Marie Claire Maison — Rénovation avec transparence et expertise", link: "/presse#parutions" },
+  { type: "presse", label: "Houzz — Objectif zéro déchet sur les chantiers", link: "/presse#parutions" },
+  { type: "presse", label: "Houzz — 9 aménagements pour économiser l'eau", link: "/presse#parutions" },
+  { type: "presse", label: "Houzz — 50 coins buanderie optimisés", link: "/presse#parutions" },
   // Guide travaux
   { type: "guide", label: "Étanchéité obligatoire DTU — SEL et SPEC sous carrelage", link: "/guide-travaux#etancheite" },
   { type: "guide", label: "Douche ou baignoire : laquelle choisir ?", link: "/guide-travaux#douche-italienne" },
   { type: "guide", label: "Faut-il refaire toute la plomberie ?", link: "/guide-travaux#plomberie" },
+  { type: "guide", label: "Normes électriques NF C 15-100 salle de bain", link: "/guide-travaux#electricite" },
+  { type: "guide", label: "Bâti-support Geberit : tout savoir", link: "/guide-travaux#questions-techniques" },
+  // Conseils
   { type: "conseil", label: "Choisir sa robinetterie — finitions et compatibilité", link: "/guide-travaux#robinetterie" },
+  { type: "conseil", label: "Faut-il carreler toute hauteur ?", link: "/guide-travaux#astuces-budget" },
+  { type: "conseil", label: "Cuvette sans bride : notre recommandation", link: "/guide-travaux#questions-techniques" },
+  { type: "conseil", label: "Pourquoi faire appel à un maître d'œuvre ?", link: "/guide-travaux#moe" },
   // Réalisations
   { type: "realisation", label: "Paris 8ᵉ — Rénovation dégât des eaux, marbre et noir mat", link: "/realisations/salle-de-bain-paris-8-renovation-degat-des-eaux-marbre-noir-mat" },
   { type: "realisation", label: "Paris 13ᵉ — Zellige bejmat vert Saint-Laurent et laiton", link: "/realisations/salle-de-bain-paris-13-renovation-zellige-turquoise-or" },
   { type: "realisation", label: "Saint-Mandé — Économies d'énergie après rénovation", link: "/realisations/salle-de-bain-saint-mande-renovation-contemporaine-bois-marbre" },
+  { type: "realisation", label: "Paris 19ᵉ — Mosaïque géométrique & Noir mat", link: "/realisations/salle-de-bain-paris-19-renovation-mosaique-geometrique-noir-mat" },
+  { type: "realisation", label: "Bois-Colombes — Terrazzo minéral, vert d'eau et laiton", link: "/realisations/salle-de-bain-bois-colombes-92-terrazzo-mineral-vert-eau-laiton" },
+  { type: "realisation", label: "Paris 5ᵉ — Zellige blanc et sol Patrimony bleu", link: "/realisations/salle-de-bain-paris-5-renovation-baignoire-saint-germain" },
   // Vidéos
   { type: "video", label: "Comment choisir votre vasque à poser", link: "/guide-travaux#videos-conseils" },
   { type: "video", label: "Accès plomberie : à ne pas oublier !", link: "/guide-travaux#plomberie" },
+  { type: "video", label: "VMC et ventilation salle de bain", link: "/guide-travaux#videos-conseils" },
+  { type: "video", label: "Installation ciel de pluie encastré", link: "/guide-travaux#videos-conseils" },
 ];
 
 const getIcon = (type: TickerItem["type"]) => {
