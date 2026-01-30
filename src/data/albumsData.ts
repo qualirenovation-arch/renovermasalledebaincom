@@ -689,6 +689,11 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     location: "Paris 10ème - Canal Saint-Martin",
     description: "AVANT : Salle de bain classique et impersonnelle. APRÈS : Salle de bain au style résolument masculin avec carrelage foncé, robinetterie noire mate et lignes épurées. Paroi vitrée minimaliste pour un effet loft.",
     coverImage: jemmapes1,
+    review: {
+      author: "Francklab",
+      text: "J'ai fait appel à Qualirenovation pour rénover le salon et la salle de bain de mon appartement à Paris 10e. Carina a été très réactive, a su être à l'écoute et s'adapter à mes besoins. Je suis plus que satisfait du résultat final, et je ne peux que recommander Qualirenovation pour son professionnalisme et qualité de travail. Merci infiniment.",
+      link: "https://www.houzz.fr/viewReview/1612490/qualirenovation-by-qualiconcept-review"
+    },
     photos: [
       { id: 1, image: jemmapes1, title: "Après — Vue principale", description: "Ambiance masculine et moderne" },
       { id: 2, image: jemmapes2, title: "Après — Douche", description: "Paroi vitrée et carrelage foncé" },
