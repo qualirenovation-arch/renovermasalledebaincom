@@ -866,7 +866,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     coverImage: nicolasRoret5,
     review: {
       text: "Carina est une architecte de talent, créative et toujours à l'écoute. Elle a su transformer notre petite salle de bain en un espace fonctionnel et esthétique, avec des matériaux de qualité et des finitions impeccables. Son suivi de chantier est rigoureux et elle sait gérer les imprévus avec professionnalisme.",
-      author: "Propriétaire Paris 13ème",
+      author: "Mazurok",
       link: "https://www.houzz.fr/viewReview/2197601/qualirenovation-by-qualiconcept-review"
     },
     photos: [
