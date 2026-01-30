@@ -222,6 +222,17 @@ const parutions_presse: ParutionPresse[] = [
     location: "Paris",
   },
   {
+    id: "houzz-baignoire-petite-sdb-2019",
+    date_publication: "2019-09-05",
+    media: "Houzz",
+    titre_article: "Paroles de pros : Une baignoire pour une petite salle de bains ?",
+    extrait_seo: "Faut-il sacrifier la baignoire quand les mètres carrés sont limités ? La rédaction Houzz a interrogé les professionnels. Carina Nahmani partage son expertise terrain sur ce débat qui divise les Houzzers.",
+    url_article: "https://www.houzz.fr/magazine/paroles-de-pros-une-baignoire-pour-une-petite-salle-de-bains-stsetivw-vs~126001456",
+    type: "interview",
+    image: stMande1,
+    journalist: "Claire Tardy",
+  },
+  {
     id: "houzz-trois-pieces-2019",
     date_publication: "2019-04-01",
     media: "Houzz",
