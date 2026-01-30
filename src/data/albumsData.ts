@@ -1469,20 +1469,23 @@ Côté fonctionnalité, l'agencement a été entièrement repensé :
 • WC remplacé par une cuvette plus élégante, pour une lecture plus épurée de l'espace
 
 ✨ Résultat : une SDB en longueur fluide, graphique et parfaitement organisée, où le dialogue entre le terracotta et le blanc transforme les contraintes en atouts.`,
-    coverImage: "/lovable-uploads/saint-maur-petit-beaubourg/apres-baignoire-carrelage.jpg",
+    coverImage: "/lovable-uploads/saint-maur-petit-beaubourg/apres-vue-generale-terracotta.jpg",
     ctaButton: {
       label: "Lancez votre projet de rénovation",
       link: "/devis"
     },
     photos: [
-      { id: 1, image: "/lovable-uploads/saint-maur-petit-beaubourg/apres-baignoire-carrelage.jpg", title: "Baignoire et carrelage relief", description: "Carrelage triangulaire blanc et robinetterie chromée" },
-      { id: 2, image: "/lovable-uploads/saint-maur-petit-beaubourg/apres-wc-rangements.jpg", title: "WC et rangements intégrés", description: "WC suspendu et grands placards blancs" },
-      { id: 3, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-vue-generale.jpg", title: "Avant — Vue générale", description: "Murs turquoise et meuble bois exotique" },
-      { id: 4, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-meuble-vasque.jpg", title: "Avant — Meuble vasque", description: "Vasque bois et parquet sombre" },
-      { id: 5, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-meuble-vasque-2.jpg", title: "Avant — Vue vasque", description: "Détail du meuble et sèche-serviettes" },
-      { id: 6, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-douche.jpg", title: "Avant — Douche", description: "Paroi vitrée et étagères turquoise" },
-      { id: 7, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-wc-lave-linge.jpg", title: "Avant — WC et lave-linge", description: "WC classique et machine à laver visible" },
-      { id: 8, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-baignoire.jpg", title: "Avant — Baignoire", description: "Mosaïque colorée années 2000" },
+      { id: 1, image: "/lovable-uploads/saint-maur-petit-beaubourg/apres-vue-generale-terracotta.jpg", title: "Vue générale — Mur terracotta", description: "Red Earth Farrow & Ball et meuble vasque bois" },
+      { id: 2, image: "/lovable-uploads/saint-maur-petit-beaubourg/apres-vasque-baignoire.jpg", title: "Vasque et baignoire", description: "Plan Corian, miroir arrondi et carrelage relief" },
+      { id: 3, image: "/lovable-uploads/saint-maur-petit-beaubourg/apres-placard-lave-linge.jpg", title: "Placard lave-linge intégré", description: "Rangements fermés et WC suspendu" },
+      { id: 4, image: "/lovable-uploads/saint-maur-petit-beaubourg/apres-baignoire-carrelage.jpg", title: "Baignoire et carrelage relief", description: "Carrelage triangulaire blanc et robinetterie chromée" },
+      { id: 5, image: "/lovable-uploads/saint-maur-petit-beaubourg/apres-wc-rangements.jpg", title: "WC et rangements intégrés", description: "WC suspendu et grands placards blancs" },
+      { id: 6, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-vue-generale.jpg", title: "Avant — Vue générale", description: "Murs turquoise et meuble bois exotique" },
+      { id: 7, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-meuble-vasque.jpg", title: "Avant — Meuble vasque", description: "Vasque bois et parquet sombre" },
+      { id: 8, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-meuble-vasque-2.jpg", title: "Avant — Vue vasque", description: "Détail du meuble et sèche-serviettes" },
+      { id: 9, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-douche.jpg", title: "Avant — Douche", description: "Paroi vitrée et étagères turquoise" },
+      { id: 10, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-wc-lave-linge.jpg", title: "Avant — WC et lave-linge", description: "WC classique et machine à laver visible" },
+      { id: 11, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-baignoire.jpg", title: "Avant — Baignoire", description: "Mosaïque colorée années 2000" },
     ],
   },
 ];
