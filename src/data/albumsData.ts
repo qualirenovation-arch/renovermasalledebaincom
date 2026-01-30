@@ -1455,11 +1455,25 @@ Un projet pensé pour une vie de famille, où esthétique et fonctionnalité coh
   {
     id: "saint-maur-petit-beaubourg",
     slug: "salle-de-bain-saint-maur-94-renovation-blanc-epure-petit-beaubourg",
-    title: "Transformation totale — Du turquoise au blanc épuré",
+    title: "SDB en longueur à Saint-Maur — Le contraste terracotta et blanc comme fil conducteur",
     location: "Saint-Maur (94) - Rue du Petit Beaubourg",
-    description: `AVANT : Salle de bain familiale aux murs turquoise, parquet bois sombre et meuble vasque en bois exotique. Baignoire avec mosaïque colorée et machine à laver visible.
-APRÈS : Métamorphose complète vers un style contemporain blanc immaculé. Carrelage relief triangulaire dans la baignoire, WC suspendu avec grands placards de rangement intégrés et sols gris anthracite. Robinetterie chromée et accessoires noirs pour un contraste graphique maîtrisé. Un espace désormais lumineux, fonctionnel et résolument moderne.`,
+    description: `Dans cette salle de bain en longueur, rue du Petit Beaubourg à Saint-Maur-des-Fossés, chaque choix répond à une double exigence : optimiser le rangement et affirmer une identité décorative forte.
+
+Le regard est immédiatement capté par le mur du miroir peint en Red Earth de Farrow & Ball, un terracotta profond et enveloppant. Son contraste avec les éléments blancs — faïence, sanitaires et plan en Corian — structure visuellement la pièce et accentue la sensation de profondeur.
+
+Le sous-meuble vasque en bois, surmonté d'un plan en Corian, apporte chaleur et modernité.
+
+Côté fonctionnalité, l'agencement a été entièrement repensé :
+• Lave-linge dissimulé dans un placard
+• Rangements fermés créés au-dessus du WC, offrant plus de stockage sans niche ouverte
+• WC remplacé par une cuvette plus élégante, pour une lecture plus épurée de l'espace
+
+✨ Résultat : une SDB en longueur fluide, graphique et parfaitement organisée, où le dialogue entre le terracotta et le blanc transforme les contraintes en atouts.`,
     coverImage: "/lovable-uploads/saint-maur-petit-beaubourg/apres-baignoire-carrelage.jpg",
+    ctaButton: {
+      label: "Lancez votre projet de rénovation",
+      link: "/devis"
+    },
     photos: [
       { id: 1, image: "/lovable-uploads/saint-maur-petit-beaubourg/apres-baignoire-carrelage.jpg", title: "Baignoire et carrelage relief", description: "Carrelage triangulaire blanc et robinetterie chromée" },
       { id: 2, image: "/lovable-uploads/saint-maur-petit-beaubourg/apres-wc-rangements.jpg", title: "WC et rangements intégrés", description: "WC suspendu et grands placards blancs" },
