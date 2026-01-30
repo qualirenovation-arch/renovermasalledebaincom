@@ -97,7 +97,7 @@ export function ScrollingTicker() {
   // Duplicate items for seamless loop
   const duplicatedItems = [...tickerItems, ...tickerItems, ...tickerItems];
 
-  const animationDuration = isMobile ? 60 : 40; // Slower on mobile
+  const animationDuration = isMobile ? 120 : 80; // Ralenti pour meilleure lisibilité
 
   return (
     <div 
