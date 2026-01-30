@@ -3,8 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { Camera, Phone, Globe, MapPin, Star, ArrowRight, ExternalLink, Award, Building, Home, Eye } from "lucide-react";
-import stephaneVasco1 from "@/assets/stephane-vasco-1.jpg";
-import stephaneVasco2 from "@/assets/stephane-vasco-2.jpg";
+import stephaneVasco from "@/assets/stephane-vasco.png";
 
 const specialties = [
   {
@@ -187,9 +186,9 @@ export default function Photographe() {
               viewport={{ once: true }}
             >
               <img 
-                src={stephaneVasco1} 
+                src={stephaneVasco} 
                 alt="Stéphane Vasco en plein shooting dans une cuisine rénovée" 
-                className="w-full h-80 object-cover"
+                className="w-full h-80 object-cover object-top"
               />
             </motion.div>
             <motion.div 
@@ -200,9 +199,9 @@ export default function Photographe() {
               transition={{ delay: 0.1 }}
             >
               <img 
-                src={stephaneVasco2} 
+                src={stephaneVasco} 
                 alt="Stéphane Vasco préparant son trépied pour un reportage photo" 
-                className="w-full h-80 object-cover"
+                className="w-full h-80 object-cover object-top"
               />
             </motion.div>
           </div>
