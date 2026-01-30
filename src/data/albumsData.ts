@@ -1473,6 +1473,9 @@ Côté fonctionnalité, l'agencement a été entièrement repensé :
 
 ✨ Résultat : une SDB en longueur fluide, graphique et parfaitement organisée, où le dialogue entre le terracotta et le blanc transforme les contraintes en atouts.`,
     coverImage: "/lovable-uploads/saint-maur-petit-beaubourg/apres-vue-generale-terracotta.jpg",
+    instagramLinks: [
+      "https://www.instagram.com/p/CrLoM_Mpnml/"
+    ],
     ctaButton: {
       label: "Lancez votre projet de rénovation",
       link: "/devis"
