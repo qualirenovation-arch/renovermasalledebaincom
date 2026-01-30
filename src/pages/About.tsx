@@ -7,7 +7,7 @@ import aboutHistoire from "@/assets/about-histoire.jpg";
 import teamPhoto from "@/assets/team-photo.jpg";
 import teamChantier1 from "@/assets/team-chantier-1.jpg";
 import teamChantier3 from "@/assets/team-chantier-3.jpg";
-import stephaneVasco2 from "@/assets/stephane-vasco-2.jpg";
+import stephaneVasco from "@/assets/stephane-vasco.png";
 import thierryPelmard1 from "@/assets/thierry-pelmard-1.jpg";
 import thierryPelmard2 from "@/assets/thierry-pelmard-2.jpg";
 import carinaNahmani1 from "@/assets/carina-nahmani-1.jpg";
@@ -476,7 +476,7 @@ export default function About() {
                 transition={{ delay: 0.2 }}
               >
                 <img 
-                  src={stephaneVasco2} 
+                  src={stephaneVasco} 
                   alt="Stéphane Vasco en action sur un de nos chantiers" 
                   className="w-full h-72 object-cover"
                 />
