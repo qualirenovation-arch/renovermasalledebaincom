@@ -63,6 +63,15 @@ export const presseNews = [
     link: "/presse#parutions",
     externalLink: "https://www.houzz.fr/magazine/pourquoi-est-il-judicieux-de-faire-appel-a-un-maitre-d-oeuvre-stsetivw-vs~87724005",
   },
+  {
+    id: "presse-houzz-baignoire-petite",
+    title: "Une baignoire pour une petite salle de bains ?",
+    source: "Houzz",
+    date: "Septembre 2019",
+    journalist: "Claire Tardy",
+    link: "/presse#parutions",
+    externalLink: "https://www.houzz.fr/magazine/paroles-de-pros-une-baignoire-pour-une-petite-salle-de-bains-stsetivw-vs~126001456",
+  },
 ];
 
 // Conseils Guide Travaux - Données réelles depuis Guide.tsx
