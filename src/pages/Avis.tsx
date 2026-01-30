@@ -9,10 +9,10 @@ import { Helmet } from "react-helmet-async";
 import { InstagramVideoCard } from "@/components/ui/instagram-video-card";
 
 // Images thumbnails pour les témoignages vidéo Instagram
-import conventionThumb from "@/assets/convention-hague-blue-1.jpg";
-import boisColombesThumb from "@/assets/bois-colombes-01.jpg";
-import vincennesThumb from "@/assets/cours-vincennes-garcon-2.jpg";
-import soisyThumb from "@/assets/soisy-rose-1.jpg";
+import conventionThumb from "@/assets/amiral-roussin-1.jpg";
+import boisColombesThumb from "@/assets/bois-colombes-1.jpg";
+import vincennesThumb from "@/assets/cours-vincennes-sdb-1.jpg";
+import soisyThumb from "@/assets/soisy-sdb-1.jpg";
 
 // Données des témoignages vidéo
 const videoTestimonials = [
