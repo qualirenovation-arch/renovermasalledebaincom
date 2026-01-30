@@ -1446,6 +1446,26 @@ Un projet pensé pour une vie de famille, où esthétique et fonctionnalité coh
       { id: 6, image: "/projects/saint-maurice/verdun-7.jpg", title: "Verrière depuis le salon", description: "Lumière naturelle diffusée dans la salle de bain" },
     ],
   },
+  // ========== SAINT-MAUR - RUE DU PETIT BEAUBOURG (94) ==========
+  {
+    id: "saint-maur-petit-beaubourg",
+    slug: "salle-de-bain-saint-maur-94-renovation-blanc-epure-petit-beaubourg",
+    title: "Transformation totale — Du turquoise au blanc épuré",
+    location: "Saint-Maur (94) - Rue du Petit Beaubourg",
+    description: `AVANT : Salle de bain familiale aux murs turquoise, parquet bois sombre et meuble vasque en bois exotique. Baignoire avec mosaïque colorée et machine à laver visible.
+APRÈS : Métamorphose complète vers un style contemporain blanc immaculé. Carrelage relief triangulaire dans la baignoire, WC suspendu avec grands placards de rangement intégrés et sols gris anthracite. Robinetterie chromée et accessoires noirs pour un contraste graphique maîtrisé. Un espace désormais lumineux, fonctionnel et résolument moderne.`,
+    coverImage: "/lovable-uploads/saint-maur-petit-beaubourg/apres-baignoire-carrelage.jpg",
+    photos: [
+      { id: 1, image: "/lovable-uploads/saint-maur-petit-beaubourg/apres-baignoire-carrelage.jpg", title: "Baignoire et carrelage relief", description: "Carrelage triangulaire blanc et robinetterie chromée" },
+      { id: 2, image: "/lovable-uploads/saint-maur-petit-beaubourg/apres-wc-rangements.jpg", title: "WC et rangements intégrés", description: "WC suspendu et grands placards blancs" },
+      { id: 3, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-vue-generale.jpg", title: "Avant — Vue générale", description: "Murs turquoise et meuble bois exotique" },
+      { id: 4, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-meuble-vasque.jpg", title: "Avant — Meuble vasque", description: "Vasque bois et parquet sombre" },
+      { id: 5, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-meuble-vasque-2.jpg", title: "Avant — Vue vasque", description: "Détail du meuble et sèche-serviettes" },
+      { id: 6, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-douche.jpg", title: "Avant — Douche", description: "Paroi vitrée et étagères turquoise" },
+      { id: 7, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-wc-lave-linge.jpg", title: "Avant — WC et lave-linge", description: "WC classique et machine à laver visible" },
+      { id: 8, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-baignoire.jpg", title: "Avant — Baignoire", description: "Mosaïque colorée années 2000" },
+    ],
+  },
 ];
 
 // ===== ALBUMS EN COURS =====
