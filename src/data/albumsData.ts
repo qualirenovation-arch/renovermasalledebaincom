@@ -934,7 +934,10 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     location: "Paris 15ème - Rue de la Convention",
     description: "AVANT : Receveur de douche mal positionné et espace non optimisé. APRÈS : Création d'une salle de douche et d'un WC séparé. Receveur XXL de 140 cm avec niche horizontale intégrée. Ambiance graphique avec le bleu Hague Blue de Farrow & Ball sur fond gris béton, réchauffée par des touches de bois pour un rendu contemporain et chaleureux.",
     coverImage: convention1,
-    instagramLink: "https://www.instagram.com/reel/DL4wrtXt7Y3/",
+    instagramLinks: [
+      "https://www.instagram.com/reel/DL4wrtXt7Y3/",
+      "https://www.instagram.com/p/DMDuJCPswLQ/"
+    ],
     photos: [
       { id: 1, image: convention1, title: "Après — Résultat final", description: "Douche à l'italienne XXL 140 cm" },
       { id: 2, image: convention2, title: "Après — Niche horizontale", description: "Rangement intégré pratique" },
