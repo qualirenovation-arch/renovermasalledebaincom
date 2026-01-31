@@ -1512,8 +1512,14 @@ Le receveur de douche est habillé du même zellige bleu profond, pour une cohé
 
 👉 Le vrai plus : le lave-linge est entièrement dissimulé derrière une porte, offrant un espace épuré et parfaitement optimisé.
 
-Une rénovation pensée pour allier design contemporain, praticité et élégance.`,
+Une rénovation pensée pour allier design contemporain, praticité et élégance.
+
+🛒 Shopping : parquetcarrelage.com`,
     coverImage: edmondNocard1,
+    ctaButton: {
+      label: "Acheter les carrelages sur parquetcarrelage.com",
+      link: "https://www.parquetcarrelage.com"
+    },
     photos: [
       { id: 1, image: edmondNocard1, title: "Douche zellige bleu marine", description: "Carrelage Colonial Brillo 7.5x30 cm" },
       { id: 2, image: edmondNocard2, title: "Carrelage béton blanc", description: "Tech White mat 60x60 cm" },
