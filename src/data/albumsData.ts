@@ -424,6 +424,12 @@ import laTourAvant5 from "@/assets/la-tour-avant-5.jpg";
 // Courbevoie Lalyre
 import courbevoieLalyreAvant1 from "@/assets/courbevoie-lalyre-avant-1.jpg";
 
+// Saint-Maurice - Rue Edmond Nocard
+import edmondNocard1 from "@/assets/albums/saint-maurice-edmond-nocard/douche-zellige-bleu.jpg";
+import edmondNocard2 from "@/assets/albums/saint-maurice-edmond-nocard/beton-blanc.jpg";
+import edmondNocard3 from "@/assets/albums/saint-maurice-edmond-nocard/vasque-ikea.jpg";
+import edmondNocard4 from "@/assets/albums/saint-maurice-edmond-nocard/lave-linge-cache.jpg";
+
 // Armand Carrel Paris 19ème
 import armandCarrel1 from "@/assets/armand-carrel-1.jpg";
 import armandCarrel2 from "@/assets/armand-carrel-2.jpg";
@@ -1492,6 +1498,27 @@ Côté fonctionnalité, l'agencement a été entièrement repensé :
       { id: 9, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-douche.jpg", title: "Avant — Douche", description: "Paroi vitrée et étagères turquoise" },
       { id: 10, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-wc-lave-linge.jpg", title: "Avant — WC et lave-linge", description: "WC classique et machine à laver visible" },
       { id: 11, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-baignoire.jpg", title: "Avant — Baignoire", description: "Mosaïque colorée années 2000" },
+    ],
+  },
+  // ========== SAINT-MAURICE - RUE EDMOND NOCARD (94) ==========
+  {
+    id: "saint-maurice-edmond-nocard",
+    slug: "salle-de-bain-saint-maurice-94-renovation-zellige-bleu-beton-blanc",
+    title: "Salle de bain à Saint-Maurice — Zellige bleu marine et béton blanc",
+    location: "Saint-Maurice (94) - Rue Edmond Nocard",
+    description: `Dans cette salle de bain à Saint-Maurice, le contraste entre le zellige bleu marine Colonial Brillo et le carrelage béton Tech White crée une ambiance moderne et apaisante.
+
+Le receveur de douche est habillé du même zellige bleu profond, pour une cohérence visuelle affirmée. Le meuble vasque IKEA, customisé avec une vasque à poser, apporte une touche chaleureuse et fonctionnelle.
+
+👉 Le vrai plus : le lave-linge est entièrement dissimulé derrière une porte, offrant un espace épuré et parfaitement optimisé.
+
+Une rénovation pensée pour allier design contemporain, praticité et élégance.`,
+    coverImage: edmondNocard1,
+    photos: [
+      { id: 1, image: edmondNocard1, title: "Douche zellige bleu marine", description: "Carrelage Colonial Brillo 7.5x30 cm" },
+      { id: 2, image: edmondNocard2, title: "Carrelage béton blanc", description: "Tech White mat 60x60 cm" },
+      { id: 3, image: edmondNocard3, title: "Meuble vasque IKEA", description: "Vasque à poser et plan bois" },
+      { id: 4, image: edmondNocard4, title: "Lave-linge dissimulé", description: "Machine à laver cachée derrière une porte" },
     ],
   },
 ];
