@@ -520,9 +520,9 @@ export interface Album {
 }
 
 // ===== ALBUMS TERMINÉS =====
-// Classés par code postal (Paris 3ème → 17ème, puis banlieue 92 → 93 → 94 → 95)
+// Classés par style/thème pour une meilleure lisibilité
 export const albums: Album[] = [
-  // ========== PARIS 3ÈME (75003) ==========
+  // ========== 🖤 NOIR & BLANC ==========
   {
     id: "temple",
     slug: "salle-de-bain-paris-3-renovation-style-masculin-bois-noir",
@@ -539,7 +539,7 @@ export const albums: Album[] = [
       { id: 6, image: templeAvant2, title: "Avant — Vue rangements", description: "Anciens placards et carrelage bleu" },
     ],
   },
-  // ========== PARIS 5ÈME (75005) ==========
+  // ========== 🪵 BOIS & NATURE / SCANDINAVE ==========
   {
     id: "buffon",
     slug: "salle-de-bain-paris-5-renovation-optimisation-petit-espace",
@@ -578,7 +578,7 @@ export const albums: Album[] = [
       { id: 9, image: ruePuitsAvant3, title: "Avant — Détail", description: "Carrelage daté" },
     ],
   },
-  // ========== PARIS 5ÈME (75005) ==========
+  // ========== 💎 MARBRE & LUXE ==========
   {
     id: "saint-germain",
     slug: "salle-de-bain-paris-5-renovation-baignoire-saint-germain",
@@ -597,7 +597,7 @@ export const albums: Album[] = [
       { id: 8, image: stGermainAvant4, title: "Avant — WC", description: "WC à remplacer" },
     ],
   },
-  // ========== PARIS 8ÈME (75008) ==========
+  // ---------- Suite MARBRE & LUXE ----------
   {
     id: "matignon",
     slug: "salle-de-bain-paris-8-renovation-locative-douche-italienne",
@@ -657,7 +657,7 @@ export const albums: Album[] = [
       { id: 5, image: bauchartAvant3, title: "Avant — Démolition", description: "Reprise technique nécessaire" },
     ],
   },
-  // ========== PARIS 9ÈME (75009) ==========
+  // ========== ✨ DORÉ & LAITON ==========
   {
     id: "taitbout",
     slug: "salle-de-bain-paris-9-renovation-douche-italienne-carrelage-pierre",
@@ -687,7 +687,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 12, image: taitbout3, title: "Avant — Vue générale", description: "Configuration existante" },
     ],
   },
-  // ========== PARIS 10ÈME (75010) ==========
+  // ---------- Suite NOIR & BLANC ----------
   {
     id: "paris10-jemmapes",
     slug: "salle-de-bain-paris-10-renovation-style-masculin-jemmapes",
@@ -738,7 +738,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 7, image: faubourgStmartin7, title: "Après — Détail douche", description: "Paroi noire et ciel de pluie" },
     ],
   },
-  // ========== PARIS 11ÈME (75011) ==========
+  // ---------- Suite NOIR & BLANC ----------
   {
     id: "charonne",
     slug: "salle-de-bain-paris-11-renovation-retro-noir-blanc-charonne",
@@ -772,7 +772,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 6, image: citeauxAvant2, title: "Avant — Vue générale", description: "Espace à optimiser" },
     ],
   },
-  // ========== PARIS 12ÈME (75012) ==========
+  // ========== 🎨 COLORÉ (BLEU / VERT / TERRACOTTA) ==========
   {
     id: "cours-vincennes-wc",
     slug: "salle-de-bain-paris-12-renovation-wc-design-onyx-blue",
@@ -846,7 +846,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 4, image: placeDaumesnil1, title: "Après — Lave-mains d'angle", description: "Meuble chêne et miroir doré" },
     ],
   },
-  // ========== PARIS 13ÈME (75013) ==========
+  // ---------- Suite DORÉ & LAITON ----------
   {
     id: "bobillot",
     slug: "salle-de-bain-paris-13-renovation-locative-zellige-beige",
@@ -913,7 +913,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 4, image: nicolasRoretAvant1, title: "Avant — WC vétuste", description: "État initial avec carrelage bleu et équipements datés" },
     ],
   },
-  // ========== PARIS 15ÈME (75015) ==========
+  // ---------- Suite BOIS & NATURE ----------
   {
     id: "amiral-roussin",
     slug: "salle-de-bain-paris-15-renovation-scandinave-buanderie-integree",
@@ -953,7 +953,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 6, image: convention6, title: "Après — Vue générale", description: "Harmonie gris béton, bleu et bois" },
     ],
   },
-  // ========== PARIS 16ÈME (75016) ==========
+  // ========== 🏠 OPTIMISATION PETIT ESPACE ==========
   {
     id: "pierre-guerin",
     slug: "salle-de-bain-paris-16-renovation-masculine-pierre-inox",
@@ -1009,7 +1009,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 7, image: lauristonAvant2, title: "Avant — Vue générale", description: "Salle de bain à transformer" },
     ],
   },
-  // ========== PARIS 17ÈME (75017) ==========
+  // ---------- Suite DORÉ & LAITON ----------
   {
     id: "paris17-suite",
     slug: "salle-de-bain-paris-17-renovation-suite-parentale-claustra-bois",
@@ -1066,7 +1066,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 7, image: gallery17, title: "Après — Robinetterie", description: "Mitigeur chromé design" },
     ],
   },
-  // ========== PARIS 19ÈME (75019) ==========
+  // ---------- Suite OPTIMISATION ----------
   {
     id: "armand-carrel",
     slug: "salle-de-bain-paris-19-renovation-tout-en-un-mosaique-noir-mat",
@@ -1085,7 +1085,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 8, image: armandCarrel8, title: "Après — Buanderie intégrée", description: "Lave-linge et sèche-linge superposés" },
     ],
   },
-  // ========== BOIS-COLOMBES (92270) ==========
+  // ---------- Suite COLORÉ ----------
   {
     id: "bois-colombes",
     slug: "salle-de-bain-bois-colombes-92-terrazzo-mineral-vert-eau-laiton",
@@ -1113,7 +1113,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 14, image: boisColombresAvant3, title: "Avant — Lave-linge", description: "Espace buanderie à intégrer" },
     ],
   },
-  // ========== BOULOGNE-BILLANCOURT (92100) ==========
+  // ========== 🏡 MAISON & BANLIEUE ==========
   {
     id: "boulogne",
     slug: "salle-de-bain-boulogne-92-ambiance-marine",
@@ -1144,7 +1144,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 20, image: boulogneAvant4, title: "Avant — Détail", description: "Équipements à remplacer" },
     ],
   },
-  // ========== COURBEVOIE (92400) ==========
+  // ========== 🔨 DÉGÂT DES EAUX / SINISTRE ==========
   {
     id: "courbevoie-becon",
     slug: "salle-de-bain-courbevoie-92-becon-sinistre",
@@ -1172,7 +1172,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 11, image: courbevoieAvant3, title: "Avant — Équipements", description: "Destruction des installations" },
     ],
   },
-  // ========== SAINT-OUEN (93400) ==========
+  // ---------- Suite MAISON & BANLIEUE ----------
   {
     id: "saint-ouen",
     slug: "salle-de-bain-saint-ouen-93-renovation",
@@ -1196,7 +1196,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 9, image: stOuenAvant2, title: "Avant — Vue générale", description: "Salle de bain à transformer" },
     ],
   },
-  // ========== CHARENTON-LE-PONT (94220) ==========
+  // ---------- Suite MARBRE & LUXE ----------
   {
     id: "charenton",
     slug: "salle-de-bain-charenton-94-renovation-complete",
@@ -1264,7 +1264,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 3, image: generalLeclercWcTravaux1, title: "Travaux — Installation chauffe-eau", description: "Chauffe-eau Thermor suspendu au-dessus du WC, nourrices et arrivées" },
     ],
   },
-  // ========== SAINT-MANDÉ (94160) ==========
+  // ---------- Suite MAISON & BANLIEUE ----------
   {
     id: "st-mande",
     slug: "salle-de-bain-saint-mande-94-renovation",
@@ -1279,7 +1279,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 3, image: stMande3, title: "Après — Vue complète", description: "Transformation réussie" },
     ],
   },
-  // ========== SAINT-MAUR-DES-FOSSÉS (94100) ==========
+  // ---------- Suite BOIS & NATURE ----------
   {
     id: "saint-maur",
     slug: "salle-de-bain-saint-maur-94-renovation-avant-apres",
@@ -1318,7 +1318,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 4, image: stMaurEnfantsAvant1, title: "Avant — WC", description: "État avant travaux" },
     ],
   },
-  // ========== VINCENNES (94300) ==========
+  // ---------- Suite NOIR & BLANC ----------
   {
     id: "vincennes-mr",
     slug: "salle-de-bain-vincennes-94-garcon-noir-blanc",
@@ -1350,7 +1350,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 21, image: vincennesMrAvant9, title: "Avant — Vue finale", description: "État des lieux complet" },
     ],
   },
-  // ========== VITRY-SUR-SEINE (94400) ==========
+  // ---------- Suite MAISON & BANLIEUE ----------
   {
     id: "vitry",
     slug: "salle-de-bain-vitry-94-renovation-avant-apres",
@@ -1380,7 +1380,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 14, image: vitryAvant10, title: "Avant — Vue finale", description: "État des lieux complet" },
     ],
   },
-  // ========== SOISY-SOUS-MONTMORENCY (95230) ==========
+  // ---------- Suite DORÉ & LAITON ----------
   {
     id: "soisy",
     slug: "salle-de-bain-soisy-95-suite-parentale-maison-1900",
@@ -1439,7 +1439,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 7, image: soisyEnfantsAvant2, title: "Avant — Vue générale", description: "Espace avant aménagement" },
     ],
   },
-  // ========== SAINT-MAURICE (94) ==========
+  // ---------- Suite NOIR & BLANC ----------
   {
     id: "saint-maurice-verdun",
     slug: "salle-de-bain-saint-maurice-94-pullman-noir-blanc",
@@ -1460,7 +1460,7 @@ Un projet pensé pour une vie de famille, où esthétique et fonctionnalité coh
       { id: 6, image: "/projects/saint-maurice/verdun-7.jpg", title: "Verrière depuis le salon", description: "Lumière naturelle diffusée dans la salle de bain" },
     ],
   },
-  // ========== SAINT-MAUR - RUE DU PETIT BEAUBOURG (94) ==========
+  // ---------- Suite COLORÉ ----------
   {
     id: "saint-maur-petit-beaubourg",
     slug: "salle-de-bain-saint-maur-94-renovation-blanc-epure-petit-beaubourg",
@@ -1500,7 +1500,7 @@ Côté fonctionnalité, l'agencement a été entièrement repensé :
       { id: 11, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-baignoire.jpg", title: "Avant — Baignoire", description: "Mosaïque colorée années 2000" },
     ],
   },
-  // ========== SAINT-MAURICE - RUE EDMOND NOCARD (94) ==========
+  // ---------- Suite COLORÉ ----------
   {
     id: "saint-maurice-edmond-nocard",
     slug: "salle-de-bain-saint-maurice-94-renovation-zellige-bleu-beton-blanc",
