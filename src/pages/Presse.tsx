@@ -24,6 +24,7 @@ import terrazzoSoisyEnfants from "@/assets/terrazzo-soisy-enfants.jpg";
 import generalLeclerc3 from "@/assets/general-leclerc-3.jpg";
 import presseHouzzZerodechet from "@/assets/presse-houzz-zerodechet.jpg";
 import houzzLogo from "@/assets/logos/houzz-logo.png";
+import presseHouzzBaignoire from "@/assets/presse/baignoire-petite-sdb.png";
 
 // ========================================
 // Structure "base de données" : parutions_presse
@@ -229,7 +230,7 @@ const parutions_presse: ParutionPresse[] = [
     extrait_seo: "Faut-il sacrifier la baignoire quand les mètres carrés sont limités ? La rédaction Houzz a interrogé les professionnels. Carina Nahmani partage son expertise terrain sur ce débat qui divise les Houzzers.",
     url_article: "https://www.houzz.fr/magazine/paroles-de-pros-une-baignoire-pour-une-petite-salle-de-bains-stsetivw-vs~126001456",
     type: "interview",
-    image: stMande1,
+    image: presseHouzzBaignoire,
     journalist: "Claire Tardy",
   },
   {
