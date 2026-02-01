@@ -137,6 +137,9 @@ export const redirectMap: Record<string, string> = {
   "salle-de-bain-soisy-95-rose-terracotta": "salle-de-bain-soisy-95-renovation-rose-terracotta-baignoire-ilot",
   "salle-de-bain-soisy-95-enfants-terrazzo-menthe": "salle-de-bain-soisy-95-renovation-enfants-terrazzo-menthe",
   
+  // Paris 4ème
+  "chantier-paris-4-quai-aux-fleurs": "salle-de-bain-paris-4-ile-cite-quai-aux-fleurs-fenetre-interieure",
+  
   // Chantiers en cours
   "chantier-paris-10-rocroy": "chantier-paris-10-renovation-petite-salle-de-bain",
   "chantier-paris-5-port-royal": "chantier-paris-5-renovation-complete-douche-italienne",
