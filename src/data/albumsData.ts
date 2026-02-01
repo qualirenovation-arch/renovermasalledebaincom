@@ -1546,9 +1546,9 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       "https://www.instagram.com/reel/DGtELfZMqWc/"
     ],
     review: {
-      text: "Nous avons fait appel à Carina pour la rénovation de notre maison et la création de salles de bain. Tout a été parfait du début à la fin. Carina est une professionnelle de talent, elle a fait preuve de réactivité et de créativité. Le résultat est magnifique et correspond à nos attentes. Nous la recommandons sans réserve.",
+      text: "L'entreprise Qualirenovation, découverte sur Houzz, a pris en charge la rénovation de notre maison datant de 1900. Ce projet d'envergure incluait la démolition de deux murs porteurs, des travaux d'électricité, de plomberie, d'isolation thermique, de revêtements de sol et de peinture, tout en préservant les éléments anciens typiques. Carina Nahmani et son équipe ont su relever les défis techniques, fournissant un résultat final qualitatif à la hauteur de nos attentes.",
       author: "Justin Montheillet",
-      link: "https://www.houzz.fr/viewReview/2169416/qualirenovation-by-qualiconcept-review"
+      link: "https://www.houzz.fr/viewReview/2042067/qualirenovation-by-qualiconcept-review"
     },
     photos: [
       { id: 1, image: soisy1, title: "Après — Vue d'ensemble", description: "WC suspendu et niche en chêne" },
