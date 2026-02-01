@@ -1,6 +1,15 @@
 // Actualités Presse - Données réelles depuis Presse.tsx
 export const presseNews = [
   {
+    id: "presse-maitre-oeuvre",
+    title: "Pourquoi faire appel à un maître d'œuvre ?",
+    source: "Houzz",
+    date: "Octobre 2022",
+    journalist: "Agnès Carpentier",
+    link: "/presse#parutions",
+    externalLink: "https://www.houzz.fr/magazine/pourquoi-est-il-judicieux-de-faire-appel-a-un-maitre-d-oeuvre-stsetivw-vs~87724005",
+  },
+  {
     id: "presse-elle-soisy",
     title: "Salle de bains pour deux : astuces d'architectes",
     source: "Elle Décoration",
@@ -53,15 +62,6 @@ export const presseNews = [
     journalist: "Agnès Carpentier",
     link: "/presse#parutions",
     externalLink: "https://www.houzz.fr/magazine/avant-apres-apres-une-renovation-complete-ce-couple-economise-de-lenergie-stsetivw-vs~176074108",
-  },
-  {
-    id: "presse-maitre-oeuvre",
-    title: "Pourquoi faire appel à un maître d'œuvre ?",
-    source: "Houzz",
-    date: "Octobre 2022",
-    journalist: "Agnès Carpentier",
-    link: "/presse#parutions",
-    externalLink: "https://www.houzz.fr/magazine/pourquoi-est-il-judicieux-de-faire-appel-a-un-maitre-d-oeuvre-stsetivw-vs~87724005",
   },
   {
     id: "presse-houzz-baignoire-petite",
