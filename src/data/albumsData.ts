@@ -636,6 +636,7 @@ export const albums: Album[] = [
     title: "Rénovation salle de bain Suresnes — La vie en bleu Onyx Blue et marbre",
     location: "Suresnes (92) - Rue des Puits",
     description: "Cette salle de bain contemporaine joue sur le contraste entre un carrelage aspect marbre Onyx Blue au mur et un carrelage beige Magda Marfil au sol, pour une ambiance élégante et lumineuse.\n\nUn meuble IKEA en bois entièrement customisé, surmonté d'un plan de travail effet marbre et équipé d'une double vasque en verre, structure l'espace avec légèreté. La robinetterie chromée et le miroir rétroéclairé renforcent le confort et la luminosité.\n\n👉 Le vrai plus : la machine à laver est dissimulée dans un placard à l'entrée de la salle de bain, offrant un espace fluide, épuré et parfaitement optimisé.\n\nUne rénovation pensée pour allier design, fonctionnalité et gain de place.",
+    instagramLink: "https://www.instagram.com/reel/DJZiJ5esaQu/",
     coverImage: ruePuits1,
     photos: [
       { id: 1, image: ruePuits1, title: "Après — Double vasque", description: "Meuble bois et miroirs ronds LED" },
