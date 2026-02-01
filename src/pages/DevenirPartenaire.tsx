@@ -279,6 +279,32 @@ export default function DevenirPartenaire() {
   const missingDocuments = getMissingDocuments();
   const hasAllDocuments = missingDocuments.length === 0;
 
+  // URL validation helper - only allow http and https protocols
+  const validateUrl = (url: string): boolean => {
+    if (!url.trim()) return true; // Optional field
+    try {
+      const parsed = new URL(url);
+      return ['http:', 'https:'].includes(parsed.protocol);
+    } catch {
+      return false;
+    }
+  };
+
+  // Convert file to base64
+  const fileToBase64 = async (file: File): Promise<string> => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => {
+        const result = reader.result as string;
+        // Remove data URL prefix (e.g., "data:application/pdf;base64,")
+        const base64 = result.split(',')[1];
+        resolve(base64);
+      };
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -333,6 +359,26 @@ export default function DevenirPartenaire() {
       }
     }
 
+    // Validate URLs - prevent javascript:, data:, file: protocols
+    const urls = [
+      { field: 'Site web', value: formData.websiteUrl },
+      { field: 'Instagram', value: formData.instagramUrl },
+      { field: 'Facebook', value: formData.facebookUrl },
+      { field: 'LinkedIn', value: formData.linkedinUrl },
+      { field: 'Houzz', value: formData.houzzUrl },
+    ];
+
+    for (const { field, value } of urls) {
+      if (value && !validateUrl(value)) {
+        toast({
+          title: "URL invalide",
+          description: `L'URL ${field} doit commencer par http:// ou https://`,
+          variant: "destructive",
+        });
+        return;
+      }
+    }
+
     // Check eligibility criteria - if not met, reject candidacy
     if (isCandidacyIneligible) {
       setIsRejected(true);
@@ -372,112 +418,80 @@ export default function DevenirPartenaire() {
     setIsSubmitting(true);
     
     try {
-      // 1. Create subcontractor record
-      const { data: subcontractor, error: subError } = await supabase
-        .from('subcontractors')
-        .insert({
-          company_name: formData.companyName,
-          contact_name: formData.contactName,
-          contact_function: formData.contactFunction,
-          phone: formData.phone,
-          email: formData.email,
-          zones: formData.zones,
-          zone_other: formData.zoneOther || null,
-          siret: formData.siret || null,
-          vat_number: formData.vatNumber || null,
-          manager_first_name: formData.managerFirstName || null,
-          manager_last_name: formData.managerLastName || null,
-          manager_phone: formData.managerPhone || null,
-          trades: formData.trades,
-          trade_other: formData.tradeOther || null,
-          experience: formData.experience,
-          employee_count: parseInt(formData.employeeCount) || 0,
-          annual_revenue: formData.annualRevenue || null,
-          managed_people_count: formData.managedPeopleCount ? parseInt(formData.managedPeopleCount) : null,
-          works_as_subcontractor: formData.worksAsSubcontractor === 'oui',
-          autonomous_intervention: formData.autonomousIntervention === 'oui',
-          occupied_sites_experience: formData.occupiedSitesExperience === 'oui',
-          insurance_company: formData.insuranceCompany || null,
-          insurance_contract_number: formData.insuranceContractNumber || null,
-          website_url: formData.websiteUrl || null,
-          instagram_url: formData.instagramUrl || null,
-          facebook_url: formData.facebookUrl || null,
-          linkedin_url: formData.linkedinUrl || null,
-          houzz_url: formData.houzzUrl || null,
-          presentation: formData.presentation || null,
-          certify_accuracy: formData.certifyAccuracy,
-          accept_contact: formData.acceptContact,
+      // Convert documents to base64 for edge function upload
+      const documentsData = await Promise.all(
+        Object.entries(documents)
+          .filter(([_, file]) => file !== null)
+          .map(async ([type, file]) => {
+            const base64 = await fileToBase64(file!);
+            return { 
+              type, 
+              name: file!.name, 
+              data: base64,
+              mimeType: file!.type 
+            };
+          })
+      );
+
+      // Convert portfolio files to base64
+      const portfolioData = await Promise.all(
+        portfolioFiles.map(async (file) => {
+          const base64 = await fileToBase64(file);
+          return { 
+            name: file.name, 
+            data: base64,
+            mimeType: file.type 
+          };
         })
-        .select('id')
-        .single();
+      );
 
-      if (subError) {
-        console.error("Subcontractor insert error:", subError);
-        throw new Error("Erreur lors de l'enregistrement");
-      }
-
-      const subcontractorId = subcontractor.id;
-
-      // 2. Upload documents
-      for (const [docType, file] of Object.entries(documents)) {
-        if (file) {
-          const filePath = `${subcontractorId}/${docType}/${file.name}`;
-          
-          const { error: uploadError } = await supabase.storage
-            .from('subcontractor-files')
-            .upload(filePath, file);
-
-          if (uploadError) {
-            console.error(`Upload error for ${docType}:`, uploadError);
-            continue;
-          }
-
-          // Record document in database
-          await supabase
-            .from('subcontractor_documents')
-            .insert({
-              subcontractor_id: subcontractorId,
-              document_type: docType,
-              file_path: filePath,
-              file_name: file.name,
-            });
-        }
-      }
-
-      // 3. Upload portfolio files
-      for (const file of portfolioFiles) {
-        const filePath = `${subcontractorId}/portfolio/${file.name}`;
-        
-        const { error: uploadError } = await supabase.storage
-          .from('subcontractor-files')
-          .upload(filePath, file);
-
-        if (uploadError) {
-          console.error(`Portfolio upload error:`, uploadError);
-          continue;
-        }
-
-        await supabase
-          .from('subcontractor_portfolio')
-          .insert({
-            subcontractor_id: subcontractorId,
-            file_path: filePath,
-            file_name: file.name,
-          });
-      }
-
-      // 4. Send confirmation emails
-      await supabase.functions.invoke('send-partner-confirmation', {
+      // Call edge function with ALL data (captcha verified FIRST on server)
+      const { error } = await supabase.functions.invoke('send-partner-confirmation', {
         body: {
-          partnerEmail: formData.email,
-          partnerName: formData.contactName,
-          companyName: formData.companyName,
-          trades: formData.trades,
-          zones: formData.zones,
-          missingDocuments: missingDocuments,
+          formData: {
+            company_name: formData.companyName,
+            contact_name: formData.contactName,
+            contact_function: formData.contactFunction,
+            phone: formData.phone,
+            email: formData.email,
+            zones: formData.zones,
+            zone_other: formData.zoneOther || null,
+            siret: formData.siret || null,
+            vat_number: formData.vatNumber || null,
+            manager_first_name: formData.managerFirstName || null,
+            manager_last_name: formData.managerLastName || null,
+            manager_phone: formData.managerPhone || null,
+            trades: formData.trades,
+            trade_other: formData.tradeOther || null,
+            experience: formData.experience,
+            employee_count: parseInt(formData.employeeCount) || 0,
+            annual_revenue: formData.annualRevenue || null,
+            managed_people_count: formData.managedPeopleCount ? parseInt(formData.managedPeopleCount) : null,
+            works_as_subcontractor: formData.worksAsSubcontractor === 'oui',
+            autonomous_intervention: formData.autonomousIntervention === 'oui',
+            occupied_sites_experience: formData.occupiedSitesExperience === 'oui',
+            insurance_company: formData.insuranceCompany || null,
+            insurance_contract_number: formData.insuranceContractNumber || null,
+            website_url: formData.websiteUrl || null,
+            instagram_url: formData.instagramUrl || null,
+            facebook_url: formData.facebookUrl || null,
+            linkedin_url: formData.linkedinUrl || null,
+            houzz_url: formData.houzzUrl || null,
+            presentation: formData.presentation || null,
+            certify_accuracy: formData.certifyAccuracy,
+            accept_contact: formData.acceptContact,
+          },
+          documents: documentsData,
+          portfolioFiles: portfolioData,
           captchaToken,
+          missingDocuments,
         },
       });
+
+      if (error) {
+        console.error("Edge function error:", error);
+        throw new Error(error.message || "Erreur lors de l'enregistrement");
+      }
 
       setIsSubmitted(true);
       
@@ -489,7 +503,7 @@ export default function DevenirPartenaire() {
       console.error("Submission error:", err);
       toast({
         title: "Erreur",
-        description: "Une erreur est survenue. Veuillez réessayer.",
+        description: err instanceof Error ? err.message : "Une erreur est survenue. Veuillez réessayer.",
         variant: "destructive",
       });
     } finally {
