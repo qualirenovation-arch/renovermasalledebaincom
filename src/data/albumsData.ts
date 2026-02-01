@@ -498,6 +498,8 @@ const chercheMidiEntree = "/projects/cherche-midi/entree-sdb.jpg";
 const chercheMidiSejour = "/projects/cherche-midi/vue-sejour.jpg";
 const chercheMidiAvant1 = "/projects/cherche-midi/avant-original.jpg";
 const chercheMidiAvant2 = "/projects/cherche-midi/cherche-midi-avant.jpg";
+const chercheMidiAvant3 = "/projects/cherche-midi/avant-cuisine.jpg";
+const chercheMidiAvant4 = "/projects/cherche-midi/avant-wc-fenetre.jpg";
 
 // ===== INTERFACES =====
 export interface Photo {
@@ -622,6 +624,8 @@ Découvrez le projet au complet sur notre site qualirenovation.fr`,
       { id: 7, image: chercheMidiNiches, title: "Après — Niches douche", description: "Double niche avec carreaux de ciment décoratifs" },
       { id: 8, image: chercheMidiAvant1, title: "Avant — État des lieux", description: "Ancienne salle de bain vétuste avec chauffe-eau apparent" },
       { id: 9, image: chercheMidiAvant2, title: "Avant — Vue ancienne entrée", description: "Ancien accès depuis la cuisine" },
+      { id: 10, image: chercheMidiAvant3, title: "Avant — Entrée cuisine", description: "Vue depuis la cuisine avec accès à la salle de bain" },
+      { id: 11, image: chercheMidiAvant4, title: "Avant — WC et fenêtre", description: "Ancien WC avec vue sur les toits parisiens" },
     ],
   },
   // ========== 💎 MARBRE & LUXE ==========
