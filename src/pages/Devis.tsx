@@ -390,6 +390,7 @@ export default function Devis() {
           clientEmail: formData.email,
           clientName: `${formData.prenom} ${formData.nom}`,
           clientPhone: formData.telephone,
+          captchaToken: captchaToken,
           projectDetails: {
             logement: formData.typeLogement,
             surface: formData.dimensionPiece,

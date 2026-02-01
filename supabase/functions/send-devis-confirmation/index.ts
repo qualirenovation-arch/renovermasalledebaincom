@@ -1,15 +1,17 @@
 const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
+const HCAPTCHA_SECRET_KEY = Deno.env.get("HCAPTCHA_SECRET_KEY");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
-    "authorization, x-client-info, apikey, content-type",
+    "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
 interface DevisRequest {
   clientEmail: string;
   clientName: string;
   clientPhone: string;
+  captchaToken: string;
   projectDetails: {
     logement: string;
     surface: string;
@@ -21,6 +23,17 @@ interface DevisRequest {
   };
 }
 
+// HTML escape function to prevent injection
+function escapeHtml(unsafe: string): string {
+  if (!unsafe) return '';
+  return unsafe
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 const handler = async (req: Request): Promise<Response> => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
@@ -29,17 +42,71 @@ const handler = async (req: Request): Promise<Response> => {
 
   try {
     const requestData: DevisRequest = await req.json();
-    const { clientEmail, clientName, clientPhone, projectDetails } = requestData;
+    const { clientEmail, clientName, clientPhone, captchaToken, projectDetails } = requestData;
 
-    console.log("Sending confirmation email to:", clientEmail);
+    console.log("Processing devis request for:", clientEmail);
 
     // Validate required fields
     if (!clientEmail || !clientName) {
       throw new Error("Email et nom du client requis");
     }
 
+    // Validate captcha token
+    if (!captchaToken) {
+      console.error("Missing captcha token");
+      return new Response(
+        JSON.stringify({ error: "Vérification anti-spam requise" }),
+        { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+
+    // Verify hCaptcha token server-side
+    console.log("Verifying hCaptcha token...");
+    const captchaResponse = await fetch("https://hcaptcha.com/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: `response=${captchaToken}&secret=${HCAPTCHA_SECRET_KEY}`,
+    });
+
+    const captchaData = await captchaResponse.json();
+    console.log("hCaptcha verification result:", captchaData.success);
+
+    if (!captchaData.success) {
+      console.error("hCaptcha verification failed:", captchaData);
+      return new Response(
+        JSON.stringify({ error: "Vérification anti-spam échouée. Veuillez réessayer." }),
+        { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+
+    // Server-side input validation
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(clientEmail)) {
+      throw new Error("Format d'email invalide");
+    }
+
+    if (clientName.length > 200) {
+      throw new Error("Nom trop long");
+    }
+
+    if (projectDetails.message && projectDetails.message.length > 5000) {
+      throw new Error("Message trop long");
+    }
+
+    // Escape all user inputs for HTML safety
+    const safeClientName = escapeHtml(clientName);
+    const safeClientEmail = escapeHtml(clientEmail);
+    const safeClientPhone = escapeHtml(clientPhone || "");
+    const safeLogement = escapeHtml(projectDetails.logement || "");
+    const safeSurface = escapeHtml(projectDetails.surface || "");
+    const safeMessage = escapeHtml(projectDetails.message || "");
+
     // Format project details for email
-    const formatArray = (arr: string[]) => arr.length > 0 ? arr.join(", ") : "Non spécifié";
+    const formatArray = (arr: string[]) => {
+      if (!arr || arr.length === 0) return "Non spécifié";
+      return arr.map(item => escapeHtml(item)).join(", ");
+    };
+
+    console.log("Sending confirmation email to:", clientEmail);
 
     // Send confirmation email to client using Resend API directly
     const clientEmailResponse = await fetch("https://api.resend.com/emails", {
@@ -73,25 +140,25 @@ const handler = async (req: Request): Promise<Response> => {
               <h1>🛁 Rénover Ma Salle de Bain</h1>
             </div>
             <div class="content">
-              <p>Bonjour <strong>${clientName}</strong>,</p>
+              <p>Bonjour <strong>${safeClientName}</strong>,</p>
               <p>Nous avons bien reçu votre demande de devis et nous vous en remercions !</p>
               
               <div class="info-box">
                 <h3>📋 Récapitulatif de votre demande</h3>
-                <p><strong>Type de logement :</strong> ${projectDetails.logement || "Non spécifié"}</p>
-                <p><strong>Surface :</strong> ${projectDetails.surface || "Non spécifiée"}</p>
+                <p><strong>Type de logement :</strong> ${safeLogement || "Non spécifié"}</p>
+                <p><strong>Surface :</strong> ${safeSurface || "Non spécifiée"}</p>
                 <p><strong>Receveur/Baignoire :</strong> ${formatArray(projectDetails.typeReceveur)}</p>
                 <p><strong>Type de WC :</strong> ${formatArray(projectDetails.wcType)}</p>
                 <p><strong>Robinetterie :</strong> ${formatArray(projectDetails.robinetterie)}</p>
                 <p><strong>Style carrelage :</strong> ${formatArray(projectDetails.carrelage)}</p>
-                ${projectDetails.message ? `<p><strong>Message :</strong> ${projectDetails.message}</p>` : ""}
+                ${safeMessage ? `<p><strong>Message :</strong> ${safeMessage}</p>` : ""}
               </div>
 
               <div class="info-box">
                 <h3>📞 Prochaines étapes</h3>
                 <p>Un membre de notre équipe vous contactera dans les <strong>24 à 48 heures</strong> pour planifier une visite gratuite sur site et établir un devis personnalisé.</p>
                 <p><strong>Vos coordonnées :</strong></p>
-                <p>📧 ${clientEmail}<br>📱 ${clientPhone || "Non communiqué"}</p>
+                <p>📧 ${safeClientEmail}<br>📱 ${safeClientPhone || "Non communiqué"}</p>
               </div>
 
               <p>En attendant, n'hésitez pas à consulter nos réalisations sur notre site !</p>
@@ -124,7 +191,7 @@ const handler = async (req: Request): Promise<Response> => {
       body: JSON.stringify({
         from: "Site Web RMSDB <gestion@renovermasalledebain.com>",
         to: ["gestion@renovermasalledebain.com"],
-        subject: `Nouvelle demande de devis - ${clientName}`,
+        subject: `Nouvelle demande de devis - ${safeClientName}`,
         html: `
           <!DOCTYPE html>
           <html>
@@ -148,23 +215,23 @@ const handler = async (req: Request): Promise<Response> => {
               <div class="info-box">
                 <h3>👤 Informations client</h3>
                 <table>
-                  <tr><td>Nom</td><td>${clientName}</td></tr>
-                  <tr><td>Email</td><td><a href="mailto:${clientEmail}">${clientEmail}</a></td></tr>
-                  <tr><td>Téléphone</td><td>${clientPhone || "Non communiqué"}</td></tr>
+                  <tr><td>Nom</td><td>${safeClientName}</td></tr>
+                  <tr><td>Email</td><td><a href="mailto:${safeClientEmail}">${safeClientEmail}</a></td></tr>
+                  <tr><td>Téléphone</td><td>${safeClientPhone || "Non communiqué"}</td></tr>
                 </table>
               </div>
 
               <div class="info-box">
                 <h3>🛁 Détails du projet</h3>
                 <table>
-                  <tr><td>Logement</td><td>${projectDetails.logement || "Non spécifié"}</td></tr>
-                  <tr><td>Surface</td><td>${projectDetails.surface || "Non spécifiée"}</td></tr>
+                  <tr><td>Logement</td><td>${safeLogement || "Non spécifié"}</td></tr>
+                  <tr><td>Surface</td><td>${safeSurface || "Non spécifiée"}</td></tr>
                   <tr><td>Receveur/Baignoire</td><td>${formatArray(projectDetails.typeReceveur)}</td></tr>
                   <tr><td>Type de WC</td><td>${formatArray(projectDetails.wcType)}</td></tr>
                   <tr><td>Robinetterie</td><td>${formatArray(projectDetails.robinetterie)}</td></tr>
                   <tr><td>Style carrelage</td><td>${formatArray(projectDetails.carrelage)}</td></tr>
                 </table>
-                ${projectDetails.message ? `<p><strong>Message du client :</strong><br>${projectDetails.message}</p>` : ""}
+                ${safeMessage ? `<p><strong>Message du client :</strong><br>${safeMessage}</p>` : ""}
               </div>
 
               <p><em>Demande reçue le ${new Date().toLocaleString("fr-FR", { timeZone: "Europe/Paris" })}</em></p>
