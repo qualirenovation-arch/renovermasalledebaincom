@@ -10,7 +10,9 @@ import {
   inProgressAlbums, 
   projectLocations, 
   Album, 
-  Photo 
+  Photo,
+  ALBUM_CATEGORIES,
+  AlbumCategory
 } from "@/data/albumsData";
 
 export default function Realisations() {
@@ -19,10 +21,16 @@ export default function Realisations() {
   const [viewMode, setViewMode] = useState<"completed" | "inProgress">("completed");
   const [selectedAlbum, setSelectedAlbum] = useState<Album | null>(null);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<AlbumCategory | null>(null);
 
   // Defensive: ensure the "completed" list never includes in-progress entries
   // (even if data is accidentally mixed)
   const completedAlbums = albums.filter((a) => !a.isInProgress);
+  
+  // Filter by category if one is selected
+  const filteredCompletedAlbums = selectedCategory 
+    ? completedAlbums.filter((a) => a.category === selectedCategory)
+    : completedAlbums;
 
   // Determine if we should show the in-progress view based on URL hash
   useEffect(() => {
@@ -39,7 +47,7 @@ export default function Realisations() {
     }
   }, [selectedAlbum]);
 
-  const currentAlbums = viewMode === "completed" ? completedAlbums : inProgressAlbums;
+  const currentAlbums = viewMode === "completed" ? filteredCompletedAlbums : inProgressAlbums;
 
   // Keyboard navigation for lightbox
   useEffect(() => {
@@ -139,6 +147,45 @@ export default function Realisations() {
               🚧 Chantiers en cours ({inProgressAlbums.length})
             </button>
           </div>
+          
+          {/* Category Filter - Only show for completed projects */}
+          {viewMode === "completed" && (
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mt-6"
+            >
+              <div className="flex flex-wrap justify-center gap-2">
+                <button
+                  onClick={() => setSelectedCategory(null)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                    selectedCategory === null
+                      ? "bg-primary text-primary-foreground shadow-md"
+                      : "bg-secondary/50 text-foreground hover:bg-secondary"
+                  }`}
+                >
+                  Tous ({completedAlbums.length})
+                </button>
+                {ALBUM_CATEGORIES.map((cat) => {
+                  const count = completedAlbums.filter(a => a.category === cat.id).length;
+                  if (count === 0) return null;
+                  return (
+                    <button
+                      key={cat.id}
+                      onClick={() => setSelectedCategory(cat.id)}
+                      className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                        selectedCategory === cat.id
+                          ? "bg-primary text-primary-foreground shadow-md"
+                          : "bg-secondary/50 text-foreground hover:bg-secondary"
+                      }`}
+                    >
+                      {cat.emoji} {cat.label} ({count})
+                    </button>
+                  );
+                })}
+              </div>
+            </motion.div>
+          )}
         </div>
       </section>
 

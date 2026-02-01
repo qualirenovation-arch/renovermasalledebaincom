@@ -540,6 +540,28 @@ export interface Review {
   link: string;
 }
 
+// Catégories de style pour le filtre
+export type AlbumCategory = 
+  | "noir-blanc"
+  | "bois-nature"
+  | "marbre-luxe"
+  | "dore-laiton"
+  | "colore"
+  | "optimisation"
+  | "maison-banlieue"
+  | "degat-eaux";
+
+export const ALBUM_CATEGORIES: { id: AlbumCategory; label: string; emoji: string }[] = [
+  { id: "noir-blanc", label: "Noir & Blanc", emoji: "🖤" },
+  { id: "bois-nature", label: "Bois & Nature", emoji: "🪵" },
+  { id: "marbre-luxe", label: "Marbre & Luxe", emoji: "💎" },
+  { id: "dore-laiton", label: "Doré & Laiton", emoji: "✨" },
+  { id: "colore", label: "Coloré", emoji: "🎨" },
+  { id: "optimisation", label: "Optimisation", emoji: "📐" },
+  { id: "maison-banlieue", label: "Maison & Banlieue", emoji: "🏡" },
+  { id: "degat-eaux", label: "Dégât des eaux", emoji: "💧" },
+];
+
 export interface Album {
   id: string;
   slug: string; // URL SEO-friendly
@@ -554,6 +576,7 @@ export interface Album {
   instagramLink?: string;
   instagramLinks?: string[];
   ctaButton?: { label: string; link: string };
+  category?: AlbumCategory;
 }
 
 // ===== ALBUMS TERMINÉS =====
@@ -1732,6 +1755,69 @@ export const projectLocations: ProjectLocation[] = [
   { id: "courbevoie-lalyre", name: "Rue Ernest Lalyre", area: "Courbevoie", x: 15, y: 20 },
 ];
 
+// ===== CATEGORY MAPPING =====
+// Mapping des albums vers leurs catégories de style
+const albumCategoryMap: Record<string, AlbumCategory> = {
+  // 🖤 NOIR & BLANC
+  "temple": "noir-blanc",
+  "paris10-jemmapes": "noir-blanc",
+  "charonne": "noir-blanc",
+  "vincennes-mr": "noir-blanc",
+  "saint-maurice-verdun": "noir-blanc",
+  
+  // 🪵 BOIS & NATURE
+  "buffon": "bois-nature",
+  "rue-des-puits": "bois-nature",
+  "amiral-roussin": "bois-nature",
+  "saint-maur": "bois-nature",
+  "st-maur-enfants": "bois-nature",
+  "saint-charles-paris-15": "bois-nature",
+  
+  // 💎 MARBRE & LUXE
+  "saint-germain": "marbre-luxe",
+  "matignon": "marbre-luxe",
+  "charenton": "marbre-luxe",
+  
+  // ✨ DORÉ & LAITON
+  "taitbout": "dore-laiton",
+  "bobillot": "dore-laiton",
+  "nicolas-roret": "dore-laiton",
+  "nicolas-roret-wc": "dore-laiton",
+  "paris17-suite": "dore-laiton",
+  "soisy": "dore-laiton",
+  
+  // 🎨 COLORÉ
+  "cours-vincennes-wc": "colore",
+  "bois-colombes": "colore",
+  "convention": "colore",
+  "daumesnil": "colore",
+  "saint-maur-petit-beaubourg": "colore",
+  "saint-maurice-edmond-nocard": "colore",
+  
+  // 📐 OPTIMISATION PETIT ESPACE
+  "cherche-midi": "optimisation",
+  "pierre-guerin": "optimisation",
+  "armand-carrel": "optimisation",
+  "quai-aux-fleurs": "optimisation",
+  
+  // 🏡 MAISON & BANLIEUE
+  "boulogne": "maison-banlieue",
+  "saint-ouen": "maison-banlieue",
+  "st-mande": "maison-banlieue",
+  "vitry": "maison-banlieue",
+  
+  // 💧 DÉGÂT DES EAUX
+  "bauchart": "degat-eaux",
+  "saint-honore": "degat-eaux",
+};
+
+// Apply categories to albums
+albums.forEach(album => {
+  if (albumCategoryMap[album.id]) {
+    album.category = albumCategoryMap[album.id];
+  }
+});
+
 // ===== HELPER FUNCTIONS =====
 export function getAlbumBySlug(slug: string): Album | undefined {
   return [...albums, ...inProgressAlbums].find(album => album.slug === slug);
@@ -1743,4 +1829,8 @@ export function getAlbumById(id: string): Album | undefined {
 
 export function getAllSlugs(): string[] {
   return [...albums, ...inProgressAlbums].map(album => album.slug);
+}
+
+export function getAlbumsByCategory(category: AlbumCategory): Album[] {
+  return albums.filter(album => album.category === category);
 }
