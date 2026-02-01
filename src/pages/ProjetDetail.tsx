@@ -85,8 +85,8 @@ const ProjetDetail = () => {
   return (
     <Layout>
       <Helmet>
-        <title>{album.title} | {album.location} | Rénovation Salle de Bain Paris</title>
-        <meta name="description" content={album.description.slice(0, 160)} />
+        <title>Rénovation salle de bain {album.location} – {album.title} | Un chantier heureux</title>
+        <meta name="description" content={`Rénovation complète de salle de bain à ${album.location}. Un chantier heureux, maîtrisé et sans mauvaises surprises.`} />
         <link rel="canonical" href={`https://renovermasalledebain.com/realisations/${album.slug}`} />
         
         {/* Open Graph */}
@@ -304,7 +304,10 @@ const ProjetDetail = () => {
               Vous souhaitez une salle de bain similaire ?
             </h2>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Que ce soit pour y habiter, pour le louer ou pour le remettre à la vente, une salle de bain bien pensée constitue un véritable levier de valeur immobilière, en séduisant immédiatement occupants comme acquéreurs.
+              Que ce soit pour y habiter, pour le louer ou pour le remettre à la vente, une salle de bain bien pensée constitue un véritable levier de valeur immobilière.
+            </p>
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto italic">
+              Ce projet illustre parfaitement notre approche : un chantier heureux, fondé sur l'anticipation, la coordination des travaux et la sérénité du client.
             </p>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Nos experts vous accompagnent de A à Z dans votre projet de rénovation.

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { PartnersLogos } from "@/components/layout/PartnersLogos";
+import { Helmet } from "react-helmet-async";
 import { MessageSquare, Palette, Diamond, Hammer, Shield, Headphones, Check, X, ArrowRight, ClipboardCheck, UserCheck, Handshake, Lightbulb, Home, Camera } from "lucide-react";
 const benefits = [{
   icon: ClipboardCheck,
@@ -76,6 +77,11 @@ const comparison = [{
 }];
 export default function WhyUs() {
   return <Layout>
+      <Helmet>
+        <title>Notre méthode – Un chantier heureux pour votre salle de bain à Paris</title>
+        <meta name="description" content="Découvrez notre approche pour une rénovation de salle de bain sans stress à Paris. Un chantier heureux, maîtrisé de A à Z." />
+        <link rel="canonical" href="https://renovermasalledebain.com/pourquoi-nous" />
+      </Helmet>
       {/* Hero */}
       <section className="relative py-16 md:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-stone" />
@@ -90,12 +96,12 @@ export default function WhyUs() {
           duration: 0.6
         }}>
             <span className="inline-block px-4 py-2 rounded-full bg-accent/30 text-wood text-sm font-medium mb-6">
-              Pourquoi nous choisir
+              Notre approche
             </span>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 break-words">
-              La différence avec renovermasalledebain.com
+              Un chantier heureux, ça se prépare
             </h1>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">Découvrez pourquoi les clients nous font confiance pour rénover leur salle de bain</p>
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">Découvrez notre méthode pour une rénovation de salle de bain sans stress à Paris. Un chantier heureux, maîtrisé de A à Z.</p>
           </motion.div>
         </div>
       </section>

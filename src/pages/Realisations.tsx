@@ -90,8 +90,8 @@ export default function Realisations() {
   return (
     <Layout>
       <Helmet>
-        <title>Nos Réalisations | Rénovation Salle de Bain Paris & Île-de-France</title>
-        <meta name="description" content="Découvrez nos réalisations de rénovation de salles de bain à Paris et en Île-de-France. Photos avant/après, projets clé en main, douches à l'italienne et aménagements sur mesure." />
+        <title>Réalisations salle de bain à Paris | Un chantier heureux</title>
+        <meta name="description" content="Découvrez nos réalisations de salles de bain à Paris. Des chantiers heureux, maîtrisés et livrés sereinement." />
         <link rel="canonical" href="https://renovermasalledebain.com/realisations" />
       </Helmet>
 
@@ -104,11 +104,10 @@ export default function Realisations() {
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6">
-              Nos Réalisations
+              Nos réalisations de salles de bain à Paris
             </h1>
             <p className="text-muted-foreground text-lg">
-              Découvrez nos projets de rénovation de salles de bain à Paris et en Île-de-France. 
-              Chaque transformation témoigne de notre savoir-faire et de notre attention aux détails.
+              Chaque projet présenté ici est conçu pour garantir un chantier heureux, sans stress et avec un résultat durable.
             </p>
           </motion.div>
         </div>

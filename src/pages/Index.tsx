@@ -92,11 +92,11 @@ export default function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
             <ScrollAnimation variant="fadeUp" className="text-center lg:text-left">
               <h1 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-5 md:mb-7 text-foreground leading-[1.1] tracking-tight">
-                RÉNOVEZ VOTRE<br />
-                SALLE DE <span className="italic font-normal text-gold">BAIN</span>
+                UN CHANTIER HEUREUX<br />
+                POUR VOTRE <span className="italic font-normal text-gold">SALLE DE BAIN</span>
               </h1>
               <p className="text-muted-foreground text-base md:text-lg lg:text-xl mb-8 md:mb-10 leading-relaxed max-w-lg lg:max-w-none">
-                Conception et réalisation sur mesure à Paris & Île-de-France
+                Rénover votre salle de bain sans stress, sans mauvaises surprises, grâce à une conception maîtrisée et un accompagnement de A à Z.
               </p>
               <Button 
                 variant="gold" 
@@ -105,7 +105,7 @@ export default function Index() {
                 className="rounded-full px-10 w-full sm:w-auto text-base shadow-lg hover:shadow-xl transition-shadow"
               >
                 <Link to="/devis#devis-form">
-                  DEMANDER UN DEVIS GRATUIT
+                  LANCER MON PROJET
                 </Link>
               </Button>
             </ScrollAnimation>
