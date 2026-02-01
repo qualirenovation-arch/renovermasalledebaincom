@@ -496,7 +496,8 @@ const chercheMidiVueLongueur = "/projects/cherche-midi/vue-longueur.jpg";
 const chercheMidiNiches = "/projects/cherche-midi/niches-douche.jpg";
 const chercheMidiEntree = "/projects/cherche-midi/entree-sdb.jpg";
 const chercheMidiSejour = "/projects/cherche-midi/vue-sejour.jpg";
-const chercheMidiAvant = "/projects/cherche-midi/avant-original.jpg";
+const chercheMidiAvant1 = "/projects/cherche-midi/avant-original.jpg";
+const chercheMidiAvant2 = "/projects/cherche-midi/cherche-midi-avant.jpg";
 
 // ===== INTERFACES =====
 export interface Photo {
@@ -612,14 +613,15 @@ Découvrez le projet au complet sur notre site qualirenovation.fr`,
       link: "https://www.houzz.fr/viewReview/1950572/qualirenovation-by-qualiconcept-review"
     },
     photos: [
-      { id: 1, image: chercheMidiVueLongueur, title: "Après — Vue en longueur", description: "WC suspendu, fenêtre et douche XXL dans un espace étroit" },
-      { id: 2, image: chercheMidiVasque, title: "Après — Meuble vasque sur mesure", description: "Long meuble IKEA METOD redécoupé, vasque à poser et miroir rétroéclairé" },
-      { id: 3, image: chercheMidiPlacardFerme, title: "Après — Placard technique", description: "Rangement au-dessus du WC suspendu" },
-      { id: 4, image: chercheMidiPlacardOuvert, title: "Après — Chauffe-eau intégré", description: "Chauffe-eau dissimulé dans le placard technique" },
-      { id: 5, image: chercheMidiNiches, title: "Après — Niches douche", description: "Double niche avec carreaux de ciment décoratifs" },
-      { id: 6, image: chercheMidiEntree, title: "Après — Nouvelle entrée", description: "Accès depuis le séjour, indépendant de la cuisine" },
-      { id: 7, image: chercheMidiSejour, title: "Après — Vue d'ensemble", description: "Intégration harmonieuse dans le logement" },
-      { id: 8, image: chercheMidiAvant, title: "Avant — État des lieux", description: "Ancienne salle de bain vétuste avec chauffe-eau apparent" },
+      { id: 1, image: chercheMidiEntree, title: "Après — Nouvelle entrée", description: "Accès depuis le séjour, indépendant de la cuisine" },
+      { id: 2, image: chercheMidiSejour, title: "Après — Vue d'ensemble", description: "Intégration harmonieuse dans le logement" },
+      { id: 3, image: chercheMidiVueLongueur, title: "Après — Vue en longueur", description: "WC suspendu, fenêtre et douche XXL dans un espace étroit" },
+      { id: 4, image: chercheMidiVasque, title: "Après — Meuble vasque sur mesure", description: "Long meuble IKEA METOD redécoupé, vasque à poser et miroir rétroéclairé" },
+      { id: 5, image: chercheMidiPlacardFerme, title: "Après — Placard technique", description: "Rangement au-dessus du WC suspendu" },
+      { id: 6, image: chercheMidiPlacardOuvert, title: "Après — Chauffe-eau intégré", description: "Chauffe-eau dissimulé dans le placard technique" },
+      { id: 7, image: chercheMidiNiches, title: "Après — Niches douche", description: "Double niche avec carreaux de ciment décoratifs" },
+      { id: 8, image: chercheMidiAvant1, title: "Avant — État des lieux", description: "Ancienne salle de bain vétuste avec chauffe-eau apparent" },
+      { id: 9, image: chercheMidiAvant2, title: "Avant — Vue ancienne entrée", description: "Ancien accès depuis la cuisine" },
     ],
   },
   // ========== 💎 MARBRE & LUXE ==========
