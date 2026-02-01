@@ -1,12 +1,18 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
 const HCAPTCHA_SECRET_KEY = Deno.env.get("HCAPTCHA_SECRET_KEY");
+const SUPABASE_URL = Deno.env.get("SUPABASE_URL");
+const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
+
+// Rate limiting configuration
+const RATE_LIMIT_MAX_REQUESTS = 3;
+const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
 
 interface PartnerConfirmationRequest {
   partnerEmail: string;
@@ -34,6 +40,39 @@ const zoneLabels: Record<string, string> = {
   "grande-couronne": "Grande couronne (77, 78, 91, 95)",
   autre: "Autre",
 };
+
+// Rate limiting function
+async function checkRateLimit(supabase: any, ip: string, endpoint: string): Promise<{ allowed: boolean; remaining: number }> {
+  const oneHourAgo = new Date(Date.now() - RATE_LIMIT_WINDOW_MS).toISOString();
+  
+  const { count, error } = await supabase
+    .from('rate_limits')
+    .select('*', { count: 'exact', head: true })
+    .eq('ip_address', ip)
+    .eq('endpoint', endpoint)
+    .gte('created_at', oneHourAgo);
+
+  if (error) {
+    console.error("Rate limit check error:", error);
+    return { allowed: true, remaining: RATE_LIMIT_MAX_REQUESTS };
+  }
+
+  const requestCount = count || 0;
+  const remaining = Math.max(0, RATE_LIMIT_MAX_REQUESTS - requestCount);
+  
+  return { allowed: requestCount < RATE_LIMIT_MAX_REQUESTS, remaining };
+}
+
+// Record a request for rate limiting
+async function recordRequest(supabase: any, ip: string, endpoint: string): Promise<void> {
+  const { error } = await supabase
+    .from('rate_limits')
+    .insert({ ip_address: ip, endpoint });
+
+  if (error) {
+    console.error("Failed to record rate limit:", error);
+  }
+}
 
 async function verifyCaptcha(token: string): Promise<boolean> {
   if (!HCAPTCHA_SECRET_KEY) {
@@ -64,7 +103,35 @@ const handler = async (req: Request): Promise<Response> => {
     return new Response(null, { headers: corsHeaders });
   }
 
+  // Initialize Supabase client with service role for rate limiting
+  const supabase = createClient(SUPABASE_URL!, SUPABASE_SERVICE_ROLE_KEY!);
+
+  // Get client IP for rate limiting
+  const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || 
+             req.headers.get("x-real-ip") || 
+             "unknown";
+  const endpoint = "send-partner-confirmation";
+
   try {
+    // Check rate limit
+    const { allowed, remaining } = await checkRateLimit(supabase, ip, endpoint);
+    
+    if (!allowed) {
+      console.log(`Rate limit exceeded for IP: ${ip}`);
+      return new Response(
+        JSON.stringify({ error: "Trop de demandes. Veuillez réessayer dans une heure." }),
+        { 
+          status: 429, 
+          headers: { 
+            ...corsHeaders, 
+            "Content-Type": "application/json",
+            "X-RateLimit-Remaining": "0",
+            "Retry-After": "3600"
+          } 
+        }
+      );
+    }
+
     const { partnerEmail, partnerName, companyName, trades, zones, missingDocuments, captchaToken }: PartnerConfirmationRequest = await req.json();
 
     // Verify captcha
@@ -85,6 +152,9 @@ const handler = async (req: Request): Promise<Response> => {
         { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
+
+    // Record this request for rate limiting (after validation passes)
+    await recordRequest(supabase, ip, endpoint);
 
     const tradesFormatted = trades.map(t => tradeLabels[t] || t).join(", ");
     const zonesFormatted = zones.map(z => zoneLabels[z] || z).join(", ");
@@ -259,7 +329,11 @@ const handler = async (req: Request): Promise<Response> => {
       }),
       { 
         status: 200, 
-        headers: { ...corsHeaders, "Content-Type": "application/json" } 
+        headers: { 
+          ...corsHeaders, 
+          "Content-Type": "application/json",
+          "X-RateLimit-Remaining": String(remaining - 1)
+        } 
       }
     );
   } catch (error) {
@@ -271,4 +345,4 @@ const handler = async (req: Request): Promise<Response> => {
   }
 };
 
-serve(handler);
+Deno.serve(handler);
