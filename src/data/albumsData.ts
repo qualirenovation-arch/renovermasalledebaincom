@@ -488,6 +488,11 @@ import vitryAvant8 from "@/assets/vitry-avant-8.jpg";
 import vitryAvant9 from "@/assets/vitry-avant-9.jpg";
 import vitryAvant10 from "@/assets/vitry-avant-10.jpg";
 
+// Cherche-Midi Paris 6ème
+const chercheMidi1 = "/projects/cherche-midi/cherche-midi-1.jpg";
+const chercheMidi2 = "/projects/cherche-midi/cherche-midi-2.jpg";
+const chercheMidiAvant = "/projects/cherche-midi/cherche-midi-avant.jpg";
+
 // ===== INTERFACES =====
 export interface Photo {
   id: number;
@@ -576,6 +581,29 @@ export const albums: Album[] = [
       { id: 7, image: ruePuits10, title: "Après — Finitions", description: "Détails chromés" },
       { id: 8, image: ruePuitsAvant2, title: "Avant — Baignoire", description: "Baignoire et mosaïque" },
       { id: 9, image: ruePuitsAvant3, title: "Avant — Détail", description: "Carrelage daté" },
+    ],
+  },
+  // ========== 🏙️ OPTIMISATION ESPACE PARISIEN ==========
+  {
+    id: "cherche-midi",
+    slug: "salle-de-bain-paris-6-renovation-etroite-longueur-cherche-midi",
+    title: "Rénovation salle de bain Paris 6ème — L'art d'optimiser une pièce en longueur",
+    subtitle: "Douche XXL, WC, rangement et long meuble vasque dans un espace étroit",
+    location: "Paris 6ème - Rue du Cherche-Midi",
+    description: `Salle de bain en longueur, la plus étroite possible ? Défi relevé.
+
+Cette rénovation au cœur du 6ème arrondissement démontre qu'un espace contraint peut devenir parfaitement fonctionnel. Le receveur XXL offre un confort de douche généreux malgré l'étroitesse de la pièce. Le WC suspendu libère le sol tandis que le chauffe-eau est intégré au-dessus dans un placard technique discret.
+
+👉 Le vrai plus : un long meuble vasque sur mesure avec plan optimisé et vasque à poser IKEA HAKS. On a redécoupé un meuble METOD de 35 à 30 cm de profondeur pour lui permettre d'offrir un maximum de rangement tout en conservant un passage très confortable.
+
+Le miroir rétroéclairé ajoute une touche contemporaine et agrandit visuellement l'espace. De l'autre côté du mur se trouve la cuisine — avant, on entrait dans la salle de bain au milieu de la cuisine ! Cette reconfiguration a permis de gagner en rangement et en ergonomie dans l'ensemble du logement.
+
+Découvrez le projet au complet sur notre site qualirenovation.fr`,
+    coverImage: chercheMidi1,
+    photos: [
+      { id: 1, image: chercheMidi1, title: "Après — Meuble vasque sur mesure", description: "Long meuble IKEA METOD redécoupé, vasque à poser et miroir rétroéclairé" },
+      { id: 2, image: chercheMidi2, title: "Après — WC et chauffe-eau", description: "WC suspendu avec chauffe-eau intégré au-dessus dans placard technique" },
+      { id: 3, image: chercheMidiAvant, title: "Avant — État des lieux", description: "Pièce à restructurer entièrement" },
     ],
   },
   // ========== 💎 MARBRE & LUXE ==========
