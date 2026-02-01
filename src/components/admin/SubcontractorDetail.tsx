@@ -557,65 +557,89 @@ export function SubcontractorDetail({
                   <div>
                     <h3 className="font-semibold mb-3">Liens</h3>
                     <div className="flex flex-wrap gap-3">
-                      {subcontractor.website_url && (
-                        <a
-                          href={subcontractor.website_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-3 py-1.5 text-sm bg-muted rounded-lg hover:bg-muted/80 transition-colors"
-                        >
-                          <Globe className="w-4 h-4" />
-                          Site web
-                          <ExternalLink className="w-3 h-3" />
-                        </a>
-                      )}
-                      {subcontractor.instagram_url && (
-                        <a
-                          href={subcontractor.instagram_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-3 py-1.5 text-sm bg-muted rounded-lg hover:bg-muted/80 transition-colors"
-                        >
-                          <Instagram className="w-4 h-4" />
-                          Instagram
-                          <ExternalLink className="w-3 h-3" />
-                        </a>
-                      )}
-                      {subcontractor.facebook_url && (
-                        <a
-                          href={subcontractor.facebook_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-3 py-1.5 text-sm bg-muted rounded-lg hover:bg-muted/80 transition-colors"
-                        >
-                          <Facebook className="w-4 h-4" />
-                          Facebook
-                          <ExternalLink className="w-3 h-3" />
-                        </a>
-                      )}
-                      {subcontractor.linkedin_url && (
-                        <a
-                          href={subcontractor.linkedin_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-3 py-1.5 text-sm bg-muted rounded-lg hover:bg-muted/80 transition-colors"
-                        >
-                          <Linkedin className="w-4 h-4" />
-                          LinkedIn
-                          <ExternalLink className="w-3 h-3" />
-                        </a>
-                      )}
-                      {subcontractor.houzz_url && (
-                        <a
-                          href={subcontractor.houzz_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-3 py-1.5 text-sm bg-muted rounded-lg hover:bg-muted/80 transition-colors"
-                        >
-                          <ExternalLink className="w-4 h-4" />
-                          Houzz
-                        </a>
-                      )}
+                      {(() => {
+                        // Sanitize URL - only allow http and https protocols
+                        const sanitizeUrl = (url: string | null): string | null => {
+                          if (!url) return null;
+                          try {
+                            const parsed = new URL(url);
+                            if (['http:', 'https:'].includes(parsed.protocol)) {
+                              return url;
+                            }
+                          } catch {}
+                          return null;
+                        };
+                        
+                        const safeWebsite = sanitizeUrl(subcontractor.website_url);
+                        const safeInstagram = sanitizeUrl(subcontractor.instagram_url);
+                        const safeFacebook = sanitizeUrl(subcontractor.facebook_url);
+                        const safeLinkedin = sanitizeUrl(subcontractor.linkedin_url);
+                        const safeHouzz = sanitizeUrl(subcontractor.houzz_url);
+                        
+                        return (
+                          <>
+                            {safeWebsite && (
+                              <a
+                                href={safeWebsite}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-3 py-1.5 text-sm bg-muted rounded-lg hover:bg-muted/80 transition-colors"
+                              >
+                                <Globe className="w-4 h-4" />
+                                Site web
+                                <ExternalLink className="w-3 h-3" />
+                              </a>
+                            )}
+                            {safeInstagram && (
+                              <a
+                                href={safeInstagram}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-3 py-1.5 text-sm bg-muted rounded-lg hover:bg-muted/80 transition-colors"
+                              >
+                                <Instagram className="w-4 h-4" />
+                                Instagram
+                                <ExternalLink className="w-3 h-3" />
+                              </a>
+                            )}
+                            {safeFacebook && (
+                              <a
+                                href={safeFacebook}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-3 py-1.5 text-sm bg-muted rounded-lg hover:bg-muted/80 transition-colors"
+                              >
+                                <Facebook className="w-4 h-4" />
+                                Facebook
+                                <ExternalLink className="w-3 h-3" />
+                              </a>
+                            )}
+                            {safeLinkedin && (
+                              <a
+                                href={safeLinkedin}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-3 py-1.5 text-sm bg-muted rounded-lg hover:bg-muted/80 transition-colors"
+                              >
+                                <Linkedin className="w-4 h-4" />
+                                LinkedIn
+                                <ExternalLink className="w-3 h-3" />
+                              </a>
+                            )}
+                            {safeHouzz && (
+                              <a
+                                href={safeHouzz}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-3 py-1.5 text-sm bg-muted rounded-lg hover:bg-muted/80 transition-colors"
+                              >
+                                <ExternalLink className="w-4 h-4" />
+                                Houzz
+                              </a>
+                            )}
+                          </>
+                        );
+                      })()}
                     </div>
                   </div>
                 </>
