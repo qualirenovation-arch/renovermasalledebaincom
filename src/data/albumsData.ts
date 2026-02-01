@@ -513,6 +513,7 @@ import vitryAvant9 from "@/assets/vitry-avant-9.jpg";
 import vitryAvant10 from "@/assets/vitry-avant-10.jpg";
 
 // Cherche-Midi Paris 6ème
+const chercheMidiCover = "/projects/cherche-midi/cover-vue-longueur.jpg";
 const chercheMidiVasque = "/projects/cherche-midi/vasque-face.jpg";
 const chercheMidiPlacardOuvert = "/projects/cherche-midi/cherche-midi-2.jpg";
 const chercheMidiPlacardFerme = "/projects/cherche-midi/placard-ferme.jpg";
@@ -656,7 +657,7 @@ Cette rénovation au cœur du 6ème arrondissement démontre qu'un espace contra
 Le miroir rétroéclairé ajoute une touche contemporaine et agrandit visuellement l'espace. De l'autre côté du mur se trouve la cuisine — avant, on entrait dans la salle de bain au milieu de la cuisine ! Cette reconfiguration a permis de gagner en rangement et en ergonomie dans l'ensemble du logement.
 
 Découvrez le projet au complet sur notre site qualirenovation.fr`,
-    coverImage: chercheMidiEntree,
+    coverImage: chercheMidiCover,
     instagramLink: "https://www.instagram.com/p/CzvAnpat3JH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     review: {
       text: "Je suis enchanté de la rénovation de mon studio parisien effectuée par qualirenovation ! Carina est disponible et réactive, très à l'écoute tout en prodiguant de précieux conseils. Je recommande vivement.",
@@ -664,19 +665,20 @@ Découvrez le projet au complet sur notre site qualirenovation.fr`,
       link: "https://www.houzz.fr/viewReview/1950572/qualirenovation-by-qualiconcept-review"
     },
     photos: [
-      { id: 1, image: chercheMidiEntree, title: "Après — Nouvelle entrée", description: "Accès depuis le séjour, indépendant de la cuisine" },
+      { id: 1, image: chercheMidiCover, title: "Après — Vue en longueur", description: "Douche XXL, long meuble vasque et carreaux de ciment au sol" },
       { id: 2, image: chercheMidiSejour, title: "Après — Vue d'ensemble", description: "Intégration harmonieuse dans le logement" },
-      { id: 3, image: chercheMidiVueLongueur, title: "Après — Vue en longueur", description: "WC suspendu, fenêtre et douche XXL dans un espace étroit" },
-      { id: 4, image: chercheMidiVasque, title: "Après — Meuble vasque sur mesure", description: "Long meuble IKEA METOD redécoupé, vasque à poser et miroir rétroéclairé" },
-      { id: 5, image: chercheMidiPlacardFerme, title: "Après — Placard technique", description: "Rangement au-dessus du WC suspendu" },
-      { id: 6, image: chercheMidiPlacardOuvert, title: "Après — Chauffe-eau intégré", description: "Chauffe-eau dissimulé dans le placard technique" },
-      { id: 7, image: chercheMidiNiches, title: "Après — Niches douche", description: "Double niche avec carreaux de ciment décoratifs" },
-      { id: 8, image: chercheMidiAvant1, title: "Avant — État des lieux", description: "Ancienne salle de bain vétuste avec chauffe-eau apparent" },
-      { id: 9, image: chercheMidiAvant2, title: "Avant — Vue ancienne entrée", description: "Ancien accès depuis la cuisine" },
-      { id: 10, image: chercheMidiAvant3, title: "Avant — Entrée cuisine", description: "Vue depuis la cuisine avec accès à la salle de bain" },
-      { id: 11, image: chercheMidiAvant4, title: "Avant — WC et fenêtre", description: "Ancien WC avec vue sur les toits parisiens" },
-      { id: 12, image: chercheMidiChantier1, title: "Avant — Démolition", description: "Phase de démolition avec reprise des réseaux" },
-      { id: 13, image: chercheMidiChantier2, title: "Avant — Câblage électrique", description: "Reprise complète de l'électricité avant cloisonnement" },
+      { id: 3, image: chercheMidiEntree, title: "Après — Nouvelle entrée", description: "Accès depuis le séjour, indépendant de la cuisine" },
+      { id: 4, image: chercheMidiVueLongueur, title: "Après — Perspective WC", description: "WC suspendu, fenêtre et douche XXL dans un espace étroit" },
+      { id: 5, image: chercheMidiVasque, title: "Après — Meuble vasque sur mesure", description: "Long meuble IKEA METOD redécoupé, vasque à poser et miroir rétroéclairé" },
+      { id: 6, image: chercheMidiPlacardFerme, title: "Après — Placard technique", description: "Rangement au-dessus du WC suspendu" },
+      { id: 7, image: chercheMidiPlacardOuvert, title: "Après — Chauffe-eau intégré", description: "Chauffe-eau dissimulé dans le placard technique" },
+      { id: 8, image: chercheMidiNiches, title: "Après — Niches douche", description: "Double niche avec carreaux de ciment décoratifs" },
+      { id: 9, image: chercheMidiAvant1, title: "Avant — État des lieux", description: "Ancienne salle de bain vétuste avec chauffe-eau apparent" },
+      { id: 10, image: chercheMidiAvant2, title: "Avant — Vue ancienne entrée", description: "Ancien accès depuis la cuisine" },
+      { id: 11, image: chercheMidiAvant3, title: "Avant — Entrée cuisine", description: "Vue depuis la cuisine avec accès à la salle de bain" },
+      { id: 12, image: chercheMidiAvant4, title: "Avant — WC et fenêtre", description: "Ancien WC avec vue sur les toits parisiens" },
+      { id: 13, image: chercheMidiChantier1, title: "Avant — Démolition", description: "Phase de démolition avec reprise des réseaux" },
+      { id: 14, image: chercheMidiChantier2, title: "Avant — Câblage électrique", description: "Reprise complète de l'électricité avant cloisonnement" },
     ],
   },
   // ========== 💎 MARBRE & LUXE ==========
