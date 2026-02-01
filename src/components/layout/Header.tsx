@@ -58,10 +58,10 @@ export function Header() {
               className="h-16 md:h-18 lg:h-20 w-auto transition-transform duration-300 group-hover:scale-105 drop-shadow-md"
             />
             <div className="flex flex-col leading-tight">
-              <span className="font-display text-sm md:text-base font-bold text-navy tracking-tight whitespace-nowrap">
+              <span className="font-display text-base md:text-lg lg:text-xl font-bold text-navy tracking-tight whitespace-nowrap">
                 RenoverMaSalleDeBain<span className="hidden lg:inline">.com</span>
               </span>
-              <span className="text-xs font-semibold text-gold-dark hidden sm:block">
+              <span className="text-xs md:text-sm font-semibold text-gold-dark hidden sm:block">
                 by Qualiconcept
               </span>
             </div>
