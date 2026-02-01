@@ -575,9 +575,18 @@ export default function Presse() {
       <section className="py-12 bg-muted/30">
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto">
-            <p className="text-sm text-muted-foreground">
-              Première publication presse : <strong>décembre 2017</strong> — Dernière publication : <strong>{formatDate(sortedParutions[0].date_publication)}</strong>
-            </p>
+            {(() => {
+              // Calcul des vraies dates min/max (indépendamment du tri par épinglage)
+              const allDates = parutions_presse.map(p => new Date(p.date_publication).getTime());
+              const oldestDate = new Date(Math.min(...allDates));
+              const newestDate = new Date(Math.max(...allDates));
+              const formatDateSimple = (date: Date) => date.toLocaleDateString("fr-FR", { month: "long", year: "numeric" });
+              return (
+                <p className="text-sm text-muted-foreground">
+                  Première publication presse : <strong>{formatDateSimple(oldestDate)}</strong> — Dernière publication : <strong>{formatDateSimple(newestDate)}</strong>
+                </p>
+              );
+            })()}
             <p className="text-xs text-muted-foreground/60 mt-2">
               Une présence médiatique continue qui témoigne de notre expertise reconnue en rénovation de salle de bain.
             </p>
