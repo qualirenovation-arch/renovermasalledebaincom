@@ -1609,7 +1609,7 @@ Une rénovation pensée pour allier design contemporain, praticité et éléganc
   {
     id: "saint-charles-paris-15",
     slug: "salle-de-bain-paris-15-saint-charles-baignoire-balneo-metro-blanc",
-    title: "Salle de bain Paris 15ème — Baignoire balnéo & meuble vintage sur métro blanc",
+    title: "Salle de bain Paris 15ème — Le luxe d'une balnéo sur métro blanc",
     location: "Paris 15ème - Rue Saint-Charles",
     description: `Dans cette salle de bain parisienne, nous avons remplacé une configuration datée par un espace contemporain alliant détente et élégance.
 
