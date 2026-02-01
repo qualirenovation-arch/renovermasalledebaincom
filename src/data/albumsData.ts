@@ -348,6 +348,10 @@ import bobillotAvant1 from "@/assets/bobillot-avant-1.jpg";
 import bobillotAvant2 from "@/assets/bobillot-avant-2.jpg";
 import bobillotAvant3 from "@/assets/bobillot-avant-3.jpg";
 
+// Quai aux Fleurs Paris 4ème
+import quaifleursAvant1 from "@/assets/quai-fleurs-avant-1.jpg";
+import quaifleursAvant2 from "@/assets/quai-fleurs-avant-2.jpg";
+
 // Cours de Vincennes Paris 12ème - SDB
 import coursVincennesSdb1 from "@/assets/cours-vincennes-sdb-1.jpg";
 import coursVincennesSdb2 from "@/assets/cours-vincennes-sdb-2.jpg";
@@ -906,8 +910,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     coverImage: bobillot1,
     instagramLink: "https://www.instagram.com/reel/C-S-wyLtLP-/",
     review: {
-      text: "Carina m'a été recommandée par mes amis. Je souhaitais rénover ma salle de bain. Elle a fait du super travail, dans les temps et bien réalisé. Je la recommande.",
-      author: "Client Paris 13ème",
+      text: "Je dois à Carina la réussite des travaux de rénovation de mon deux pièces où tout était à refaire du sol au plafond ! Je me suis entièrement reposée sur son savoir faire et je n'ai qu'à me féliciter de la qualité et de l'élégance de cette réalisation. Avec Carina, qui maîtrise tous les corps de métier, pas un problème qui n'ait sa solution. Ouverte à vos idées, elle ne manque pas d'enrichir votre projet de mille et une propositions pratiques et esthétiques, toujours au goût du jour. Et le tout, dans une relation agréable et sympathique !",
+      author: "Patricia Giros",
       link: "https://www.houzz.fr/viewReview/2059916/qualirenovation-by-qualiconcept-review"
     },
     photos: [
@@ -1656,6 +1660,19 @@ export const inProgressAlbums: Album[] = [
       { id: 1, image: courbevoieLalyreAvant1, title: "Avant — Vue vasque et ensemble", description: "Salle de bain avant rénovation" },
     ],
   },
+  {
+    id: "quai-aux-fleurs",
+    slug: "chantier-paris-4-quai-aux-fleurs",
+    title: "Création fenêtre intérieure & façade reprise",
+    location: "Paris 4ème - Quai aux Fleurs",
+    description: "Chantier complet sur l'Île de la Cité : création d'une fenêtre au-dessus du miroir pour apporter de la lumière naturelle. Pour rendre cette salle de bain réalisable, il a fallu retirer l'ancienne fenêtre, reprendre et ravaler le mur de façade. L'espace a été optimisé en exploitant un dégagement dans le couloir. Chantier en cours — restez connecté pour découvrir cette transformation !",
+    coverImage: quaifleursAvant1,
+    isInProgress: true,
+    photos: [
+      { id: 1, image: quaifleursAvant1, title: "Avant — Vue WC et baignoire", description: "Salle de bain vétuste avec baignoire et WC" },
+      { id: 2, image: quaifleursAvant2, title: "Avant — Vue vasque et baignoire", description: "Fenêtre originale à retirer pour la reprise de façade" },
+    ],
+  },
 ];
 
 // ===== POSITIONS SUR LA CARTE =====
@@ -1673,6 +1690,7 @@ export const projectLocations: ProjectLocation[] = [
   { id: "port-royal", name: "Port-Royal", area: "5ème", x: 48, y: 60 },
   { id: "la-tour", name: "Rue de la Tour", area: "16ème", x: 25, y: 45 },
   { id: "courbevoie-lalyre", name: "Rue Ernest Lalyre", area: "Courbevoie", x: 15, y: 20 },
+  { id: "quai-aux-fleurs", name: "Quai aux Fleurs", area: "4ème", x: 52, y: 48 },
 ];
 
 // ===== HELPER FUNCTIONS =====
