@@ -604,7 +604,7 @@ Cette rénovation au cœur du 6ème arrondissement démontre qu'un espace contra
 Le miroir rétroéclairé ajoute une touche contemporaine et agrandit visuellement l'espace. De l'autre côté du mur se trouve la cuisine — avant, on entrait dans la salle de bain au milieu de la cuisine ! Cette reconfiguration a permis de gagner en rangement et en ergonomie dans l'ensemble du logement.
 
 Découvrez le projet au complet sur notre site qualirenovation.fr`,
-    coverImage: chercheMidiVueLongueur,
+    coverImage: chercheMidiEntree,
     photos: [
       { id: 1, image: chercheMidiVueLongueur, title: "Après — Vue en longueur", description: "WC suspendu, fenêtre et douche XXL dans un espace étroit" },
       { id: 2, image: chercheMidiVasque, title: "Après — Meuble vasque sur mesure", description: "Long meuble IKEA METOD redécoupé, vasque à poser et miroir rétroéclairé" },
