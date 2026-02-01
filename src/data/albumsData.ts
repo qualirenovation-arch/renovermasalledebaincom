@@ -376,6 +376,7 @@ const quaifleursApresDouche = "/projects/quai-fleurs/apres-douche.jpg";
 const quaifleursApresVueEnsemble = "/projects/quai-fleurs/apres-vue-ensemble.jpg";
 const quaifleursApresWcRangements = "/projects/quai-fleurs/apres-wc-rangements.jpg";
 const quaifleursApresPlacardTechnique = "/projects/quai-fleurs/apres-placard-technique.jpg";
+const quaifleursApresMeubleVasqueFenetre = "/projects/quai-fleurs/apres-meuble-vasque-fenetre.jpg";
 const quaifleursAvantAncienneEntree = "/projects/quai-fleurs/avant-ancienne-entree.jpg";
 const quaifleursAvantCouloirWc = "/projects/quai-fleurs/avant-couloir-wc.jpg";
 
@@ -712,14 +713,15 @@ Sans ces travaux préparatoires lourds, la rénovation n'aurait tout simplement 
       { id: 2, image: quaifleursApresDouche, title: "Après — Douche italienne", description: "Receveur sur estrade et paroi vitrée coulissante" },
       { id: 3, image: quaifleursApresWcRangements, title: "Après — WC et rangements", description: "WC suspendu, sèche-serviettes et placard technique" },
       { id: 4, image: quaifleursApresPlacardTechnique, title: "Après — Placard technique ouvert", description: "Accès aux réseaux et chauffe-eau" },
-      { id: 5, image: quaifleursApres1, title: "Après — Vue douche détail", description: "Carrelage travertin et robinetterie chromée" },
-      { id: 6, image: quaifleursApres2, title: "Après — Meuble vasque", description: "Meuble bois, miroir doré et applique murale" },
-      { id: 7, image: quaifleursApres3, title: "Après — Vue générale", description: "Harmonie beige et bois chaud" },
-      { id: 8, image: quaifleursApres4, title: "Après — Détails", description: "Finitions soignées" },
-      { id: 9, image: quaifleursAvantAncienneEntree, title: "Avant — Ancienne entrée", description: "Pièce servant d'entrée avant travaux" },
-      { id: 10, image: quaifleursAvantCouloirWc, title: "Avant — Couloir et WC", description: "Vue vers l'entrée avec WC existant à gauche" },
-      { id: 11, image: quaifleursAvant1, title: "Avant — Vue WC et baignoire", description: "Ancienne salle de bain" },
-      { id: 12, image: quaifleursAvant2, title: "Avant — Vue vasque et baignoire", description: "Configuration initiale à transformer" },
+      { id: 5, image: quaifleursApresMeubleVasqueFenetre, title: "Après — Meuble vasque et fenêtre intérieure", description: "Vue sur le meuble bois, miroir doré et fenêtre intérieure visible" },
+      { id: 6, image: quaifleursApres1, title: "Après — Vue douche détail", description: "Carrelage travertin et robinetterie chromée" },
+      { id: 7, image: quaifleursApres2, title: "Après — Meuble vasque", description: "Meuble bois, miroir doré et applique murale" },
+      { id: 8, image: quaifleursApres3, title: "Après — Vue générale", description: "Harmonie beige et bois chaud" },
+      { id: 9, image: quaifleursApres4, title: "Après — Détails", description: "Finitions soignées" },
+      { id: 10, image: quaifleursAvantAncienneEntree, title: "Avant — Ancienne entrée", description: "Pièce servant d'entrée avant travaux" },
+      { id: 11, image: quaifleursAvantCouloirWc, title: "Avant — Couloir et WC", description: "Vue vers l'entrée avec WC existant à gauche" },
+      { id: 12, image: quaifleursAvant1, title: "Avant — Vue WC et baignoire", description: "Ancienne salle de bain" },
+      { id: 13, image: quaifleursAvant2, title: "Avant — Vue vasque et baignoire", description: "Configuration initiale à transformer" },
     ],
   },
   // ========== 💎 MARBRE & LUXE ==========
