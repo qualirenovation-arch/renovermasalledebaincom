@@ -1672,29 +1672,6 @@ export const inProgressAlbums: Album[] = [
       { id: 1, image: courbevoieLalyreAvant1, title: "Avant — Vue vasque et ensemble", description: "Salle de bain avant rénovation" },
     ],
   },
-  {
-    id: "quai-aux-fleurs",
-    slug: "salle-de-bain-paris-4-ile-cite-quai-aux-fleurs-fenetre-interieure",
-    title: "Salle de bain Île de la Cité — Fenêtre intérieure & façade restaurée",
-    location: "Paris 4ème - Quai aux Fleurs",
-    description: `Sur l'Île de la Cité, cette rénovation relève des défis techniques majeurs pour transformer une salle de bain vétuste en un espace contemporain baigné de lumière.
-
-🪟 Création d'une fenêtre intérieure au-dessus du miroir pour capter la lumière naturelle du couloir
-🧱 Suppression de l'ancienne fenêtre de façade avec reprise complète de maçonnerie et ravalement
-📐 Optimisation de l'espace en exploitant un dégagement dans le couloir
-
-✨ Résultat : carrelage travertin beige, meuble vasque bois noyer, miroir laiton et WC suspendu avec rangement technique dissimulé.`,
-    coverImage: quaifleursApres1,
-    isInProgress: false,
-    photos: [
-      { id: 1, image: quaifleursApres1, title: "Après — Douche et meuble vasque", description: "Paroi vitrée, carrelage travertin et meuble bois noyer" },
-      { id: 2, image: quaifleursApres2, title: "Après — Vue d'ensemble", description: "Miroir laiton, fenêtre intérieure et rangements blancs" },
-      { id: 3, image: quaifleursApres3, title: "Après — WC suspendu et rangements", description: "WC suspendu, placard technique et sèche-serviettes" },
-      { id: 4, image: quaifleursApres4, title: "Après — Placard technique ouvert", description: "Chauffe-eau et vannes dissimulés derrière le placard" },
-      { id: 5, image: quaifleursAvant1, title: "Avant — Vue WC et baignoire", description: "Salle de bain vétuste avec baignoire et WC" },
-      { id: 6, image: quaifleursAvant2, title: "Avant — Vue vasque et baignoire", description: "Fenêtre originale à retirer pour la reprise de façade" },
-    ],
-  },
 ];
 
 // ===== POSITIONS SUR LA CARTE =====
@@ -1712,7 +1689,6 @@ export const projectLocations: ProjectLocation[] = [
   { id: "port-royal", name: "Port-Royal", area: "5ème", x: 48, y: 60 },
   { id: "la-tour", name: "Rue de la Tour", area: "16ème", x: 25, y: 45 },
   { id: "courbevoie-lalyre", name: "Rue Ernest Lalyre", area: "Courbevoie", x: 15, y: 20 },
-  { id: "quai-aux-fleurs", name: "Quai aux Fleurs", area: "4ème", x: 52, y: 48 },
 ];
 
 // ===== HELPER FUNCTIONS =====
