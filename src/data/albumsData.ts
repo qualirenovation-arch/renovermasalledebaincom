@@ -345,7 +345,7 @@ import stHonore7 from "@/assets/st-honore-7.jpg";
 import bobillot1 from "@/assets/bobillot-1.jpg";
 import bobillot2 from "@/assets/bobillot-2.jpg";
 import bobillotApres1 from "@/assets/bobillot-apres-1.jpg";
-import bobillotApres2 from "@/assets/bobillot-apres-2.jpg";
+import bobillotApresWc from "@/assets/bobillot-apres-wc.jpg";
 import bobillotApres3 from "@/assets/bobillot-apres-3.jpg";
 import bobillotApres4 from "@/assets/bobillot-apres-4.jpg";
 import bobillotAvant1 from "@/assets/bobillot-avant-1.jpg";
@@ -922,7 +922,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 1, image: bobillot1, title: "Après — Vue d'ensemble", description: "Meuble bois, plan noir et robinetterie laiton" },
       { id: 2, image: bobillot2, title: "Après — Détail vasque", description: "Zellige beige et applique murale dorée" },
       { id: 3, image: bobillotApres1, title: "Après — Meuble vasque et douche", description: "Harmonie bois, plan noir et robinetterie laiton brossé" },
-      { id: 4, image: bobillotApres2, title: "Après — Vue WC et rangements", description: "Zellige beige, placards blancs et commande de chasse chromée" },
+      { id: 4, image: bobillotApresWc, title: "Après — WC suspendu et rangements", description: "Zellige beige, placards blancs au-dessus du WC et éclairage naturel" },
       { id: 5, image: bobillotApres3, title: "Après — Douche et vasque", description: "Paroi vitrée coulissante et applique dorée" },
       { id: 6, image: bobillotApres4, title: "Après — Détail douche", description: "Colonne thermostatique laiton et carrelage grand format" },
       { id: 7, image: bobillotAvant1, title: "Avant — Vue générale", description: "Murs dégradés et tuyauteries apparentes" },
