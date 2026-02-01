@@ -133,7 +133,8 @@ export const redirectMap: Record<string, string> = {
   // Banlieue 95
   "projet-argenteuil-95-familiale": "salle-de-bain-argenteuil-95-familiale",
   "projet-enghien-95-spa": "salle-de-bain-enghien-95-esprit-spa",
-  "salle-de-bain-soisy-95-suite-parentale-maison-1900": "salle-de-bain-soisy-95-renovation-suite-parentale-maison-1900",
+  "salle-de-bain-soisy-95-suite-parentale-maison-1900": "wc-soisy-95-renovation-invites-zellige-terracotta",
+  "salle-de-bain-soisy-95-renovation-suite-parentale-maison-1900": "wc-soisy-95-renovation-invites-zellige-terracotta",
   "salle-de-bain-soisy-95-rose-terracotta": "salle-de-bain-soisy-95-renovation-rose-terracotta-baignoire-ilot",
   "salle-de-bain-soisy-95-enfants-terrazzo-menthe": "salle-de-bain-soisy-95-renovation-enfants-terrazzo-menthe",
   
