@@ -379,6 +379,7 @@ const quaifleursApresPlacardTechnique = "/projects/quai-fleurs/apres-placard-tec
 const quaifleursApresMeubleVasqueFenetre = "/projects/quai-fleurs/apres-meuble-vasque-fenetre.jpg";
 const quaifleursAvantAncienneEntree = "/projects/quai-fleurs/avant-ancienne-entree.jpg";
 const quaifleursAvantCouloirWc = "/projects/quai-fleurs/avant-couloir-wc.jpg";
+const quaifleursAvantCouloirEntree = "/projects/quai-fleurs/avant-couloir-entree.jpg";
 
 // Cours de Vincennes Paris 12ème - SDB
 import coursVincennesSdb1 from "@/assets/cours-vincennes-sdb-1.jpg";
@@ -721,8 +722,9 @@ Sans ces travaux préparatoires lourds, la rénovation n'aurait tout simplement 
       { id: 9, image: quaifleursApres4, title: "Après — Détails", description: "Finitions soignées" },
       { id: 10, image: quaifleursAvantAncienneEntree, title: "Avant — Ancienne entrée", description: "Pièce servant d'entrée avant travaux" },
       { id: 11, image: quaifleursAvantCouloirWc, title: "Avant — Couloir et WC", description: "Vue vers l'entrée avec WC existant à gauche" },
-      { id: 12, image: quaifleursAvant1, title: "Avant — Vue WC et baignoire", description: "Ancienne salle de bain" },
-      { id: 13, image: quaifleursAvant2, title: "Avant — Vue vasque et baignoire", description: "Configuration initiale à transformer" },
+      { id: 12, image: quaifleursAvantCouloirEntree, title: "Avant — Couloir vers porte d'entrée", description: "Vue du couloir avec mur orange et porte d'entrée" },
+      { id: 13, image: quaifleursAvant1, title: "Avant — Vue WC et baignoire", description: "Ancienne salle de bain" },
+      { id: 14, image: quaifleursAvant2, title: "Avant — Vue vasque et baignoire", description: "Configuration initiale à transformer" },
     ],
   },
   // ========== 💎 MARBRE & LUXE ==========
