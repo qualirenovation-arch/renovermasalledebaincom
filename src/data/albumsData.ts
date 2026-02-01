@@ -1536,10 +1536,10 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ---------- Suite DORÉ & LAITON ----------
   {
     id: "soisy",
-    slug: "salle-de-bain-soisy-95-renovation-suite-parentale-maison-1900",
-    title: "Suite parentale maison 1900",
+    slug: "wc-soisy-95-renovation-invites-zellige-terracotta",
+    title: "WC Invités — Zellige & Terracotta",
     location: "Soisy-sous-Montmorency (95) - Maison 1900",
-    description: "AVANT : Combles inexploités avec sol en béton brut et éclairage industriel provisoire. Espace perdu attendant d'être transformé. APRÈS : Création d'une suite parentale de luxe. Vasque à poser rose poudré, miroir rétroéclairé, robinetterie dorée et teinte terracotta. Sèche-serviettes doré, paroi vitrée fixe et banc en bois naturel dans la douche.",
+    description: "Réinvention totale des WC invités : WC suspendu pour libérer l'espace, niche en chêne au-dessus, meuble lave-mains épuré. Carrelage sol DENIA GRIS MAT 22.3x22.3, murs en Zellige Blanc Brillant 10x10. Peinture terracotta rose 'Road Trip' (Blime Co) et 'Winborn White' (Farrow & Ball). Finitions laiton, plantes vertes et accessoires soigneusement sélectionnés pour une ambiance sophistiquée.",
     coverImage: soisy1,
     instagramLinks: [
       "https://www.instagram.com/reel/DGvfHQ2s8Ve/",
@@ -1551,10 +1551,10 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       link: "https://www.houzz.fr/viewReview/2169416/qualirenovation-by-qualiconcept-review"
     },
     photos: [
-      { id: 1, image: soisy1, title: "Après — Vue d'ensemble", description: "Vasque rose poudré et miroir rétroéclairé" },
-      { id: 2, image: soisy2, title: "Après — Détails robinetterie", description: "Robinetterie dorée et teinte terracotta" },
-      { id: 3, image: soisy3, title: "Après — Douche et banc", description: "Paroi vitrée et banc bois naturel" },
-      { id: 4, image: soisyAvant, title: "Avant — Combles bruts", description: "Sol béton et éclairage industriel" },
+      { id: 1, image: soisy1, title: "Après — Vue d'ensemble", description: "WC suspendu et niche en chêne" },
+      { id: 2, image: soisy2, title: "Après — Détails", description: "Zellige blanc et peinture terracotta" },
+      { id: 3, image: soisy3, title: "Après — Meuble lave-mains", description: "Design épuré et finitions laiton" },
+      { id: 4, image: soisyAvant, title: "Avant", description: "État initial avant transformation" },
     ],
   },
   {
