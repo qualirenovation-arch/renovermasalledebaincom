@@ -42,7 +42,7 @@ interface ParutionPresse {
   image?: string;
   journalist?: string;
   location?: string; // Paris 19ème - Avenue Laumière
-  pinned?: boolean; // Article épinglé en tête de liste
+  pinnedOrder?: number; // Ordre d'épinglage (1 = premier, 2 = second, etc.)
 }
 
 const parutions_presse: ParutionPresse[] = [
@@ -163,7 +163,7 @@ const parutions_presse: ParutionPresse[] = [
     type: "interview",
     image: carinaNahmani,
     journalist: "Agnès Carpentier",
-    pinned: true, // Article épinglé en première position
+    pinnedOrder: 1, // Article épinglé en première position
   },
   {
     id: "elle-wc-suspendus-2022",
@@ -273,13 +273,22 @@ const parutions_presse: ParutionPresse[] = [
 ];
 
 // ========================================
-// Tri automatique : épinglés d'abord, puis par date_publication DESC
+// Tri automatique : épinglés d'abord (par ordre de priorité), puis par date_publication DESC
 // ========================================
 const sortedParutions = [...parutions_presse].sort((a, b) => {
+  const aPinned = a.pinnedOrder !== undefined;
+  const bPinned = b.pinnedOrder !== undefined;
+  
   // Les articles épinglés passent en premier
-  if (a.pinned && !b.pinned) return -1;
-  if (!a.pinned && b.pinned) return 1;
-  // Puis tri par date décroissante
+  if (aPinned && !bPinned) return -1;
+  if (!aPinned && bPinned) return 1;
+  
+  // Si les deux sont épinglés, trier par ordre de priorité (1 avant 2, etc.)
+  if (aPinned && bPinned) {
+    return (a.pinnedOrder ?? 999) - (b.pinnedOrder ?? 999);
+  }
+  
+  // Puis tri par date décroissante pour les non-épinglés
   return new Date(b.date_publication).getTime() - new Date(a.date_publication).getTime();
 });
 
@@ -433,10 +442,10 @@ export default function Presse() {
                       loading="lazy"
                     />
                     {/* Badge "À la une" pour articles épinglés */}
-                    {article.pinned && (
+                    {article.pinnedOrder !== undefined && (
                       <div className="absolute top-3 left-3 px-3 py-1.5 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold rounded-full shadow-lg flex items-center gap-1.5 animate-pulse">
                         <Star className="w-3.5 h-3.5 fill-current" />
-                        À la une
+                        À la une{article.pinnedOrder > 1 ? ` #${article.pinnedOrder}` : ''}
                       </div>
                     )}
                     {/* Type badge overlay */}
