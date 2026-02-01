@@ -42,6 +42,7 @@ interface ParutionPresse {
   image?: string;
   journalist?: string;
   location?: string; // Paris 19ème - Avenue Laumière
+  pinned?: boolean; // Article épinglé en tête de liste
 }
 
 const parutions_presse: ParutionPresse[] = [
@@ -162,6 +163,7 @@ const parutions_presse: ParutionPresse[] = [
     type: "interview",
     image: carinaNahmani,
     journalist: "Agnès Carpentier",
+    pinned: true, // Article épinglé en première position
   },
   {
     id: "elle-wc-suspendus-2022",
@@ -271,11 +273,15 @@ const parutions_presse: ParutionPresse[] = [
 ];
 
 // ========================================
-// Tri automatique par date_publication DESC
+// Tri automatique : épinglés d'abord, puis par date_publication DESC
 // ========================================
-const sortedParutions = [...parutions_presse].sort((a, b) => 
-  new Date(b.date_publication).getTime() - new Date(a.date_publication).getTime()
-);
+const sortedParutions = [...parutions_presse].sort((a, b) => {
+  // Les articles épinglés passent en premier
+  if (a.pinned && !b.pinned) return -1;
+  if (!a.pinned && b.pinned) return 1;
+  // Puis tri par date décroissante
+  return new Date(b.date_publication).getTime() - new Date(a.date_publication).getTime();
+});
 
 // Formatage de la date pour affichage
 const formatDate = (dateStr: string): string => {
