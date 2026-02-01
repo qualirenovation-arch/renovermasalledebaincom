@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { ArrowRight, ExternalLink, Calendar, Newspaper } from "lucide-react";
+import { ArrowRight, ExternalLink, Calendar, Newspaper, Star } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 // Images
@@ -432,6 +432,13 @@ export default function Presse() {
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
+                    {/* Badge "À la une" pour articles épinglés */}
+                    {article.pinned && (
+                      <div className="absolute top-3 left-3 px-3 py-1.5 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold rounded-full shadow-lg flex items-center gap-1.5 animate-pulse">
+                        <Star className="w-3.5 h-3.5 fill-current" />
+                        À la une
+                      </div>
+                    )}
                     {/* Type badge overlay */}
                     <div className="absolute top-3 right-3 px-2.5 py-1 bg-background/90 backdrop-blur-sm text-xs font-medium rounded-full">
                       {getTypeBadge(article.type)}
