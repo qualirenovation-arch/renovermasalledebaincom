@@ -524,6 +524,8 @@ const chercheMidiAvant1 = "/projects/cherche-midi/avant-original.jpg";
 const chercheMidiAvant2 = "/projects/cherche-midi/cherche-midi-avant.jpg";
 const chercheMidiAvant3 = "/projects/cherche-midi/avant-cuisine.jpg";
 const chercheMidiAvant4 = "/projects/cherche-midi/avant-wc-fenetre.jpg";
+const chercheMidiChantier1 = "/projects/cherche-midi/chantier-demolition.jpg";
+const chercheMidiChantier2 = "/projects/cherche-midi/chantier-cablage.jpg";
 
 // ===== INTERFACES =====
 export interface Photo {
@@ -673,6 +675,8 @@ Découvrez le projet au complet sur notre site qualirenovation.fr`,
       { id: 9, image: chercheMidiAvant2, title: "Avant — Vue ancienne entrée", description: "Ancien accès depuis la cuisine" },
       { id: 10, image: chercheMidiAvant3, title: "Avant — Entrée cuisine", description: "Vue depuis la cuisine avec accès à la salle de bain" },
       { id: 11, image: chercheMidiAvant4, title: "Avant — WC et fenêtre", description: "Ancien WC avec vue sur les toits parisiens" },
+      { id: 12, image: chercheMidiChantier1, title: "Avant — Démolition", description: "Phase de démolition avec reprise des réseaux" },
+      { id: 13, image: chercheMidiChantier2, title: "Avant — Câblage électrique", description: "Reprise complète de l'électricité avant cloisonnement" },
     ],
   },
   // ========== 💎 MARBRE & LUXE ==========
