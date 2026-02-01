@@ -419,6 +419,73 @@ export default function Presse() {
         </div>
       </section>
 
+      {/* Instagram Carousel - Compilations vidéo des parutions */}
+      <section className="py-8 md:py-12 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-orange-500/5">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-6"
+          >
+            <h2 className="font-display text-xl md:text-2xl font-semibold mb-2">
+              📱 Nos parutions en vidéo
+            </h2>
+            <p className="text-sm text-muted-foreground max-w-xl mx-auto">
+              Découvrez nos meilleures parutions presse dans ce carrousel Instagram.
+            </p>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="flex justify-center"
+          >
+            <a
+              href="https://www.instagram.com/reel/DQZoXskjPv-/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative overflow-hidden rounded-2xl border-2 border-transparent hover:border-pink-400/50 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              <div className="relative w-full max-w-sm aspect-[9/16] bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 flex items-center justify-center">
+                {/* Play button overlay */}
+                <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
+                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/90 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                    <svg className="w-7 h-7 md:w-8 md:h-8 text-pink-500 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                </div>
+                
+                {/* Content */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-white text-center">
+                  <div className="mb-4 opacity-90">
+                    <svg className="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/>
+                    </svg>
+                  </div>
+                  <h3 className="font-display text-lg md:text-xl font-bold mb-2">
+                    Carrousel Parutions
+                  </h3>
+                  <p className="text-sm opacity-80">
+                    Houzz • Elle • Marie Claire
+                  </p>
+                </div>
+                
+                {/* Instagram badge */}
+                <div className="absolute top-4 left-4 px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-full flex items-center gap-2">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/>
+                  </svg>
+                  <span className="text-xs font-medium">Reel</span>
+                </div>
+              </div>
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Articles Grid - Tri automatique par date DESC */}
       <section className="section-padding">
         <div className="container-custom">
