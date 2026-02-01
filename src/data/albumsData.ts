@@ -489,9 +489,14 @@ import vitryAvant9 from "@/assets/vitry-avant-9.jpg";
 import vitryAvant10 from "@/assets/vitry-avant-10.jpg";
 
 // Cherche-Midi Paris 6ème
-const chercheMidi1 = "/projects/cherche-midi/cherche-midi-1.jpg";
-const chercheMidi2 = "/projects/cherche-midi/cherche-midi-2.jpg";
-const chercheMidiAvant = "/projects/cherche-midi/cherche-midi-avant.jpg";
+const chercheMidiVasque = "/projects/cherche-midi/vasque-face.jpg";
+const chercheMidiPlacardOuvert = "/projects/cherche-midi/cherche-midi-2.jpg";
+const chercheMidiPlacardFerme = "/projects/cherche-midi/placard-ferme.jpg";
+const chercheMidiVueLongueur = "/projects/cherche-midi/vue-longueur.jpg";
+const chercheMidiNiches = "/projects/cherche-midi/niches-douche.jpg";
+const chercheMidiEntree = "/projects/cherche-midi/entree-sdb.jpg";
+const chercheMidiSejour = "/projects/cherche-midi/vue-sejour.jpg";
+const chercheMidiAvant = "/projects/cherche-midi/avant-original.jpg";
 
 // ===== INTERFACES =====
 export interface Photo {
@@ -599,11 +604,16 @@ Cette rénovation au cœur du 6ème arrondissement démontre qu'un espace contra
 Le miroir rétroéclairé ajoute une touche contemporaine et agrandit visuellement l'espace. De l'autre côté du mur se trouve la cuisine — avant, on entrait dans la salle de bain au milieu de la cuisine ! Cette reconfiguration a permis de gagner en rangement et en ergonomie dans l'ensemble du logement.
 
 Découvrez le projet au complet sur notre site qualirenovation.fr`,
-    coverImage: chercheMidi1,
+    coverImage: chercheMidiVueLongueur,
     photos: [
-      { id: 1, image: chercheMidi1, title: "Après — Meuble vasque sur mesure", description: "Long meuble IKEA METOD redécoupé, vasque à poser et miroir rétroéclairé" },
-      { id: 2, image: chercheMidi2, title: "Après — WC et chauffe-eau", description: "WC suspendu avec chauffe-eau intégré au-dessus dans placard technique" },
-      { id: 3, image: chercheMidiAvant, title: "Avant — État des lieux", description: "Pièce à restructurer entièrement" },
+      { id: 1, image: chercheMidiVueLongueur, title: "Après — Vue en longueur", description: "WC suspendu, fenêtre et douche XXL dans un espace étroit" },
+      { id: 2, image: chercheMidiVasque, title: "Après — Meuble vasque sur mesure", description: "Long meuble IKEA METOD redécoupé, vasque à poser et miroir rétroéclairé" },
+      { id: 3, image: chercheMidiPlacardFerme, title: "Après — Placard technique", description: "Rangement au-dessus du WC suspendu" },
+      { id: 4, image: chercheMidiPlacardOuvert, title: "Après — Chauffe-eau intégré", description: "Chauffe-eau dissimulé dans le placard technique" },
+      { id: 5, image: chercheMidiNiches, title: "Après — Niches douche", description: "Double niche avec carreaux de ciment décoratifs" },
+      { id: 6, image: chercheMidiEntree, title: "Après — Nouvelle entrée", description: "Accès depuis le séjour, indépendant de la cuisine" },
+      { id: 7, image: chercheMidiSejour, title: "Après — Vue d'ensemble", description: "Intégration harmonieuse dans le logement" },
+      { id: 8, image: chercheMidiAvant, title: "Avant — État des lieux", description: "Ancienne salle de bain vétuste avec chauffe-eau apparent" },
     ],
   },
   // ========== 💎 MARBRE & LUXE ==========
