@@ -1536,7 +1536,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ---------- Suite DORÉ & LAITON ----------
   {
     id: "soisy",
-    slug: "salle-de-bain-soisy-95-suite-parentale-maison-1900",
+    slug: "salle-de-bain-soisy-95-renovation-suite-parentale-maison-1900",
     title: "Suite parentale maison 1900",
     location: "Soisy-sous-Montmorency (95) - Maison 1900",
     description: "AVANT : Combles inexploités avec sol en béton brut et éclairage industriel provisoire. Espace perdu attendant d'être transformé. APRÈS : Création d'une suite parentale de luxe. Vasque à poser rose poudré, miroir rétroéclairé, robinetterie dorée et teinte terracotta. Sèche-serviettes doré, paroi vitrée fixe et banc en bois naturel dans la douche.",
@@ -1559,7 +1559,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "soisy-sdb",
-    slug: "salle-de-bain-soisy-95-rose-terracotta",
+    slug: "salle-de-bain-soisy-95-renovation-rose-terracotta-baignoire-ilot",
     title: "SDB Principale — Rose & Terracotta",
     location: "Soisy-sous-Montmorency (95) - Maison 1900",
     description: "AVANT : Combles aménageables avec sol béton et éclairage provisoire. APRÈS : Salle de bain luxueuse aux teintes rose et terracotta. Baignoire îlot (Leroy Merlin), robinetterie dorée au sol, vasque à poser rose sur meuble bois, miroir ovale doré et frise carreaux de ciment (Parquet Carrelage). Douche à l'italienne avec banc bois et paroi fixe.",
@@ -1577,7 +1577,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   },
   {
     id: "soisy-enfants",
-    slug: "salle-de-bain-soisy-95-enfants-terrazzo-menthe",
+    slug: "salle-de-bain-soisy-95-renovation-enfants-terrazzo-menthe",
     title: "SDB Enfants — Terrazzo & Menthe",
     location: "Soisy-sous-Montmorency (95) - Maison 1900",
     description: "AVANT : Combles inachevés avec placo apparent et absence d'isolation. APRÈS : Salle de bain enfants colorée et joyeuse. Sol et murs en terrazzo vert menthe, meuble double vasque suspendu blanc, robinetterie chromée et paroi vitrée fixe. Niches de rangement intégrées et baignoire d'angle pour les enfants.",
