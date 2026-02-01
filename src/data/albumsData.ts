@@ -371,6 +371,13 @@ import quaifleursApres3 from "@/assets/quai-aux-fleurs-apres-3.jpg";
 import quaifleursApres4 from "@/assets/quai-aux-fleurs-apres-4.jpg";
 import quaifleursAvant1 from "@/assets/quai-fleurs-avant-1.jpg";
 import quaifleursAvant2 from "@/assets/quai-fleurs-avant-2.jpg";
+// Quai aux Fleurs - Nouvelles photos
+const quaifleursApresDouche = "/projects/quai-fleurs/apres-douche.jpg";
+const quaifleursApresVueEnsemble = "/projects/quai-fleurs/apres-vue-ensemble.jpg";
+const quaifleursApresWcRangements = "/projects/quai-fleurs/apres-wc-rangements.jpg";
+const quaifleursApresPlacardTechnique = "/projects/quai-fleurs/apres-placard-technique.jpg";
+const quaifleursAvantAncienneEntree = "/projects/quai-fleurs/avant-ancienne-entree.jpg";
+const quaifleursAvantCouloirWc = "/projects/quai-fleurs/avant-couloir-wc.jpg";
 
 // Cours de Vincennes Paris 12ème - SDB
 import coursVincennesSdb1 from "@/assets/cours-vincennes-sdb-1.jpg";
@@ -679,6 +686,40 @@ Découvrez le projet au complet sur notre site qualirenovation.fr`,
       { id: 12, image: chercheMidiAvant4, title: "Avant — WC et fenêtre", description: "Ancien WC avec vue sur les toits parisiens" },
       { id: 13, image: chercheMidiChantier1, title: "Avant — Démolition", description: "Phase de démolition avec reprise des réseaux" },
       { id: 14, image: chercheMidiChantier2, title: "Avant — Câblage électrique", description: "Reprise complète de l'électricité avant cloisonnement" },
+    ],
+  },
+  {
+    id: "quai-aux-fleurs",
+    slug: "salle-de-bain-paris-4-ile-cite-quai-aux-fleurs-fenetre-interieure",
+    title: "Rénovation salle de bain Paris 4ème — De l'entrée à la salle de bain sur l'Île de la Cité",
+    subtitle: "Création d'une douche sur estrade avec raccordement technique à la chambre",
+    location: "Paris 4ème - Quai aux Fleurs, Île de la Cité",
+    description: `Ce projet sur l'Île de la Cité illustre parfaitement les défis techniques que peut représenter une rénovation dans l'ancien parisien.
+
+Avant travaux, cette pièce servait d'entrée. Elle est désormais devenue une salle de bain complète. La pièce d'entrée, quant à elle, a été transformée en chambre à coucher.
+
+👉 Le vrai défi technique : l'évacuation des eaux usées se trouvait dans l'ancienne chambre, de l'autre côté du mur. Pour raccorder la douche à cette évacuation, nous avons créé une estrade permettant de faire passer les canalisations sous le receveur tout en respectant les pentes nécessaires.
+
+Autres particularités du chantier :
+• Création d'une fenêtre intérieure au-dessus du miroir pour apporter de la lumière naturelle depuis la pièce adjacente
+• Retrait de l'ancienne fenêtre donnant sur la façade et reprise complète du mur de façade (ravalement)
+• Exploitation d'un dégagement dans le couloir pour optimiser la surface habitable
+
+Sans ces travaux préparatoires lourds, la rénovation n'aurait tout simplement pas été réalisable. Un projet qui démontre que les contraintes les plus complexes peuvent devenir des opportunités d'aménagement.`,
+    coverImage: quaifleursApresVueEnsemble,
+    photos: [
+      { id: 1, image: quaifleursApresVueEnsemble, title: "Après — Vue d'ensemble", description: "Douche, vasque bois et fenêtre intérieure au-dessus du miroir" },
+      { id: 2, image: quaifleursApresDouche, title: "Après — Douche italienne", description: "Receveur sur estrade et paroi vitrée coulissante" },
+      { id: 3, image: quaifleursApresWcRangements, title: "Après — WC et rangements", description: "WC suspendu, sèche-serviettes et placard technique" },
+      { id: 4, image: quaifleursApresPlacardTechnique, title: "Après — Placard technique ouvert", description: "Accès aux réseaux et chauffe-eau" },
+      { id: 5, image: quaifleursApres1, title: "Après — Vue douche détail", description: "Carrelage travertin et robinetterie chromée" },
+      { id: 6, image: quaifleursApres2, title: "Après — Meuble vasque", description: "Meuble bois, miroir doré et applique murale" },
+      { id: 7, image: quaifleursApres3, title: "Après — Vue générale", description: "Harmonie beige et bois chaud" },
+      { id: 8, image: quaifleursApres4, title: "Après — Détails", description: "Finitions soignées" },
+      { id: 9, image: quaifleursAvantAncienneEntree, title: "Avant — Ancienne entrée", description: "Pièce servant d'entrée avant travaux" },
+      { id: 10, image: quaifleursAvantCouloirWc, title: "Avant — Couloir et WC", description: "Vue vers l'entrée avec WC existant à gauche" },
+      { id: 11, image: quaifleursAvant1, title: "Avant — Vue WC et baignoire", description: "Ancienne salle de bain" },
+      { id: 12, image: quaifleursAvant2, title: "Avant — Vue vasque et baignoire", description: "Configuration initiale à transformer" },
     ],
   },
   // ========== 💎 MARBRE & LUXE ==========
