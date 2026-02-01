@@ -289,6 +289,18 @@ import amiralRoussinAvant1 from "@/assets/amiral-roussin-avant-1.jpg";
 import amiralRoussinAvant2 from "@/assets/amiral-roussin-avant-2.jpg";
 import amiralRoussinAvant3 from "@/assets/amiral-roussin-avant-3.jpg";
 
+// Saint-Charles Paris 15ème
+import saintCharlesApres1 from "@/assets/projects/saint-charles/apres-baignoire-balneo.jpg";
+import saintCharlesApres2 from "@/assets/projects/saint-charles/apres-baignoire-2.jpg";
+import saintCharlesApres3 from "@/assets/projects/saint-charles/apres-baignoire-3.jpg";
+import saintCharlesApres4 from "@/assets/projects/saint-charles/apres-baignoire-chromotherapie.jpg";
+import saintCharlesApres5 from "@/assets/projects/saint-charles/apres-vasque-meuble-vintage.jpg";
+import saintCharlesApres6 from "@/assets/projects/saint-charles/apres-wc-suspendu.jpg";
+import saintCharlesApres7 from "@/assets/projects/saint-charles/apres-vue-ensemble.jpg";
+import saintCharlesAvant1 from "@/assets/projects/saint-charles/avant-vasque-lave-linge.jpg";
+import saintCharlesAvant2 from "@/assets/projects/saint-charles/avant-vue-generale.jpg";
+import saintCharlesAvant3 from "@/assets/projects/saint-charles/avant-baignoire-douche.jpg";
+
 // Auteuil Paris 16ème
 import auteuil1 from "@/assets/auteuil-1.jpg";
 import auteuil2 from "@/assets/auteuil-2.jpg";
@@ -1591,6 +1603,35 @@ Une rénovation pensée pour allier design contemporain, praticité et éléganc
       { id: 2, image: edmondNocard2, title: "Carrelage béton blanc", description: "Tech White mat 60x60 cm" },
       { id: 3, image: edmondNocard3, title: "Meuble vasque IKEA", description: "Vasque à poser et plan bois" },
       { id: 4, image: edmondNocard4, title: "Lave-linge dissimulé", description: "Machine à laver cachée derrière une porte" },
+    ],
+  },
+  // ---------- Suite BOIS & NATURE ----------
+  {
+    id: "saint-charles-paris-15",
+    slug: "salle-de-bain-paris-15-saint-charles-baignoire-balneo-metro-blanc",
+    title: "Salle de bain Paris 15ème — Baignoire balnéo & meuble vintage sur métro blanc",
+    location: "Paris 15ème - Rue Saint-Charles",
+    description: `Dans cette salle de bain parisienne, nous avons remplacé une configuration datée par un espace contemporain alliant détente et élégance.
+
+🛁 Baignoire balnéo avec chromothérapie intégrée, pour une expérience spa à domicile
+🪞 Meuble vasque vintage chiné et restauré, apportant caractère et authenticité
+🚿 Pommeau de tête XXL au plafond pour une douche effet pluie
+🏠 Carrelage métro blanc en 7.5x15 sur tous les murs, agrandissant visuellement l'espace
+🔥 Sèche-serviettes design taupe et niche encastrée pratique
+
+✨ Le tout sur un sol imitation bois vieilli qui réchauffe l'ensemble. Une rénovation pensée pour le bien-être, avec des produits accessibles type Leroy Merlin parfaitement mis en œuvre.`,
+    coverImage: saintCharlesApres1,
+    photos: [
+      { id: 1, image: saintCharlesApres1, title: "Baignoire balnéo", description: "Baignoire avec jets et chromothérapie" },
+      { id: 2, image: saintCharlesApres2, title: "Vue détail balnéo", description: "Jets massants et robinetterie cascade" },
+      { id: 3, image: saintCharlesApres3, title: "Pommeau effet pluie", description: "Douche de tête XXL au plafond" },
+      { id: 4, image: saintCharlesApres4, title: "Chromothérapie bleue", description: "Ambiance lumineuse relaxante" },
+      { id: 5, image: saintCharlesApres5, title: "Meuble vasque vintage", description: "Meuble chiné avec vasque à poser" },
+      { id: 6, image: saintCharlesApres6, title: "WC suspendu", description: "WC suspendu et meuble bois" },
+      { id: 7, image: saintCharlesApres7, title: "Vue d'ensemble", description: "Sol bois vieilli et sèche-serviettes design" },
+      { id: 8, image: saintCharlesAvant1, title: "Avant — Vasque et lave-linge", description: "Ancienne configuration avec miroir galets" },
+      { id: 9, image: saintCharlesAvant2, title: "Avant — Vue générale", description: "Carrelage marron et équipements datés" },
+      { id: 10, image: saintCharlesAvant3, title: "Avant — Baignoire", description: "Ancienne baignoire avec pare-douche rayé" },
     ],
   },
 ];
