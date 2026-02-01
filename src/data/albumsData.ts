@@ -605,6 +605,7 @@ Le miroir rétroéclairé ajoute une touche contemporaine et agrandit visuelleme
 
 Découvrez le projet au complet sur notre site qualirenovation.fr`,
     coverImage: chercheMidiEntree,
+    instagramLink: "https://www.instagram.com/p/CzvAnpat3JH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     photos: [
       { id: 1, image: chercheMidiVueLongueur, title: "Après — Vue en longueur", description: "WC suspendu, fenêtre et douche XXL dans un espace étroit" },
       { id: 2, image: chercheMidiVasque, title: "Après — Meuble vasque sur mesure", description: "Long meuble IKEA METOD redécoupé, vasque à poser et miroir rétroéclairé" },
