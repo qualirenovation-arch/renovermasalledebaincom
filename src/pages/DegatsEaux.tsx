@@ -317,7 +317,7 @@ const DegatsEaux = () => {
 
           {/* CTA final */}
           <div className="text-center mt-6">
-            <Link to="/devis#devis-form">
+            <Link to="/devis?type=degat_eaux#devis-form">
               <Button variant="cta" size="lg" className="group">
                 Être accompagné après un dégât des eaux
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
