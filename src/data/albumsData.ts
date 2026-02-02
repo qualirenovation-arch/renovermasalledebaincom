@@ -521,6 +521,16 @@ import vitryAvant8 from "@/assets/vitry-avant-8.jpg";
 import vitryAvant9 from "@/assets/vitry-avant-9.jpg";
 import vitryAvant10 from "@/assets/vitry-avant-10.jpg";
 
+// Alexandre Cabanel Paris 15ème
+import alexandreCabanel1 from "@/assets/alexandre-cabanel-1.jpg";
+import alexandreCabanel2 from "@/assets/alexandre-cabanel-2.jpg";
+import alexandreCabanel3 from "@/assets/alexandre-cabanel-3.jpg";
+import alexandreCabanel4 from "@/assets/alexandre-cabanel-4.jpg";
+import alexandreCabanel5 from "@/assets/alexandre-cabanel-5.jpg";
+import alexandreCabanel6 from "@/assets/alexandre-cabanel-6.jpg";
+import alexandreCabanel7 from "@/assets/alexandre-cabanel-7.jpg";
+import alexandreCabanel8 from "@/assets/alexandre-cabanel-8.jpg";
+
 // Cherche-Midi Paris 6ème
 const chercheMidiCover = "/projects/cherche-midi/cover-vue-longueur.jpg";
 const chercheMidiVasque = "/projects/cherche-midi/vasque-face.jpg";
@@ -610,6 +620,26 @@ export const albums: Album[] = [
       { id: 5, image: templeAvant1, title: "Avant — Salle de bain", description: "Baignoire et lavabo sur pied vétustes" },
       { id: 6, image: templeAvant2, title: "Avant — Vue rangements", description: "Anciens placards et carrelage bleu" },
     ],
+    category: "noir-blanc",
+  },
+  {
+    id: "alexandre-cabanel",
+    slug: "salle-de-bain-paris-15-renovation-marbre-bois-noir-baignoire",
+    title: "Rénovation salle de bain Paris 15ème — Marbre blanc, chêne et robinetterie noire",
+    location: "Paris 15ème - Rue Alexandre Cabanel",
+    description: "Dans ce grand appartement familial du 15ème arrondissement, la salle de bain a été entièrement repensée autour d'un trio de matériaux intemporels : carrelage effet marbre blanc veiné, meuble vasque en chêne massif et robinetterie noire mate.\n\nLa baignoire est équipée d'une paroi verrière atelier style industriel avec douchette de tête encastrée au plafond. La double vasque en céramique blanche offre un confort familial optimal. Les miroirs noirs assortis et l'éclairage LED renforcent l'élégance contemporaine.\n\n👉 Le vrai plus : le WC séparé habillé d'un carrelage écaille de poisson en marbre gris, créant une pièce d'eau à part entière pleine de caractère. Un meuble de rangement sur mesure avec plan en chêne vient compléter l'ensemble.",
+    coverImage: alexandreCabanel1,
+    photos: [
+      { id: 1, image: alexandreCabanel1, title: "Vue d'ensemble", description: "Double vasque chêne, miroirs noirs et baignoire avec paroi verrière" },
+      { id: 2, image: alexandreCabanel2, title: "Détail miroirs", description: "Double miroir noir avec éclairage LED intégré" },
+      { id: 3, image: alexandreCabanel3, title: "Vue large", description: "L'ensemble de la salle de bain avec sèche-serviettes" },
+      { id: 4, image: alexandreCabanel4, title: "Baignoire et vasque", description: "Paroi verrière pivotante et robinetterie noire" },
+      { id: 5, image: alexandreCabanel5, title: "Détail baignoire", description: "Niche encastrée en marbre et douchette de tête" },
+      { id: 6, image: alexandreCabanel6, title: "Rangement fenêtre", description: "Meuble blanc avec plan chêne et sèche-serviettes" },
+      { id: 7, image: alexandreCabanel7, title: "Meuble sur mesure", description: "Rangement avec plan de travail en chêne massif" },
+      { id: 8, image: alexandreCabanel8, title: "WC séparé", description: "Carrelage écaille de poisson en marbre gris" },
+    ],
+    category: "noir-blanc",
   },
   // ========== 🪵 BOIS & NATURE / SCANDINAVE ==========
   {
