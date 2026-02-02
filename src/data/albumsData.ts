@@ -58,6 +58,11 @@ import convention3 from "@/assets/courbevoie-3.jpg";
 import convention4 from "@/assets/courbevoie-4.jpg";
 import convention5 from "@/assets/courbevoie-5.jpg";
 import convention6 from "@/assets/courbevoie-6.jpg";
+import conventionAvant1 from "@/assets/convention-avant-1.jpg";
+import conventionAvant2 from "@/assets/convention-avant-2.jpg";
+import conventionAvant3 from "@/assets/convention-avant-3.jpg";
+import conventionAvant4 from "@/assets/convention-avant-4.jpg";
+import conventionAvant5 from "@/assets/convention-avant-5.jpg";
 
 // Paris 11ème Charonne - Bastille
 import charonne1 from "@/assets/charonne-1.jpg";
@@ -1134,6 +1139,11 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 4, image: convention4, title: "Après — Robinetterie", description: "Colonne de douche noire" },
       { id: 5, image: convention5, title: "Après — Vasque", description: "Meuble bois et tons Hague Blue" },
       { id: 6, image: convention6, title: "Après — Vue générale", description: "Harmonie gris béton, bleu et bois" },
+      { id: 7, image: conventionAvant1, title: "Avant — Couloir", description: "Vue depuis le couloir vers l'ancienne salle de bain" },
+      { id: 8, image: conventionAvant2, title: "Avant — WC", description: "WC avec chauffe-eau en hauteur" },
+      { id: 9, image: conventionAvant3, title: "Avant — Douche", description: "Ancienne cabine de douche avec receveur surélevé" },
+      { id: 10, image: conventionAvant4, title: "Avant — Vue d'ensemble", description: "Salle de bain vétuste avec cabine et vasque datées" },
+      { id: 11, image: conventionAvant5, title: "Avant — Plafond", description: "Dégâts d'humidité et canalisations apparentes" },
     ],
   },
   // ========== 🏠 OPTIMISATION PETIT ESPACE ==========
