@@ -8,3 +8,9 @@ verify_jwt = false
 
 [functions.check-insurance-expiry]
 verify_jwt = false
+
+[functions.send-partner-confirmation]
+verify_jwt = false
+
+[functions.submit-partner-contact]
+verify_jwt = false

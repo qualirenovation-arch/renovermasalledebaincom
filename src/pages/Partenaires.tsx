@@ -240,20 +240,20 @@ export default function Partenaires() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
-              Vous êtes artisan ou entreprise du bâtiment ?
+              Vous souhaitez devenir partenaire ?
             </h2>
             <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-              Rejoignez notre réseau de sous-traitants qualifiés et développez votre activité avec des chantiers de qualité.
+              Sous-traitant, installateur, marque ou site déco — rejoignez notre réseau de partenaires qualifiés.
             </p>
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
               <Link
-                to="/devenir-partenaire"
+                to="/partenaires/contact"
                 className="inline-block bg-accent text-accent-foreground px-8 py-4 rounded-full font-semibold hover:bg-accent/90 transition-colors"
               >
-                Devenir partenaire sous-traitant
+                Devenir partenaire
               </Link>
             </motion.div>
           </motion.div>

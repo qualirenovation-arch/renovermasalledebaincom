@@ -11,6 +11,7 @@ import Realisations from "./pages/Realisations";
 import ProjetDetail from "./pages/ProjetDetail";
 import Presse from "./pages/Presse";
 import Partenaires from "./pages/Partenaires";
+import PartenairesContact from "./pages/PartenairesContact";
 import Devis from "./pages/Devis";
 import FAQ from "./pages/FAQ";
 import MentionsLegales from "./pages/MentionsLegales";
@@ -24,6 +25,7 @@ import DevenirPartenaire from "./pages/DevenirPartenaire";
 import Avis from "./pages/Avis";
 import Admin from "./pages/Admin";
 import AdminLogin from "./pages/AdminLogin";
+import AdminPartenaires from "./pages/AdminPartenaires";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -43,6 +45,7 @@ const App = () => (
           <Route path="/realisations/:slug" element={<ProjetDetail />} />
           <Route path="/presse" element={<Presse />} />
           <Route path="/partenaires" element={<Partenaires />} />
+          <Route path="/partenaires/contact" element={<PartenairesContact />} />
           <Route path="/devis" element={<Devis />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/mentions-legales" element={<MentionsLegales />} />
@@ -56,6 +59,7 @@ const App = () => (
           <Route path="/avis" element={<Avis />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin/partenaires" element={<AdminPartenaires />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

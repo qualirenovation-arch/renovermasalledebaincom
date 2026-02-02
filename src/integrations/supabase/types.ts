@@ -14,6 +14,132 @@ export type Database = {
   }
   public: {
     Tables: {
+      partner_contacts: {
+        Row: {
+          activity_type:
+            | Database["public"]["Enums"]["partner_activity_type"]
+            | null
+          assigned_to: string | null
+          availability:
+            | Database["public"]["Enums"]["partner_availability"]
+            | null
+          collaboration_goal:
+            | Database["public"]["Enums"]["partner_collaboration_goal"]
+            | null
+          collaboration_type:
+            | Database["public"]["Enums"]["partner_collaboration_type"]
+            | null
+          company_name: string
+          contact_first_name: string
+          contact_last_name: string
+          context: Database["public"]["Enums"]["partner_context"] | null
+          created_at: string
+          email: string
+          id: string
+          internal_notes: string | null
+          intervention_level:
+            | Database["public"]["Enums"]["partner_intervention_level"]
+            | null
+          last_contacted_at: string | null
+          message: string
+          next_followup_at: string | null
+          offer_categories: string[] | null
+          partner_family: Database["public"]["Enums"]["partner_family"]
+          phone: string
+          priority: Database["public"]["Enums"]["partner_priority"]
+          requested_services: string[] | null
+          source: string
+          status: Database["public"]["Enums"]["partner_status"]
+          timeline: Database["public"]["Enums"]["partner_timeline"] | null
+          trade: Database["public"]["Enums"]["partner_trade"] | null
+          updated_at: string
+          website_url: string | null
+          zone: Database["public"]["Enums"]["partner_zone"]
+        }
+        Insert: {
+          activity_type?:
+            | Database["public"]["Enums"]["partner_activity_type"]
+            | null
+          assigned_to?: string | null
+          availability?:
+            | Database["public"]["Enums"]["partner_availability"]
+            | null
+          collaboration_goal?:
+            | Database["public"]["Enums"]["partner_collaboration_goal"]
+            | null
+          collaboration_type?:
+            | Database["public"]["Enums"]["partner_collaboration_type"]
+            | null
+          company_name: string
+          contact_first_name: string
+          contact_last_name: string
+          context?: Database["public"]["Enums"]["partner_context"] | null
+          created_at?: string
+          email: string
+          id?: string
+          internal_notes?: string | null
+          intervention_level?:
+            | Database["public"]["Enums"]["partner_intervention_level"]
+            | null
+          last_contacted_at?: string | null
+          message: string
+          next_followup_at?: string | null
+          offer_categories?: string[] | null
+          partner_family: Database["public"]["Enums"]["partner_family"]
+          phone: string
+          priority?: Database["public"]["Enums"]["partner_priority"]
+          requested_services?: string[] | null
+          source?: string
+          status?: Database["public"]["Enums"]["partner_status"]
+          timeline?: Database["public"]["Enums"]["partner_timeline"] | null
+          trade?: Database["public"]["Enums"]["partner_trade"] | null
+          updated_at?: string
+          website_url?: string | null
+          zone: Database["public"]["Enums"]["partner_zone"]
+        }
+        Update: {
+          activity_type?:
+            | Database["public"]["Enums"]["partner_activity_type"]
+            | null
+          assigned_to?: string | null
+          availability?:
+            | Database["public"]["Enums"]["partner_availability"]
+            | null
+          collaboration_goal?:
+            | Database["public"]["Enums"]["partner_collaboration_goal"]
+            | null
+          collaboration_type?:
+            | Database["public"]["Enums"]["partner_collaboration_type"]
+            | null
+          company_name?: string
+          contact_first_name?: string
+          contact_last_name?: string
+          context?: Database["public"]["Enums"]["partner_context"] | null
+          created_at?: string
+          email?: string
+          id?: string
+          internal_notes?: string | null
+          intervention_level?:
+            | Database["public"]["Enums"]["partner_intervention_level"]
+            | null
+          last_contacted_at?: string | null
+          message?: string
+          next_followup_at?: string | null
+          offer_categories?: string[] | null
+          partner_family?: Database["public"]["Enums"]["partner_family"]
+          phone?: string
+          priority?: Database["public"]["Enums"]["partner_priority"]
+          requested_services?: string[] | null
+          source?: string
+          status?: Database["public"]["Enums"]["partner_status"]
+          timeline?: Database["public"]["Enums"]["partner_timeline"] | null
+          trade?: Database["public"]["Enums"]["partner_trade"] | null
+          updated_at?: string
+          website_url?: string | null
+          zone?: Database["public"]["Enums"]["partner_zone"]
+        }
+        Relationships: []
+      }
       rate_limits: {
         Row: {
           created_at: string
@@ -278,6 +404,48 @@ export type Database = {
     Enums: {
       app_role: "admin" | "user"
       document_status: "valid" | "expiring_soon" | "expired" | "non_compliant"
+      partner_activity_type:
+        | "marque"
+        | "fabricant"
+        | "distributeur"
+        | "showroom"
+        | "site_ecommerce"
+        | "site_decoration_media"
+      partner_availability: "immediat" | "moins_1_mois" | "a_definir"
+      partner_collaboration_goal:
+        | "etre_recommande"
+        | "projets_concrets"
+        | "partenariat_recurrent"
+        | "operation_presse_contenu"
+      partner_collaboration_type: "ponctuelle" | "recurrente"
+      partner_context:
+        | "client_signe"
+        | "chiffrage"
+        | "recherche_reguliere"
+        | "mission_ponctuelle"
+      partner_family: "sub_traitant" | "installateur" | "marque_site"
+      partner_intervention_level:
+        | "pose_seule"
+        | "pose_plus_mise_en_service"
+        | "avec_maitre_oeuvre"
+        | "cle_en_main"
+      partner_priority: "basse" | "normale" | "haute"
+      partner_status:
+        | "nouveau"
+        | "a_qualifier"
+        | "en_cours"
+        | "partenaire_ok"
+        | "refuse"
+        | "archive"
+      partner_timeline: "immediat" | "moins_1_mois" | "a_definir"
+      partner_trade:
+        | "carrelage"
+        | "plomberie"
+        | "electricite"
+        | "menuiserie"
+        | "peinture"
+        | "autre"
+      partner_zone: "paris" | "petite_couronne" | "idf" | "autre"
       subcontractor_status:
         | "pending"
         | "reviewing"
@@ -413,6 +581,54 @@ export const Constants = {
     Enums: {
       app_role: ["admin", "user"],
       document_status: ["valid", "expiring_soon", "expired", "non_compliant"],
+      partner_activity_type: [
+        "marque",
+        "fabricant",
+        "distributeur",
+        "showroom",
+        "site_ecommerce",
+        "site_decoration_media",
+      ],
+      partner_availability: ["immediat", "moins_1_mois", "a_definir"],
+      partner_collaboration_goal: [
+        "etre_recommande",
+        "projets_concrets",
+        "partenariat_recurrent",
+        "operation_presse_contenu",
+      ],
+      partner_collaboration_type: ["ponctuelle", "recurrente"],
+      partner_context: [
+        "client_signe",
+        "chiffrage",
+        "recherche_reguliere",
+        "mission_ponctuelle",
+      ],
+      partner_family: ["sub_traitant", "installateur", "marque_site"],
+      partner_intervention_level: [
+        "pose_seule",
+        "pose_plus_mise_en_service",
+        "avec_maitre_oeuvre",
+        "cle_en_main",
+      ],
+      partner_priority: ["basse", "normale", "haute"],
+      partner_status: [
+        "nouveau",
+        "a_qualifier",
+        "en_cours",
+        "partenaire_ok",
+        "refuse",
+        "archive",
+      ],
+      partner_timeline: ["immediat", "moins_1_mois", "a_definir"],
+      partner_trade: [
+        "carrelage",
+        "plomberie",
+        "electricite",
+        "menuiserie",
+        "peinture",
+        "autre",
+      ],
+      partner_zone: ["paris", "petite_couronne", "idf", "autre"],
       subcontractor_status: [
         "pending",
         "reviewing",
