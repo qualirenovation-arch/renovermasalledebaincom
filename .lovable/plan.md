@@ -1,53 +1,37 @@
-
-# Simplification de la promotion du premier administrateur
+# Promotion sécurisée du premier administrateur
 
 ## Objectif
-Permettre la promotion de `qualirenovation@gmail.com` en administrateur sans nécessiter de clé secrète externe.
+Permettre la promotion du premier administrateur de manière sécurisée.
 
-## Probleme actuel
-La fonction `setup-first-admin` exige une clé `ADMIN_SETUP_KEY` qui ne correspond pas à la valeur fournie. Plutot que de reconfigurer les secrets, nous allons simplifier le processus.
+## Solution implémentée
 
-## Solution proposee
+### Authentification requise
 
-### Modification de la fonction Edge `setup-first-admin`
+La fonction `setup-first-admin` exige maintenant que l'utilisateur soit authentifié :
 
-Supprimer la verification de `ADMIN_SETUP_KEY` et ne conserver que la protection essentielle : **verifier qu'aucun admin n'existe deja**.
+1. L'utilisateur crée un compte via `/admin/login` (inscription)
+2. L'utilisateur se connecte
+3. L'utilisateur appelle la fonction avec son token JWT
+4. La fonction valide le JWT et promeut l'utilisateur connecté en admin
 
-**Avant :**
+### Sécurité multicouche
+
+1. **Authentification JWT** : Seuls les utilisateurs connectés peuvent appeler la fonction
+2. **Protection "premier uniquement"** : Si un admin existe déjà, la fonction refuse toute exécution
+3. **Auto-promotion** : L'utilisateur ne peut promouvoir que lui-même (pas d'email arbitraire)
+
+### Utilisation
+
 ```typescript
-// Valide setup_key obligatoire
-const adminSetupKey = Deno.env.get("ADMIN_SETUP_KEY");
-if (!adminSetupKey || setup_key !== adminSetupKey) {
-  return Response 401
-}
+// L'utilisateur doit être connecté
+const { data, error } = await supabase.functions.invoke('setup-first-admin');
+// Aucun paramètre requis - utilise l'utilisateur authentifié
 ```
 
-**Apres :**
-```typescript
-// Suppression de la verification de cle secrete
-// La protection reste : impossible de promouvoir si un admin existe deja
-```
+## Étapes pour promouvoir qualirenovation@gmail.com
 
-Cette approche reste securisee car :
-1. La fonction refuse toute execution si un admin existe deja
-2. Seul le premier utilisateur peut etre promu via cette methode
-3. Les admins suivants doivent etre geres via l'interface d'administration
-
-### Etapes d'implementation
-
-1. Modifier `supabase/functions/setup-first-admin/index.ts` pour retirer la verification de `setup_key`
-2. Deployer la fonction mise a jour
-3. Appeler la fonction avec `qualirenovation@gmail.com`
-4. Verifier que le role admin a ete attribue
-
-## Details techniques
-
-| Fichier | Modification |
-|---------|-------------|
-| `supabase/functions/setup-first-admin/index.ts` | Suppression des lignes 18-26 (validation de setup_key) |
-
-## Securite
-
-- La verification "aucun admin existant" reste en place
-- Une fois un admin cree, cette fonction devient inutilisable
-- Les prochains admins seront geres via l'interface `/admin`
+1. Aller sur `/admin/login`
+2. S'inscrire avec `qualirenovation@gmail.com`
+3. Se connecter
+4. Appeler la fonction (via console ou bouton dédié)
+5. Le rôle admin est attribué automatiquement
