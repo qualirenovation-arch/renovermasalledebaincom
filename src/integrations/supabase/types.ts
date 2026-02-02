@@ -140,6 +140,156 @@ export type Database = {
         }
         Relationships: []
       }
+      quote_requests: {
+        Row: {
+          assigned_to: string | null
+          client_email: string
+          client_first_name: string
+          client_last_name: string
+          client_phone: string | null
+          created_at: string
+          id: string
+          internal_notes: string | null
+          message: string | null
+          priority: string
+          property_address: string | null
+          property_city: string | null
+          property_elevator: string | null
+          property_floor: string | null
+          property_occupied: boolean | null
+          property_postal_code: string | null
+          property_surface: string | null
+          property_type: string | null
+          renovation_emplacement_machine: string[] | null
+          renovation_finitions_robinetterie: string[] | null
+          renovation_machine_laver: string | null
+          renovation_meuble_vasque: string[] | null
+          renovation_porte_douche: string[] | null
+          renovation_robinetterie_baignoire: string | null
+          renovation_robinetterie_mlaver: string | null
+          renovation_style_carrelage: string[] | null
+          renovation_type_baignoire: string[] | null
+          renovation_type_douche: string | null
+          renovation_type_installation: string | null
+          renovation_type_machine: string[] | null
+          renovation_type_pommeau: string | null
+          renovation_type_receveur: string[] | null
+          renovation_wc_type: string[] | null
+          source: string
+          status: string
+          type_devis: string
+          updated_at: string
+          water_damage_claim_number: string | null
+          water_damage_documents: string[] | null
+          water_damage_insurance_declared: string | null
+          water_damage_nature: string | null
+          water_damage_origin: string | null
+          water_damage_rooms: string[] | null
+          water_damage_rooms_other: string | null
+          water_damage_scope: string | null
+          water_damage_works: string[] | null
+          water_damage_works_other: string | null
+        }
+        Insert: {
+          assigned_to?: string | null
+          client_email: string
+          client_first_name: string
+          client_last_name: string
+          client_phone?: string | null
+          created_at?: string
+          id?: string
+          internal_notes?: string | null
+          message?: string | null
+          priority?: string
+          property_address?: string | null
+          property_city?: string | null
+          property_elevator?: string | null
+          property_floor?: string | null
+          property_occupied?: boolean | null
+          property_postal_code?: string | null
+          property_surface?: string | null
+          property_type?: string | null
+          renovation_emplacement_machine?: string[] | null
+          renovation_finitions_robinetterie?: string[] | null
+          renovation_machine_laver?: string | null
+          renovation_meuble_vasque?: string[] | null
+          renovation_porte_douche?: string[] | null
+          renovation_robinetterie_baignoire?: string | null
+          renovation_robinetterie_mlaver?: string | null
+          renovation_style_carrelage?: string[] | null
+          renovation_type_baignoire?: string[] | null
+          renovation_type_douche?: string | null
+          renovation_type_installation?: string | null
+          renovation_type_machine?: string[] | null
+          renovation_type_pommeau?: string | null
+          renovation_type_receveur?: string[] | null
+          renovation_wc_type?: string[] | null
+          source?: string
+          status?: string
+          type_devis?: string
+          updated_at?: string
+          water_damage_claim_number?: string | null
+          water_damage_documents?: string[] | null
+          water_damage_insurance_declared?: string | null
+          water_damage_nature?: string | null
+          water_damage_origin?: string | null
+          water_damage_rooms?: string[] | null
+          water_damage_rooms_other?: string | null
+          water_damage_scope?: string | null
+          water_damage_works?: string[] | null
+          water_damage_works_other?: string | null
+        }
+        Update: {
+          assigned_to?: string | null
+          client_email?: string
+          client_first_name?: string
+          client_last_name?: string
+          client_phone?: string | null
+          created_at?: string
+          id?: string
+          internal_notes?: string | null
+          message?: string | null
+          priority?: string
+          property_address?: string | null
+          property_city?: string | null
+          property_elevator?: string | null
+          property_floor?: string | null
+          property_occupied?: boolean | null
+          property_postal_code?: string | null
+          property_surface?: string | null
+          property_type?: string | null
+          renovation_emplacement_machine?: string[] | null
+          renovation_finitions_robinetterie?: string[] | null
+          renovation_machine_laver?: string | null
+          renovation_meuble_vasque?: string[] | null
+          renovation_porte_douche?: string[] | null
+          renovation_robinetterie_baignoire?: string | null
+          renovation_robinetterie_mlaver?: string | null
+          renovation_style_carrelage?: string[] | null
+          renovation_type_baignoire?: string[] | null
+          renovation_type_douche?: string | null
+          renovation_type_installation?: string | null
+          renovation_type_machine?: string[] | null
+          renovation_type_pommeau?: string | null
+          renovation_type_receveur?: string[] | null
+          renovation_wc_type?: string[] | null
+          source?: string
+          status?: string
+          type_devis?: string
+          updated_at?: string
+          water_damage_claim_number?: string | null
+          water_damage_documents?: string[] | null
+          water_damage_insurance_declared?: string | null
+          water_damage_nature?: string | null
+          water_damage_origin?: string | null
+          water_damage_rooms?: string[] | null
+          water_damage_rooms_other?: string | null
+          water_damage_scope?: string | null
+          water_damage_works?: string[] | null
+          water_damage_works_other?: string | null
+        }
+        Relationships: []
+      }
       rate_limits: {
         Row: {
           created_at: string

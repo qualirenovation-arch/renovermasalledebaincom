@@ -1,4 +1,5 @@
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -26,6 +27,8 @@ import {
   Home
 } from "lucide-react";
 import { FormProgressBar } from "@/components/devis/FormProgressBar";
+import { DevisTypeSelector } from "@/components/devis/DevisTypeSelector";
+import { WaterDamageQuoteForm } from "@/components/devis/WaterDamageQuoteForm";
 import { AddressAutocomplete } from "@/components/ui/address-autocomplete";
 // Images de référence Châtelet supprimées - chaque finition a maintenant sa propre photo
 import stylesCarrelageImage from "@/assets/styles-carrelage-fr.jpg";
@@ -289,14 +292,26 @@ const styleCarrelageOptions = [
 const HCAPTCHA_SITE_KEY = "00684ab0-a304-443e-bce6-2abe6892f1fa";
 
 export default function Devis() {
+  const [searchParams] = useSearchParams();
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const [devisType, setDevisType] = useState<'selector' | 'classique' | 'degat_eaux'>('selector');
   const fileInputRef = useRef<HTMLInputElement>(null);
   const captchaRef = useRef<HCaptcha>(null);
   const { toast } = useToast();
+
+  // Check URL params for direct form access
+  useEffect(() => {
+    const typeParam = searchParams.get('type');
+    if (typeParam === 'degat_eaux') {
+      setDevisType('degat_eaux');
+    } else if (typeParam === 'classique') {
+      setDevisType('classique');
+    }
+  }, [searchParams]);
 
   // hCaptcha handlers
   const onCaptchaVerify = useCallback((token: string) => {
@@ -576,6 +591,23 @@ export default function Devis() {
       {/* Form Section - Premium layout */}
       <section id="devis-form" className="py-10 md:py-16 bg-background scroll-mt-24 md:scroll-mt-28">
         <div className="container-custom">
+          {/* Type Selector */}
+          {devisType === 'selector' && (
+            <DevisTypeSelector
+              onSelectClassic={() => setDevisType('classique')}
+              onSelectWaterDamage={() => setDevisType('degat_eaux')}
+            />
+          )}
+
+          {/* Water Damage Form */}
+          {devisType === 'degat_eaux' && (
+            <div className="max-w-3xl mx-auto">
+              <WaterDamageQuoteForm onBack={() => setDevisType('selector')} />
+            </div>
+          )}
+
+          {/* Classic Form */}
+          {devisType === 'classique' && (
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
             {/* Form */}
             <motion.div 
@@ -584,6 +616,12 @@ export default function Devis() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
+              {/* Back button */}
+              <Button type="button" variant="ghost" onClick={() => setDevisType('selector')} className="mb-4">
+                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+                Choisir un autre type de devis
+              </Button>
+
               {/* Barre de progression */}
               <FormProgressBar formData={formData} />
 
@@ -1435,6 +1473,7 @@ export default function Devis() {
               </div>
             </motion.div>
           </div>
+          )}
         </div>
       </section>
     </Layout>
