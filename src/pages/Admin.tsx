@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
-import { Users, Package, LogOut, Loader2, ShieldX } from "lucide-react";
+import { Users, Package, LogOut, Loader2, ShieldX, Handshake } from "lucide-react";
 import { SubcontractorsList } from "@/components/admin/SubcontractorsList";
 import { OrdersList } from "@/components/admin/OrdersList";
 import { useAdminAuth } from "@/hooks/useAdminAuth";
@@ -77,6 +77,12 @@ export default function Admin() {
               Administration
             </h1>
             <div className="flex items-center gap-4">
+              <Button variant="outline" size="sm" asChild>
+                <Link to="/admin/partenaires">
+                  <Handshake className="w-4 h-4 mr-2" />
+                  Demandes Partenaires
+                </Link>
+              </Button>
               <span className="text-sm text-muted-foreground hidden sm:block">
                 {user.email}
               </span>
