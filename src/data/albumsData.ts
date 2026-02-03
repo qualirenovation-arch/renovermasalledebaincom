@@ -654,9 +654,9 @@ export interface Album {
 }
 
 // ===== ALBUMS TERMINÉS =====
-// Classés par style/thème pour une meilleure lisibilité
+// Classés par arrondissement parisien puis par département
 export const albums: Album[] = [
-  // ========== 🖤 NOIR & BLANC ==========
+  // ========== 📍 PARIS 3ÈME ==========
   {
     id: "temple",
     slug: "salle-de-bain-paris-3-renovation-style-masculin-bois-noir",
@@ -672,10 +672,10 @@ export const albums: Album[] = [
       { id: 5, image: templeAvant1, title: "Avant — Salle de bain", description: "Baignoire et lavabo sur pied vétustes" },
       { id: 6, image: templeAvant2, title: "Avant — Vue rangements", description: "Anciens placards et carrelage bleu" },
     ],
-    category: "noir-blanc",
     finitionSol: "effet-pierre",
     finitionMur: "effet-pierre",
   },
+  // ========== 📍 PARIS 15ÈME ==========
   {
     id: "alexandre-cabanel",
     slug: "salle-de-bain-paris-15-renovation-marbre-bois-noir-baignoire",
@@ -705,12 +705,11 @@ export const albums: Album[] = [
       { id: 19, image: alexandreCabanelAvant11, title: "Avant — WC ancien", description: "WC avec papier peint papillons" },
       { id: 20, image: alexandreCabanelAvant12, title: "Avant — Double vasque angle", description: "Vue d'ensemble vasques avant travaux" },
     ],
-    category: "noir-blanc",
     finitionSol: "marbre",
     finitionMur: "marbre",
   },
+  // ========== 📍 MONTREUIL (93) ==========
   {
-    id: "montreuil-suite",
     slug: "suite-parentale-montreuil-93-renovation-verriere-zellige-turquoise",
     title: "Rénovation salle de douche à Montreuil — matières, contrastes et précision",
     location: "Montreuil (93) - Rue Ernest Savart",
@@ -733,11 +732,10 @@ export const albums: Album[] = [
       { id: 13, image: montreuilAvant4, title: "Avant — Salle d'eau existante", description: "Ancien agencement" },
       { id: 14, image: montreuilAvant5, title: "Avant — WC existant", description: "État initial des sanitaires" },
     ],
-    category: "colore",
     finitionSol: "gres-cerame-uni",
     finitionMur: "zellige",
   },
-  // ========== 🪵 BOIS & NATURE / SCANDINAVE ==========
+  // ========== 📍 PARIS 5ÈME ==========
   {
     id: "buffon",
     slug: "salle-de-bain-paris-5-renovation-optimisation-petit-espace",
@@ -759,6 +757,7 @@ export const albums: Album[] = [
     finitionSol: "effet-pierre",
     finitionMur: "effet-pierre",
   },
+  // ========== 📍 SURESNES (92) ==========
   {
     id: "rue-des-puits",
     slug: "salle-de-bain-suresnes-92-renovation-onyx-blue-marbre",
@@ -781,7 +780,7 @@ export const albums: Album[] = [
     finitionSol: "marbre",
     finitionMur: "marbre",
   },
-  // ========== 🏙️ OPTIMISATION ESPACE PARISIEN ==========
+  // ========== 📍 PARIS 6ÈME ==========
   {
     id: "cherche-midi",
     slug: "salle-de-bain-paris-6-renovation-etroite-longueur-cherche-midi",
@@ -823,6 +822,7 @@ Découvrez le projet au complet sur notre site qualirenovation.fr`,
     finitionSol: "gres-cerame-uni",
     finitionMur: "metro-allonge",
   },
+  // ========== 📍 PARIS 4ÈME ==========
   {
     id: "quai-aux-fleurs",
     slug: "salle-de-bain-paris-4-ile-cite-quai-aux-fleurs-fenetre-interieure",
@@ -861,7 +861,7 @@ Sans ces travaux préparatoires lourds, la rénovation n'aurait tout simplement 
     finitionSol: "effet-pierre",
     finitionMur: "effet-pierre",
   },
-  // ========== 💎 MARBRE & LUXE ==========
+  // ========== 📍 PARIS 5ÈME ==========
   {
     id: "saint-germain",
     slug: "salle-de-bain-paris-5-renovation-baignoire-saint-germain",
@@ -882,6 +882,7 @@ Sans ces travaux préparatoires lourds, la rénovation n'aurait tout simplement 
     finitionSol: "gres-cerame-uni",
     finitionMur: "zellige",
   },
+  // ========== 📍 PARIS 8ÈME ==========
   {
     id: "matignon",
     slug: "salle-de-bain-paris-8-renovation-locative-douche-italienne",
@@ -947,8 +948,7 @@ Sans ces travaux préparatoires lourds, la rénovation n'aurait tout simplement 
     finitionSol: "gres-cerame-uni",
     finitionMur: "gres-cerame-uni",
   },
-  // ========== ✨ DORÉ & LAITON ==========
-  {
+  // ========== 📍 PARIS 9ÈME ==========
     id: "taitbout",
     slug: "salle-de-bain-paris-9-renovation-douche-italienne-carrelage-pierre",
     title: "Rénovation salle de bain Paris 9ème — Douche à l'italienne et carrelage effet pierre",
@@ -979,8 +979,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     finitionSol: "effet-pierre",
     finitionMur: "effet-pierre",
   },
-  {
-    id: "paris10-jemmapes",
+  // ========== 📍 PARIS 10ÈME ==========
     slug: "salle-de-bain-paris-10-renovation-style-masculin-jemmapes",
     title: "Rénovation salle de bain Paris 10ème — Style masculin au Canal Saint-Martin",
     location: "Paris 10ème - Canal Saint-Martin",
@@ -1035,7 +1034,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     finitionSol: "marbre",
     finitionMur: "marbre",
   },
-  // ---------- Suite NOIR & BLANC ----------
+  // ========== 📍 PARIS 11ÈME ==========
   {
     id: "charonne",
     slug: "salle-de-bain-paris-11-renovation-retro-noir-blanc-charonne",
@@ -1073,7 +1072,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     finitionSol: "gres-cerame-uni",
     finitionMur: "gres-cerame-uni",
   },
-  // ========== 🎨 COLORÉ (BLEU / VERT / TERRACOTTA) ==========
+  // ========== 📍 PARIS 12ÈME ==========
   {
     id: "cours-vincennes-wc",
     slug: "salle-de-bain-paris-12-renovation-wc-design-onyx-blue",
@@ -1155,7 +1154,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     finitionSol: "beton",
     finitionMur: "gres-cerame-uni",
   },
-  // ---------- Suite DORÉ & LAITON ----------
+  // ========== 📍 PARIS 13ÈME ==========
   {
     id: "bobillot",
     slug: "salle-de-bain-paris-13-renovation-locative-zellige-beige",
@@ -1232,7 +1231,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     finitionSol: "marbre",
     finitionMur: "zellige",
   },
-  // ---------- Suite BOIS & NATURE ----------
+  // ========== 📍 PARIS 15ÈME ==========
   {
     id: "amiral-roussin",
     slug: "salle-de-bain-paris-15-renovation-scandinave-buanderie-integree",
@@ -1281,7 +1280,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     finitionSol: "beton",
     finitionMur: "beton",
   },
-  // ========== 🏠 OPTIMISATION PETIT ESPACE ==========
+  // ========== 📍 PARIS 16ÈME ==========
   {
     id: "pierre-guerin",
     slug: "salle-de-bain-paris-16-renovation-masculine-pierre-inox",
@@ -1343,7 +1342,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     finitionSol: "effet-pierre",
     finitionMur: "effet-pierre",
   },
-  // ---------- Suite DORÉ & LAITON ----------
+  // ========== 📍 PARIS 17ÈME ==========
   {
     id: "paris17-suite",
     slug: "salle-de-bain-paris-17-renovation-suite-parentale-claustra-bois",
@@ -1404,7 +1403,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     finitionSol: "terrazzo",
     finitionMur: "metro-allonge",
   },
-  // ---------- Suite OPTIMISATION ----------
+  // ========== 📍 PARIS 19ÈME ==========
   {
     id: "armand-carrel",
     slug: "salle-de-bain-paris-19-renovation-tout-en-un-mosaique-noir-mat",
@@ -1425,7 +1424,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     finitionSol: "gres-cerame-uni",
     finitionMur: "gres-cerame-uni",
   },
-  // ---------- Suite COLORÉ ----------
+  // ========== 📍 BOIS-COLOMBES (92) ==========
   {
     id: "bois-colombes",
     slug: "salle-de-bain-bois-colombes-92-terrazzo-mineral-vert-eau-laiton",
@@ -1454,7 +1453,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     ],
     finitionSol: "terrazzo",
   },
-  // ========== 🏡 MAISON & BANLIEUE ==========
+  // ========== 📍 BOULOGNE-BILLANCOURT (92) ==========
   {
     id: "boulogne",
     slug: "salle-de-bain-boulogne-92-ambiance-marine",
@@ -1487,7 +1486,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     finitionSol: "gres-cerame-uni",
     finitionMur: "gres-cerame-uni",
   },
-  // ========== 🔨 DÉGÂT DES EAUX / SINISTRE ==========
+  // ========== 📍 COURBEVOIE (92) ==========
   {
     id: "courbevoie-becon",
     slug: "salle-de-bain-courbevoie-92-becon-sinistre",
@@ -1517,7 +1516,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     finitionSol: "terrazzo",
     finitionMur: "gres-cerame-uni",
   },
-  // ---------- Suite MAISON & BANLIEUE ----------
+  // ========== 📍 SAINT-OUEN (93) ==========
   {
     id: "saint-ouen",
     slug: "salle-de-bain-saint-ouen-93-renovation",
@@ -1543,7 +1542,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     finitionSol: "gres-cerame-uni",
     finitionMur: "gres-cerame-uni",
   },
-  // ---------- Suite MARBRE & LUXE ----------
+  // ========== 📍 CHARENTON-LE-PONT (94) ==========
   {
     id: "charenton",
     slug: "salle-de-bain-charenton-94-renovation-complete",
@@ -1617,7 +1616,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     finitionSol: "gres-cerame-uni",
     finitionMur: "gres-cerame-uni",
   },
-  // ---------- Suite MAISON & BANLIEUE ----------
+  // ========== 📍 SAINT-MANDÉ (94) ==========
   {
     id: "st-mande",
     slug: "salle-de-bain-saint-mande-94-renovation",
@@ -1634,7 +1633,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     finitionSol: "gres-cerame-uni",
     finitionMur: "gres-cerame-uni",
   },
-  // ---------- Suite BOIS & NATURE ----------
+  // ========== 📍 SAINT-MAUR-DES-FOSSÉS (94) ==========
   {
     id: "saint-maur",
     slug: "salle-de-bain-saint-maur-94-renovation-avant-apres",
@@ -1677,7 +1676,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     finitionSol: "gres-cerame-uni",
     finitionMur: "zellige",
   },
-  // ---------- Suite NOIR & BLANC ----------
+  // ========== 📍 VINCENNES (94) ==========
   {
     id: "vincennes-mr",
     slug: "salle-de-bain-vincennes-94-garcon-noir-blanc",
@@ -1711,7 +1710,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     finitionSol: "gres-cerame-uni",
     finitionMur: "metro-allonge",
   },
-  // ---------- Suite MAISON & BANLIEUE ----------
+  // ========== 📍 VITRY-SUR-SEINE (94) ==========
   {
     id: "vitry",
     slug: "salle-de-bain-vitry-94-renovation-avant-apres",
@@ -1743,7 +1742,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     finitionSol: "gres-cerame-uni",
     finitionMur: "gres-cerame-uni",
   },
-  // ---------- Suite DORÉ & LAITON ----------
+  // ========== 📍 SOISY-SOUS-MONTMORENCY (95) ==========
   {
     id: "soisy",
     slug: "wc-soisy-95-renovation-invites-zellige-terracotta",
@@ -1808,7 +1807,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     finitionSol: "terrazzo",
     finitionMur: "terrazzo",
   },
-  // ---------- Suite NOIR & BLANC ----------
+  // ========== 📍 SAINT-MAURICE (94) ==========
   {
     id: "saint-maurice-verdun",
     slug: "salle-de-bain-saint-maurice-94-pullman-noir-blanc",
@@ -1831,7 +1830,7 @@ Un projet pensé pour une vie de famille, où esthétique et fonctionnalité coh
     finitionSol: "gres-cerame-uni",
     finitionMur: "metro-allonge",
   },
-  // ---------- Suite COLORÉ ----------
+  // ---------- Suite SAINT-MAUR-DES-FOSSÉS (94) ----------
   {
     id: "saint-maur-petit-beaubourg",
     slug: "salle-de-bain-saint-maur-94-renovation-blanc-epure-petit-beaubourg",
