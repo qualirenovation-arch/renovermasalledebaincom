@@ -124,8 +124,8 @@ const DegatsEaux = () => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
-  // Images Julia (Sergent Bauchart)
-  const juliaImages = [
+  // Images Sergent Bauchart
+  const bauchartImages = [
     { src: bauchartAvant1, alt: "Avant — État des lieux après sinistre", type: 'avant' as const },
     { src: bauchartAvant2, alt: "Avant — Traces de moisissures", type: 'avant' as const },
     { src: bauchartAvant3, alt: "Avant — Démolition plomberie", type: 'avant' as const },
@@ -286,16 +286,16 @@ const DegatsEaux = () => {
         <div className="container-custom max-w-2xl mx-auto">
           <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl p-5 border border-blue-100">
             <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-              <span>✨</span> L'exemple de Julia — Paris 12ème
+              <span>✨</span> Sergent Bauchart — Paris 12ème
             </h3>
             <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-              Julia, locataire d'un studio sinistré, a transformé cette galère en opportunité : 
+              Suite à un dégât des eaux important, cette cuisine a été entièrement repensée : 
               nouvelle cuisine, espace de vie optimisé. Ce qui était un cauchemar est devenu une chance.
             </p>
             
             {/* Vignettes photos */}
             <div className="flex flex-wrap gap-2 mb-3">
-              {juliaImages.map((img, index) => (
+              {bauchartImages.map((img, index) => (
                 <button
                   key={index}
                   onClick={() => setSelectedImage(img)}
