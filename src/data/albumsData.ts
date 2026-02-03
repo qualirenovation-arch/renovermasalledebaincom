@@ -1137,7 +1137,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     id: "place-daumesnil",
     slug: "salle-de-bain-paris-12-renovation-bleu-mineral-beton-reuilly",
     title: "Rénovation salle de bain Paris 12ème — Bleu minéral et béton urbain à Reuilly",
-    location: "Paris 12ème - Place Daumesnil",
+    location: "Paris 12ème - Rue de Reuilly",
     description: "Dans cet appartement de la rue de Reuilly, le WC se transforme en terrain d'expression sobre et graphique. Le sol en béton tech, minéral et contemporain, dialogue avec un carreau ciment Paris Rivoli 25×25 cm en mur face, apportant rythme et profondeur à l'espace. La palette, dominée par des nuances claires et minérales, installe une atmosphère urbaine, presque architecturale.\n\nMais derrière l'esthétique, l'intelligence du plan. Le WC est déplacé dans l'autre sens, la porte devient coulissante, et l'ancien emplacement libéré permet d'encastrer le frigo côté cuisine. La gaine technique, repensée et intégrée côté cuisine, s'efface visuellement sans rien céder à la rigueur technique.\n\nUn projet précis et élégant, où le bleu minéral et le béton dessinent un WC discret mais affirmé — et prouvent qu'un espace secondaire peut, à lui seul, rééquilibrer tout un appartement parisien.",
     coverImage: placeDaumesnil2,
     instagramLink: "https://www.instagram.com/reel/C_aaIoPNMBz/",
