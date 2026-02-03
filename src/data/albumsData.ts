@@ -569,15 +569,6 @@ import montreuilHouzz7 from "@/assets/montreuil-houzz-7.jpg";
 import montreuilHouzz8 from "@/assets/montreuil-houzz-8.jpg";
 import montreuilHouzz9 from "@/assets/montreuil-houzz-9.jpg";
 import montreuilHouzz10 from "@/assets/montreuil-houzz-10.jpg";
-import montreuilHouzz23 from "@/assets/montreuil-houzz-23.jpg";
-import montreuilHouzz24 from "@/assets/montreuil-houzz-24.jpg";
-import montreuilHouzz25 from "@/assets/montreuil-houzz-25.jpg";
-import montreuilHouzz26 from "@/assets/montreuil-houzz-26.jpg";
-import montreuilHouzz27 from "@/assets/montreuil-houzz-27.jpg";
-import montreuilHouzz28 from "@/assets/montreuil-houzz-28.jpg";
-import montreuilHouzz29 from "@/assets/montreuil-houzz-29.jpg";
-import montreuilHouzz30 from "@/assets/montreuil-houzz-30.jpg";
-import montreuilHouzz31 from "@/assets/montreuil-houzz-31.jpg";
 
 // Cherche-Midi Paris 6ème
 const chercheMidiCover = "/projects/cherche-midi/cover-vue-longueur.jpg";
@@ -730,15 +721,6 @@ export const albums: Album[] = [
       { id: 17, image: montreuilHouzz8, title: "Avant — Vue 8", description: "État avant travaux" },
       { id: 18, image: montreuilHouzz9, title: "Avant — Vue 9", description: "État avant travaux" },
       { id: 19, image: montreuilHouzz10, title: "Avant — Vue 10", description: "État avant travaux" },
-      { id: 32, image: montreuilHouzz23, title: "Avant — Vue 23", description: "État avant travaux" },
-      { id: 33, image: montreuilHouzz24, title: "Avant — Vue 24", description: "État avant travaux" },
-      { id: 34, image: montreuilHouzz25, title: "Avant — Vue 25", description: "État avant travaux" },
-      { id: 35, image: montreuilHouzz26, title: "Avant — Vue 26", description: "État avant travaux" },
-      { id: 36, image: montreuilHouzz27, title: "Avant — Vue 27", description: "État avant travaux" },
-      { id: 37, image: montreuilHouzz28, title: "Avant — Vue 28", description: "État avant travaux" },
-      { id: 38, image: montreuilHouzz29, title: "Avant — Vue 29", description: "État avant travaux" },
-      { id: 39, image: montreuilHouzz30, title: "Avant — Vue 30", description: "État avant travaux" },
-      { id: 40, image: montreuilHouzz31, title: "Avant — Vue 31", description: "État avant travaux" },
     ],
     category: "colore",
   },
