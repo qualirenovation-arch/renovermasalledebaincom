@@ -462,6 +462,9 @@ import laTourAvant5 from "@/assets/la-tour-avant-5.jpg";
 // Courbevoie Lalyre
 import courbevoieLalyreAvant1 from "@/assets/courbevoie-lalyre-avant-1.jpg";
 
+// Courbevoie Saint-Guillaume (en cours)
+import courbevoieStGuillaumeChantier1 from "@/assets/courbevoie-st-guillaume-chantier-1.jpg";
+
 // Saint-Maurice - Rue Edmond Nocard
 import edmondNocard1 from "@/assets/albums/saint-maurice-edmond-nocard/douche-zellige-bleu.jpg";
 import edmondNocard2 from "@/assets/albums/saint-maurice-edmond-nocard/beton-blanc.jpg";
@@ -2014,6 +2017,18 @@ export const inProgressAlbums: Album[] = [
       { id: 1, image: courbevoieLalyreAvant1, title: "Avant — Vue vasque et ensemble", description: "Salle de bain avant rénovation" },
     ],
   },
+  {
+    id: "courbevoie-st-guillaume-encours",
+    slug: "chantier-courbevoie-92-saint-guillaume",
+    title: "Pose carrelage terrazzo",
+    location: "Courbevoie (92) - Rue Saint-Guillaume",
+    description: "Pose de carrelage terrazzo en cours — receveur extra-plat et faïence blanche grand format. Chantier en cours — restez connecté pour découvrir cette transformation !",
+    coverImage: courbevoieStGuillaumeChantier1,
+    isInProgress: true,
+    photos: [
+      { id: 1, image: courbevoieStGuillaumeChantier1, title: "Travaux — Pose carrelage", description: "Terrazzo et faïence en cours de pose" },
+    ],
+  },
 ];
 
 // ===== POSITIONS SUR LA CARTE =====
@@ -2031,6 +2046,7 @@ export const projectLocations: ProjectLocation[] = [
   { id: "port-royal", name: "Port-Royal", area: "5ème", x: 48, y: 60 },
   { id: "la-tour", name: "Rue de la Tour", area: "16ème", x: 25, y: 45 },
   { id: "courbevoie-lalyre", name: "Rue Ernest Lalyre", area: "Courbevoie", x: 15, y: 20 },
+  { id: "courbevoie-st-guillaume-encours", name: "Rue Saint-Guillaume", area: "Courbevoie", x: 12, y: 25 },
 ];
 
 // ===== CATEGORY MAPPING =====
