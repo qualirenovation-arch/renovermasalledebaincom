@@ -139,8 +139,8 @@ export default function Realisations() {
   return (
     <Layout>
       <Helmet>
-        <title>Réalisations salle de bain à Paris | Zellige, Marbre, Terrazzo | Un chantier heureux</title>
-        <meta name="description" content="Découvrez nos réalisations de salles de bain à Paris : zellige, marbre, terrazzo, béton, effet pierre, grès cérame. Des chantiers heureux, maîtrisés et livrés sereinement." />
+        <title>Réalisations salle de bain à Paris et IDF | Zellige, Marbre, Terrazzo | Un chantier heureux</title>
+        <meta name="description" content="Découvrez nos réalisations de salles de bain à Paris et en Île-de-France : zellige, marbre, terrazzo, béton, effet pierre, grès cérame. Des chantiers heureux, maîtrisés et livrés sereinement." />
         <link rel="canonical" href="https://renovermasalledebain.com/realisations" />
       </Helmet>
 
@@ -153,7 +153,7 @@ export default function Realisations() {
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6">
-              Nos réalisations de salles de bain à Paris
+              Nos réalisations de salles de bain à Paris et IDF
             </h1>
             <p className="text-muted-foreground text-lg">
               Chaque projet présenté ici est conçu pour garantir un chantier heureux, sans stress et avec un résultat durable.
