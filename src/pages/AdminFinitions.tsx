@@ -104,6 +104,9 @@ export default function AdminFinitions() {
           <p className="text-muted-foreground">
             Cochez les finitions pour chaque album. Le code sera généré automatiquement.
           </p>
+          <p className="text-sm font-medium mt-2">
+            Total albums : <span className="text-primary">{albums.length}</span>
+          </p>
         </div>
 
         {/* Stats */}
@@ -127,7 +130,10 @@ export default function AdminFinitions() {
             <Table>
               <TableHeader>
                 <TableRow className="bg-muted/50">
-                  <TableHead className="font-semibold min-w-[200px] sticky left-0 bg-muted/50 z-10">
+                  <TableHead className="font-semibold w-12 text-center">
+                    #
+                  </TableHead>
+                  <TableHead className="font-semibold min-w-[200px] sticky left-[48px] bg-muted/50 z-10">
                     Album
                   </TableHead>
                   <TableHead className="font-semibold min-w-[150px]">
@@ -155,7 +161,10 @@ export default function AdminFinitions() {
                       key={album.id}
                       className={index % 2 === 0 ? "bg-background" : "bg-muted/30"}
                     >
-                      <TableCell className="font-medium sticky left-0 bg-inherit z-10">
+                      <TableCell className="text-center font-mono text-sm text-muted-foreground">
+                        {index + 1}
+                      </TableCell>
+                      <TableCell className="font-medium sticky left-[48px] bg-inherit z-10">
                         <div className="max-w-[200px]">
                           <p className="truncate text-sm" title={album.title}>
                             {album.id}
