@@ -43,6 +43,8 @@ export default function Realisations() {
       "beton": 0,
       "effet-pierre": 0,
       "gres-cerame-uni": 0,
+      "gres-cerame-motif": 0,
+      "hexagonal": 0,
       "metro-allonge": 0,
       "mosaique": 0,
     };

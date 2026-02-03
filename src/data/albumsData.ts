@@ -626,6 +626,8 @@ export type FinitionType =
   | "beton"
   | "effet-pierre"
   | "gres-cerame-uni"
+  | "gres-cerame-motif"
+  | "hexagonal"
   | "metro-allonge"
   | "mosaique";
 
