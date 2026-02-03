@@ -1,3 +1,4 @@
+import { memo, useCallback, useMemo } from "react";
 import { motion } from "framer-motion";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
@@ -14,7 +15,7 @@ export type FinitionType =
   | "metro-allonge"
   | "mosaique";
 
-export const FINITION_TYPES: { id: FinitionType; label: string; seoLabel: string }[] = [
+export const FINITION_TYPES: readonly { id: FinitionType; label: string; seoLabel: string }[] = [
   { id: "zellige", label: "Zellige", seoLabel: "zellige" },
   { id: "marbre", label: "Marbre & effet marbre", seoLabel: "marbre" },
   { id: "terrazzo", label: "Terrazzo", seoLabel: "terrazzo" },
@@ -23,7 +24,7 @@ export const FINITION_TYPES: { id: FinitionType; label: string; seoLabel: string
   { id: "gres-cerame-uni", label: "Grès cérame uni", seoLabel: "grès cérame uni" },
   { id: "metro-allonge", label: "Métro & formats allongés", seoLabel: "carrelage métro et formats allongés" },
   { id: "mosaique", label: "Mosaïque", seoLabel: "mosaïque" },
-];
+] as const;
 
 interface FinitionsFilterProps {
   selectedFinitions: FinitionType[];
@@ -31,23 +32,76 @@ interface FinitionsFilterProps {
   finitionCounts: Record<FinitionType, number>;
 }
 
-export function FinitionsFilter({ 
+// Composant individuel de filtre mémorisé
+interface FilterChipProps {
+  finition: typeof FINITION_TYPES[number];
+  isSelected: boolean;
+  count: number;
+  onToggle: (id: FinitionType) => void;
+}
+
+const FilterChip = memo(function FilterChip({ finition, isSelected, count, onToggle }: FilterChipProps) {
+  const handleChange = useCallback(() => {
+    onToggle(finition.id);
+  }, [finition.id, onToggle]);
+
+  return (
+    <label
+      className={`
+        flex items-center gap-2 px-4 py-2 rounded-full cursor-pointer
+        whitespace-nowrap text-sm font-medium transition-all duration-200
+        border select-none shrink-0
+        ${isSelected 
+          ? "bg-wood text-white border-wood shadow-md" 
+          : "bg-secondary/50 text-foreground border-transparent hover:bg-secondary hover:border-border"
+        }
+      `}
+      data-finition={finition.id}
+    >
+      <Checkbox 
+        checked={isSelected}
+        onCheckedChange={handleChange}
+        className={`
+          h-4 w-4 border-2 
+          ${isSelected 
+            ? "border-white data-[state=checked]:bg-white data-[state=checked]:text-wood" 
+            : "border-muted-foreground"
+          }
+        `}
+      />
+      <span>{finition.label}</span>
+      {count > 0 && (
+        <span className={`
+          text-xs px-1.5 py-0.5 rounded-full
+          ${isSelected ? "bg-white/20 text-white" : "bg-muted text-muted-foreground"}
+        `}>
+          {count}
+        </span>
+      )}
+    </label>
+  );
+});
+
+export const FinitionsFilter = memo(function FinitionsFilter({ 
   selectedFinitions, 
   onFinitionsChange,
   finitionCounts 
 }: FinitionsFilterProps) {
   
-  const handleToggle = (finitionId: FinitionType) => {
-    if (selectedFinitions.includes(finitionId)) {
+  // Set pour vérification O(1) au lieu de O(n) avec includes
+  const selectedSet = useMemo(() => new Set(selectedFinitions), [selectedFinitions]);
+  
+  const handleToggle = useCallback((finitionId: FinitionType) => {
+    if (selectedSet.has(finitionId)) {
       onFinitionsChange(selectedFinitions.filter(f => f !== finitionId));
     } else {
       onFinitionsChange([...selectedFinitions, finitionId]);
     }
-  };
+  }, [selectedSet, selectedFinitions, onFinitionsChange]);
 
-  const handleReset = () => {
+  const handleReset = useCallback(() => {
     onFinitionsChange([]);
-  };
+  }, [onFinitionsChange]);
 
   const hasActiveFilters = selectedFinitions.length > 0;
 
@@ -67,47 +121,15 @@ export function FinitionsFilter({
           
           {/* Ligne de filtres avec scroll horizontal mobile */}
           <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-hide">
-            {FINITION_TYPES.map((finition) => {
-              const isSelected = selectedFinitions.includes(finition.id);
-              const count = finitionCounts[finition.id] || 0;
-              
-              return (
-                <label
-                  key={finition.id}
-                  className={`
-                    flex items-center gap-2 px-4 py-2 rounded-full cursor-pointer
-                    whitespace-nowrap text-sm font-medium transition-all duration-200
-                    border select-none shrink-0
-                    ${isSelected 
-                      ? "bg-wood text-white border-wood shadow-md" 
-                      : "bg-secondary/50 text-foreground border-transparent hover:bg-secondary hover:border-border"
-                    }
-                  `}
-                  data-finition={finition.id}
-                >
-                  <Checkbox 
-                    checked={isSelected}
-                    onCheckedChange={() => handleToggle(finition.id)}
-                    className={`
-                      h-4 w-4 border-2 
-                      ${isSelected 
-                        ? "border-white data-[state=checked]:bg-white data-[state=checked]:text-wood" 
-                        : "border-muted-foreground"
-                      }
-                    `}
-                  />
-                  <span>{finition.label}</span>
-                  {count > 0 && (
-                    <span className={`
-                      text-xs px-1.5 py-0.5 rounded-full
-                      ${isSelected ? "bg-white/20 text-white" : "bg-muted text-muted-foreground"}
-                    `}>
-                      {count}
-                    </span>
-                  )}
-                </label>
-              );
-            })}
+          {FINITION_TYPES.map((finition) => (
+              <FilterChip
+                key={finition.id}
+                finition={finition}
+                isSelected={selectedSet.has(finition.id)}
+                count={finitionCounts[finition.id] || 0}
+                onToggle={handleToggle}
+              />
+            ))}
             
             {/* Bouton Réinitialiser */}
             {hasActiveFilters && (
@@ -143,7 +165,7 @@ export function FinitionsFilter({
       </div>
     </div>
   );
-}
+});
 
 // Composant pour afficher quand aucun résultat ne correspond
 export function NoResultsMessage() {
