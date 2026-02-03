@@ -11,7 +11,8 @@ export type FinitionType =
   | "beton"
   | "effet-pierre"
   | "gres-cerame-uni"
-  | "metro-allonge";
+  | "metro-allonge"
+  | "mosaique";
 
 export const FINITION_TYPES: { id: FinitionType; label: string; seoLabel: string }[] = [
   { id: "zellige", label: "Zellige", seoLabel: "zellige" },
@@ -21,6 +22,7 @@ export const FINITION_TYPES: { id: FinitionType; label: string; seoLabel: string
   { id: "effet-pierre", label: "Effet pierre", seoLabel: "effet pierre" },
   { id: "gres-cerame-uni", label: "Grès cérame uni", seoLabel: "grès cérame uni" },
   { id: "metro-allonge", label: "Métro & formats allongés", seoLabel: "carrelage métro et formats allongés" },
+  { id: "mosaique", label: "Mosaïque", seoLabel: "mosaïque" },
 ];
 
 interface FinitionsFilterProps {
@@ -132,8 +134,9 @@ export function FinitionsFilter({
           <span className="font-medium text-foreground"> terrazzo</span>, 
           <span className="font-medium text-foreground"> béton</span>, 
           <span className="font-medium text-foreground"> effet pierre</span>, 
-          <span className="font-medium text-foreground"> grès cérame uni</span>, ainsi que 
-          <span className="font-medium text-foreground"> carrelage métro et formats allongés</span>.
+          <span className="font-medium text-foreground"> grès cérame uni</span>, 
+          <span className="font-medium text-foreground"> carrelage métro et formats allongés</span>, ainsi que 
+          <span className="font-medium text-foreground"> mosaïque</span>.
           Chaque projet est conçu sur mesure, en fonction des contraintes du lieu et des envies de nos clients, 
           avec une mise en œuvre maîtrisée de la conception à la réalisation.
         </p>

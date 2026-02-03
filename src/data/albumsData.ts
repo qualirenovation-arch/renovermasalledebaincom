@@ -626,7 +626,8 @@ export type FinitionType =
   | "beton"
   | "effet-pierre"
   | "gres-cerame-uni"
-  | "metro-allonge";
+  | "metro-allonge"
+  | "mosaique";
 
 export interface Album {
   id: string;
