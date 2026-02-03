@@ -1677,7 +1677,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     id: "vincennes-mr",
     slug: "salle-de-bain-vincennes-94-garcon-noir-blanc",
     title: "SDB Garçon — Noir & Blanc contemporain",
-    location: "Vincennes (94) - Avenue de Paris",
+    location: "Paris 12ème - Cours de Vincennes",
     description: "Salle de bain garçon : noir & blanc, esprit contemporain\n\nPensée pour le garçon de la maison, cette salle de bain à Vincennes a été entièrement transformée pour gagner en confort, modernité et durabilité. Fini le receveur d'angle et le meuble vert daté : place à une douche spacieuse, un carrelage noir & blanc esprit subway et des lignes nettes, faciles à vivre au quotidien.\n\nLe meuble suspendu, la robinetterie noire mate et le miroir rétro-éclairé composent un ensemble sobre et graphique, parfaitement adapté à un univers masculin et évolutif.\n\nRésultat : une salle de bain fonctionnelle, contemporaine et intemporelle, pensée pour accompagner un enfant aujourd'hui… et un adulte demain.",
     coverImage: vincennesMr1,
     photos: [
