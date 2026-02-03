@@ -11,8 +11,6 @@ import {
   projectLocations, 
   Album, 
   Photo,
-  ALBUM_CATEGORIES,
-  AlbumCategory,
   FinitionType
 } from "@/data/albumsData";
 import { 
@@ -28,7 +26,6 @@ export default function Realisations() {
   const [viewMode, setViewMode] = useState<"completed" | "inProgress">("completed");
   const [selectedAlbum, setSelectedAlbum] = useState<Album | null>(null);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<AlbumCategory | null>(null);
   const [selectedFinitions, setSelectedFinitions] = useState<FinitionType[]>([]);
 
   // Defensive: ensure the "completed" list never includes in-progress entries
@@ -61,23 +58,18 @@ export default function Realisations() {
     return counts;
   }, [completedAlbums]);
 
-  // Filter by category if one is selected
-  const categoryFilteredAlbums = selectedCategory 
-    ? completedAlbums.filter((a) => a.category === selectedCategory)
-    : completedAlbums;
-
   // Filter by finitions (OR logic - album matches if it has at least one selected finition)
   const filteredCompletedAlbums = useMemo(() => {
     if (selectedFinitions.length === 0) {
-      return categoryFilteredAlbums;
+      return completedAlbums;
     }
     
-    return categoryFilteredAlbums.filter(album => {
+    return completedAlbums.filter(album => {
       return selectedFinitions.some(finition => 
         album.finitionSol === finition || album.finitionMur === finition
       );
     });
-  }, [categoryFilteredAlbums, selectedFinitions]);
+  }, [completedAlbums, selectedFinitions]);
 
   // Determine if we should show the in-progress view based on URL hash
   useEffect(() => {
@@ -198,44 +190,6 @@ export default function Realisations() {
             </button>
           </div>
           
-          {/* Category Filter - Only show for completed projects */}
-          {viewMode === "completed" && (
-            <motion.div 
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="mt-6"
-            >
-              <div className="flex flex-wrap justify-center gap-2">
-                <button
-                  onClick={() => setSelectedCategory(null)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                    selectedCategory === null
-                      ? "bg-primary text-primary-foreground shadow-md"
-                      : "bg-secondary/50 text-foreground hover:bg-secondary"
-                  }`}
-                >
-                  Tous ({completedAlbums.length})
-                </button>
-                {ALBUM_CATEGORIES.map((cat) => {
-                  const count = completedAlbums.filter(a => a.category === cat.id).length;
-                  if (count === 0) return null;
-                  return (
-                    <button
-                      key={cat.id}
-                      onClick={() => setSelectedCategory(cat.id)}
-                      className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                        selectedCategory === cat.id
-                          ? "bg-primary text-primary-foreground shadow-md"
-                          : "bg-secondary/50 text-foreground hover:bg-secondary"
-                      }`}
-                    >
-                      {cat.emoji} {cat.label} ({count})
-                    </button>
-                  );
-                })}
-              </div>
-            </motion.div>
-          )}
         </div>
       </section>
 
