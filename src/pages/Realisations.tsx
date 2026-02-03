@@ -44,6 +44,7 @@ export default function Realisations() {
       "effet-pierre": 0,
       "gres-cerame-uni": 0,
       "metro-allonge": 0,
+      "mosaique": 0,
     };
     
     completedAlbums.forEach(album => {
