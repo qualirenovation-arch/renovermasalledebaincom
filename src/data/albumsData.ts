@@ -558,6 +558,38 @@ import montreuilSuite6 from "@/assets/montreuil-suite-6.jpg";
 import montreuilSuite7 from "@/assets/montreuil-suite-7.jpg";
 import montreuilSuite8 from "@/assets/montreuil-suite-8.jpg";
 import montreuilSuite9 from "@/assets/montreuil-suite-9.jpg";
+// Montreuil Suite - Photos Houzz AVANT
+import montreuilHouzz1 from "@/assets/montreuil-houzz-1.jpg";
+import montreuilHouzz2 from "@/assets/montreuil-houzz-2.jpg";
+import montreuilHouzz3 from "@/assets/montreuil-houzz-3.jpg";
+import montreuilHouzz4 from "@/assets/montreuil-houzz-4.jpg";
+import montreuilHouzz5 from "@/assets/montreuil-houzz-5.jpg";
+import montreuilHouzz6 from "@/assets/montreuil-houzz-6.jpg";
+import montreuilHouzz7 from "@/assets/montreuil-houzz-7.jpg";
+import montreuilHouzz8 from "@/assets/montreuil-houzz-8.jpg";
+import montreuilHouzz9 from "@/assets/montreuil-houzz-9.jpg";
+import montreuilHouzz10 from "@/assets/montreuil-houzz-10.jpg";
+import montreuilHouzz11 from "@/assets/montreuil-houzz-11.jpg";
+import montreuilHouzz12 from "@/assets/montreuil-houzz-12.jpg";
+import montreuilHouzz13 from "@/assets/montreuil-houzz-13.jpg";
+import montreuilHouzz14 from "@/assets/montreuil-houzz-14.jpg";
+import montreuilHouzz15 from "@/assets/montreuil-houzz-15.jpg";
+import montreuilHouzz16 from "@/assets/montreuil-houzz-16.jpg";
+import montreuilHouzz17 from "@/assets/montreuil-houzz-17.jpg";
+import montreuilHouzz18 from "@/assets/montreuil-houzz-18.jpg";
+import montreuilHouzz19 from "@/assets/montreuil-houzz-19.jpg";
+import montreuilHouzz20 from "@/assets/montreuil-houzz-20.jpg";
+import montreuilHouzz21 from "@/assets/montreuil-houzz-21.jpg";
+import montreuilHouzz22 from "@/assets/montreuil-houzz-22.jpg";
+import montreuilHouzz23 from "@/assets/montreuil-houzz-23.jpg";
+import montreuilHouzz24 from "@/assets/montreuil-houzz-24.jpg";
+import montreuilHouzz25 from "@/assets/montreuil-houzz-25.jpg";
+import montreuilHouzz26 from "@/assets/montreuil-houzz-26.jpg";
+import montreuilHouzz27 from "@/assets/montreuil-houzz-27.jpg";
+import montreuilHouzz28 from "@/assets/montreuil-houzz-28.jpg";
+import montreuilHouzz29 from "@/assets/montreuil-houzz-29.jpg";
+import montreuilHouzz30 from "@/assets/montreuil-houzz-30.jpg";
+import montreuilHouzz31 from "@/assets/montreuil-houzz-31.jpg";
 
 // Cherche-Midi Paris 6ème
 const chercheMidiCover = "/projects/cherche-midi/cover-vue-longueur.jpg";
@@ -699,6 +731,38 @@ export const albums: Album[] = [
       { id: 7, image: montreuilSuite7, title: "Niche encastrée", description: "Double niche en zellige turquoise avec étagère noire" },
       { id: 8, image: montreuilSuite8, title: "Pommeau de douche", description: "Pommeau XXL noir sur mur zellige" },
       { id: 9, image: montreuilSuite9, title: "WC chevron noir", description: "WC suspendu avec carrelage chevron brillant et niche chêne" },
+      // Photos Houzz AVANT TRAVAUX
+      { id: 10, image: montreuilHouzz1, title: "Avant — Vue 1", description: "État avant travaux" },
+      { id: 11, image: montreuilHouzz2, title: "Avant — Vue 2", description: "État avant travaux" },
+      { id: 12, image: montreuilHouzz3, title: "Avant — Vue 3", description: "État avant travaux" },
+      { id: 13, image: montreuilHouzz4, title: "Avant — Vue 4", description: "État avant travaux" },
+      { id: 14, image: montreuilHouzz5, title: "Avant — Vue 5", description: "État avant travaux" },
+      { id: 15, image: montreuilHouzz6, title: "Avant — Vue 6", description: "État avant travaux" },
+      { id: 16, image: montreuilHouzz7, title: "Avant — Vue 7", description: "État avant travaux" },
+      { id: 17, image: montreuilHouzz8, title: "Avant — Vue 8", description: "État avant travaux" },
+      { id: 18, image: montreuilHouzz9, title: "Avant — Vue 9", description: "État avant travaux" },
+      { id: 19, image: montreuilHouzz10, title: "Avant — Vue 10", description: "État avant travaux" },
+      { id: 20, image: montreuilHouzz11, title: "Avant — Vue 11", description: "État avant travaux" },
+      { id: 21, image: montreuilHouzz12, title: "Avant — Vue 12", description: "État avant travaux" },
+      { id: 22, image: montreuilHouzz13, title: "Avant — Vue 13", description: "État avant travaux" },
+      { id: 23, image: montreuilHouzz14, title: "Avant — Vue 14", description: "État avant travaux" },
+      { id: 24, image: montreuilHouzz15, title: "Avant — Vue 15", description: "État avant travaux" },
+      { id: 25, image: montreuilHouzz16, title: "Avant — Vue 16", description: "État avant travaux" },
+      { id: 26, image: montreuilHouzz17, title: "Avant — Vue 17", description: "État avant travaux" },
+      { id: 27, image: montreuilHouzz18, title: "Avant — Vue 18", description: "État avant travaux" },
+      { id: 28, image: montreuilHouzz19, title: "Avant — Vue 19", description: "État avant travaux" },
+      { id: 29, image: montreuilHouzz20, title: "Avant — Vue 20", description: "État avant travaux" },
+      { id: 30, image: montreuilHouzz21, title: "Avant — Vue 21", description: "État avant travaux" },
+      { id: 31, image: montreuilHouzz22, title: "Avant — Vue 22", description: "État avant travaux" },
+      { id: 32, image: montreuilHouzz23, title: "Avant — Vue 23", description: "État avant travaux" },
+      { id: 33, image: montreuilHouzz24, title: "Avant — Vue 24", description: "État avant travaux" },
+      { id: 34, image: montreuilHouzz25, title: "Avant — Vue 25", description: "État avant travaux" },
+      { id: 35, image: montreuilHouzz26, title: "Avant — Vue 26", description: "État avant travaux" },
+      { id: 36, image: montreuilHouzz27, title: "Avant — Vue 27", description: "État avant travaux" },
+      { id: 37, image: montreuilHouzz28, title: "Avant — Vue 28", description: "État avant travaux" },
+      { id: 38, image: montreuilHouzz29, title: "Avant — Vue 29", description: "État avant travaux" },
+      { id: 39, image: montreuilHouzz30, title: "Avant — Vue 30", description: "État avant travaux" },
+      { id: 40, image: montreuilHouzz31, title: "Avant — Vue 31", description: "État avant travaux" },
     ],
     category: "colore",
   },
