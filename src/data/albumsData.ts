@@ -558,17 +558,12 @@ import montreuilSuite6 from "@/assets/montreuil-suite-6.jpg";
 import montreuilSuite7 from "@/assets/montreuil-suite-7.jpg";
 import montreuilSuite8 from "@/assets/montreuil-suite-8.jpg";
 import montreuilSuite9 from "@/assets/montreuil-suite-9.jpg";
-// Montreuil Suite - Photos Houzz AVANT
-import montreuilHouzz1 from "@/assets/montreuil-houzz-1.jpg";
-import montreuilHouzz2 from "@/assets/montreuil-houzz-2.jpg";
-import montreuilHouzz3 from "@/assets/montreuil-houzz-3.jpg";
-import montreuilHouzz4 from "@/assets/montreuil-houzz-4.jpg";
-import montreuilHouzz5 from "@/assets/montreuil-houzz-5.jpg";
-
-import montreuilHouzz7 from "@/assets/montreuil-houzz-7.jpg";
-import montreuilHouzz8 from "@/assets/montreuil-houzz-8.jpg";
-import montreuilHouzz9 from "@/assets/montreuil-houzz-9.jpg";
-import montreuilHouzz10 from "@/assets/montreuil-houzz-10.jpg";
+// Montreuil Suite - Photos Houzz AVANT (récupérées depuis Houzz)
+import montreuilAvant1 from "@/assets/montreuil-avant-1.jpg";
+import montreuilAvant2 from "@/assets/montreuil-avant-2.jpg";
+import montreuilAvant3 from "@/assets/montreuil-avant-3.jpg";
+import montreuilAvant4 from "@/assets/montreuil-avant-4.jpg";
+import montreuilAvant5 from "@/assets/montreuil-avant-5.jpg";
 
 // Cherche-Midi Paris 6ème
 const chercheMidiCover = "/projects/cherche-midi/cover-vue-longueur.jpg";
@@ -710,17 +705,12 @@ export const albums: Album[] = [
       { id: 7, image: montreuilSuite7, title: "Niche encastrée", description: "Double niche en zellige turquoise avec étagère noire" },
       { id: 8, image: montreuilSuite8, title: "Pommeau de douche", description: "Pommeau XXL noir sur mur zellige" },
       { id: 9, image: montreuilSuite9, title: "WC chevron noir", description: "WC suspendu avec carrelage chevron brillant et niche chêne" },
-      // Photos Houzz AVANT TRAVAUX
-      { id: 10, image: montreuilHouzz1, title: "Avant — Vue 1", description: "État avant travaux" },
-      { id: 11, image: montreuilHouzz2, title: "Avant — Vue 2", description: "État avant travaux" },
-      { id: 12, image: montreuilHouzz3, title: "Avant — Vue 3", description: "État avant travaux" },
-      { id: 13, image: montreuilHouzz4, title: "Avant — Vue 4", description: "État avant travaux" },
-      { id: 14, image: montreuilHouzz5, title: "Avant — Vue 5", description: "État avant travaux" },
-      
-      { id: 16, image: montreuilHouzz7, title: "Avant — Vue 7", description: "État avant travaux" },
-      { id: 17, image: montreuilHouzz8, title: "Avant — Vue 8", description: "État avant travaux" },
-      { id: 18, image: montreuilHouzz9, title: "Avant — Vue 9", description: "État avant travaux" },
-      { id: 19, image: montreuilHouzz10, title: "Avant — Vue 10", description: "État avant travaux" },
+      // Photos Houzz AVANT TRAVAUX (récupérées depuis houzz.fr)
+      { id: 10, image: montreuilAvant1, title: "Avant — Duplex à rénover", description: "Vue de l'espace avant travaux" },
+      { id: 11, image: montreuilAvant2, title: "Avant — Chambre", description: "État initial de la chambre" },
+      { id: 12, image: montreuilAvant3, title: "Avant — Mur à percer", description: "Emplacement futur de la verrière" },
+      { id: 13, image: montreuilAvant4, title: "Avant — Salle d'eau existante", description: "Ancien agencement" },
+      { id: 14, image: montreuilAvant5, title: "Avant — WC existant", description: "État initial des sanitaires" },
     ],
     category: "colore",
   },
