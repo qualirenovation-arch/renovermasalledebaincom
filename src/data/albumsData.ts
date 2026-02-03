@@ -548,6 +548,17 @@ import alexandreCabanelAvant10 from "@/assets/alexandre-cabanel-avant-10.jpg";
 import alexandreCabanelAvant11 from "@/assets/alexandre-cabanel-avant-11.jpg";
 import alexandreCabanelAvant12 from "@/assets/alexandre-cabanel-avant-12.jpg";
 
+// Montreuil Suite Parentale
+import montreuilSuite1 from "@/assets/montreuil-suite-1.jpg";
+import montreuilSuite2 from "@/assets/montreuil-suite-2.jpg";
+import montreuilSuite3 from "@/assets/montreuil-suite-3.jpg";
+import montreuilSuite4 from "@/assets/montreuil-suite-4.jpg";
+import montreuilSuite5 from "@/assets/montreuil-suite-5.jpg";
+import montreuilSuite6 from "@/assets/montreuil-suite-6.jpg";
+import montreuilSuite7 from "@/assets/montreuil-suite-7.jpg";
+import montreuilSuite8 from "@/assets/montreuil-suite-8.jpg";
+import montreuilSuite9 from "@/assets/montreuil-suite-9.jpg";
+
 // Cherche-Midi Paris 6ème
 const chercheMidiCover = "/projects/cherche-midi/cover-vue-longueur.jpg";
 const chercheMidiVasque = "/projects/cherche-midi/vasque-face.jpg";
@@ -670,6 +681,26 @@ export const albums: Album[] = [
     ],
     category: "noir-blanc",
 
+  },
+  {
+    id: "montreuil-suite",
+    slug: "suite-parentale-montreuil-93-renovation-verriere-zellige-turquoise",
+    title: "Suite parentale Montreuil — Verrière atelier, zellige turquoise et WC chevron noir",
+    location: "Montreuil (93) - Rue Ernest Savart",
+    description: "Ce projet à Montreuil est bien plus qu'une simple rénovation. C'est l'histoire d'un jeune couple préparant l'arrivée de leur petite princesse — une aventure humaine incroyable où le chantier accompagne les dernières semaines avant la naissance.\n\nLa suite parentale a été entièrement repensée avec une verrière atelier noire séparant la chambre de la salle d'eau, inondant l'espace de lumière naturelle. Le zellige turquoise apporte une touche artisanale et colorée à la douche, sublimé par une robinetterie noire mate et une niche double encastrée.\n\nLe meuble vasque en chêne massif avec vasque à poser et paniers de rangement osier apporte chaleur et authenticité. Les appliques laiton et verre ajoutent une touche vintage chic. Le WC séparé ose le carrelage chevron noir brillant pour un effet graphique saisissant.\n\n👉 J'adore mon métier : on entre dans l'intimité des gens, on rencontre des personnes différentes et incroyables. Le respect s'impose, la rigueur aussi. C'est ça, un chantier heureux.",
+    coverImage: montreuilSuite1,
+    photos: [
+      { id: 1, image: montreuilSuite1, title: "Chambre & verrière", description: "Vue depuis le lit avec placards sur mesure et verrière atelier" },
+      { id: 2, image: montreuilSuite2, title: "Ambiance chambre", description: "Tête de lit bois, suspension osier et verrière" },
+      { id: 3, image: montreuilSuite3, title: "Verrière lumineuse", description: "La verrière atelier apporte la lumière de la fenêtre" },
+      { id: 4, image: montreuilSuite4, title: "Meuble vasque chêne", description: "Vasque à poser, miroir laiton et paniers osier" },
+      { id: 5, image: montreuilSuite5, title: "Vue de la fenêtre", description: "Lumière naturelle et robinetterie noire" },
+      { id: 6, image: montreuilSuite6, title: "Douche zellige turquoise", description: "Barre de douche noire et niche carrelée" },
+      { id: 7, image: montreuilSuite7, title: "Niche encastrée", description: "Double niche en zellige turquoise avec étagère noire" },
+      { id: 8, image: montreuilSuite8, title: "Pommeau de douche", description: "Pommeau XXL noir sur mur zellige" },
+      { id: 9, image: montreuilSuite9, title: "WC chevron noir", description: "WC suspendu avec carrelage chevron brillant et niche chêne" },
+    ],
+    category: "colore",
   },
   // ========== 🪵 BOIS & NATURE / SCANDINAVE ==========
   {
@@ -1910,6 +1941,7 @@ const albumCategoryMap: Record<string, AlbumCategory> = {
   "daumesnil": "colore",
   "saint-maur-petit-beaubourg": "colore",
   "saint-maurice-edmond-nocard": "colore",
+  "montreuil-suite": "colore",
   
   // 📐 OPTIMISATION PETIT ESPACE
   "cherche-midi": "optimisation",
