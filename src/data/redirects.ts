@@ -113,6 +113,8 @@ export const redirectMap: Record<string, string> = {
   "projet-pantin-93-industrielle": "salle-de-bain-pantin-93-style-industriel",
   "projet-montreuil-93-naturelle": "salle-de-bain-montreuil-93-naturelle",
   "salle-de-bain-saint-ouen-93-renovation": "salle-de-bain-saint-ouen-93-renovation-moderne",
+  "suite-parentale-montreuil-93-verriere-zellige": "suite-parentale-montreuil-93-renovation-verriere-zellige-turquoise",
+  "montreuil-suite-parentale": "suite-parentale-montreuil-93-renovation-verriere-zellige-turquoise",
   
   // Banlieue 94
   "projet-saint-maur-94-suite-parentale": "salle-de-bain-saint-maur-94-suite-parentale",
