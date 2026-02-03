@@ -618,6 +618,16 @@ export const ALBUM_CATEGORIES: { id: AlbumCategory; label: string; emoji: string
   { id: "degat-eaux", label: "Dégât des eaux", emoji: "💧" },
 ];
 
+// Types de finitions pour les filtres
+export type FinitionType = 
+  | "zellige"
+  | "marbre"
+  | "terrazzo"
+  | "beton"
+  | "effet-pierre"
+  | "gres-cerame-uni"
+  | "metro-allonge";
+
 export interface Album {
   id: string;
   slug: string; // URL SEO-friendly
@@ -633,6 +643,8 @@ export interface Album {
   instagramLinks?: string[];
   ctaButton?: { label: string; link: string };
   category?: AlbumCategory;
+  finitionSol?: FinitionType; // Carrelage sol principal
+  finitionMur?: FinitionType; // Carrelage mur (optionnel)
 }
 
 // ===== ALBUMS TERMINÉS =====
@@ -655,6 +667,7 @@ export const albums: Album[] = [
       { id: 6, image: templeAvant2, title: "Avant — Vue rangements", description: "Anciens placards et carrelage bleu" },
     ],
     category: "noir-blanc",
+    finitionSol: "gres-cerame-uni",
   },
   {
     id: "alexandre-cabanel",
@@ -686,7 +699,8 @@ export const albums: Album[] = [
       { id: 20, image: alexandreCabanelAvant12, title: "Avant — Double vasque angle", description: "Vue d'ensemble vasques avant travaux" },
     ],
     category: "noir-blanc",
-
+    finitionSol: "marbre",
+    finitionMur: "marbre",
   },
   {
     id: "montreuil-suite",
@@ -713,6 +727,8 @@ export const albums: Album[] = [
       { id: 14, image: montreuilAvant5, title: "Avant — WC existant", description: "État initial des sanitaires" },
     ],
     category: "colore",
+    finitionSol: "gres-cerame-uni",
+    finitionMur: "zellige",
   },
   // ========== 🪵 BOIS & NATURE / SCANDINAVE ==========
   {
@@ -733,6 +749,7 @@ export const albums: Album[] = [
       { id: 8, image: buffonAvant1, title: "Avant — Ancienne SDB", description: "Salle de bain vétuste à rénover" },
       { id: 9, image: buffonAvant2, title: "Avant — Vue d'ensemble", description: "Espace mal exploité" },
     ],
+    finitionSol: "gres-cerame-uni",
   },
   {
     id: "rue-des-puits",
@@ -753,6 +770,8 @@ export const albums: Album[] = [
       { id: 8, image: ruePuitsAvant2, title: "Avant — Baignoire", description: "Baignoire et mosaïque" },
       { id: 9, image: ruePuitsAvant3, title: "Avant — Détail", description: "Carrelage daté" },
     ],
+    finitionSol: "marbre",
+    finitionMur: "marbre",
   },
   // ========== 🏙️ OPTIMISATION ESPACE PARISIEN ==========
   {
@@ -848,8 +867,9 @@ Sans ces travaux préparatoires lourds, la rénovation n'aurait tout simplement 
       { id: 7, image: stGermainAvant3, title: "Avant — Détail", description: "Équipements datés" },
       { id: 8, image: stGermainAvant4, title: "Avant — WC", description: "WC à remplacer" },
     ],
+    finitionSol: "gres-cerame-uni",
+    finitionMur: "zellige",
   },
-  // ---------- Suite MARBRE & LUXE ----------
   {
     id: "matignon",
     slug: "salle-de-bain-paris-8-renovation-locative-douche-italienne",
@@ -868,6 +888,8 @@ Sans ces travaux préparatoires lourds, la rénovation n'aurait tout simplement 
       { id: 7, image: matignonAvant3, title: "Avant — Baignoire rose", description: "Vasque et baignoire roses datées" },
       { id: 8, image: matignonAvant4, title: "Avant — Détail", description: "Carrelage marbre et équipements vétustes" },
     ],
+    finitionSol: "marbre",
+    finitionMur: "marbre",
   },
   {
     id: "st-honore",
@@ -889,6 +911,8 @@ Sans ces travaux préparatoires lourds, la rénovation n'aurait tout simplement 
       { id: 6, image: stHonore6, title: "Vue d'ensemble", description: "Harmonie marbre blanc et noir mat" },
       { id: 7, image: stHonore7, title: "Perspective baignoire", description: "Vue sur baignoire îlot et douche" },
     ],
+    finitionSol: "marbre",
+    finitionMur: "marbre",
   },
   {
     id: "sergent-beauchart",
@@ -938,8 +962,9 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 11, image: taitbout2, title: "Avant — Baignoire", description: "Baignoire à transformer" },
       { id: 12, image: taitbout3, title: "Avant — Vue générale", description: "Configuration existante" },
     ],
+    finitionSol: "effet-pierre",
+    finitionMur: "effet-pierre",
   },
-  // ---------- Suite NOIR & BLANC ----------
   {
     id: "paris10-jemmapes",
     slug: "salle-de-bain-paris-10-renovation-style-masculin-jemmapes",
@@ -957,6 +982,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 2, image: jemmapes2, title: "Après — Douche", description: "Paroi vitrée et carrelage foncé" },
       { id: 3, image: jemmapes3, title: "Après — Détails", description: "Finitions noires élégantes" },
     ],
+    finitionSol: "gres-cerame-uni",
   },
   {
     id: "paris10-dore",
@@ -971,6 +997,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 3, image: gallery9, title: "Après — Robinetterie", description: "Laiton brossé doré" },
       { id: 4, image: gallery10, title: "Après — Ciel de pluie", description: "Douche de pluie plafond doré" },
     ],
+    finitionSol: "marbre",
+    finitionMur: "marbre",
   },
   {
     id: "faubourg-stmartin",

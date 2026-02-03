@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -12,8 +12,15 @@ import {
   Album, 
   Photo,
   ALBUM_CATEGORIES,
-  AlbumCategory
+  AlbumCategory,
+  FinitionType
 } from "@/data/albumsData";
+import { 
+  FinitionsFilter, 
+  NoResultsMessage, 
+  FinitionsBadge,
+  FINITION_TYPES 
+} from "@/components/realisations/FinitionsFilter";
 
 export default function Realisations() {
   const location = useLocation();
@@ -22,15 +29,52 @@ export default function Realisations() {
   const [selectedAlbum, setSelectedAlbum] = useState<Album | null>(null);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<AlbumCategory | null>(null);
+  const [selectedFinitions, setSelectedFinitions] = useState<FinitionType[]>([]);
 
   // Defensive: ensure the "completed" list never includes in-progress entries
-  // (even if data is accidentally mixed)
   const completedAlbums = albums.filter((a) => !a.isInProgress);
   
+  // Calculer les compteurs de finitions
+  const finitionCounts = useMemo(() => {
+    const counts: Record<FinitionType, number> = {
+      "zellige": 0,
+      "marbre": 0,
+      "terrazzo": 0,
+      "beton": 0,
+      "effet-pierre": 0,
+      "gres-cerame-uni": 0,
+      "metro-allonge": 0,
+    };
+    
+    completedAlbums.forEach(album => {
+      if (album.finitionSol) {
+        counts[album.finitionSol]++;
+      }
+      if (album.finitionMur && album.finitionMur !== album.finitionSol) {
+        counts[album.finitionMur]++;
+      }
+    });
+    
+    return counts;
+  }, [completedAlbums]);
+
   // Filter by category if one is selected
-  const filteredCompletedAlbums = selectedCategory 
+  const categoryFilteredAlbums = selectedCategory 
     ? completedAlbums.filter((a) => a.category === selectedCategory)
     : completedAlbums;
+
+  // Filter by finitions (OR logic - album matches if it has at least one selected finition)
+  const filteredCompletedAlbums = useMemo(() => {
+    if (selectedFinitions.length === 0) {
+      return categoryFilteredAlbums;
+    }
+    
+    return categoryFilteredAlbums.filter(album => {
+      return selectedFinitions.some(finition => 
+        album.finitionSol === finition || album.finitionMur === finition
+      );
+    });
+  }, [categoryFilteredAlbums, selectedFinitions]);
 
   // Determine if we should show the in-progress view based on URL hash
   useEffect(() => {
@@ -87,11 +131,15 @@ export default function Realisations() {
     }
   };
 
+  const handleFinitionsChange = (finitions: FinitionType[]) => {
+    setSelectedFinitions(finitions);
+  };
+
   return (
     <Layout>
       <Helmet>
-        <title>Réalisations salle de bain à Paris | Un chantier heureux</title>
-        <meta name="description" content="Découvrez nos réalisations de salles de bain à Paris. Des chantiers heureux, maîtrisés et livrés sereinement." />
+        <title>Réalisations salle de bain à Paris | Zellige, Marbre, Terrazzo | Un chantier heureux</title>
+        <meta name="description" content="Découvrez nos réalisations de salles de bain à Paris : zellige, marbre, terrazzo, béton, effet pierre, grès cérame. Des chantiers heureux, maîtrisés et livrés sereinement." />
         <link rel="canonical" href="https://renovermasalledebain.com/realisations" />
       </Helmet>
 
@@ -188,6 +236,15 @@ export default function Realisations() {
         </div>
       </section>
 
+      {/* Finitions Filter - Only for completed projects */}
+      {viewMode === "completed" && (
+        <FinitionsFilter
+          selectedFinitions={selectedFinitions}
+          onFinitionsChange={handleFinitionsChange}
+          finitionCounts={finitionCounts}
+        />
+      )}
+
       {/* Paris Map for In Progress */}
       {viewMode === "inProgress" && !selectedAlbum && (
         <section className="py-12 bg-stone">
@@ -277,49 +334,63 @@ export default function Realisations() {
         <div className="container-custom">
           <AnimatePresence mode="wait">
             {!selectedAlbum ? (
-              <motion.div
-                key="albums"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-              >
-                {currentAlbums.map((album, index) => (
+              <>
+                {/* Message "Premier chantier" si aucun résultat */}
+                {viewMode === "completed" && currentAlbums.length === 0 && selectedFinitions.length > 0 ? (
+                  <NoResultsMessage />
+                ) : (
                   <motion.div
-                    key={album.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="group cursor-pointer"
-                    onClick={() => handleAlbumClick(album)}
+                    key="albums"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                   >
-                    <div className="card-elevated overflow-hidden">
-                      <div className="aspect-[4/3] overflow-hidden relative">
-                        <img 
-                          src={album.coverImage} 
-                          alt={album.title}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                        />
-                        {album.isInProgress && (
-                          <div className="absolute top-4 left-4 px-3 py-1 bg-wood text-white text-xs font-medium rounded-full">
-                            🚧 En cours
+                    {currentAlbums.map((album, index) => (
+                      <motion.div
+                        key={album.id}
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                        className="group cursor-pointer"
+                        onClick={() => handleAlbumClick(album)}
+                        data-finition-sol={album.finitionSol}
+                        data-finition-mur={album.finitionMur}
+                      >
+                        <div className="card-elevated overflow-hidden">
+                          <div className="aspect-[4/3] overflow-hidden relative">
+                            <img 
+                              src={album.coverImage} 
+                              alt={album.title}
+                              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            />
+                            {album.isInProgress && (
+                              <div className="absolute top-4 left-4 px-3 py-1 bg-wood text-white text-xs font-medium rounded-full">
+                                🚧 En cours
+                              </div>
+                            )}
+                            <div className="absolute bottom-4 right-4 px-3 py-1 bg-black/60 text-white text-xs font-medium rounded-full">
+                              {album.photos.length} photos
+                            </div>
                           </div>
-                        )}
-                        <div className="absolute bottom-4 right-4 px-3 py-1 bg-black/60 text-white text-xs font-medium rounded-full">
-                          {album.photos.length} photos
+                          <div className="p-6">
+                            <p className="text-sm text-wood font-medium mb-2">{album.location}</p>
+                            <h3 className="font-display text-xl font-semibold mb-2">
+                              {album.title}
+                            </h3>
+                            <p className="text-muted-foreground text-sm line-clamp-2">{album.description}</p>
+                            {/* SEO: Finitions utilisées - texte visible et indexable */}
+                            <FinitionsBadge 
+                              finitionSol={album.finitionSol} 
+                              finitionMur={album.finitionMur} 
+                            />
+                          </div>
                         </div>
-                      </div>
-                      <div className="p-6">
-                        <p className="text-sm text-wood font-medium mb-2">{album.location}</p>
-                        <h3 className="font-display text-xl font-semibold mb-2">
-                          {album.title}
-                        </h3>
-                        <p className="text-muted-foreground text-sm line-clamp-2">{album.description}</p>
-                      </div>
-                    </div>
+                      </motion.div>
+                    ))}
                   </motion.div>
-                ))}
-              </motion.div>
+                )}
+              </>
             ) : (
               <motion.div
                 key="album-detail"
