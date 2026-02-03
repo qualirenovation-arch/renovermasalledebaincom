@@ -564,7 +564,7 @@ import montreuilHouzz2 from "@/assets/montreuil-houzz-2.jpg";
 import montreuilHouzz3 from "@/assets/montreuil-houzz-3.jpg";
 import montreuilHouzz4 from "@/assets/montreuil-houzz-4.jpg";
 import montreuilHouzz5 from "@/assets/montreuil-houzz-5.jpg";
-import montreuilHouzz6 from "@/assets/montreuil-houzz-6.jpg";
+
 import montreuilHouzz7 from "@/assets/montreuil-houzz-7.jpg";
 import montreuilHouzz8 from "@/assets/montreuil-houzz-8.jpg";
 import montreuilHouzz9 from "@/assets/montreuil-houzz-9.jpg";
@@ -725,7 +725,7 @@ export const albums: Album[] = [
       { id: 12, image: montreuilHouzz3, title: "Avant — Vue 3", description: "État avant travaux" },
       { id: 13, image: montreuilHouzz4, title: "Avant — Vue 4", description: "État avant travaux" },
       { id: 14, image: montreuilHouzz5, title: "Avant — Vue 5", description: "État avant travaux" },
-      { id: 15, image: montreuilHouzz6, title: "Avant — Vue 6", description: "État avant travaux" },
+      
       { id: 16, image: montreuilHouzz7, title: "Avant — Vue 7", description: "État avant travaux" },
       { id: 17, image: montreuilHouzz8, title: "Avant — Vue 8", description: "État avant travaux" },
       { id: 18, image: montreuilHouzz9, title: "Avant — Vue 9", description: "État avant travaux" },
