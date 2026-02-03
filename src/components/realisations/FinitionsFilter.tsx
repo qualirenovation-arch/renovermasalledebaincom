@@ -12,6 +12,8 @@ export type FinitionType =
   | "beton"
   | "effet-pierre"
   | "gres-cerame-uni"
+  | "gres-cerame-motif"
+  | "hexagonal"
   | "metro-allonge"
   | "mosaique";
 
@@ -22,6 +24,8 @@ export const FINITION_TYPES: readonly { id: FinitionType; label: string; seoLabe
   { id: "beton", label: "Béton", seoLabel: "béton" },
   { id: "effet-pierre", label: "Effet pierre", seoLabel: "effet pierre" },
   { id: "gres-cerame-uni", label: "Grès cérame uni", seoLabel: "grès cérame uni" },
+  { id: "gres-cerame-motif", label: "Grès cérame motif", seoLabel: "grès cérame à motif" },
+  { id: "hexagonal", label: "Hexagonal", seoLabel: "carrelage hexagonal" },
   { id: "metro-allonge", label: "Métro & formats allongés", seoLabel: "carrelage métro et formats allongés" },
   { id: "mosaique", label: "Mosaïque", seoLabel: "mosaïque" },
 ] as const;
