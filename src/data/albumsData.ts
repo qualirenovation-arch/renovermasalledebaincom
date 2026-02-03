@@ -569,18 +569,6 @@ import montreuilHouzz7 from "@/assets/montreuil-houzz-7.jpg";
 import montreuilHouzz8 from "@/assets/montreuil-houzz-8.jpg";
 import montreuilHouzz9 from "@/assets/montreuil-houzz-9.jpg";
 import montreuilHouzz10 from "@/assets/montreuil-houzz-10.jpg";
-import montreuilHouzz11 from "@/assets/montreuil-houzz-11.jpg";
-import montreuilHouzz12 from "@/assets/montreuil-houzz-12.jpg";
-import montreuilHouzz13 from "@/assets/montreuil-houzz-13.jpg";
-import montreuilHouzz14 from "@/assets/montreuil-houzz-14.jpg";
-import montreuilHouzz15 from "@/assets/montreuil-houzz-15.jpg";
-import montreuilHouzz16 from "@/assets/montreuil-houzz-16.jpg";
-import montreuilHouzz17 from "@/assets/montreuil-houzz-17.jpg";
-import montreuilHouzz18 from "@/assets/montreuil-houzz-18.jpg";
-import montreuilHouzz19 from "@/assets/montreuil-houzz-19.jpg";
-import montreuilHouzz20 from "@/assets/montreuil-houzz-20.jpg";
-import montreuilHouzz21 from "@/assets/montreuil-houzz-21.jpg";
-import montreuilHouzz22 from "@/assets/montreuil-houzz-22.jpg";
 import montreuilHouzz23 from "@/assets/montreuil-houzz-23.jpg";
 import montreuilHouzz24 from "@/assets/montreuil-houzz-24.jpg";
 import montreuilHouzz25 from "@/assets/montreuil-houzz-25.jpg";
@@ -742,18 +730,6 @@ export const albums: Album[] = [
       { id: 17, image: montreuilHouzz8, title: "Avant — Vue 8", description: "État avant travaux" },
       { id: 18, image: montreuilHouzz9, title: "Avant — Vue 9", description: "État avant travaux" },
       { id: 19, image: montreuilHouzz10, title: "Avant — Vue 10", description: "État avant travaux" },
-      { id: 20, image: montreuilHouzz11, title: "Avant — Vue 11", description: "État avant travaux" },
-      { id: 21, image: montreuilHouzz12, title: "Avant — Vue 12", description: "État avant travaux" },
-      { id: 22, image: montreuilHouzz13, title: "Avant — Vue 13", description: "État avant travaux" },
-      { id: 23, image: montreuilHouzz14, title: "Avant — Vue 14", description: "État avant travaux" },
-      { id: 24, image: montreuilHouzz15, title: "Avant — Vue 15", description: "État avant travaux" },
-      { id: 25, image: montreuilHouzz16, title: "Avant — Vue 16", description: "État avant travaux" },
-      { id: 26, image: montreuilHouzz17, title: "Avant — Vue 17", description: "État avant travaux" },
-      { id: 27, image: montreuilHouzz18, title: "Avant — Vue 18", description: "État avant travaux" },
-      { id: 28, image: montreuilHouzz19, title: "Avant — Vue 19", description: "État avant travaux" },
-      { id: 29, image: montreuilHouzz20, title: "Avant — Vue 20", description: "État avant travaux" },
-      { id: 30, image: montreuilHouzz21, title: "Avant — Vue 21", description: "État avant travaux" },
-      { id: 31, image: montreuilHouzz22, title: "Avant — Vue 22", description: "État avant travaux" },
       { id: 32, image: montreuilHouzz23, title: "Avant — Vue 23", description: "État avant travaux" },
       { id: 33, image: montreuilHouzz24, title: "Avant — Vue 24", description: "État avant travaux" },
       { id: 34, image: montreuilHouzz25, title: "Avant — Vue 25", description: "État avant travaux" },
