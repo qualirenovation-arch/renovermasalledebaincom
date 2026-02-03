@@ -1,21 +1,12 @@
 import { Layout } from "@/components/layout/Layout";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import { Eye, AlertTriangle, Shield, Droplets, CheckCircle2, ArrowRight, Sparkles, ClipboardList, HardHat, HelpCircle, ChevronDown, MapPin, X } from "lucide-react";
+import { AlertTriangle, ArrowRight, ClipboardList, HardHat, HelpCircle, ChevronDown, Droplets } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { LazyVideo } from "@/components/ui/lazy-video";
 
-// Images chantiers dégâts des eaux
-import jemmapesApres1 from "@/assets/jemmapes-apres-1.jpg";
-import jemmapesApres2 from "@/assets/jemmapes-apres-2.jpg";
-import bauchartAvant1 from "@/assets/bauchart-avant-1.jpg";
-import bauchartAvant2 from "@/assets/bauchart-avant-2.jpg";
-import bauchartAvant3 from "@/assets/bauchart-avant-3.jpg";
-import bauchartApres1 from "@/assets/bauchart-apres-1.jpg";
-import bauchartApres2 from "@/assets/bauchart-apres-2.jpg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -118,20 +109,10 @@ const FAQItem = ({ question, answer, isOpen, onToggle, index }: {
 
 const DegatsEaux = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
-  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string; type: 'avant' | 'apres' } | null>(null);
 
   const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
-
-  // Images Sergent Bauchart
-  const bauchartImages = [
-    { src: bauchartAvant1, alt: "Avant — État des lieux après sinistre", type: 'avant' as const },
-    { src: bauchartAvant2, alt: "Avant — Traces de moisissures", type: 'avant' as const },
-    { src: bauchartAvant3, alt: "Avant — Démolition plomberie", type: 'avant' as const },
-    { src: bauchartApres1, alt: "Après — Cuisine rénovée", type: 'apres' as const },
-    { src: bauchartApres2, alt: "Après — Vue évier", type: 'apres' as const },
-  ];
 
   // Generate JSON-LD for FAQ
   const faqJsonLd = {
@@ -281,70 +262,18 @@ const DegatsEaux = () => {
         </div>
       </section>
 
-      {/* Témoignage Julia - EN BAS */}
+      {/* CTA final */}
       <section className="py-8 md:py-10 bg-background">
-        <div className="container-custom max-w-2xl mx-auto">
-          <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl p-5 border border-blue-100">
-            <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-              <span>✨</span> Sergent Bauchart — Paris 12ème
-            </h3>
-            <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-              Suite à un dégât des eaux important, cette cuisine a été entièrement repensée : 
-              nouvelle cuisine, espace de vie optimisé. Ce qui était un cauchemar est devenu une chance.
-            </p>
-            
-            {/* Vignettes photos */}
-            <div className="flex flex-wrap gap-2 mb-3">
-              {bauchartImages.map((img, index) => (
-                <button
-                  key={index}
-                  onClick={() => setSelectedImage(img)}
-                  className="relative w-14 h-14 rounded-lg overflow-hidden border-2 border-white shadow-sm hover:shadow-md hover:scale-105 transition-all"
-                >
-                  <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
-                  <span className={`absolute bottom-0 left-0 right-0 h-1 ${img.type === 'avant' ? 'bg-amber-500' : 'bg-green-500'}`} />
-                </button>
-              ))}
-            </div>
-
-            <p className="text-xs text-muted-foreground">
-              📲 Suivez le chantier sur{' '}
-              <a href="https://www.instagram.com/qualirenovation__travaux/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">
-                @qualirenovation__travaux
-              </a>
-            </p>
-          </div>
-
-          {/* CTA final */}
-          <div className="text-center mt-6">
-            <Link to="/devis?type=degat_eaux#devis-form">
-              <Button variant="cta" size="lg" className="group">
-                Être accompagné après un dégât des eaux
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-          </div>
+        <div className="container-custom max-w-2xl mx-auto text-center">
+          <Link to="/devis?type=degat_eaux#devis-form">
+            <Button variant="cta" size="lg" className="group">
+              Être accompagné après un dégât des eaux
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
         </div>
       </section>
 
-      {/* Lightbox pour les photos */}
-      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-        <DialogContent className="max-w-3xl p-2 bg-black/95 border-none">
-          {selectedImage && (
-            <div className="relative">
-              <img 
-                src={selectedImage.src} 
-                alt={selectedImage.alt}
-                className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
-              />
-              <span className={`absolute top-4 left-4 text-sm font-medium text-white px-3 py-1 rounded ${selectedImage.type === 'avant' ? 'bg-amber-600' : 'bg-green-600'}`}>
-                {selectedImage.type === 'avant' ? 'Avant' : 'Après'}
-              </span>
-              <p className="text-white/80 text-center text-sm mt-3">{selectedImage.alt}</p>
-            </div>
-          )}
-        </DialogContent>
-      </Dialog>
 
     </Layout>
   );
