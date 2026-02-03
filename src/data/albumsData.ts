@@ -668,7 +668,8 @@ export const albums: Album[] = [
       { id: 6, image: templeAvant2, title: "Avant — Vue rangements", description: "Anciens placards et carrelage bleu" },
     ],
     category: "noir-blanc",
-    finitionSol: "gres-cerame-uni",
+    finitionSol: "effet-pierre",
+    finitionMur: "effet-pierre",
   },
   {
     id: "alexandre-cabanel",
@@ -750,8 +751,8 @@ export const albums: Album[] = [
       { id: 8, image: buffonAvant1, title: "Avant — Ancienne SDB", description: "Salle de bain vétuste à rénover" },
       { id: 9, image: buffonAvant2, title: "Avant — Vue d'ensemble", description: "Espace mal exploité" },
     ],
-    finitionSol: "gres-cerame-uni",
-    finitionMur: "gres-cerame-uni",
+    finitionSol: "effet-pierre",
+    finitionMur: "effet-pierre",
   },
   {
     id: "rue-des-puits",
@@ -939,6 +940,7 @@ Sans ces travaux préparatoires lourds, la rénovation n'aurait tout simplement 
       { id: 5, image: bauchartAvant3, title: "Avant — Démolition", description: "Reprise technique nécessaire" },
     ],
     finitionSol: "gres-cerame-uni",
+    finitionMur: "gres-cerame-uni",
   },
   // ========== ✨ DORÉ & LAITON ==========
   {
@@ -1106,8 +1108,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 6, image: coursVincennesSdbAvant1, title: "Avant — Baignoire", description: "Baignoire sabot à remplacer" },
       { id: 7, image: coursVincennesSdbAvant2, title: "Avant — Vue générale", description: "Salle de bain à rénover" },
     ],
-    finitionSol: "gres-cerame-uni",
-    finitionMur: "metro-allonge",
+    finitionSol: "marbre",
+    finitionMur: "marbre",
   },
   {
     id: "cours-vincennes-madame",
@@ -1128,8 +1130,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 8, image: coursVincennesMadameAvant2, title: "Avant — Salle de bain", description: "Ancien aménagement sans rangement" },
       { id: 9, image: coursVincennesMadameAvant3, title: "Avant — Espace WC", description: "Espace au-dessus du WC non exploité" },
     ],
-    finitionSol: "effet-pierre",
-    finitionMur: "effet-pierre",
+    finitionSol: "marbre",
+    finitionMur: "marbre",
   },
   {
     id: "place-daumesnil",
@@ -1173,7 +1175,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 8, image: bobillotAvant2, title: "Avant — Salle de bain", description: "Carrelage dégradé et état initial" },
       { id: 9, image: bobillotAvant3, title: "Avant — Vue d'ensemble", description: "Logement nécessitant rénovation complète" },
     ],
-    finitionSol: "gres-cerame-uni",
+    finitionSol: "effet-pierre",
     finitionMur: "zellige",
   },
   {
@@ -1222,6 +1224,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 3, image: nicolasRoretTravaux1, title: "Travaux — Pose zellige WC", description: "Installation du zellige chevron" },
       { id: 4, image: nicolasRoretAvant1, title: "Avant — WC vétuste", description: "État initial avec carrelage bleu et équipements datés" },
     ],
+    finitionSol: "marbre",
+    finitionMur: "zellige",
   },
   // ---------- Suite BOIS & NATURE ----------
   {
@@ -1444,7 +1448,6 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 14, image: boisColombresAvant3, title: "Avant — Lave-linge", description: "Espace buanderie à intégrer" },
     ],
     finitionSol: "terrazzo",
-    finitionMur: "gres-cerame-uni",
   },
   // ========== 🏡 MAISON & BANLIEUE ==========
   {
@@ -1667,7 +1670,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 4, image: stMaurEnfantsAvant1, title: "Avant — WC", description: "État avant travaux" },
     ],
     finitionSol: "gres-cerame-uni",
-    finitionMur: "gres-cerame-uni",
+    finitionMur: "zellige",
   },
   // ---------- Suite NOIR & BLANC ----------
   {
