@@ -750,6 +750,7 @@ export const albums: Album[] = [
       { id: 9, image: buffonAvant2, title: "Avant — Vue d'ensemble", description: "Espace mal exploité" },
     ],
     finitionSol: "gres-cerame-uni",
+    finitionMur: "gres-cerame-uni",
   },
   {
     id: "rue-des-puits",
@@ -812,6 +813,8 @@ Découvrez le projet au complet sur notre site qualirenovation.fr`,
       { id: 13, image: chercheMidiChantier1, title: "Avant — Démolition", description: "Phase de démolition avec reprise des réseaux" },
       { id: 14, image: chercheMidiChantier2, title: "Avant — Câblage électrique", description: "Reprise complète de l'électricité avant cloisonnement" },
     ],
+    finitionSol: "gres-cerame-uni",
+    finitionMur: "metro-allonge",
   },
   {
     id: "quai-aux-fleurs",
@@ -848,6 +851,8 @@ Sans ces travaux préparatoires lourds, la rénovation n'aurait tout simplement 
       { id: 13, image: quaifleursAvant1, title: "Avant — Vue WC et baignoire", description: "Ancienne salle de bain" },
       { id: 14, image: quaifleursAvant2, title: "Avant — Vue vasque et baignoire", description: "Configuration initiale à transformer" },
     ],
+    finitionSol: "effet-pierre",
+    finitionMur: "effet-pierre",
   },
   // ========== 💎 MARBRE & LUXE ==========
   {
@@ -932,6 +937,7 @@ Sans ces travaux préparatoires lourds, la rénovation n'aurait tout simplement 
       { id: 4, image: bauchartAvant2, title: "Avant — Traces de moisissures", description: "Dommages à traiter" },
       { id: 5, image: bauchartAvant3, title: "Avant — Démolition", description: "Reprise technique nécessaire" },
     ],
+    finitionSol: "gres-cerame-uni",
   },
   // ========== ✨ DORÉ & LAITON ==========
   {
@@ -983,6 +989,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 3, image: jemmapes3, title: "Après — Détails", description: "Finitions noires élégantes" },
     ],
     finitionSol: "gres-cerame-uni",
+    finitionMur: "gres-cerame-uni",
   },
   {
     id: "paris10-dore",
@@ -1017,6 +1024,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 6, image: faubourgStmartin2, title: "Après — Vue globale", description: "Optimisation sous pente" },
       { id: 7, image: faubourgStmartin7, title: "Après — Détail douche", description: "Paroi noire et ciel de pluie" },
     ],
+    finitionSol: "marbre",
+    finitionMur: "marbre",
   },
   // ---------- Suite NOIR & BLANC ----------
   {
@@ -1035,6 +1044,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 6, image: charonneAvant3, title: "Avant — WC", description: "WC encombré à rénover" },
       { id: 7, image: charonneAvant4, title: "Avant — WC angle", description: "Carrelage daté" },
     ],
+    finitionSol: "gres-cerame-uni",
+    finitionMur: "metro-allonge",
   },
   {
     id: "citeaux",
@@ -1051,6 +1062,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 5, image: citeauxAvant1, title: "Avant — Salle d'eau", description: "Mosaïque et bac à douche standard" },
       { id: 6, image: citeauxAvant2, title: "Avant — Vue générale", description: "Espace à optimiser" },
     ],
+    finitionSol: "gres-cerame-uni",
+    finitionMur: "gres-cerame-uni",
   },
   // ========== 🎨 COLORÉ (BLEU / VERT / TERRACOTTA) ==========
   {
@@ -1067,6 +1080,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 4, image: coursVincennesWc3, title: "Après — Détails", description: "Finitions soignées" },
       { id: 5, image: coursVincennesWcAvant1, title: "Avant — WC basique", description: "Équipement standard à transformer" },
     ],
+    finitionSol: "marbre",
+    finitionMur: "marbre",
   },
   {
     id: "cours-vincennes-sdb",
@@ -1090,6 +1105,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 6, image: coursVincennesSdbAvant1, title: "Avant — Baignoire", description: "Baignoire sabot à remplacer" },
       { id: 7, image: coursVincennesSdbAvant2, title: "Avant — Vue générale", description: "Salle de bain à rénover" },
     ],
+    finitionSol: "gres-cerame-uni",
+    finitionMur: "metro-allonge",
   },
   {
     id: "cours-vincennes-madame",
@@ -1110,6 +1127,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 8, image: coursVincennesMadameAvant2, title: "Avant — Salle de bain", description: "Ancien aménagement sans rangement" },
       { id: 9, image: coursVincennesMadameAvant3, title: "Avant — Espace WC", description: "Espace au-dessus du WC non exploité" },
     ],
+    finitionSol: "effet-pierre",
+    finitionMur: "effet-pierre",
   },
   {
     id: "place-daumesnil",
@@ -1125,6 +1144,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 3, image: placeDaumesnil2, title: "Après — WC suspendu", description: "Carreau ciment Paris Rivoli et placard intégré" },
       { id: 4, image: placeDaumesnil1, title: "Après — Lave-mains d'angle", description: "Meuble chêne et miroir doré" },
     ],
+    finitionSol: "beton",
+    finitionMur: "gres-cerame-uni",
   },
   // ---------- Suite DORÉ & LAITON ----------
   {
@@ -1151,6 +1172,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 8, image: bobillotAvant2, title: "Avant — Salle de bain", description: "Carrelage dégradé et état initial" },
       { id: 9, image: bobillotAvant3, title: "Avant — Vue d'ensemble", description: "Logement nécessitant rénovation complète" },
     ],
+    finitionSol: "gres-cerame-uni",
+    finitionMur: "zellige",
   },
   {
     id: "nicolas-roret",
@@ -1181,6 +1204,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 14, image: nicolasRoret3d1, title: "Avant — Visualisation 3D", description: "Projet de conception initial" },
       { id: 15, image: nicolasRoret3d2, title: "Avant — Vue 3D vasque", description: "Conception du meuble vasque" },
     ],
+    finitionSol: "marbre",
+    finitionMur: "zellige",
   },
   {
     id: "nicolas-roret-wc",
@@ -1216,6 +1241,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 8, image: amiralRoussinAvant2, title: "Avant — Vasque", description: "Meuble standard et tomettes au sol" },
       { id: 9, image: amiralRoussinAvant3, title: "Avant — Sol", description: "Carrelage damier terracotta" },
     ],
+    finitionSol: "gres-cerame-uni",
+    finitionMur: "gres-cerame-uni",
   },
   {
     id: "paris15-convention",
@@ -1241,6 +1268,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 10, image: conventionAvant4, title: "Avant — Vue d'ensemble", description: "Salle de bain vétuste avec cabine et vasque datées" },
       { id: 11, image: conventionAvant5, title: "Avant — Plafond", description: "Dégâts d'humidité et canalisations apparentes" },
     ],
+    finitionSol: "beton",
+    finitionMur: "beton",
   },
   // ========== 🏠 OPTIMISATION PETIT ESPACE ==========
   {
@@ -1262,6 +1291,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 4, image: pierreGuerin4, title: "Après — Détail niches", description: "Niches de rangement intégrées" },
       { id: 5, image: pierreGuerin5, title: "Après — Buanderie", description: "Placards ouverts avec rangement intégré" },
     ],
+    finitionSol: "effet-pierre",
+    finitionMur: "effet-pierre",
   },
   {
     id: "auteuil",
@@ -1280,6 +1311,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 7, image: auteuil7, title: "Après — WC vue large", description: "Frise hexagonale cuivrée et marbre" },
       { id: 8, image: auteuilAvant1, title: "Avant — État initial", description: "Ancienne salle de bain mosaïque noire" },
     ],
+    finitionSol: "marbre",
+    finitionMur: "marbre",
   },
   {
     id: "lauriston",
@@ -1297,6 +1330,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 6, image: lauristonAvant1, title: "Avant — Baignoire", description: "Baignoire et mosaïque à remplacer" },
       { id: 7, image: lauristonAvant2, title: "Avant — Vue générale", description: "Salle de bain à transformer" },
     ],
+    finitionSol: "effet-pierre",
+    finitionMur: "effet-pierre",
   },
   // ---------- Suite DORÉ & LAITON ----------
   {
@@ -1327,6 +1362,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 12, image: paris17Avant7, title: "Avant — Baignoire balnéo en panne", description: "Hors service depuis des années" },
       { id: 13, image: paris17Avant8, title: "Avant — État initial", description: "Avant rénovation complète" },
     ],
+    finitionSol: "marbre",
+    finitionMur: "marbre",
   },
   {
     id: "paris17-pereire",
@@ -1354,6 +1391,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 6, image: gallery16, title: "Après — Sol terrazzo", description: "Finition élégante" },
       { id: 7, image: gallery17, title: "Après — Robinetterie", description: "Mitigeur chromé design" },
     ],
+    finitionSol: "terrazzo",
+    finitionMur: "metro-allonge",
   },
   // ---------- Suite OPTIMISATION ----------
   {
@@ -1373,6 +1412,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 7, image: armandCarrel7, title: "Après — Détail douche", description: "Colonne design et niches mosaïque" },
       { id: 8, image: armandCarrel8, title: "Après — Buanderie intégrée", description: "Lave-linge et sèche-linge superposés" },
     ],
+    finitionSol: "gres-cerame-uni",
+    finitionMur: "gres-cerame-uni",
   },
   // ---------- Suite COLORÉ ----------
   {
@@ -1401,6 +1442,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 10, image: boisColombresAvant2, title: "Avant — Vue générale", description: "Salle de bain à transformer" },
       { id: 14, image: boisColombresAvant3, title: "Avant — Lave-linge", description: "Espace buanderie à intégrer" },
     ],
+    finitionSol: "terrazzo",
+    finitionMur: "gres-cerame-uni",
   },
   // ========== 🏡 MAISON & BANLIEUE ==========
   {
@@ -1432,6 +1475,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 19, image: boulogneAvant3, title: "Avant — WC", description: "WC séparé vétuste" },
       { id: 20, image: boulogneAvant4, title: "Avant — Détail", description: "Équipements à remplacer" },
     ],
+    finitionSol: "gres-cerame-uni",
+    finitionMur: "gres-cerame-uni",
   },
   // ========== 🔨 DÉGÂT DES EAUX / SINISTRE ==========
   {
@@ -1460,6 +1505,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 10, image: courbevoieAvant2, title: "Avant — Moisissures", description: "État après le sinistre" },
       { id: 11, image: courbevoieAvant3, title: "Avant — Équipements", description: "Destruction des installations" },
     ],
+    finitionSol: "terrazzo",
+    finitionMur: "gres-cerame-uni",
   },
   // ---------- Suite MAISON & BANLIEUE ----------
   {
@@ -1484,6 +1531,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 8, image: stOuenAvant1, title: "Avant — Baignoire", description: "Baignoire et carrelage daté" },
       { id: 9, image: stOuenAvant2, title: "Avant — Vue générale", description: "Salle de bain à transformer" },
     ],
+    finitionSol: "gres-cerame-uni",
+    finitionMur: "gres-cerame-uni",
   },
   // ---------- Suite MARBRE & LUXE ----------
   {
@@ -1518,6 +1567,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 22, image: charentonAvant7, title: "Avant — Détail", description: "Équipements vétustes" },
       { id: 23, image: charentonAvant8, title: "Avant — WC", description: "WC à remplacer" },
     ],
+    finitionSol: "effet-pierre",
+    finitionMur: "effet-pierre",
   },
   {
     id: "general-leclerc",
@@ -1539,6 +1590,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 9, image: generalLeclerc7, title: "Après — Détails", description: "Robinetterie chromée" },
       { id: 10, image: generalLeclerc8, title: "Après — Rangements", description: "Colonnes intégrées" },
     ],
+    finitionSol: "gres-cerame-uni",
+    finitionMur: "gres-cerame-uni",
   },
   {
     id: "general-leclerc-wc",
@@ -1552,6 +1605,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 2, image: generalLeclercWc2, title: "Après — Placard ouvert", description: "Chauffe-eau Thermor accessible, arrivées d'eau et groupe de sécurité" },
       { id: 3, image: generalLeclercWcTravaux1, title: "Travaux — Installation chauffe-eau", description: "Chauffe-eau Thermor suspendu au-dessus du WC, nourrices et arrivées" },
     ],
+    finitionSol: "gres-cerame-uni",
+    finitionMur: "gres-cerame-uni",
   },
   // ---------- Suite MAISON & BANLIEUE ----------
   {
@@ -1567,6 +1622,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 2, image: stMande2, title: "Après — Détails", description: "Finitions soignées" },
       { id: 3, image: stMande3, title: "Après — Vue complète", description: "Transformation réussie" },
     ],
+    finitionSol: "gres-cerame-uni",
+    finitionMur: "gres-cerame-uni",
   },
   // ---------- Suite BOIS & NATURE ----------
   {
@@ -1587,6 +1644,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 7, image: gallery24, title: "Travaux — Rénovation", description: "Phase de transformation" },
       { id: 8, image: gallery25, title: "Après — Finitions", description: "Dernières touches" },
     ],
+    finitionSol: "gres-cerame-uni",
+    finitionMur: "gres-cerame-uni",
   },
   {
     id: "saint-maur-enfants",
@@ -1606,6 +1665,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 3, image: stMaurEnfants2, title: "Après — WC suspendu", description: "Placard sapin vernis chêne doré" },
       { id: 4, image: stMaurEnfantsAvant1, title: "Avant — WC", description: "État avant travaux" },
     ],
+    finitionSol: "gres-cerame-uni",
+    finitionMur: "gres-cerame-uni",
   },
   // ---------- Suite NOIR & BLANC ----------
   {
@@ -1638,6 +1699,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 20, image: vincennesMrAvant8, title: "Avant — Sol", description: "Carrelage à remplacer" },
       { id: 21, image: vincennesMrAvant9, title: "Avant — Vue finale", description: "État des lieux complet" },
     ],
+    finitionSol: "gres-cerame-uni",
+    finitionMur: "metro-allonge",
   },
   // ---------- Suite MAISON & BANLIEUE ----------
   {
@@ -1668,6 +1731,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 13, image: vitryAvant9, title: "Avant — Sol", description: "Revêtement dégradé" },
       { id: 14, image: vitryAvant10, title: "Avant — Vue finale", description: "État des lieux complet" },
     ],
+    finitionSol: "gres-cerame-uni",
+    finitionMur: "gres-cerame-uni",
   },
   // ---------- Suite DORÉ & LAITON ----------
   {
@@ -1692,6 +1757,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 3, image: soisy3, title: "Après — Meuble lave-mains", description: "Design épuré et finitions laiton" },
       { id: 4, image: soisyAvant, title: "Avant", description: "État initial avant transformation" },
     ],
+    finitionSol: "gres-cerame-uni",
+    finitionMur: "zellige",
   },
   {
     id: "soisy-sdb",
@@ -1710,6 +1777,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 7, image: soisySdbAvant2, title: "Avant — Murs bruts", description: "Préparation des surfaces" },
       { id: 8, image: soisySdbAvant3, title: "Avant — Vue générale", description: "Combles à aménager" },
     ],
+    finitionSol: "marbre",
+    finitionMur: "marbre",
   },
   {
     id: "soisy-enfants",
@@ -1727,6 +1796,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 6, image: soisyEnfantsAvant1, title: "Avant — Combles bruts", description: "Placo et isolation à faire" },
       { id: 7, image: soisyEnfantsAvant2, title: "Avant — Vue générale", description: "Espace avant aménagement" },
     ],
+    finitionSol: "terrazzo",
+    finitionMur: "terrazzo",
   },
   // ---------- Suite NOIR & BLANC ----------
   {
@@ -1748,6 +1819,8 @@ Un projet pensé pour une vie de famille, où esthétique et fonctionnalité coh
       { id: 5, image: "/projects/saint-maurice/verdun-6.jpg", title: "Vue générale", description: "Harmonie noir, blanc et bois naturel" },
       { id: 6, image: "/projects/saint-maurice/verdun-7.jpg", title: "Verrière depuis le salon", description: "Lumière naturelle diffusée dans la salle de bain" },
     ],
+    finitionSol: "gres-cerame-uni",
+    finitionMur: "metro-allonge",
   },
   // ---------- Suite COLORÉ ----------
   {
@@ -1788,6 +1861,8 @@ Côté fonctionnalité, l'agencement a été entièrement repensé :
       { id: 10, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-wc-lave-linge.jpg", title: "Avant — WC et lave-linge", description: "WC classique et machine à laver visible" },
       { id: 11, image: "/lovable-uploads/saint-maur-petit-beaubourg/avant-baignoire.jpg", title: "Avant — Baignoire", description: "Mosaïque colorée années 2000" },
     ],
+    finitionSol: "gres-cerame-uni",
+    finitionMur: "gres-cerame-uni",
   },
   // ---------- Suite COLORÉ ----------
   {
@@ -1815,6 +1890,8 @@ Une rénovation pensée pour allier design contemporain, praticité et éléganc
       { id: 3, image: edmondNocard3, title: "Meuble vasque IKEA", description: "Vasque à poser et plan bois" },
       { id: 4, image: edmondNocard4, title: "Lave-linge dissimulé", description: "Machine à laver cachée derrière une porte" },
     ],
+    finitionSol: "beton",
+    finitionMur: "zellige",
   },
   // ---------- Suite BOIS & NATURE ----------
   {
@@ -1849,6 +1926,8 @@ Une rénovation pensée pour allier design contemporain, praticité et éléganc
       author: "Sylvain A.",
       link: "https://www.houzz.fr/viewReview/1853554/qualirenovation-by-qualiconcept-review"
     },
+    finitionSol: "gres-cerame-uni",
+    finitionMur: "metro-allonge",
   },
 ];
 
