@@ -1816,6 +1816,11 @@ Une rénovation pensée pour allier design contemporain, praticité et éléganc
       { id: 9, image: saintCharlesAvant2, title: "Avant — Vue générale", description: "Carrelage marron et équipements datés" },
       { id: 10, image: saintCharlesAvant3, title: "Avant — Baignoire", description: "Ancienne baignoire avec pare-douche rayé" },
     ],
+    review: {
+      text: "Qualirenovation a rénové entièrement notre appartement pendant la période COVID. Le projet comprenait l'électricité, la plomberie, des cloisons, peintures, placards, une cuisine, la pose d'un parquet. Malgré les multiples confinements et les difficultés d'approvisionnement en matériel toute l'équipe a fait preuve d'une grande réactivité et d'un grand professionnalisme. Qualirenovation a mené ce chantier difficile jusqu'au bout pour satisfaire nos attentes. Plusieurs mois après la fin des travaux, Qualirenovation est venu reprendre sous garantie les conséquences d'un dégât des eaux s'étend produit dans l'appartement au dessus de chez nous. Un service et un accompagnement client exceptionnel donc. Nous avons été pleinement satisfaits de la prestation.",
+      author: "Sylvain A.",
+      link: "https://www.houzz.fr/viewReview/1853554/qualirenovation-by-qualiconcept-review"
+    },
   },
 ];
 
