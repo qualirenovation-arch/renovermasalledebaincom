@@ -535,6 +535,18 @@ import alexandreCabanel5 from "@/assets/alexandre-cabanel-5.jpg";
 import alexandreCabanel6 from "@/assets/alexandre-cabanel-6.jpg";
 import alexandreCabanel7 from "@/assets/alexandre-cabanel-7.jpg";
 import alexandreCabanel8 from "@/assets/alexandre-cabanel-8.jpg";
+import alexandreCabanelAvant1 from "@/assets/alexandre-cabanel-avant-1.jpg";
+import alexandreCabanelAvant2 from "@/assets/alexandre-cabanel-avant-2.jpg";
+import alexandreCabanelAvant3 from "@/assets/alexandre-cabanel-avant-3.jpg";
+import alexandreCabanelAvant4 from "@/assets/alexandre-cabanel-avant-4.jpg";
+import alexandreCabanelAvant5 from "@/assets/alexandre-cabanel-avant-5.jpg";
+import alexandreCabanelAvant6 from "@/assets/alexandre-cabanel-avant-6.jpg";
+import alexandreCabanelAvant7 from "@/assets/alexandre-cabanel-avant-7.jpg";
+import alexandreCabanelAvant8 from "@/assets/alexandre-cabanel-avant-8.jpg";
+import alexandreCabanelAvant9 from "@/assets/alexandre-cabanel-avant-9.jpg";
+import alexandreCabanelAvant10 from "@/assets/alexandre-cabanel-avant-10.jpg";
+import alexandreCabanelAvant11 from "@/assets/alexandre-cabanel-avant-11.jpg";
+import alexandreCabanelAvant12 from "@/assets/alexandre-cabanel-avant-12.jpg";
 
 // Cherche-Midi Paris 6ème
 const chercheMidiCover = "/projects/cherche-midi/cover-vue-longueur.jpg";
@@ -643,8 +655,21 @@ export const albums: Album[] = [
       { id: 6, image: alexandreCabanel6, title: "Rangement fenêtre", description: "Meuble blanc avec plan chêne et sèche-serviettes" },
       { id: 7, image: alexandreCabanel7, title: "Meuble sur mesure", description: "Rangement avec plan de travail en chêne massif" },
       { id: 8, image: alexandreCabanel8, title: "WC séparé", description: "Carrelage écaille de poisson en marbre gris" },
+      { id: 9, image: alexandreCabanelAvant1, title: "Avant — Entrée placards", description: "Anciens placards et entrée salle de bain" },
+      { id: 10, image: alexandreCabanelAvant2, title: "Avant — Vue placards", description: "Placards existants à rénover" },
+      { id: 11, image: alexandreCabanelAvant3, title: "Avant — Couloir", description: "Accès à la salle de bain" },
+      { id: 12, image: alexandreCabanelAvant4, title: "Avant — Double vasque", description: "Anciennes vasques sur carrelage beige" },
+      { id: 13, image: alexandreCabanelAvant5, title: "Avant — Baignoire", description: "Baignoire avec carrelage mosaïque" },
+      { id: 14, image: alexandreCabanelAvant6, title: "Avant — Douche angle", description: "Coin douche avec fenêtre" },
+      { id: 15, image: alexandreCabanelAvant7, title: "Avant — WC papillons", description: "WC avec papier peint papillons" },
+      { id: 16, image: alexandreCabanelAvant8, title: "Avant — Détail WC", description: "Papier peint papillons et fenêtre rose" },
+      { id: 17, image: alexandreCabanelAvant9, title: "Avant — Couloir sombre", description: "Couloir vers la salle de bain" },
+      { id: 18, image: alexandreCabanelAvant10, title: "Avant — Vue vasque porte", description: "Vasques anciennes et porte ouverte" },
+      { id: 19, image: alexandreCabanelAvant11, title: "Avant — WC ancien", description: "WC avec papier peint papillons" },
+      { id: 20, image: alexandreCabanelAvant12, title: "Avant — Double vasque angle", description: "Vue d'ensemble vasques avant travaux" },
     ],
     category: "noir-blanc",
+
   },
   // ========== 🪵 BOIS & NATURE / SCANDINAVE ==========
   {
