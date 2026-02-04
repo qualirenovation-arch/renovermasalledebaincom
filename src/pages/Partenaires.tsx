@@ -15,6 +15,7 @@ import rexelLogo from "@/assets/logos/rexel.svg";
 import asDecarreauxLogo from "@/assets/logos/as-decarreaux.svg";
 import mosaicFactoryLogo from "@/assets/logos/mosaic-factory.svg";
 import mosaicDelSurLogo from "@/assets/logos/mosaic-del-sur.svg";
+import houzzLogo from "@/assets/logos/houzz.png";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -151,7 +152,7 @@ const partnerCategories: PartnerCategory[] = [
     title: "Partenaires Métier",
     icon: "🤝",
     partners: [
-      { name: "Houzz", url: "https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept", description: "Notre profil professionnel" },
+      { name: "Houzz", url: "https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept", description: "Notre profil professionnel", logo: houzzLogo },
       { name: "Instagram", url: "https://www.instagram.com/qualirenovation__travaux/", description: "Suivez nos réalisations" },
     ],
   },
