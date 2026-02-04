@@ -144,7 +144,7 @@ const partnerCategories: PartnerCategory[] = [
       { name: "David B", url: "https://www.davidb.fr", description: "Salles de bain design" },
       { name: "Envie de Bain", url: "https://www.enviedebain.fr", description: "Showroom salle de bain" },
       { name: "Sklum", url: "https://www.sklum.com/fr", description: "Mobilier design et décoration", logo: sklumLogo },
-      { name: "Seek", url: "#", description: "Design et ameublement" },
+      { name: "Sweeek", url: "https://www.sweeek.fr", description: "Mobilier et équipements maison", logo: sweeekLogo },
       { name: "Tots", url: "#", description: "Parois de douche sur mesure" },
       { name: "Democratik Design", url: "#", description: "Design et décoration" },
       { name: "Poalgi", url: "https://www.poalgi.com", description: "Éviers et vasques design", logo: poalgiLogo },
@@ -160,7 +160,6 @@ const partnerCategories: PartnerCategory[] = [
       { name: "IKEA", url: "https://www.ikea.com/fr", description: "Mobilier et accessoires", logo: ikeaLogo },
       { name: "ManoMano", url: "https://www.manomano.fr", description: "Bricolage et jardinage", logo: manomanoLogo },
       { name: "Castorama", url: "https://www.castorama.fr", description: "Grande surface de bricolage", logo: castoramaLogo },
-      { name: "Sweeek", url: "https://www.sweeek.fr", description: "Mobilier et équipements maison", logo: sweeekLogo },
     ],
   },
   {
