@@ -114,6 +114,9 @@ export const redirectMap: Record<string, string> = {
   "projet-montreuil-93-naturelle": "salle-de-bain-montreuil-93-naturelle",
   "salle-de-bain-saint-ouen-93-renovation": "salle-de-bain-saint-ouen-93-mondrian-conception-meuble-sur-mesure",
   "salle-de-bain-saint-ouen-93-renovation-moderne": "salle-de-bain-saint-ouen-93-mondrian-conception-meuble-sur-mesure",
+  "saint-ouen-93-mondrian": "salle-de-bain-saint-ouen-93-mondrian-conception-meuble-sur-mesure",
+  "salle-de-bain-saint-ouen-93": "salle-de-bain-saint-ouen-93-mondrian-conception-meuble-sur-mesure",
+  "saint-ouen-mondrian": "salle-de-bain-saint-ouen-93-mondrian-conception-meuble-sur-mesure",
   "suite-parentale-montreuil-93-verriere-zellige": "suite-parentale-montreuil-93-renovation-verriere-zellige-turquoise",
   "montreuil-suite-parentale": "suite-parentale-montreuil-93-renovation-verriere-zellige-turquoise",
   
