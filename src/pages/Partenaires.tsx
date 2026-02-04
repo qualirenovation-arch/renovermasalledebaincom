@@ -13,6 +13,8 @@ import pointpLogo from "@/assets/logos/pointp.svg";
 import castoramaLogo from "@/assets/logos/castorama.svg";
 import rexelLogo from "@/assets/logos/rexel.svg";
 import asDecarreauxLogo from "@/assets/logos/as-decarreaux.svg";
+import mosaicFactoryLogo from "@/assets/logos/mosaic-factory.svg";
+import mosaicDelSurLogo from "@/assets/logos/mosaic-del-sur.svg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -47,6 +49,8 @@ const partnerCategories: PartnerCategory[] = [
     icon: "🛁",
     partners: [
       { name: "Schlüter-Systems", url: "https://www.schluter.fr", description: "Systèmes d'étanchéité et profilés", logo: schluterLogo },
+      { name: "Mosaic Factory", url: "https://mosaicfactory.com/fr/", description: "Zellige, terrazzo & carreaux ciment", logo: mosaicFactoryLogo },
+      { name: "Mosaic del Sur", url: "https://www.carreauxmosaic.com", description: "Carreaux de ciment sur mesure", logo: mosaicDelSurLogo },
       { name: "Weber", url: "https://www.weber.fr", description: "Mortiers et enduits professionnels", logo: weberLogo },
       { name: "Wedi", url: "https://www.wedi.de/fr", description: "Panneaux de construction étanches" },
       { name: "Mapei", url: "https://www.mapei.com/fr", description: "Colles et produits chimiques" },
