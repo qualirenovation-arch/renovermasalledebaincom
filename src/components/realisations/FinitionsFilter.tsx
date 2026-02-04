@@ -214,7 +214,7 @@ export function FinitionsBadge({ finitionSol, finitionMur }: FinitionsBadgeProps
 
   return (
     <p 
-      className="text-xs text-muted-foreground mt-2"
+      className="text-xs text-muted-foreground mt-2 text-center"
       data-finition-sol={finitionSol}
       data-finition-mur={finitionMur}
     >
