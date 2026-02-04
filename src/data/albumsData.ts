@@ -710,6 +710,7 @@ export const albums: Album[] = [
   },
   // ========== 📍 MONTREUIL (93) ==========
   {
+    id: "montreuil-suite",
     slug: "suite-parentale-montreuil-93-renovation-verriere-zellige-turquoise",
     title: "Rénovation salle de douche à Montreuil — matières, contrastes et précision",
     location: "Montreuil (93) - Rue Ernest Savart",
@@ -949,6 +950,7 @@ Sans ces travaux préparatoires lourds, la rénovation n'aurait tout simplement 
     finitionMur: "gres-cerame-uni",
   },
   // ========== 📍 PARIS 9ÈME ==========
+  {
     id: "taitbout",
     slug: "salle-de-bain-paris-9-renovation-douche-italienne-carrelage-pierre",
     title: "Rénovation salle de bain Paris 9ème — Douche à l'italienne et carrelage effet pierre",
@@ -980,6 +982,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     finitionMur: "effet-pierre",
   },
   // ========== 📍 PARIS 10ÈME ==========
+  {
+    id: "jemmapes",
     slug: "salle-de-bain-paris-10-renovation-style-masculin-jemmapes",
     title: "Rénovation salle de bain Paris 10ème — Style masculin au Canal Saint-Martin",
     location: "Paris 10ème - Canal Saint-Martin",
