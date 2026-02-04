@@ -347,7 +347,7 @@ const handler = async (req: Request): Promise<Response> => {
               </div>
               
               <div style="padding-top: 20px; border-top: 1px solid #eee; font-size: 14px; color: #666; text-align: center;">
-                <p>QualiRénovation by QualiConcept</p>
+                <p>renovermasalledebain.com by qualiconcept.fr</p>
                 <p>Spécialiste de la rénovation de salles de bains</p>
               </div>
             </div>
