@@ -1524,25 +1524,39 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== 📍 SAINT-OUEN (93) ==========
   {
     id: "saint-ouen",
-    slug: "salle-de-bain-saint-ouen-93-renovation",
-    title: "Rénovation Saint-Ouen",
+    slug: "salle-de-bain-saint-ouen-93-mondrian-conception-meuble-sur-mesure",
+    title: "Salle de bain Saint-Ouen — Esprit Mondrian",
+    subtitle: "Quand la conception sublime l'existant",
     location: "Saint-Ouen (93)",
-    description: "AVANT : Salle de bain datée avec baignoire et carrelage ancien. APRÈS : Transformation moderne avec douche à l'italienne, carrelage grand format, robinetterie chromée et meuble vasque design.",
+    description: `Cette salle de bain avait déjà été rénovée, mais sans réelle réflexion sur l'usage ni sur l'esthétique. Résultat : un espace confus, peu fonctionnel, où les volumes et les matériaux ne dialoguaient pas.
+
+Notre intervention a consisté à repenser l'existant sans tout démolir, pour redonner cohérence et confort à la pièce.
+Sous la conception de Thierry Pelmard, la salle de bain adopte une écriture graphique inspirée de Mondrian, structurée et lisible.
+
+Les choix clés :
+• Meuble toute largeur sur-mesure intégrant la machine à laver
+• Deux vasques en pierre naturelle sur plan en chêne
+• Mur graphique avec miroirs rétroéclairés
+• Palette profonde autour du Marron Landes – Seigneurie
+• Rangements intégrés libérant l'espace au sol
+
+Ce projet illustre une conviction forte : la conception sublime l'existant et révèle le potentiel d'un espace déjà rénové mais mal pensé.`,
     coverImage: stOuen1,
     instagramLinks: [
+      "https://www.instagram.com/reel/DKFL3IKsHDM/",
       "https://www.instagram.com/reel/DGbZ8iZsYxQ/",
       "https://www.instagram.com/reel/DGY_qNCs5sE/"
     ],
     photos: [
-      { id: 1, image: stOuen1, title: "Après — Vue d'ensemble", description: "Douche italienne moderne" },
-      { id: 2, image: stOuen2, title: "Après — Détail douche", description: "Paroi vitrée et robinetterie chromée" },
-      { id: 3, image: stOuen3, title: "Après — Meuble vasque", description: "Design contemporain" },
-      { id: 4, image: stOuen4, title: "Après — WC suspendu", description: "Finitions épurées" },
-      { id: 5, image: stOuen5, title: "Après — Vue générale", description: "Espace optimisé" },
-      { id: 6, image: stOuen6, title: "Après — Rangements", description: "Colonnes intégrées" },
+      { id: 1, image: stOuen1, title: "Après — Vue d'ensemble", description: "Écriture graphique inspirée de Mondrian" },
+      { id: 2, image: stOuen2, title: "Après — Meuble sur-mesure", description: "Machine à laver intégrée et disparue" },
+      { id: 3, image: stOuen3, title: "Après — Double vasque", description: "Pierre naturelle sur plan en chêne" },
+      { id: 4, image: stOuen4, title: "Après — Mur graphique", description: "Miroirs rétroéclairés et panneaux contrastés" },
+      { id: 5, image: stOuen5, title: "Après — Palette Marron Landes", description: "Cocon chaleureux Seigneurie" },
+      { id: 6, image: stOuen6, title: "Après — Rangements intégrés", description: "Sol libéré, lecture clarifiée" },
       { id: 7, image: stOuen7, title: "Après — Détails", description: "Finitions soignées" },
-      { id: 8, image: stOuenAvant1, title: "Avant — Baignoire", description: "Baignoire et carrelage daté" },
-      { id: 9, image: stOuenAvant2, title: "Avant — Vue générale", description: "Salle de bain à transformer" },
+      { id: 8, image: stOuenAvant1, title: "Avant — Machine visible", description: "Espace confus et mal hiérarchisé" },
+      { id: 9, image: stOuenAvant2, title: "Avant — Vue générale", description: "Rénovation sans conception" },
     ],
     finitionSol: "gres-cerame-uni",
     finitionMur: "gres-cerame-uni",
