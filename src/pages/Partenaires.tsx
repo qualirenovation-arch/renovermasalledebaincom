@@ -17,6 +17,11 @@ import asDecarreauxLogo from "@/assets/logos/as-decarreaux.svg";
 import mosaicFactoryLogo from "@/assets/logos/mosaic-factory.svg";
 import mosaicDelSurLogo from "@/assets/logos/mosaic-del-sur.svg";
 import houzzLogo from "@/assets/logos/houzz.png";
+import leroyMerlinLogo from "@/assets/logos/leroy-merlin.svg";
+import ikeaLogo from "@/assets/logos/ikea.svg";
+import manomanoLogo from "@/assets/logos/manomano.svg";
+import mapeiLogo from "@/assets/logos/mapei.svg";
+import farrowBallLogo from "@/assets/logos/farrow-ball.svg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -56,7 +61,7 @@ const partnerCategories: PartnerCategory[] = [
       { name: "Mosaic del Sur", url: "https://www.carreauxmosaic.com", description: "Carreaux de ciment sur mesure", logo: mosaicDelSurLogo },
       { name: "Weber", url: "https://www.weber.fr", description: "Mortiers et enduits professionnels", logo: weberLogo },
       { name: "Wedi", url: "https://www.wedi.de/fr", description: "Panneaux de construction étanches" },
-      { name: "Mapei", url: "https://www.mapei.com/fr", description: "Colles et produits chimiques" },
+      { name: "Mapei", url: "https://www.mapei.com/fr", description: "Colles et produits chimiques", logo: mapeiLogo },
       { name: "Kerakoll", url: "https://www.kerakoll.com/fr", description: "Colles et joints écologiques" },
       { name: "Ceramica.fr", url: "https://www.ceramica.fr", description: "Carrelages et céramiques" },
       { name: "Parquet-Carrelage.com", url: "https://www.parquet-carrelage.com", description: "Revêtements de sol" },
@@ -132,9 +137,9 @@ const partnerCategories: PartnerCategory[] = [
     title: "Grandes Surfaces & E-commerce",
     icon: "🛒",
     partners: [
-      { name: "Leroy Merlin", url: "https://www.leroymerlin.fr", description: "Grande surface de bricolage" },
-      { name: "IKEA", url: "https://www.ikea.com/fr", description: "Mobilier et accessoires" },
-      { name: "ManoMano", url: "https://www.manomano.fr", description: "Bricolage et jardinage" },
+      { name: "Leroy Merlin", url: "https://www.leroymerlin.fr", description: "Grande surface de bricolage", logo: leroyMerlinLogo },
+      { name: "IKEA", url: "https://www.ikea.com/fr", description: "Mobilier et accessoires", logo: ikeaLogo },
+      { name: "ManoMano", url: "https://www.manomano.fr", description: "Bricolage et jardinage", logo: manomanoLogo },
       { name: "Castorama", url: "https://www.castorama.fr", description: "Grande surface de bricolage", logo: castoramaLogo },
     ],
   },
@@ -142,7 +147,7 @@ const partnerCategories: PartnerCategory[] = [
     title: "Peinture",
     icon: "🎨",
     partners: [
-      { name: "Farrow & Ball", url: "https://www.farrow-ball.com/fr", description: "Peintures et papiers peints haut de gamme" },
+      { name: "Farrow & Ball", url: "https://www.farrow-ball.com/fr", description: "Peintures et papiers peints haut de gamme", logo: farrowBallLogo },
       { name: "Little Greene", url: "https://www.littlegreene.fr", description: "Peintures et couleurs britanniques" },
       { name: "Ressource", url: "https://www.ressource-peintures.com", description: "Peintures écologiques françaises" },
       { name: "Argile", url: "https://www.argile-peinture.fr", description: "Peintures naturelles à l'argile" },
