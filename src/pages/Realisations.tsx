@@ -58,16 +58,44 @@ export default function Realisations() {
     return counts;
   }, [completedAlbums]);
 
-  // Filter by finitions (OR logic - album matches if it has at least one selected finition)
-  const filteredCompletedAlbums = useMemo(() => {
-    if (selectedFinitions.length === 0) {
-      return completedAlbums;
+  // Helper function to extract arrondissement or department number for sorting
+  const getGeographicOrder = (location: string): number => {
+    // Paris arrondissements: "Paris 3ème", "Paris 15ème" etc. -> order by arrondissement (1-20)
+    const parisMatch = location.match(/Paris\s+(\d+)/i);
+    if (parisMatch) {
+      return parseInt(parisMatch[1], 10); // 1-20
     }
     
-    return completedAlbums.filter(album => {
-      return selectedFinitions.some(finition => 
-        album.finitionSol === finition || album.finitionMur === finition
-      );
+    // IDF departments: "(92)", "(93)", "(94)", "(95)" -> order after Paris (21-24)
+    const deptMatch = location.match(/\((\d{2})\)/);
+    if (deptMatch) {
+      const dept = parseInt(deptMatch[1], 10);
+      if (dept === 92) return 21;
+      if (dept === 93) return 22;
+      if (dept === 94) return 23;
+      if (dept === 95) return 24;
+      return 25 + dept; // Other departments after
+    }
+    
+    return 100; // Unknown locations at the end
+  };
+
+  // Filter by finitions (OR logic - album matches if it has at least one selected finition)
+  // Then sort geographically: Paris arrondissements first (1-20), then IDF departments (92, 93, 94, 95)
+  const filteredCompletedAlbums = useMemo(() => {
+    let filtered = completedAlbums;
+    
+    if (selectedFinitions.length > 0) {
+      filtered = completedAlbums.filter(album => {
+        return selectedFinitions.some(finition => 
+          album.finitionSol === finition || album.finitionMur === finition
+        );
+      });
+    }
+    
+    // Sort by geographic order
+    return [...filtered].sort((a, b) => {
+      return getGeographicOrder(a.location) - getGeographicOrder(b.location);
     });
   }, [completedAlbums, selectedFinitions]);
 
