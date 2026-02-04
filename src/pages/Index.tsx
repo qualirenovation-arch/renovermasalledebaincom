@@ -277,9 +277,11 @@ export default function Index() {
                     loading="lazy"
                   />
                 </div>
-                <h3 className="font-display text-lg md:text-xl font-semibold text-foreground mb-1">{project.style}</h3>
-                <p className="text-muted-foreground text-sm mb-2">{project.location}</p>
-                <span className="tag-beige text-xs">{project.tag}</span>
+                <h3 className="font-display text-lg md:text-xl font-semibold text-foreground mb-1 text-center">{project.style}</h3>
+                <p className="text-muted-foreground text-sm mb-2 text-center">{project.location}</p>
+                <div className="text-center">
+                  <span className="tag-beige text-xs">{project.tag}</span>
+                </div>
               </motion.div>
             ))}
           </div>
