@@ -40,6 +40,7 @@ import espaceAubadeLogo from "@/assets/logos/espace-aubade.svg";
 import laPlateformeLogo from "@/assets/logos/la-plateforme.svg";
 import modelecLogo from "@/assets/logos/modelec.svg";
 import poalgiLogo from "@/assets/logos/poalgi.svg";
+import sweeekLogo from "@/assets/logos/sweeek.svg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -159,6 +160,7 @@ const partnerCategories: PartnerCategory[] = [
       { name: "IKEA", url: "https://www.ikea.com/fr", description: "Mobilier et accessoires", logo: ikeaLogo },
       { name: "ManoMano", url: "https://www.manomano.fr", description: "Bricolage et jardinage", logo: manomanoLogo },
       { name: "Castorama", url: "https://www.castorama.fr", description: "Grande surface de bricolage", logo: castoramaLogo },
+      { name: "Sweeek", url: "https://www.sweeek.fr", description: "Mobilier et équipements maison", logo: sweeekLogo },
     ],
   },
   {
