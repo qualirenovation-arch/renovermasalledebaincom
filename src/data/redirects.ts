@@ -121,8 +121,10 @@ export const redirectMap: Record<string, string> = {
   "projet-saint-maur-94-enfants-ludique": "salle-de-bain-saint-maur-94-enfants-ludique",
   "projet-charenton-94-general-leclerc-duo": "salle-de-bain-charenton-94-duo-douche-baignoire",
   "projet-charenton-94-liberté-moderne": "salle-de-bain-charenton-94-liberte-moderne",
+  "salle-de-bain-charenton-94-renovation-complete": "salle-de-bain-charenton-94-renovation-gres-marbre-laiton-double-vasque",
+  "salle-de-bain-charenton-94-renovation-complete-douche-double-vasque": "salle-de-bain-charenton-94-renovation-gres-marbre-laiton-double-vasque",
   "projet-vincennes-94-renovation": "salle-de-bain-vincennes-94-renovation-complete",
-  "salle-de-bain-charenton-94-renovation-complete": "salle-de-bain-charenton-94-renovation-complete-douche-double-vasque",
+  
   "salle-de-bain-charenton-94-wc-chauffe-eau-dissimule": "salle-de-bain-charenton-94-renovation-wc-chauffe-eau-dissimule",
   "salle-de-bain-saint-mande-94-renovation": "salle-de-bain-saint-mande-94-renovation-douche-italienne",
   "salle-de-bain-saint-maur-94-renovation-avant-apres": "salle-de-bain-saint-maur-94-renovation-complete-avant-apres",
