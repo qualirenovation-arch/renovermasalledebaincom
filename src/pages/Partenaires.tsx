@@ -144,6 +144,7 @@ const partnerCategories: PartnerCategory[] = [
       { name: "Ressource", url: "https://www.ressource-peintures.com", description: "Peintures écologiques françaises" },
       { name: "Argile", url: "https://www.argile-peinture.fr", description: "Peintures naturelles à l'argile" },
       { name: "Unikalo", url: "https://www.unikalo.com", description: "Peintures professionnelles" },
+      { name: "Benjamin Moore", url: "https://www.benjaminmoore.com/fr-fr", description: "Peintures américaines premium" },
     ],
   },
   {
