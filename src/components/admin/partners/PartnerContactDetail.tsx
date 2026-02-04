@@ -10,6 +10,7 @@ import { ArrowLeft, Phone, Mail, MessageCircle, Globe, Save } from "lucide-react
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 import { toast } from "sonner";
+import { PartnerDocumentsSection } from "./PartnerDocumentsSection";
 
 interface PartnerContact {
   id: string;
@@ -420,6 +421,12 @@ export function PartnerContactDetail({ contactId, onBack }: PartnerContactDetail
               )}
             </CardContent>
           </Card>
+
+          {/* Documents Section - Only for subcontractors */}
+          <PartnerDocumentsSection 
+            partnerId={contact.id} 
+            partnerFamily={contact.partner_family} 
+          />
 
           {/* Message */}
           <Card>
