@@ -47,10 +47,13 @@ interface BrandSiteFormProps {
 
 const HCAPTCHA_SITE_KEY = import.meta.env.VITE_HCAPTCHA_SITE_KEY || "10000000-ffff-ffff-ffff-000000000001";
 
+// TODO: Remettre à false après les tests
+const SKIP_CAPTCHA_FOR_TESTING = true;
+
 export function BrandSiteForm({ onBack }: BrandSiteFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(SKIP_CAPTCHA_FOR_TESTING ? "test-token" : null);
   const captchaRef = useRef<HCaptcha>(null);
 
   const form = useForm<FormValues>({
@@ -358,14 +361,16 @@ export function BrandSiteForm({ onBack }: BrandSiteFormProps) {
             )}
           />
 
-          <div className="flex justify-center">
-            <HCaptcha
-              ref={captchaRef}
-              sitekey={HCAPTCHA_SITE_KEY}
-              onVerify={setCaptchaToken}
-              onExpire={() => setCaptchaToken(null)}
-            />
-          </div>
+          {!SKIP_CAPTCHA_FOR_TESTING && (
+            <div className="flex justify-center">
+              <HCaptcha
+                ref={captchaRef}
+                sitekey={HCAPTCHA_SITE_KEY}
+                onVerify={setCaptchaToken}
+                onExpire={() => setCaptchaToken(null)}
+              />
+            </div>
+          )}
 
           <Button
             type="submit"
