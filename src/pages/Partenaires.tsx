@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { motion } from "framer-motion";
+import { Instagram } from "lucide-react";
 
 // Import SVG logos
 import schluterLogo from "@/assets/logos/schluter.svg";
@@ -36,6 +37,7 @@ interface Partner {
   url: string;
   description: string;
   logo?: string;
+  iconComponent?: React.ReactNode;
 }
 
 interface PartnerCategory {
@@ -153,7 +155,7 @@ const partnerCategories: PartnerCategory[] = [
     icon: "🤝",
     partners: [
       { name: "Houzz", url: "https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept", description: "Notre profil professionnel", logo: houzzLogo },
-      { name: "Instagram", url: "https://www.instagram.com/qualirenovation__travaux/", description: "Suivez nos réalisations" },
+      { name: "Instagram", url: "https://www.instagram.com/qualirenovation__travaux/", description: "Suivez nos réalisations", iconComponent: <Instagram className="w-8 h-8 md:w-10 md:h-10" /> },
     ],
   },
 ];
@@ -226,6 +228,10 @@ export default function Partenaires() {
                           alt={partner.name}
                           className="h-8 md:h-10 w-auto object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300 mb-2"
                         />
+                      ) : partner.iconComponent ? (
+                        <div className="text-muted-foreground/70 group-hover:text-primary transition-colors duration-300 mb-2">
+                          {partner.iconComponent}
+                        </div>
                       ) : (
                         <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-2 group-hover:bg-primary/20 transition-colors">
                           <span className="font-display text-lg font-bold text-primary">
