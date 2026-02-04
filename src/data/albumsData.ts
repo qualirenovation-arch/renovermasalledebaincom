@@ -1551,7 +1551,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     id: "charenton",
     slug: "salle-de-bain-charenton-94-renovation-complete-douche-double-vasque",
     title: "Rénovation salle de bain Charenton — Douche XXL & double vasque",
-    location: "Charenton-le-Pont (94)",
+    location: "Charenton-le-Pont (94) - Rue Guerin",
     description: "AVANT : Salle de bain datée avec baignoire, carrelage mosaïque et équipements vétustes. APRÈS : Transformation luxueuse avec douche à l'italienne XXL, double vasque, carrelage grand format effet pierre et robinetterie chromée haut de gamme.",
     coverImage: charenton1,
     photos: [
