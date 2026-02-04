@@ -66,7 +66,6 @@ const partnerCategories: PartnerCategory[] = [
     icon: "🚿",
     partners: [
       { name: "Geberit", url: "https://www.geberit.fr", description: "Systèmes sanitaires", logo: geberitLogo },
-      { name: "Sklum", url: "https://www.sklum.com/fr/591-acheter-meubles-salle-de-bains", description: "Meubles de salle de bain design" },
       { name: "Cedeo", url: "https://www.cedeo.fr", description: "Distribution sanitaire chauffage" },
       { name: "Espace Aubade", url: "https://www.frenchaubade.fr", description: "Sanitaires et salles de bain" },
       { name: "Wirquin", url: "https://www.wirquin.fr", description: "Plomberie et évacuation" },
@@ -118,6 +117,8 @@ const partnerCategories: PartnerCategory[] = [
     partners: [
       { name: "David B", url: "https://www.davidb.fr", description: "Salles de bain design" },
       { name: "Envie de Bain", url: "https://www.enviedebain.fr", description: "Showroom salle de bain" },
+      { name: "Sklum", url: "https://www.sklum.com/fr", description: "Mobilier design et décoration" },
+      { name: "Seek", url: "#", description: "Design et ameublement" },
       { name: "Tots", url: "#", description: "Parois de douche sur mesure" },
       { name: "Democratik Design", url: "#", description: "Design et décoration" },
       { name: "Poalgi", url: "https://www.poalgi.com", description: "Éviers et vasques design" },
