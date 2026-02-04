@@ -66,6 +66,7 @@ const partnerCategories: PartnerCategory[] = [
     icon: "🚿",
     partners: [
       { name: "Geberit", url: "https://www.geberit.fr", description: "Systèmes sanitaires", logo: geberitLogo },
+      { name: "Sklum", url: "https://www.sklum.com/fr/591-acheter-meubles-salle-de-bains", description: "Meubles de salle de bain design" },
       { name: "Cedeo", url: "https://www.cedeo.fr", description: "Distribution sanitaire chauffage" },
       { name: "Espace Aubade", url: "https://www.frenchaubade.fr", description: "Sanitaires et salles de bain" },
       { name: "Wirquin", url: "https://www.wirquin.fr", description: "Plomberie et évacuation" },
