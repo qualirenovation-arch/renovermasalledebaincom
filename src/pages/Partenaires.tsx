@@ -70,7 +70,6 @@ const partnerCategories: PartnerCategory[] = [
       { name: "Espace Aubade", url: "https://www.frenchaubade.fr", description: "Sanitaires et salles de bain" },
       { name: "Wirquin", url: "https://www.wirquin.fr", description: "Plomberie et évacuation" },
       { name: "Sawiday", url: "https://www.sawiday.fr", description: "Équipements salle de bain" },
-      { name: "Cosyneo", url: "https://www.cosyneo.com", description: "Équipements de salle de bain" },
     ],
   },
   {
@@ -123,6 +122,7 @@ const partnerCategories: PartnerCategory[] = [
       { name: "Democratik Design", url: "#", description: "Design et décoration" },
       { name: "Poalgi", url: "https://www.poalgi.com", description: "Éviers et vasques design" },
       { name: "Planizia", url: "https://www.planizia.com", description: "Plans de travail en pierre" },
+      { name: "Cosyneo", url: "https://www.cosyneo.com", description: "Mobilier et équipements design" },
     ],
   },
   {
