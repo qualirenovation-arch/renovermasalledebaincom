@@ -1683,10 +1683,10 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== 📍 VINCENNES (94) ==========
   {
     id: "vincennes-mr",
-    slug: "salle-de-bain-paris-12-renovation-monsieur-noir-blanc-contemporain",
-    title: "SDB Monsieur — Noir & Blanc contemporain",
+    slug: "salle-de-bain-paris-12-renovation-monsieur-noyer-blanc-robinetterie-noire",
+    title: "SDB Monsieur — Noyer blanc & robinetterie noire encastrée",
     location: "Paris 12ème - Cours de Vincennes",
-    description: "Salle de bain Monsieur : noir & blanc, esprit contemporain\n\nPensée pour Monsieur, cette salle de bain a été entièrement transformée pour gagner en confort, modernité et durabilité. Fini le receveur d'angle et le meuble vert daté : place à une douche spacieuse, un carrelage noir & blanc esprit subway et des lignes nettes, faciles à vivre au quotidien.\n\nLe meuble suspendu, la robinetterie noire mate et le miroir rétro-éclairé composent un ensemble sobre et graphique, parfaitement adapté à un univers masculin et raffiné.\n\nRésultat : une salle de bain fonctionnelle, contemporaine et intemporelle.",
+    description: "Salle de bain Monsieur : noyer blanc et robinetterie noire encastrée\n\nPensée pour Monsieur, cette salle de bain au cœur du 12ème arrondissement a été entièrement transformée pour gagner en confort, modernité et durabilité. Fini le receveur d'angle et le meuble vert daté : place à une douche spacieuse équipée d'une robinetterie noire encastrée, un carrelage blanc épuré et des lignes nettes.\n\nLe meuble suspendu en noyer blanc, les finitions noires mates et le miroir rétro-éclairé composent un ensemble sobre et graphique, parfaitement adapté à un univers masculin et raffiné.\n\nRésultat : une salle de bain fonctionnelle, contemporaine et intemporelle, où le contraste du noyer blanc et du noir crée une atmosphère élégante.",
     coverImage: vincennesMr1,
     photos: [
       { id: 1, image: vincennesMr1, title: "Après — Vue d'ensemble", description: "Douche XXL et meuble design" },

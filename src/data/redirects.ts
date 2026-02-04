@@ -128,8 +128,9 @@ export const redirectMap: Record<string, string> = {
   "salle-de-bain-saint-maur-94-renovation-avant-apres": "salle-de-bain-saint-maur-94-renovation-complete-avant-apres",
   "salle-de-bain-saint-maur-94-enfants-inspiration-coreenne": "salle-de-bain-saint-maur-94-enfants-bleu-beige-ancienne-guinguette",
   "salle-de-bain-saint-maur-94-renovation-enfants-inspiration-coreenne": "salle-de-bain-saint-maur-94-enfants-bleu-beige-ancienne-guinguette",
-  "salle-de-bain-vincennes-94-garcon-noir-blanc": "salle-de-bain-paris-12-renovation-monsieur-noir-blanc-contemporain",
-  "salle-de-bain-vincennes-94-renovation-garcon-noir-blanc": "salle-de-bain-paris-12-renovation-monsieur-noir-blanc-contemporain",
+  "salle-de-bain-vincennes-94-garcon-noir-blanc": "salle-de-bain-paris-12-renovation-monsieur-noyer-blanc-robinetterie-noire",
+  "salle-de-bain-vincennes-94-renovation-garcon-noir-blanc": "salle-de-bain-paris-12-renovation-monsieur-noyer-blanc-robinetterie-noire",
+  "salle-de-bain-paris-12-renovation-monsieur-noir-blanc-contemporain": "salle-de-bain-paris-12-renovation-monsieur-noyer-blanc-robinetterie-noire",
   "salle-de-bain-vitry-94-renovation-avant-apres": "salle-de-bain-vitry-94-renovation-complete-avant-apres",
   "salle-de-bain-saint-maurice-94-pullman-noir-blanc": "salle-de-bain-saint-maurice-94-renovation-pullman-noir-blanc",
   
