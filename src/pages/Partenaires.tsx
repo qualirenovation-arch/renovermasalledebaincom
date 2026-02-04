@@ -94,7 +94,7 @@ const partnerCategories: PartnerCategory[] = [
       { name: "Schneider Electric", url: "https://www.se.com/fr", description: "Solutions électriques", logo: schneiderLogo },
       { name: "Atlantic", url: "https://www.atlantic.fr", description: "Chauffage et eau chaude", logo: atlanticLogo },
       { name: "Corston", url: "#", description: "Appareillages électriques design" },
-      { name: "Mdelec", url: "#", description: "Distribution électrique" },
+      { name: "Modelec", url: "https://www.modelec.com/fr", description: "Appareillages électriques haut de gamme" },
       { name: "Arnould", url: "#", description: "Appareillages électriques" },
       { name: "Rexel", url: "https://www.rexel.fr", description: "Distribution matériel électrique", logo: rexelLogo },
     ],
