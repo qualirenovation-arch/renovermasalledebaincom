@@ -8,9 +8,17 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
 import { supabase } from "@/integrations/supabase/client";
-import { Loader2, ArrowLeft, CheckCircle2 } from "lucide-react";
+import { Loader2, ArrowLeft, CheckCircle2, Upload, FileText, AlertCircle } from "lucide-react";
 import { toast } from "sonner";
+
+const REQUIRED_DOCUMENTS = [
+  { id: "kbis", label: "Extrait KBIS (moins de 3 mois)", required: true },
+  { id: "rc_pro", label: "Attestation RC Professionnelle en cours de validité", required: true },
+  { id: "decennale", label: "Attestation Décennale en cours de validité", required: true },
+  { id: "qualibat", label: "Certification Qualibat ou équivalent", required: false },
+];
 
 const formSchema = z.object({
   company_name: z.string().min(2, "Nom de société requis"),
@@ -23,6 +31,9 @@ const formSchema = z.object({
   collaboration_type: z.enum(["ponctuelle", "recurrente"]).optional(),
   availability: z.enum(["immediat", "moins_1_mois", "a_definir"]).optional(),
   message: z.string().min(10, "Message requis (min. 10 caractères)"),
+  has_kbis: z.boolean().refine(val => val === true, "Vous devez disposer d'un extrait KBIS"),
+  has_rc_pro: z.boolean().refine(val => val === true, "Vous devez disposer d'une attestation RC Pro"),
+  has_decennale: z.boolean().refine(val => val === true, "Vous devez disposer d'une attestation Décennale"),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -38,6 +49,12 @@ export function SubcontractorForm({ onBack }: SubcontractorFormProps) {
   const [isSuccess, setIsSuccess] = useState(false);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const captchaRef = useRef<HCaptcha>(null);
+  const [uploadedFiles, setUploadedFiles] = useState<Record<string, File | null>>({
+    kbis: null,
+    rc_pro: null,
+    decennale: null,
+    qualibat: null,
+  });
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -52,8 +69,29 @@ export function SubcontractorForm({ onBack }: SubcontractorFormProps) {
       collaboration_type: undefined,
       availability: undefined,
       message: "",
+      has_kbis: false,
+      has_rc_pro: false,
+      has_decennale: false,
     },
   });
+
+  const handleFileChange = (docId: string, event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0] || null;
+    if (file) {
+      // Validate file type
+      const allowedTypes = ['application/pdf', 'image/jpeg', 'image/png'];
+      if (!allowedTypes.includes(file.type)) {
+        toast.error("Format non supporté. Utilisez PDF, JPEG ou PNG.");
+        return;
+      }
+      // Validate file size (max 5MB)
+      if (file.size > 5 * 1024 * 1024) {
+        toast.error("Fichier trop volumineux (max 5 Mo)");
+        return;
+      }
+    }
+    setUploadedFiles(prev => ({ ...prev, [docId]: file }));
+  };
 
   const onSubmit = async (values: FormValues) => {
     if (!captchaToken) {
@@ -89,7 +127,7 @@ export function SubcontractorForm({ onBack }: SubcontractorFormProps) {
   if (isSuccess) {
     return (
       <div className="text-center py-12">
-        <CheckCircle2 className="w-16 h-16 text-green-500 mx-auto mb-6" />
+        <CheckCircle2 className="w-16 h-16 text-primary mx-auto mb-6" />
         <h3 className="font-display text-2xl font-semibold mb-4">Merci pour votre demande !</h3>
         <p className="text-muted-foreground mb-8">
           Nous avons bien reçu votre candidature et reviendrons vers vous rapidement.
@@ -309,6 +347,138 @@ export function SubcontractorForm({ onBack }: SubcontractorFormProps) {
               </FormItem>
             )}
           />
+
+          {/* Documents requis section */}
+          <div className="bg-muted/50 rounded-xl p-6 space-y-4">
+            <div className="flex items-start gap-3">
+              <AlertCircle className="w-5 h-5 text-primary mt-0.5" />
+              <div>
+                <h3 className="font-semibold text-foreground">Documents requis</h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Pour travailler avec nous, vous devrez fournir les documents suivants. Vous pouvez les joindre maintenant ou les envoyer ultérieurement.
+                </p>
+              </div>
+            </div>
+
+            <ul className="space-y-2 ml-8">
+              {REQUIRED_DOCUMENTS.map((doc) => (
+                <li key={doc.id} className="flex items-center gap-2 text-sm">
+                  <FileText className="w-4 h-4 text-muted-foreground" />
+                  <span>{doc.label}</span>
+                  {doc.required && <span className="text-destructive">*</span>}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* File uploads */}
+          <div className="space-y-4">
+            <h3 className="font-semibold">Joindre vos documents (optionnel)</h3>
+            <p className="text-sm text-muted-foreground">
+              Formats acceptés : PDF, JPEG, PNG (max 5 Mo par fichier)
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {REQUIRED_DOCUMENTS.map((doc) => (
+                <div key={doc.id} className="border border-border rounded-lg p-4">
+                  <label className="block text-sm font-medium mb-2">
+                    {doc.label}
+                  </label>
+                  <div className="relative">
+                    <input
+                      type="file"
+                      accept=".pdf,.jpg,.jpeg,.png"
+                      onChange={(e) => handleFileChange(doc.id, e)}
+                      className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                    />
+                    <div className={`flex items-center gap-2 px-4 py-2 rounded-md border border-dashed transition-colors ${
+                      uploadedFiles[doc.id] ? 'bg-accent border-primary/50' : 'bg-background border-border hover:border-primary/50'
+                    }`}>
+                      {uploadedFiles[doc.id] ? (
+                        <>
+                          <CheckCircle2 className="w-4 h-4 text-primary" />
+                          <span className="text-sm truncate">{uploadedFiles[doc.id]?.name}</span>
+                        </>
+                      ) : (
+                        <>
+                          <Upload className="w-4 h-4 text-muted-foreground" />
+                          <span className="text-sm text-muted-foreground">Choisir un fichier</span>
+                        </>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Confirmation checkboxes */}
+          <div className="space-y-4 border-t border-border pt-6">
+            <h3 className="font-semibold">Confirmations obligatoires *</h3>
+            
+            <FormField
+              control={form.control}
+              name="has_kbis"
+              render={({ field }) => (
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                  <FormControl>
+                    <Checkbox
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel className="font-normal">
+                      Je dispose d'un extrait KBIS de moins de 3 mois
+                    </FormLabel>
+                    <FormMessage />
+                  </div>
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="has_rc_pro"
+              render={({ field }) => (
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                  <FormControl>
+                    <Checkbox
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel className="font-normal">
+                      Je dispose d'une attestation RC Professionnelle en cours de validité
+                    </FormLabel>
+                    <FormMessage />
+                  </div>
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="has_decennale"
+              render={({ field }) => (
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                  <FormControl>
+                    <Checkbox
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel className="font-normal">
+                      Je dispose d'une attestation Décennale en cours de validité
+                    </FormLabel>
+                    <FormMessage />
+                  </div>
+                </FormItem>
+              )}
+            />
+          </div>
 
           <div className="flex justify-center">
             <HCaptcha
