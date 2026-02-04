@@ -136,12 +136,22 @@ const partnerCategories: PartnerCategory[] = [
     ],
   },
   {
+    title: "Peinture",
+    icon: "🎨",
+    partners: [
+      { name: "Farrow & Ball", url: "https://www.farrow-ball.com/fr", description: "Peintures et papiers peints haut de gamme" },
+      { name: "Little Greene", url: "https://www.littlegreene.fr", description: "Peintures et couleurs britanniques" },
+      { name: "Ressource", url: "https://www.ressource-peintures.com", description: "Peintures écologiques françaises" },
+      { name: "Argile", url: "https://www.argile-peinture.fr", description: "Peintures naturelles à l'argile" },
+      { name: "Unikalo", url: "https://www.unikalo.com", description: "Peintures professionnelles" },
+    ],
+  },
+  {
     title: "Partenaires Métier",
     icon: "🤝",
     partners: [
       { name: "Houzz", url: "https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept", description: "Notre profil professionnel" },
       { name: "Instagram", url: "https://www.instagram.com/qualirenovation__travaux/", description: "Suivez nos réalisations" },
-      { name: "Unikalo Ivry", url: "https://www.unikalo.com", description: "Peintures professionnelles" },
     ],
   },
 ];
