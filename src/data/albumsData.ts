@@ -1528,19 +1528,20 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     title: "Salle de bain Saint-Ouen — Esprit Mondrian",
     subtitle: "Quand la conception sublime l'existant",
     location: "Saint-Ouen (93) — Rue Pablo Picasso",
-    description: `Cette salle de bain avait déjà été rénovée, mais sans réelle réflexion sur l'usage ni sur l'esthétique. Résultat : un espace confus, peu fonctionnel, où les volumes et les matériaux ne dialoguaient pas.
+    description: `Cette salle de bain avait déjà été rénovée, mais sans réelle réflexion sur l'usage ni sur la lecture de l'espace. Les volumes étaient encombrés, la machine à laver visible, et les matériaux ne dialoguaient pas entre eux.
 
-Notre intervention a consisté à repenser l'existant sans tout démolir, pour redonner cohérence et confort à la pièce.
-Sous la conception de Thierry Pelmard, la salle de bain adopte une écriture graphique inspirée de Mondrian, structurée et lisible.
+Notre intervention a consisté à restructurer l'existant sans tout refaire.
+Sous la conception de Thierry Pelmard, la pièce adopte une écriture graphique inspirée de Mondrian, plus lisible et plus fonctionnelle.
 
 Les choix clés :
-• Meuble toute largeur sur-mesure intégrant la machine à laver
+• Meuble Leroy Merlin, complété par un caisson sur roulettes pour créer un panier à linge sale discret et mobile
+• Déplacement du lave-linge vers la droite, avec ajout d'une porte pour masquer le hublot
 • Deux vasques en pierre naturelle sur plan en chêne
 • Mur graphique avec miroirs rétroéclairés
 • Palette profonde autour du Marron Landes – Seigneurie
-• Rangements intégrés libérant l'espace au sol
+• Rangements intégrés pour libérer l'espace au sol
 
-Ce projet illustre une conviction forte : la conception sublime l'existant et révèle le potentiel d'un espace déjà rénové mais mal pensé.`,
+Ce projet démontre qu'une rénovation prend tout son sens lorsqu'elle est guidée par une conception intelligente, capable d'optimiser l'existant et de révéler le potentiel des volumes.`,
     coverImage: stOuen1,
     instagramLinks: [
       "https://www.instagram.com/reel/DKFL3IKsHDM/",
