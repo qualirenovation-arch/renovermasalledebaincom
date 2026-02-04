@@ -1550,15 +1550,15 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
   // ========== 📍 CHARENTON-LE-PONT (94) ==========
   {
     id: "charenton",
-    slug: "salle-de-bain-charenton-94-renovation-gres-marbre-laiton-double-vasque",
-    title: "Salle de bain Charenton — Grès inspiration marbre, laiton & double vasque",
+    slug: "salle-de-bain-charenton-94-renovation-gres-marbre-laiton-grande-vasque",
+    title: "Salle de bain Charenton — Grès inspiration marbre, laiton & grande vasque",
     location: "Charenton-le-Pont (94) - Rue Guerin",
-    description: "Du carrelage mosaïque aux lignes épurées du grès inspiration marbre\n\nAvant, cette salle de bain de Charenton-le-Pont affichait tous les stigmates des années passées : baignoire encastrée, mosaïque murale datée, équipements vétustes. Un espace fonctionnel, certes, mais qui ne correspondait plus au mode de vie de ses propriétaires.\n\nAujourd'hui, la métamorphose est totale. Le grès cérame grand format aux veines marbrées habille sols et murs d'une élégance intemporelle. La robinetterie laiton brossé apporte une touche de chaleur raffinée, contrastant avec la sobriété du carrelage. Le receveur extra-plat antidérapant accueille une douche XXL généreuse, tandis que le meuble double vasque — un hack IKEA personnalisé — offre un rangement optimisé sans sacrifier le style. Le miroir chiné chez Maison du Monde parachève cette atmosphère entre modernité et caractère.\n\nCe projet illustre parfaitement notre approche : un chantier heureux, fondé sur l'anticipation, la coordination des travaux et la sérénité du client.",
+    description: "Du carrelage mosaïque aux lignes épurées du grès inspiration marbre\n\nAvant, cette salle de bain de Charenton-le-Pont affichait tous les stigmates des années passées : baignoire encastrée, mosaïque murale datée, équipements vétustes. Un espace fonctionnel, certes, mais qui ne correspondait plus au mode de vie de ses propriétaires.\n\nAujourd'hui, la métamorphose est totale. Le grès cérame grand format aux veines marbrées habille sols et murs d'une élégance intemporelle. La robinetterie laiton brossé apporte une touche de chaleur raffinée, contrastant avec la sobriété du carrelage. Le receveur extra-plat antidérapant accueille une douche XXL généreuse, tandis que le meuble blanc brillant IKEA structure — un hack personnalisé — supporte une grande vasque à poser pour un rangement optimisé sans sacrifier le style. Le miroir chiné chez Maison du Monde parachève cette atmosphère entre modernité et caractère.\n\nCe projet illustre parfaitement notre approche : un chantier heureux, fondé sur l'anticipation, la coordination des travaux et la sérénité du client.",
     coverImage: charenton1,
     photos: [
-      { id: 1, image: charenton1, title: "Après — Vue d'ensemble", description: "Grès inspiration marbre et double vasque" },
+      { id: 1, image: charenton1, title: "Après — Vue d'ensemble", description: "Grès inspiration marbre et grande vasque" },
       { id: 2, image: charenton2, title: "Après — Douche italienne XXL", description: "Receveur antidérapant et robinetterie laiton" },
-      { id: 3, image: charenton3, title: "Après — Double vasque", description: "Meuble IKEA hack personnalisé" },
+      { id: 3, image: charenton3, title: "Après — Grande vasque", description: "Meuble IKEA blanc brillant structure" },
       { id: 4, image: charenton4, title: "Après — Détail robinetterie", description: "Laiton brossé encastré" },
       { id: 5, image: charenton5, title: "Après — WC suspendu", description: "Optimisation de l'espace" },
       { id: 6, image: charenton6, title: "Après — Rangements", description: "Colonnes intégrées" },
