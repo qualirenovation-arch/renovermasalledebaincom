@@ -22,6 +22,24 @@ import ikeaLogo from "@/assets/logos/ikea.svg";
 import manomanoLogo from "@/assets/logos/manomano.svg";
 import mapeiLogo from "@/assets/logos/mapei.svg";
 import farrowBallLogo from "@/assets/logos/farrow-ball.svg";
+import wediLogo from "@/assets/logos/wedi.svg";
+import kerakollLogo from "@/assets/logos/kerakoll.svg";
+import cedeoLogo from "@/assets/logos/cedeo.svg";
+import littleGreeneLogo from "@/assets/logos/little-greene.svg";
+import benjaminMooreLogo from "@/assets/logos/benjamin-moore.svg";
+import wirquinLogo from "@/assets/logos/wirquin.svg";
+import unikaloLogo from "@/assets/logos/unikalo.svg";
+import ressourceLogo from "@/assets/logos/ressource.svg";
+import argileLogo from "@/assets/logos/argile.svg";
+import hudsonReedLogo from "@/assets/logos/hudson-reed.svg";
+import horusLogo from "@/assets/logos/horus.svg";
+import sklumLogo from "@/assets/logos/sklum.svg";
+import legallaisLogo from "@/assets/logos/legallais.svg";
+import foussierLogo from "@/assets/logos/foussier.svg";
+import espaceAubadeLogo from "@/assets/logos/espace-aubade.svg";
+import laPlateformeLogo from "@/assets/logos/la-plateforme.svg";
+import modelecLogo from "@/assets/logos/modelec.svg";
+import poalgiLogo from "@/assets/logos/poalgi.svg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -60,9 +78,9 @@ const partnerCategories: PartnerCategory[] = [
       { name: "Mosaic Factory", url: "https://mosaicfactory.com/fr/", description: "Zellige, terrazzo & carreaux ciment", logo: mosaicFactoryLogo },
       { name: "Mosaic del Sur", url: "https://www.carreauxmosaic.com", description: "Carreaux de ciment sur mesure", logo: mosaicDelSurLogo },
       { name: "Weber", url: "https://www.weber.fr", description: "Mortiers et enduits professionnels", logo: weberLogo },
-      { name: "Wedi", url: "https://www.wedi.de/fr", description: "Panneaux de construction étanches" },
+      { name: "Wedi", url: "https://www.wedi.de/fr", description: "Panneaux de construction étanches", logo: wediLogo },
       { name: "Mapei", url: "https://www.mapei.com/fr", description: "Colles et produits chimiques", logo: mapeiLogo },
-      { name: "Kerakoll", url: "https://www.kerakoll.com/fr", description: "Colles et joints écologiques" },
+      { name: "Kerakoll", url: "https://www.kerakoll.com/fr", description: "Colles et joints écologiques", logo: kerakollLogo },
       { name: "Ceramica.fr", url: "https://www.ceramica.fr", description: "Carrelages et céramiques" },
       { name: "Parquet-Carrelage.com", url: "https://www.parquet-carrelage.com", description: "Revêtements de sol" },
       { name: "Eiffel Carrelage", url: "#", description: "Carrelages professionnels" },
@@ -74,9 +92,9 @@ const partnerCategories: PartnerCategory[] = [
     icon: "🚿",
     partners: [
       { name: "Geberit", url: "https://www.geberit.fr", description: "Systèmes sanitaires", logo: geberitLogo },
-      { name: "Cedeo", url: "https://www.cedeo.fr", description: "Distribution sanitaire chauffage" },
-      { name: "Espace Aubade", url: "https://www.frenchaubade.fr", description: "Sanitaires et salles de bain" },
-      { name: "Wirquin", url: "https://www.wirquin.fr", description: "Plomberie et évacuation" },
+      { name: "Cedeo", url: "https://www.cedeo.fr", description: "Distribution sanitaire chauffage", logo: cedeoLogo },
+      { name: "Espace Aubade", url: "https://www.frenchaubade.fr", description: "Sanitaires et salles de bain", logo: espaceAubadeLogo },
+      { name: "Wirquin", url: "https://www.wirquin.fr", description: "Plomberie et évacuation", logo: wirquinLogo },
       { name: "Sawiday", url: "https://www.sawiday.fr", description: "Équipements salle de bain" },
     ],
   },
@@ -84,8 +102,8 @@ const partnerCategories: PartnerCategory[] = [
     title: "Robinetterie & Équipements",
     icon: "🔧",
     partners: [
-      { name: "Horus", url: "https://www.hfrob.fr", description: "Robinetterie française haut de gamme" },
-      { name: "Hudson Reed", url: "https://www.hudsonreed.fr", description: "Robinetterie et douches design" },
+      { name: "Horus", url: "https://www.hfrob.fr", description: "Robinetterie française haut de gamme", logo: horusLogo },
+      { name: "Hudson Reed", url: "https://www.hudsonreed.fr", description: "Robinetterie et douches design", logo: hudsonReedLogo },
       { name: "CMR", url: "https://www.cmr-bain.fr", description: "Robinetterie et équipements sanitaires" },
       { name: "MaSalleDeBain.com", url: "https://www.masalledebain.com", description: "Équipements sanitaires" },
       { name: "Rue du Bain", url: "https://www.ruedubain.com", description: "Équipements de salle de bain" },
@@ -100,7 +118,7 @@ const partnerCategories: PartnerCategory[] = [
       { name: "Schneider Electric", url: "https://www.se.com/fr", description: "Solutions électriques", logo: schneiderLogo },
       { name: "Atlantic", url: "https://www.atlantic.fr", description: "Chauffage et eau chaude", logo: atlanticLogo },
       { name: "Corston", url: "#", description: "Appareillages électriques design" },
-      { name: "Modelec", url: "https://www.modelec.com/fr", description: "Appareillages électriques haut de gamme" },
+      { name: "Modelec", url: "https://www.modelec.com/fr", description: "Appareillages électriques haut de gamme", logo: modelecLogo },
       { name: "Arnould", url: "#", description: "Appareillages électriques" },
       { name: "Rexel", url: "https://www.rexel.fr", description: "Distribution matériel électrique", logo: rexelLogo },
     ],
@@ -110,12 +128,12 @@ const partnerCategories: PartnerCategory[] = [
     icon: "🏗️",
     partners: [
       { name: "Point.P", url: "https://www.pointp.fr", description: "Matériaux de construction", logo: pointpLogo },
-      { name: "La Plateforme du Bâtiment", url: "https://www.laplateforme.com", description: "Matériaux de construction" },
+      { name: "La Plateforme du Bâtiment", url: "https://www.laplateforme.com", description: "Matériaux de construction", logo: laPlateformeLogo },
       { name: "Guimier", url: "https://www.guimier.fr", description: "Négoce en matériaux" },
       { name: "Tible et Dumont", url: "#", description: "Fournisseur professionnel" },
       { name: "Schmitt Ney", url: "https://www.schmitt-ney.fr", description: "Négoce sanitaire" },
-      { name: "Foussier", url: "https://www.foussier.fr", description: "Quincaillerie professionnelle" },
-      { name: "Legallais", url: "https://www.legallais.com", description: "Fournitures du bâtiment" },
+      { name: "Foussier", url: "https://www.foussier.fr", description: "Quincaillerie professionnelle", logo: foussierLogo },
+      { name: "Legallais", url: "https://www.legallais.com", description: "Fournitures du bâtiment", logo: legallaisLogo },
     ],
   },
   {
@@ -124,11 +142,11 @@ const partnerCategories: PartnerCategory[] = [
     partners: [
       { name: "David B", url: "https://www.davidb.fr", description: "Salles de bain design" },
       { name: "Envie de Bain", url: "https://www.enviedebain.fr", description: "Showroom salle de bain" },
-      { name: "Sklum", url: "https://www.sklum.com/fr", description: "Mobilier design et décoration" },
+      { name: "Sklum", url: "https://www.sklum.com/fr", description: "Mobilier design et décoration", logo: sklumLogo },
       { name: "Seek", url: "#", description: "Design et ameublement" },
       { name: "Tots", url: "#", description: "Parois de douche sur mesure" },
       { name: "Democratik Design", url: "#", description: "Design et décoration" },
-      { name: "Poalgi", url: "https://www.poalgi.com", description: "Éviers et vasques design" },
+      { name: "Poalgi", url: "https://www.poalgi.com", description: "Éviers et vasques design", logo: poalgiLogo },
       { name: "Planizia", url: "https://www.planizia.com", description: "Plans de travail en pierre" },
       { name: "Cosyneo", url: "https://www.cosyneo.com", description: "Mobilier et équipements design" },
     ],
@@ -148,11 +166,11 @@ const partnerCategories: PartnerCategory[] = [
     icon: "🎨",
     partners: [
       { name: "Farrow & Ball", url: "https://www.farrow-ball.com/fr", description: "Peintures et papiers peints haut de gamme", logo: farrowBallLogo },
-      { name: "Little Greene", url: "https://www.littlegreene.fr", description: "Peintures et couleurs britanniques" },
-      { name: "Ressource", url: "https://www.ressource-peintures.com", description: "Peintures écologiques françaises" },
-      { name: "Argile", url: "https://www.argile-peinture.fr", description: "Peintures naturelles à l'argile" },
-      { name: "Unikalo", url: "https://www.unikalo.com", description: "Peintures professionnelles" },
-      { name: "Benjamin Moore", url: "https://www.benjaminmoore.com/fr-fr", description: "Peintures américaines premium" },
+      { name: "Little Greene", url: "https://www.littlegreene.fr", description: "Peintures et couleurs britanniques", logo: littleGreeneLogo },
+      { name: "Ressource", url: "https://www.ressource-peintures.com", description: "Peintures écologiques françaises", logo: ressourceLogo },
+      { name: "Argile", url: "https://www.argile-peinture.fr", description: "Peintures naturelles à l'argile", logo: argileLogo },
+      { name: "Unikalo", url: "https://www.unikalo.com", description: "Peintures professionnelles", logo: unikaloLogo },
+      { name: "Benjamin Moore", url: "https://www.benjaminmoore.com/fr-fr", description: "Peintures américaines premium", logo: benjaminMooreLogo },
     ],
   },
   {
