@@ -11,6 +11,7 @@ import nicolasRoretDouche from "@/assets/nicolas-roret-douche.jpg";
 import { presseNews, guideConseils, videoConseils } from "@/data/newsData";
 import { TestimonialsSlider } from "@/components/home/TestimonialsSlider";
 import { Recompenses } from "@/components/layout/Recompenses";
+import { PartnerCTA } from "@/components/home/PartnerCTA";
 
 // Section "Pourquoi choisir" - 3 colonnes avec pictos SVG
 const whyChoose = [
@@ -351,6 +352,9 @@ export default function Index() {
 
       {/* Distinctions Houzz */}
       <Recompenses />
+
+      {/* CTA Partenaires / Recrutement */}
+      <PartnerCTA />
 
 
       {/* CTA Final - Premium dark section */}
