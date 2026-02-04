@@ -1511,11 +1511,12 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 4, image: courbevoie9, title: "Après — Meuble vasque", description: "Teck et vasque à poser" },
       { id: 5, image: courbevoie10, title: "Après — Détails", description: "Finitions haut de gamme" },
       { id: 6, image: courbevoie11, title: "Après — WC suspendu", description: "Optimisation de l'espace" },
-      { id: 7, image: courbevoieTravaux1, title: "Travaux — Démolition", description: "Reprise du chantier sinistré" },
-      { id: 8, image: courbevoieTravaux2, title: "Travaux — Reconstruction", description: "Étapes de rénovation" },
-      { id: 9, image: courbevoieAvant1, title: "Avant — Sinistre", description: "Dégâts des eaux importants" },
-      { id: 10, image: courbevoieAvant2, title: "Avant — Moisissures", description: "État après le sinistre" },
-      { id: 11, image: courbevoieAvant3, title: "Avant — Équipements", description: "Destruction des installations" },
+      { id: 7, image: courbevoieStGuillaumeChantier1, title: "Travaux — Pose carrelage terrazzo", description: "Receveur extra-plat et faïence grand format" },
+      { id: 8, image: courbevoieTravaux1, title: "Travaux — Démolition", description: "Reprise du chantier sinistré" },
+      { id: 9, image: courbevoieTravaux2, title: "Travaux — Reconstruction", description: "Étapes de rénovation" },
+      { id: 10, image: courbevoieAvant1, title: "Avant — Sinistre", description: "Dégâts des eaux importants" },
+      { id: 11, image: courbevoieAvant2, title: "Avant — Moisissures", description: "État après le sinistre" },
+      { id: 12, image: courbevoieAvant3, title: "Avant — Équipements", description: "Destruction des installations" },
     ],
     finitionSol: "terrazzo",
     finitionMur: "gres-cerame-uni",
@@ -2020,18 +2021,6 @@ export const inProgressAlbums: Album[] = [
       { id: 1, image: courbevoieLalyreAvant1, title: "Avant — Vue vasque et ensemble", description: "Salle de bain avant rénovation" },
     ],
   },
-  {
-    id: "courbevoie-st-guillaume-encours",
-    slug: "chantier-courbevoie-92-saint-guillaume",
-    title: "Pose carrelage terrazzo",
-    location: "Courbevoie (92) - Rue Saint-Guillaume",
-    description: "Pose de carrelage terrazzo en cours — receveur extra-plat et faïence blanche grand format. Chantier en cours — restez connecté pour découvrir cette transformation !",
-    coverImage: courbevoieStGuillaumeChantier1,
-    isInProgress: true,
-    photos: [
-      { id: 1, image: courbevoieStGuillaumeChantier1, title: "Travaux — Pose carrelage", description: "Terrazzo et faïence en cours de pose" },
-    ],
-  },
 ];
 
 // ===== POSITIONS SUR LA CARTE =====
@@ -2049,7 +2038,7 @@ export const projectLocations: ProjectLocation[] = [
   { id: "port-royal", name: "Port-Royal", area: "5ème", x: 48, y: 60 },
   { id: "la-tour", name: "Rue de la Tour", area: "16ème", x: 25, y: 45 },
   { id: "courbevoie-lalyre", name: "Rue Ernest Lalyre", area: "Courbevoie", x: 15, y: 20 },
-  { id: "courbevoie-st-guillaume-encours", name: "Rue Saint-Guillaume", area: "Courbevoie", x: 12, y: 25 },
+  
 ];
 
 // ===== CATEGORY MAPPING =====
