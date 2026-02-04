@@ -1527,7 +1527,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     slug: "salle-de-bain-saint-ouen-93-mondrian-conception-meuble-sur-mesure",
     title: "Salle de bain Saint-Ouen — Esprit Mondrian",
     subtitle: "Quand la conception sublime l'existant",
-    location: "Saint-Ouen (93)",
+    location: "Saint-Ouen (93) — Rue Pablo Picasso",
     description: `Cette salle de bain avait déjà été rénovée, mais sans réelle réflexion sur l'usage ni sur l'esthétique. Résultat : un espace confus, peu fonctionnel, où les volumes et les matériaux ne dialoguaient pas.
 
 Notre intervention a consisté à repenser l'existant sans tout démolir, pour redonner cohérence et confort à la pièce.
