@@ -29,16 +29,16 @@ const RMSBLogo: React.FC<RMSBLogoProps> = ({
       className={className}
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* RMSB Letters */}
+      {/* RMSB Letters - lettres rapprochées */}
       <text
         x="100"
         y={showTagline ? "45" : "55"}
         textAnchor="middle"
         fontFamily="'Playfair Display', Georgia, serif"
-        fontSize="42"
+        fontSize="44"
         fontWeight="700"
         fill={logoColor}
-        letterSpacing="2"
+        letterSpacing="-1"
       >
         RMSB
       </text>
