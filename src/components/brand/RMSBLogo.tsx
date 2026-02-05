@@ -4,10 +4,11 @@ interface RMSBLogoProps {
   className?: string;
   showTagline?: boolean;
   size?: "sm" | "md" | "lg" | "xl";
+  variant?: "dark" | "light";
 }
 
 const sizeMap = {
-  sm: { width: 120, height: 60 },
+  sm: { width: 100, height: 50 },
   md: { width: 200, height: 100 },
   lg: { width: 300, height: 150 },
   xl: { width: 400, height: 200 },
@@ -16,10 +17,11 @@ const sizeMap = {
 const RMSBLogo: React.FC<RMSBLogoProps> = ({ 
   className = "", 
   showTagline = true,
-  size = "md" 
+  size = "md",
+  variant = "dark"
 }) => {
   const { width, height } = sizeMap[size];
-  const logoColor = "#124A66";
+  const logoColor = variant === "dark" ? "#124A66" : "#FFFFFF";
 
   return (
     <svg
