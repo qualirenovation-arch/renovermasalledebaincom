@@ -4,6 +4,7 @@ import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import qualirenovationLogo from "@/assets/logos/qualirenovation-logo-new.png";
+import RMSBLogo from "@/components/brand/RMSBLogo";
 
 // Navigation simplifiée pour mobile (max 5 entrées)
 const mobileNavItems = [
@@ -52,6 +53,7 @@ export function Header() {
         <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 md:gap-3 group flex-shrink-0">
+            <RMSBLogo size="sm" showTagline={false} variant="dark" className="hidden sm:block" />
             <img 
               src={qualirenovationLogo} 
               alt="Qualiconcept Logo" 
