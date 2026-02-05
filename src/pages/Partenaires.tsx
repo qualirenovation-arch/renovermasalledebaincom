@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { motion } from "framer-motion";
 import { Instagram } from "lucide-react";
+import { PartnerCTA } from "@/components/home/PartnerCTA";
 
 // Import SVG logos
 import schluterLogo from "@/assets/logos/schluter.svg";
@@ -278,35 +279,8 @@ export default function Partenaires() {
         </div>
       </section>
 
-      {/* CTA Section for Subcontractors */}
-      <section className="section-padding bg-primary text-primary-foreground">
-        <div className="container-custom text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
-              Vous souhaitez devenir partenaire ?
-            </h2>
-            <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-              Sous-traitant, installateur, marque ou site déco — rejoignez notre réseau de partenaires qualifiés.
-            </p>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <Link
-                to="/partenaires/contact"
-                className="inline-block bg-accent text-accent-foreground px-8 py-4 rounded-full font-semibold hover:bg-accent/90 transition-colors"
-              >
-                Devenir partenaire
-              </Link>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+      {/* CTA Banner - Same as À propos page */}
+      <PartnerCTA />
     </Layout>
   );
 }
