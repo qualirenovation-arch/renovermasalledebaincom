@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
 import qualirenovationLogo from "@/assets/logos/qualirenovation-logo-new.png";
 import houzzLogo from "@/assets/logos/houzz-logo.png";
+import RMSBLogo from "@/components/brand/RMSBLogo";
+
 const footerLinks = {
   navigation: [{
     label: "Accueil",
@@ -122,9 +124,12 @@ export function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-primary-foreground/10">
         <div className="container-custom py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
-          <div className="text-center md:text-left md:pl-4">
-            <p className="font-semibold text-base">renovermasalledebain.com — Un chantier heureux</p>
-            <p className="mt-1">6 rue d'Armaillé, 75017 Paris — © 2024 Tous droits réservés.</p>
+          <div className="flex items-center gap-4">
+            <RMSBLogo size="sm" className="opacity-90" />
+            <div className="text-center md:text-left">
+              <p className="font-semibold text-base">renovermasalledebain.com — Un chantier heureux</p>
+              <p className="mt-1">6 rue d'Armaillé, 75017 Paris — © 2024 Tous droits réservés.</p>
+            </div>
           </div>
           <div className="flex gap-6">
             <Link to="/mentions-legales" className="hover:text-primary-foreground transition-colors">
