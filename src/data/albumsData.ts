@@ -1580,11 +1580,11 @@ Ce projet démontre qu'une rénovation prend tout son sens lorsqu'elle est guid�
     location: "Saint-Denis (93) — Rue Auguste Delaune",
     description: `Un écrin de féminité dans cet appartement de Saint-Denis, où la salle de bain devient une véritable extension de la chambre parentale. La verrière atelier en acier noir crée une connexion visuelle élégante tout en préservant l'intimité.
 
-Le carrelage métro blanc brillant habille intégralement les murs de la douche, apportant luminosité et un charme intemporel. Au sol, le carreau géométrique 3D en noir et gris structure l'espace avec audace.
+Au sol, le carrelage NEOCIM KERION Orient Titane affiche un motif géométrique 3D en noir et gris qui structure l'espace avec audace. Les murs reçoivent le carrelage métro blanc brillant, apportant luminosité et charme intemporel à la douche.
 
-Le meuble vasque en bois clair accueille une vasque à poser moderne, surmonté d'un miroir rond noir style barbier avec applique vintage. Les murs bleu ciel de la chambre créent un contraste doux et apaisant avec l'acier noir de la verrière.
+Le meuble vasque épouse les standards IKEA pour un confort d'usage optimal : le GODMORGON blanc effet chêne blanchi (2 tiroirs, IKEA 802.261.99) surmonté du plan EKBACKEN sur mesure gris blanc crée une base fonctionnelle. On y dépose la vasque à poser Lila en céramique blanche (40.5 x 40.5 cm), dotée d'une bonde clic-clac EQUATION avec trop-plein pour une vidange fluide. La robinetterie SENSEA Hao chromée complète cette vasque avec élégance. Le miroir Barbier noir carré (53 x 53 cm, LM 70819063) reprend la géométrie de l'espace tout en créant un point focal raffiné.
 
-Les niches encastrées dans la douche offrent un rangement pratique, tandis que la colonne de douche chromée avec ciel de pluie carré garantit confort et fonctionnalité.
+Pour la douche, le receveur rectangulaire Mila en résine blanche (120 x 80 cm) accueille la colonne Nessy Cuadrado avec ses finitions chromées. La paroi italienne en verre transparent 6 mm (90 cm de large) délimite l'espace sans l'enfermer. Les niches encastrées offrent un rangement pratique, tandis que la colonne de douche garantit confort et fonctionnalité.
 
 Ce projet illustre parfaitement notre approche : un chantier heureux, fondé sur l'anticipation, la coordination des travaux et la sérénité du client.`,
     coverImage: saintDenisDelaune3,
