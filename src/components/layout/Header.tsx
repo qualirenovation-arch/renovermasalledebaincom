@@ -52,12 +52,16 @@ export function Header() {
       <div className="container-custom">
         <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5 md:gap-3 group flex-shrink-0">
-            <RMSBLogo size="sm" showTagline={false} variant="dark" className="hidden sm:block" />
+          <Link to="/" className="flex items-center gap-3 md:gap-4 group flex-shrink-0">
+            {/* RMSB Logo encadré */}
+            <div className="hidden sm:flex flex-col items-center bg-white rounded-lg p-1.5 shadow-sm border border-border/50">
+              <RMSBLogo size="sm" showTagline={false} variant="dark" />
+              <span className="text-[9px] font-medium text-navy/70 -mt-1">by Qualirenovation</span>
+            </div>
             <img 
               src={qualirenovationLogo} 
               alt="Qualiconcept Logo" 
-              className="h-16 md:h-18 lg:h-20 w-auto transition-transform duration-300 group-hover:scale-105 drop-shadow-md"
+              className="h-14 md:h-16 lg:h-18 w-auto transition-transform duration-300 group-hover:scale-105 drop-shadow-md"
             />
             <div className="flex flex-col leading-tight">
               <span className="font-display text-base md:text-lg lg:text-xl font-bold text-navy tracking-tight whitespace-nowrap">
