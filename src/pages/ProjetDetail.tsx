@@ -76,10 +76,15 @@ const ProjetDetail = () => {
 
   const currentPhoto = selectedPhotoIndex !== null ? album.photos[selectedPhotoIndex] : null;
 
-  // Generate OG image URL - use album cover image directly
+  // Generate OG image URL - use album cover image with absolute URL
   const getOgImageUrl = () => {
-    // Use the album's cover image for social sharing
-    return album.coverImage;
+    // If the cover image is already an absolute URL, use it directly
+    if (album.coverImage.startsWith('http')) {
+      return album.coverImage;
+    }
+    // For bundled assets, construct the full URL
+    // The coverImage from Vite will be a path like /assets/gallery-7-abc123.jpg
+    return `https://renovermasalledebain.com${album.coverImage}`;
   };
 
   return (
