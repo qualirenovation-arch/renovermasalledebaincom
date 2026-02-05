@@ -198,7 +198,7 @@ const Guide = () => {
                   <p className="text-xs text-muted-foreground mt-1">En conservant la VMC collective et en intégrant l'accès dans la menuiserie, on a pu créer un placard au-dessus des WC, sans compromettre la ventilation.</p>
                   <p className="text-xs text-primary mt-2">👉 Plus de rangements, une solution propre, conforme… et futée.</p>
                   <p className="text-xs text-muted-foreground mt-2 flex items-center gap-1">
-                    <Eye className="w-3 h-3" /> 59.5k vues
+                    <Eye className="w-3 h-3" /> 63.5k vues
                   </p>
                 </div>
               </div>
