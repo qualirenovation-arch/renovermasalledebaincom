@@ -325,6 +325,15 @@ import pierreGuerin5 from "@/assets/pierre-guerin-5.jpg";
 
 // Saint-Ouen (93)
 import stOuen1 from "@/assets/st-ouen-1.jpg";
+
+// Saint-Denis (93)
+const saintDenisDelaune1 = "/projects/saint-denis-delaune/delaune1.jpg";
+const saintDenisDelaune2 = "/projects/saint-denis-delaune/delaune2.jpg";
+const saintDenisDelaune3 = "/projects/saint-denis-delaune/delaune3.jpg";
+const saintDenisDelaune4 = "/projects/saint-denis-delaune/delaune4.jpg";
+const saintDenisDelaune5 = "/projects/saint-denis-delaune/delaune5.jpg";
+const saintDenisDelaune6 = "/projects/saint-denis-delaune/delaune6.jpg";
+
 import stOuen2 from "@/assets/st-ouen-2.jpg";
 import stOuen3 from "@/assets/st-ouen-3.jpg";
 import stOuen4 from "@/assets/st-ouen-4.jpg";
@@ -1562,6 +1571,34 @@ Ce projet démontre qu'une rénovation prend tout son sens lorsqu'elle est guid�
     finitionSol: "gres-cerame-uni",
     finitionMur: "gres-cerame-uni",
   },
+  // ========== 📍 SAINT-DENIS (93) ==========
+  {
+    id: "saint-denis-delaune",
+    slug: "salle-de-bain-saint-denis-93-appartement-feminin-verriere-metro-blanc",
+    title: "Salle de bain Saint-Denis — Appartement au féminin",
+    subtitle: "Verrière noire, métro blanc & sol graphique",
+    location: "Saint-Denis (93) — Rue Auguste Delaune",
+    description: `Un écrin de féminité dans cet appartement de Saint-Denis, où la salle de bain devient une véritable extension de la chambre parentale. La verrière atelier en acier noir crée une connexion visuelle élégante tout en préservant l'intimité.
+
+Le carrelage métro blanc brillant habille intégralement les murs de la douche, apportant luminosité et un charme intemporel. Au sol, le carreau géométrique 3D en noir et gris structure l'espace avec audace.
+
+Le meuble vasque en bois clair accueille une vasque à poser moderne, surmonté d'un miroir rond noir style barbier avec applique vintage. Les murs bleu ciel de la chambre créent un contraste doux et apaisant avec l'acier noir de la verrière.
+
+Les niches encastrées dans la douche offrent un rangement pratique, tandis que la colonne de douche chromée avec ciel de pluie carré garantit confort et fonctionnalité.
+
+Ce projet illustre parfaitement notre approche : un chantier heureux, fondé sur l'anticipation, la coordination des travaux et la sérénité du client.`,
+    coverImage: saintDenisDelaune3,
+    photos: [
+      { id: 1, image: saintDenisDelaune3, title: "Après — Vue vasque & miroir", description: "Meuble bois clair, vasque à poser et miroir barbier noir" },
+      { id: 2, image: saintDenisDelaune4, title: "Après — Vue d'ensemble", description: "Rangements blancs et détail croix rose pharmacie" },
+      { id: 3, image: saintDenisDelaune6, title: "Après — Douche & vasque", description: "Carrelage métro blanc et colonne chromée" },
+      { id: 4, image: saintDenisDelaune5, title: "Après — Détail douche", description: "Niches encastrées et ciel de pluie" },
+      { id: 5, image: saintDenisDelaune1, title: "Après — Vue depuis la chambre", description: "Verrière atelier et connexion chambre-salle de bain" },
+      { id: 6, image: saintDenisDelaune2, title: "Après — Détail verrière", description: "Acier noir et sol géométrique 3D" },
+    ],
+    finitionSol: "gres-cerame-motif",
+    finitionMur: "metro-allonge",
+  },
   // ========== 📍 CHARENTON-LE-PONT (94) ==========
   {
     id: "charenton",
@@ -2105,6 +2142,7 @@ const albumCategoryMap: Record<string, AlbumCategory> = {
   // 🏡 MAISON & BANLIEUE
   "boulogne": "maison-banlieue",
   "saint-ouen": "maison-banlieue",
+  "saint-denis-delaune": "maison-banlieue",
   "st-mande": "maison-banlieue",
   "vitry": "maison-banlieue",
   

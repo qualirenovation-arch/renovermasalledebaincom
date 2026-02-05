@@ -67,6 +67,7 @@ const projectSlugs = [
   "salle-de-bain-courbevoie-92-becon-sinistre",
   // Banlieue 93
   "salle-de-bain-saint-ouen-93-renovation",
+  "salle-de-bain-saint-denis-93-appartement-feminin-verriere-metro-blanc",
   // Banlieue 94
   "salle-de-bain-charenton-94-renovation-complete-douche-double-vasque",
   "salle-de-bain-charenton-94-duo-douche-baignoire",
