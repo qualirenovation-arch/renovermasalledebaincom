@@ -47,8 +47,8 @@ interface BrandSiteFormProps {
 
 const HCAPTCHA_SITE_KEY = import.meta.env.VITE_HCAPTCHA_SITE_KEY || "10000000-ffff-ffff-ffff-000000000001";
 
-// TODO: Remettre à false après les tests
-const SKIP_CAPTCHA_FOR_TESTING = true;
+// Set to true temporarily for testing (bypasses captcha)
+const SKIP_CAPTCHA_FOR_TESTING = false;
 
 export function BrandSiteForm({ onBack }: BrandSiteFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
