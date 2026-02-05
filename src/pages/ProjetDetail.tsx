@@ -76,10 +76,10 @@ const ProjetDetail = () => {
 
   const currentPhoto = selectedPhotoIndex !== null ? album.photos[selectedPhotoIndex] : null;
 
-  // Generate OG image URL - use static OG image if available, otherwise fallback to cover
+  // Generate OG image URL - use album cover image directly
   const getOgImageUrl = () => {
-    const staticOgPath = `/og/${album.slug}.jpg`;
-    return `https://renovermasalledebain.com${staticOgPath}`;
+    // Use the album's cover image for social sharing
+    return album.coverImage;
   };
 
   return (
