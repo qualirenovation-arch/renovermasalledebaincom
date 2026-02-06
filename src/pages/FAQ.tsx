@@ -106,7 +106,8 @@ const faqCategories = [
       },
       {
         question: "Combien de temps dure une rénovation de salle de bain en appartement ?",
-        answer: "Une rénovation de salle de bain en appartement dure généralement entre 2 et 4 semaines selon la complexité du projet. Notre maître d'œuvre planifie chaque étape et vous tient informé quotidiennement par WhatsApp et vidéo. Nous respectons scrupuleusement les délais annoncés."
+        answer: "Une rénovation de salle de bain en appartement dure généralement entre 3 semaines et 1 mois. Pourquoi ? Parce qu'un chantier, c'est comme un orchestre : chaque artisan doit jouer sa partition au bon moment. Le plombier pose les fondations, le carreleur donne le rythme, et le peintre sublime l'ensemble en dernier.",
+        guideLink: "/guide-travaux#section-planning"
       },
       {
         question: "Proposez-vous une rénovation salle de bain clé en main ?",
@@ -162,7 +163,7 @@ const faqCategories = [
   }
 ];
 
-function FAQItem({ question, answer, isOpen, onClick, instagramLink, instagramProfileLink }: { question: string; answer: string; isOpen: boolean; onClick: () => void; instagramLink?: string; instagramProfileLink?: string }) {
+function FAQItem({ question, answer, isOpen, onClick, instagramLink, instagramProfileLink, guideLink }: { question: string; answer: string; isOpen: boolean; onClick: () => void; instagramLink?: string; instagramProfileLink?: string; guideLink?: string }) {
   return (
     <motion.div 
       className="border-b border-border last:border-b-0"
@@ -188,6 +189,15 @@ function FAQItem({ question, answer, isOpen, onClick, instagramLink, instagramPr
         className="overflow-hidden"
       >
         <p className="pb-3 text-muted-foreground leading-relaxed">{answer}</p>
+        {guideLink && (
+          <Link
+            to={guideLink}
+            className="inline-flex items-center gap-2 mb-5 px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors"
+          >
+            <ArrowRight className="w-4 h-4" />
+            Plus de détails dans le Guide Travaux
+          </Link>
+        )}
         {instagramLink && (
           <a
             href={`https://www.instagram.com/reel/${instagramLink}/`}
@@ -210,7 +220,7 @@ function FAQItem({ question, answer, isOpen, onClick, instagramLink, instagramPr
             Voir sur Instagram
           </a>
         )}
-        {!instagramLink && !instagramProfileLink && <div className="pb-2" />}
+        {!instagramLink && !instagramProfileLink && !guideLink && <div className="pb-2" />}
       </motion.div>
     </motion.div>
   );
@@ -303,6 +313,7 @@ export default function FAQ() {
                         onClick={() => toggleItem(categoryIndex, questionIndex)}
                         instagramLink={'instagramLink' in item ? (item as any).instagramLink : undefined}
                         instagramProfileLink={'instagramProfileLink' in item ? (item as any).instagramProfileLink : undefined}
+                        guideLink={'guideLink' in item ? (item as any).guideLink : undefined}
                       />
                     ))}
                   </div>
