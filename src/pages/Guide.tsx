@@ -415,6 +415,49 @@ const Guide = () => {
                 </div>
               </div>
 
+              {/* Nettoyage et confort de vie */}
+              <div className="grid md:grid-cols-2 gap-4 mb-6">
+                <div className="bg-accent/30 rounded-xl p-5">
+                  <h3 className="font-semibold text-lg mb-3 flex items-center gap-2">
+                    <Sparkles className="w-5 h-5 text-primary" />
+                    Nettoyage de fin de chantier
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-3">
+                    La poussière se propage malgré nos protections. C'est pourquoi nous prévoyons :
+                  </p>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-mint flex-shrink-0 mt-0.5" />
+                      <span><strong>2 personnes pendant 1 journée</strong> pour astiquer la salle de bain et votre appartement</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-mint flex-shrink-0 mt-0.5" />
+                      <span><strong>Évacuation des gravats</strong> par camion en cours de chantier</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-accent/30 rounded-xl p-5">
+                  <h3 className="font-semibold text-lg mb-3 flex items-center gap-2">
+                    <Home className="w-5 h-5 text-primary" />
+                    Vous vivez sur place ?
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-3">
+                    Nous organisons le chantier pour préserver votre confort au quotidien :
+                  </p>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-mint flex-shrink-0 mt-0.5" />
+                      <span><strong>L'eau reste active</strong> dans la cuisine</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-mint flex-shrink-0 mt-0.5" />
+                      <span><strong>WC fonctionnel</strong> pendant toute la durée des travaux</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
               <div className="flex items-start gap-3 p-4 bg-primary/10 border border-primary/20 rounded-xl">
                 <HardHat className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                 <p className="text-foreground font-medium">
