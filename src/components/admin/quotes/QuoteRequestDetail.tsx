@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { ArrowLeft, Phone, Mail, MapPin, Calendar, Droplets, Home, FileText, Save, ExternalLink } from "lucide-react";
+import { ArrowLeft, Phone, Mail, MapPin, Calendar, Droplets, Home, FileText, Save, ExternalLink, Loader2 } from "lucide-react";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 import { useToast } from "@/hooks/use-toast";
@@ -56,11 +56,51 @@ export function QuoteRequestDetail({ quoteId, onBack }: QuoteRequestDetailProps)
   const [status, setStatus] = useState("");
   const [priority, setPriority] = useState("");
   const [internalNotes, setInternalNotes] = useState("");
+  const [documentUrls, setDocumentUrls] = useState<Record<string, string>>({});
+  const [loadingDocs, setLoadingDocs] = useState(false);
   const { toast } = useToast();
 
   useEffect(() => {
     fetchQuote();
   }, [quoteId]);
+
+  // Load signed URLs for water damage documents (private bucket)
+  useEffect(() => {
+    const loadDocumentUrls = async () => {
+      if (!quote?.water_damage_documents || quote.water_damage_documents.length === 0) {
+        return;
+      }
+
+      setLoadingDocs(true);
+      try {
+        const urlPromises = quote.water_damage_documents.map(async (docPath: string) => {
+          const { data, error } = await supabase.storage
+            .from('water-damage-documents')
+            .createSignedUrl(docPath, 3600); // 1 hour expiry
+          
+          if (error) {
+            console.error('Error generating signed URL for', docPath, error);
+            return { docPath, url: null };
+          }
+          return { docPath, url: data.signedUrl };
+        });
+
+        const results = await Promise.all(urlPromises);
+        const urls = results.reduce((acc, { docPath, url }) => {
+          if (url) acc[docPath] = url;
+          return acc;
+        }, {} as Record<string, string>);
+        
+        setDocumentUrls(urls);
+      } catch (error) {
+        console.error('Error loading document URLs:', error);
+      } finally {
+        setLoadingDocs(false);
+      }
+    };
+
+    loadDocumentUrls();
+  }, [quote?.water_damage_documents]);
 
   const fetchQuote = async () => {
     setIsLoading(true);
@@ -335,21 +375,36 @@ export function QuoteRequestDetail({ quoteId, onBack }: QuoteRequestDetailProps)
                 {quote.water_damage_documents && quote.water_damage_documents.length > 0 && (
                   <div className="md:col-span-2">
                     <p className="text-sm text-blue-700 mb-2">Documents joints</p>
-                    <div className="space-y-1">
-                      {quote.water_damage_documents.map((doc: string, index: number) => (
-                        <a
-                          key={index}
-                          href={`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/water-damage-documents/${doc}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 text-sm text-blue-700 hover:text-blue-900 hover:underline"
-                        >
-                          <FileText className="w-4 h-4" />
-                          Document {index + 1}
-                          <ExternalLink className="w-3 h-3" />
-                        </a>
-                      ))}
-                    </div>
+                    {loadingDocs ? (
+                      <div className="flex items-center gap-2 text-sm text-blue-600">
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                        Chargement des documents...
+                      </div>
+                    ) : (
+                      <div className="space-y-1">
+                        {quote.water_damage_documents.map((doc: string, index: number) => {
+                          const signedUrl = documentUrls[doc];
+                          return signedUrl ? (
+                            <a
+                              key={index}
+                              href={signedUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-2 text-sm text-blue-700 hover:text-blue-900 hover:underline"
+                            >
+                              <FileText className="w-4 h-4" />
+                              Document {index + 1}
+                              <ExternalLink className="w-3 h-3" />
+                            </a>
+                          ) : (
+                            <span key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
+                              <FileText className="w-4 h-4" />
+                              Document {index + 1} (non disponible)
+                            </span>
+                          );
+                        })}
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
