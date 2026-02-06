@@ -340,10 +340,64 @@ const Guide = () => {
                 <strong className="text-foreground">Une rénovation de salle de bain prend entre 3 semaines et 1 mois.</strong> Pourquoi ? Parce que chaque corps de métier doit intervenir dans un ordre précis, sans jamais se chevaucher.
               </p>
               
+              {/* Métaphore musicale - Chaque artisan = un instrument */}
+              <div className="bg-gradient-to-r from-primary/5 to-accent/20 rounded-xl p-6 mb-6">
+                <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
+                  🎼 Chaque artisan joue sa partition
+                </h3>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="bg-background/70 rounded-lg p-4 border border-primary/10">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-2xl">🎸</span>
+                      <strong className="text-foreground">Le plombier = la basse</strong>
+                    </div>
+                    <p className="text-sm text-muted-foreground">Il pose les fondations. Sans lui, rien ne tient. Il intervient tôt et donne le tempo au chantier.</p>
+                  </div>
+                  <div className="bg-background/70 rounded-lg p-4 border border-primary/10">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-2xl">⚡</span>
+                      <strong className="text-foreground">L'électricien = le clavier</strong>
+                    </div>
+                    <p className="text-sm text-muted-foreground">Il tisse les connexions invisibles. Discret mais essentiel, il travaille en parallèle de la basse.</p>
+                  </div>
+                  <div className="bg-background/70 rounded-lg p-4 border border-primary/10">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-2xl">🧱</span>
+                      <strong className="text-foreground">Le plâtrier = les cuivres</strong>
+                    </div>
+                    <p className="text-sm text-muted-foreground">Il structure l'espace. Faux plafonds et cloisons dessinent la forme finale de la pièce.</p>
+                  </div>
+                  <div className="bg-background/70 rounded-lg p-4 border border-primary/10">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-2xl">🥁</span>
+                      <strong className="text-foreground">Le carreleur = les percussions</strong>
+                    </div>
+                    <p className="text-sm text-muted-foreground">Précision millimétrée, rythme soutenu. Il crée le tempo visuel de votre salle de bain.</p>
+                  </div>
+                  <div className="bg-background/70 rounded-lg p-4 border border-primary/10">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-2xl">🪵</span>
+                      <strong className="text-foreground">Le menuisier = le piano</strong>
+                    </div>
+                    <p className="text-sm text-muted-foreground">Il apporte la mélodie. Meubles et rangements donnent l'âme et le caractère à la pièce.</p>
+                  </div>
+                  <div className="bg-background/70 rounded-lg p-4 border border-primary/10">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-2xl">🎻</span>
+                      <strong className="text-foreground">Le peintre = les violons</strong>
+                    </div>
+                    <p className="text-sm text-muted-foreground">Il intervient en dernier, en finesse. Ses finitions subliment l'ensemble et signent l'œuvre.</p>
+                  </div>
+                </div>
+                <p className="text-center text-sm text-muted-foreground mt-4 italic">
+                  👉 Et le maître d'œuvre ? C'est le chef d'orchestre qui coordonne tout le monde.
+                </p>
+              </div>
+
               <div className="bg-accent/30 rounded-xl p-6 mb-6">
                 <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
                   <AlertTriangle className="w-5 h-5 text-amber-500" />
-                  Pourquoi les artisans ne peuvent pas travailler en même temps ?
+                  Pourquoi les artisans ne peuvent pas jouer ensemble ?
                 </h3>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
@@ -351,7 +405,7 @@ const Guide = () => {
                       <Paintbrush className="w-4 h-4 text-primary" />
                     </span>
                     <div>
-                      <strong className="text-foreground">Le peintre ne peut pas manger la poussière du carreleur</strong>
+                      <strong className="text-foreground">Les violons ne supportent pas la poussière des percussions</strong>
                       <p className="text-sm text-muted-foreground mt-1">La poussière de coupe de carrelage contaminerait les peintures fraîches et créerait des défauts irréversibles.</p>
                     </div>
                   </li>
@@ -360,7 +414,7 @@ const Guide = () => {
                       <Wrench className="w-4 h-4 text-primary" />
                     </span>
                     <div>
-                      <strong className="text-foreground">Le plombier ne peut pas travailler avec le peintre ou l'électricien</strong>
+                      <strong className="text-foreground">La basse et les violons ne partagent pas la scène</strong>
                       <p className="text-sm text-muted-foreground mt-1">Les échelles, les outils et les zones de travail se chevauchent. Un seul artisan peut occuper l'espace efficacement.</p>
                     </div>
                   </li>
@@ -369,7 +423,7 @@ const Guide = () => {
                       <Ruler className="w-4 h-4 text-primary" />
                     </span>
                     <div>
-                      <strong className="text-foreground">Chaque étape dépend de la précédente</strong>
+                      <strong className="text-foreground">Chaque mouvement prépare le suivant</strong>
                       <p className="text-sm text-muted-foreground mt-1">Impossible de carreler avant que la plomberie soit faite. Impossible de peindre avant que le carrelage soit sec.</p>
                     </div>
                   </li>
