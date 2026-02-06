@@ -381,8 +381,16 @@ const Guide = () => {
                 </p>
                 <div className="grid md:grid-cols-2 gap-3 text-sm">
                   <div className="flex items-center gap-2 bg-background/50 rounded-lg p-3">
-                    <span className="font-bold text-mint">J1-J3</span>
+                    <span className="font-bold text-mint">J1</span>
+                    <span>Protection + dépose sanitaires & plomberie</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-background/50 rounded-lg p-3">
+                    <span className="font-bold text-mint">J2-J3</span>
                     <span>Démolition & évacuation</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-background/50 rounded-lg p-3 border-2 border-primary/30">
+                    <span className="font-bold text-primary">J3</span>
+                    <span className="font-medium">📋 Réunion de chantier (plan & choix)</span>
                   </div>
                   <div className="flex items-center gap-2 bg-background/50 rounded-lg p-3">
                     <span className="font-bold text-mint">J4-J5</span>
