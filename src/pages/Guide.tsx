@@ -238,6 +238,10 @@ const Guide = () => {
               📋 Sommaire
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+              <a href="#section-planning" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
+                <span className="w-6 h-6 bg-mint/20 rounded-full flex items-center justify-center text-mint text-xs font-bold flex-shrink-0">⏱</span>
+                <span className="line-clamp-1">Planning & Durée</span>
+              </a>
               <a href="#section-1" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
                 <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">1</span>
                 <span className="line-clamp-1">Visite chantier</span>
@@ -296,6 +300,111 @@ const Guide = () => {
                 <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">13</span>
                 <span className="line-clamp-1">Éclairage & chauffage</span>
               </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section Planning - Durée des travaux */}
+      <section id="section-planning" className="py-16 bg-gradient-to-r from-mint/10 via-mint/20 to-mint/10 scroll-mt-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-mint rounded-full flex items-center justify-center text-mint-foreground font-bold text-xl">
+                ⏱
+              </div>
+              <h2 className="text-2xl md:text-3xl font-serif text-foreground">
+                Planning & Durée : 3 semaines à 1 mois
+              </h2>
+            </div>
+            <div className="bg-background rounded-2xl p-8 shadow-sm">
+              <p className="text-lg text-muted-foreground mb-6">
+                <strong className="text-foreground">Une rénovation de salle de bain prend entre 3 semaines et 1 mois.</strong> Pourquoi ? Parce que chaque corps de métier doit intervenir dans un ordre précis, sans jamais se chevaucher.
+              </p>
+              
+              <div className="bg-accent/30 rounded-xl p-6 mb-6">
+                <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
+                  <AlertTriangle className="w-5 h-5 text-amber-500" />
+                  Pourquoi les artisans ne peuvent pas travailler en même temps ?
+                </h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <span className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Paintbrush className="w-4 h-4 text-primary" />
+                    </span>
+                    <div>
+                      <strong className="text-foreground">Le peintre ne peut pas manger la poussière du carreleur</strong>
+                      <p className="text-sm text-muted-foreground mt-1">La poussière de coupe de carrelage contaminerait les peintures fraîches et créerait des défauts irréversibles.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Wrench className="w-4 h-4 text-primary" />
+                    </span>
+                    <div>
+                      <strong className="text-foreground">Le plombier ne peut pas travailler avec le peintre ou l'électricien</strong>
+                      <p className="text-sm text-muted-foreground mt-1">Les échelles, les outils et les zones de travail se chevauchent. Un seul artisan peut occuper l'espace efficacement.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Ruler className="w-4 h-4 text-primary" />
+                    </span>
+                    <div>
+                      <strong className="text-foreground">Chaque étape dépend de la précédente</strong>
+                      <p className="text-sm text-muted-foreground mt-1">Impossible de carreler avant que la plomberie soit faite. Impossible de peindre avant que le carrelage soit sec.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-mint/10 border border-mint/30 rounded-xl p-6 mb-6">
+                <h3 className="font-semibold text-lg mb-4 text-mint flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5" />
+                  Un timing chronométré pour réussir
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  Pour une salle de bain réussie, chaque étape doit respecter un timing précis :
+                </p>
+                <div className="grid md:grid-cols-2 gap-3 text-sm">
+                  <div className="flex items-center gap-2 bg-background/50 rounded-lg p-3">
+                    <span className="font-bold text-mint">J1-J3</span>
+                    <span>Démolition & évacuation</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-background/50 rounded-lg p-3">
+                    <span className="font-bold text-mint">J4-J7</span>
+                    <span>Plomberie & électricité</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-background/50 rounded-lg p-3">
+                    <span className="font-bold text-mint">J8-J9</span>
+                    <span>Étanchéité & séchage</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-background/50 rounded-lg p-3">
+                    <span className="font-bold text-mint">J10-J15</span>
+                    <span>Carrelage sol & murs</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-background/50 rounded-lg p-3">
+                    <span className="font-bold text-mint">J16-J18</span>
+                    <span>Peinture plafond & finitions</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-background/50 rounded-lg p-3">
+                    <span className="font-bold text-mint">J19-J21</span>
+                    <span>Pose sanitaires & accessoires</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 p-4 bg-primary/10 border border-primary/20 rounded-xl">
+                <HardHat className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                <p className="text-foreground font-medium">
+                  👉 Respecter ce timing, c'est la garantie d'un chantier sans accroc et d'une salle de bain qui dure dans le temps.
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
