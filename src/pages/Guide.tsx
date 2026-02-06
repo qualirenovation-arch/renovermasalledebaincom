@@ -331,6 +331,11 @@ const Guide = () => {
               </h2>
             </div>
             <div className="bg-background rounded-2xl p-8 shadow-sm">
+              <div className="bg-primary/5 border-l-4 border-primary rounded-r-xl p-4 mb-6">
+                <p className="text-lg md:text-xl font-serif text-foreground italic">
+                  🎻 Un chantier, c'est comme un orchestre : les artisans ne peuvent pas tous jouer en même temps.
+                </p>
+              </div>
               <p className="text-lg text-muted-foreground mb-6">
                 <strong className="text-foreground">Une rénovation de salle de bain prend entre 3 semaines et 1 mois.</strong> Pourquoi ? Parce que chaque corps de métier doit intervenir dans un ordre précis, sans jamais se chevaucher.
               </p>
