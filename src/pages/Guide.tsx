@@ -385,23 +385,31 @@ const Guide = () => {
                     <span>Démolition & évacuation</span>
                   </div>
                   <div className="flex items-center gap-2 bg-background/50 rounded-lg p-3">
-                    <span className="font-bold text-mint">J4-J7</span>
-                    <span>Plomberie & électricité</span>
+                    <span className="font-bold text-mint">J4-J5</span>
+                    <span>Plâtrerie (faux plafond, cloisons)</span>
                   </div>
                   <div className="flex items-center gap-2 bg-background/50 rounded-lg p-3">
-                    <span className="font-bold text-mint">J8-J9</span>
+                    <span className="font-bold text-mint">J6-J9</span>
+                    <span>Électricité & plomberie</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-background/50 rounded-lg p-3">
+                    <span className="font-bold text-mint">J10-J11</span>
                     <span>Étanchéité & séchage</span>
                   </div>
                   <div className="flex items-center gap-2 bg-background/50 rounded-lg p-3">
-                    <span className="font-bold text-mint">J10-J15</span>
+                    <span className="font-bold text-mint">J12-J17</span>
                     <span>Carrelage sol & murs</span>
                   </div>
                   <div className="flex items-center gap-2 bg-background/50 rounded-lg p-3">
-                    <span className="font-bold text-mint">J16-J18</span>
-                    <span>Peinture plafond & finitions</span>
+                    <span className="font-bold text-mint">J18-J19</span>
+                    <span>Menuiserie (meubles, rangements)</span>
                   </div>
                   <div className="flex items-center gap-2 bg-background/50 rounded-lg p-3">
-                    <span className="font-bold text-mint">J19-J21</span>
+                    <span className="font-bold text-mint">J20-J24</span>
+                    <span>Peinture & finitions</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-background/50 rounded-lg p-3">
+                    <span className="font-bold text-mint">J25+</span>
                     <span>Pose sanitaires & accessoires</span>
                   </div>
                 </div>
