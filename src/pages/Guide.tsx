@@ -30,6 +30,14 @@ const Guide = () => {
     "mainEntity": [
       {
         "@type": "Question",
+        "name": "Combien de temps durent les travaux de rénovation d'une salle de bain ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Une rénovation de salle de bain complète dure entre 3 semaines et 1 mois en moyenne. Cette durée dépend de la complexité du chantier, des contraintes techniques et du respect de l'ordre chronométré des métiers. Chaque étape (démolition, réseaux, étanchéité, carrelage, finitions) doit suivre une coordination stricte pour éviter les conflits techniques et garantir la qualité : le peintre ne peut pas travailler avec la poussière du carrelage, la plomberie doit être validée avant l'étanchéité, les finitions interviennent en dernier. Un planning bien maîtrisé est la clé d'un chantier réussi et serein."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "Faut-il refaire toute la plomberie lors d'une rénovation de salle de bain ?",
         "acceptedAnswer": {
           "@type": "Answer",
