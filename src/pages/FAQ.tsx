@@ -166,8 +166,11 @@ const faqCategories = [
         answer: "Oui, grâce à nos partenariats récurrents avec les distributeurs, nous bénéficions de conditions tarifaires avantageuses que nous répercutons sur vos devis. Les remises varient selon les fournisseurs et les volumes commandés."
       },
       {
-        question: "Comment sont sélectionnés les artisans sous-traitants ?",
-        answer: "Nous visitons systématiquement leurs chantiers en cours pour évaluer la qualité de leur travail. Nos artisans viennent aussi souvent par cooptation : nos équipes nous recommandent des collègues avec qui ils ont déjà travaillé et qu'ils estiment. Résultat : des équipes qui se connaissent et s'apprécient, ce qui garantit une coordination fluide sur chantier. 👉 Chaque sous-traitant doit également présenter ses assurances à jour (RC Pro et Décennale) avant toute collaboration."
+        question: "Comment postuler en tant que sous-traitant ou artisan ?",
+        answer: "Nous sommes toujours à la recherche de nouveaux partenaires fiables. Si vous êtes plombier, carreleur, électricien ou autre corps de métier lié à la rénovation de salle de bain, nous vous invitons à nous présenter votre profil et votre expérience. Vous pouvez postuler directement via notre formulaire en quelques minutes.",
+        actionLinks: [
+          { type: "internal", label: "Devenir partenaire", link: "/partenaires/contact" }
+        ]
       }
     ]
   },
