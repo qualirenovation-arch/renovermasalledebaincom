@@ -164,6 +164,10 @@ const faqCategories = [
       {
         question: "Proposez-vous des tarifs négociés chez vos fournisseurs ?",
         answer: "Oui, grâce à nos partenariats récurrents avec les distributeurs, nous bénéficions de conditions tarifaires avantageuses que nous répercutons sur vos devis. Les remises varient selon les fournisseurs et les volumes commandés."
+      },
+      {
+        question: "Comment sont sélectionnés les artisans sous-traitants ?",
+        answer: "Nos sous-traitants sont sélectionnés selon des critères stricts : certifications métier (Schlüter, Wedi pour carrelage étanchéité), assurances à jour (RC Pro et Décennale), expérience terrain, qualité de finition et respect des délais. Chaque artisan est évalué en continu pour garantir le respect de nos standards. 👉 Nous travaillons uniquement avec des artisans de confiance qui partagent notre engagement : un chantier heureux."
       }
     ]
   },
