@@ -10,6 +10,8 @@ import legrandLogo from "@/assets/logos/legrand.svg";
 import schneiderLogo from "@/assets/logos/schneider.svg";
 import atlanticLogo from "@/assets/logos/atlantic.svg";
 import pointpLogo from "@/assets/logos/pointp.svg";
+import florimLogo from "@/assets/logos/florim.svg";
+import dornbrachtLogo from "@/assets/logos/dornbracht.svg";
 
 // Partner data with real SVG logos and text fallbacks
 const partners = [
@@ -49,16 +51,20 @@ const partners = [
     logo: atlanticLogo,
   },
   { 
+    name: "Florim", 
+    url: "https://www.florim.com/fr",
+    logo: florimLogo,
+  },
+  { 
+    name: "Dornbracht", 
+    url: "https://www.dornbracht.com/fr",
+    logo: dornbrachtLogo,
+  },
+  { 
     name: "Cedeo", 
     url: "https://www.cedeo.fr",
     textLogo: "CEDEO",
     style: "font-bold text-sm"
-  },
-  { 
-    name: "La Plateforme du Bâtiment", 
-    url: "https://www.laplateforme.com",
-    textLogo: "LA PLATEFORME",
-    style: "font-semibold text-[10px] tracking-wide leading-tight text-center"
   },
   { 
     name: "Wedi", 
@@ -71,12 +77,6 @@ const partners = [
     url: "https://www.mapei.com/fr",
     textLogo: "MAPEI",
     style: "font-bold text-sm tracking-wide"
-  },
-  { 
-    name: "Kerakoll", 
-    url: "https://www.kerakoll.com/fr",
-    textLogo: "KERAKOLL",
-    style: "font-semibold text-xs tracking-wide"
   },
 ];
 

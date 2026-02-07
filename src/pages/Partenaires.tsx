@@ -46,6 +46,11 @@ import groheLogo from "@/assets/logos/grohe.svg";
 import alliaLogo from "@/assets/logos/allia.svg";
 import vitraLogo from "@/assets/logos/vitra.svg";
 import planiziaLogo from "@/assets/logos/planizia.svg";
+import florimLogo from "@/assets/logos/florim.svg";
+import zucchettiLogo from "@/assets/logos/zucchetti.svg";
+import dornbrachtLogo from "@/assets/logos/dornbracht.svg";
+import mutinaLogo from "@/assets/logos/mutina.svg";
+import appianiLogo from "@/assets/logos/appiani.svg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -82,6 +87,9 @@ const brandCategories: PartnerCategory[] = [
     icon: "🛁",
     partners: [
       { name: "Schlüter-Systems", url: "https://www.schluter.fr", description: "Systèmes d'étanchéité et profilés", logo: schluterLogo },
+      { name: "Florim", url: "https://www.florim.com/fr", description: "Carrelages grands formats italiens", logo: florimLogo },
+      { name: "Mutina", url: "https://www.mutina.it", description: "Carrelages design italien", logo: mutinaLogo },
+      { name: "Appiani", url: "https://www.appiani.it", description: "Mosaïques céramiques italiennes", logo: appianiLogo },
       { name: "Mosaic Factory", url: "https://mosaicfactory.com/fr/", description: "Zellige, terrazzo & carreaux ciment", logo: mosaicFactoryLogo },
       { name: "Maison Bahya", url: "https://www.maisonbahya.com", description: "Carreaux de ciment artisanaux" },
       { name: "Ceramica Fussaro", url: "https://www.ceramicafussaro.it", description: "Céramiques italiennes artisanales" },
@@ -110,6 +118,8 @@ const brandCategories: PartnerCategory[] = [
     title: "Robinetterie & Équipements",
     icon: "🔧",
     partners: [
+      { name: "Dornbracht", url: "https://www.dornbracht.com/fr", description: "Robinetterie allemande ultra-premium", logo: dornbrachtLogo },
+      { name: "Zucchetti", url: "https://www.zucchettidesign.it", description: "Robinetterie design italienne", logo: zucchettiLogo },
       { name: "Horus", url: "https://www.hfrob.fr", description: "Robinetterie française haut de gamme", logo: horusLogo },
       { name: "Hudson Reed", url: "https://www.hudsonreed.fr", description: "Robinetterie et douches design", logo: hudsonReedLogo },
       { name: "Poalgi", url: "https://www.poalgi.com", description: "Éviers et vasques design", logo: poalgiLogo },
