@@ -158,7 +158,10 @@ const faqCategories = [
       },
       {
         question: "Travaillez-vous avec quelles marques ?",
-        answer: "Toutes les marques ! Nous vérifions systématiquement vos choix avant de valider les commandes pour éviter les produits de mauvaise manufacture. Notre expertise nous permet de vous accompagner dans vos sélections et de vous conseiller sur la qualité des références. L'essentiel est d'échanger ensemble pour trouver les meilleurs produits adaptés à votre projet et votre budget."
+        answer: "Toutes les marques ! Nous vérifions systématiquement vos choix avant de valider les commandes pour éviter les produits de mauvaise manufacture. Notre expertise nous permet de vous accompagner dans vos sélections et de vous conseiller sur la qualité des références. 👉 Consultez notre annuaire de partenaires : vous y trouverez vos inspirations et accéderez directement aux sites internet de chaque marque.",
+        actionLinks: [
+          { type: "internal", label: "Voir nos partenaires", link: "/partenaires" }
+        ]
       },
       {
         question: "Travaillez-vous avec quels fournisseurs ?",
