@@ -163,7 +163,7 @@ const faqCategories = [
       },
       {
         question: "Proposez-vous des tarifs négociés chez vos fournisseurs ?",
-        answer: "Oui, grâce à nos partenariats récurrents avec les distributeurs, nous bénéficions de conditions tarifaires avantageuses. En toute transparence, nous appliquons une marge de 10% sur le prix remisé fournisseur pour couvrir le temps de traitement des commandes (vérification, suivi, livraison). Notre rôle n'est pas de revendre au prix d'achat, mais de vous garantir un service complet et une coordination sans faille."
+        answer: "Oui, grâce à nos partenariats récurrents avec les distributeurs, nous bénéficions de conditions tarifaires avantageuses. En toute transparence, nous appliquons une marge de 10% sur le prix HT remisé fournisseur pour couvrir le temps de traitement des commandes (vérification, suivi, livraison). Les frais de livraison du fournisseur sont également reportés sur votre devis une fois la zone de livraison définie. Notre rôle n'est pas de revendre au prix d'achat, mais de vous garantir un service complet et une coordination sans faille."
       },
       {
         question: "Comment postuler en tant que sous-traitant ou artisan ?",
