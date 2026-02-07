@@ -51,6 +51,9 @@ import zucchettiLogo from "@/assets/logos/zucchetti.svg";
 import dornbrachtLogo from "@/assets/logos/dornbracht.svg";
 import mutinaLogo from "@/assets/logos/mutina.svg";
 import appianiLogo from "@/assets/logos/appiani.svg";
+import marazziLogo from "@/assets/logos/marazzi.svg";
+import ragnoLogo from "@/assets/logos/ragno.svg";
+import irisCeramicaLogo from "@/assets/logos/iris-ceramica.svg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -90,7 +93,10 @@ const brandCategories: PartnerCategory[] = [
       { name: "Florim", url: "https://www.florim.com/fr", description: "Carrelages grands formats italiens", logo: florimLogo },
       { name: "Mutina", url: "https://www.mutina.it", description: "Carrelages design italien", logo: mutinaLogo },
       { name: "Appiani", url: "https://www.appiani.it", description: "Mosaïques céramiques italiennes", logo: appianiLogo },
-      { name: "Mosaic Factory", url: "https://mosaicfactory.com/fr/", description: "Zellige, terrazzo & carreaux ciment", logo: mosaicFactoryLogo },
+       { name: "Marazzi", url: "https://www.marazzi.it", description: "Carrelages italiens premium", logo: marazziLogo },
+       { name: "Ragno", url: "https://www.ragno.it", description: "Carrelages italiens design", logo: ragnoLogo },
+       { name: "Iris Ceramica", url: "https://www.irisceramica.it", description: "Céramiques italiennes haut de gamme", logo: irisCeramicaLogo },
+       { name: "Mosaic Factory", url: "https://mosaicfactory.com/fr/", description: "Zellige, terrazzo & carreaux ciment", logo: mosaicFactoryLogo },
       { name: "Maison Bahya", url: "https://www.maisonbahya.com", description: "Carreaux de ciment artisanaux" },
       { name: "Ceramica Fussaro", url: "https://www.ceramicafussaro.it", description: "Céramiques italiennes artisanales" },
       { name: "Secis Mosaic", url: "https://www.secis.fr", description: "Mosaïques et carreaux artisanaux" },
