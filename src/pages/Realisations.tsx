@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { ArrowRight, ArrowLeft, ChevronLeft, ChevronRight, MapPin, X } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { OGTags } from "@/components/seo/OGTags";
 import { 
   albums, 
   inProgressAlbums, 
@@ -160,11 +160,16 @@ export default function Realisations() {
 
   return (
     <Layout>
-      <Helmet>
-        <title>Réalisations salle de bain à Paris et IDF | Zellige, Marbre, Terrazzo | Un chantier heureux</title>
-        <meta name="description" content="Découvrez nos réalisations de salles de bain à Paris et en Île-de-France : zellige, marbre, terrazzo, béton, effet pierre, grès cérame. Des chantiers heureux, maîtrisés et livrés sereinement." />
-        <link rel="canonical" href="https://renovermasalledebain.com/realisations" />
-      </Helmet>
+      <OGTags
+        title="Nos réalisations de salles de bain"
+        description="Découvrez nos rénovations de salles de bain à Paris et IDF : zellige, marbre, terrazzo. Avant/Après de nos chantiers. Des projets premium, livrés sereinement."
+        path="/realisations"
+        image={{ 
+          type: "page", 
+          title: "Nos réalisations",
+          subtitle: "Paris & Île-de-France"
+        }}
+      />
 
       {/* Hero */}
       <section className="relative pt-32 md:pt-40 pb-16 bg-gradient-to-b from-stone to-background">

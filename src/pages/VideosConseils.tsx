@@ -1,11 +1,11 @@
 import { useState, useMemo } from "react";
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { PlayCircle, Filter, ExternalLink } from "lucide-react";
 import { videoConseils } from "@/data/newsData";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { OGTags } from "@/components/seo/OGTags";
 
 export default function VideosConseils() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -24,13 +24,12 @@ export default function VideosConseils() {
 
   return (
     <Layout>
-      <Helmet>
-        <title>Vidéos Conseils | Qualirenovation</title>
-        <meta
-          name="description"
-          content="Découvrez nos vidéos conseils pour votre rénovation de salle de bain : avantages, inconvénients et astuces d'experts."
-        />
-      </Helmet>
+      <OGTags
+        title="Vidéos conseils"
+        description="Découvrez nos vidéos conseils pour votre rénovation de salle de bain : avantages, inconvénients et astuces d'experts."
+        path="/videos-conseils"
+        image={{ type: "page", title: "Vidéos conseils", subtitle: "Astuces d'experts" }}
+      />
 
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-primary/5 via-background to-destructive/5">

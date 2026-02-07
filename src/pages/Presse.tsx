@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { ArrowRight, ExternalLink, Calendar, Newspaper, Star } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { OGTags } from "@/components/seo/OGTags";
 
 // Images
 import stMande1 from "@/assets/st-mande-1.jpg";
@@ -366,13 +366,12 @@ export default function Presse() {
 
   return (
     <Layout>
-      <Helmet>
-        <title>Presse & Médias | Qualiconcept - Nos projets dans Elle, Houzz, Marie Claire</title>
-        <meta 
-          name="description" 
-          content="Découvrez les articles de presse mettant en avant nos réalisations. Elle Décoration, Marie Claire Maison, Houzz, 18h39 : Qualiconcept, référence en rénovation salle de bain Paris."
-        />
-      </Helmet>
+      <OGTags
+        title="Presse & Médias"
+        description="Découvrez les articles de presse mettant en avant nos réalisations. Elle Décoration, Marie Claire Maison, Houzz, 18h39 : référence en rénovation salle de bain Paris."
+        path="/presse"
+        image={{ type: "page", title: "Presse & Médias", subtitle: "Nos projets dans les médias" }}
+      />
 
       {/* Hero Section */}
       <section className="relative py-10 md:py-14 bg-gradient-to-br from-primary/10 via-accent/5 to-transparent">

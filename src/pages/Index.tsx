@@ -12,6 +12,7 @@ import { presseNews, guideConseils, videoConseils } from "@/data/newsData";
 import { TestimonialsSlider } from "@/components/home/TestimonialsSlider";
 import { Recompenses } from "@/components/layout/Recompenses";
 import { PartnerCTA } from "@/components/home/PartnerCTA";
+import { OGTags } from "@/components/seo/OGTags";
 
 // Section "Pourquoi choisir" - 3 colonnes avec pictos SVG
 const whyChoose = [
@@ -86,7 +87,12 @@ export default function Index() {
 
   return (
     <Layout>
-
+      <OGTags
+        title="Rénovation salle de bain Paris"
+        description="Rénovation de salle de bain haut de gamme à Paris et Île-de-France. Conception + réalisation clé en main. Un chantier heureux, maîtrisé de A à Z."
+        path="/"
+        image={{ type: "default" }}
+      />
       {/* Hero Section - Premium design */}
       <section className="bg-gradient-to-b from-stone to-background py-12 md:py-20 lg:py-24">
         <div className="container-custom">

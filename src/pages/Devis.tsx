@@ -13,7 +13,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { supabase } from "@/integrations/supabase/client";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Helmet } from "react-helmet-async";
+import { OGTags } from "@/components/seo/OGTags";
 import { 
   Upload, 
   Phone, 
@@ -536,11 +536,12 @@ export default function Devis() {
 
   return (
     <Layout>
-      <Helmet>
-        <title>Devis rénovation salle de bain à Paris | Un chantier heureux</title>
-        <meta name="description" content="Demandez votre devis gratuit pour la rénovation de votre salle de bain à Paris. Un chantier heureux, sans stress et sans imprévus." />
-        <link rel="canonical" href="https://renovermasalledebain.com/devis" />
-      </Helmet>
+      <OGTags
+        title="Devis rénovation salle de bain"
+        description="Demandez votre devis gratuit pour la rénovation de votre salle de bain à Paris. Un chantier heureux, sans stress et sans imprévus. Réponse sous 48h."
+        path="/devis"
+        image={{ type: "page", title: "Demander un devis", subtitle: "Gratuit & sans engagement" }}
+      />
       {/* Hero - Premium design */}
       <section className="relative py-12 md:py-20 bg-gradient-to-b from-stone to-background overflow-hidden">
         <div className="absolute inset-0 opacity-5">
