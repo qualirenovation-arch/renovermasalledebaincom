@@ -81,6 +81,9 @@ const brandCategories: PartnerCategory[] = [
       { name: "Mosaic Factory", url: "https://mosaicfactory.com/fr/", description: "Zellige, terrazzo & carreaux ciment", logo: mosaicFactoryLogo },
       { name: "Maison Bahya", url: "https://www.maisonbahya.com", description: "Carreaux de ciment artisanaux" },
       { name: "Ceramica Fussaro", url: "https://www.ceramicafussaro.it", description: "Céramiques italiennes artisanales" },
+      { name: "Secis Mosaic", url: "https://www.secis.fr", description: "Mosaïques et carreaux artisanaux" },
+      { name: "Porcelanosa", url: "https://www.porcelanosa.com/fr", description: "Carrelages et revêtements premium" },
+      { name: "Winckelmans", url: "https://www.winckelmans.com", description: "Carreaux céramiques belges" },
       { name: "Mosaic del Sur", url: "https://www.carreauxmosaic.com", description: "Carreaux de ciment sur mesure", logo: mosaicDelSurLogo },
       { name: "Weber", url: "https://www.weber.fr", description: "Mortiers et enduits professionnels", logo: weberLogo },
       { name: "Wedi", url: "https://www.wedi.de/fr", description: "Panneaux de construction étanches", logo: wediLogo },
@@ -186,7 +189,7 @@ const supplierCategories: PartnerCategory[] = [
     partners: [
       { name: "Ceramica.fr", url: "https://www.ceramica.fr", description: "Carrelages et céramiques" },
       { name: "Parquet-Carrelage.com", url: "https://www.parquet-carrelage.com", description: "Revêtements de sol" },
-      { name: "Eiffel Carrelage", url: "#", description: "Carrelages professionnels" },
+      { name: "Eiffel Art Construction", url: "https://www.eiffel-art-construction.fr", description: "E-commerce carrelages design" },
       { name: "AS Decarreaux", url: "#", description: "Spécialiste carrelage", logo: asDecarreauxLogo },
     ],
   },
