@@ -167,7 +167,7 @@ const faqCategories = [
       },
       {
         question: "Comment sont sélectionnés les artisans sous-traitants ?",
-        answer: "Nos sous-traitants sont sélectionnés selon des critères stricts : certifications métier (Schlüter, Wedi pour carrelage étanchéité), assurances à jour (RC Pro et Décennale), expérience terrain, qualité de finition et respect des délais. Chaque artisan est évalué en continu pour garantir le respect de nos standards. 👉 Nous travaillons uniquement avec des artisans de confiance qui partagent notre engagement : un chantier heureux."
+        answer: "Nous visitons systématiquement leurs chantiers en cours pour évaluer la qualité de leur travail. Nos artisans viennent aussi souvent par cooptation : nos équipes nous recommandent des collègues avec qui ils ont déjà travaillé et qu'ils estiment. Résultat : des équipes qui se connaissent et s'apprécient, ce qui garantit une coordination fluide sur chantier. 👉 Chaque sous-traitant doit également présenter ses assurances à jour (RC Pro et Décennale) avant toute collaboration."
       }
     ]
   },
