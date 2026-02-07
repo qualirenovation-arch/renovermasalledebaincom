@@ -92,8 +92,12 @@ const faqCategories = [
     questions: [
       {
         question: "Où puis-je voir vos réalisations ?",
-        answer: "Nous partageons régulièrement nos réalisations et conseils techniques sur Instagram. 👉 Les photos valent souvent mieux que mille explications. Consultez également notre page Réalisations pour découvrir nos projets terminés et en cours.",
-        instagramProfileLink: "https://www.instagram.com/qualirenovation__travaux/"
+        answer: "Nous partageons régulièrement nos réalisations et conseils techniques. 👉 Les photos valent souvent mieux que mille explications !",
+        actionLinks: [
+          { type: "internal", label: "Voir nos réalisations", link: "/realisations" },
+          { type: "instagram", label: "Instagram", link: "https://www.instagram.com/qualirenovation__travaux/" },
+          { type: "houzz", label: "Houzz", link: "https://www.houzz.fr/pro/qualirenovation/qualirenovation" }
+        ]
       }
     ]
   },
@@ -163,7 +167,13 @@ const faqCategories = [
   }
 ];
 
-function FAQItem({ question, answer, isOpen, onClick, instagramLink, instagramProfileLink, guideLink }: { question: string; answer: string; isOpen: boolean; onClick: () => void; instagramLink?: string; instagramProfileLink?: string; guideLink?: string }) {
+type ActionLink = {
+  type: "internal" | "instagram" | "houzz";
+  label: string;
+  link: string;
+};
+
+function FAQItem({ question, answer, isOpen, onClick, instagramLink, instagramProfileLink, guideLink, actionLinks }: { question: string; answer: string; isOpen: boolean; onClick: () => void; instagramLink?: string; instagramProfileLink?: string; guideLink?: string; actionLinks?: ActionLink[] }) {
   return (
     <motion.div 
       className="border-b border-border last:border-b-0"
@@ -189,6 +199,58 @@ function FAQItem({ question, answer, isOpen, onClick, instagramLink, instagramPr
         className="overflow-hidden"
       >
         <p className="pb-3 text-muted-foreground leading-relaxed">{answer}</p>
+        
+        {/* Action Links (multiple buttons) */}
+        {actionLinks && actionLinks.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-5">
+            {actionLinks.map((action, index) => {
+              if (action.type === "internal") {
+                return (
+                  <Link
+                    key={index}
+                    to={action.link}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors"
+                  >
+                    <ArrowRight className="w-4 h-4" />
+                    {action.label}
+                  </Link>
+                );
+              }
+              if (action.type === "instagram") {
+                return (
+                  <a
+                    key={index}
+                    href={action.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white text-sm font-medium hover:opacity-90 transition-opacity"
+                  >
+                    <Instagram className="w-4 h-4" />
+                    {action.label}
+                  </a>
+                );
+              }
+              if (action.type === "houzz") {
+                return (
+                  <a
+                    key={index}
+                    href={action.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-700 transition-colors"
+                  >
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M2 2v20h8v-8h4v8h8V2H2zm6 8H4V4h4v6zm6 0h-4V4h4v6zm6 0h-4V4h4v6z"/>
+                    </svg>
+                    {action.label}
+                  </a>
+                );
+              }
+              return null;
+            })}
+          </div>
+        )}
+
         {guideLink && (
           <Link
             to={guideLink}
@@ -220,7 +282,7 @@ function FAQItem({ question, answer, isOpen, onClick, instagramLink, instagramPr
             Voir sur Instagram
           </a>
         )}
-        {!instagramLink && !instagramProfileLink && !guideLink && <div className="pb-2" />}
+        {!instagramLink && !instagramProfileLink && !guideLink && !actionLinks && <div className="pb-2" />}
       </motion.div>
     </motion.div>
   );
@@ -314,6 +376,7 @@ export default function FAQ() {
                         instagramLink={'instagramLink' in item ? (item as any).instagramLink : undefined}
                         instagramProfileLink={'instagramProfileLink' in item ? (item as any).instagramProfileLink : undefined}
                         guideLink={'guideLink' in item ? (item as any).guideLink : undefined}
+                        actionLinks={'actionLinks' in item ? (item as any).actionLinks : undefined}
                       />
                     ))}
                   </div>
