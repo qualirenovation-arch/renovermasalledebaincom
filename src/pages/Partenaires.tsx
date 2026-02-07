@@ -56,6 +56,9 @@ import ragnoLogo from "@/assets/logos/ragno.svg";
 import irisCeramicaLogo from "@/assets/logos/iris-ceramica.svg";
 import bocklipLogo from "@/assets/logos/bocklip.svg";
 import plumLogo from "@/assets/logos/plum.svg";
+import superfrontLogo from "@/assets/logos/superfront.svg";
+import noremaxLogo from "@/assets/logos/noremax.svg";
+import koakDesignLogo from "@/assets/logos/koak-design.svg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -155,6 +158,9 @@ const brandCategories: PartnerCategory[] = [
       { name: "Planizia", url: "https://www.planizia.com", description: "Plans de travail en pierre", logo: planiziaLogo },
       { name: "Bocklip", url: "https://www.bocklip.com", description: "Façades compatibles IKEA", logo: bocklipLogo },
       { name: "Plum", url: "https://www.plfrn.com", description: "Façades sur mesure compatibles IKEA", logo: plumLogo },
+      { name: "Superfront", url: "https://www.superfront.com", description: "Façades design compatibles IKEA", logo: superfrontLogo },
+      { name: "Noremax", url: "https://www.noremax.no", description: "Façades scandinaves compatibles IKEA", logo: noremaxLogo },
+      { name: "Koak Design", url: "https://www.koakdesign.com", description: "Façades bois massif compatibles IKEA", logo: koakDesignLogo },
       { name: "Cosyneo", url: "https://www.cosyneo.com", description: "Mobilier et équipements design" },
     ],
   },
