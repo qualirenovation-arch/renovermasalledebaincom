@@ -14,4 +14,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://renovermasalledebain.com/sitemap.xml
+Sitemap: https://renovermasalledebaincom.lovable.app/functions/v1/sitemap
