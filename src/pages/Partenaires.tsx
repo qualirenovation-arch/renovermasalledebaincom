@@ -45,6 +45,7 @@ import sweeekLogo from "@/assets/logos/sweeek.svg";
 import groheLogo from "@/assets/logos/grohe.svg";
 import alliaLogo from "@/assets/logos/allia.svg";
 import vitraLogo from "@/assets/logos/vitra.svg";
+import planiziaLogo from "@/assets/logos/planizia.svg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -133,7 +134,7 @@ const brandCategories: PartnerCategory[] = [
       { name: "Sklum", url: "https://www.sklum.com/fr", description: "Mobilier design et décoration", logo: sklumLogo },
       { name: "Sweeek", url: "https://www.sweeek.fr", description: "Mobilier et équipements maison", logo: sweeekLogo },
       { name: "Tots", url: "#", description: "Parois de douche sur mesure" },
-      { name: "Planizia", url: "https://www.planizia.com", description: "Plans de travail en pierre" },
+      { name: "Planizia", url: "https://www.planizia.com", description: "Plans de travail en pierre", logo: planiziaLogo },
       { name: "Cosyneo", url: "https://www.cosyneo.com", description: "Mobilier et équipements design" },
     ],
   },
