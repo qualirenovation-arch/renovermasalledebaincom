@@ -4,7 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ChevronLeft, ChevronRight, X, ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { OGTags } from "@/components/seo/OGTags";
+import { getOgImageUrl, getAlbumOgData } from "@/lib/og";
 import { albums, getAlbumBySlug, Album, Photo } from "@/data/albumsData";
 import { getRedirectSlug } from "@/data/redirects";
 
@@ -76,41 +77,37 @@ const ProjetDetail = () => {
 
   const currentPhoto = selectedPhotoIndex !== null ? album.photos[selectedPhotoIndex] : null;
 
-  // Generate OG image URL - use album cover image with absolute URL
-  const getOgImageUrl = () => {
-    // If the cover image is already an absolute URL, use it directly
-    if (album.coverImage.startsWith('http')) {
-      return album.coverImage;
-    }
-    // For bundled assets, construct the full URL
-    // The coverImage from Vite will be a path like /assets/gallery-7-abc123.jpg
-    return `https://renovermasalledebain.com${album.coverImage}`;
-  };
+  // Generate OG data for the album
+  const ogData = getAlbumOgData({
+    title: album.title,
+    location: album.location,
+    description: album.description,
+    finitionSol: album.finitionSol,
+    finitionMur: album.finitionMur,
+    category: album.category
+  });
+
+  // Generate dynamic OG image URL using the edge function
+  const ogImageUrl = getOgImageUrl("album", {
+    title: ogData.title,
+    location: ogData.location,
+    style: ogData.style,
+    tag1: ogData.tag1,
+    tag2: ogData.tag2
+  });
+
+  // Short description for OG
+  const shortDescription = `${album.location} • ${ogData.style}${ogData.tag1 ? ` • ${ogData.tag1}` : ""}${ogData.tag2 ? ` • ${ogData.tag2}` : ""} • Optimisation d'espace & finitions premium.`;
 
   return (
     <Layout>
-      <Helmet>
-        <title>Rénovation salle de bain {album.location} – {album.title} | Un chantier heureux</title>
-        <meta name="description" content={`Rénovation complète de salle de bain à ${album.location}. Un chantier heureux, maîtrisé et sans mauvaises surprises.`} />
-        <link rel="canonical" href={`https://renovermasalledebain.com/realisations/${album.slug}`} />
-        
-        {/* Open Graph */}
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={`${album.title} | ${album.location}`} />
-        <meta property="og:description" content={album.description.slice(0, 200)} />
-        <meta property="og:url" content={`https://renovermasalledebain.com/realisations/${album.slug}`} />
-        <meta property="og:image" content={getOgImageUrl()} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content="Rénover ma Salle de Bain" />
-        <meta property="og:locale" content="fr_FR" />
-        
-        {/* Twitter Cards */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${album.title} | ${album.location}`} />
-        <meta property="twitter:description" content={album.description.slice(0, 200)} />
-        <meta name="twitter:image" content={getOgImageUrl()} />
-      </Helmet>
+      <OGTags
+        title={`${album.title} – Avant / Après`}
+        description={shortDescription}
+        path={`/realisations/${album.slug}`}
+        type="article"
+        coverImage={ogImageUrl}
+      />
 
       <section className="section-padding pt-32 md:pt-40">
         <div className="container-custom">

@@ -5,7 +5,7 @@ import { ScrollAnimation } from "@/components/ui/scroll-animation";
 import { Star, ArrowRight, ExternalLink, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { albums } from "@/data/albumsData";
-import { Helmet } from "react-helmet-async";
+import { OGTags } from "@/components/seo/OGTags";
 import { InstagramVideoCard } from "@/components/ui/instagram-video-card";
 
 // Images thumbnails pour les témoignages vidéo Instagram
@@ -52,10 +52,12 @@ const albumsWithReviews = albums.filter(album => album.review);
 export default function Avis() {
   return (
     <Layout>
-      <Helmet>
-        <title>Avis clients vérifiés | RenoverMaSalleDeBain.com</title>
-        <meta name="description" content="Découvrez les avis vérifiés par Houzz de nos clients. Plus de 40 avis 5 étoiles pour nos rénovations de salles de bain à Paris et Île-de-France." />
-      </Helmet>
+      <OGTags
+        title="Avis clients vérifiés"
+        description="Découvrez les avis vérifiés par Houzz de nos clients. Plus de 40 avis 5 étoiles pour nos rénovations de salles de bain à Paris et Île-de-France."
+        path="/avis"
+        image={{ type: "page", title: "Avis clients", subtitle: "Témoignages vérifiés" }}
+      />
 
       {/* Hero Section */}
       <section className="py-12 md:py-16 bg-gradient-to-b from-stone to-background">

@@ -1,6 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet-async";
+import { OGTags } from "@/components/seo/OGTags";
 import { AlertTriangle, ArrowRight, ClipboardList, HardHat, HelpCircle, ChevronDown, Droplets } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -130,13 +130,14 @@ const DegatsEaux = () => {
 
   return (
     <Layout>
-      <Helmet>
-        <title>Dégâts des eaux - Conseils et prévention | Qualiconcept</title>
-        <meta name="description" content="Conseils d'experts pour prévenir et gérer les dégâts des eaux. Découvrez nos bonnes pratiques et vidéos conseils pour protéger votre salle de bain." />
-        <script type="application/ld+json">
-          {JSON.stringify(faqJsonLd)}
-        </script>
-      </Helmet>
+      <OGTags
+        title="Dégâts des eaux – Conseils et prévention"
+        description="Conseils d'experts pour prévenir et gérer les dégâts des eaux. Découvrez nos bonnes pratiques et vidéos conseils pour protéger votre salle de bain."
+        path="/degats-des-eaux"
+        image={{ type: "page", title: "Dégâts des eaux", subtitle: "Conseils & prévention" }}
+      />
+      {/* JSON-LD Schema for FAQ */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-blue-50 to-background py-10 md:py-12">

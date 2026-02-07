@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { PartnersLogos } from "@/components/layout/PartnersLogos";
-import { Helmet } from "react-helmet-async";
+import { OGTags } from "@/components/seo/OGTags";
 import { MessageSquare, Palette, Diamond, Hammer, Shield, Headphones, Check, X, ArrowRight, ClipboardCheck, UserCheck, Handshake, Lightbulb, Home, Camera } from "lucide-react";
 const benefits = [{
   icon: ClipboardCheck,
@@ -77,11 +77,12 @@ const comparison = [{
 }];
 export default function WhyUs() {
   return <Layout>
-      <Helmet>
-        <title>Notre méthode – Un chantier heureux pour votre salle de bain à Paris</title>
-        <meta name="description" content="Découvrez notre approche pour une rénovation de salle de bain sans stress à Paris. Un chantier heureux, maîtrisé de A à Z." />
-        <link rel="canonical" href="https://renovermasalledebain.com/pourquoi-nous" />
-      </Helmet>
+      <OGTags
+        title="Notre méthode – Un chantier heureux"
+        description="Découvrez notre approche pour une rénovation de salle de bain sans stress à Paris. Un chantier heureux, maîtrisé de A à Z."
+        path="/pourquoi-nous"
+        image={{ type: "page", title: "Notre méthode", subtitle: "Un chantier heureux" }}
+      />
       {/* Hero */}
       <section className="relative py-16 md:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-stone" />

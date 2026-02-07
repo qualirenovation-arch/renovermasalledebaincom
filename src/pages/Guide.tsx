@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LazyVideo } from "@/components/ui/lazy-video";
 import { ArrowRight, CheckCircle, AlertTriangle, Droplets, Shield, Wrench, Sparkles, Eye, Users, Home, Phone, Paintbrush, Wind, HardHat, Building, Hammer, Ruler, HelpCircle, Play, Lightbulb, Thermometer, Flame, ExternalLink } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { OGTags } from "@/components/seo/OGTags";
 
 // Images
 import guideJointNoir from "@/assets/guide-joint-noir.webp";
@@ -89,14 +89,14 @@ const Guide = () => {
 
   return (
     <Layout>
-      <Helmet>
-        <title>Réussir sa salle de bain : guide travaux & conseils de pro</title>
-        <meta name="description" content="Guide complet pour réussir la rénovation de votre salle de bain : étanchéité, plomberie, VMC, choix techniques et accompagnement maître d'œuvre à Paris." />
-        <link rel="canonical" href="https://renovermasalledebain.com/guide-travaux" />
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
-      </Helmet>
+      <OGTags
+        title="Guide Travaux – Réussir sa salle de bain"
+        description="Guide complet pour réussir la rénovation de votre salle de bain : étanchéité, plomberie, VMC, choix techniques et accompagnement maître d'œuvre à Paris."
+        path="/guide-travaux"
+        image={{ type: "page", title: "Guide Travaux", subtitle: "Conseils d'experts" }}
+      />
+      {/* JSON-LD Schema for FAQ */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-b from-accent/30 to-background overflow-hidden">
