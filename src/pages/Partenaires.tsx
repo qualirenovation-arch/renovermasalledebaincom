@@ -54,6 +54,8 @@ import appianiLogo from "@/assets/logos/appiani.svg";
 import marazziLogo from "@/assets/logos/marazzi.svg";
 import ragnoLogo from "@/assets/logos/ragno.svg";
 import irisCeramicaLogo from "@/assets/logos/iris-ceramica.svg";
+import bocklipLogo from "@/assets/logos/bocklip.svg";
+import plumLogo from "@/assets/logos/plum.svg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -151,6 +153,8 @@ const brandCategories: PartnerCategory[] = [
       { name: "Sweeek", url: "https://www.sweeek.fr", description: "Mobilier et équipements maison", logo: sweeekLogo },
       { name: "Tots", url: "#", description: "Parois de douche sur mesure" },
       { name: "Planizia", url: "https://www.planizia.com", description: "Plans de travail en pierre", logo: planiziaLogo },
+      { name: "Bocklip", url: "https://www.bocklip.com", description: "Façades compatibles IKEA", logo: bocklipLogo },
+      { name: "Plum", url: "https://www.plfrn.com", description: "Façades sur mesure compatibles IKEA", logo: plumLogo },
       { name: "Cosyneo", url: "https://www.cosyneo.com", description: "Mobilier et équipements design" },
     ],
   },
