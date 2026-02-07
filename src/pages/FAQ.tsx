@@ -165,7 +165,10 @@ const faqCategories = [
       },
       {
         question: "Travaillez-vous avec quels fournisseurs ?",
-        answer: "Tous les fournisseurs ! Si nous connaissons déjà le distributeur, c'est plus simple, mais nous n'hésitons pas à contacter et ouvrir un compte client chez un nouveau fournisseur si c'est le produit que vous souhaitez. Avant toute commande, nous échangeons avec vous car nos partenaires peuvent aussi proposer les mêmes références. Consultez notre liste de partenaires dans la section « Pourquoi nous » pour trouver le produit qui emballera votre cœur !"
+        answer: "Tous les fournisseurs ! Si nous connaissons déjà le distributeur, c'est plus simple, mais nous n'hésitons pas à contacter et ouvrir un compte client chez un nouveau fournisseur si c'est le produit que vous souhaitez. Avant toute commande, nous échangeons avec vous car nos partenaires peuvent aussi proposer les mêmes références. 👉 Consultez notre annuaire de partenaires pour découvrir tous les fournisseurs avec lesquels nous travaillons régulièrement.",
+        actionLinks: [
+          { type: "internal", label: "Voir nos partenaires", link: "/partenaires" }
+        ]
       }
     ]
   }
