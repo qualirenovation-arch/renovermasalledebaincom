@@ -309,7 +309,7 @@ export default function Partenaires() {
                 </div>
 
                 <motion.div
-                  className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4"
+                  className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-3"
                   variants={stagger}
                   initial="initial"
                   whileInView="animate"
@@ -321,31 +321,31 @@ export default function Partenaires() {
                       href={partner.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group bg-white border border-border/50 rounded-xl p-4 flex flex-col items-center justify-center text-center hover:border-primary/30 hover:shadow-lg transition-all duration-300 min-h-[120px]"
+                      className="group bg-white border border-border/50 rounded-lg p-2.5 flex flex-col items-center justify-center text-center hover:border-primary/30 hover:shadow-md transition-all duration-300 min-h-[80px]"
                       variants={fadeInUp}
-                      whileHover={{ scale: 1.02, y: -3 }}
+                      whileHover={{ scale: 1.02, y: -2 }}
                     >
                       {partner.logo ? (
                         <img 
                           src={partner.logo} 
                           alt={partner.name}
-                          className="h-8 md:h-10 w-auto object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300 mb-2"
+                          className="h-6 md:h-7 w-auto object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300 mb-1"
                         />
                       ) : partner.iconComponent ? (
-                        <div className="text-muted-foreground/70 group-hover:text-primary transition-colors duration-300 mb-2">
+                        <div className="text-muted-foreground/70 group-hover:text-primary transition-colors duration-300 mb-1">
                           {partner.iconComponent}
                         </div>
                       ) : (
-                        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-2 group-hover:bg-primary/20 transition-colors">
-                          <span className="font-display text-lg font-bold text-primary">
+                        <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mb-1 group-hover:bg-primary/20 transition-colors">
+                          <span className="font-display text-sm font-bold text-primary">
                             {partner.name.charAt(0)}
                           </span>
                         </div>
                       )}
-                      <h4 className="font-display text-sm font-semibold text-foreground leading-tight">
+                      <h4 className="font-display text-xs font-semibold text-foreground leading-tight">
                         {partner.name}
                       </h4>
-                      <p className="text-xs text-muted-foreground mt-1 line-clamp-2">
+                      <p className="text-[10px] text-muted-foreground mt-0.5 line-clamp-1">
                         {partner.description}
                       </p>
                     </motion.a>
@@ -400,7 +400,7 @@ export default function Partenaires() {
                 </div>
 
                 <motion.div
-                  className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4"
+                  className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-3"
                   variants={stagger}
                   initial="initial"
                   whileInView="animate"
@@ -412,31 +412,31 @@ export default function Partenaires() {
                       href={partner.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group bg-white border border-border/50 rounded-xl p-4 flex flex-col items-center justify-center text-center hover:border-primary/30 hover:shadow-lg transition-all duration-300 min-h-[120px]"
+                      className="group bg-white border border-border/50 rounded-lg p-2.5 flex flex-col items-center justify-center text-center hover:border-primary/30 hover:shadow-md transition-all duration-300 min-h-[80px]"
                       variants={fadeInUp}
-                      whileHover={{ scale: 1.02, y: -3 }}
+                      whileHover={{ scale: 1.02, y: -2 }}
                     >
                       {partner.logo ? (
                         <img 
                           src={partner.logo} 
                           alt={partner.name}
-                          className="h-8 md:h-10 w-auto object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300 mb-2"
+                          className="h-6 md:h-7 w-auto object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300 mb-1"
                         />
                       ) : partner.iconComponent ? (
-                        <div className="text-muted-foreground/70 group-hover:text-primary transition-colors duration-300 mb-2">
+                        <div className="text-muted-foreground/70 group-hover:text-primary transition-colors duration-300 mb-1">
                           {partner.iconComponent}
                         </div>
                       ) : (
-                        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-2 group-hover:bg-primary/20 transition-colors">
-                          <span className="font-display text-lg font-bold text-primary">
+                        <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mb-1 group-hover:bg-primary/20 transition-colors">
+                          <span className="font-display text-sm font-bold text-primary">
                             {partner.name.charAt(0)}
                           </span>
                         </div>
                       )}
-                      <h4 className="font-display text-sm font-semibold text-foreground leading-tight">
+                      <h4 className="font-display text-xs font-semibold text-foreground leading-tight">
                         {partner.name}
                       </h4>
-                      <p className="text-xs text-muted-foreground mt-1 line-clamp-2">
+                      <p className="text-[10px] text-muted-foreground mt-0.5 line-clamp-1">
                         {partner.description}
                       </p>
                     </motion.a>
