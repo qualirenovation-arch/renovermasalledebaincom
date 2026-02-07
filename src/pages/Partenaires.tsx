@@ -234,7 +234,7 @@ export default function Partenaires() {
       </section>
 
       {/* SECTION MARQUES */}
-      <section className="section-padding pb-8">
+      <section className="section-padding pb-8" id="marques">
         <div className="container-custom">
           <motion.div
             className="mb-12"
@@ -325,7 +325,7 @@ export default function Partenaires() {
       </div>
 
       {/* SECTION FOURNISSEURS */}
-      <section className="section-padding pt-8">
+      <section className="section-padding pt-8" id="fournisseurs">
         <div className="container-custom">
           <motion.div
             className="mb-12"
@@ -416,7 +416,7 @@ export default function Partenaires() {
       </div>
 
       {/* PARTENAIRES MÉTIER */}
-      <section className="section-padding pt-8 pb-8">
+      <section className="section-padding pt-8 pb-8" id="partenaires-metier">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

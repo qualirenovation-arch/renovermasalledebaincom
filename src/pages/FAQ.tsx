@@ -158,16 +158,16 @@ const faqCategories = [
       },
       {
         question: "Travaillez-vous avec quelles marques ?",
-        answer: "Toutes les marques ! Nous vérifions systématiquement vos choix avant de valider les commandes pour éviter les produits de mauvaise manufacture. Notre expertise nous permet de vous accompagner dans vos sélections et de vous conseiller sur la qualité des références. 👉 Consultez notre annuaire de partenaires : vous y trouverez vos inspirations et accéderez directement aux sites internet de chaque marque.",
+        answer: "Toutes les marques ! Nous vérifions systématiquement vos choix avant de valider les commandes pour éviter les produits de mauvaise manufacture. Notre expertise nous permet de vous accompagner dans vos sélections et de vous conseiller sur la qualité des références. 👉 Consultez notre annuaire de marques : vous y trouverez vos inspirations et accéderez directement aux sites internet de chaque fabricant.",
         actionLinks: [
-          { type: "internal", label: "Voir nos partenaires", link: "/partenaires" }
+          { type: "internal", label: "Voir nos marques", link: "/partenaires#marques" }
         ]
       },
       {
         question: "Travaillez-vous avec quels fournisseurs ?",
-        answer: "Tous les fournisseurs ! Si nous connaissons déjà le distributeur, c'est plus simple, mais nous n'hésitons pas à contacter et ouvrir un compte client chez un nouveau fournisseur si c'est le produit que vous souhaitez. Avant toute commande, nous échangeons avec vous car nos partenaires peuvent aussi proposer les mêmes références. 👉 Consultez notre annuaire de partenaires pour découvrir tous les fournisseurs avec lesquels nous travaillons régulièrement.",
+        answer: "Tous les fournisseurs ! Si nous connaissons déjà le distributeur, c'est plus simple, mais nous n'hésitons pas à contacter et ouvrir un compte client chez un nouveau fournisseur si c'est le produit que vous souhaitez. Avant toute commande, nous échangeons avec vous car nos partenaires peuvent aussi proposer les mêmes références. 👉 Consultez notre annuaire de fournisseurs pour découvrir tous les distributeurs et négoces avec lesquels nous travaillons régulièrement.",
         actionLinks: [
-          { type: "internal", label: "Voir nos partenaires", link: "/partenaires" }
+          { type: "internal", label: "Voir nos fournisseurs", link: "/partenaires#fournisseurs" }
         ]
       }
     ]
