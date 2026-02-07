@@ -18,6 +18,9 @@ const footerLinks = {
     label: "Réalisations",
     path: "/realisations"
   }, {
+    label: "Demande de devis",
+    path: "/devis#devis-form"
+  }, {
     label: "Partenaires",
     path: "/partenaires"
   }, {
@@ -26,9 +29,6 @@ const footerLinks = {
   }, {
     label: "Presse",
     path: "/presse#parutions"
-  }, {
-    label: "Demande de devis",
-    path: "/devis#devis-form"
   }, {
     label: "Devenir partenaire",
     path: "/partenaires/contact"
