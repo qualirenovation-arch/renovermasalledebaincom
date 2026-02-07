@@ -42,6 +42,9 @@ import laPlateformeLogo from "@/assets/logos/la-plateforme.svg";
 import modelecLogo from "@/assets/logos/modelec.svg";
 import poalgiLogo from "@/assets/logos/poalgi.svg";
 import sweeekLogo from "@/assets/logos/sweeek.svg";
+import groheLogo from "@/assets/logos/grohe.svg";
+import alliaLogo from "@/assets/logos/allia.svg";
+import vitraLogo from "@/assets/logos/vitra.svg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -96,9 +99,9 @@ const brandCategories: PartnerCategory[] = [
     icon: "🚿",
     partners: [
       { name: "Geberit", url: "https://www.geberit.fr", description: "Systèmes sanitaires", logo: geberitLogo },
-      { name: "Grohe", url: "https://www.grohe.fr", description: "Robinetterie et systèmes sanitaires" },
-      { name: "Allia", url: "https://www.allia.fr", description: "Céramiques et sanitaires français" },
-      { name: "Vitra", url: "https://www.vitra-tr.com", description: "Sanitaires et céramiques turcs" },
+      { name: "Grohe", url: "https://www.grohe.fr", description: "Robinetterie et systèmes sanitaires", logo: groheLogo },
+      { name: "Allia", url: "https://www.allia.fr", description: "Céramiques et sanitaires français", logo: alliaLogo },
+      { name: "Vitra", url: "https://www.vitra-tr.com", description: "Sanitaires et céramiques turcs", logo: vitraLogo },
       { name: "Wirquin", url: "https://www.wirquin.fr", description: "Plomberie et évacuation", logo: wirquinLogo },
     ],
   },
