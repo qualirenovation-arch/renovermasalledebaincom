@@ -71,7 +71,8 @@ interface PartnerCategory {
   partners: Partner[];
 }
 
-const partnerCategories: PartnerCategory[] = [
+// MARQUES - Fabricants de produits
+const brandCategories: PartnerCategory[] = [
   {
     title: "Étanchéité & Carrelage",
     icon: "🛁",
@@ -83,10 +84,6 @@ const partnerCategories: PartnerCategory[] = [
       { name: "Wedi", url: "https://www.wedi.de/fr", description: "Panneaux de construction étanches", logo: wediLogo },
       { name: "Mapei", url: "https://www.mapei.com/fr", description: "Colles et produits chimiques", logo: mapeiLogo },
       { name: "Kerakoll", url: "https://www.kerakoll.com/fr", description: "Colles et joints écologiques", logo: kerakollLogo },
-      { name: "Ceramica.fr", url: "https://www.ceramica.fr", description: "Carrelages et céramiques" },
-      { name: "Parquet-Carrelage.com", url: "https://www.parquet-carrelage.com", description: "Revêtements de sol" },
-      { name: "Eiffel Carrelage", url: "#", description: "Carrelages professionnels" },
-      { name: "AS Decarreaux", url: "#", description: "Spécialiste carrelage", logo: asDecarreauxLogo },
     ],
   },
   {
@@ -94,10 +91,7 @@ const partnerCategories: PartnerCategory[] = [
     icon: "🚿",
     partners: [
       { name: "Geberit", url: "https://www.geberit.fr", description: "Systèmes sanitaires", logo: geberitLogo },
-      { name: "Cedeo", url: "https://www.cedeo.fr", description: "Distribution sanitaire chauffage", logo: cedeoLogo },
-      { name: "Espace Aubade", url: "https://www.frenchaubade.fr", description: "Sanitaires et salles de bain", logo: espaceAubadeLogo },
       { name: "Wirquin", url: "https://www.wirquin.fr", description: "Plomberie et évacuation", logo: wirquinLogo },
-      { name: "Sawiday", url: "https://www.sawiday.fr", description: "Équipements salle de bain" },
     ],
   },
   {
@@ -106,10 +100,7 @@ const partnerCategories: PartnerCategory[] = [
     partners: [
       { name: "Horus", url: "https://www.hfrob.fr", description: "Robinetterie française haut de gamme", logo: horusLogo },
       { name: "Hudson Reed", url: "https://www.hudsonreed.fr", description: "Robinetterie et douches design", logo: hudsonReedLogo },
-      { name: "CMR", url: "https://www.cmr-bain.fr", description: "Robinetterie et équipements sanitaires" },
-      { name: "MaSalleDeBain.com", url: "https://www.masalledebain.com", description: "Équipements sanitaires" },
-      { name: "Rue du Bain", url: "https://www.ruedubain.com", description: "Équipements de salle de bain" },
-      { name: "Reuter", url: "https://www.reuter.com", description: "Équipements sanitaires premium" },
+      { name: "Poalgi", url: "https://www.poalgi.com", description: "Éviers et vasques design", logo: poalgiLogo },
     ],
   },
   {
@@ -119,48 +110,20 @@ const partnerCategories: PartnerCategory[] = [
       { name: "Legrand", url: "https://www.legrand.fr", description: "Électricité et domotique", logo: legrandLogo },
       { name: "Schneider Electric", url: "https://www.se.com/fr", description: "Solutions électriques", logo: schneiderLogo },
       { name: "Atlantic", url: "https://www.atlantic.fr", description: "Chauffage et eau chaude", logo: atlanticLogo },
-      { name: "Corston", url: "#", description: "Appareillages électriques design" },
       { name: "Modelec", url: "https://www.modelec.com/fr", description: "Appareillages électriques haut de gamme", logo: modelecLogo },
+      { name: "Corston", url: "#", description: "Appareillages électriques design" },
       { name: "Arnould", url: "#", description: "Appareillages électriques" },
-      { name: "Rexel", url: "https://www.rexel.fr", description: "Distribution matériel électrique", logo: rexelLogo },
-    ],
-  },
-  {
-    title: "Négoce & Matériaux",
-    icon: "🏗️",
-    partners: [
-      { name: "Point.P", url: "https://www.pointp.fr", description: "Matériaux de construction", logo: pointpLogo },
-      { name: "La Plateforme du Bâtiment", url: "https://www.laplateforme.com", description: "Matériaux de construction", logo: laPlateformeLogo },
-      { name: "Guimier", url: "https://www.guimier.fr", description: "Négoce en matériaux" },
-      { name: "Tible et Dumont", url: "#", description: "Fournisseur professionnel" },
-      { name: "Schmitt Ney", url: "https://www.schmitt-ney.fr", description: "Négoce sanitaire" },
-      { name: "Foussier", url: "https://www.foussier.fr", description: "Quincaillerie professionnelle", logo: foussierLogo },
-      { name: "Legallais", url: "https://www.legallais.com", description: "Fournitures du bâtiment", logo: legallaisLogo },
     ],
   },
   {
     title: "Mobilier & Design",
     icon: "✨",
     partners: [
-      { name: "David B", url: "https://www.davidb.fr", description: "Salles de bain design" },
-      { name: "Envie de Bain", url: "https://www.enviedebain.fr", description: "Showroom salle de bain" },
       { name: "Sklum", url: "https://www.sklum.com/fr", description: "Mobilier design et décoration", logo: sklumLogo },
       { name: "Sweeek", url: "https://www.sweeek.fr", description: "Mobilier et équipements maison", logo: sweeekLogo },
       { name: "Tots", url: "#", description: "Parois de douche sur mesure" },
-      { name: "Democratik Design", url: "#", description: "Design et décoration" },
-      { name: "Poalgi", url: "https://www.poalgi.com", description: "Éviers et vasques design", logo: poalgiLogo },
       { name: "Planizia", url: "https://www.planizia.com", description: "Plans de travail en pierre" },
       { name: "Cosyneo", url: "https://www.cosyneo.com", description: "Mobilier et équipements design" },
-    ],
-  },
-  {
-    title: "Grandes Surfaces & E-commerce",
-    icon: "🛒",
-    partners: [
-      { name: "Leroy Merlin", url: "https://www.leroymerlin.fr", description: "Grande surface de bricolage", logo: leroyMerlinLogo },
-      { name: "IKEA", url: "https://www.ikea.com/fr", description: "Mobilier et accessoires", logo: ikeaLogo },
-      { name: "ManoMano", url: "https://www.manomano.fr", description: "Bricolage et jardinage", logo: manomanoLogo },
-      { name: "Castorama", url: "https://www.castorama.fr", description: "Grande surface de bricolage", logo: castoramaLogo },
     ],
   },
   {
@@ -175,15 +138,77 @@ const partnerCategories: PartnerCategory[] = [
       { name: "Benjamin Moore", url: "https://www.benjaminmoore.com/fr-fr", description: "Peintures américaines premium", logo: benjaminMooreLogo },
     ],
   },
+];
+
+// FOURNISSEURS - Distributeurs et points de vente
+const supplierCategories: PartnerCategory[] = [
   {
-    title: "Partenaires Métier",
-    icon: "🤝",
+    title: "Négoce & Matériaux",
+    icon: "🏗️",
     partners: [
-      { name: "Houzz", url: "https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept", description: "Notre profil professionnel", logo: houzzLogo },
-      { name: "Instagram", url: "https://www.instagram.com/qualirenovation__travaux/", description: "Suivez nos réalisations", iconComponent: <Instagram className="w-8 h-8 md:w-10 md:h-10" /> },
+      { name: "Point.P", url: "https://www.pointp.fr", description: "Matériaux de construction", logo: pointpLogo },
+      { name: "La Plateforme du Bâtiment", url: "https://www.laplateforme.com", description: "Matériaux de construction", logo: laPlateformeLogo },
+      { name: "Guimier", url: "https://www.guimier.fr", description: "Négoce en matériaux" },
+      { name: "Tible et Dumont", url: "#", description: "Fournisseur professionnel" },
+      { name: "Foussier", url: "https://www.foussier.fr", description: "Quincaillerie professionnelle", logo: foussierLogo },
+      { name: "Legallais", url: "https://www.legallais.com", description: "Fournitures du bâtiment", logo: legallaisLogo },
+    ],
+  },
+  {
+    title: "Distribution Sanitaire & Électrique",
+    icon: "📦",
+    partners: [
+      { name: "Cedeo", url: "https://www.cedeo.fr", description: "Distribution sanitaire chauffage", logo: cedeoLogo },
+      { name: "Espace Aubade", url: "https://www.frenchaubade.fr", description: "Sanitaires et salles de bain", logo: espaceAubadeLogo },
+      { name: "Schmitt Ney", url: "https://www.schmitt-ney.fr", description: "Négoce sanitaire" },
+      { name: "Rexel", url: "https://www.rexel.fr", description: "Distribution matériel électrique", logo: rexelLogo },
+    ],
+  },
+  {
+    title: "Showrooms & Spécialistes",
+    icon: "🏠",
+    partners: [
+      { name: "David B", url: "https://www.davidb.fr", description: "Salles de bain design" },
+      { name: "Envie de Bain", url: "https://www.enviedebain.fr", description: "Showroom salle de bain" },
+      { name: "CMR", url: "https://www.cmr-bain.fr", description: "Robinetterie et équipements sanitaires" },
+      { name: "MaSalleDeBain.com", url: "https://www.masalledebain.com", description: "Équipements sanitaires" },
+      { name: "Rue du Bain", url: "https://www.ruedubain.com", description: "Équipements de salle de bain" },
+      { name: "Sawiday", url: "https://www.sawiday.fr", description: "Équipements salle de bain" },
+      { name: "Reuter", url: "https://www.reuter.com", description: "Équipements sanitaires premium" },
+      { name: "Democratik Design", url: "#", description: "Design et décoration" },
+    ],
+  },
+  {
+    title: "Carrelage & Revêtements",
+    icon: "🔲",
+    partners: [
+      { name: "Ceramica.fr", url: "https://www.ceramica.fr", description: "Carrelages et céramiques" },
+      { name: "Parquet-Carrelage.com", url: "https://www.parquet-carrelage.com", description: "Revêtements de sol" },
+      { name: "Eiffel Carrelage", url: "#", description: "Carrelages professionnels" },
+      { name: "AS Decarreaux", url: "#", description: "Spécialiste carrelage", logo: asDecarreauxLogo },
+    ],
+  },
+  {
+    title: "Grandes Surfaces & E-commerce",
+    icon: "🛒",
+    partners: [
+      { name: "Leroy Merlin", url: "https://www.leroymerlin.fr", description: "Grande surface de bricolage", logo: leroyMerlinLogo },
+      { name: "IKEA", url: "https://www.ikea.com/fr", description: "Mobilier et accessoires", logo: ikeaLogo },
+      { name: "ManoMano", url: "https://www.manomano.fr", description: "Bricolage et jardinage", logo: manomanoLogo },
+      { name: "Castorama", url: "https://www.castorama.fr", description: "Grande surface de bricolage", logo: castoramaLogo },
     ],
   },
 ];
+
+// Partenaires Métier
+const professionalPartners: PartnerCategory = {
+  title: "Partenaires Métier",
+  icon: "🤝",
+  partners: [
+    { name: "Houzz", url: "https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept", description: "Notre profil professionnel", logo: houzzLogo },
+    { name: "Instagram", url: "https://www.instagram.com/qualirenovation__travaux/", description: "Suivez nos réalisations", iconComponent: <Instagram className="w-8 h-8 md:w-10 md:h-10" /> },
+  ],
+};
 
 export default function Partenaires() {
   return (
@@ -208,11 +233,28 @@ export default function Partenaires() {
         </div>
       </section>
 
-      {/* Partners by Category */}
-      <section className="section-padding">
+      {/* SECTION MARQUES */}
+      <section className="section-padding pb-8">
         <div className="container-custom">
-          <div className="space-y-16">
-            {partnerCategories.map((category, categoryIndex) => (
+          <motion.div
+            className="mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex items-center gap-4 mb-4">
+              <span className="text-3xl">🏷️</span>
+              <h2 className="font-display text-3xl md:text-4xl font-semibold text-primary">
+                Marques
+              </h2>
+            </div>
+            <p className="text-muted-foreground text-lg max-w-2xl">
+              Les fabricants de produits avec lesquels nous travaillons pour vous garantir qualité et durabilité.
+            </p>
+          </motion.div>
+
+          <div className="space-y-12">
+            {brandCategories.map((category, categoryIndex) => (
               <motion.div
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 30 }}
@@ -220,16 +262,14 @@ export default function Partenaires() {
                 viewport={{ once: true }}
                 transition={{ delay: categoryIndex * 0.1 }}
               >
-                {/* Category Header */}
-                <div className="flex items-center gap-3 mb-8">
-                  <span className="text-2xl">{category.icon}</span>
-                  <h2 className="font-display text-2xl md:text-3xl font-semibold">
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="text-xl">{category.icon}</span>
+                  <h3 className="font-display text-xl md:text-2xl font-semibold">
                     {category.title}
-                  </h2>
+                  </h3>
                   <div className="flex-1 h-px bg-border ml-4" />
                 </div>
 
-                {/* Partners Grid */}
                 <motion.div
                   className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4"
                   variants={stagger}
@@ -264,9 +304,9 @@ export default function Partenaires() {
                           </span>
                         </div>
                       )}
-                      <h3 className="font-display text-sm font-semibold text-foreground leading-tight">
+                      <h4 className="font-display text-sm font-semibold text-foreground leading-tight">
                         {partner.name}
-                      </h3>
+                      </h4>
                       <p className="text-xs text-muted-foreground mt-1 line-clamp-2">
                         {partner.description}
                       </p>
@@ -276,6 +316,165 @@ export default function Partenaires() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Séparateur */}
+      <div className="container-custom">
+        <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+      </div>
+
+      {/* SECTION FOURNISSEURS */}
+      <section className="section-padding pt-8">
+        <div className="container-custom">
+          <motion.div
+            className="mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex items-center gap-4 mb-4">
+              <span className="text-3xl">🏪</span>
+              <h2 className="font-display text-3xl md:text-4xl font-semibold text-primary">
+                Fournisseurs & Distributeurs
+              </h2>
+            </div>
+            <p className="text-muted-foreground text-lg max-w-2xl">
+              Les points de vente, négoces et showrooms où nous nous approvisionnons pour vos projets.
+            </p>
+          </motion.div>
+
+          <div className="space-y-12">
+            {supplierCategories.map((category, categoryIndex) => (
+              <motion.div
+                key={categoryIndex}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: categoryIndex * 0.1 }}
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="text-xl">{category.icon}</span>
+                  <h3 className="font-display text-xl md:text-2xl font-semibold">
+                    {category.title}
+                  </h3>
+                  <div className="flex-1 h-px bg-border ml-4" />
+                </div>
+
+                <motion.div
+                  className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4"
+                  variants={stagger}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{ once: true }}
+                >
+                  {category.partners.map((partner, index) => (
+                    <motion.a
+                      key={index}
+                      href={partner.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group bg-white border border-border/50 rounded-xl p-4 flex flex-col items-center justify-center text-center hover:border-primary/30 hover:shadow-lg transition-all duration-300 min-h-[120px]"
+                      variants={fadeInUp}
+                      whileHover={{ scale: 1.02, y: -3 }}
+                    >
+                      {partner.logo ? (
+                        <img 
+                          src={partner.logo} 
+                          alt={partner.name}
+                          className="h-8 md:h-10 w-auto object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300 mb-2"
+                        />
+                      ) : partner.iconComponent ? (
+                        <div className="text-muted-foreground/70 group-hover:text-primary transition-colors duration-300 mb-2">
+                          {partner.iconComponent}
+                        </div>
+                      ) : (
+                        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-2 group-hover:bg-primary/20 transition-colors">
+                          <span className="font-display text-lg font-bold text-primary">
+                            {partner.name.charAt(0)}
+                          </span>
+                        </div>
+                      )}
+                      <h4 className="font-display text-sm font-semibold text-foreground leading-tight">
+                        {partner.name}
+                      </h4>
+                      <p className="text-xs text-muted-foreground mt-1 line-clamp-2">
+                        {partner.description}
+                      </p>
+                    </motion.a>
+                  ))}
+                </motion.div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Séparateur */}
+      <div className="container-custom">
+        <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+      </div>
+
+      {/* PARTENAIRES MÉTIER */}
+      <section className="section-padding pt-8 pb-8">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <span className="text-2xl">{professionalPartners.icon}</span>
+              <h2 className="font-display text-2xl md:text-3xl font-semibold">
+                {professionalPartners.title}
+              </h2>
+              <div className="flex-1 h-px bg-border ml-4" />
+            </div>
+
+            <motion.div
+              className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4"
+              variants={stagger}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+            >
+              {professionalPartners.partners.map((partner, index) => (
+                <motion.a
+                  key={index}
+                  href={partner.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-white border border-border/50 rounded-xl p-4 flex flex-col items-center justify-center text-center hover:border-primary/30 hover:shadow-lg transition-all duration-300 min-h-[120px]"
+                  variants={fadeInUp}
+                  whileHover={{ scale: 1.02, y: -3 }}
+                >
+                  {partner.logo ? (
+                    <img 
+                      src={partner.logo} 
+                      alt={partner.name}
+                      className="h-8 md:h-10 w-auto object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300 mb-2"
+                    />
+                  ) : partner.iconComponent ? (
+                    <div className="text-muted-foreground/70 group-hover:text-primary transition-colors duration-300 mb-2">
+                      {partner.iconComponent}
+                    </div>
+                  ) : (
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-2 group-hover:bg-primary/20 transition-colors">
+                      <span className="font-display text-lg font-bold text-primary">
+                        {partner.name.charAt(0)}
+                      </span>
+                    </div>
+                  )}
+                  <h4 className="font-display text-sm font-semibold text-foreground leading-tight">
+                    {partner.name}
+                  </h4>
+                  <p className="text-xs text-muted-foreground mt-1 line-clamp-2">
+                    {partner.description}
+                  </p>
+                </motion.a>
+              ))}
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
