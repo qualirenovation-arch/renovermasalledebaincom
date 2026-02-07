@@ -166,6 +166,13 @@ const faqCategories = [
         answer: "Oui, grâce à nos partenariats récurrents avec les distributeurs, nous bénéficions de conditions tarifaires avantageuses. En toute transparence, nous appliquons une marge de 10% sur le prix HT remisé fournisseur pour couvrir le temps de traitement des commandes (vérification, suivi, livraison). Les frais de livraison du fournisseur sont également reportés sur votre devis une fois la zone de livraison définie. Notre rôle n'est pas de revendre au prix d'achat, mais de vous garantir un service complet et une coordination sans faille."
       },
       {
+        question: "Connaissez-vous toutes les marques du marché ?",
+        answer: "Avec la multitude de marques dans la rénovation, il est impossible de toutes les connaître ! Mais c'est justement ce qui nous passionne : nous nous faisons toujours un plaisir de découvrir et rencontrer de nouveaux partenaires. Récemment, nous avons découvert Ceramica Fussaro — nous en sommes déjà à notre deuxième projet ensemble — et Maison Bahya, spécialiste des carreaux de ciment, dont nous avons été séduits par la collection présentée par une de nos clientes. Si vous avez un coup de cœur pour une marque, partagez-le avec nous !",
+        actionLinks: [
+          { type: "internal", label: "Voir nos partenaires actuels", link: "/partenaires" }
+        ]
+      },
+      {
         question: "Comment postuler en tant que sous-traitant ou artisan ?",
         answer: "Nous sommes toujours à la recherche de nouveaux partenaires fiables. Si vous êtes plombier, carreleur, électricien ou autre corps de métier lié à la rénovation de salle de bain, nous vous invitons à nous présenter votre profil et votre expérience. Vous pouvez postuler directement via notre formulaire en quelques minutes.",
         actionLinks: [
