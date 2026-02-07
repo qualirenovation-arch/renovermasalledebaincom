@@ -142,6 +142,32 @@ const faqCategories = [
     ]
   },
   {
+    title: "🤝 Partenaires & Fournisseurs",
+    intro: "Comprendre l'écosystème des marques, distributeurs et fournisseurs est essentiel pour bien préparer votre projet. Voici les explications clés.",
+    questions: [
+      {
+        question: "Quelle est la différence entre une marque et un fournisseur ?",
+        answer: "Une marque (ou fabricant) conçoit et fabrique les produits : robinetterie, sanitaires, carrelages. Un fournisseur (ou distributeur) est le point de vente qui commercialise ces produits : showrooms, négoces, sites e-commerce. 👉 Exemple : Grohe est une marque, Cedeo est un fournisseur qui vend des produits Grohe."
+      },
+      {
+        question: "Puis-je choisir mes propres marques et fournisseurs ?",
+        answer: "Absolument ! Vous êtes libre de sélectionner les marques et fournisseurs de votre choix. Nous vous accompagnons dans vos recherches et vérifions systématiquement la qualité et la disponibilité des produits avant validation. Si nous ne travaillons pas encore avec un fournisseur, nous ouvrons un compte client pour vous."
+      },
+      {
+        question: "Comment accéder aux catalogues des marques partenaires ?",
+        answer: "Consultez notre annuaire de marques pour accéder directement aux sites internet des fabricants. Vous y trouverez leurs catalogues, gammes et inspirations. 👉 Pour les distributeurs, notre annuaire fournisseurs liste tous les points de vente avec lesquels nous travaillons régulièrement.",
+        actionLinks: [
+          { type: "internal", label: "Voir nos marques", link: "/partenaires#marques" },
+          { type: "internal", label: "Voir nos fournisseurs", link: "/partenaires#fournisseurs" }
+        ]
+      },
+      {
+        question: "Proposez-vous des tarifs négociés chez vos fournisseurs ?",
+        answer: "Oui, grâce à nos partenariats récurrents avec les distributeurs, nous bénéficions de conditions tarifaires avantageuses que nous répercutons sur vos devis. Les remises varient selon les fournisseurs et les volumes commandés."
+      }
+    ]
+  },
+  {
     title: "Travaux et matériaux",
     questions: [
       {
@@ -155,20 +181,6 @@ const faqCategories = [
       {
         question: "Posez-vous des baignoires ?",
         answer: "Oui, nous installons des baignoires îlots, encastrées ou d'angle selon votre projet. Nous pouvons également transformer une baignoire en douche à l'italienne si vous souhaitez gagner de l'espace et du confort."
-      },
-      {
-        question: "Travaillez-vous avec quelles marques ?",
-        answer: "Toutes les marques ! Nous vérifions systématiquement vos choix avant de valider les commandes pour éviter les produits de mauvaise manufacture. Notre expertise nous permet de vous accompagner dans vos sélections et de vous conseiller sur la qualité des références. 👉 Consultez notre annuaire de marques : vous y trouverez vos inspirations et accéderez directement aux sites internet de chaque fabricant.",
-        actionLinks: [
-          { type: "internal", label: "Voir nos marques", link: "/partenaires#marques" }
-        ]
-      },
-      {
-        question: "Travaillez-vous avec quels fournisseurs ?",
-        answer: "Tous les fournisseurs ! Si nous connaissons déjà le distributeur, c'est plus simple, mais nous n'hésitons pas à contacter et ouvrir un compte client chez un nouveau fournisseur si c'est le produit que vous souhaitez. Avant toute commande, nous échangeons avec vous car nos partenaires peuvent aussi proposer les mêmes références. 👉 Consultez notre annuaire de fournisseurs pour découvrir tous les distributeurs et négoces avec lesquels nous travaillons régulièrement.",
-        actionLinks: [
-          { type: "internal", label: "Voir nos fournisseurs", link: "/partenaires#fournisseurs" }
-        ]
       }
     ]
   }
