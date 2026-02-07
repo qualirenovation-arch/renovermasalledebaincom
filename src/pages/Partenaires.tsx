@@ -96,6 +96,9 @@ const brandCategories: PartnerCategory[] = [
     icon: "🚿",
     partners: [
       { name: "Geberit", url: "https://www.geberit.fr", description: "Systèmes sanitaires", logo: geberitLogo },
+      { name: "Grohe", url: "https://www.grohe.fr", description: "Robinetterie et systèmes sanitaires" },
+      { name: "Allia", url: "https://www.allia.fr", description: "Céramiques et sanitaires français" },
+      { name: "Vitra", url: "https://www.vitra-tr.com", description: "Sanitaires et céramiques turcs" },
       { name: "Wirquin", url: "https://www.wirquin.fr", description: "Plomberie et évacuation", logo: wirquinLogo },
     ],
   },
