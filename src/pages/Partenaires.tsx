@@ -59,6 +59,7 @@ import plumLogo from "@/assets/logos/plum.svg";
 import superfrontLogo from "@/assets/logos/superfront.svg";
 import noremaxLogo from "@/assets/logos/noremax.svg";
 import koakDesignLogo from "@/assets/logos/koak-design.svg";
+import etsyLogo from "@/assets/logos/etsy.svg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -234,6 +235,7 @@ const supplierCategories: PartnerCategory[] = [
       { name: "IKEA", url: "https://www.ikea.com/fr", description: "Mobilier et accessoires", logo: ikeaLogo },
       { name: "ManoMano", url: "https://www.manomano.fr", description: "Bricolage et jardinage", logo: manomanoLogo },
       { name: "Castorama", url: "https://www.castorama.fr", description: "Grande surface de bricolage", logo: castoramaLogo },
+      { name: "Etsy", url: "https://www.etsy.com/fr", description: "Artisanat et décoration unique", logo: etsyLogo },
     ],
   },
 ];
