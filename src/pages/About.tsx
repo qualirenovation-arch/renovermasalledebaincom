@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
+import { OGTags } from "@/components/seo/OGTags";
 import { Shield, Award, Users, Clock, CheckCircle2, ArrowRight, Camera, PenTool, HardHat } from "lucide-react";
 import aboutHistoire from "@/assets/about-histoire.jpg";
 import teamPhoto from "@/assets/team-photo.jpg";
@@ -38,6 +39,12 @@ const certifications = [
 export default function About() {
   return (
     <Layout>
+      <OGTags
+        title="À propos – Notre équipe"
+        description="Découvrez l'équipe Qualirenovation derrière renovermasalledebain.com. 20 ans d'expérience dans la rénovation de salle de bain à Paris."
+        path="/a-propos"
+        image={{ type: "page", title: "Notre équipe", subtitle: "20 ans d'expérience" }}
+      />
       {/* Hero */}
       <section className="relative py-24 md:py-32">
         <div className="absolute inset-0 bg-stone" />
