@@ -23,6 +23,7 @@ import DegatsEaux from "./pages/DegatsEaux";
 import VisuelsHouzz from "./pages/VisuelsHouzz";
 import DevenirPartenaire from "./pages/DevenirPartenaire";
 import Avis from "./pages/Avis";
+import OGPreview from "./pages/OGPreview";
 import Admin from "./pages/Admin";
 import AdminLogin from "./pages/AdminLogin";
 import AdminPartenaires from "./pages/AdminPartenaires";
@@ -59,6 +60,7 @@ const App = () => (
           <Route path="/visuels-houzz" element={<VisuelsHouzz />} />
           <Route path="/devenir-partenaire" element={<DevenirPartenaire />} />
           <Route path="/avis" element={<Avis />} />
+          <Route path="/og-preview" element={<OGPreview />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/partenaires" element={<AdminPartenaires />} />
