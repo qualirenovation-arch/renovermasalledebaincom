@@ -60,6 +60,7 @@ import superfrontLogo from "@/assets/logos/superfront.svg";
 import noremaxLogo from "@/assets/logos/noremax.svg";
 import koakDesignLogo from "@/assets/logos/koak-design.svg";
 import etsyLogo from "@/assets/logos/etsy.svg";
+import thermorLogo from "@/assets/logos/thermor.svg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -138,15 +139,22 @@ const brandCategories: PartnerCategory[] = [
     ],
   },
   {
-    title: "Électricité & Chauffage",
+    title: "Électricité",
     icon: "⚡",
     partners: [
       { name: "Legrand", url: "https://www.legrand.fr", description: "Électricité et domotique", logo: legrandLogo },
       { name: "Schneider Electric", url: "https://www.se.com/fr", description: "Solutions électriques", logo: schneiderLogo },
-      { name: "Atlantic", url: "https://www.atlantic.fr", description: "Chauffage et eau chaude", logo: atlanticLogo },
       { name: "Modelec", url: "https://www.modelec.com/fr", description: "Appareillages électriques haut de gamme", logo: modelecLogo },
       { name: "Corston", url: "#", description: "Appareillages électriques design" },
       { name: "Arnould", url: "#", description: "Appareillages électriques" },
+    ],
+  },
+  {
+    title: "Chauffe-eau & Eau Chaude",
+    icon: "🔥",
+    partners: [
+      { name: "Atlantic", url: "https://www.atlantic.fr", description: "Chauffe-eau et pompes à chaleur", logo: atlanticLogo },
+      { name: "Thermor", url: "https://www.thermor.fr", description: "Chauffe-eau et radiateurs", logo: thermorLogo },
     ],
   },
   {
