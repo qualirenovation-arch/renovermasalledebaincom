@@ -1,6 +1,22 @@
 // Configuration OG centralisée pour renovermasalledebain.com
 
 export const OG_BASE_URL = "https://renovermasalledebain.com";
+
+/**
+ * Convertit une URL relative d'image en URL absolue pour les validateurs OG externes
+ */
+export function getAbsoluteImageUrl(imageUrl: string): string {
+  if (!imageUrl) return "";
+  
+  // Si c'est déjà une URL absolue, la retourner telle quelle
+  if (imageUrl.startsWith("http://") || imageUrl.startsWith("https://")) {
+    return imageUrl;
+  }
+  
+  // Sinon, construire l'URL absolue avec le domaine de la preview Lovable
+  const origin = typeof window !== "undefined" ? window.location.origin : OG_BASE_URL;
+  return `${origin}${imageUrl.startsWith("/") ? "" : "/"}${imageUrl}`;
+}
 export const OG_SITE_NAME = "RenoverMaSalleDeBain.com";
 export const OG_DEFAULT_TITLE = "RenoverMaSalleDeBain.com – Rénovation de salle de bain haut de gamme";
 export const OG_DEFAULT_DESCRIPTION = "Conception + rénovation premium à Paris et Île-de-France. Optimisation d'espace, plans précis, finitions irréprochables.";
