@@ -61,6 +61,7 @@ import noremaxLogo from "@/assets/logos/noremax.svg";
 import koakDesignLogo from "@/assets/logos/koak-design.svg";
 import etsyLogo from "@/assets/logos/etsy.svg";
 import thermorLogo from "@/assets/logos/thermor.svg";
+import distribainLogo from "@/assets/logos/distribain.svg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -189,18 +190,19 @@ const brandCategories: PartnerCategory[] = [
 
 // FOURNISSEURS - Distributeurs et points de vente
 const supplierCategories: PartnerCategory[] = [
-  {
-    title: "Négoce & Matériaux",
-    icon: "🏗️",
-    partners: [
-      { name: "Point.P", url: "https://www.pointp.fr", description: "Matériaux de construction", logo: pointpLogo },
-      { name: "La Plateforme du Bâtiment", url: "https://www.laplateforme.com", description: "Matériaux de construction", logo: laPlateformeLogo },
-      { name: "Guimier", url: "https://www.guimier.fr", description: "Négoce en matériaux" },
-      { name: "Tible et Dumont", url: "#", description: "Fournisseur professionnel" },
-      { name: "Foussier", url: "https://www.foussier.fr", description: "Quincaillerie professionnelle", logo: foussierLogo },
-      { name: "Legallais", url: "https://www.legallais.com", description: "Fournitures du bâtiment", logo: legallaisLogo },
-    ],
-  },
+   {
+     title: "Négoce & Matériaux",
+     icon: "🏗️",
+     partners: [
+       { name: "Point.P", url: "https://www.pointp.fr", description: "Matériaux de construction", logo: pointpLogo },
+       { name: "La Plateforme du Bâtiment", url: "https://www.laplateforme.com", description: "Matériaux de construction", logo: laPlateformeLogo },
+       { name: "Distribain", url: "https://www.distribain.fr", description: "Sanitaire et matériaux", logo: distribainLogo },
+       { name: "Guimier", url: "https://www.guimier.fr", description: "Négoce en matériaux" },
+       { name: "Tible et Dumont", url: "#", description: "Fournisseur professionnel" },
+       { name: "Foussier", url: "https://www.foussier.fr", description: "Quincaillerie professionnelle", logo: foussierLogo },
+       { name: "Legallais", url: "https://www.legallais.com", description: "Fournitures du bâtiment", logo: legallaisLogo },
+     ],
+   },
   {
     title: "Distribution Sanitaire & Électrique",
     icon: "📦",
