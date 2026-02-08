@@ -263,17 +263,19 @@ const handler = async (req: Request): Promise<Response> => {
             <meta charset="utf-8">
             <style>
               body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; }
-              .header { background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: white; padding: 30px; text-align: center; }
+              .header { background: linear-gradient(135deg, #124A66 0%, #0d3a52 100%); color: white; padding: 30px; text-align: center; }
+              .header img { max-width: 180px; margin-bottom: 10px; }
               .header h1 { margin: 0; font-size: 22px; }
               .content { padding: 30px; background: #f9f9f9; }
-              .info-box { background: white; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #2563eb; }
-              .info-box h3 { margin-top: 0; color: #2563eb; }
+              .info-box { background: white; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #124A66; }
+              .info-box h3 { margin-top: 0; color: #124A66; }
               .footer { padding: 20px; text-align: center; font-size: 12px; color: #666; background: #f0f0f0; }
-              .cta { display: inline-block; background: #2563eb; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; margin-top: 20px; }
+              .cta { display: inline-block; background: #124A66; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; margin-top: 20px; }
             </style>
           </head>
           <body>
             <div class="header">
+              <img src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/logo-rmsb.png?v=1" alt="Rénover Ma Salle de Bain" />
               <h1>💧 Demande reçue – Dégât des eaux</h1>
             </div>
             <div class="content">
