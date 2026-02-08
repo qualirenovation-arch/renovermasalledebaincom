@@ -87,13 +87,17 @@ const ProjetDetail = () => {
     category: album.category
   });
 
-  // Generate dynamic OG image URL using the edge function
+  // Get cover image URL (first photo of the album)
+  const coverImageUrl = album.photos[0]?.image || "";
+
+  // Generate dynamic OG image URL using the edge function with cover
   const ogImageUrl = getOgImageUrl("album", {
     title: ogData.title,
     location: ogData.location,
     style: ogData.style,
     tag1: ogData.tag1,
-    tag2: ogData.tag2
+    tag2: ogData.tag2,
+    cover: coverImageUrl
   });
 
   // Short description for OG
