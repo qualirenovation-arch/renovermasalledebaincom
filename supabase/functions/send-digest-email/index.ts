@@ -111,12 +111,13 @@ function generateEmailHtml(
       <meta charset="utf-8">
       <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; }
-        .header { background: linear-gradient(135deg, #b8956c 0%, #8b7355 100%); color: white; padding: 30px; text-align: center; }
+        .header { background: linear-gradient(135deg, #124A66 0%, #0d3a52 100%); color: white; padding: 30px; text-align: center; }
+        .header img { max-width: 180px; margin-bottom: 10px; }
         .header h1 { margin: 0; font-size: 24px; }
         .content { padding: 30px; background: #f9f9f9; }
         .stats-grid { display: flex; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; }
         .stat-card { background: white; padding: 20px; border-radius: 8px; flex: 1; min-width: 150px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .stat-number { font-size: 32px; font-weight: bold; color: #b8956c; }
+        .stat-number { font-size: 32px; font-weight: bold; color: #124A66; }
         .stat-label { font-size: 14px; color: #666; }
         .quotes-table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         .quotes-table th { background: #f3f4f6; padding: 12px 8px; text-align: left; font-size: 13px; color: #374151; border-bottom: 2px solid #e5e7eb; }
@@ -126,6 +127,7 @@ function generateEmailHtml(
     </head>
     <body>
       <div class="header">
+        <img src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/logo-rmsb.png?v=1" alt="Rénover Ma Salle de Bain" />
         <h1>🛁 ${periodTitle}</h1>
         <p style="margin:10px 0 0 0;opacity:0.9;">Demandes de devis ${periodLabel}</p>
       </div>

@@ -486,7 +486,8 @@ const handler = async (req: Request): Promise<Response> => {
             <style>
               body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; }
               .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-              .header { text-align: center; padding: 20px 0; border-bottom: 2px solid #d4a574; }
+              .header { text-align: center; padding: 20px 0; border-bottom: 2px solid #124A66; }
+              .header img { max-width: 180px; margin-bottom: 10px; }
               .content { padding: 30px 0; }
               .footer { padding-top: 20px; border-top: 1px solid #eee; font-size: 14px; color: #666; }
               .highlight { background-color: #f8f5f0; padding: 15px; border-radius: 8px; margin: 20px 0; }
@@ -495,7 +496,8 @@ const handler = async (req: Request): Promise<Response> => {
           <body>
             <div class="container">
               <div class="header">
-                <h1 style="color: #1a1a1a; margin: 0;">QualiRénovation</h1>
+                <img src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/logo-rmsb.png?v=1" alt="Rénover Ma Salle de Bain" />
+                <h1 style="color: #124A66; margin: 0;">QualiRénovation</h1>
                 <p style="color: #666; margin: 5px 0 0;">by QualiConcept</p>
               </div>
               <div class="content">
