@@ -1,9 +1,15 @@
 import { Layout } from "@/components/layout/Layout";
+import { OGTags } from "@/components/seo/OGTags";
 import micLogo from "@/assets/logos/mic-insurance.jpg";
 
 export default function MentionsLegales() {
   return (
     <Layout>
+      <OGTags
+        title="Mentions légales"
+        description="Mentions légales de renovermasalledebain.com – Qualiconcept SARL. Informations sur l'éditeur, l'hébergeur et les conditions d'utilisation."
+        path="/mentions-legales"
+      />
       <div className="container-custom section-padding">
         <div className="max-w-4xl mx-auto">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-primary mb-8">

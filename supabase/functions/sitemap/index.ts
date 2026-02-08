@@ -1,23 +1,24 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 
+// URL canonique du site (domaine final)
 const BASE_URL = "https://renovermasalledebain.com";
 
-// Liste des pages statiques
+// Liste des pages statiques à indexer
 const staticPages = [
   { url: "/", priority: "1.0", changefreq: "weekly" },
-  { url: "/a-propos", priority: "0.8", changefreq: "monthly" },
-  { url: "/pourquoi-nous", priority: "0.8", changefreq: "monthly" },
   { url: "/realisations", priority: "0.9", changefreq: "weekly" },
+  { url: "/devis", priority: "0.9", changefreq: "monthly" },
+  { url: "/guide-travaux", priority: "0.8", changefreq: "monthly" },
+  { url: "/degats-eaux", priority: "0.8", changefreq: "monthly" },
+  { url: "/pourquoi-nous", priority: "0.8", changefreq: "monthly" },
+  { url: "/a-propos", priority: "0.7", changefreq: "monthly" },
+  { url: "/faq", priority: "0.7", changefreq: "monthly" },
+  { url: "/avis", priority: "0.7", changefreq: "weekly" },
+  { url: "/videos-conseils", priority: "0.7", changefreq: "monthly" },
   { url: "/presse", priority: "0.6", changefreq: "monthly" },
   { url: "/partenaires", priority: "0.6", changefreq: "monthly" },
+  { url: "/devenir-partenaire", priority: "0.5", changefreq: "monthly" },
   { url: "/partenaires/contact", priority: "0.5", changefreq: "monthly" },
-  { url: "/devenir-partenaire", priority: "0.7", changefreq: "monthly" },
-  { url: "/avis", priority: "0.7", changefreq: "weekly" },
-  { url: "/devis", priority: "0.9", changefreq: "monthly" },
-  { url: "/faq", priority: "0.7", changefreq: "monthly" },
-  { url: "/guide-travaux", priority: "0.8", changefreq: "monthly" },
-  { url: "/videos-conseils", priority: "0.7", changefreq: "monthly" },
-  { url: "/degats-eaux", priority: "0.8", changefreq: "monthly" },
   { url: "/photographe", priority: "0.5", changefreq: "monthly" },
   { url: "/mentions-legales", priority: "0.3", changefreq: "yearly" },
   { url: "/politique-confidentialite", priority: "0.3", changefreq: "yearly" },

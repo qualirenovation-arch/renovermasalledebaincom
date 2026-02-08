@@ -24,6 +24,8 @@ interface OGTagsProps {
   };
   // Pour les albums, on peut aussi passer une image de couverture directe
   coverImage?: string;
+  // Pour les pages qui ne doivent pas être indexées (confirmation, admin, etc.)
+  noindex?: boolean;
 }
 
 export function OGTags({ 
@@ -32,7 +34,8 @@ export function OGTags({
   path, 
   type = "website",
   image,
-  coverImage
+  coverImage,
+  noindex = false
 }: OGTagsProps) {
   const canonicalUrl = `${OG_BASE_URL}${path}`;
   const formattedTitle = getOgTitle(title);
@@ -71,6 +74,13 @@ export function OGTags({
       <title>{formattedTitle}</title>
       <meta name="description" content={truncatedDescription} />
       <link rel="canonical" href={canonicalUrl} />
+      
+      {/* Robots directive */}
+      {noindex ? (
+        <meta name="robots" content="noindex, nofollow" />
+      ) : (
+        <meta name="robots" content="index, follow" />
+      )}
       
       {/* Open Graph */}
       <meta property="og:type" content={type} />

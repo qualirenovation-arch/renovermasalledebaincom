@@ -1,6 +1,8 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /og-preview
+Disallow: /visuels-houzz
 
 # Sitemap
-Sitemap: https://renovermasalledebaincom.lovable.app/functions/v1/sitemap
+Sitemap: https://renovermasalledebain.com/sitemap.xml

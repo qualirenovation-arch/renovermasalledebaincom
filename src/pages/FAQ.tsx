@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
+import { OGTags } from "@/components/seo/OGTags";
 import { ArrowRight, Plus, Minus, Play, Instagram } from "lucide-react";
 import { useState } from "react";
 
@@ -347,6 +348,12 @@ export default function FAQ() {
 
   return (
     <Layout>
+      <OGTags
+        title="Questions fréquentes – FAQ"
+        description="Réponses à vos questions sur la rénovation de salle de bain : durée des travaux, budget, matériaux, garanties. Tout ce qu'il faut savoir avant de rénover."
+        path="/faq"
+        image={{ type: "page", title: "Questions fréquentes", subtitle: "FAQ" }}
+      />
       {/* JSON-LD Schema */}
       <script
         type="application/ld+json"

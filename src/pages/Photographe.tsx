@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
+import { OGTags } from "@/components/seo/OGTags";
 import { Camera, Phone, Globe, MapPin, Star, ArrowRight, ExternalLink, Award, Building, Home, Eye } from "lucide-react";
 import stephaneVasco from "@/assets/stephane-vasco.png";
 
@@ -31,6 +32,12 @@ const specialties = [
 export default function Photographe() {
   return (
     <Layout>
+      <OGTags
+        title="Stéphane Vasco – Notre photographe partenaire"
+        description="Stéphane Vasco, photographe professionnel partenaire de renovermasalledebain.com. Photographie d'architecture, immobilier et visites virtuelles Matterport."
+        path="/photographe"
+        image={{ type: "page", title: "Notre photographe", subtitle: "Stéphane Vasco" }}
+      />
       {/* Hero */}
       <section className="relative py-24 md:py-32">
         <div className="absolute inset-0 bg-stone" />

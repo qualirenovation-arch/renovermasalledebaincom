@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
+import { OGTags } from "@/components/seo/OGTags";
 import { motion } from "framer-motion";
 import { Instagram } from "lucide-react";
 import { PartnerCTA } from "@/components/home/PartnerCTA";
@@ -263,6 +264,12 @@ const professionalPartners: PartnerCategory = {
 export default function Partenaires() {
   return (
     <Layout>
+      <OGTags
+        title="Nos partenaires – Marques et fournisseurs"
+        description="Découvrez les marques et fournisseurs de confiance avec lesquels nous travaillons pour vos rénovations de salle de bain : Grohe, Geberit, Schlüter, Wedi..."
+        path="/partenaires"
+        image={{ type: "page", title: "Nos partenaires", subtitle: "Marques de confiance" }}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-stone to-background py-16 md:py-24">
         <div className="container-custom">

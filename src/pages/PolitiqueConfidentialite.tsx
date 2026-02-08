@@ -1,9 +1,15 @@
 import { Layout } from "@/components/layout/Layout";
+import { OGTags } from "@/components/seo/OGTags";
 import { Link } from "react-router-dom";
 
 export default function PolitiqueConfidentialite() {
   return (
     <Layout>
+      <OGTags
+        title="Politique de confidentialité"
+        description="Politique de confidentialité de renovermasalledebain.com. Découvrez comment nous collectons, utilisons et protégeons vos données conformément au RGPD."
+        path="/politique-confidentialite"
+      />
       <div className="container-custom section-padding">
         <div className="max-w-4xl mx-auto">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-primary mb-8">

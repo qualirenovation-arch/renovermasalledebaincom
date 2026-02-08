@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
+import { OGTags } from "@/components/seo/OGTags";
 import { motion, AnimatePresence } from "framer-motion";
 import { PartnerTypeCard } from "@/components/partners/PartnerTypeCard";
 import { SubcontractorForm } from "@/components/partners/SubcontractorForm";
@@ -36,6 +37,12 @@ export default function PartenairesContact() {
 
   return (
     <Layout>
+      <OGTags
+        title="Devenir partenaire – Formulaire de contact"
+        description="Rejoignez le réseau RMSB : sous-traitants, installateurs, marques et fournisseurs. Développez votre activité avec des projets de rénovation de qualité."
+        path="/partenaires/contact"
+        image={{ type: "page", title: "Devenir partenaire", subtitle: "Rejoignez notre réseau" }}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-stone to-background py-16 md:py-24">
         <div className="container-custom">
