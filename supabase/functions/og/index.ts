@@ -135,9 +135,69 @@ function generatePageOG(title: string, subtitle?: string): string {
 </svg>`;
 }
 
-function generateAlbumOG(title: string, location: string, style?: string, tag1?: string, tag2?: string): string {
-  const displayTitle = truncateText(title, 45);
-  const displayLocation = truncateText(location, 40);
+function generateAlbumOG(title: string, location: string, style?: string, tag1?: string, tag2?: string, cover?: string): string {
+  const displayTitle = truncateText(title, 40);
+  const displayLocation = truncateText(location, 35);
+  
+  // Si une image de couverture est fournie, utiliser le nouveau design
+  if (cover) {
+    return `
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="overlayGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:${COLORS.blueDark};stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:${COLORS.blueDark};stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:${COLORS.blueDark};stop-opacity:0.85" />
+    </linearGradient>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:${COLORS.goldPrimary};stop-opacity:1" />
+      <stop offset="100%" style="stop-color:${COLORS.goldLight};stop-opacity:1" />
+    </linearGradient>
+    <clipPath id="imageClip">
+      <rect width="1200" height="630" rx="0"/>
+    </clipPath>
+  </defs>
+  
+  <!-- Image de fond -->
+  <image 
+    xlink:href="${escapeXml(cover)}" 
+    x="0" y="0" 
+    width="1200" height="630" 
+    preserveAspectRatio="xMidYMid slice"
+    clip-path="url(#imageClip)"
+  />
+  
+  <!-- Overlay gradient -->
+  <rect width="1200" height="630" fill="url(#overlayGradient)"/>
+  
+  <!-- Bande dorée en haut -->
+  <rect x="0" y="0" width="1200" height="6" fill="url(#goldGradient)"/>
+  
+  <!-- Logo RMSB en haut à gauche -->
+  <text x="60" y="70" font-family="Georgia, serif" font-size="42" font-weight="bold" fill="${COLORS.white}" letter-spacing="-1">RMSB</text>
+  <text x="60" y="100" font-family="Georgia, serif" font-size="14" font-style="italic" fill="${COLORS.goldLight}">Un chantier heureux</text>
+  
+  <!-- Badge Avant/Après en haut à droite -->
+  <rect x="980" y="40" width="170" height="40" rx="20" fill="${COLORS.goldPrimary}"/>
+  <text x="1065" y="67" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="${COLORS.white}" text-anchor="middle">AVANT / APRÈS</text>
+  
+  <!-- Contenu en bas -->
+  <!-- Location -->
+  <text x="60" y="480" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="${COLORS.goldLight}" font-weight="bold">${escapeXml(displayLocation)}</text>
+  
+  <!-- Titre du projet -->
+  <text x="60" y="530" font-family="Georgia, serif" font-size="38" font-weight="bold" fill="${COLORS.white}">${escapeXml(displayTitle)}</text>
+  
+  <!-- CTA Devis -->
+  <rect x="60" y="560" width="320" height="50" rx="25" fill="${COLORS.goldPrimary}"/>
+  <text x="220" y="593" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="${COLORS.white}" text-anchor="middle">Demandez votre devis gratuit →</text>
+  
+  <!-- URL du site -->
+  <text x="1140" y="600" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="${COLORS.white}" text-anchor="end" opacity="0.8">renovermasalledebain.com</text>
+</svg>`;
+  }
+  
+  // Design original sans image de couverture
   const tags = [style, tag1, tag2].filter(Boolean).slice(0, 3);
   
   return `
@@ -204,9 +264,9 @@ function generateAlbumOG(title: string, location: string, style?: string, tag1?:
     `).join("")}
   </g>` : ""}
   
-  <!-- CTA -->
-  <rect x="620" y="450" width="360" height="60" rx="30" fill="${COLORS.bluePrimary}"/>
-  <text x="800" y="490" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="${COLORS.white}" text-anchor="middle">Voir la réalisation →</text>
+  <!-- CTA Devis -->
+  <rect x="620" y="450" width="360" height="60" rx="30" fill="${COLORS.goldPrimary}"/>
+  <text x="800" y="490" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="${COLORS.white}" text-anchor="middle">Demandez votre devis gratuit →</text>
   
   <!-- Mention premium -->
   <text x="800" y="570" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="${COLORS.grayText}" text-anchor="middle">Rénovation premium • Paris &amp; IDF</text>
@@ -228,6 +288,7 @@ serve(async (req) => {
     const style = url.searchParams.get("style") || "";
     const tag1 = url.searchParams.get("tag1") || "";
     const tag2 = url.searchParams.get("tag2") || "";
+    const cover = url.searchParams.get("cover") || "";
 
     let svg: string;
 
@@ -236,7 +297,7 @@ serve(async (req) => {
         svg = generatePageOG(title, subtitle);
         break;
       case "album":
-        svg = generateAlbumOG(title, location, style, tag1, tag2);
+        svg = generateAlbumOG(title, location, style, tag1, tag2, cover);
         break;
       default:
         svg = generateDefaultOG();

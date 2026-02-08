@@ -22,17 +22,19 @@ interface FormData {
   style: string;
   tag1: string;
   tag2: string;
+  cover: string;
 }
 
 export default function OGPreview() {
   const [formData, setFormData] = useState<FormData>({
     type: "default",
-    title: "Nos réalisations",
+    title: "Salle de bain Paris 3ème",
     subtitle: "Paris & Île-de-France",
     location: "Paris 3ème",
     style: "Noir & Blanc",
     tag1: "Zellige",
     tag2: "Marbre",
+    cover: "",
   });
 
   const [copied, setCopied] = useState(false);
@@ -51,6 +53,7 @@ export default function OGPreview() {
         if (formData.style) params.set("style", formData.style);
         if (formData.tag1) params.set("tag1", formData.tag1);
         if (formData.tag2) params.set("tag2", formData.tag2);
+        if (formData.cover) params.set("cover", formData.cover);
       }
     }
 
@@ -183,6 +186,21 @@ export default function OGPreview() {
                         }
                         placeholder="Marbre"
                       />
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="cover">URL de la couverture (optionnel)</Label>
+                      <Input
+                        id="cover"
+                        value={formData.cover}
+                        onChange={(e) =>
+                          setFormData({ ...formData, cover: e.target.value })
+                        }
+                        placeholder="https://renovermasalledebain.com/images/album.jpg"
+                      />
+                      <p className="text-xs text-muted-foreground">
+                        Si renseignée, l'image sera utilisée en fond avec overlay
+                      </p>
                     </div>
                   </>
                 )}
