@@ -5,7 +5,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ChevronLeft, ChevronRight, X, ArrowRight } from "lucide-react";
 import { OGTags } from "@/components/seo/OGTags";
-import { getOgImageUrl, getAlbumOgData } from "@/lib/og";
+import { getOgImageUrl, getAlbumOgData, getAbsoluteImageUrl } from "@/lib/og";
 import { albums, getAlbumBySlug, Album, Photo } from "@/data/albumsData";
 import { getRedirectSlug } from "@/data/redirects";
 
@@ -87,8 +87,9 @@ const ProjetDetail = () => {
     category: album.category
   });
 
-  // Get cover image URL (first photo of the album)
+  // Get cover image URL (first photo of the album) and convert to absolute URL
   const coverImageUrl = album.photos[0]?.image || "";
+  const absoluteCoverImageUrl = getAbsoluteImageUrl(coverImageUrl);
 
   // Generate dynamic OG image URL using the edge function with cover
   const ogImageUrl = getOgImageUrl("album", {
@@ -97,7 +98,7 @@ const ProjetDetail = () => {
     style: ogData.style,
     tag1: ogData.tag1,
     tag2: ogData.tag2,
-    cover: coverImageUrl
+    cover: absoluteCoverImageUrl
   });
 
   // Short description for OG
