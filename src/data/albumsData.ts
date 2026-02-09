@@ -310,6 +310,7 @@ import amiralRoussinAvant2 from "@/assets/amiral-roussin-avant-2.jpg";
 import amiralRoussinAvant3 from "@/assets/amiral-roussin-avant-3.jpg";
 
 // Saint-Charles Paris 15ème
+import saintCharlesLeroyMerlin from "@/assets/saint-charles-leroy-merlin.jpg";
 import saintCharlesApres1 from "@/assets/projects/saint-charles/apres-baignoire-balneo.jpg";
 import saintCharlesApres2 from "@/assets/projects/saint-charles/apres-baignoire-2.jpg";
 import saintCharlesApres3 from "@/assets/projects/saint-charles/apres-baignoire-3.jpg";
@@ -2032,6 +2033,7 @@ Une rénovation pensée pour allier design contemporain, praticité et éléganc
       { id: 8, image: saintCharlesAvant1, title: "Avant — Vasque et lave-linge", description: "Ancienne configuration avec miroir galets" },
       { id: 9, image: saintCharlesAvant2, title: "Avant — Vue générale", description: "Carrelage marron et équipements datés" },
       { id: 10, image: saintCharlesAvant3, title: "Avant — Baignoire", description: "Ancienne baignoire avec pare-douche rayé" },
+      { id: 11, image: saintCharlesLeroyMerlin, title: "Visuel Leroy Merlin — Produits utilisés", description: "Carrelage effet bois blanc Cabane, métro blanc Artens et meuble vasque simple — produits accessibles pour un résultat haut de gamme" },
     ],
     review: {
       text: "Qualirenovation a rénové entièrement notre appartement pendant la période COVID. Le projet comprenait l'électricité, la plomberie, des cloisons, peintures, placards, une cuisine, la pose d'un parquet. Malgré les multiples confinements et les difficultés d'approvisionnement en matériel toute l'équipe a fait preuve d'une grande réactivité et d'un grand professionnalisme. Qualirenovation a mené ce chantier difficile jusqu'au bout pour satisfaire nos attentes. Plusieurs mois après la fin des travaux, Qualirenovation est venu reprendre sous garantie les conséquences d'un dégât des eaux s'étend produit dans l'appartement au dessus de chez nous. Un service et un accompagnement client exceptionnel donc. Nous avons été pleinement satisfaits de la prestation.",
