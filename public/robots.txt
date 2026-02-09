@@ -5,4 +5,4 @@ Disallow: /og-preview
 Disallow: /visuels-houzz
 
 # Sitemap
-Sitemap: https://wacqnrxbszvznfqiiuxm.supabase.co/functions/v1/sitemap
+Sitemap: https://renovermasalledebain.com/sitemap.xml
