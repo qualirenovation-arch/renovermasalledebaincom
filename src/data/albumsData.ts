@@ -524,6 +524,7 @@ import soisySdb3 from "@/assets/soisy-sdb-3.jpg";
 import soisySdb4 from "@/assets/soisy-sdb-4.jpg";
 import soisySdb5 from "@/assets/soisy-sdb-5.jpg";
 import soisySdbAvant from "@/assets/soisy-sdb-avant.jpg";
+import soisyParentVisuel from "@/assets/soisy-parent-1er-visuel.jpg";
 import soisySdbAvant2 from "@/assets/soisy-sdb-avant-2.jpg";
 import soisySdbAvant3 from "@/assets/soisy-sdb-avant-3.jpg";
 import soisyEnfants1 from "@/assets/soisy-enfants-1.jpg";
@@ -1889,6 +1890,7 @@ Ce projet illustre parfaitement notre approche : un chantier heureux, fondé sur
       { id: 6, image: soisySdbAvant, title: "Avant — Combles bruts", description: "Espace avant transformation" },
       { id: 7, image: soisySdbAvant2, title: "Avant — Murs bruts", description: "Préparation des surfaces" },
       { id: 8, image: soisySdbAvant3, title: "Avant — Vue générale", description: "Combles à aménager" },
+      { id: 9, image: soisyParentVisuel, title: "Après — Vasque et douche zellige", description: "Meuble vasque bleu, vasque à poser, miroir rétroéclairé et douche en zellige chevron bleu avec niches et robinetterie noire" },
     ],
     finitionSol: "marbre",
     finitionMur: "marbre",
