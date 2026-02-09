@@ -166,6 +166,18 @@ import nicolasRoret3d2 from "@/assets/nicolas-roret-3d-2.jpg";
 import nicolasRoretAvant1 from "@/assets/nicolas-roret-avant-1.jpg";
 import nicolasRoretTravaux1 from "@/assets/nicolas-roret-travaux-1.jpg";
 
+// Dunois Paris 13ème
+import dunois1 from "@/assets/dunois-1.jpg";
+import dunois2 from "@/assets/dunois-2.jpg";
+import dunois3 from "@/assets/dunois-3.jpg";
+import dunois4 from "@/assets/dunois-4.jpg";
+import dunois5 from "@/assets/dunois-5.jpg";
+import dunois6 from "@/assets/dunois-6.jpg";
+import dunoisAvant1 from "@/assets/dunois-avant-1.jpg";
+import dunoisAvant2 from "@/assets/dunois-avant-2.jpg";
+import dunoisAvant3 from "@/assets/dunois-avant-3.jpg";
+import dunoisAvant4 from "@/assets/dunois-avant-4.jpg";
+
 // Paris 3ème Temple
 import temple1 from "@/assets/temple-1.jpg";
 import temple2 from "@/assets/temple-2.jpg";
@@ -641,7 +653,8 @@ export type FinitionType =
   | "gres-cerame-motif"
   | "hexagonal"
   | "metro-allonge"
-  | "mosaique";
+  | "mosaique"
+  | "carreaux-de-ciment";
 
 export interface Album {
   id: string;
@@ -1243,6 +1256,28 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     ],
     finitionSol: "marbre",
     finitionMur: "zellige",
+  },
+  {
+    id: "dunois",
+    slug: "salle-de-bain-paris-13-transformation-baignoire-douche-carreaux-ciment-bleu",
+    title: "Rénovation salle de bain Paris 13ème — Transformation baignoire en douche italienne, carreaux de ciment bleu",
+    location: "Paris 13ème - Rue Dunois",
+    description: "AVANT : Salle de bain datée avec baignoire encastrée, carrelage beige uniforme, meuble vasque basique et tuyauteries apparentes. APRÈS : Transformation complète avec remplacement de la baignoire par une douche italienne en faïence bleu ciel. Crédence et sol en carreaux de ciment aux motifs traditionnels bleu et blanc, meuble vasque bois naturel avec vasque à poser rectangulaire, miroir arrondi et robinetterie chromée moderne. Niche encastrée dans la douche pour un rangement pratique et épuré.\n\nCe projet illustre parfaitement notre approche : un chantier heureux, fondé sur l'anticipation, la coordination des travaux et la sérénité du client.",
+    coverImage: dunois2,
+    photos: [
+      { id: 1, image: dunois1, title: "Après — Vasque et miroir", description: "Meuble bois, vasque à poser et crédence carreaux de ciment" },
+      { id: 2, image: dunois2, title: "Après — Vue d'ensemble vasque", description: "Miroir arrondi et carreaux de ciment bleu" },
+      { id: 3, image: dunois3, title: "Après — Colonne de douche", description: "Robinetterie blanche sur carreaux de ciment et faïence bleue" },
+      { id: 4, image: dunois4, title: "Après — Niche douche", description: "Niche encastrée en faïence bleu ciel" },
+      { id: 5, image: dunois5, title: "Après — Détail crédence", description: "Carreaux de ciment bleu et blanc, robinetterie chromée" },
+      { id: 6, image: dunois6, title: "Après — Douche italienne", description: "Faïence bleu ciel avec paroi vitrée coulissante" },
+      { id: 7, image: dunoisAvant1, title: "Avant — Vue générale", description: "Baignoire et meuble vasque datés, tuyauteries apparentes" },
+      { id: 8, image: dunoisAvant2, title: "Avant — Baignoire", description: "Baignoire encastrée et carrelage beige" },
+      { id: 9, image: dunoisAvant3, title: "Avant — Sèche-serviettes", description: "Mur carrelé beige avec sèche-serviettes" },
+      { id: 10, image: dunoisAvant4, title: "Avant — Détail vasque", description: "Meuble vasque basique et accessoires" },
+    ],
+    finitionSol: "carreaux-de-ciment",
+    finitionMur: "carreaux-de-ciment",
   },
   // ========== 📍 PARIS 15ÈME ==========
   {
