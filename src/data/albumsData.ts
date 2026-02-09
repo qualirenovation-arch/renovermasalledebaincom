@@ -1292,6 +1292,11 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     ],
     finitionSol: "beton",
     finitionMur: "beton",
+    review: {
+      text: "J'ai fait appel à cette entreprise pour la rénovation complète de ma salle de bain, WC et d'un dégagement, et je suis extrêmement satisfait du résultat. Le devis était clair, détaillé et très compétitif. Carina a pris en main l'ensemble des travaux et de la logistique avec beaucoup de professionnalisme. Elle m'a accompagné tout au long du chantier avec une communication fluide et transparente, en trouvant à chaque étape des solutions adaptées, ce qui a été particulièrement appréciable étant donné mon emploi du temps très chargé. Le chantier s'est déroulé sereinement, sans mauvaise surprise, et le résultat final est à la hauteur de mes attentes. Je ne peux donc que recommander vivement cette entreprise.",
+      author: "Client vérifié",
+      link: "https://www.houzz.fr/viewReview/2157142/qualirenovation-by-qualiconcept-review"
+    },
   },
   // ========== 📍 PARIS 16ÈME ==========
   {
