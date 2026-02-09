@@ -173,6 +173,9 @@ import dunois3 from "@/assets/dunois-3.jpg";
 import dunois4 from "@/assets/dunois-4.jpg";
 import dunois5 from "@/assets/dunois-5.jpg";
 import dunois6 from "@/assets/dunois-6.jpg";
+import dunois7 from "@/assets/dunois-7.jpg";
+import dunois8 from "@/assets/dunois-8.jpg";
+import dunois9 from "@/assets/dunois-9.jpg";
 import dunoisAvant1 from "@/assets/dunois-avant-1.jpg";
 import dunoisAvant2 from "@/assets/dunois-avant-2.jpg";
 import dunoisAvant3 from "@/assets/dunois-avant-3.jpg";
@@ -1272,10 +1275,13 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 4, image: dunois4, title: "Après — Niche douche", description: "Niche encastrée en faïence bleu ciel" },
       { id: 5, image: dunois5, title: "Après — Détail crédence", description: "Carreaux de ciment bleu et blanc, robinetterie chromée" },
       { id: 6, image: dunois6, title: "Après — Douche italienne", description: "Faïence bleu ciel avec paroi vitrée coulissante" },
-      { id: 7, image: dunoisAvant1, title: "Avant — Vue générale", description: "Baignoire et meuble vasque datés, tuyauteries apparentes" },
-      { id: 8, image: dunoisAvant2, title: "Avant — Baignoire", description: "Baignoire encastrée et carrelage beige" },
-      { id: 9, image: dunoisAvant3, title: "Avant — Sèche-serviettes", description: "Mur carrelé beige avec sèche-serviettes" },
-      { id: 10, image: dunoisAvant4, title: "Avant — Détail vasque", description: "Meuble vasque basique et accessoires" },
+      { id: 7, image: dunois7, title: "Après — Meuble vasque XXL gros plan", description: "Vasque à poser rectangulaire XXL sur meuble bois, crédence carreaux de ciment" },
+      { id: 8, image: dunois8, title: "Après — Vue vasque et douche", description: "Meuble vasque agrandi et douche italienne, sèche-serviettes blanc" },
+      { id: 9, image: dunois9, title: "Après — Meuble vasque XXL et miroir", description: "Vue d'angle du meuble vasque XXL avec miroir arrondi et sèche-serviettes" },
+      { id: 10, image: dunoisAvant1, title: "Avant — Vue générale", description: "Baignoire et lave-main, tuyauteries apparentes" },
+      { id: 11, image: dunoisAvant2, title: "Avant — Baignoire", description: "Baignoire encastrée et carrelage beige" },
+      { id: 12, image: dunoisAvant3, title: "Avant — Sèche-serviettes", description: "Mur carrelé beige avec sèche-serviettes" },
+      { id: 13, image: dunoisAvant4, title: "Avant — Détail lave-main", description: "Petit lave-main basique et accessoires" },
     ],
     finitionSol: "carreaux-de-ciment",
     finitionMur: "carreaux-de-ciment",
