@@ -15,7 +15,8 @@ export type FinitionType =
   | "gres-cerame-motif"
   | "hexagonal"
   | "metro-allonge"
-  | "mosaique";
+  | "mosaique"
+  | "carreaux-de-ciment";
 
 export const FINITION_TYPES: readonly { id: FinitionType; label: string; seoLabel: string }[] = [
   { id: "zellige", label: "Zellige", seoLabel: "zellige" },
@@ -28,6 +29,7 @@ export const FINITION_TYPES: readonly { id: FinitionType; label: string; seoLabe
   { id: "hexagonal", label: "Hexagonal", seoLabel: "carrelage hexagonal" },
   { id: "metro-allonge", label: "Métro & formats allongés", seoLabel: "carrelage métro et formats allongés" },
   { id: "mosaique", label: "Mosaïque", seoLabel: "mosaïque" },
+  { id: "carreaux-de-ciment", label: "Carreaux de ciment", seoLabel: "carreaux de ciment" },
 ] as const;
 
 interface FinitionsFilterProps {

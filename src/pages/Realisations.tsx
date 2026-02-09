@@ -44,6 +44,7 @@ export default function Realisations() {
       "hexagonal": 0,
       "metro-allonge": 0,
       "mosaique": 0,
+      "carreaux-de-ciment": 0,
     };
     
     completedAlbums.forEach(album => {
