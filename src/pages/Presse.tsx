@@ -171,7 +171,7 @@ const parutions_presse: ParutionPresse[] = [
     date_publication: "2026-02-01",
     media: "Houzz",
     titre_article: "Lauréat Best of Houzz 2026 – Photo",
-    extrait_seo: "QualiRénovation by QualiConcept remporte le prix Best of Houzz 2026 – Photo, en partenariat avec Houzz Pro. Cette distinction récompense les réalisations les plus populaires et inspirantes parmi plus de 3 millions de professionnels dans le monde.",
+    extrait_seo: "Merci à nos clients pour leur confiance, leur bonne humeur et cette énergie positive qui nous pousse, projet après projet, à viser l'excellence. Et bien sûr, merci à Stéphane Vasco, notre partenaire photographe, qui immortalise notre savoir-faire depuis plus de dix ans et met en lumière l'engagement ainsi que les nombreuses heures de travail nécessaires pour aboutir à ces réalisations. Au final, c'est avant tout une aventure humaine. Un grand merci également à Noah, notre community manager, qui gère nos réseaux sociaux depuis maintenant deux ans et réalise, en collaboration avec Stéphane, un travail quotidien remarquable pour développer notre image. À travers la diffusion de nos réalisations et de conseils techniques, ils vous accompagnent dans vos projets avec un contenu que nous espérons inspirant. Rejoignez-nous sur nos réseaux sociaux pour découvrir l'envers du décor, participer à nos réceptions de chantier et suivre nos conseils techniques. Vous ne regarderez plus la rénovation de la même façon.",
     url_article: "https://www.houzz.fr/best-of-houzz",
     type: "article",
     image: houzzBestOf2026Photo,
