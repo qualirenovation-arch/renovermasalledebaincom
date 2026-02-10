@@ -13,6 +13,7 @@ import presseElleWc from "@/assets/presse-elle-wc-suspendus.jpg";
 import presseMarieClaireApres from "@/assets/presse-marie-claire-1.jpg";
 import presseMarieClaireAdresses from "@/assets/presse-marie-claire-auteuil.png";
 import presseHouzzSoisy from "@/assets/presse-houzz-soisy.png";
+import houzzBestOf2026Photo from "@/assets/logos/houzz-best-of-2026-photo-award.png";
 import presseHouzzBois from "@/assets/presse-houzz-bois.jpg";
 import presse18h39Joints from "@/assets/guide-joint-noir.webp";
 import presseElleSoisy from "@/assets/presse-elle-soisy.jpg";
@@ -173,7 +174,7 @@ const parutions_presse: ParutionPresse[] = [
     extrait_seo: "QualiRénovation by QualiConcept remporte le prix Best of Houzz 2026 – Photo, en partenariat avec Houzz Pro. Cette distinction récompense les réalisations les plus populaires et inspirantes parmi plus de 3 millions de professionnels dans le monde.",
     url_article: "https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept",
     type: "article",
-    image: carinaNahmani,
+    image: houzzBestOf2026Photo,
     journalist: "Houzz",
     pinnedOrder: 2,
   },
