@@ -518,11 +518,11 @@ export default function Presse() {
               >
                 {/* Image */}
                 {article.image && (
-                  <div className="aspect-[16/10] overflow-hidden relative">
+                  <div className={`aspect-[16/10] overflow-hidden relative ${article.id === 'houzz-best-of-2026-photo' ? 'bg-[#0a1a0a]' : ''}`}>
                     <img 
                       src={article.image} 
                       alt={article.titre_article}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${article.id === 'houzz-best-of-2026-photo' ? 'object-contain' : 'object-cover'}`}
                       loading="lazy"
                     />
                     {/* Badge "À la une" pour articles épinglés */}
