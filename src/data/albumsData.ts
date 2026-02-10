@@ -1819,7 +1819,7 @@ Ce projet illustre parfaitement notre approche : un chantier heureux, fondé sur
   // ========== 📍 VITRY-SUR-SEINE (94) ==========
   {
     id: "vitry",
-    slug: "salle-de-bain-vitry-94-renovation-avant-apres",
+    slug: "salle-de-bain-vitry-94-renovation-complete-avant-apres",
     title: "Rénovation Avant/Après",
     location: "Vitry-sur-Seine (94)",
     description: "AVANT : Salle de bain très dégradée avec moisissures, carrelage abîmé et équipements vétustes. APRÈS : Transformation complète avec douche à l'italienne, carrelage grand format, robinetterie contemporaine et meuble vasque design.",
