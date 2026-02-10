@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import RMSBLogo from "@/components/brand/RMSBLogo";
+import houzzBestOf2026Photo from "@/assets/logos/houzz-best-of-2026-photo-award.png";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
@@ -117,7 +117,7 @@ export default function Index() {
                 </Link>
               </Button>
               <div className="mt-8">
-                <RMSBLogo size="sm" variant="dark" showTagline={true} />
+                <img src={houzzBestOf2026Photo} alt="Lauréat Best of Houzz 2026 – Photo" className="h-16 md:h-20 mx-auto lg:mx-0" />
               </div>
             </ScrollAnimation>
             
