@@ -2002,7 +2002,7 @@ Une rénovation pensée pour allier design contemporain, praticité et éléganc
     review: {
       text: "Après un premier chantier réalisé avec Qualirénovation en 2018 qui m'avait apporté pleine satisfaction, j'ai de nouveau fait appel à Carina pour la rénovation d'un appartement de près de 60 m2. Les travaux à réaliser étaient assez importants : électricité, peinture, parquets, cuisine et salle de bain. Carina nous a accompagnés pendant tout le processus et le résultat est super. Son aide a été essentielle pour bien définir le projet, évaluer correctement le coût, suivre les travaux et gérer les finitions. Elle nous a par exemple très bien conseillés pour les choix concernant la cuisine, en associant des meubles à prix raisonnables avec un plan de travail haut de gamme, pour un rendu superbe. Dans une salle de bain très étroite, elle est parvenue à faire rentrer douche à l'italienne, un grand meuble vasque et un lave-linge, au centimètre près. Je recommande donc pleinement Qualirénovation et ferait appel à eux sans hésitation pour un nouveau projet !",
       author: "Matthieu G.",
-      link: "https://www.houzz.fr/viewReview/2197601/qualirenovation-by-qualiconcept-review"
+      link: "https://www.houzz.fr/viewReview/1890910/qualirenovation-by-qualiconcept-review"
     },
     ctaButton: {
       label: "Acheter les carrelages sur parquetcarrelage.com",
