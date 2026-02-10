@@ -166,6 +166,18 @@ const parutions_presse: ParutionPresse[] = [
     pinnedOrder: 1, // Article épinglé en première position
   },
   {
+    id: "houzz-best-of-2026-photo",
+    date_publication: "2026-02-01",
+    media: "Houzz",
+    titre_article: "Lauréat Best of Houzz 2026 – Photo",
+    extrait_seo: "QualiRénovation by QualiConcept remporte le prix Best of Houzz 2026 – Photo, en partenariat avec Houzz Pro. Cette distinction récompense les réalisations les plus populaires et inspirantes parmi plus de 3 millions de professionnels dans le monde.",
+    url_article: "https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept",
+    type: "article",
+    image: carinaNahmani,
+    journalist: "Houzz",
+    pinnedOrder: 2,
+  },
+  {
     id: "elle-wc-suspendus-2022",
     date_publication: "2022-06-01",
     media: "Elle Décoration",

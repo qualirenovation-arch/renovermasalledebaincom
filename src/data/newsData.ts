@@ -1,6 +1,15 @@
 // Actualités Presse - Données réelles depuis Presse.tsx
 export const presseNews = [
   {
+    id: "presse-best-of-houzz-2026",
+    title: "Lauréat Best of Houzz 2026 – Photo",
+    source: "Houzz",
+    date: "Février 2026",
+    journalist: "Houzz",
+    link: "/presse#parutions",
+    externalLink: "https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept",
+  },
+  {
     id: "presse-maitre-oeuvre",
     title: "Pourquoi faire appel à un maître d'œuvre ?",
     source: "Houzz",

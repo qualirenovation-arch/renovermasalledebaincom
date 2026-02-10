@@ -493,6 +493,62 @@ export default function About() {
         </div>
       </section>
 
+      {/* Best of Houzz 2026 */}
+      <section className="section-padding bg-stone">
+        <div className="container-custom">
+          <motion.div
+            className="max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="text-center mb-8">
+              <span className="inline-block px-4 py-2 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 text-sm font-medium mb-4">
+                🏆 Best of Houzz 2026
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
+                Lauréat Best of Houzz 2026 – Photo
+              </h2>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                En partenariat avec Houzz Pro, cette distinction récompense l'innovation et l'excellence des professionnels de la rénovation.
+              </p>
+            </div>
+
+            <div className="space-y-6 text-muted-foreground leading-relaxed">
+              <p>
+                <strong className="text-foreground">QualiRénovation by QualiConcept</strong>, maître d'œuvre et spécialiste de la rénovation intérieure à Paris et en Île-de-France, a remporté le prix <strong className="text-foreground">Best of Houzz 2026 – Photo</strong>, attribué par la communauté Houzz parmi plus de 3 millions de professionnels du secteur à travers le monde.
+              </p>
+              
+              <blockquote className="border-l-4 border-accent pl-6 py-2 italic text-foreground text-lg">
+                « Cette récompense est avant tout une victoire collective. »
+              </blockquote>
+
+              <p>
+                Nous remercions Houzz et toute la communauté pour cette reconnaissance. Une victoire n'est jamais individuelle : elle est le fruit d'un travail d'équipe. Merci à nos équipes, nos fournisseurs et nos partenaires qui partagent la même exigence et la même passion du métier.
+              </p>
+              <p>
+                Merci à nos clients pour leur confiance, leur bonne humeur et cette énergie positive qui nous pousse, projet après projet, à viser l'excellence.
+              </p>
+              <p>
+                Et bien sûr, merci à <strong className="text-foreground">Stéphane Vasco</strong>, notre partenaire photographe, qui immortalise notre savoir-faire depuis plus de dix ans et met en lumière l'engagement et les nombreuses heures de travail nécessaires pour aboutir à ces réalisations.
+              </p>
+              <p className="text-foreground font-medium italic">
+                Au final, c'est avant tout une aventure humaine.
+              </p>
+            </div>
+
+            <div className="mt-8 text-center">
+              <Button variant="outline" size="lg" asChild>
+                <a href="https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept" target="_blank" rel="noopener noreferrer">
+                  Découvrir nos réalisations sur Houzz
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="section-padding">
         <div className="container-custom text-center">
