@@ -180,6 +180,8 @@ import dunoisAvant1 from "@/assets/dunois-avant-1.jpg";
 import dunoisAvant2 from "@/assets/dunois-avant-2.jpg";
 import dunoisAvant3 from "@/assets/dunois-avant-3.jpg";
 import dunoisAvant4 from "@/assets/dunois-avant-4.jpg";
+import dunoisAvant5 from "/images/projects/dunois/avant-travaux-7.jpg";
+import dunoisAvant6 from "/images/projects/dunois/avant-travaux-9.jpg";
 
 // Paris 3ème Temple
 import temple1 from "@/assets/temple-1.jpg";
@@ -1284,6 +1286,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
       { id: 11, image: dunoisAvant2, title: "Avant — Baignoire", description: "Baignoire encastrée et carrelage beige" },
       { id: 12, image: dunoisAvant3, title: "Avant — Sèche-serviettes", description: "Mur carrelé beige avec sèche-serviettes" },
       { id: 13, image: dunoisAvant4, title: "Avant — Détail lave-main", description: "Petit lave-main basique et accessoires" },
+      { id: 14, image: dunoisAvant5, title: "Avant — Douche et porte", description: "Douche avec rideau, carrelage beige et porte d'entrée" },
+      { id: 15, image: dunoisAvant6, title: "Avant — Colonne de douche", description: "Colonne de douche, rideau et sèche-serviettes" },
     ],
     finitionSol: "carreaux-de-ciment",
     finitionMur: "carreaux-de-ciment",
