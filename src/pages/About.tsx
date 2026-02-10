@@ -12,6 +12,7 @@ import stephaneVasco from "@/assets/stephane-vasco.png";
 import thierryPelmard1 from "@/assets/thierry-pelmard-1.jpg";
 import thierryPelmard2 from "@/assets/thierry-pelmard-2.jpg";
 import carinaNahmani1 from "@/assets/carina-nahmani-1.jpg";
+import houzzBestOf2026Photo from "@/assets/logos/houzz-best-of-2026-photo-award.png";
 
 const values = [
   { icon: Award, title: "Excellence", description: "Nous visons la perfection dans chaque détail de nos réalisations" },
@@ -514,27 +515,37 @@ export default function About() {
               </p>
             </div>
 
-            <div className="space-y-6 text-muted-foreground leading-relaxed">
-              <p>
-                <strong className="text-foreground">QualiRénovation by QualiConcept</strong>, maître d'œuvre et spécialiste de la rénovation intérieure à Paris et en Île-de-France, a remporté le prix <strong className="text-foreground">Best of Houzz 2026 – Photo</strong>, attribué par la communauté Houzz parmi plus de 3 millions de professionnels du secteur à travers le monde.
-              </p>
-              
-              <blockquote className="border-l-4 border-accent pl-6 py-2 italic text-foreground text-lg">
-                « Cette récompense est avant tout une victoire collective. »
-              </blockquote>
+            <div className="grid md:grid-cols-[1fr_auto] gap-8 items-start">
+              <div className="space-y-6 text-muted-foreground leading-relaxed">
+                <p>
+                  <strong className="text-foreground">QualiRénovation by QualiConcept</strong>, maître d'œuvre et spécialiste de la rénovation intérieure à Paris et en Île-de-France, a remporté le prix <strong className="text-foreground">Best of Houzz 2026 – Photo</strong>, attribué par la communauté Houzz parmi plus de 3 millions de professionnels du secteur à travers le monde.
+                </p>
+                
+                <blockquote className="border-l-4 border-accent pl-6 py-2 italic text-foreground text-lg">
+                  « Cette récompense est avant tout une victoire collective. »
+                </blockquote>
 
-              <p>
-                Nous remercions Houzz et toute la communauté pour cette reconnaissance. Une victoire n'est jamais individuelle : elle est le fruit d'un travail d'équipe. Merci à nos équipes, nos fournisseurs et nos partenaires qui partagent la même exigence et la même passion du métier.
-              </p>
-              <p>
-                Merci à nos clients pour leur confiance, leur bonne humeur et cette énergie positive qui nous pousse, projet après projet, à viser l'excellence.
-              </p>
-              <p>
-                Et bien sûr, merci à <strong className="text-foreground">Stéphane Vasco</strong>, notre partenaire photographe, qui immortalise notre savoir-faire depuis plus de dix ans et met en lumière l'engagement et les nombreuses heures de travail nécessaires pour aboutir à ces réalisations.
-              </p>
-              <p className="text-foreground font-medium italic">
-                Au final, c'est avant tout une aventure humaine.
-              </p>
+                <p>
+                  Nous remercions Houzz et toute la communauté pour cette reconnaissance. Une victoire n'est jamais individuelle : elle est le fruit d'un travail d'équipe. Merci à nos équipes, nos fournisseurs et nos partenaires qui partagent la même exigence et la même passion du métier.
+                </p>
+                <p>
+                  Merci à nos clients pour leur confiance, leur bonne humeur et cette énergie positive qui nous pousse, projet après projet, à viser l'excellence.
+                </p>
+                <p>
+                  Et bien sûr, merci à <strong className="text-foreground">Stéphane Vasco</strong>, notre partenaire photographe, qui immortalise notre savoir-faire depuis plus de dix ans et met en lumière l'engagement et les nombreuses heures de travail nécessaires pour aboutir à ces réalisations.
+                </p>
+                <p className="text-foreground font-medium italic">
+                  Au final, c'est avant tout une aventure humaine.
+                </p>
+              </div>
+
+              <div className="flex-shrink-0 mx-auto md:mx-0">
+                <img 
+                  src={houzzBestOf2026Photo} 
+                  alt="Lauréat Best of Houzz 2026 – Photo" 
+                  className="w-48 md:w-56 rounded-lg shadow-lg"
+                />
+              </div>
             </div>
 
             <div className="mt-8 text-center">
