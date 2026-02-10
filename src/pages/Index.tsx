@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import RMSBLogo from "@/components/brand/RMSBLogo";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
@@ -115,6 +116,9 @@ export default function Index() {
                   LANCER MON PROJET
                 </Link>
               </Button>
+              <div className="mt-8">
+                <RMSBLogo size="sm" variant="dark" showTagline={true} />
+              </div>
             </ScrollAnimation>
             
             <ScrollAnimation 
