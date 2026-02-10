@@ -172,7 +172,7 @@ const parutions_presse: ParutionPresse[] = [
     media: "Houzz",
     titre_article: "Lauréat Best of Houzz 2026 – Photo",
     extrait_seo: "QualiRénovation by QualiConcept remporte le prix Best of Houzz 2026 – Photo, en partenariat avec Houzz Pro. Cette distinction récompense les réalisations les plus populaires et inspirantes parmi plus de 3 millions de professionnels dans le monde.",
-    url_article: "https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept",
+    url_article: "https://www.houzz.fr/best-of-houzz",
     type: "article",
     image: houzzBestOf2026Photo,
     journalist: "Houzz",
