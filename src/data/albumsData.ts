@@ -2008,6 +2008,8 @@ Une rénovation pensée pour allier design contemporain, praticité et éléganc
       { id: 2, image: edmondNocard2, title: "Carrelage béton blanc", description: "Tech White mat 60x60 cm" },
       { id: 3, image: edmondNocard3, title: "Meuble vasque IKEA", description: "Vasque à poser et plan bois" },
       { id: 4, image: edmondNocard4, title: "Lave-linge dissimulé", description: "Machine à laver cachée derrière une porte" },
+      { id: 5, image: "/images/projects/saint-maurice/avant-sdb.jpg", title: "Avant — Salle de bain", description: "Baignoire avec rideau, étagères et carrelage blanc" },
+      { id: 6, image: "/images/projects/saint-maurice/avant-wc.jpg", title: "Avant — WC", description: "Toilettes anciennes avec habillage bois" },
     ],
     finitionSol: "beton",
     finitionMur: "zellige",
