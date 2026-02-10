@@ -102,7 +102,7 @@ const ProjetDetail = () => {
   });
 
   // Short description for OG
-  const shortDescription = `${album.location} • ${ogData.style}${ogData.tag1 ? ` • ${ogData.tag1}` : ""}${ogData.tag2 ? ` • ${ogData.tag2}` : ""} • Optimisation d'espace & finitions premium.`;
+  const shortDescription = `${album.location} • ${ogData.style}${ogData.tag1 ? ` • ${ogData.tag1}` : ""}${ogData.tag2 ? ` • ${ogData.tag2}` : ""} • Salle de bain Leroy Merlin, meuble salle de bain Ikea. Finitions premium.`;
 
   return (
     <Layout>
