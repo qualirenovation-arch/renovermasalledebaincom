@@ -1987,15 +1987,29 @@ Côté fonctionnalité, l'agencement a été entièrement repensé :
   {
     id: "saint-maurice-edmond-nocard",
     slug: "salle-de-bain-saint-maurice-94-renovation-zellige-bleu-beton-blanc",
-    title: "Salle de bain à Saint-Maurice — Zellige bleu marine et béton blanc",
-    location: "Saint-Maurice (94) - Rue Edmond Nocard",
-    description: `Dans cette salle de bain à Saint-Maurice, le contraste entre le zellige bleu marine Colonial Brillo et le carrelage béton Tech White crée une ambiance moderne et apaisante.
+    title: "Salle de bain à Saint-Maurice, au cœur du Bois de Vincennes — Zellige bleu marine & béton blanc",
+    subtitle: "Saint-Maurice (94) – Rue Edmond Nocard",
+    location: "Saint-Maurice (94) – Rue Edmond Nocard",
+    description: `Située à Saint-Maurice (Val-de-Marne), aux portes du Bois de Vincennes, cette salle de bain a fait l'objet d'une rénovation complète, avec une approche centrée sur l'optimisation de l'espace, le confort et la durabilité.
 
-Le receveur de douche est habillé du même zellige bleu profond, pour une cohérence visuelle affirmée. Le meuble vasque IKEA, customisé avec une vasque à poser, apporte une touche chaleureuse et fonctionnelle.
+Une salle de bain entièrement repensée
 
-👉 Le vrai plus : le lave-linge est entièrement dissimulé derrière une porte, offrant un espace épuré et parfaitement optimisé.
+Avant travaux, la pièce était marquée par une configuration peu fonctionnelle : baignoire sabot, WC mal positionné, rangements ouverts et absence de cohérence dans l'agencement.
+L'objectif de cette rénovation était clair : transformer une salle de bain contrainte en un espace fluide, élégant et pratique au quotidien.
 
-Une rénovation pensée pour allier design contemporain, praticité et élégance.
+Les choix forts du projet
+
+• Remplacement de la baignoire par une configuration plus fonctionnelle
+• Création d'un meuble vasque sur mesure toute longueur, intégrant le lave-linge
+• Vasque posée et robinetterie noire mate pour une écriture contemporaine
+• Association de zellige bleu marine et de béton blanc, pour un contraste à la fois graphique et intemporel
+• Optimisation des volumes et des circulations, avec des rangements discrets et intégrés
+
+Une rénovation pensée pour durer
+
+Cette rénovation de salle de bain à Saint-Maurice illustre notre approche : chaque projet est conçu sur mesure, en tenant compte des usages, des contraintes techniques et de l'environnement existant, notamment dans les logements situés autour du Bois de Vincennes.
+
+👉 Résultat : une salle de bain lumineuse, fonctionnelle et élégante, parfaitement adaptée à la vie quotidienne.
 
 🛒 Shopping : parquetcarrelage.com`,
     coverImage: edmondNocard1,
