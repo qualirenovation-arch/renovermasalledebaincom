@@ -188,7 +188,9 @@ export type Database = {
           created_at: string
           id: string
           internal_notes: string | null
+          last_contacted_at: string | null
           message: string | null
+          next_followup_at: string | null
           priority: string
           property_address: string | null
           property_city: string | null
@@ -237,7 +239,9 @@ export type Database = {
           created_at?: string
           id?: string
           internal_notes?: string | null
+          last_contacted_at?: string | null
           message?: string | null
+          next_followup_at?: string | null
           priority?: string
           property_address?: string | null
           property_city?: string | null
@@ -286,7 +290,9 @@ export type Database = {
           created_at?: string
           id?: string
           internal_notes?: string | null
+          last_contacted_at?: string | null
           message?: string | null
+          next_followup_at?: string | null
           priority?: string
           property_address?: string | null
           property_city?: string | null
