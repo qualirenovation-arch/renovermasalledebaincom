@@ -138,9 +138,9 @@ export default function Index() {
       </section>
 
       {/* Bandeau Best of Houzz */}
-      <section className="py-8 md:py-12 bg-stone/50 border-y border-gold/20">
+      <section className="py-8 md:py-12 bg-primary/5 border-y border-primary/10">
         <div className="container-custom flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8">
-          <div className="p-3 bg-background rounded-2xl shadow-md border border-gold/20">
+          <div className="p-4 bg-background rounded-2xl shadow-lg border border-primary/15">
             <img 
               src={houzzBestOf2026Photo} 
               alt="Lauréat Best of Houzz 2026 – Photo" 
@@ -148,8 +148,8 @@ export default function Index() {
             />
           </div>
           <div className="text-center sm:text-left">
-            <p className="font-display text-xl md:text-2xl font-bold text-foreground mb-1 tracking-tight">Lauréat Best of Houzz 2026</p>
-            <p className="text-foreground/80 text-base md:text-lg font-medium">Catégorie Photo — Excellence visuelle récompensée</p>
+            <p className="font-display text-xl md:text-2xl font-bold text-primary mb-1 tracking-tight">Lauréat Best of Houzz 2026</p>
+            <p className="text-primary/70 text-base md:text-lg font-medium">Catégorie Photo — Excellence visuelle récompensée</p>
           </div>
         </div>
       </section>
