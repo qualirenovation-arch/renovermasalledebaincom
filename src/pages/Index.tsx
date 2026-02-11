@@ -148,8 +148,8 @@ export default function Index() {
             />
           </div>
           <div className="text-center sm:text-left">
-            <p className="font-display text-xl md:text-2xl font-bold text-primary mb-1 tracking-tight">Lauréat Best of Houzz 2026</p>
-            <p className="text-primary/70 text-base md:text-lg font-medium">Catégorie Photo — Excellence visuelle récompensée</p>
+            <p className="font-display text-xl md:text-2xl font-bold text-foreground mb-1 tracking-tight">Lauréat Best of Houzz 2026</p>
+            <p className="text-muted-foreground text-base md:text-lg font-medium">Catégorie Photo — Excellence visuelle récompensée</p>
           </div>
         </div>
       </section>
