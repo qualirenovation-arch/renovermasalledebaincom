@@ -3,8 +3,9 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { ArrowLeft, Phone, Mail, MapPin, Calendar, Droplets, Home, FileText, Save, ExternalLink, Loader2 } from "lucide-react";
+import { ArrowLeft, Phone, Mail, MapPin, Calendar, Droplets, Home, FileText, Save, ExternalLink, Loader2, Bell, CheckCircle } from "lucide-react";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 import { useToast } from "@/hooks/use-toast";
@@ -56,6 +57,7 @@ export function QuoteRequestDetail({ quoteId, onBack }: QuoteRequestDetailProps)
   const [status, setStatus] = useState("");
   const [priority, setPriority] = useState("");
   const [internalNotes, setInternalNotes] = useState("");
+  const [nextFollowupAt, setNextFollowupAt] = useState("");
   const [documentUrls, setDocumentUrls] = useState<Record<string, string>>({});
   const [loadingDocs, setLoadingDocs] = useState(false);
   const { toast } = useToast();
@@ -116,6 +118,7 @@ export function QuoteRequestDetail({ quoteId, onBack }: QuoteRequestDetailProps)
       setStatus(data.status);
       setPriority(data.priority);
       setInternalNotes(data.internal_notes || "");
+      setNextFollowupAt(data.next_followup_at ? data.next_followup_at.split("T")[0] : "");
     } catch (error) {
       console.error("Error fetching quote:", error);
       toast({
@@ -137,6 +140,7 @@ export function QuoteRequestDetail({ quoteId, onBack }: QuoteRequestDetailProps)
           status,
           priority,
           internal_notes: internalNotes,
+          next_followup_at: nextFollowupAt || null,
         })
         .eq("id", quoteId);
 
@@ -454,8 +458,55 @@ export function QuoteRequestDetail({ quoteId, onBack }: QuoteRequestDetailProps)
                     ))}
                   </SelectContent>
                 </Select>
-              </div>
             </div>
+          </div>
+
+          {/* Follow-up tracking */}
+          <div className="bg-card border rounded-lg p-6">
+            <h3 className="font-semibold mb-4 flex items-center gap-2">
+              <Bell className="w-4 h-4" />
+              Suivi & Relance
+            </h3>
+            <div className="space-y-4">
+              <div>
+                <label className="text-sm text-muted-foreground mb-2 block">Prochaine relance</label>
+                <Input
+                  type="date"
+                  value={nextFollowupAt}
+                  onChange={(e) => setNextFollowupAt(e.target.value)}
+                />
+              </div>
+              {quote.last_contacted_at && (
+                <div>
+                  <p className="text-sm text-muted-foreground">Dernier contact</p>
+                  <p className="text-sm font-medium">
+                    {format(new Date(quote.last_contacted_at), "dd/MM/yyyy HH:mm", { locale: fr })}
+                  </p>
+                </div>
+              )}
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full"
+                onClick={async () => {
+                  try {
+                    const { error } = await supabase
+                      .from("quote_requests")
+                      .update({ last_contacted_at: new Date().toISOString() })
+                      .eq("id", quoteId);
+                    if (error) throw error;
+                    toast({ title: "Marqué comme contacté" });
+                    fetchQuote();
+                  } catch {
+                    toast({ title: "Erreur", variant: "destructive" });
+                  }
+                }}
+              >
+                <CheckCircle className="w-4 h-4 mr-2" />
+                Marquer comme contacté
+              </Button>
+            </div>
+          </div>
           </div>
 
           {/* Internal notes */}
