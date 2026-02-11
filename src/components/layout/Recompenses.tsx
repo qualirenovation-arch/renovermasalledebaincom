@@ -15,27 +15,27 @@ const HouzzBadge = ({
     <div className="flex flex-col items-center">
       {/* Badge rectangulaire vertical style officiel */}
       <div 
-        className="w-16 h-20 rounded-sm flex flex-col items-center justify-between py-2 px-1 shadow-sm"
+        className="w-20 h-[104px] rounded-sm flex flex-col items-center justify-between py-2.5 px-1.5 shadow-sm"
         style={{ backgroundColor: categoryColor }}
       >
         {/* Année */}
-        <span className="text-white text-lg font-bold leading-none">{year}</span>
+        <span className="text-white text-xl font-bold leading-none">{year}</span>
         
         {/* Séparateur */}
-        <div className="w-10 h-px bg-white/40" />
+        <div className="w-12 h-px bg-white/40" />
         
         {/* Best of Houzz - plus visible */}
         <div className="text-center">
-          <span className="block text-white text-[8px] font-semibold uppercase tracking-wide leading-tight">
+          <span className="block text-white text-[10px] font-semibold uppercase tracking-wide leading-tight">
             Best of
           </span>
-          <span className="block text-white text-[9px] font-bold uppercase tracking-wider leading-tight">
+          <span className="block text-white text-[11px] font-bold uppercase tracking-wider leading-tight">
             Houzz
           </span>
         </div>
         
         {/* Catégorie */}
-        <span className="text-white/90 text-[7px] uppercase tracking-wide font-medium">
+        <span className="text-white text-[9px] uppercase tracking-wide font-semibold">
           {category}
         </span>
       </div>
