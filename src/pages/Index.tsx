@@ -116,9 +116,6 @@ export default function Index() {
                   LANCER MON PROJET
                 </Link>
               </Button>
-              <div className="mt-8">
-                <img src={houzzBestOf2026Photo} alt="Lauréat Best of Houzz 2026 – Photo" className="h-16 md:h-20 mx-auto lg:mx-0" />
-              </div>
             </ScrollAnimation>
             
             <ScrollAnimation 
@@ -136,6 +133,21 @@ export default function Index() {
               </div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-gold/10 -z-10 hidden lg:block" />
             </ScrollAnimation>
+          </div>
+        </div>
+      </section>
+
+      {/* Bandeau Best of Houzz */}
+      <section className="py-6 md:py-8 bg-background border-b border-border/30">
+        <div className="container-custom flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+          <img 
+            src={houzzBestOf2026Photo} 
+            alt="Lauréat Best of Houzz 2026 – Photo" 
+            className="h-20 md:h-28" 
+          />
+          <div className="text-center sm:text-left">
+            <p className="font-display text-lg md:text-xl font-semibold text-foreground">Lauréat Best of Houzz 2026</p>
+            <p className="text-muted-foreground text-sm md:text-base">Catégorie Photo – Excellence visuelle récompensée</p>
           </div>
         </div>
       </section>
