@@ -15,7 +15,7 @@ const HouzzBadge = ({
     <div className="flex flex-col items-center">
       {/* Badge rectangulaire vertical style officiel */}
       <div 
-        className="w-20 h-[104px] rounded-sm flex flex-col items-center justify-between py-2.5 px-1.5 shadow-sm"
+        className="w-20 h-[104px] rounded-sm flex flex-col items-center justify-between py-2.5 px-1.5 shadow-sm transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer"
         style={{ backgroundColor: categoryColor }}
       >
         {/* Année */}
