@@ -140,7 +140,7 @@ export default function Index() {
       {/* Bandeau Best of Houzz */}
       <section className="py-8 md:py-12 bg-primary/5 border-y border-primary/10">
         <div className="container-custom flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8">
-          <div className="p-4 bg-background rounded-2xl shadow-lg border border-primary/15 transition-all duration-300 hover:scale-110 hover:shadow-xl cursor-pointer">
+          <div className="transition-all duration-300 hover:scale-110 cursor-pointer">
             <img 
               src={houzzBestOf2026Photo} 
               alt="Lauréat Best of Houzz 2026 – Photo" 
