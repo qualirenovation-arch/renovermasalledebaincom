@@ -1028,7 +1028,8 @@ export default function Devis() {
                   </p>
 
                   <div className="space-y-8">
-                    {/* Robinetterie douche - toujours visible */}
+                    {/* Robinetterie douche - visible si douche ou indécis */}
+                    {(formData.typeInstallation === "douche" || formData.typeInstallation === "indecis" || !formData.typeInstallation) && (
                     <div className="space-y-6">
                       <div className="p-4 rounded-xl bg-muted/30">
                         <Label className="text-sm font-semibold text-foreground mb-3 block">🚿 Robinetterie douche</Label>
@@ -1097,8 +1098,10 @@ export default function Devis() {
                         </div>
                       </div>
                     </div>
+                    )}
 
-                    {/* Robinetterie baignoire - toujours visible */}
+                    {/* Robinetterie baignoire - visible si baignoire ou indécis */}
+                    {(formData.typeInstallation === "baignoire" || formData.typeInstallation === "indecis" || !formData.typeInstallation) && (
                     <div className="p-4 rounded-xl bg-muted/30">
                       <Label className="text-sm font-semibold text-foreground mb-3 block">🛁 Robinetterie baignoire</Label>
                       
@@ -1135,6 +1138,7 @@ export default function Devis() {
                         )}
                       </div>
                     </div>
+                    )}
 
                     {/* Robinetterie machine à laver - conditionnel */}
                     {formData.machineLaver === "oui" && (
