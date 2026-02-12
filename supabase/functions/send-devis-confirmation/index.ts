@@ -17,14 +17,31 @@ const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
 
 interface DevisRequest {
   clientEmail: string;
-  clientName: string;
+  clientFirstName: string;
+  clientLastName: string;
   clientPhone: string;
   captchaToken: string;
   projectDetails: {
     logement: string;
+    adresse: string;
+    ville: string;
+    codePostal: string;
+    etage: string;
+    ascenseur: string;
     surface: string;
+    typeInstallation: string;
+    typeDouche: string;
+    typePommeau: string;
     typeReceveur: string[];
+    typeBaignoire: string[];
+    robinetterieBaignoire: string;
     wcType: string[];
+    meubleVasque: string[];
+    porteDouche: string[];
+    machineLaver: string;
+    emplacementMachine: string[];
+    typeMachine: string[];
+    robinetterieMLaver: string;
     robinetterie: string[];
     carrelage: string[];
     message: string;
@@ -113,12 +130,13 @@ const handler = async (req: Request): Promise<Response> => {
     }
 
     const requestData: DevisRequest = await req.json();
-    const { clientEmail, clientName, clientPhone, captchaToken, projectDetails } = requestData;
+    const { clientEmail, clientFirstName, clientLastName, clientPhone, captchaToken, projectDetails } = requestData;
+    const clientName = `${clientFirstName} ${clientLastName}`.trim();
 
     console.log("Processing devis request for:", clientEmail);
 
     // Validate required fields
-    if (!clientEmail || !clientName) {
+    if (!clientEmail || !clientFirstName) {
       throw new Error("Email et nom du client requis");
     }
 
@@ -169,6 +187,52 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Record this request for rate limiting (after validation passes)
     await recordRequest(supabase, ip, endpoint);
+
+    // Insert into database
+    const { data: insertedData, error: insertError } = await supabase
+      .from('quote_requests')
+      .insert({
+        type_devis: 'classique',
+        client_first_name: clientFirstName,
+        client_last_name: clientLastName || '',
+        client_email: clientEmail,
+        client_phone: clientPhone || null,
+        property_type: projectDetails.logement || null,
+        property_address: projectDetails.adresse || null,
+        property_city: projectDetails.ville || null,
+        property_postal_code: projectDetails.codePostal || null,
+        property_floor: projectDetails.etage || null,
+        property_elevator: projectDetails.ascenseur || null,
+        property_surface: projectDetails.surface || null,
+        renovation_type_installation: projectDetails.typeInstallation || null,
+        renovation_type_douche: projectDetails.typeDouche || null,
+        renovation_type_pommeau: projectDetails.typePommeau || null,
+        renovation_type_receveur: projectDetails.typeReceveur || null,
+        renovation_type_baignoire: projectDetails.typeBaignoire || null,
+        renovation_robinetterie_baignoire: projectDetails.robinetterieBaignoire || null,
+        renovation_wc_type: projectDetails.wcType || null,
+        renovation_meuble_vasque: projectDetails.meubleVasque || null,
+        renovation_porte_douche: projectDetails.porteDouche || null,
+        renovation_machine_laver: projectDetails.machineLaver || null,
+        renovation_emplacement_machine: projectDetails.emplacementMachine || null,
+        renovation_type_machine: projectDetails.typeMachine || null,
+        renovation_robinetterie_mlaver: projectDetails.robinetterieMLaver || null,
+        renovation_finitions_robinetterie: projectDetails.robinetterie || null,
+        renovation_style_carrelage: projectDetails.carrelage || null,
+        message: projectDetails.message || null,
+        status: 'nouveau',
+        priority: 'normale',
+        source: 'website',
+      })
+      .select()
+      .single();
+
+    if (insertError) {
+      console.error("Database insert error:", insertError);
+      // Continue with email sending even if DB insert fails
+    } else {
+      console.log("Quote request saved:", insertedData.id);
+    }
 
     // Escape all user inputs for HTML safety
     const safeClientName = escapeHtml(clientName);
