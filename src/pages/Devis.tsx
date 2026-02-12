@@ -971,7 +971,8 @@ export default function Devis() {
                   </div>
                 </div>
 
-                {/* Paroi de douche */}
+                {/* Paroi de douche - visible seulement si douche ou indécis */}
+                {(formData.typeInstallation === "douche" || formData.typeInstallation === "indecis" || !formData.typeInstallation) && (
                 <div className="card-elevated p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-mint))] flex items-center justify-center">
@@ -1014,6 +1015,46 @@ export default function Devis() {
                     )}
                   </div>
                 </div>
+                )}
+
+                {/* Pare-bain - visible seulement si baignoire */}
+                {formData.typeInstallation === "baignoire" && (
+                <div className="card-elevated p-8">
+                  <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-mint))] flex items-center justify-center">
+                      <ParoiIcon />
+                    </div>
+                    Pare-bain souhaité
+                  </h2>
+                  <p className="text-muted-foreground text-sm mb-4">Choisissez le type de pare-bain adapté à votre baignoire.</p>
+                  
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                    <Select 
+                      value={formData.porteDouche[0] || ""} 
+                      onValueChange={(value) => setFormData(prev => ({ ...prev, porteDouche: [value] }))}
+                    >
+                      <SelectTrigger className="w-full md:w-80">
+                        <SelectValue placeholder="Choisir un type de pare-bain..." />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="fixe">Pare-bain fixe (1 panneau)</SelectItem>
+                        <SelectItem value="battant">Pare-bain battant (rabattable)</SelectItem>
+                        <SelectItem value="coulissant">Pare-bain coulissant (2+ panneaux)</SelectItem>
+                      </SelectContent>
+                    </Select>
+
+                    {formData.porteDouche.length > 0 && formData.porteDouche[0] && (
+                      <div className="flex items-center gap-4 ml-auto">
+                        <span className="text-sm font-medium text-foreground hidden md:block">
+                          {formData.porteDouche[0] === "fixe" ? "Pare-bain fixe" : 
+                           formData.porteDouche[0] === "battant" ? "Pare-bain battant" : 
+                           formData.porteDouche[0] === "coulissant" ? "Pare-bain coulissant" : ""}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+                )}
 
                 {/* Section Robinetterie centralisée */}
                 <div className="card-elevated p-8">
