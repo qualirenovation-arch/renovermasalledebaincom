@@ -51,6 +51,10 @@ import baignoiresImage from "@/assets/baignoires-styles.jpg";
 import robinetterieAppliqueImage from "@/assets/robinetterie-applique.jpg";
 import robinetterieEncastreImage from "@/assets/robinetterie-encastre.jpg";
 import robinetterieSurGorgeImage from "@/assets/robinetterie-sur-gorge.jpg";
+import mitigeurBainDoucheMuralImage from "@/assets/mitigeur-bain-douche-mural.jpg";
+import mitigeurBainDoucheEncastreImage from "@/assets/mitigeur-bain-douche-encastre.jpg";
+import mitigeurDoucheMuralImage from "@/assets/mitigeur-douche-mural.jpg";
+import mitigeurDoucheEncastreImage from "@/assets/mitigeur-douche-encastre.jpg";
 import finitionChromeImage from "@/assets/finition-chrome.jpg";
 import finitionInoxImage from "@/assets/finition-inox.jpg";
 import finitionInoxBrosseImage from "@/assets/finition-inox-brosse.jpg";
@@ -236,9 +240,13 @@ const typeBaignoireOptions = [
 ];
 
 const robinetterieBaignoireOptions = [
-  { value: "applique", label: "En applique (sur le mur)", image: robinetterieAppliqueImage },
-  { value: "encastre", label: "Encastré (dans le mur)", image: robinetterieEncastreImage },
-  { value: "sur-gorge", label: "Sur gorge (sur le rebord)", image: robinetterieSurGorgeImage },
+  { value: "mitigeur-bain-douche-mural", label: "Mitigeur bain-douche mural", image: mitigeurBainDoucheMuralImage },
+  { value: "mitigeur-bain-douche-encastre", label: "Mitigeur bain-douche encastré", image: mitigeurBainDoucheEncastreImage },
+];
+
+const robinetterieDouchemOptions = [
+  { value: "mitigeur-douche-mural", label: "Mitigeur douche mural", image: mitigeurDoucheMuralImage },
+  { value: "mitigeur-douche-encastre", label: "Mitigeur douche encastré", image: mitigeurDoucheEncastreImage },
 ];
 
 const emplacementMachineOptions = [
@@ -827,7 +835,10 @@ export default function Devis() {
                   </h2>
                   <RadioGroup 
                     value={formData.typeInstallation} 
-                    onValueChange={(value) => handleChange("typeInstallation", value)}
+                    onValueChange={(value) => {
+                      handleChange("typeInstallation", value);
+                      handleChange("robinetterieBaignoire", "");
+                    }}
                     className="grid grid-cols-1 md:grid-cols-3 gap-4"
                   >
                     {[
@@ -842,7 +853,10 @@ export default function Devis() {
                             ? 'border-foreground bg-foreground/5' 
                             : 'border-border bg-card hover:border-foreground/30'
                         }`}
-                        onClick={() => handleChange("typeInstallation", option.value)}
+                        onClick={() => {
+                          handleChange("typeInstallation", option.value);
+                          handleChange("robinetterieBaignoire", "");
+                        }}
                       >
                         <RadioGroupItem value={option.value} id={option.value} className="pointer-events-none" />
                         <Label htmlFor={option.value} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
@@ -1068,7 +1082,7 @@ export default function Devis() {
                     Configurez l'ensemble de votre robinetterie : types, styles et finitions.
                   </p>
 
-                  <div className="space-y-8">
+                  <div key={`robinetterie-section-${formData.typeInstallation}`} className="space-y-8">
                     {/* Robinetterie douche - visible si douche ou indécis */}
                     {(formData.typeInstallation === "douche" || formData.typeInstallation === "indecis" || !formData.typeInstallation) && (
                     <div className="space-y-6">
@@ -1141,13 +1155,15 @@ export default function Devis() {
                     </div>
                     )}
 
-                    {/* Robinetterie baignoire - visible si baignoire ou indécis */}
-                    {(formData.typeInstallation === "baignoire" || formData.typeInstallation === "indecis" || !formData.typeInstallation) && (
+                    {/* Robinetterie - options conditionnelles selon type d'installation */}
                     <div className="p-4 rounded-xl bg-muted/30">
-                      <Label className="text-sm font-semibold text-foreground mb-3 block">🛁 Robinetterie baignoire</Label>
+                      <Label className="text-sm font-semibold text-foreground mb-3 block">
+                        {formData.typeInstallation === "baignoire" ? "🛁 Mitigeur bain-douche" : "🚿 Mitigeur douche"}
+                      </Label>
                       
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                         <Select 
+                          key={`robinetterie-${formData.typeInstallation}`}
                           value={formData.robinetterieBaignoire} 
                           onValueChange={(value) => handleChange("robinetterieBaignoire", value)}
                         >
@@ -1155,7 +1171,7 @@ export default function Devis() {
                             <SelectValue placeholder="Choisir un type de robinetterie..." />
                           </SelectTrigger>
                       <SelectContent>
-                        {robinetterieBaignoireOptions.map((option) => (
+                        {(formData.typeInstallation === "baignoire" ? robinetterieBaignoireOptions : robinetterieDouchemOptions).map((option) => (
                           <SelectItem key={option.value} value={option.value}>
                             {option.label}
                           </SelectItem>
@@ -1165,7 +1181,8 @@ export default function Devis() {
 
                     {formData.robinetterieBaignoire && (
                       (() => {
-                        const selectedOption = robinetterieBaignoireOptions.find(opt => opt.value === formData.robinetterieBaignoire);
+                        const options = formData.typeInstallation === "baignoire" ? robinetterieBaignoireOptions : robinetterieDouchemOptions;
+                        const selectedOption = options.find(opt => opt.value === formData.robinetterieBaignoire);
                         if (!selectedOption) return null;
                         return (
                               <div className="flex items-center gap-4 ml-auto">
@@ -1179,7 +1196,7 @@ export default function Devis() {
                         )}
                       </div>
                     </div>
-                    )}
+
 
                     {/* Robinetterie machine à laver - conditionnel */}
                     {formData.machineLaver === "oui" && (
