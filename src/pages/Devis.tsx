@@ -1154,20 +1154,20 @@ export default function Devis() {
                           <SelectTrigger className="w-full md:w-80">
                             <SelectValue placeholder="Choisir un type de robinetterie..." />
                           </SelectTrigger>
-                          <SelectContent>
-                            {robinetterieBaignoireOptions.map((option) => (
-                              <SelectItem key={option.value} value={option.value}>
-                                {option.label}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
+                      <SelectContent>
+                        {robinetterieBaignoireOptions.map((option) => (
+                          <SelectItem key={option.value} value={option.value}>
+                            {option.label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
 
-                        {formData.robinetterieBaignoire && (
-                          (() => {
-                            const selectedOption = robinetterieBaignoireOptions.find(opt => opt.value === formData.robinetterieBaignoire);
-                            if (!selectedOption) return null;
-                            return (
+                    {formData.robinetterieBaignoire && (
+                      (() => {
+                        const selectedOption = robinetterieBaignoireOptions.find(opt => opt.value === formData.robinetterieBaignoire);
+                        if (!selectedOption) return null;
+                        return (
                               <div className="flex items-center gap-4 ml-auto">
                                 <span className="text-sm font-medium text-foreground hidden md:block">{selectedOption.label}</span>
                                 <div className="w-40 h-40 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg shrink-0">
