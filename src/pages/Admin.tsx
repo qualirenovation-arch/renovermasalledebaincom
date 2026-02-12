@@ -1,15 +1,13 @@
-import { useState } from "react";
 import { Navigate, Link } from "react-router-dom";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
-import { Users, Package, LogOut, Loader2, ShieldX, Handshake, FileText } from "lucide-react";
-import { SubcontractorsList } from "@/components/admin/SubcontractorsList";
-import { OrdersList } from "@/components/admin/OrdersList";
+import { LogOut, Loader2, ShieldX, Handshake, FileText, Users, Wrench } from "lucide-react";
 import { useAdminAuth } from "@/hooks/useAdminAuth";
 import { useToast } from "@/hooks/use-toast";
+import { DashboardStats } from "@/components/admin/DashboardStats";
+import { RecentLeads } from "@/components/admin/RecentLeads";
+import { Card, CardContent } from "@/components/ui/card";
 
 export default function Admin() {
-  const [activeTab, setActiveTab] = useState("subcontractors");
   const { user, isAdmin, loading, signOut } = useAdminAuth();
   const { toast } = useToast();
 
@@ -24,7 +22,6 @@ export default function Admin() {
     }
   };
 
-  // Loading state
   if (loading) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
@@ -36,12 +33,10 @@ export default function Admin() {
     );
   }
 
-  // Not logged in - redirect to login
   if (!user) {
     return <Navigate to="/admin/login" replace />;
   }
 
-  // Logged in but not admin
   if (!isAdmin) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center p-4">
@@ -51,7 +46,7 @@ export default function Admin() {
           </div>
           <h1 className="text-2xl font-semibold mb-2">Accès refusé</h1>
           <p className="text-muted-foreground mb-6">
-            Votre compte n'a pas les droits d'administration nécessaires pour accéder à cette page.
+            Votre compte n'a pas les droits d'administration nécessaires.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button variant="outline" onClick={handleSignOut}>
@@ -67,6 +62,12 @@ export default function Admin() {
     );
   }
 
+  const quickLinks = [
+    { to: "/admin/devis", icon: FileText, label: "Devis", description: "Gérer les demandes de devis", color: "text-blue-600", bg: "bg-blue-50" },
+    { to: "/admin/partenaires", icon: Handshake, label: "Partenaires", description: "Gérer les contacts partenaires", color: "text-violet-600", bg: "bg-violet-50" },
+    { to: "/admin/finitions", icon: Wrench, label: "Finitions", description: "Catalogue des finitions", color: "text-amber-600", bg: "bg-amber-50" },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -74,21 +75,9 @@ export default function Admin() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <h1 className="font-display text-2xl font-semibold">
-              Administration
+              Tableau de bord
             </h1>
             <div className="flex items-center gap-4">
-              <Button variant="outline" size="sm" asChild>
-                <Link to="/admin/devis">
-                  <FileText className="w-4 h-4 mr-2" />
-                  Devis
-                </Link>
-              </Button>
-              <Button variant="outline" size="sm" asChild>
-                <Link to="/admin/partenaires">
-                  <Handshake className="w-4 h-4 mr-2" />
-                  Partenaires
-                </Link>
-              </Button>
               <span className="text-sm text-muted-foreground hidden sm:block">
                 {user.email}
               </span>
@@ -102,27 +91,31 @@ export default function Admin() {
       </header>
 
       {/* Main content */}
-      <main className="container mx-auto px-4 py-8">
-        <Tabs value={activeTab} onValueChange={setActiveTab}>
-          <TabsList className="mb-8">
-            <TabsTrigger value="subcontractors" className="gap-2">
-              <Users className="w-4 h-4" />
-              Sous-traitants
-            </TabsTrigger>
-            <TabsTrigger value="orders" className="gap-2">
-              <Package className="w-4 h-4" />
-              Commandes
-            </TabsTrigger>
-          </TabsList>
+      <main className="container mx-auto px-4 py-8 space-y-8">
+        {/* Quick Links */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {quickLinks.map((link) => (
+            <Link key={link.to} to={link.to}>
+              <Card className="hover:border-primary/30 cursor-pointer">
+                <CardContent className="p-5 flex items-center gap-4">
+                  <div className={`w-10 h-10 rounded-xl ${link.bg} flex items-center justify-center shrink-0`}>
+                    <link.icon className={`w-5 h-5 ${link.color}`} />
+                  </div>
+                  <div>
+                    <p className="font-semibold">{link.label}</p>
+                    <p className="text-sm text-muted-foreground">{link.description}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+          ))}
+        </div>
 
-          <TabsContent value="subcontractors">
-            <SubcontractorsList />
-          </TabsContent>
+        {/* Stats */}
+        <DashboardStats />
 
-          <TabsContent value="orders">
-            <OrdersList />
-          </TabsContent>
-        </Tabs>
+        {/* Recent Leads */}
+        <RecentLeads />
       </main>
     </div>
   );
