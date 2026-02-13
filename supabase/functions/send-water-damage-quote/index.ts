@@ -167,28 +167,21 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    // Skip verification for test token (temporary for testing)
-    let captchaValid = false;
-    if (captchaToken === "test-token") {
-      console.log("Test token detected, skipping captcha verification");
-      captchaValid = true;
-    } else {
-      console.log("Verifying hCaptcha token...");
-      const captchaResponse = await fetch("https://hcaptcha.com/siteverify", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: `response=${captchaToken}&secret=${HCAPTCHA_SECRET_KEY}`,
-      });
+    // Verify hCaptcha token server-side
+    console.log("Verifying hCaptcha token...");
+    const captchaResponse = await fetch("https://hcaptcha.com/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: `response=${captchaToken}&secret=${HCAPTCHA_SECRET_KEY}`,
+    });
 
-      const captchaData = await captchaResponse.json();
-      captchaValid = captchaData.success;
-      if (!captchaValid) {
-        console.error("hCaptcha verification failed:", captchaData);
-        return new Response(
-          JSON.stringify({ error: "Vérification anti-spam échouée." }),
-          { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
-        );
-      }
+    const captchaData = await captchaResponse.json();
+    if (!captchaData.success) {
+      console.error("hCaptcha verification failed:", captchaData);
+      return new Response(
+        JSON.stringify({ error: "Vérification anti-spam échouée." }),
+        { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
     }
 
     // Validate email
