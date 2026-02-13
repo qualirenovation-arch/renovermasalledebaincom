@@ -1661,6 +1661,11 @@ Ce projet illustre parfaitement notre approche : un chantier heureux, fondé sur
     ],
     finitionSol: "gres-cerame-uni",
     finitionMur: "metro-allonge",
+    review: {
+      text: "J'ai fait appel à Qualirénovation car j'habite loin de l'appartement que je souhaitais faire rénover et il m'était impossible de m'occuper moi-même des travaux ou d'en assurer le suivi régulier. Un projet de rénovation à distance peut être source de stress, mais Carina m'a accompagné et a été particulièrement rassurante du début à la fin. J'ai bénéficié d'un suivi régulier et clair, avec des comptes rendus fréquents, des photos et des échanges à chaque étape clé du chantier. Tout a été coordonné et géré par ses soins, jusqu'à la réalisation du DPE pour la mise en location, mais aussi l'achat et le montage des meubles. Tout s'est fait sans que je n'aie à me déplacer une seule fois sur le chantier. Aujourd'hui, l'appartement est entièrement rénové, meublé et loué. Même après la fin des travaux, Carina est à l'écoute et assure le suivi ! Je recommande donc vivement !",
+      author: "Ronan Ynard",
+      link: "https://www.houzz.fr/pro/qualirenovation/reviews"
+    },
   },
   // ========== 📍 CHARENTON-LE-PONT (94) ==========
   {
