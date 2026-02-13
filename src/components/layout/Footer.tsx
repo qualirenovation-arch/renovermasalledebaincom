@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
-import qualirenovationLogo from "@/assets/logos/qualirenovation-logo-new.png";
-import houzzLogo from "@/assets/logos/houzz-logo.png";
+const qualirenovationLogo = "/images/logos/qualirenovation-logo-new.png";
+const houzzLogo = "/images/logos/houzz-logo.png";
 import RMSBLogo from "@/components/brand/RMSBLogo";
 
 const footerLinks = {

@@ -4,15 +4,15 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { OGTags } from "@/components/seo/OGTags";
 import { Shield, Award, Users, Clock, CheckCircle2, ArrowRight, Camera, PenTool, HardHat } from "lucide-react";
-import aboutHistoire from "@/assets/about-histoire.jpg";
-import teamPhoto from "@/assets/team-photo.jpg";
-import teamChantier1 from "@/assets/team-chantier-1.jpg";
-import teamChantier3 from "@/assets/team-chantier-3.jpg";
-import stephaneVasco from "@/assets/stephane-vasco.png";
-import thierryPelmard1 from "@/assets/thierry-pelmard-1.jpg";
-import thierryPelmard2 from "@/assets/thierry-pelmard-2.jpg";
-import carinaNahmani1 from "@/assets/carina-nahmani-1.jpg";
-import houzzBestOf2026Photo from "@/assets/logos/houzz-best-of-2026-photo-award.png";
+const aboutHistoire = "/images/about-histoire.jpg";
+const teamPhoto = "/images/team-photo.jpg";
+const teamChantier1 = "/images/team-chantier-1.jpg";
+const teamChantier3 = "/images/team-chantier-3.jpg";
+const stephaneVasco = "/images/stephane-vasco.png";
+const thierryPelmard1 = "/images/thierry-pelmard-1.jpg";
+const thierryPelmard2 = "/images/thierry-pelmard-2.jpg";
+const carinaNahmani1 = "/images/carina-nahmani-1.jpg";
+const houzzBestOf2026Photo = "/images/logos/houzz-best-of-2026-photo-award.png";
 
 const values = [
   { icon: Award, title: "Excellence", description: "Nous visons la perfection dans chaque détail de nos réalisations" },

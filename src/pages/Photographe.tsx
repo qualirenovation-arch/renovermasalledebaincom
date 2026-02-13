@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { OGTags } from "@/components/seo/OGTags";
 import { Camera, Phone, Globe, MapPin, Star, ArrowRight, ExternalLink, Award, Building, Home, Eye } from "lucide-react";
-import stephaneVasco from "@/assets/stephane-vasco.png";
+const stephaneVasco = "/images/stephane-vasco.png";
 
 const specialties = [
   {
