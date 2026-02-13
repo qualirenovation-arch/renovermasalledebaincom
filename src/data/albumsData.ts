@@ -1610,7 +1610,7 @@ Ce projet illustre parfaitement notre approche : un chantier heureux, fondé sur
       { id: 7, image: saintDenisAvant5, title: "Avant — Salle de bain vétuste", description: "Cabine de douche, WC et lavabo d'origine" },
       { id: 8, image: saintDenisAvant6, title: "Avant — Vue en longueur", description: "Configuration étroite avec cabine de douche" },
       { id: 9, image: saintDenisAvant3, title: "Avant — Chambre & accès", description: "Ancien accès chambre-salle de bain à fermer" },
-      { id: 10, image: saintDenisAvant9, title: "Avant — Séjour & cuisine", description: "Vue d'ensemble de l'appartement avant travaux" },
+      
     ],
     finitionSol: "gres-cerame-uni",
     finitionMur: "metro-allonge",
