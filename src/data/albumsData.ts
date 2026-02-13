@@ -2129,11 +2129,11 @@ export interface ProjectLocation {
 }
 
 export const projectLocations: ProjectLocation[] = [
-  { id: "buttes-chaumont", name: "Buttes-Chaumont", area: "19ème", x: 68, y: 25 },
-  { id: "rocroy", name: "Rue de Rocroy", area: "10ème", x: 55, y: 32 },
-  { id: "port-royal", name: "Port-Royal", area: "5ème", x: 48, y: 60 },
-  { id: "la-tour", name: "Rue de la Tour", area: "16ème", x: 25, y: 45 },
-  { id: "courbevoie-lalyre", name: "Rue Ernest Lalyre", area: "Courbevoie", x: 15, y: 20 },
+  { id: "buttes-chaumont", name: "Buttes-Chaumont", area: "19ème", x: 55, y: 35 },
+  { id: "rocroy", name: "Rue de Rocroy", area: "10ème", x: 48, y: 40 },
+  { id: "port-royal", name: "Port-Royal", area: "5ème", x: 42, y: 58 },
+  { id: "la-tour", name: "Rue de la Tour", area: "16ème", x: 30, y: 50 },
+  { id: "courbevoie-lalyre", name: "Rue Ernest Lalyre", area: "Courbevoie", x: 25, y: 28 },
   
 ];
 
