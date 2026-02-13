@@ -344,13 +344,17 @@ import pierreGuerin5 from "@/assets/pierre-guerin-5.jpg";
 // Saint-Ouen (93)
 import stOuen1 from "@/assets/st-ouen-1.jpg";
 
-// Saint-Denis (93)
-const saintDenisDelaune1 = "/projects/saint-denis-delaune/delaune1.jpg";
-const saintDenisDelaune2 = "/projects/saint-denis-delaune/delaune2.jpg";
-const saintDenisDelaune3 = "/projects/saint-denis-delaune/delaune3.jpg";
-const saintDenisDelaune4 = "/projects/saint-denis-delaune/delaune4.jpg";
-const saintDenisDelaune5 = "/projects/saint-denis-delaune/delaune5.jpg";
-const saintDenisDelaune6 = "/projects/saint-denis-delaune/delaune6.jpg";
+// Saint-Denis (93) — Auguste Delaune
+const saintDenisAvant3 = "/photos/saint-denis-delaune/avant-chantier-3.jpg";
+const saintDenisAvant5 = "/photos/saint-denis-delaune/avant-chantier-5.jpg";
+const saintDenisAvant6 = "/photos/saint-denis-delaune/avant-chantier-6.jpg";
+const saintDenisAvant9 = "/photos/saint-denis-delaune/avant-chantier-9.jpg";
+const saintDenisFinal1 = "/photos/saint-denis-delaune/finalisation.jpg";
+const saintDenisFinal2 = "/photos/saint-denis-delaune/finalisation-2.jpg";
+const saintDenisFinal3 = "/photos/saint-denis-delaune/finalisation-3.jpg";
+const saintDenisFinal4 = "/photos/saint-denis-delaune/finalisation-4.jpg";
+const saintDenisFinal5 = "/photos/saint-denis-delaune/finalisation-5.jpg";
+const saintDenisFinal6 = "/photos/saint-denis-delaune/finalisation-6.jpg";
 
 import stOuen2 from "@/assets/st-ouen-2.jpg";
 import stOuen3 from "@/assets/st-ouen-3.jpg";
@@ -1627,29 +1631,35 @@ Ce projet démontre qu'une rénovation prend tout son sens lorsqu'elle est guid�
   // ========== 📍 SAINT-DENIS (93) ==========
   {
     id: "saint-denis-delaune",
-    slug: "salle-de-bain-saint-denis-93-appartement-feminin-verriere-metro-blanc",
-    title: "Salle de bain Saint-Denis — Appartement au féminin",
-    subtitle: "Verrière noire, métro blanc & sol graphique",
+    slug: "salle-de-bain-saint-denis-93-renovation-optimisation-metro-blanc-noir",
+    title: "Rénovation Salle de Bain à Saint-Denis (93) – Rue Auguste Delaune",
+    subtitle: "Optimisation complète d'une salle de bain en longueur en centre-ville piéton",
     location: "Saint-Denis (93) — Rue Auguste Delaune",
-    description: `Un écrin de féminité dans cet appartement de Saint-Denis, où la salle de bain devient une véritable extension de la chambre parentale. La verrière atelier en acier noir crée une connexion visuelle élégante tout en préservant l'intimité.
+    description: `À Saint-Denis (93200), rue Auguste Delaune, en plein centre piéton, nous avons réalisé la rénovation complète d'une salle de bain dans le cadre d'un projet global d'optimisation d'appartement.
 
-Au sol, le carrelage NEOCIM KERION Orient Titane affiche un motif géométrique 3D en noir et gris qui structure l'espace avec audace. Les murs reçoivent le carrelage métro blanc brillant, apportant luminosité et charme intemporel à la douche.
+Avec Thierry Pelmard, nous avons retravaillé les plans afin d'améliorer la circulation et d'optimiser chaque mètre carré du logement. La salle de bain faisait partie des espaces stratégiques à restructurer.
 
-Le meuble vasque épouse les standards IKEA pour un confort d'usage optimal : le GODMORGON blanc effet chêne blanchi (2 tiroirs, IKEA 802.261.99) surmonté du plan EKBACKEN sur mesure gris blanc crée une base fonctionnelle. On y dépose la vasque à poser Lila en céramique blanche (40.5 x 40.5 cm), dotée d'une bonde clic-clac EQUATION avec trop-plein pour une vidange fluide. La robinetterie SENSEA Hao chromée complète cette vasque avec élégance. Le miroir Barbier noir carré (53 x 53 cm, LM 70819063) reprend la géométrie de l'espace tout en créant un point focal raffiné.
+La première décision a été de fermer l'ancien accès à la chambre afin de créer un mur exploitable et d'optimiser l'agencement. Cette modification a permis d'améliorer la cohérence du volume et de créer une future tête de lit côté chambre.
 
-Pour la douche, le receveur rectangulaire Mila en résine blanche (120 x 80 cm) accueille la colonne Nessy Cuadrado avec ses finitions chromées. La paroi italienne en verre transparent 6 mm (90 cm de large) délimite l'espace sans l'enfermer. Les niches encastrées offrent un rangement pratique, tandis que la colonne de douche garantit confort et fonctionnalité.
+Dans cette salle de bain en longueur, nous avons intégré : un grand receveur de douche, un meuble vasque avec rangement, un WC, un lave-linge intégré sous plan, un chauffe-eau dissimulé dans un placard, une VMC pour une ventilation performante, un sèche-serviettes pour le confort thermique, et des rangements dédiés aux serviettes.
+
+La douche ouverte avec paroi vitrée noire permet d'agrandir visuellement l'espace. Le lave-linge s'intègre discrètement sous le plan vasque. Les rangements absorbent le quotidien sans alourdir la pièce. La technique est maîtrisée, les volumes sont optimisés, la circulation est naturelle.
 
 Ce projet illustre parfaitement notre approche : un chantier heureux, fondé sur l'anticipation, la coordination des travaux et la sérénité du client.`,
-    coverImage: saintDenisDelaune3,
+    coverImage: saintDenisFinal1,
     photos: [
-      { id: 1, image: saintDenisDelaune3, title: "Après — Vue vasque & miroir", description: "Meuble bois clair, vasque à poser et miroir barbier noir" },
-      { id: 2, image: saintDenisDelaune4, title: "Après — Vue d'ensemble", description: "Rangements blancs et détail croix rose pharmacie" },
-      { id: 3, image: saintDenisDelaune6, title: "Après — Douche & vasque", description: "Carrelage métro blanc et colonne chromée" },
-      { id: 4, image: saintDenisDelaune5, title: "Après — Détail douche", description: "Niches encastrées et ciel de pluie" },
-      { id: 5, image: saintDenisDelaune1, title: "Après — Vue depuis la chambre", description: "Verrière atelier et connexion chambre-salle de bain" },
-      { id: 6, image: saintDenisDelaune2, title: "Après — Détail verrière", description: "Acier noir et sol géométrique 3D" },
+      { id: 1, image: saintDenisFinal1, title: "Après — Vue vasque, douche & lave-linge", description: "Meuble vasque avec lave-linge intégré et paroi vitrée noire" },
+      { id: 2, image: saintDenisFinal2, title: "Après — Vasque & douche italienne", description: "Carrelage métro blanc et robinetterie noire" },
+      { id: 3, image: saintDenisFinal3, title: "Après — Détail vasque & robinetterie", description: "Vasque à poser et mitigeur noir mat" },
+      { id: 4, image: saintDenisFinal4, title: "Après — Colonne de douche", description: "Paroi vitrée noire et ciel de pluie" },
+      { id: 5, image: saintDenisFinal5, title: "Après — Détail miroir & vasque", description: "Niche encastrée visible dans le miroir" },
+      { id: 6, image: saintDenisFinal6, title: "Après — Douche & sèche-serviettes", description: "Lave-linge intégré et sèche-serviettes blanc" },
+      { id: 7, image: saintDenisAvant5, title: "Avant — Salle de bain vétuste", description: "Cabine de douche, WC et lavabo d'origine" },
+      { id: 8, image: saintDenisAvant6, title: "Avant — Vue en longueur", description: "Configuration étroite avec cabine de douche" },
+      { id: 9, image: saintDenisAvant3, title: "Avant — Chambre & accès", description: "Ancien accès chambre-salle de bain à fermer" },
+      { id: 10, image: saintDenisAvant9, title: "Avant — Séjour & cuisine", description: "Vue d'ensemble de l'appartement avant travaux" },
     ],
-    finitionSol: "gres-cerame-motif",
+    finitionSol: "gres-cerame-uni",
     finitionMur: "metro-allonge",
   },
   // ========== 📍 CHARENTON-LE-PONT (94) ==========
