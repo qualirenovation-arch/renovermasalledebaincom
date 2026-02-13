@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { ArrowRight, ArrowLeft, ChevronLeft, ChevronRight, MapPin, X } from "lucide-react";
-import carteChantiers from "@/assets/carte-chantiers-idf.png";
+const carteChantiers = "/images/carte-chantiers-idf.png";
 import { OGTags } from "@/components/seo/OGTags";
 import { 
   albums, 

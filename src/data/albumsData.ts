@@ -330,32 +330,32 @@ const saintDenisFinal4 = "/photos/saint-denis-delaune/finalisation-4.jpg";
 const saintDenisFinal5 = "/photos/saint-denis-delaune/finalisation-5.jpg";
 const saintDenisFinal6 = "/photos/saint-denis-delaune/finalisation-6.jpg";
 
-import stOuen2 from "@/assets/st-ouen-2.jpg";
-import stOuen3 from "@/assets/st-ouen-3.jpg";
-import stOuen4 from "@/assets/st-ouen-4.jpg";
-import stOuen5 from "@/assets/st-ouen-5.jpg";
-import stOuen6 from "@/assets/st-ouen-6.jpg";
-import stOuen7 from "@/assets/st-ouen-7.jpg";
-import stOuenAvant1 from "@/assets/st-ouen-avant-1.jpg";
-import stOuenAvant2 from "@/assets/st-ouen-avant-2.jpg";
+const stOuen2 = "/images/st-ouen-2.jpg";
+const stOuen3 = "/images/st-ouen-3.jpg";
+const stOuen4 = "/images/st-ouen-4.jpg";
+const stOuen5 = "/images/st-ouen-5.jpg";
+const stOuen6 = "/images/st-ouen-6.jpg";
+const stOuen7 = "/images/st-ouen-7.jpg";
+const stOuenAvant1 = "/images/st-ouen-avant-1.jpg";
+const stOuenAvant2 = "/images/st-ouen-avant-2.jpg";
 
 // Saint-Mandé (94)
-import stMande1 from "@/assets/st-mande-1.jpg";
-import stMande2 from "@/assets/st-mande-2.jpg";
-import stMande3 from "@/assets/st-mande-3.jpg";
+const stMande1 = "/images/st-mande-1.jpg";
+const stMande2 = "/images/st-mande-2.jpg";
+const stMande3 = "/images/st-mande-3.jpg";
 
 // Avenue Matignon Paris 8ème
-import matignon1 from "@/assets/matignon-1.jpg";
-import matignon2 from "@/assets/matignon-2.jpg";
-import matignon3 from "@/assets/matignon-3.jpg";
-import matignon4 from "@/assets/matignon-4.jpg";
-import matignonAvant1 from "@/assets/matignon-avant-1.jpg";
-import matignonAvant2 from "@/assets/matignon-avant-2.jpg";
-import matignonAvant3 from "@/assets/matignon-avant-3.jpg";
-import matignonAvant4 from "@/assets/matignon-avant-4.jpg";
+const matignon1 = "/images/matignon-1.jpg";
+const matignon2 = "/images/matignon-2.jpg";
+const matignon3 = "/images/matignon-3.jpg";
+const matignon4 = "/images/matignon-4.jpg";
+const matignonAvant1 = "/images/matignon-avant-1.jpg";
+const matignonAvant2 = "/images/matignon-avant-2.jpg";
+const matignonAvant3 = "/images/matignon-avant-3.jpg";
+const matignonAvant4 = "/images/matignon-avant-4.jpg";
 
 // Saint-Honoré Paris 8ème
-import stHonore1 from "@/assets/st-honore-1.jpg";
+const stHonore1 = "/images/st-honore-1.jpg";
 const stHonore2 = "/images/st-honore-2.jpg";
 const stHonore3 = "/images/st-honore-3.jpg";
 const stHonore4 = "/images/st-honore-4.jpg";

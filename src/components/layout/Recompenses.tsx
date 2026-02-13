@@ -1,5 +1,5 @@
 import { ExternalLink } from "lucide-react";
-import houzzBadge2019 from "@/assets/logos/houzz-badge-2019.png";
+const houzzBadge2019 = "/images/logos/houzz-badge-2019.png";
 
 // Badge officiel Houzz - Style rectangulaire/vertical
 const HouzzBadge = ({ 
