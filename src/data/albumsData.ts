@@ -2117,12 +2117,11 @@ export interface ProjectLocation {
 }
 
 export const projectLocations: ProjectLocation[] = [
-  { id: "buttes-chaumont", name: "Buttes-Chaumont", area: "19ème", x: 55, y: 35 },
-  { id: "rocroy", name: "Rue de Rocroy", area: "10ème", x: 48, y: 40 },
-  { id: "port-royal", name: "Port-Royal", area: "5ème", x: 42, y: 58 },
-  { id: "la-tour", name: "Rue de la Tour", area: "16ème", x: 30, y: 50 },
-  { id: "courbevoie-lalyre", name: "Rue Ernest Lalyre", area: "Courbevoie (92)", x: 25, y: 28 },
-  
+  { id: "buttes-chaumont", name: "Buttes-Chaumont", area: "19ème", x: 60, y: 23 },
+  { id: "rocroy", name: "Rue de Rocroy", area: "10ème", x: 55, y: 37 },
+  { id: "port-royal", name: "Port-Royal", area: "5ème", x: 52, y: 52 },
+  { id: "la-tour", name: "Rue de la Tour", area: "16ème", x: 39, y: 46 },
+  { id: "courbevoie-lalyre", name: "Rue Ernest Lalyre", area: "Courbevoie (92)", x: 37, y: 27 },
 ];
 
 // ===== CATEGORY MAPPING =====
