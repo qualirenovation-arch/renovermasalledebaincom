@@ -2061,8 +2061,12 @@ export const inProgressAlbums: Album[] = [
     coverImage: rocroy1,
     isInProgress: true,
     photos: [
-      { id: 1, image: rocroy1, title: "État initial", description: "Avant démolition" },
-      { id: 2, image: rocroy2, title: "Travaux", description: "En cours de rénovation" },
+      { id: 1, image: "/photos/rocroy/avant-baignoire.jpg", title: "Avant — Baignoire existante", description: "Salle de bain avant rénovation avec baignoire sabot et carrelage d'origine" },
+      { id: 2, image: "/photos/rocroy/demolition.jpg", title: "Démolition et restructuration", description: "Phase de démolition : ouverture des cloisons et passage des réseaux électriques" },
+      { id: 3, image: "/photos/rocroy/materiaux-carrelage.jpg", title: "Matériaux et carrelage déco", description: "Préparation des matériaux : colle Weber, étanchéité Webersys et carreaux de ciment graphiques" },
+      { id: 4, image: "/photos/rocroy/pose-receveur.jpg", title: "Pose du receveur de douche", description: "Installation du receveur extra-plat et raccordement de la robinetterie encastrée" },
+      { id: 5, image: "/photos/rocroy/carrelage-mur.jpg", title: "Carrelage mural motif géométrique", description: "Pose du carrelage vert et blanc à motif géométrique en cabine de douche" },
+      { id: 6, image: "/photos/rocroy/carrelage-sol.jpg", title: "Carrelage sol terminé", description: "Vue d'ensemble du carrelage de sol à motif géométrique vert et blanc posé" },
     ],
   },
   {
