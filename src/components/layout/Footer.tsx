@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
-const qualirenovationLogo = "/images/logos/qualirenovation-logo-new.png";
-const houzzLogo = "/images/logos/houzz-logo.png";
 import RMSBLogo from "@/components/brand/RMSBLogo";
 
 const footerLinks = {
@@ -42,11 +40,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <Link to="/" className="inline-block mb-4">
-              <img 
-                src={qualirenovationLogo} 
-                alt="QualiRénovation Logo" 
-                className="h-16 w-auto"
-              />
+              <RMSBLogo size="md" variant="light" />
             </Link>
             <p className="text-primary-foreground/80 mb-2 leading-relaxed">
               <strong>6 rue d'Armaillé, 75017 Paris</strong>
@@ -65,7 +59,7 @@ export function Footer() {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a href="https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors" aria-label="Houzz">
-                <img src={houzzLogo} alt="Houzz" className="w-5 h-5 object-contain" />
+                <img src="/images/logos/houzz-best-of-2026-photo-award.png" alt="Houzz" className="w-5 h-5 object-contain" />
               </a>
             </div>
           </div>
