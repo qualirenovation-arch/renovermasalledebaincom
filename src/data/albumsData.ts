@@ -2107,6 +2107,7 @@ export const inProgressAlbums: Album[] = [
       { id: 3, image: "/photos/courbevoie-lalyre/etancheite-sdb.jpg", title: "Étanchéité salle de bain", description: "Application du système d'étanchéité liquide (SEL) conforme DTU 52.2" },
       { id: 4, image: "/photos/courbevoie-lalyre/etancheite-wc.jpg", title: "Étanchéité WC", description: "Protection étanche du sol des WC avant pose du carrelage" },
       { id: 5, image: "/photos/courbevoie-lalyre/pose-bati-geberit.jpg", title: "Pose bâti-support Geberit", description: "Installation du bâti-support Geberit pour WC suspendu" },
+      { id: 6, image: "/photos/courbevoie-lalyre/carrelage-baignoire.jpg", title: "Carrelage baignoire", description: "Pose du carrelage grand format autour de la baignoire avec niches intégrées" },
     ],
   },
 ];
