@@ -2067,9 +2067,9 @@ export const inProgressAlbums: Album[] = [
   },
   {
     id: "port-royal",
-    slug: "chantier-paris-5-port-royal",
+    slug: "chantier-paris-13-port-royal",
     title: "Rénovation complète",
-    location: "Paris 5ème - Boulevard de Port-Royal",
+    location: "Paris 13ème - Boulevard de Port-Royal",
     description: "Transformation d'une salle de bain années 70 avec mosaïque bleue. Création d'une douche à l'italienne et rénovation des WC. Chantier en cours — restez connecté pour découvrir cette transformation !",
     coverImage: portRoyal1,
     isInProgress: true,
@@ -2118,8 +2118,8 @@ export interface ProjectLocation {
 
 export const projectLocations: ProjectLocation[] = [
   { id: "buttes-chaumont", name: "Buttes-Chaumont", area: "19ème", x: 60, y: 23 },
-  { id: "rocroy", name: "Rue de Rocroy", area: "10ème", x: 55, y: 37 },
-  { id: "port-royal", name: "Port-Royal", area: "5ème", x: 52, y: 52 },
+  { id: "rocroy", name: "Rue de Rocroy", area: "10ème", x: 56, y: 31 },
+  { id: "port-royal", name: "Port-Royal", area: "13ème", x: 55, y: 55 },
   { id: "la-tour", name: "Rue de la Tour", area: "16ème", x: 39, y: 46 },
   { id: "courbevoie-lalyre", name: "Rue Ernest Lalyre", area: "Courbevoie (92)", x: 37, y: 27 },
 ];
