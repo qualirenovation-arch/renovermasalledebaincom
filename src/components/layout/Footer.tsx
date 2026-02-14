@@ -35,21 +35,21 @@ const footerLinks = {
 };
 export function Footer() {
   return <footer className="bg-primary text-primary-foreground">
-      <div className="container-custom py-10 md:py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+      <div className="container-custom py-6 md:py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {/* Brand */}
           <div>
-            <Link to="/" className="inline-block mb-3">
+            <Link to="/" className="inline-block mb-2">
               <img 
                 src="/images/logos/qualirenovation-logo-new.png" 
                 alt="QualiRénovation by QualiConcept" 
-                className="h-16 w-auto"
+                className="h-12 w-auto"
               />
             </Link>
-            <p className="text-primary-foreground/80 mb-2 leading-relaxed">
+            <p className="text-primary-foreground/80 mb-1 text-sm leading-snug">
               <strong>6 rue d'Armaillé, 75017 Paris</strong>
             </p>
-            <p className="text-primary-foreground/80 mb-6 leading-relaxed">
+            <p className="text-primary-foreground/80 mb-4 text-sm leading-snug">
               Spécialiste de la rénovation de salle de bain et douche à l'italienne à Paris et en Île-de-France.
             </p>
             <div className="flex gap-3">
@@ -70,9 +70,9 @@ export function Footer() {
 
           {/* Navigation */}
           <div>
-            <h4 className="font-display text-base font-semibold mb-3">Navigation</h4>
-            <ul className="space-y-2">
-              {footerLinks.navigation.map(link => <li key={link.path}>
+            <h4 className="font-display text-sm font-semibold mb-2">Navigation</h4>
+            <ul className="space-y-1">
+              {footerLinks.navigation.map(link => <li key={link.path} className="text-sm">
                   <Link to={link.path} className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                     {link.label}
                   </Link>
@@ -82,9 +82,9 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-display text-base font-semibold mb-3">Nos services</h4>
-            <ul className="space-y-2">
-              {footerLinks.services.map((service, index) => <li key={index} className="text-primary-foreground/80">
+            <h4 className="font-display text-sm font-semibold mb-2">Nos services</h4>
+            <ul className="space-y-1">
+              {footerLinks.services.map((service, index) => <li key={index} className="text-primary-foreground/80 text-sm">
                   {service}
                 </li>)}
             </ul>
@@ -92,8 +92,8 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-display text-base font-semibold mb-3">Contact</h4>
-            <ul className="space-y-3">
+            <h4 className="font-display text-sm font-semibold mb-2">Contact</h4>
+            <ul className="space-y-2">
               <li>
                 <a href="tel:+33659764685" className="flex items-center gap-3 text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   <Phone className="w-5 h-5 text-accent" />
@@ -113,7 +113,7 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-primary-foreground/10">
-        <div className="container-custom py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
+        <div className="container-custom py-4 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-primary-foreground/60">
           <div className="flex items-center gap-4">
             <RMSBLogo size="sm" variant="light" />
             <div className="text-center md:text-left">
