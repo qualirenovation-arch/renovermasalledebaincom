@@ -106,14 +106,6 @@ export function Footer() {
                   gestion@qualiconcept.fr
                 </a>
               </li>
-              <li className="flex items-start gap-3 text-primary-foreground/80">
-                <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                <span>6 rue d'Armaillé<br />75017 Paris</span>
-              </li>
-              <li className="flex items-start gap-3 text-primary-foreground/80">
-                <Clock className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                <span>Lun - Ven : 8h - 18h<br />Sam : 9h - 12h</span>
-              </li>
             </ul>
           </div>
         </div>
