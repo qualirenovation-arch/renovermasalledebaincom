@@ -133,8 +133,8 @@ const taitbout9 = "/images/taitbout-9.jpg";
 const taitbout10 = "/images/taitbout-10.jpg";
 const taitbout11 = "/images/taitbout-11.jpg";
 const taitbout12 = "/images/taitbout-12.jpg";
-const rocroy1 = "/images/rocroy-1.jpg";
-const rocroy2 = "/images/rocroy-2.jpg";
+const rocroy1 = "/photos/rocroy/avant-baignoire.jpg";
+const rocroy2 = "/photos/rocroy/demolition.jpg";
 
 const nicolasRoret1 = "/images/nicolas-roret-1.jpg";
 const nicolasRoret2 = "/images/nicolas-roret-2.jpg";
@@ -449,7 +449,7 @@ const laTourAvant1 = "/images/la-tour-avant-1.jpg";
 const laTourAvant2 = "/images/la-tour-avant-2.jpg";
 const laTourAvant3 = "/images/la-tour-avant-3.jpg";
 
-const courbevoieLalyreAvant1 = "/images/courbevoie-lalyre-avant-1.jpg";
+const courbevoieLalyreAvant1 = "/photos/courbevoie-lalyre/avant-sdb.jpg";
 
 const courbevoieStGuillaumeChantier1 = "/images/courbevoie-st-guillaume-chantier-1.jpg";
 
