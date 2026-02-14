@@ -41,7 +41,7 @@ export function Footer() {
           <div>
             <Link to="/" className="inline-block mb-3">
               <img 
-                src="/images/logos/qualirenovation-logo-sm.png" 
+                src="/images/logos/qualirenovation-logo-new.png" 
                 alt="QualiRénovation by QualiConcept" 
                 className="h-16 w-auto"
               />
