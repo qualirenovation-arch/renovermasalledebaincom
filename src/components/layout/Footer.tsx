@@ -40,10 +40,11 @@ export function Footer() {
           {/* Brand */}
           <div>
             <Link to="/" className="inline-block mb-3">
-              <div className="flex flex-col items-start">
-                <RMSBLogo size="md" variant="light" />
-                <span className="text-primary-foreground/60 text-xs mt-1">by QualiConcept</span>
-              </div>
+              <img 
+                src="/images/logos/qualirenovation-logo-sm.png" 
+                alt="QualiRénovation by QualiConcept" 
+                className="h-16 w-auto"
+              />
             </Link>
             <p className="text-primary-foreground/80 mb-2 leading-relaxed">
               <strong>6 rue d'Armaillé, 75017 Paris</strong>
