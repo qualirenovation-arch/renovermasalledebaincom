@@ -121,10 +121,6 @@ const butteschaumont2 = "/images/buttes-chaumont-2.jpg";
 const butteschaumont3 = "/images/buttes-chaumont-3.jpg";
 const butteschaumont4 = "/images/buttes-chaumont-4.jpg";
 const butteschaumont5 = "/images/buttes-chaumont-5.jpg";
-const butteschaumont6 = "/images/buttes-chaumont-6.jpg";
-const butteschaumont7 = "/images/buttes-chaumont-7.jpg";
-const butteschaumont8 = "/images/buttes-chaumont-8.jpg";
-const butteschaumont9 = "/images/buttes-chaumont-9.jpg";
 const taitbout1 = "/images/taitbout-1.jpg";
 const taitbout2 = "/images/taitbout-2.jpg";
 const taitbout3 = "/images/taitbout-3.jpg";
@@ -2049,15 +2045,11 @@ export const inProgressAlbums: Album[] = [
     coverImage: butteschaumont1,
     isInProgress: true,
     photos: [
-      { id: 1, image: butteschaumont9, title: "Travaux — Étanchéité", description: "Application Weber Aquastop bleue" },
-      { id: 2, image: butteschaumont8, title: "Travaux — Préparation", description: "Mise en œuvre de l'étanchéité" },
-      { id: 3, image: butteschaumont7, title: "Travaux — Protection", description: "Étanchéité des angles" },
-      { id: 4, image: butteschaumont6, title: "Travaux — Douche", description: "Receveur en cours de pose" },
-      { id: 5, image: butteschaumont5, title: "Travaux — Vue générale", description: "Avancement du chantier" },
-      { id: 6, image: butteschaumont4, title: "Travaux — Détail", description: "Préparation des murs" },
-      { id: 7, image: butteschaumont3, title: "Avant — État initial", description: "Salle de bain à rénover" },
-      { id: 8, image: butteschaumont2, title: "Avant — Vue générale", description: "Configuration initiale" },
-      { id: 9, image: butteschaumont1, title: "Avant — Vue d'ensemble", description: "État des lieux" },
+      { id: 1, image: butteschaumont1, title: "En cours — Douche terrazzo", description: "Pose de la paroi et robinetterie laiton" },
+      { id: 2, image: butteschaumont2, title: "Travaux — Étanchéité", description: "Application de l'étanchéité bleue" },
+      { id: 3, image: butteschaumont3, title: "Travaux — Relevé laser", description: "Prise de cotes au laser pour la douche" },
+      { id: 4, image: butteschaumont4, title: "Avant — Salle de bain", description: "Salle de bain avant rénovation" },
+      { id: 5, image: butteschaumont5, title: "Avant — Vue générale", description: "Configuration initiale" },
     ],
   },
   {
