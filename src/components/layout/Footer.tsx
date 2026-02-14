@@ -43,7 +43,7 @@ export function Footer() {
               <img 
                 src="/images/logos/qualirenovation-logo-new.png" 
                 alt="QualiRénovation by QualiConcept" 
-                className="h-12 w-auto rounded-md"
+                className="h-16 w-auto"
               />
             </Link>
             <p className="text-primary-foreground/80 mb-2 leading-relaxed">
