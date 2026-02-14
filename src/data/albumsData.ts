@@ -452,8 +452,6 @@ const portRoyalAvant2 = "/images/port-royal-avant-2.jpg";
 const laTourAvant1 = "/images/la-tour-avant-1.jpg";
 const laTourAvant2 = "/images/la-tour-avant-2.jpg";
 const laTourAvant3 = "/images/la-tour-avant-3.jpg";
-const laTourAvant4 = "/images/la-tour-avant-4.jpg";
-const laTourAvant5 = "/images/la-tour-avant-5.jpg";
 
 const courbevoieLalyreAvant1 = "/images/courbevoie-lalyre-avant-1.jpg";
 
@@ -2095,14 +2093,12 @@ export const inProgressAlbums: Album[] = [
     title: "Restructuration complète",
     location: "Paris 16ème - Rue de la Tour",
     description: "Projet ambitieux de restructuration : démolition de la salle de bain existante pour agrandir la cuisine. Création d'une nouvelle salle de douche et WC au fond de l'appartement, en exploitant la colonne d'évacuation. Chantier en cours — restez connecté pour découvrir cette transformation !",
-    coverImage: laTourAvant4,
+    coverImage: laTourAvant1,
     isInProgress: true,
     photos: [
-      { id: 1, image: laTourAvant4, title: "Avant - Vue douche", description: "Colonne de douche existante" },
-      { id: 2, image: laTourAvant3, title: "Avant - Vue générale", description: "Rangements et vasque" },
-      { id: 3, image: laTourAvant1, title: "Avant - Vasque", description: "Vasque marbre et sèche-serviettes" },
-      { id: 4, image: laTourAvant2, title: "Avant - Détail", description: "Aménagement existant" },
-      { id: 5, image: laTourAvant5, title: "Avant - WC", description: "WC suspendu à rénover" },
+      { id: 1, image: laTourAvant1, title: "Avant - Salon avec cheminée", description: "Pièce de réception avec cheminée en marbre et miroir doré" },
+      { id: 2, image: laTourAvant2, title: "Avant - Séjour lumineux", description: "Grand séjour avec vitrail et bow-window" },
+      { id: 3, image: laTourAvant3, title: "Avant - Couloir", description: "Couloir avec rangements et papier peint oiseaux" },
     ],
   },
   {
