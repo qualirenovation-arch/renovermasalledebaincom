@@ -35,15 +35,15 @@ const footerLinks = {
 };
 export function Footer() {
   return <footer className="bg-primary text-primary-foreground">
-      <div className="container-custom section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="container-custom py-10 md:py-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
           {/* Brand */}
           <div>
-            <Link to="/" className="inline-block mb-4">
+            <Link to="/" className="inline-block mb-3">
               <img 
                 src="/images/logos/qualirenovation-logo-new.png" 
                 alt="QualiRénovation by QualiConcept" 
-                className="h-16 w-auto"
+                className="h-12 w-auto rounded-md"
               />
             </Link>
             <p className="text-primary-foreground/80 mb-2 leading-relaxed">
@@ -52,7 +52,7 @@ export function Footer() {
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
               Spécialiste de la rénovation de salle de bain et douche à l'italienne à Paris et en Île-de-France.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-3">
               <a href="https://wa.me/33659764685" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center hover:bg-[#20BD5A] transition-colors" aria-label="WhatsApp">
                 <MessageCircle className="w-5 h-5 text-white" />
               </a>
@@ -70,8 +70,8 @@ export function Footer() {
 
           {/* Navigation */}
           <div>
-            <h4 className="font-display text-lg font-semibold mb-4">Navigation</h4>
-            <ul className="space-y-3">
+            <h4 className="font-display text-base font-semibold mb-3">Navigation</h4>
+            <ul className="space-y-2">
               {footerLinks.navigation.map(link => <li key={link.path}>
                   <Link to={link.path} className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                     {link.label}
@@ -82,8 +82,8 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-display text-lg font-semibold mb-4">Nos services</h4>
-            <ul className="space-y-3">
+            <h4 className="font-display text-base font-semibold mb-3">Nos services</h4>
+            <ul className="space-y-2">
               {footerLinks.services.map((service, index) => <li key={index} className="text-primary-foreground/80">
                   {service}
                 </li>)}
@@ -92,8 +92,8 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-display text-lg font-semibold mb-4">Contact</h4>
-            <ul className="space-y-4">
+            <h4 className="font-display text-base font-semibold mb-3">Contact</h4>
+            <ul className="space-y-3">
               <li>
                 <a href="tel:+33659764685" className="flex items-center gap-3 text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   <Phone className="w-5 h-5 text-accent" />
