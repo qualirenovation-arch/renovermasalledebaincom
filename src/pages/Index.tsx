@@ -148,14 +148,12 @@ export default function Index() {
             />
           </div>
           <div className="text-center sm:text-left max-w-2xl">
-            <p className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3 tracking-tight">Lauréat Best of Houzz 2026</p>
+            <p className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3 tracking-tight">Lauréat Best of Houzz 2026 🏆</p>
             <div className="text-muted-foreground text-sm md:text-base leading-relaxed space-y-3">
-              <p>Merci à nos clients pour leur confiance, leur bonne humeur et cette énergie positive qui nous pousse, projet après projet, à viser l'excellence.</p>
-              <p>Et bien sûr, merci à <strong>Stéphane Vasco</strong>, notre partenaire photographe, qui immortalise notre savoir-faire depuis plus de dix ans et met en lumière l'engagement ainsi que les nombreuses heures de travail nécessaires pour aboutir à ces réalisations.</p>
-              <p>Merci également à <strong>Thierry Pelmard</strong>, notre architecte partenaire, qui après plus de 60 chantiers réalisés ensemble, fait partie intégrante de cette belle reconnaissance professionnelle. Sa rigueur de travail et son engagement auprès de nos clients contribuent chaque jour à l'excellence de nos réalisations.</p>
-              <p className="italic">Au final, c'est avant tout une aventure humaine.</p>
-              <p>Un grand merci également à <strong>Noah</strong>, notre Community Manager, qui gère nos réseaux sociaux depuis maintenant deux ans et réalise, en collaboration avec Stéphane, un travail quotidien remarquable pour développer notre image. À travers la diffusion de nos réalisations et de conseils techniques, ils vous accompagnent dans vos projets avec un contenu que nous espérons inspirant.</p>
-              <p>Rejoignez-nous sur nos réseaux sociaux pour découvrir l'envers du décor, participer à nos réceptions de chantier et suivre nos conseils techniques. <strong>Vous ne regarderez plus la rénovation de la même façon.</strong></p>
+              <p><strong>Cette distinction récompense bien plus qu'une photo.</strong><br />Elle célèbre une équipe.</p>
+              <p>Plus de 20 professionnels sur le terrain et une équipe de conception engagée pour viser l'excellence, projet après projet.</p>
+              <p>Merci à nos clients pour leur confiance.<br />Merci à <strong>Thierry Pelmard</strong>, notre architecte partenaire, pour plus de 60 chantiers réalisés ensemble.<br />Merci à <strong>Stéphane Vasco</strong> et <strong>Noah</strong>, qui capturent et subliment notre savoir-faire pour partager avec vous l'envers du décor et nos conseils techniques.</p>
+              <p className="italic">Une aventure humaine. Une exigence partagée.<br /><strong>Vous ne regarderez plus la rénovation de la même façon.</strong></p>
             </div>
           </div>
         </div>
