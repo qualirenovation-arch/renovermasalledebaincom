@@ -62,8 +62,8 @@ export function Footer() {
               <a href="https://www.linkedin.com/in/carina-nahmani-b30619167/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors" aria-label="LinkedIn">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors" aria-label="Houzz">
-                <img src="/images/logos/houzz-best-of-2026-photo-award.png" alt="Houzz" className="w-5 h-5 object-contain" />
+              <a href="https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#4DBC15] flex items-center justify-center hover:bg-[#3DA012] transition-colors" aria-label="Houzz">
+                <span className="text-white font-bold text-lg leading-none">H</span>
               </a>
             </div>
           </div>
