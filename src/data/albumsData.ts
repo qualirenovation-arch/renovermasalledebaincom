@@ -2103,6 +2103,10 @@ export const inProgressAlbums: Album[] = [
     isInProgress: true,
     photos: [
       { id: 1, image: courbevoieLalyreAvant1, title: "Avant — Vue vasque et ensemble", description: "Salle de bain avant rénovation" },
+      { id: 2, image: "/photos/courbevoie-lalyre/avant-sdb.jpg", title: "Avant — Salle de bain existante", description: "Carrelage et baignoire d'origine" },
+      { id: 3, image: "/photos/courbevoie-lalyre/etancheite-sdb.jpg", title: "Étanchéité salle de bain", description: "Application du système d'étanchéité liquide (SEL) conforme DTU 52.2" },
+      { id: 4, image: "/photos/courbevoie-lalyre/etancheite-wc.jpg", title: "Étanchéité WC", description: "Protection étanche du sol des WC avant pose du carrelage" },
+      { id: 5, image: "/photos/courbevoie-lalyre/pose-bati-geberit.jpg", title: "Pose bâti-support Geberit", description: "Installation du bâti-support Geberit pour WC suspendu" },
     ],
   },
 ];
