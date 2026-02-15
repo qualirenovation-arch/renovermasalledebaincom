@@ -110,7 +110,7 @@ export function Footer() {
       <div className="border-t border-primary-foreground/10">
         <div className="container-custom py-4 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-primary-foreground/60">
           <div className="flex items-center gap-3">
-            <RMSBTextLogo size="sm" variant="light" className="w-[140px] h-auto" />
+            <RMSBTextLogo size="sm" variant="light" className="w-[200px] h-auto" />
             <div className="text-center md:text-left">
               <p>6 rue d'Armaillé, 75017 Paris — © 2024 Tous droits réservés.</p>
               <p className="mt-0.5 text-[11px]">Site édité par Qualirenovation by Qualiconcept</p>
