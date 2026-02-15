@@ -9,7 +9,7 @@ const HouzzBadge = ({
   year: string; 
   category: "Design" | "Service" | "Photo"; 
 }) => {
-  const categoryColor = category === "Design" ? "hsl(35, 60%, 48%)" : category === "Photo" ? "hsl(120, 50%, 35%)" : "hsl(210, 65%, 35%)";
+  const categoryColor = category === "Design" ? "hsl(30, 35%, 42%)" : category === "Photo" ? "hsl(120, 50%, 35%)" : "hsl(197, 70%, 24%)";
   
   return (
     <div className="flex flex-col items-center">

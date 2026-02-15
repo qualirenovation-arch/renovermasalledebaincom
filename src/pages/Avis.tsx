@@ -211,7 +211,7 @@ export default function Avis() {
                 href="https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#296189] hover:bg-[#1e4a66] text-white font-medium px-6 py-3 rounded-full transition-colors shadow-md hover:shadow-lg"
+                className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-6 py-3 rounded-full transition-colors shadow-md hover:shadow-lg"
               >
                 Voir tous les avis sur Houzz
                 <ExternalLink className="w-4 h-4" />

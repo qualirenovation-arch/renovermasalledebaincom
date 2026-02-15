@@ -21,8 +21,8 @@ const RMSBTextLogo: React.FC<RMSBTextLogoProps> = ({
   const { width, fontSize1, fontSize2 } = sizeMap[size];
   const color = variant === "dark" ? "#124A66" : "#FFFFFF";
   const subtitleColor = variant === "dark" ? "#4A4A4A" : "#FFFFFF";
-  const goldColor = "#C5A55A";
-  const goldLight = "#D4B96A";
+  const goldColor = "#8B6F47";
+  const goldLight = "#A0845C";
   const height = Math.round(width * 0.22);
   const centerX = width / 2;
   const textY = height * 0.45;
