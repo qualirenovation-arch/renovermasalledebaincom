@@ -4,7 +4,7 @@ import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
-import RMSBLogo from "@/components/brand/RMSBLogo";
+import logoCircle from "@/assets/logo-rmsb-circle.png";
 
 // Navigation simplifiée pour mobile (max 5 entrées)
 const mobileNavItems = [
@@ -52,20 +52,12 @@ export function Header() {
       <div className="container-custom">
         <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 md:gap-4 group flex-shrink-0">
-            {/* RMSB Logo encadré */}
-            <div className="hidden sm:flex flex-col items-center bg-white rounded-lg p-1.5 shadow-sm border border-border/50">
-              <RMSBLogo size="sm" showTagline={false} variant="dark" />
-              <span className="text-[9px] font-medium text-navy/70 -mt-1">by Qualirenovation</span>
-            </div>
-            <div className="flex flex-col leading-tight">
-              <span className="font-display text-base md:text-lg lg:text-xl font-bold text-navy tracking-tight whitespace-nowrap">
-                RenoverMaSalleDeBain<span className="hidden lg:inline">.com</span>
-              </span>
-              <span className="text-xs md:text-sm font-semibold text-gold-dark hidden sm:block">
-                by Qualiconcept
-              </span>
-            </div>
+          <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
+            <img 
+              src={logoCircle} 
+              alt="RenoverMaSalleDeBain.com - Une expertise Qualirénovation" 
+              className="h-14 md:h-18 lg:h-20 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
