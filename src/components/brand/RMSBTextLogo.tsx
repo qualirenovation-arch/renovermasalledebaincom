@@ -7,7 +7,7 @@ interface RMSBTextLogoProps {
 }
 
 const sizeMap = {
-  sm: { width: 460, fontSize1: 24, fontSize2: 11 },
+  sm: { width: 460, fontSize1: 24, fontSize2: 13 },
   md: { width: 620, fontSize1: 32, fontSize2: 14 },
   lg: { width: 900, fontSize1: 50, fontSize2: 20 },
   xl: { width: 960, fontSize1: 52, fontSize2: 22 },
