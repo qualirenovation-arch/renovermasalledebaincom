@@ -54,8 +54,9 @@ export default function MentionsLegales() {
                 Le site renovermasalledebain.com est hébergé par :
               </p>
               <ul className="list-none space-y-2 text-muted-foreground mt-4">
-                <li><strong>Lovable (Lovable Technologies)</strong></li>
-                <li>Site web : <a href="https://lovable.dev" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">lovable.dev</a></li>
+                <li><strong>OVHcloud</strong></li>
+                <li>2 rue Kellermann, 59100 Roubaix, France</li>
+                <li>Site web : <a href="https://www.ovhcloud.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">ovhcloud.com</a></li>
               </ul>
             </section>
 
