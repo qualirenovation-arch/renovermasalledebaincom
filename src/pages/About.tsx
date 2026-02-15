@@ -511,14 +511,14 @@ export default function About() {
                 Lauréat Best of Houzz 2026 – Photo
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                En partenariat avec Houzz Pro, cette distinction récompense l'innovation et l'excellence des professionnels de la rénovation.
+                En partenariat avec Houzz Pro, cette distinction récompense l'innovation et l'excellence des professionnels de la rénovation et de l'aménagement.
               </p>
             </div>
 
             <div className="grid md:grid-cols-[1fr_auto] gap-8 items-start">
               <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p>
-                  <strong className="text-foreground">QualiRénovation by QualiConcept</strong>, maître d'œuvre et spécialiste de la rénovation intérieure à Paris et en Île-de-France, a remporté le prix <strong className="text-foreground">Best of Houzz 2026 – Photo</strong>, attribué par la communauté Houzz parmi plus de 3 millions de professionnels du secteur à travers le monde.
+                  <strong className="text-foreground">QualiRénovation by QualiConcept</strong>, maître d'œuvre et spécialiste de la rénovation intérieure à Paris et en Île-de-France, a remporté le prix <strong className="text-foreground">Best of Houzz 2026 – Photo</strong>, attribué par la communauté Houzz parmi plus de 3 millions de professionnels à travers le monde. Cette récompense met à l'honneur les réalisations les plus inspirantes et les plus appréciées sur la plateforme.
                 </p>
                 
                 <blockquote className="border-l-4 border-accent pl-6 py-2 italic text-foreground text-lg">
@@ -526,16 +526,20 @@ export default function About() {
                 </blockquote>
 
                 <p>
-                  Nous remercions Houzz et toute la communauté pour cette reconnaissance. Une victoire n'est jamais individuelle : elle est le fruit d'un travail d'équipe. Merci à nos équipes, nos fournisseurs et nos partenaires qui partagent la même exigence et la même passion du métier.
+                  Nous remercions Houzz et toute la communauté pour cette reconnaissance. Une victoire n'est jamais individuelle : elle est le fruit d'un travail d'équipe. Merci à nos équipes, à nos fournisseurs et à nos partenaires qui partagent la même exigence et la même passion du métier.
                 </p>
                 <p>
                   Merci à nos clients pour leur confiance, leur bonne humeur et cette énergie positive qui nous pousse, projet après projet, à viser l'excellence.
                 </p>
                 <p>
-                  Et bien sûr, merci à <strong className="text-foreground">Stéphane Vasco</strong>, notre partenaire photographe, qui immortalise notre savoir-faire depuis plus de dix ans et met en lumière l'engagement et les nombreuses heures de travail nécessaires pour aboutir à ces réalisations.
+                  Merci à <strong className="text-foreground">Thierry Pelmard</strong>, notre architecte partenaire, dont la rigueur et l'engagement contribuent pleinement à la qualité de nos réalisations.
+                </p>
+                <p>
+                  Merci également à <strong className="text-foreground">Stéphane Vasco</strong> et <strong className="text-foreground">Noah</strong>, qui travaillent main dans la main pour révéler et valoriser notre savoir-faire : Stéphane capture l'âme de nos projets et met en lumière les nombreuses heures de travail nécessaires pour atteindre ce niveau d'exigence ; Noah sublime ces images et développe notre présence digitale en partageant nos réalisations et nos conseils techniques avec une vision cohérente et inspirante.
                 </p>
                 <p className="text-foreground font-medium italic">
-                  Au final, c'est avant tout une aventure humaine.
+                  Au final, ce trophée récompense bien plus qu'une photo.<br />
+                  Il célèbre une exigence partagée, une équipe engagée et une aventure humaine.
                 </p>
               </div>
 
