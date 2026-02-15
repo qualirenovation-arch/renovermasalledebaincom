@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Layout } from "@/components/layout/Layout";
@@ -62,7 +63,8 @@ export default function AdminDevis() {
   }
 
   return (
-    <Layout>
+     <Layout>
+      <Helmet><meta name="robots" content="noindex, nofollow" /></Helmet>
       <div className="bg-gradient-to-b from-stone to-background py-8">
         <div className="container-custom">
           <div className="flex items-center justify-between">

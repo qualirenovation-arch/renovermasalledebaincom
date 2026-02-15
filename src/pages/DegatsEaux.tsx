@@ -133,7 +133,7 @@ const DegatsEaux = () => {
       <OGTags
         title="Dégâts des eaux – Conseils et prévention"
         description="Conseils d'experts pour prévenir et gérer les dégâts des eaux. Découvrez nos bonnes pratiques et vidéos conseils pour protéger votre salle de bain."
-        path="/degats-des-eaux"
+        path="/degats-eaux"
         image={{ type: "page", title: "Dégâts des eaux", subtitle: "Conseils & prévention" }}
       />
       {/* JSON-LD Schema for FAQ */}
