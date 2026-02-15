@@ -402,7 +402,7 @@ export default function Index() {
 
 
       {/* CTA Final - Premium dark section */}
-      <section className="py-10 md:py-16 bg-primary text-primary-foreground">
+      <section className="py-6 md:py-10 bg-primary text-primary-foreground">
         <div className="container-custom text-center">
           <ScrollAnimation>
             <div className="max-w-2xl mx-auto">
