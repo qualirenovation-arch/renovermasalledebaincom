@@ -7,10 +7,10 @@ interface RMSBTextLogoProps {
 }
 
 const sizeMap = {
-  sm: { width: 220, fontSize1: 22, fontSize2: 11 },
-  md: { width: 340, fontSize1: 32, fontSize2: 15 },
-  lg: { width: 460, fontSize1: 42, fontSize2: 20 },
-  xl: { width: 580, fontSize1: 52, fontSize2: 24 },
+  sm: { width: 380, fontSize1: 22, fontSize2: 11 },
+  md: { width: 520, fontSize1: 30, fontSize2: 14 },
+  lg: { width: 660, fontSize1: 38, fontSize2: 18 },
+  xl: { width: 800, fontSize1: 46, fontSize2: 22 },
 };
 
 const RMSBTextLogo: React.FC<RMSBTextLogoProps> = ({
