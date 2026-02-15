@@ -119,7 +119,6 @@ export const redirectMap: Record<string, string> = {
   "saint-ouen-mondrian": "salle-de-bain-saint-ouen-93-mondrian-conception-meuble-sur-mesure",
   "suite-parentale-montreuil-93-verriere-zellige": "suite-parentale-montreuil-93-renovation-verriere-zellige-turquoise",
   "montreuil-suite-parentale": "suite-parentale-montreuil-93-renovation-verriere-zellige-turquoise",
-  "salle-de-bain-saint-denis-93-appartement-feminin-verriere-metro-blanc": "salle-de-bain-saint-denis-93-renovation-optimisation-metro-blanc-noir",
   
   // Banlieue 94
   "projet-saint-maur-94-suite-parentale": "salle-de-bain-saint-maur-94-suite-parentale",
