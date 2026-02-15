@@ -43,9 +43,6 @@ export function Footer() {
             <Link to="/" className="inline-block mb-4">
               <RMSBTextLogo size="sm" variant="light" className="h-12 w-auto" />
             </Link>
-            <p className="text-primary-foreground/80 mb-6 leading-relaxed">
-              Spécialiste de la rénovation de salle de bain et douche à l'italienne à Paris et en Île-de-France.
-            </p>
             <div className="flex gap-4">
               <a href="https://wa.me/33659764685" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center hover:bg-[#20BD5A] transition-colors" aria-label="WhatsApp">
                 <MessageCircle className="w-5 h-5 text-white" />
