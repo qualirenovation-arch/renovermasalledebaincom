@@ -49,9 +49,6 @@ export function Footer() {
                 className="h-16 w-auto"
               />
             </Link>
-            <p className="text-primary-foreground/80 mb-2 leading-relaxed">
-              <strong>6 rue d'Armaillé, 75017 Paris</strong>
-            </p>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
               Spécialiste de la rénovation de salle de bain et douche à l'italienne à Paris et en Île-de-France.
             </p>
@@ -85,7 +82,7 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-display text-lg font-semibold mb-4">Nos services</h4>
+            <h4 className="font-display text-base font-semibold mb-4">Nos services</h4>
             <ul className="space-y-3">
               {footerLinks.services.map((service, index) => <li key={index} className="text-primary-foreground/80">
                   {service}
@@ -95,7 +92,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-display text-lg font-semibold mb-4">Contact</h4>
+            <h4 className="font-display text-base font-semibold mb-4">Contact</h4>
             <ul className="space-y-4">
               <li>
                 <a href="tel:+33659764685" className="flex items-center gap-3 text-primary-foreground/80 hover:text-primary-foreground transition-colors">
@@ -108,10 +105,6 @@ export function Footer() {
                   <Mail className="w-5 h-5 text-accent" />
                   gestion@qualiconcept.fr
                 </a>
-              </li>
-              <li className="flex items-start gap-3 text-primary-foreground/80">
-                <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                <span>6 rue d'Armaillé<br />75017 Paris</span>
               </li>
               <li className="flex items-start gap-3 text-primary-foreground/80">
                 <Clock className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
