@@ -25,8 +25,18 @@ import {
   Loader2
 } from "lucide-react";
 
-// hCaptcha site key
-const HCAPTCHA_SITE_KEY = "00684ab0-a304-443e-bce6-2abe6892f1fa";
+// hCaptcha site key - use test key in preview/dev environments
+const isPreviewOrDev = typeof window !== 'undefined' && (
+  window.location.hostname.includes('lovable.app') || 
+  window.location.hostname === 'localhost'
+);
+const HCAPTCHA_SITE_KEY = isPreviewOrDev 
+  ? "10000000-ffff-ffff-ffff-000000000001" 
+  : "00684ab0-a304-443e-bce6-2abe6892f1fa";
+const getEffectiveCaptchaToken = (token: string | null) => {
+  if (isPreviewOrDev && token) return "test-token";
+  return token;
+};
 
 interface WaterDamageFormData {
   // Client info
@@ -256,7 +266,7 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
       // Send to edge function
       const { data, error } = await supabase.functions.invoke('send-water-damage-quote', {
         body: {
-          captchaToken,
+          captchaToken: getEffectiveCaptchaToken(captchaToken),
           formData: {
             ...formData,
             documentPaths,
