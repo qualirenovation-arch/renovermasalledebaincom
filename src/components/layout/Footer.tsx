@@ -39,22 +39,22 @@ export function Footer() {
       <div className="container-custom py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[25%_20%_30%_25%] gap-6">
           {/* Brand */}
-          <div>
-            <Link to="/" className="inline-block mb-3">
-              <RMSBTextLogo size="sm" variant="light" className="w-[180px] h-auto" />
+          <div className="flex flex-col items-center lg:items-start justify-center">
+            <Link to="/" className="inline-block mb-4">
+              <RMSBTextLogo size="sm" variant="light" className="w-[220px] h-auto" />
             </Link>
             <div className="flex gap-3">
-              <a href="https://wa.me/33659764685" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-[#25D366] flex items-center justify-center hover:bg-[#20BD5A] transition-colors" aria-label="WhatsApp">
-                <MessageCircle className="w-4 h-4 text-white" />
+              <a href="https://wa.me/33659764685" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center hover:bg-[#20BD5A] transition-colors" aria-label="WhatsApp">
+                <MessageCircle className="w-5 h-5 text-white" />
               </a>
-              <a href="https://www.instagram.com/qualirenovation__travaux/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors" aria-label="Instagram">
-                <Instagram className="w-4 h-4" />
+              <a href="https://www.instagram.com/qualirenovation__travaux/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors" aria-label="Instagram">
+                <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://www.linkedin.com/in/carina-nahmani-b30619167/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors" aria-label="LinkedIn">
-                <Linkedin className="w-4 h-4" />
+              <a href="https://www.linkedin.com/in/carina-nahmani-b30619167/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors" aria-label="LinkedIn">
+                <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors" aria-label="Houzz">
-                <img src={houzzLogo} alt="Houzz" className="w-4 h-4 object-contain" />
+              <a href="https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors" aria-label="Houzz">
+                <img src={houzzLogo} alt="Houzz" className="w-5 h-5 object-contain" />
               </a>
             </div>
           </div>
