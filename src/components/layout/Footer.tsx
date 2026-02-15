@@ -122,7 +122,6 @@ export function Footer() {
             <RMSBTextLogo size="sm" variant="light" className="h-12 w-auto" />
             <div className="text-center md:text-left">
               <p className="mt-1">6 rue d'Armaillé, 75017 Paris — © 2024 Tous droits réservés.</p>
-              <p className="mt-1 text-xs">Site édité par la société Qualirenovation by Qualiconcept</p>
             </div>
           </div>
           <div className="flex gap-6">

@@ -20,6 +20,7 @@ const RMSBTextLogo: React.FC<RMSBTextLogoProps> = ({
 }) => {
   const { width, fontSize1, fontSize2 } = sizeMap[size];
   const color = variant === "dark" ? "#124A66" : "#FFFFFF";
+  const subtitleColor = variant === "dark" ? "#4A4A4A" : "#FFFFFF";
   const goldColor = "#C5A55A";
   const goldLight = "#D4B96A";
   const height = Math.round(width * 0.22);
@@ -50,7 +51,7 @@ const RMSBTextLogo: React.FC<RMSBTextLogoProps> = ({
         x={renEndX}
         y={textY}
         textAnchor="end"
-        fontFamily="'Playfair Display', Georgia, serif"
+        fontFamily="'Cinzel', Georgia, serif"
         fontSize={fontSize1}
         fontWeight="700"
         fill={color}
@@ -91,7 +92,7 @@ const RMSBTextLogo: React.FC<RMSBTextLogoProps> = ({
         x={verStartX}
         y={textY}
         textAnchor="start"
-        fontFamily="'Playfair Display', Georgia, serif"
+        fontFamily="'Cinzel', Georgia, serif"
         fontSize={fontSize1}
         fontWeight="700"
         fill={color}
@@ -115,12 +116,12 @@ const RMSBTextLogo: React.FC<RMSBTextLogoProps> = ({
         x={centerX}
         y={baselineY}
         textAnchor="middle"
-        fontFamily="'Playfair Display', Georgia, serif"
+        fontFamily="'Montserrat', Arial, sans-serif"
         fontSize={fontSize2}
         fontWeight="400"
-        fill={color}
+        fill={subtitleColor}
         letterSpacing={fontSize2 * 0.18}
-        opacity="0.75"
+        opacity="0.85"
       >
         Une expertise QUALIRÉNOVATION
       </text>
