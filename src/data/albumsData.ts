@@ -1685,6 +1685,11 @@ Ce projet illustre parfaitement notre approche : un chantier heureux, fondé sur
     ],
     finitionSol: "gres-cerame-uni",
     finitionMur: "metro-allonge",
+    review: {
+      text: "Ronan a confié la rénovation complète de son appartement à Saint-Denis, incluant la salle de bain, avec une gestion à distance. Il souligne la sérénité et la confiance ressenties tout au long du chantier, grâce à une coordination rigoureuse et une communication fluide.",
+      author: "Ronan Ynard",
+      link: "https://www.houzz.fr/viewReview/2205354"
+    },
   },
   // ========== 📍 CHARENTON-LE-PONT (94) ==========
   {
