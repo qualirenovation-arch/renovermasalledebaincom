@@ -1652,6 +1652,40 @@ Ce projet illustre parfaitement notre approche : un chantier heureux, fondé sur
     finitionSol: "gres-cerame-motif",
     finitionMur: "metro-allonge",
   },
+  {
+    id: "saint-denis-ronan",
+    slug: "salle-de-bain-saint-denis-93-renovation-optimisation-metro-blanc-noir",
+    title: "Rénovation Salle de Bain à Saint-Denis (93) – Rue Auguste Delaune",
+    subtitle: "Optimisation complète d'une salle de bain en longueur en centre-ville piéton",
+    location: "Saint-Denis (93) — Rue Auguste Delaune",
+    description: `À Saint-Denis (93200), rue Auguste Delaune, en plein centre piéton, nous avons réalisé la rénovation complète d'une salle de bain dans le cadre d'un projet global d'optimisation d'appartement.
+
+Avec Thierry Pelmard, nous avons retravaillé les plans afin d'améliorer la circulation et d'optimiser chaque mètre carré du logement. La salle de bain faisait partie des espaces stratégiques à restructurer.
+
+La première décision a été de fermer l'ancien accès à la chambre afin de créer un mur exploitable et d'optimiser l'agencement. Cette modification a permis d'améliorer la cohérence du volume et de créer une future tête de lit côté chambre.
+
+Dans cette salle de bain en longueur, nous avons intégré un grand receveur de douche, un meuble vasque avec rangement, un WC, un lave-linge intégré sous plan, un chauffe-eau dissimulé dans un placard, une VMC pour une ventilation performante, un sèche-serviettes pour le confort thermique et des rangements dédiés aux serviettes. Chaque élément a été positionné pour assurer fluidité, fonctionnalité et confort d'usage.
+
+La douche ouverte avec paroi vitrée noire permet d'agrandir visuellement l'espace. Le lave-linge s'intègre discrètement sous le plan vasque. Les rangements absorbent le quotidien sans alourdir la pièce. La technique est maîtrisée, les volumes sont optimisés, la circulation est naturelle.
+
+Dans son avis client, le propriétaire souligne la sérénité et la confiance apportées tout au long de cette rénovation de salle de bain à Saint-Denis. Ce projet a été suivi à distance, avec coordination complète des artisans et gestion globale du chantier.
+
+Ce projet illustre parfaitement notre approche : un chantier heureux, fondé sur l'anticipation, la coordination des travaux et la sérénité du client.`,
+    coverImage: "/photos/saint-denis-ronan/apres-1.jpg",
+    photos: [
+      { id: 1, image: "/photos/saint-denis-ronan/apres-1.jpg", title: "Après — Vue douche & vasque", description: "Paroi vitrée noire, métro blanc et lave-linge intégré" },
+      { id: 2, image: "/photos/saint-denis-ronan/apres-2.jpg", title: "Après — Meuble vasque & miroir", description: "Vasque à poser, robinetterie noire et miroir LED" },
+      { id: 3, image: "/photos/saint-denis-ronan/apres-3.jpg", title: "Après — Détail vasque", description: "Robinetterie noire mate et carrelage métro blanc" },
+      { id: 4, image: "/photos/saint-denis-ronan/apres-4.jpg", title: "Après — Colonne de douche", description: "Colonne noire avec ciel de pluie et douchette" },
+      { id: 5, image: "/photos/saint-denis-ronan/apres-5.jpg", title: "Après — Détail miroir & vasque", description: "Miroir LED et niche encastrée dans le reflet" },
+      { id: 6, image: "/photos/saint-denis-ronan/apres-6.jpg", title: "Après — Vue douche & sèche-serviettes", description: "Douche ouverte, lave-linge et sèche-serviettes" },
+      { id: 7, image: "/photos/saint-denis-ronan/avant-1.jpg", title: "Avant — Chambre & accès salle de bain", description: "Ancien accès entre chambre et salle de bain" },
+      { id: 8, image: "/photos/saint-denis-ronan/avant-2.jpg", title: "Avant — Salle de bain vétuste", description: "Équipements datés et tuyauterie apparente" },
+      { id: 9, image: "/photos/saint-denis-ronan/avant-3.jpg", title: "Avant — Vue en longueur", description: "Cabine de douche et carrelage d'époque" },
+    ],
+    finitionSol: "gres-cerame-uni",
+    finitionMur: "metro-allonge",
+  },
   // ========== 📍 CHARENTON-LE-PONT (94) ==========
   {
     id: "charenton",
@@ -2219,6 +2253,7 @@ const albumCategoryMap: Record<string, AlbumCategory> = {
   "boulogne": "maison-banlieue",
   "saint-ouen": "maison-banlieue",
   "saint-denis-delaune": "maison-banlieue",
+  "saint-denis-ronan": "optimisation",
   "st-mande": "maison-banlieue",
   "vitry": "maison-banlieue",
   
