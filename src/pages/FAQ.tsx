@@ -352,7 +352,6 @@ export default function FAQ() {
         title="Questions fréquentes – FAQ"
         description="Réponses à vos questions sur la rénovation de salle de bain : durée des travaux, budget, matériaux, garanties. Tout ce qu'il faut savoir avant de rénover."
         path="/faq"
-        image={{ type: "page", title: "Questions fréquentes", subtitle: "FAQ" }}
       />
       {/* JSON-LD Schema */}
       <script

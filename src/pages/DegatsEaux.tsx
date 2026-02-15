@@ -134,7 +134,6 @@ const DegatsEaux = () => {
         title="Dégâts des eaux – Conseils et prévention"
         description="Conseils d'experts pour prévenir et gérer les dégâts des eaux. Découvrez nos bonnes pratiques et vidéos conseils pour protéger votre salle de bain."
         path="/degats-eaux"
-        image={{ type: "page", title: "Dégâts des eaux", subtitle: "Conseils & prévention" }}
       />
       {/* JSON-LD Schema for FAQ */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />

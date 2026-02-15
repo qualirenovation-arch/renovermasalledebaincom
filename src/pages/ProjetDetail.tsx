@@ -5,7 +5,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ChevronLeft, ChevronRight, X, ArrowRight } from "lucide-react";
 import { OGTags } from "@/components/seo/OGTags";
-import { getOgImageUrl, getAlbumOgData, getAbsoluteImageUrl } from "@/lib/og";
+import { OG_BASE_URL, getAlbumOgData } from "@/lib/og";
 import { albums, getAlbumBySlug, Album, Photo } from "@/data/albumsData";
 import { getRedirectSlug } from "@/data/redirects";
 
@@ -87,19 +87,8 @@ const ProjetDetail = () => {
     category: album.category
   });
 
-  // Get cover image URL (first photo of the album) and convert to absolute URL
-  const coverImageUrl = album.photos[0]?.image || "";
-  const absoluteCoverImageUrl = getAbsoluteImageUrl(coverImageUrl);
-
-  // Generate dynamic OG image URL using the edge function with cover
-  const ogImageUrl = getOgImageUrl("album", {
-    title: ogData.title,
-    location: ogData.location,
-    style: ogData.style,
-    tag1: ogData.tag1,
-    tag2: ogData.tag2,
-    cover: absoluteCoverImageUrl
-  });
+  // Use static OG image from /public/og/ folder
+  const ogImageUrl = `${OG_BASE_URL}/og/${album.slug}.jpg`;
 
   // Short description for OG
   const shortDescription = `${album.location} • ${ogData.style}${ogData.tag1 ? ` • ${ogData.tag1}` : ""}${ogData.tag2 ? ` • ${ogData.tag2}` : ""} • Salle de bain Leroy Merlin, meuble salle de bain Ikea. Finitions premium.`;

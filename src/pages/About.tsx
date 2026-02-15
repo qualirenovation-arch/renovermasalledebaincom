@@ -44,7 +44,6 @@ export default function About() {
         title="À propos – Notre équipe"
         description="Découvrez l'équipe Qualirenovation derrière renovermasalledebain.com. 20 ans d'expérience dans la rénovation de salle de bain à Paris."
         path="/a-propos"
-        image={{ type: "page", title: "Notre équipe", subtitle: "20 ans d'expérience" }}
       />
       {/* Hero */}
       <section className="relative py-24 md:py-32">

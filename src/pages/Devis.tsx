@@ -569,7 +569,6 @@ export default function Devis() {
         title="Devis rénovation salle de bain"
         description="Demandez votre devis gratuit pour la rénovation de votre salle de bain à Paris. Un chantier heureux, sans stress et sans imprévus. Réponse sous 48h."
         path="/devis"
-        image={{ type: "page", title: "Demander un devis", subtitle: "Gratuit & sans engagement" }}
       />
       {/* Hero - Premium design */}
       <section className="relative py-12 md:py-20 bg-gradient-to-b from-stone to-background overflow-hidden">

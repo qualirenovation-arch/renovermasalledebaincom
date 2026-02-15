@@ -36,7 +36,6 @@ export default function Photographe() {
         title="Stéphane Vasco – Notre photographe partenaire"
         description="Stéphane Vasco, photographe professionnel partenaire de renovermasalledebain.com. Photographie d'architecture, immobilier et visites virtuelles Matterport."
         path="/photographe"
-        image={{ type: "page", title: "Notre photographe", subtitle: "Stéphane Vasco" }}
       />
       {/* Hero */}
       <section className="relative py-24 md:py-32">

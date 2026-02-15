@@ -41,7 +41,6 @@ export default function PartenairesContact() {
         title="Devenir partenaire – Formulaire de contact"
         description="Rejoignez le réseau RMSB : sous-traitants, installateurs, marques et fournisseurs. Développez votre activité avec des projets de rénovation de qualité."
         path="/partenaires/contact"
-        image={{ type: "page", title: "Devenir partenaire", subtitle: "Rejoignez notre réseau" }}
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-stone to-background py-16 md:py-24">

@@ -165,13 +165,7 @@ export default function Realisations() {
         title="Nos réalisations de salles de bain"
         description="Découvrez nos rénovations de salles de bain à Paris et IDF : zellige, marbre, terrazzo. Avant/Après de nos chantiers. Des projets premium, livrés sereinement."
         path="/realisations"
-        image={{ 
-          type: "page", 
-          title: "Nos réalisations",
-          subtitle: "Paris & Île-de-France"
-        }}
       />
-
       {/* Hero */}
       <section className="relative pt-32 md:pt-40 pb-16 bg-gradient-to-b from-stone to-background">
         <div className="container-custom">
