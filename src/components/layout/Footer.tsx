@@ -128,7 +128,7 @@ export function Footer() {
             <img 
               src={logoCircle} 
               alt="RenoverMaSalleDeBain.com - Une expertise Qualirénovation" 
-              className="h-14 md:h-16 w-auto rounded-full"
+              className="h-16 md:h-16 w-auto rounded-full"
             />
             <div className="text-center md:text-left">
               <p className="font-semibold text-base">renovermasalledebain.com — Un chantier heureux</p>
