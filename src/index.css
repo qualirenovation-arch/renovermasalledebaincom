@@ -36,15 +36,15 @@
     --muted: 30 3% 95%;
     --muted-foreground: 0 0% 40%;
 
-    /* Accent - Warm bronze/gold */
-    --accent: 35 55% 45%;
+    /* Accent - Laiton brun chaud */
+    --accent: 30 40% 38%;
     --accent-foreground: 0 0% 98%;
 
-    /* Gold/Bronze - Luxurious tones */
-    --gold: 45 76% 52%;
-    --gold-light: 38 50% 70%;
-    --gold-dark: 30 55% 38%;
-    --gold-foreground: 0 0% 12%;
+    /* Laiton/Bronze brun - Tons chauds marron */
+    --gold: 30 35% 42%;
+    --gold-light: 28 30% 55%;
+    --gold-dark: 25 40% 32%;
+    --gold-foreground: 0 0% 98%;
 
     /* Navy / Deep blue variations */
     --navy: 197 70% 18%;
@@ -82,7 +82,7 @@
     /* Borders and inputs */
     --border: 30 5% 88%;
     --input: 30 5% 88%;
-    --ring: 35 50% 55%;
+    --ring: 30 35% 42%;
 
     --radius: 0.75rem;
 
@@ -90,7 +90,7 @@
     --gradient-hero: linear-gradient(135deg, hsl(197 70% 18% / 0.92), hsl(197 50% 30% / 0.85));
     --gradient-card: linear-gradient(180deg, hsl(30 5% 98%), hsl(30 3% 95%));
     --gradient-cta: linear-gradient(135deg, hsl(197 70% 24%), hsl(197 60% 30%));
-    --gradient-gold: linear-gradient(135deg, hsl(38 55% 52%), hsl(30 55% 42%));
+    --gradient-gold: linear-gradient(135deg, hsl(30 35% 45%), hsl(25 40% 35%));
     --gradient-navy: linear-gradient(180deg, hsl(197 70% 18%), hsl(197 60% 25%));
     --gradient-stone: linear-gradient(180deg, hsl(30 5% 96%), hsl(30 3% 93%));
 
@@ -98,19 +98,19 @@
     --shadow-sm: 0 2px 8px hsl(197 40% 15% / 0.06);
     --shadow-md: 0 4px 20px hsl(197 40% 15% / 0.08);
     --shadow-lg: 0 8px 40px hsl(197 40% 15% / 0.12);
-    --shadow-glow: 0 0 50px hsl(35 60% 50% / 0.25);
-    --shadow-gold: 0 4px 20px hsl(35 60% 50% / 0.3);
+    --shadow-glow: 0 0 50px hsl(30 35% 42% / 0.25);
+    --shadow-gold: 0 4px 20px hsl(30 35% 42% / 0.3);
     --shadow-navy: 0 8px 30px hsl(197 70% 18% / 0.2);
 
     /* Sidebar */
     --sidebar-background: 197 70% 18%;
     --sidebar-foreground: 45 50% 95%;
-    --sidebar-primary: 35 60% 50%;
+    --sidebar-primary: 30 35% 42%;
     --sidebar-primary-foreground: 197 70% 12%;
     --sidebar-accent: 197 50% 28%;
     --sidebar-accent-foreground: 45 50% 95%;
     --sidebar-border: 197 50% 25%;
-    --sidebar-ring: 35 60% 55%;
+    --sidebar-ring: 30 35% 42%;
   }
 
   .dark {
@@ -132,13 +132,13 @@
     --muted: 197 25% 16%;
     --muted-foreground: 197 20% 60%;
 
-    --accent: 35 65% 50%;
+    --accent: 30 40% 45%;
     --accent-foreground: 197 70% 10%;
 
-    --gold: 35 60% 55%;
-    --gold-light: 38 55% 65%;
-    --gold-dark: 30 60% 45%;
-    --gold-foreground: 197 70% 10%;
+    --gold: 30 35% 50%;
+    --gold-light: 28 30% 60%;
+    --gold-dark: 25 40% 38%;
+    --gold-foreground: 0 0% 98%;
 
     --navy: 197 70% 12%;
     --navy-light: 197 50% 25%;
@@ -165,7 +165,7 @@
 
     --border: 197 25% 20%;
     --input: 197 25% 20%;
-    --ring: 35 60% 50%;
+    --ring: 30 35% 45%;
 
     --sidebar-background: 197 70% 8%;
     --sidebar-foreground: 45 30% 90%;
