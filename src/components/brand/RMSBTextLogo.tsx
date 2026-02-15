@@ -7,10 +7,10 @@ interface RMSBTextLogoProps {
 }
 
 const sizeMap = {
-  sm: { width: 380, fontSize1: 22, fontSize2: 11 },
-  md: { width: 520, fontSize1: 30, fontSize2: 14 },
-  lg: { width: 660, fontSize1: 38, fontSize2: 18 },
-  xl: { width: 800, fontSize1: 46, fontSize2: 22 },
+  sm: { width: 420, fontSize1: 24, fontSize2: 12 },
+  md: { width: 560, fontSize1: 32, fontSize2: 15 },
+  lg: { width: 720, fontSize1: 42, fontSize2: 20 },
+  xl: { width: 880, fontSize1: 52, fontSize2: 24 },
 };
 
 const RMSBTextLogo: React.FC<RMSBTextLogoProps> = ({
@@ -24,7 +24,12 @@ const RMSBTextLogo: React.FC<RMSBTextLogoProps> = ({
   const height = Math.round(width * 0.28);
   const centerX = width / 2;
   const textY = height * 0.42;
-  const iconScale = fontSize1 / 28;
+  const s = fontSize1 / 32; // scale factor
+
+  // Position where "o" sits: "Ren" ends, then the icon, then "ver..."
+  const renEndX = centerX - fontSize1 * 3.95;
+  const iconWidth = fontSize1 * 0.85;
+  const verStartX = renEndX + iconWidth;
 
   return (
     <svg
@@ -34,9 +39,9 @@ const RMSBTextLogo: React.FC<RMSBTextLogoProps> = ({
       className={className}
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* "Ren" - left part */}
+      {/* "Ren" */}
       <text
-        x={centerX - fontSize1 * 3.9}
+        x={renEndX}
         y={textY}
         textAnchor="end"
         fontFamily="'Playfair Display', Georgia, serif"
@@ -47,29 +52,35 @@ const RMSBTextLogo: React.FC<RMSBTextLogoProps> = ({
         Ren
       </text>
 
-      {/* Showerhead icon replacing "o" */}
-      <g transform={`translate(${centerX - fontSize1 * 3.9 + fontSize1 * 0.05}, ${textY - fontSize1 * 0.95}) scale(${iconScale})`}>
-        {/* Shower arm */}
+      {/* Showerhead replacing "o" — matching reference image */}
+      <g transform={`translate(${renEndX + iconWidth * 0.1}, ${textY - fontSize1 * 1.05}) scale(${s})`}>
+        {/* Shower arm - curved pipe from top-left going right then down */}
         <path
-          d="M 6 3 Q 14 2, 15 10 L 15 14"
+          d="M 4 5 C 4 5, 6 2, 14 2 C 20 2, 22 5, 22 10"
           stroke={goldColor}
-          strokeWidth="2.5"
+          strokeWidth="3"
           fill="none"
           strokeLinecap="round"
         />
-        {/* Shower head */}
-        <ellipse cx="15" cy="15.5" rx="6" ry="3.2" fill={goldColor} />
-        {/* Water drops */}
-        <circle cx="11" cy="22" r="1.5" fill={color} opacity="0.5" />
-        <circle cx="15" cy="24" r="1.7" fill={color} opacity="0.4" />
-        <circle cx="19" cy="22" r="1.4" fill={color} opacity="0.45" />
-        <circle cx="13" cy="27" r="1.2" fill={color} opacity="0.3" />
-        <circle cx="17" cy="28" r="1.4" fill={color} opacity="0.25" />
+        {/* Shower head - wider rounded shape */}
+        <path
+          d="M 16 10 Q 22 10, 26 13 Q 22 15, 16 15 Q 12 15, 10 13 Q 14 10, 16 10 Z"
+          fill={goldColor}
+        />
+        {/* Water drops - scattered below head like in reference */}
+        <circle cx="13" cy="20" r="1.8" fill={color} opacity="0.55" />
+        <circle cx="18" cy="22" r="2" fill={color} opacity="0.45" />
+        <circle cx="23" cy="20" r="1.6" fill={color} opacity="0.5" />
+        <circle cx="15" cy="26" r="1.5" fill={color} opacity="0.35" />
+        <circle cx="20" cy="27" r="1.7" fill={color} opacity="0.3" />
+        <circle cx="11" cy="25" r="1.3" fill={color} opacity="0.3" />
+        <circle cx="24" cy="25" r="1.4" fill={color} opacity="0.25" />
+        <circle cx="17" cy="31" r="1.3" fill={color} opacity="0.2" />
       </g>
 
-      {/* "verMaSalleDeBain.com" - right part */}
+      {/* "verMaSalleDeBain.com" */}
       <text
-        x={centerX - fontSize1 * 3.9 + fontSize1 * 0.95}
+        x={verStartX}
         y={textY}
         textAnchor="start"
         fontFamily="'Playfair Display', Georgia, serif"
