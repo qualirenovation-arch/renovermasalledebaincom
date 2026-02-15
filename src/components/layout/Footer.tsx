@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
-import qualirenovationLogo from "@/assets/logos/qualirenovation-logo-new.png";
 import houzzLogo from "@/assets/logos/houzz-logo.png";
-import logoCircle from "@/assets/logo-rmsb-circle.png";
 import RMSBTextLogo from "@/components/brand/RMSBTextLogo";
 
 const footerLinks = {
@@ -43,11 +41,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <Link to="/" className="inline-block mb-4">
-              <img 
-                src={qualirenovationLogo} 
-                alt="QualiRénovation Logo" 
-                className="h-16 w-auto"
-              />
+              <RMSBTextLogo size="sm" variant="light" className="h-12 w-auto" />
             </Link>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
               Spécialiste de la rénovation de salle de bain et douche à l'italienne à Paris et en Île-de-France.
