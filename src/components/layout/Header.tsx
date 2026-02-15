@@ -51,14 +51,32 @@ export function Header() {
       }`}
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between h-20 md:h-24">
-          {/* Logo */}
+        {/* Mobile layout */}
+        <div className="flex xl:hidden items-center justify-between h-[4.5rem]">
+          <button
+            className="p-2 text-foreground hover:bg-secondary rounded-lg transition-colors flex-shrink-0"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Menu"
+          >
+            {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+          
+          <Link to="/" className="flex items-center justify-center flex-1 min-w-0">
+            <RMSBTextLogo size="lg" variant="dark" className="h-[4.5rem] sm:h-20 w-auto max-w-[75vw]" />
+          </Link>
+          
+          <Button variant="cta" size="sm" asChild className="text-xs px-3 py-1.5 flex-shrink-0">
+            <Link to="/devis#devis-form">Devis</Link>
+          </Button>
+        </div>
+
+        {/* Desktop layout */}
+        <div className="hidden xl:flex items-center justify-between h-24">
           <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
-            <RMSBTextLogo size="lg" variant="dark" className="h-16 sm:h-20 md:h-24 xl:h-[6.5rem] w-auto -ml-4 md:-ml-8" />
+            <RMSBTextLogo size="lg" variant="dark" className="h-24 xl:h-[6.5rem] w-auto -ml-8" />
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center gap-1 ml-8">
+          <nav className="flex items-center gap-1 ml-8">
             {desktopNavItems.map((item) => (
               <Link
                 key={item.path}
@@ -74,26 +92,10 @@ export function Header() {
             ))}
           </nav>
 
-          {/* CTA Button - Desktop */}
-          <div className="hidden xl:flex items-center ml-6">
+          <div className="flex items-center ml-6">
             <Button variant="cta" size="lg" asChild>
               <Link to="/devis#devis-form">Devis gratuit</Link>
             </Button>
-          </div>
-
-          {/* Mobile: CTA + Menu burger */}
-          <div className="xl:hidden flex items-center gap-3">
-            <Button variant="cta" size="sm" asChild className="text-xs px-4 py-2">
-              <Link to="/devis#devis-form">Devis</Link>
-            </Button>
-            
-            <button
-              className="p-2 text-foreground hover:bg-secondary rounded-lg transition-colors"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Menu"
-            >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
           </div>
         </div>
       </div>
