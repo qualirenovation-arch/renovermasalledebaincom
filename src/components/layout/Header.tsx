@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
 import logoCircle from "@/assets/logo-rmsb-circle.png";
+import RMSBTextLogo from "@/components/brand/RMSBTextLogo";
 
 // Navigation simplifiée pour mobile (max 5 entrées)
 const mobileNavItems = [
@@ -53,11 +54,7 @@ export function Header() {
         <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
-            <img 
-              src={logoCircle} 
-              alt="RenoverMaSalleDeBain.com - Une expertise Qualirénovation" 
-              className="h-28 md:h-28 lg:h-32 w-auto"
-            />
+            <RMSBTextLogo size="md" variant="dark" className="h-12 md:h-14 lg:h-16 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

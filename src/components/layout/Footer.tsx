@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, MessageCircl
 import qualirenovationLogo from "@/assets/logos/qualirenovation-logo-new.png";
 import houzzLogo from "@/assets/logos/houzz-logo.png";
 import logoCircle from "@/assets/logo-rmsb-circle.png";
+import RMSBTextLogo from "@/components/brand/RMSBTextLogo";
 
 const footerLinks = {
   navigation: [{
@@ -125,11 +126,7 @@ export function Footer() {
       <div className="border-t border-primary-foreground/10">
         <div className="container-custom py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
           <div className="flex items-center gap-4">
-            <img 
-              src={logoCircle} 
-              alt="RenoverMaSalleDeBain.com - Une expertise Qualirénovation" 
-              className="h-16 md:h-16 w-auto rounded-full"
-            />
+            <RMSBTextLogo size="sm" variant="light" className="h-10 w-auto" />
             <div className="text-center md:text-left">
               <p className="font-semibold text-base">renovermasalledebain.com — Un chantier heureux</p>
               <p className="mt-1">6 rue d'Armaillé, 75017 Paris — © 2024 Tous droits réservés.</p>
