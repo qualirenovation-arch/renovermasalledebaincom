@@ -41,7 +41,7 @@ export function Footer() {
           {/* Brand */}
           <div className="flex flex-col items-center lg:items-start justify-center">
             <Link to="/" className="inline-block mb-4">
-              <RMSBTextLogo size="sm" variant="light" className="w-[220px] h-auto" />
+              <RMSBTextLogo size="md" variant="light" className="w-[280px] h-auto" />
             </Link>
             <div className="flex gap-3">
               <a href="https://wa.me/33659764685" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center hover:bg-[#20BD5A] transition-colors" aria-label="WhatsApp">
