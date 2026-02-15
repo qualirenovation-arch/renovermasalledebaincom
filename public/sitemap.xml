@@ -306,4 +306,35 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-4-ile-cite-quai-aux-fleurs-fenetre-interieure</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Chantiers en cours -->
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/chantier-paris-19-buttes-chaumont</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/chantier-paris-10-rocroy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/chantier-paris-5-port-royal</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/chantier-paris-16-la-tour</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/chantier-courbevoie-92-lalyre</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
