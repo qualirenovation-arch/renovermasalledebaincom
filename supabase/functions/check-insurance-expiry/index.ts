@@ -72,7 +72,7 @@ async function sendExpiryNotification(
         <body>
           <div class="container">
             <div class="header">
-              <img src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/logo-rmsb.png?v=2" alt="Rénover Ma Salle de Bain" />
+              <img src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/logo-rmsb-new.png" alt="Rénover Ma Salle de Bain" />
               <h1 style="color: #124A66; margin: 0;">QualiRénovation</h1>
               <p style="color: #666; margin: 5px 0 0;">by QualiConcept</p>
             </div>

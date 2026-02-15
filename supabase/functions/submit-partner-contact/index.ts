@@ -338,7 +338,7 @@ const handler = async (req: Request): Promise<Response> => {
           <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
             <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
               <div style="text-align: center; padding: 20px 0; border-bottom: 2px solid #124A66;">
-                <img src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/logo-rmsb.png?v=2" alt="Rénover Ma Salle de Bain" style="max-width: 180px; margin-bottom: 10px;" />
+                <img src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/logo-rmsb-new.png" alt="Rénover Ma Salle de Bain" style="max-width: 180px; margin-bottom: 10px;" />
                 <h1 style="color: #124A66; margin: 0;">QualiRénovation</h1>
               </div>
               
