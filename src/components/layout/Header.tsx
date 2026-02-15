@@ -54,7 +54,7 @@ export function Header() {
         <div className="flex items-center justify-between h-20 md:h-24 gap-2">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group flex-shrink min-w-0">
-            <RMSBTextLogo size="lg" variant="dark" className="h-12 sm:h-16 md:h-24 w-auto -ml-2 md:-ml-8 max-w-[55vw] sm:max-w-none" />
+            <RMSBTextLogo size="lg" variant="dark" className="h-16 sm:h-20 md:h-24 w-auto -ml-2 md:-ml-8 max-w-[62vw] sm:max-w-none" />
           </Link>
 
           {/* Desktop Navigation */}
