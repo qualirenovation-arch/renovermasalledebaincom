@@ -126,9 +126,8 @@ export function Footer() {
       <div className="border-t border-primary-foreground/10">
         <div className="container-custom py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
           <div className="flex items-center gap-4">
-            <RMSBTextLogo size="sm" variant="light" className="h-10 w-auto" />
+            <RMSBTextLogo size="sm" variant="light" className="h-12 w-auto" />
             <div className="text-center md:text-left">
-              <p className="font-semibold text-base">renovermasalledebain.com — Un chantier heureux</p>
               <p className="mt-1">6 rue d'Armaillé, 75017 Paris — © 2024 Tous droits réservés.</p>
               <p className="mt-1 text-xs">Site édité par la société Qualirenovation by Qualiconcept</p>
             </div>
