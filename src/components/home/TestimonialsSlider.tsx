@@ -34,6 +34,11 @@ const testimonials = [
     excerpt: "Gestion de plusieurs chantiers avec rigueur. Des artisans qualifiés et un résultat parfait.",
     projectName: "Courbevoie Bécon",
     albumId: "courbevoie-guillaume"
+  },
+  {
+    excerpt: "Un projet de rénovation à distance peut être source de stress, mais Carina m'a accompagné et a été particulièrement rassurante du début à la fin. Aujourd'hui, l'appartement est entièrement rénové, meublé et loué.",
+    projectName: "Saint-Denis Auguste Delaune",
+    albumId: "saint-denis-ronan"
   }
 ];
 
