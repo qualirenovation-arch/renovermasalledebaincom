@@ -1686,7 +1686,7 @@ Ce projet illustre parfaitement notre approche : un chantier heureux, fondé sur
     finitionSol: "gres-cerame-uni",
     finitionMur: "metro-allonge",
     review: {
-      text: "Ronan a confié la rénovation complète de son appartement à Saint-Denis, incluant la salle de bain, avec une gestion à distance. Il souligne la sérénité et la confiance ressenties tout au long du chantier, grâce à une coordination rigoureuse et une communication fluide.",
+      text: "J'ai fait appel à Qualirénovation car j'habite loin de l'appartement que je souhaitais faire rénover et il m'était impossible de m'occuper moi-même des travaux ou d'en assurer le suivi régulier. Un projet de rénovation à distance peut être source de stress, mais Carina m'a accompagné et a été particulièrement rassurante du début à la fin. J'ai bénéficié d'un suivi régulier et clair, avec des comptes rendus fréquents, des photos et des échanges à chaque étape clé du chantier. Aujourd'hui, l'appartement est entièrement rénové, meublé et loué. Je recommande donc vivement !",
       author: "Ronan Ynard",
       link: "https://www.houzz.fr/viewReview/2205354"
     },
