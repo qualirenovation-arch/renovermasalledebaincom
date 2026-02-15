@@ -56,7 +56,7 @@ export function Header() {
             <img 
               src={logoCircle} 
               alt="RenoverMaSalleDeBain.com - Une expertise Qualirénovation" 
-              className="h-14 md:h-18 lg:h-20 w-auto"
+              className="h-16 md:h-20 lg:h-24 w-auto"
             />
           </Link>
 
