@@ -6,7 +6,22 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://renovermasalledebain.com/a-propos</loc>
+    <loc>https://renovermasalledebain.com/realisations</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/devis</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/guide-travaux</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/degats-eaux</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -16,19 +31,39 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://renovermasalledebain.com/realisations</loc>
+    <loc>https://renovermasalledebain.com/a-propos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/faq</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/avis</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/videos-conseils</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://renovermasalledebain.com/presse</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://renovermasalledebain.com/partenaires</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/devenir-partenaire</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://renovermasalledebain.com/partenaires/contact</loc>
@@ -36,14 +71,9 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://renovermasalledebain.com/devis</loc>
+    <loc>https://renovermasalledebain.com/photographe</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://renovermasalledebain.com/faq</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://renovermasalledebain.com/mentions-legales</loc>
@@ -55,33 +85,224 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <!-- Projets individuels -->
   <url>
-    <loc>https://renovermasalledebain.com/photographe</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://renovermasalledebain.com/guide-travaux</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://renovermasalledebain.com/videos-conseils</loc>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-3-renovation-style-masculin-bois-noir</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://renovermasalledebain.com/degats-eaux</loc>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-5-renovation-optimisation-petit-espace</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://renovermasalledebain.com/devenir-partenaire</loc>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-5-renovation-baignoire-saint-germain</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://renovermasalledebain.com/avis</loc>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-8-renovation-locative-douche-italienne</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-9-renovation-douche-italienne-carrelage-pierre</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-10-renovation-style-masculin-jemmapes</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-10-renovation-elegance-doree-faubourg-saint-denis</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-10-renovation-noir-marbre-faubourg-saint-martin</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-11-renovation-retro-noir-blanc-charonne</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-11-renovation-petite-surface-3m2</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-12-renovation-degat-des-eaux-transformation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-12-renovation-wc-design-onyx-blue</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-12-renovation-garcon-noir-blanc-contemporain</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-12-renovation-madame-marbre-rangements</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-12-renovation-bleu-mineral-beton-reuilly</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-13-renovation-locative-zellige-beige</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-13-renovation-zellige-turquoise-or</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-13-renovation-wc-zellige-turquoise-laiton</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-15-renovation-scandinave-buanderie-integree</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-15-renovation-douche-wc-separes-hague-blue</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-16-renovation-masculine-pierre-inox</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-16-renovation-parisien-chic-auteuil</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-16-renovation-elegance-parisienne-lauriston</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-17-renovation-suite-parentale-claustra-bois</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-17-renovation-degat-des-eaux-terrazzo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-19-renovation-tout-en-un-mosaique-noir-mat</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-suresnes-92-renovation-onyx-blue-marbre</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-bois-colombes-92-terrazzo-mineral-vert-eau-laiton</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-boulogne-92-ambiance-marine</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-courbevoie-92-becon-sinistre</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-saint-ouen-93-renovation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-saint-denis-93-appartement-feminin-verriere-metro-blanc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-charenton-94-renovation-complete-douche-double-vasque</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-charenton-94-duo-douche-baignoire</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-charenton-94-renovation-wc-chauffe-eau-dissimule</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-saint-mande-94-renovation-douche-italienne</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-saint-maur-94-renovation-complete-avant-apres</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-saint-maur-94-renovation-enfants-inspiration-coreenne</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-vincennes-94-renovation-garcon-noir-blanc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-vitry-94-renovation-complete-avant-apres</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-saint-maurice-94-renovation-avenue-verdun-pullman</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-soisy-95-suite-parentale-maison-1900</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-soisy-95-rose-terracotta</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-soisy-95-enfants-terrazzo-menthe</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
