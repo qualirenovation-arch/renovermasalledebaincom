@@ -1627,29 +1627,17 @@ Ce projet démontre qu'une rénovation prend tout son sens lorsqu'elle est guid�
   // ========== 📍 SAINT-DENIS (93) ==========
   {
     id: "saint-denis-delaune",
-    slug: "salle-de-bain-saint-denis-93-renovation-optimisation-metro-blanc-noir",
-    title: "Rénovation Salle de Bain à Saint-Denis (93) – Rue Auguste Delaune",
-    subtitle: "Optimisation complète d'une salle de bain en longueur en centre-ville piéton",
+    slug: "salle-de-bain-saint-denis-93-appartement-feminin-verriere-metro-blanc",
+    title: "Salle de bain Saint-Denis — Appartement au féminin",
+    subtitle: "Verrière noire, métro blanc & sol graphique",
     location: "Saint-Denis (93) — Rue Auguste Delaune",
-    description: `À Saint-Denis (93200), rue Auguste Delaune, en plein centre piéton, nous avons réalisé la rénovation complète d'une salle de bain dans le cadre d'un projet global d'optimisation d'appartement.
+    description: `Un écrin de féminité dans cet appartement de Saint-Denis, où la salle de bain devient une véritable extension de la chambre parentale. La verrière atelier en acier noir crée une connexion visuelle élégante tout en préservant l'intimité.
 
-Avec Thierry Pelmard, nous avons retravaillé les plans afin d'améliorer la circulation et d'optimiser chaque mètre carré du logement. La salle de bain faisait partie des espaces stratégiques à restructurer.
+Au sol, le carrelage NEOCIM KERION Orient Titane affiche un motif géométrique 3D en noir et gris qui structure l'espace avec audace. Les murs reçoivent le carrelage métro blanc brillant, apportant luminosité et charme intemporel à la douche.
 
-Repenser l'implantation pour gagner de l'espace
+Le meuble vasque épouse les standards IKEA pour un confort d'usage optimal : le GODMORGON blanc effet chêne blanchi (2 tiroirs, IKEA 802.261.99) surmonté du plan EKBACKEN sur mesure gris blanc crée une base fonctionnelle. On y dépose la vasque à poser Lila en céramique blanche (40.5 x 40.5 cm), dotée d'une bonde clic-clac EQUATION avec trop-plein pour une vidange fluide. La robinetterie SENSEA Hao chromée complète cette vasque avec élégance. Le miroir Barbier noir carré (53 x 53 cm, LM 70819063) reprend la géométrie de l'espace tout en créant un point focal raffiné.
 
-La première décision a été de fermer l'ancien accès à la chambre afin de créer un mur exploitable et d'optimiser l'agencement. Cette modification a permis d'améliorer la cohérence du volume et de créer une future tête de lit côté chambre.
-
-Dans cette salle de bain en longueur, nous avons intégré : un grand receveur de douche, un meuble vasque avec rangement, un WC, un lave-linge intégré sous plan, un chauffe-eau dissimulé dans un placard, une VMC pour une ventilation performante, un sèche-serviettes pour le confort thermique, et des rangements dédiés aux serviettes. Chaque élément a été positionné pour assurer fluidité, fonctionnalité et confort d'usage.
-
-Une rénovation de salle de bain pensée pour durer
-
-La douche ouverte avec paroi vitrée noire permet d'agrandir visuellement l'espace. Le lave-linge s'intègre discrètement sous le plan vasque. Les rangements absorbent le quotidien sans alourdir la pièce. La technique est maîtrisée, les volumes sont optimisés, la circulation est naturelle.
-
-Un chantier mené à distance en toute confiance
-
-Dans son avis client, le propriétaire souligne la sérénité et la confiance apportées tout au long de cette rénovation de salle de bain à Saint-Denis. Ce projet a été suivi à distance, avec coordination complète des artisans et gestion globale du chantier.
-
-Parce qu'une rénovation réussie, ce n'est pas seulement une belle salle de bain. C'est une équipe, une réflexion en amont, des plans optimisés et une exécution rigoureuse.
+Pour la douche, le receveur rectangulaire Mila en résine blanche (120 x 80 cm) accueille la colonne Nessy Cuadrado avec ses finitions chromées. La paroi italienne en verre transparent 6 mm (90 cm de large) délimite l'espace sans l'enfermer. Les niches encastrées offrent un rangement pratique, tandis que la colonne de douche garantit confort et fonctionnalité.
 
 Ce projet illustre parfaitement notre approche : un chantier heureux, fondé sur l'anticipation, la coordination des travaux et la sérénité du client.`,
     coverImage: saintDenisDelaune3,
@@ -2230,7 +2218,7 @@ const albumCategoryMap: Record<string, AlbumCategory> = {
   // 🏡 MAISON & BANLIEUE
   "boulogne": "maison-banlieue",
   "saint-ouen": "maison-banlieue",
-  "saint-denis-delaune": "optimisation",
+  "saint-denis-delaune": "maison-banlieue",
   "st-mande": "maison-banlieue",
   "vitry": "maison-banlieue",
   
