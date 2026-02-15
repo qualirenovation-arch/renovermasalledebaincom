@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { Helmet } from "react-helmet-async";
 import { albums } from "@/data/albumsData";
 import { FINITION_TYPES, type FinitionType } from "@/components/realisations/FinitionsFilter";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -96,6 +97,7 @@ export default function AdminFinitions() {
 
   return (
     <div className="min-h-screen bg-background p-6">
+      <Helmet><meta name="robots" content="noindex, nofollow" /></Helmet>
       <div className="max-w-[1800px] mx-auto">
         <div className="mb-8">
           <h1 className="text-3xl font-display font-bold mb-2">

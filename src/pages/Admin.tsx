@@ -1,4 +1,5 @@
 import { Navigate, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { LogOut, Loader2, ShieldX, Handshake, FileText, Users, Wrench } from "lucide-react";
 import { useAdminAuth } from "@/hooks/useAdminAuth";
@@ -70,6 +71,7 @@ export default function Admin() {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet><meta name="robots" content="noindex, nofollow" /></Helmet>
       {/* Header */}
       <header className="border-b bg-card">
         <div className="container mx-auto px-4 py-4">
