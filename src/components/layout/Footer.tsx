@@ -108,15 +108,15 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-primary-foreground/10">
-        <div className="container-custom py-4 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-primary-foreground/60">
-          <div className="flex items-center gap-3">
-            <RMSBTextLogo size="sm" variant="light" className="w-[200px] h-auto" />
+        <div className="container-custom py-5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
+          <div className="flex items-center gap-4">
+            <RMSBTextLogo size="md" variant="light" className="w-[260px] h-auto" />
             <div className="text-center md:text-left">
               <p>6 rue d'Armaillé, 75017 Paris — © 2024 Tous droits réservés.</p>
-              <p className="mt-0.5 text-[11px]">Site édité par Qualirenovation by Qualiconcept</p>
+              <p className="mt-1 text-xs">Site édité par Qualirenovation by Qualiconcept</p>
             </div>
           </div>
-          <div className="flex gap-4 text-xs">
+          <div className="flex gap-5 text-sm">
             <Link to="/mentions-legales" className="hover:text-primary-foreground transition-colors">
               Mentions légales
             </Link>
