@@ -2,16 +2,16 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-// SVG logos from public directory
-const schluterLogo = "/images/logos/schluter.svg";
-const geberitLogo = "/images/logos/geberit.svg";
-const weberLogo = "/images/logos/weber.svg";
-const legrandLogo = "/images/logos/legrand.svg";
-const schneiderLogo = "/images/logos/schneider.svg";
-const atlanticLogo = "/images/logos/atlantic.svg";
-const pointpLogo = "/images/logos/pointp.svg";
-const florimLogo = "/images/logos/florim.svg";
-const dornbrachtLogo = "/images/logos/dornbracht.svg";
+// Import SVG logos
+import schluterLogo from "@/assets/logos/schluter.svg";
+import geberitLogo from "@/assets/logos/geberit.svg";
+import weberLogo from "@/assets/logos/weber.svg";
+import legrandLogo from "@/assets/logos/legrand.svg";
+import schneiderLogo from "@/assets/logos/schneider.svg";
+import atlanticLogo from "@/assets/logos/atlantic.svg";
+import pointpLogo from "@/assets/logos/pointp.svg";
+import florimLogo from "@/assets/logos/florim.svg";
+import dornbrachtLogo from "@/assets/logos/dornbracht.svg";
 
 // Partner data with real SVG logos and text fallbacks
 const partners = [

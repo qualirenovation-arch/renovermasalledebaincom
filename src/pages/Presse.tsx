@@ -6,26 +6,26 @@ import { ArrowRight, ExternalLink, Calendar, Newspaper, Star } from "lucide-reac
 import { OGTags } from "@/components/seo/OGTags";
 
 // Images
-const stMande1 = "/images/st-mande-1.jpg";
-const charonne1 = "/images/charonne-1.jpg";
-const carinaNahmani = "/images/carina-nahmani-1.jpg";
-const presseElleWc = "/images/presse-elle-wc-suspendus.jpg";
-const presseMarieClaireApres = "/images/presse-marie-claire-1.jpg";
-const presseMarieClaireAdresses = "/images/presse-marie-claire-auteuil.png";
-const presseHouzzSoisy = "/images/presse-houzz-soisy.png";
-const houzzBestOf2026Photo = "/images/logos/houzz-best-of-2026-photo-award.png";
-const presseHouzzBois = "/images/presse-houzz-bois.jpg";
-const presse18h39Joints = "/images/guide-joint-noir.webp";
-const presseElleSoisy = "/images/presse-elle-soisy.jpg";
-const presseHouzzEau = "/images/presse-houzz-laumiere.png";
-const presse18h39Wc = "/images/presse-18h39-wc.png";
-const soisy1 = "/images/soisy-1.jpg";
-const presseHouzzBuanderie = "/images/presse-houzz-buanderie.png";
-const terrazzoSoisyEnfants = "/images/terrazzo-soisy-enfants.jpg";
-const generalLeclerc3 = "/images/general-leclerc-3.jpg";
-const presseHouzzZerodechet = "/images/presse-houzz-zerodechet.jpg";
-const houzzLogo = "/images/logos/houzz-logo.png";
-const presseHouzzBaignoire = "/images/presse/baignoire-petite-sdb.png";
+import stMande1 from "@/assets/st-mande-1.jpg";
+import charonne1 from "@/assets/charonne-1.jpg";
+import carinaNahmani from "@/assets/carina-nahmani-1.jpg";
+import presseElleWc from "@/assets/presse-elle-wc-suspendus.jpg";
+import presseMarieClaireApres from "@/assets/presse-marie-claire-1.jpg";
+import presseMarieClaireAdresses from "@/assets/presse-marie-claire-auteuil.png";
+import presseHouzzSoisy from "@/assets/presse-houzz-soisy.png";
+import houzzBestOf2026Photo from "@/assets/logos/houzz-best-of-2026-photo-award.png";
+import presseHouzzBois from "@/assets/presse-houzz-bois.jpg";
+import presse18h39Joints from "@/assets/guide-joint-noir.webp";
+import presseElleSoisy from "@/assets/presse-elle-soisy.jpg";
+import presseHouzzEau from "@/assets/presse-houzz-laumiere.png";
+import presse18h39Wc from "@/assets/presse-18h39-wc.png";
+import soisy1 from "@/assets/soisy-1.jpg";
+import presseHouzzBuanderie from "@/assets/presse-houzz-buanderie.png";
+import terrazzoSoisyEnfants from "@/assets/terrazzo-soisy-enfants.jpg";
+import generalLeclerc3 from "@/assets/general-leclerc-3.jpg";
+import presseHouzzZerodechet from "@/assets/presse-houzz-zerodechet.jpg";
+import houzzLogo from "@/assets/logos/houzz-logo.png";
+import presseHouzzBaignoire from "@/assets/presse/baignoire-petite-sdb.png";
 
 // ========================================
 // Structure "base de données" : parutions_presse

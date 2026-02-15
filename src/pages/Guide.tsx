@@ -7,20 +7,20 @@ import { ArrowRight, CheckCircle, AlertTriangle, Droplets, Shield, Wrench, Spark
 import { OGTags } from "@/components/seo/OGTags";
 
 // Images
-const guideJointNoir = "/images/guide-joint-noir.webp";
-const guideJointAssorti = "/images/guide-joint-assorti.webp";
-const guideProfilFinition = "/images/guide-profil-finition.webp";
-const butteschaumont6 = "/images/buttes-chaumont-6.jpg";
-const cielDePluiePlafond = "/images/chatelet-ciel-pluie-plafond.jpg";
-const baignoireRangementNiches = "/images/baignoire-rangement-niches.jpg";
-const baignoireRangementTiroirs = "/images/baignoire-rangement-tiroirs.jpg";
-const nicolasRoretDouche = "/images/nicolas-roret-douche.jpg";
-const receveursDouche = "/images/receveurs-douche.jpg";
-const boulogne3 = "/images/boulogne-3.jpg";
-const batiSupportGeberit = "/images/images/bati-support-geberit.png";
-const plaqueGeberitNoir = "/images/images/plaque-geberit-noir.png";
-const plaqueGeberitLaiton = "/images/images/plaque-geberit-laiton.png";
-const plaqueGeberitChrome = "/images/images/plaque-geberit-chrome.png";
+import guideJointNoir from "@/assets/guide-joint-noir.webp";
+import guideJointAssorti from "@/assets/guide-joint-assorti.webp";
+import guideProfilFinition from "@/assets/guide-profil-finition.webp";
+import butteschaumont6 from "@/assets/buttes-chaumont-6.jpg";
+import cielDePluiePlafond from "@/assets/chatelet-ciel-pluie-plafond.jpg";
+import baignoireRangementNiches from "@/assets/baignoire-rangement-niches.jpg";
+import baignoireRangementTiroirs from "@/assets/baignoire-rangement-tiroirs.jpg";
+import nicolasRoretDouche from "@/assets/nicolas-roret-douche.jpg";
+import receveursDouche from "@/assets/receveurs-douche.jpg";
+import boulogne3 from "@/assets/boulogne-3.jpg";
+import batiSupportGeberit from "@/assets/images/bati-support-geberit.png";
+import plaqueGeberitNoir from "@/assets/images/plaque-geberit-noir.png";
+import plaqueGeberitLaiton from "@/assets/images/plaque-geberit-laiton.png";
+import plaqueGeberitChrome from "@/assets/images/plaque-geberit-chrome.png";
 
 const Guide = () => {
   // FAQ Schema for SEO

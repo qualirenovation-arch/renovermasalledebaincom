@@ -2,566 +2,615 @@
 // Fichier séparé pour les données des albums de réalisations
 // Chaque album a un slug SEO-friendly pour les URLs dédiées
 
-// Image paths - all images are now served from /images/ directory (static assets)
-// This prevents Vite bundling which was causing 977MB build size
+// Paris 10ème
+import gallery7 from "@/assets/gallery-7.jpg";
+import gallery8 from "@/assets/gallery-8.jpg";
+import gallery9 from "@/assets/gallery-9.jpg";
+import gallery10 from "@/assets/gallery-10.jpg";
 
-const gallery7 = "/images/gallery-7.jpg";
-const gallery8 = "/images/gallery-8.jpg";
-const gallery9 = "/images/gallery-9.jpg";
-const gallery10 = "/images/gallery-10.jpg";
+// Bd Pereire Paris 17ème
+import gallery11 from "@/assets/gallery-11.jpg";
+import gallery12 from "@/assets/gallery-12.jpg";
+import gallery13 from "@/assets/gallery-13.jpg";
+import gallery14 from "@/assets/gallery-14.jpg";
+import gallery15 from "@/assets/gallery-15.jpg";
+import gallery16 from "@/assets/gallery-16.jpg";
 
-const gallery11 = "/images/gallery-11.jpg";
-const gallery12 = "/images/gallery-12.jpg";
-const gallery13 = "/images/gallery-13.jpg";
-const gallery14 = "/images/gallery-14.jpg";
-const gallery15 = "/images/gallery-15.jpg";
-const gallery16 = "/images/gallery-16.jpg";
+// Saint-Maur
+import gallery17 from "@/assets/gallery-17.jpg";
+import gallery18 from "@/assets/gallery-18.jpg";
+import gallery19 from "@/assets/gallery-19.jpg";
+import gallery20 from "@/assets/gallery-20.jpg";
+import gallery21 from "@/assets/gallery-21.jpg";
+import gallery22 from "@/assets/gallery-22.jpg";
+import gallery23 from "@/assets/gallery-23.jpg";
+import gallery24 from "@/assets/gallery-24.jpg";
+import gallery25 from "@/assets/gallery-25.jpg";
 
-const gallery17 = "/images/gallery-17.jpg";
-const gallery18 = "/images/gallery-18.jpg";
-const gallery19 = "/images/gallery-19.jpg";
-const gallery20 = "/images/gallery-20.jpg";
-const gallery21 = "/images/gallery-21.jpg";
-const gallery22 = "/images/gallery-22.jpg";
-const gallery23 = "/images/gallery-23.jpg";
-const gallery24 = "/images/gallery-24.jpg";
-const gallery25 = "/images/gallery-25.jpg";
+// Saint-Maur Enfants
+import stMaurEnfants1 from "@/assets/st-maur-enfants-1.jpg";
+import stMaurEnfants2 from "@/assets/st-maur-enfants-2.jpg";
+import stMaurEnfants3 from "@/assets/st-maur-enfants-3.jpg";
+import stMaurEnfants4 from "@/assets/st-maur-enfants-4.jpg";
+import stMaurEnfantsAvant1 from "@/assets/st-maur-enfants-avant-1.jpg";
 
-const stMaurEnfants1 = "/images/st-maur-enfants-1.jpg";
-const stMaurEnfants2 = "/images/st-maur-enfants-2.jpg";
-const stMaurEnfants3 = "/images/st-maur-enfants-3.jpg";
-const stMaurEnfants4 = "/images/st-maur-enfants-4.jpg";
-const stMaurEnfantsAvant1 = "/images/st-maur-enfants-avant-1.jpg";
+// Paris 17ème Suite Parentale - AVANT
+import paris17Avant1 from "@/assets/paris17-1.jpg";
+import paris17Avant2 from "@/assets/paris17-2.jpg";
+import paris17Avant3 from "@/assets/paris17-3.jpg";
+import paris17Avant4 from "@/assets/paris17-4.jpg";
+import paris17Avant5 from "@/assets/paris17-5.jpg";
+import paris17Avant6 from "@/assets/paris17-6.jpg";
+import paris17Avant7 from "@/assets/paris17-7.jpg";
+import paris17Avant8 from "@/assets/paris17-8.jpg";
+// Paris 17ème Suite Parentale - APRÈS
+import suiteParentaleCover from "@/assets/suite-parentale-cover.png";
+import suiteParentale1 from "@/assets/suite-parentale-1.jpg";
+import suiteParentale2 from "@/assets/suite-parentale-2.jpg";
+import suiteParentale3 from "@/assets/suite-parentale-3.jpg";
+import suiteParentale4 from "@/assets/suite-parentale-4.jpg";
+import suiteParentale5 from "@/assets/suite-parentale-5.jpg";
 
-const paris17Avant1 = "/images/paris17-1.jpg";
-const paris17Avant2 = "/images/paris17-2.jpg";
-const paris17Avant3 = "/images/paris17-3.jpg";
-const paris17Avant4 = "/images/paris17-4.jpg";
-const paris17Avant5 = "/images/paris17-5.jpg";
-const paris17Avant6 = "/images/paris17-6.jpg";
-const paris17Avant7 = "/images/paris17-7.jpg";
-const paris17Avant8 = "/images/paris17-8.jpg";
+// Paris 15ème Convention
+import convention1 from "@/assets/courbevoie-1.jpg";
+import convention2 from "@/assets/courbevoie-2.jpg";
+import convention3 from "@/assets/courbevoie-3.jpg";
+import convention4 from "@/assets/courbevoie-4.jpg";
+import convention5 from "@/assets/courbevoie-5.jpg";
+import convention6 from "@/assets/courbevoie-6.jpg";
+import conventionAvant1 from "@/assets/convention-avant-1.jpg";
+import conventionAvant2 from "@/assets/convention-avant-2.jpg";
+import conventionAvant3 from "@/assets/convention-avant-3.jpg";
+import conventionAvant4 from "@/assets/convention-avant-4.jpg";
+import conventionAvant5 from "@/assets/convention-avant-5.jpg";
 
-const suiteParentaleCover = "/images/suite-parentale-cover.png";
-const suiteParentale1 = "/images/suite-parentale-1.jpg";
-const suiteParentale2 = "/images/suite-parentale-2.jpg";
-const suiteParentale3 = "/images/suite-parentale-3.jpg";
-const suiteParentale4 = "/images/suite-parentale-4.jpg";
-const suiteParentale5 = "/images/suite-parentale-5.jpg";
-
-const convention1 = "/images/courbevoie-1.jpg";
-const convention2 = "/images/courbevoie-2.jpg";
-const convention3 = "/images/courbevoie-3.jpg";
-const convention4 = "/images/courbevoie-4.jpg";
-const convention5 = "/images/courbevoie-5.jpg";
-const convention6 = "/images/courbevoie-6.jpg";
-const conventionAvant1 = "/images/convention-avant-1.jpg";
-const conventionAvant2 = "/images/convention-avant-2.jpg";
-const conventionAvant3 = "/images/convention-avant-3.jpg";
-const conventionAvant4 = "/images/convention-avant-4.jpg";
-const conventionAvant5 = "/images/convention-avant-5.jpg";
-
-const charonne1 = "/images/charonne-1.jpg";
-const charonne2 = "/images/charonne-2.jpg";
-const charonneAvant1 = "/images/charonne-avant-1.jpg";
-const charonneAvant2 = "/images/charonne-avant-2.jpg";
-const charonneAvant3 = "/images/charonne-avant-3.jpg";
-const charonneAvant4 = "/images/charonne-avant-4.jpg";
+// Paris 11ème Charonne - Bastille
+import charonne1 from "@/assets/charonne-1.jpg";
+import charonne2 from "@/assets/charonne-2.jpg";
+import charonneAvant1 from "@/assets/charonne-avant-1.jpg";
+import charonneAvant2 from "@/assets/charonne-avant-2.jpg";
+import charonneAvant3 from "@/assets/charonne-avant-3.jpg";
+import charonneAvant4 from "@/assets/charonne-avant-4.jpg";
 const charonneVideo1 = "/videos/charonne-1.mp4";
 
-const jemmapes1 = "/images/jemmapes-1.jpg";
-const jemmapes2 = "/images/jemmapes-2.jpg";
-const jemmapes3 = "/images/jemmapes-3.jpg";
+// Paris 10ème Jemmapes
+import jemmapes1 from "@/assets/jemmapes-1.jpg";
+import jemmapes2 from "@/assets/jemmapes-2.jpg";
+import jemmapes3 from "@/assets/jemmapes-3.jpg";
 
-const boisColombes1 = "/images/bois-colombes-1.jpg";
-const boisColombes2 = "/images/bois-colombes-2.jpg";
-const boisColombes3 = "/images/bois-colombes-3.jpg";
-const boisColombes4 = "/images/bois-colombes-4.jpg";
-const boisColombes5 = "/images/bois-colombes-5.jpg";
-const boisColombes6 = "/images/bois-colombes-6.jpg";
-const boisColombes7 = "/images/bois-colombes-7.jpg";
-const boisColombes8 = "/images/bois-colombes-8.jpg";
-const boisColombes9 = "/images/bois-colombes-9.jpg";
-const boisColombes10 = "/images/bois-colombes-10.jpg";
-const boisColombes11 = "/images/bois-colombes-11.jpg";
-const boisColombresAvant1 = "/images/bois-colombes-avant-1.jpg";
-const boisColombresAvant2 = "/images/bois-colombes-avant-2.jpg";
-const boisColombresAvant3 = "/images/bois-colombes-avant-3.jpg";
+// Bois-Colombes
+import boisColombes1 from "@/assets/bois-colombes-1.jpg";
+import boisColombes2 from "@/assets/bois-colombes-2.jpg";
+import boisColombes3 from "@/assets/bois-colombes-3.jpg";
+import boisColombes4 from "@/assets/bois-colombes-4.jpg";
+import boisColombes5 from "@/assets/bois-colombes-5.jpg";
+import boisColombes6 from "@/assets/bois-colombes-6.jpg";
+import boisColombes7 from "@/assets/bois-colombes-7.jpg";
+import boisColombes8 from "@/assets/bois-colombes-8.jpg";
+import boisColombes9 from "@/assets/bois-colombes-9.jpg";
+import boisColombes10 from "@/assets/bois-colombes-10.jpg";
+import boisColombes11 from "@/assets/bois-colombes-11.jpg";
+import boisColombresAvant1 from "@/assets/bois-colombes-avant-1.jpg";
+import boisColombresAvant2 from "@/assets/bois-colombes-avant-2.jpg";
+import boisColombresAvant3 from "@/assets/bois-colombes-avant-3.jpg";
 
-const vincennesMr1 = "/images/vincennes-mr-1.jpg";
-const vincennesMr2 = "/images/vincennes-mr-2.jpg";
-const vincennesMr3 = "/images/vincennes-mr-3.jpg";
-const vincennesMr4 = "/images/vincennes-mr-4.jpg";
-const vincennesMr5 = "/images/vincennes-mr-5.jpg";
-const vincennesMr6 = "/images/vincennes-mr-6.jpg";
-const vincennesMr7 = "/images/vincennes-mr-7.jpg";
-const vincennesMr8 = "/images/vincennes-mr-8.jpg";
-const vincennesMr9 = "/images/vincennes-mr-9.jpg";
-const vincennesMr10 = "/images/vincennes-mr-10.jpg";
-const vincennesMr11 = "/images/vincennes-mr-11.jpg";
-const vincennesMr12 = "/images/vincennes-mr-12.jpg";
-const vincennesMrAvant1 = "/images/vincennes-mr-avant-1.jpg";
-const vincennesMrAvant2 = "/images/vincennes-mr-avant-2.jpg";
-const vincennesMrAvant3 = "/images/vincennes-mr-avant-3.jpg";
-const vincennesMrAvant4 = "/images/vincennes-mr-avant-4.jpg";
-const vincennesMrAvant5 = "/images/vincennes-mr-avant-5.jpg";
-const vincennesMrAvant6 = "/images/vincennes-mr-avant-6.jpg";
-const vincennesMrAvant7 = "/images/vincennes-mr-avant-7.jpg";
-const vincennesMrAvant8 = "/images/vincennes-mr-avant-8.jpg";
-const vincennesMrAvant9 = "/images/vincennes-mr-avant-9.jpg";
+// Vincennes SDB Monsieur
+import vincennesMr1 from "@/assets/vincennes-mr-1.jpg";
+import vincennesMr2 from "@/assets/vincennes-mr-2.jpg";
+import vincennesMr3 from "@/assets/vincennes-mr-3.jpg";
+import vincennesMr4 from "@/assets/vincennes-mr-4.jpg";
+import vincennesMr5 from "@/assets/vincennes-mr-5.jpg";
+import vincennesMr6 from "@/assets/vincennes-mr-6.jpg";
+import vincennesMr7 from "@/assets/vincennes-mr-7.jpg";
+import vincennesMr8 from "@/assets/vincennes-mr-8.jpg";
+import vincennesMr9 from "@/assets/vincennes-mr-9.jpg";
+import vincennesMr10 from "@/assets/vincennes-mr-10.jpg";
+import vincennesMr11 from "@/assets/vincennes-mr-11.jpg";
+import vincennesMr12 from "@/assets/vincennes-mr-12.jpg";
+import vincennesMrAvant1 from "@/assets/vincennes-mr-avant-1.jpg";
+import vincennesMrAvant2 from "@/assets/vincennes-mr-avant-2.jpg";
+import vincennesMrAvant3 from "@/assets/vincennes-mr-avant-3.jpg";
+import vincennesMrAvant4 from "@/assets/vincennes-mr-avant-4.jpg";
+import vincennesMrAvant5 from "@/assets/vincennes-mr-avant-5.jpg";
+import vincennesMrAvant6 from "@/assets/vincennes-mr-avant-6.jpg";
+import vincennesMrAvant7 from "@/assets/vincennes-mr-avant-7.jpg";
+import vincennesMrAvant8 from "@/assets/vincennes-mr-avant-8.jpg";
+import vincennesMrAvant9 from "@/assets/vincennes-mr-avant-9.jpg";
 
-const coursVincennesWc1 = "/images/cours-vincennes-wc-1.jpg";
-const coursVincennesWc2 = "/images/cours-vincennes-wc-2.jpg";
-const coursVincennesWc3 = "/images/cours-vincennes-wc-3.jpg";
-const coursVincennesWcAvant1 = "/images/cours-vincennes-wc-avant-1.jpg";
+// WC Cours de Vincennes
+import coursVincennesWc1 from "@/assets/cours-vincennes-wc-1.jpg";
+import coursVincennesWc2 from "@/assets/cours-vincennes-wc-2.jpg";
+import coursVincennesWc3 from "@/assets/cours-vincennes-wc-3.jpg";
+import coursVincennesWcAvant1 from "@/assets/cours-vincennes-wc-avant-1.jpg";
 const coursVincennesWcVideo1 = "/videos/cours-vincennes-wc-1.mp4";
 
-const butteschaumont1 = "/images/buttes-chaumont-1.jpg";
-const butteschaumont2 = "/images/buttes-chaumont-2.jpg";
-const butteschaumont3 = "/images/buttes-chaumont-3.jpg";
-const butteschaumont4 = "/images/buttes-chaumont-4.jpg";
-const butteschaumont5 = "/images/buttes-chaumont-5.jpg";
-const taitbout1 = "/images/taitbout-1.jpg";
-const taitbout2 = "/images/taitbout-2.jpg";
-const taitbout3 = "/images/taitbout-3.jpg";
-const taitbout5 = "/images/taitbout-5.jpg";
-const taitbout6 = "/images/taitbout-6.jpg";
-const taitbout7 = "/images/taitbout-7.jpg";
-const taitbout8 = "/images/taitbout-8.jpg";
-const taitbout8_2 = "/images/taitbout-8-2.jpg";
-const taitbout9 = "/images/taitbout-9.jpg";
-const taitbout10 = "/images/taitbout-10.jpg";
-const taitbout11 = "/images/taitbout-11.jpg";
-const taitbout12 = "/images/taitbout-12.jpg";
-const rocroy1 = "/photos/rocroy/avant-baignoire.jpg";
-const rocroy2 = "/photos/rocroy/demolition.jpg";
+// Chantiers en cours
+import butteschaumont1 from "@/assets/buttes-chaumont-1.jpg";
+import butteschaumont2 from "@/assets/buttes-chaumont-2.jpg";
+import butteschaumont3 from "@/assets/buttes-chaumont-3.jpg";
+import butteschaumont4 from "@/assets/buttes-chaumont-4.jpg";
+import butteschaumont5 from "@/assets/buttes-chaumont-5.jpg";
+import butteschaumont6 from "@/assets/buttes-chaumont-6.jpg";
+import butteschaumont7 from "@/assets/buttes-chaumont-7.jpg";
+import butteschaumont8 from "@/assets/buttes-chaumont-8.jpg";
+import butteschaumont9 from "@/assets/buttes-chaumont-9.jpg";
+import taitbout1 from "@/assets/taitbout-1.jpg";
+import taitbout2 from "@/assets/taitbout-2.jpg";
+import taitbout3 from "@/assets/taitbout-3.jpg";
+import taitbout5 from "@/assets/taitbout-5.jpg";
+import taitbout6 from "@/assets/taitbout-6.jpg";
+import taitbout7 from "@/assets/taitbout-7.jpg";
+import taitbout8 from "@/assets/taitbout-8.jpg";
+import taitbout8_2 from "@/assets/taitbout-8-2.jpg";
+import taitbout9 from "@/assets/taitbout-9.jpg";
+import taitbout10 from "@/assets/taitbout-10.jpg";
+import taitbout11 from "@/assets/taitbout-11.jpg";
+import taitbout12 from "@/assets/taitbout-12.jpg";
+import rocroy1 from "@/assets/rocroy-1.jpg";
+import rocroy2 from "@/assets/rocroy-2.jpg";
 
-const nicolasRoret1 = "/images/nicolas-roret-1.jpg";
-const nicolasRoret2 = "/images/nicolas-roret-2.jpg";
-const nicolasRoret3 = "/images/nicolas-roret-3.jpg";
-const nicolasRoret4 = "/images/nicolas-roret-4.jpg";
-const nicolasRoret5 = "/images/nicolas-roret-5.jpg";
-const nicolasRoret6 = "/images/nicolas-roret-6.jpg";
-const nicolasRoret7 = "/images/nicolas-roret-7.jpg";
-const nicolasRoret9 = "/images/nicolas-roret-9.jpg";
-const nicolasRoret10 = "/images/nicolas-roret-10.jpg";
-const nicolasRoret11 = "/images/nicolas-roret-11.jpg";
-const nicolasRoret12 = "/images/nicolas-roret-12.jpg";
-const nicolasRoret3d1 = "/images/nicolas-roret-3d-1.jpg";
-const nicolasRoret3d2 = "/images/nicolas-roret-3d-2.jpg";
-const nicolasRoretAvant1 = "/images/nicolas-roret-avant-1.jpg";
-const nicolasRoretTravaux1 = "/images/nicolas-roret-travaux-1.jpg";
+// Nicolas Roret Paris 13
+import nicolasRoret1 from "@/assets/nicolas-roret-1.jpg";
+import nicolasRoret2 from "@/assets/nicolas-roret-2.jpg";
+import nicolasRoret3 from "@/assets/nicolas-roret-3.jpg";
+import nicolasRoret4 from "@/assets/nicolas-roret-4.jpg";
+import nicolasRoret5 from "@/assets/nicolas-roret-5.jpg";
+import nicolasRoret6 from "@/assets/nicolas-roret-6.jpg";
+import nicolasRoret7 from "@/assets/nicolas-roret-7.jpg";
+import nicolasRoret9 from "@/assets/nicolas-roret-9.jpg";
+import nicolasRoret10 from "@/assets/nicolas-roret-10.jpg";
+import nicolasRoret11 from "@/assets/nicolas-roret-11.jpg";
+import nicolasRoret12 from "@/assets/nicolas-roret-12.jpg";
+import nicolasRoret3d1 from "@/assets/nicolas-roret-3d-1.jpg";
+import nicolasRoret3d2 from "@/assets/nicolas-roret-3d-2.jpg";
+import nicolasRoretAvant1 from "@/assets/nicolas-roret-avant-1.jpg";
+import nicolasRoretTravaux1 from "@/assets/nicolas-roret-travaux-1.jpg";
 
-const dunois1 = "/images/dunois-1.jpg";
-const dunois2 = "/images/dunois-2.jpg";
-const dunois3 = "/images/dunois-3.jpg";
-const dunois4 = "/images/dunois-4.jpg";
-const dunois5 = "/images/dunois-5.jpg";
-const dunois6 = "/images/dunois-6.jpg";
-const dunois7 = "/images/dunois-7.jpg";
-const dunois8 = "/images/dunois-8.jpg";
-const dunois9 = "/images/dunois-9.jpg";
-const dunoisAvant1 = "/images/dunois-avant-1.jpg";
-const dunoisAvant2 = "/images/dunois-avant-2.jpg";
-const dunoisAvant3 = "/images/dunois-avant-3.jpg";
-const dunoisAvant4 = "/images/dunois-avant-4.jpg";
-const dunoisAvant5 = "/images/projects/dunois/avant-travaux-7.jpg";
-const dunoisAvant6 = "/images/projects/dunois/avant-travaux-9.jpg";
+// Dunois Paris 13ème
+import dunois1 from "@/assets/dunois-1.jpg";
+import dunois2 from "@/assets/dunois-2.jpg";
+import dunois3 from "@/assets/dunois-3.jpg";
+import dunois4 from "@/assets/dunois-4.jpg";
+import dunois5 from "@/assets/dunois-5.jpg";
+import dunois6 from "@/assets/dunois-6.jpg";
+import dunois7 from "@/assets/dunois-7.jpg";
+import dunois8 from "@/assets/dunois-8.jpg";
+import dunois9 from "@/assets/dunois-9.jpg";
+import dunoisAvant1 from "@/assets/dunois-avant-1.jpg";
+import dunoisAvant2 from "@/assets/dunois-avant-2.jpg";
+import dunoisAvant3 from "@/assets/dunois-avant-3.jpg";
+import dunoisAvant4 from "@/assets/dunois-avant-4.jpg";
+import dunoisAvant5 from "/images/projects/dunois/avant-travaux-7.jpg";
+import dunoisAvant6 from "/images/projects/dunois/avant-travaux-9.jpg";
 
-const temple1 = "/images/temple-1.jpg";
-const temple2 = "/images/temple-2.jpg";
-const temple3 = "/images/temple-3.jpg";
-const temple4 = "/images/temple-4.jpg";
-const templeAvant1 = "/images/temple-avant-1.jpg";
-const templeAvant2 = "/images/temple-avant-2.jpg";
+// Paris 3ème Temple
+import temple1 from "@/assets/temple-1.jpg";
+import temple2 from "@/assets/temple-2.jpg";
+import temple3 from "@/assets/temple-3.jpg";
+import temple4 from "@/assets/temple-4.jpg";
+import templeAvant1 from "@/assets/temple-avant-1.jpg";
+import templeAvant2 from "@/assets/temple-avant-2.jpg";
 
-const buffon1 = "/images/buffon-1.jpg";
-const buffon2 = "/images/buffon-2.jpg";
-const buffon3 = "/images/buffon-3.jpg";
-const buffon4 = "/images/buffon-4.jpg";
-const buffon5 = "/images/buffon-5.jpg";
-const buffon6 = "/images/buffon-6.jpg";
-const buffon7 = "/images/buffon-7.jpg";
-const buffonAvant1 = "/images/buffon-avant-1.jpg";
-const buffonAvant2 = "/images/buffon-avant-2.jpg";
+// Paris 5ème Buffon
+import buffon1 from "@/assets/buffon-1.jpg";
+import buffon2 from "@/assets/buffon-2.jpg";
+import buffon3 from "@/assets/buffon-3.jpg";
+import buffon4 from "@/assets/buffon-4.jpg";
+import buffon5 from "@/assets/buffon-5.jpg";
+import buffon6 from "@/assets/buffon-6.jpg";
+import buffon7 from "@/assets/buffon-7.jpg";
+import buffonAvant1 from "@/assets/buffon-avant-1.jpg";
+import buffonAvant2 from "@/assets/buffon-avant-2.jpg";
 
-const vincennes1 = "/images/vincennes-1.jpg";
-const vincennes2 = "/images/vincennes-2.jpg";
-const vincennes3 = "/images/vincennes-3.jpg";
+// Vincennes (94)
+import vincennes1 from "@/assets/vincennes-1.jpg";
+import vincennes2 from "@/assets/vincennes-2.jpg";
+import vincennes3 from "@/assets/vincennes-3.jpg";
 
-const stGermain1 = "/images/stgermain-1.jpg";
-const stGermain2 = "/images/stgermain-2.jpg";
-const stGermain3 = "/images/stgermain-3.jpg";
-const stGermain4 = "/images/stgermain-4.jpg";
-const stGermainAvant1 = "/images/stgermain-avant.jpg";
-const stGermainAvant2 = "/images/stgermain-avant-2.jpg";
-const stGermainAvant3 = "/images/stgermain-avant-3.jpg";
-const stGermainAvant4 = "/images/stgermain-avant-4.jpg";
+// Saint-Germain Paris 6ème
+import stGermain1 from "@/assets/stgermain-1.jpg";
+import stGermain2 from "@/assets/stgermain-2.jpg";
+import stGermain3 from "@/assets/stgermain-3.jpg";
+import stGermain4 from "@/assets/stgermain-4.jpg";
+import stGermainAvant1 from "@/assets/stgermain-avant.jpg";
+import stGermainAvant2 from "@/assets/stgermain-avant-2.jpg";
+import stGermainAvant3 from "@/assets/stgermain-avant-3.jpg";
+import stGermainAvant4 from "@/assets/stgermain-avant-4.jpg";
 
-const courbevoie1 = "/images/courbevoie-1.jpg";
-const courbevoie2 = "/images/courbevoie-2.jpg";
-const courbevoie3 = "/images/courbevoie-3.jpg";
-const courbevoie4 = "/images/courbevoie-4.jpg";
-const courbevoie5 = "/images/courbevoie-5.jpg";
-const courbevoie6 = "/images/courbevoie-6.jpg";
-const courbevoie7 = "/images/courbevoie-7.jpg";
-const courbevoie8 = "/images/courbevoie-8.jpg";
-const courbevoie9 = "/images/courbevoie-9.jpg";
-const courbevoie10 = "/images/courbevoie-10.jpg";
-const courbevoie11 = "/images/courbevoie-11.jpg";
-const courbevoieAvant1 = "/images/courbevoie-avant-1.jpg";
-const courbevoieAvant2 = "/images/courbevoie-avant-2.jpg";
-const courbevoieAvant3 = "/images/courbevoie-avant-3.jpg";
-const courbevoieTravaux1 = "/images/courbevoie-travaux-1.jpg";
-const courbevoieTravaux2 = "/images/courbevoie-travaux-2.jpg";
+// Courbevoie Bécon
+import courbevoie1 from "@/assets/courbevoie-1.jpg";
+import courbevoie2 from "@/assets/courbevoie-2.jpg";
+import courbevoie3 from "@/assets/courbevoie-3.jpg";
+import courbevoie4 from "@/assets/courbevoie-4.jpg";
+import courbevoie5 from "@/assets/courbevoie-5.jpg";
+import courbevoie6 from "@/assets/courbevoie-6.jpg";
+import courbevoie7 from "@/assets/courbevoie-7.jpg";
+import courbevoie8 from "@/assets/courbevoie-8.jpg";
+import courbevoie9 from "@/assets/courbevoie-9.jpg";
+import courbevoie10 from "@/assets/courbevoie-10.jpg";
+import courbevoie11 from "@/assets/courbevoie-11.jpg";
+import courbevoieAvant1 from "@/assets/courbevoie-avant-1.jpg";
+import courbevoieAvant2 from "@/assets/courbevoie-avant-2.jpg";
+import courbevoieAvant3 from "@/assets/courbevoie-avant-3.jpg";
+import courbevoieTravaux1 from "@/assets/courbevoie-travaux-1.jpg";
+import courbevoieTravaux2 from "@/assets/courbevoie-travaux-2.jpg";
 const courbevoieVideo1 = "/videos/courbevoie-1.mp4";
 
-const lauriston1 = "/images/lauriston-1.jpg";
-const lauriston2 = "/images/lauriston-2.jpg";
-const lauriston3 = "/images/lauriston-3.jpg";
-const lauriston4 = "/images/lauriston-4.jpg";
-const lauriston5 = "/images/lauriston-5.jpg";
-const lauristonAvant1 = "/images/lauriston-avant-1.jpg";
-const lauristonAvant2 = "/images/lauriston-avant-2.jpg";
+// Lauriston Paris 16ème
+import lauriston1 from "@/assets/lauriston-1.jpg";
+import lauriston2 from "@/assets/lauriston-2.jpg";
+import lauriston3 from "@/assets/lauriston-3.jpg";
+import lauriston4 from "@/assets/lauriston-4.jpg";
+import lauriston5 from "@/assets/lauriston-5.jpg";
+import lauristonAvant1 from "@/assets/lauriston-avant-1.jpg";
+import lauristonAvant2 from "@/assets/lauriston-avant-2.jpg";
 
-const faubourgStmartin1 = "/images/faubourg-stmartin-1.jpg";
-const faubourgStmartin2 = "/images/faubourg-stmartin-2.jpg";
-const faubourgStmartin3 = "/images/faubourg-stmartin-3.jpg";
-const faubourgStmartin4 = "/images/faubourg-stmartin-4.jpg";
-const faubourgStmartin5 = "/images/faubourg-stmartin-5.jpg";
-const faubourgStmartin6 = "/images/faubourg-stmartin-6.jpg";
-const faubourgStmartin7 = "/images/faubourg-stmartin-7.jpg";
+// Faubourg Saint-Martin Paris 10ème
+import faubourgStmartin1 from "@/assets/faubourg-stmartin-1.jpg";
+import faubourgStmartin2 from "@/assets/faubourg-stmartin-2.jpg";
+import faubourgStmartin3 from "@/assets/faubourg-stmartin-3.jpg";
+import faubourgStmartin4 from "@/assets/faubourg-stmartin-4.jpg";
+import faubourgStmartin5 from "@/assets/faubourg-stmartin-5.jpg";
+import faubourgStmartin6 from "@/assets/faubourg-stmartin-6.jpg";
+import faubourgStmartin7 from "@/assets/faubourg-stmartin-7.jpg";
 
-const boulogne1 = "/images/boulogne-1.jpg";
-const boulogne2 = "/images/boulogne-2.jpg";
-const boulogne3 = "/images/boulogne-3.jpg";
-const boulogne4 = "/images/boulogne-4.jpg";
-const boulogne5 = "/images/boulogne-5.jpg";
-const boulogne6 = "/images/boulogne-6.jpg";
-const boulogne7 = "/images/boulogne-7.jpg";
-const boulogne8 = "/images/boulogne-8.jpg";
-const boulogne9 = "/images/boulogne-9.jpg";
-const boulogne10 = "/images/boulogne-10.jpg";
-const boulogne11 = "/images/boulogne-11.jpg";
-const boulogne12 = "/images/boulogne-12.jpg";
-const boulogne13 = "/images/boulogne-13.jpg";
-const boulogne14 = "/images/boulogne-14.jpg";
-const boulogneAvant1 = "/images/boulogne-avant-1.jpg";
-const boulogneAvant2 = "/images/boulogne-avant-2.jpg";
-const boulogneAvant3 = "/images/boulogne-avant-3.jpg";
-const boulogneAvant4 = "/images/boulogne-avant-4.jpg";
-const boulogneTravaux1 = "/images/boulogne-travaux-1.jpg";
-const boulogneTravaux2 = "/images/boulogne-travaux-2.jpg";
+// Boulogne-Billancourt (92)
+import boulogne1 from "@/assets/boulogne-1.jpg";
+import boulogne2 from "@/assets/boulogne-2.jpg";
+import boulogne3 from "@/assets/boulogne-3.jpg";
+import boulogne4 from "@/assets/boulogne-4.jpg";
+import boulogne5 from "@/assets/boulogne-5.jpg";
+import boulogne6 from "@/assets/boulogne-6.jpg";
+import boulogne7 from "@/assets/boulogne-7.jpg";
+import boulogne8 from "@/assets/boulogne-8.jpg";
+import boulogne9 from "@/assets/boulogne-9.jpg";
+import boulogne10 from "@/assets/boulogne-10.jpg";
+import boulogne11 from "@/assets/boulogne-11.jpg";
+import boulogne12 from "@/assets/boulogne-12.jpg";
+import boulogne13 from "@/assets/boulogne-13.jpg";
+import boulogne14 from "@/assets/boulogne-14.jpg";
+import boulogneAvant1 from "@/assets/boulogne-avant-1.jpg";
+import boulogneAvant2 from "@/assets/boulogne-avant-2.jpg";
+import boulogneAvant3 from "@/assets/boulogne-avant-3.jpg";
+import boulogneAvant4 from "@/assets/boulogne-avant-4.jpg";
+import boulogneTravaux1 from "@/assets/boulogne-travaux-1.jpg";
+import boulogneTravaux2 from "@/assets/boulogne-travaux-2.jpg";
 
-const citeaux1 = "/images/citeaux-1.jpg";
-const citeaux2 = "/images/citeaux-2.jpg";
-const citeaux3 = "/images/citeaux-3.jpg";
-const citeaux4 = "/images/citeaux-4.jpg";
-const citeauxAvant1 = "/images/citeaux-avant-1.jpg";
-const citeauxAvant2 = "/images/citeaux-avant-2.jpg";
+// Paris 11ème Citeaux
+import citeaux1 from "@/assets/citeaux-1.jpg";
+import citeaux2 from "@/assets/citeaux-2.jpg";
+import citeaux3 from "@/assets/citeaux-3.jpg";
+import citeaux4 from "@/assets/citeaux-4.jpg";
+import citeauxAvant1 from "@/assets/citeaux-avant-1.jpg";
+import citeauxAvant2 from "@/assets/citeaux-avant-2.jpg";
 
-const ruePuits1 = "/images/rue-des-puits-1.jpg";
-const ruePuits2 = "/images/rue-des-puits-2.jpg";
-const ruePuits3 = "/images/rue-des-puits-3.jpg";
-const ruePuits4 = "/images/rue-des-puits-4.jpg";
-const ruePuits5 = "/images/rue-des-puits-5.jpg";
-const ruePuits6 = "/images/rue-des-puits-6.jpg";
-const ruePuits7 = "/images/rue-des-puits-7.jpg";
-const ruePuits8 = "/images/rue-des-puits-8.jpg";
-const ruePuits9 = "/images/rue-des-puits-9.jpg";
-const ruePuits10 = "/images/rue-des-puits-10.jpg";
-const ruePuitsAvant1 = "/images/rue-des-puits-avant-1.jpg";
-const ruePuitsAvant2 = "/images/rue-des-puits-avant-2.jpg";
-const ruePuitsAvant3 = "/images/rue-des-puits-avant-3.jpg";
-const ruePuitsAvant4 = "/images/rue-des-puits-avant-4.jpg";
+// Rue des Puits Paris 5ème
+import ruePuits1 from "@/assets/rue-des-puits-1.jpg";
+import ruePuits2 from "@/assets/rue-des-puits-2.jpg";
+import ruePuits3 from "@/assets/rue-des-puits-3.jpg";
+import ruePuits4 from "@/assets/rue-des-puits-4.jpg";
+import ruePuits5 from "@/assets/rue-des-puits-5.jpg";
+import ruePuits6 from "@/assets/rue-des-puits-6.jpg";
+import ruePuits7 from "@/assets/rue-des-puits-7.jpg";
+import ruePuits8 from "@/assets/rue-des-puits-8.jpg";
+import ruePuits9 from "@/assets/rue-des-puits-9.jpg";
+import ruePuits10 from "@/assets/rue-des-puits-10.jpg";
+import ruePuitsAvant1 from "@/assets/rue-des-puits-avant-1.jpg";
+import ruePuitsAvant2 from "@/assets/rue-des-puits-avant-2.jpg";
+import ruePuitsAvant3 from "@/assets/rue-des-puits-avant-3.jpg";
+import ruePuitsAvant4 from "@/assets/rue-des-puits-avant-4.jpg";
 
-const amiralRoussin1 = "/images/amiral-roussin-1.jpg";
-const amiralRoussin2 = "/images/amiral-roussin-2.jpg";
-const amiralRoussin3 = "/images/amiral-roussin-3.jpg";
-const amiralRoussin4 = "/images/amiral-roussin-4.jpg";
-const amiralRoussin5 = "/images/amiral-roussin-5.jpg";
-const amiralRoussin6 = "/images/amiral-roussin-6.jpg";
-const amiralRoussinAvant1 = "/images/amiral-roussin-avant-1.jpg";
-const amiralRoussinAvant2 = "/images/amiral-roussin-avant-2.jpg";
-const amiralRoussinAvant3 = "/images/amiral-roussin-avant-3.jpg";
+// Amiral Roussin Paris 15ème
+import amiralRoussin1 from "@/assets/amiral-roussin-1.jpg";
+import amiralRoussin2 from "@/assets/amiral-roussin-2.jpg";
+import amiralRoussin3 from "@/assets/amiral-roussin-3.jpg";
+import amiralRoussin4 from "@/assets/amiral-roussin-4.jpg";
+import amiralRoussin5 from "@/assets/amiral-roussin-5.jpg";
+import amiralRoussin6 from "@/assets/amiral-roussin-6.jpg";
+import amiralRoussinAvant1 from "@/assets/amiral-roussin-avant-1.jpg";
+import amiralRoussinAvant2 from "@/assets/amiral-roussin-avant-2.jpg";
+import amiralRoussinAvant3 from "@/assets/amiral-roussin-avant-3.jpg";
 
-const saintCharlesLeroyMerlin = "/images/saint-charles-leroy-merlin.jpg";
-const saintCharlesApres1 = "/images/projects/saint-charles/apres-baignoire-balneo.jpg";
-const saintCharlesApres2 = "/images/projects/saint-charles/apres-baignoire-2.jpg";
-const saintCharlesApres3 = "/images/projects/saint-charles/apres-baignoire-3.jpg";
-const saintCharlesApres4 = "/images/projects/saint-charles/apres-baignoire-chromotherapie.jpg";
-const saintCharlesApres5 = "/images/projects/saint-charles/apres-vasque-meuble-vintage.jpg";
-const saintCharlesApres6 = "/images/projects/saint-charles/apres-wc-suspendu.jpg";
-const saintCharlesApres7 = "/images/projects/saint-charles/apres-vue-ensemble.jpg";
-const saintCharlesAvant1 = "/images/projects/saint-charles/avant-vasque-lave-linge.jpg";
-const saintCharlesAvant2 = "/images/projects/saint-charles/avant-vue-generale.jpg";
-const saintCharlesAvant3 = "/images/projects/saint-charles/avant-baignoire-douche.jpg";
+// Saint-Charles Paris 15ème
+import saintCharlesLeroyMerlin from "@/assets/saint-charles-leroy-merlin.jpg";
+import saintCharlesApres1 from "@/assets/projects/saint-charles/apres-baignoire-balneo.jpg";
+import saintCharlesApres2 from "@/assets/projects/saint-charles/apres-baignoire-2.jpg";
+import saintCharlesApres3 from "@/assets/projects/saint-charles/apres-baignoire-3.jpg";
+import saintCharlesApres4 from "@/assets/projects/saint-charles/apres-baignoire-chromotherapie.jpg";
+import saintCharlesApres5 from "@/assets/projects/saint-charles/apres-vasque-meuble-vintage.jpg";
+import saintCharlesApres6 from "@/assets/projects/saint-charles/apres-wc-suspendu.jpg";
+import saintCharlesApres7 from "@/assets/projects/saint-charles/apres-vue-ensemble.jpg";
+import saintCharlesAvant1 from "@/assets/projects/saint-charles/avant-vasque-lave-linge.jpg";
+import saintCharlesAvant2 from "@/assets/projects/saint-charles/avant-vue-generale.jpg";
+import saintCharlesAvant3 from "@/assets/projects/saint-charles/avant-baignoire-douche.jpg";
 
-const auteuil1 = "/images/auteuil-1.jpg";
-const auteuil2 = "/images/auteuil-2.jpg";
-const auteuil3 = "/images/auteuil-3.jpg";
-const auteuil4 = "/images/auteuil-4.jpg";
-const auteuil5 = "/images/auteuil-5.jpg";
-const auteuil6 = "/images/auteuil-6.jpg";
-const auteuil7 = "/images/auteuil-7.jpg";
-const auteuilAvant1 = "/images/auteuil-avant-1.jpg";
+// Auteuil Paris 16ème
+import auteuil1 from "@/assets/auteuil-1.jpg";
+import auteuil2 from "@/assets/auteuil-2.jpg";
+import auteuil3 from "@/assets/auteuil-3.jpg";
+import auteuil4 from "@/assets/auteuil-4.jpg";
+import auteuil5 from "@/assets/auteuil-5.jpg";
+import auteuil6 from "@/assets/auteuil-6.jpg";
+import auteuil7 from "@/assets/auteuil-7.jpg";
+import auteuilAvant1 from "@/assets/auteuil-avant-1.jpg";
 
-const pierreGuerin1 = "/images/pierre-guerin-1.jpg";
-const pierreGuerin2 = "/images/pierre-guerin-2.jpg";
-const pierreGuerin3 = "/images/pierre-guerin-3.jpg";
-const pierreGuerin4 = "/images/pierre-guerin-4.jpg";
-const pierreGuerin5 = "/images/pierre-guerin-5.jpg";
+// Pierre Guérin Paris 16ème
+import pierreGuerin1 from "@/assets/pierre-guerin-1.jpg";
+import pierreGuerin2 from "@/assets/pierre-guerin-2.jpg";
+import pierreGuerin3 from "@/assets/pierre-guerin-3.jpg";
+import pierreGuerin4 from "@/assets/pierre-guerin-4.jpg";
+import pierreGuerin5 from "@/assets/pierre-guerin-5.jpg";
 
-const stOuen1 = "/images/st-ouen-1.jpg";
+// Saint-Ouen (93)
+import stOuen1 from "@/assets/st-ouen-1.jpg";
 
-// Saint-Denis (93) — Auguste Delaune
-const saintDenisAvant3 = "/photos/saint-denis-delaune/avant-chantier-3.jpg";
-const saintDenisAvant5 = "/photos/saint-denis-delaune/avant-chantier-5.jpg";
-const saintDenisAvant6 = "/photos/saint-denis-delaune/avant-chantier-6.jpg";
-const saintDenisAvant9 = "/photos/saint-denis-delaune/avant-chantier-9.jpg";
-const saintDenisFinal1 = "/photos/saint-denis-delaune/finalisation.jpg";
-const saintDenisFinal2 = "/photos/saint-denis-delaune/finalisation-2.jpg";
-const saintDenisFinal3 = "/photos/saint-denis-delaune/finalisation-3.jpg";
-const saintDenisFinal4 = "/photos/saint-denis-delaune/finalisation-4.jpg";
-const saintDenisFinal5 = "/photos/saint-denis-delaune/finalisation-5.jpg";
-const saintDenisFinal6 = "/photos/saint-denis-delaune/finalisation-6.jpg";
+// Saint-Denis (93)
+const saintDenisDelaune1 = "/projects/saint-denis-delaune/delaune1.jpg";
+const saintDenisDelaune2 = "/projects/saint-denis-delaune/delaune2.jpg";
+const saintDenisDelaune3 = "/projects/saint-denis-delaune/delaune3.jpg";
+const saintDenisDelaune4 = "/projects/saint-denis-delaune/delaune4.jpg";
+const saintDenisDelaune5 = "/projects/saint-denis-delaune/delaune5.jpg";
+const saintDenisDelaune6 = "/projects/saint-denis-delaune/delaune6.jpg";
 
-const stOuen2 = "/images/st-ouen-2.jpg";
-const stOuen3 = "/images/st-ouen-3.jpg";
-const stOuen4 = "/images/st-ouen-4.jpg";
-const stOuen5 = "/images/st-ouen-5.jpg";
-const stOuen6 = "/images/st-ouen-6.jpg";
-const stOuen7 = "/images/st-ouen-7.jpg";
-const stOuenAvant1 = "/images/st-ouen-avant-1.jpg";
-const stOuenAvant2 = "/images/st-ouen-avant-2.jpg";
+import stOuen2 from "@/assets/st-ouen-2.jpg";
+import stOuen3 from "@/assets/st-ouen-3.jpg";
+import stOuen4 from "@/assets/st-ouen-4.jpg";
+import stOuen5 from "@/assets/st-ouen-5.jpg";
+import stOuen6 from "@/assets/st-ouen-6.jpg";
+import stOuen7 from "@/assets/st-ouen-7.jpg";
+import stOuenAvant1 from "@/assets/st-ouen-avant-1.jpg";
+import stOuenAvant2 from "@/assets/st-ouen-avant-2.jpg";
 
 // Saint-Mandé (94)
-const stMande1 = "/images/st-mande-1.jpg";
-const stMande2 = "/images/st-mande-2.jpg";
-const stMande3 = "/images/st-mande-3.jpg";
+import stMande1 from "@/assets/st-mande-1.jpg";
+import stMande2 from "@/assets/st-mande-2.jpg";
+import stMande3 from "@/assets/st-mande-3.jpg";
 
 // Avenue Matignon Paris 8ème
-const matignon1 = "/images/matignon-1.jpg";
-const matignon2 = "/images/matignon-2.jpg";
-const matignon3 = "/images/matignon-3.jpg";
-const matignon4 = "/images/matignon-4.jpg";
-const matignonAvant1 = "/images/matignon-avant-1.jpg";
-const matignonAvant2 = "/images/matignon-avant-2.jpg";
-const matignonAvant3 = "/images/matignon-avant-3.jpg";
-const matignonAvant4 = "/images/matignon-avant-4.jpg";
+import matignon1 from "@/assets/matignon-1.jpg";
+import matignon2 from "@/assets/matignon-2.jpg";
+import matignon3 from "@/assets/matignon-3.jpg";
+import matignon4 from "@/assets/matignon-4.jpg";
+import matignonAvant1 from "@/assets/matignon-avant-1.jpg";
+import matignonAvant2 from "@/assets/matignon-avant-2.jpg";
+import matignonAvant3 from "@/assets/matignon-avant-3.jpg";
+import matignonAvant4 from "@/assets/matignon-avant-4.jpg";
 
 // Saint-Honoré Paris 8ème
-const stHonore1 = "/images/st-honore-1.jpg";
-const stHonore2 = "/images/st-honore-2.jpg";
-const stHonore3 = "/images/st-honore-3.jpg";
-const stHonore4 = "/images/st-honore-4.jpg";
-const stHonore5 = "/images/st-honore-5.jpg";
-const stHonore6 = "/images/st-honore-6.jpg";
-const stHonore7 = "/images/st-honore-7.jpg";
+import stHonore1 from "@/assets/st-honore-1.jpg";
+import stHonore2 from "@/assets/st-honore-2.jpg";
+import stHonore3 from "@/assets/st-honore-3.jpg";
+import stHonore4 from "@/assets/st-honore-4.jpg";
+import stHonore5 from "@/assets/st-honore-5.jpg";
+import stHonore6 from "@/assets/st-honore-6.jpg";
+import stHonore7 from "@/assets/st-honore-7.jpg";
 
-const bobillot1 = "/images/bobillot-1.jpg";
-const bobillot2 = "/images/bobillot-2.jpg";
-const bobillotApres1 = "/images/bobillot-apres-1.jpg";
-const bobillotApresWc = "/images/bobillot-apres-wc.jpg";
-const bobillotApres3 = "/images/bobillot-apres-3.jpg";
-const bobillotApres4 = "/images/bobillot-apres-4.jpg";
-const bobillotAvant1 = "/images/bobillot-avant-1.jpg";
-const bobillotAvant2 = "/images/bobillot-avant-2.jpg";
-const bobillotAvant3 = "/images/bobillot-avant-3.jpg";
+// Bobillot Paris 13ème
+import bobillot1 from "@/assets/bobillot-1.jpg";
+import bobillot2 from "@/assets/bobillot-2.jpg";
+import bobillotApres1 from "@/assets/bobillot-apres-1.jpg";
+import bobillotApresWc from "@/assets/bobillot-apres-wc.jpg";
+import bobillotApres3 from "@/assets/bobillot-apres-3.jpg";
+import bobillotApres4 from "@/assets/bobillot-apres-4.jpg";
+import bobillotAvant1 from "@/assets/bobillot-avant-1.jpg";
+import bobillotAvant2 from "@/assets/bobillot-avant-2.jpg";
+import bobillotAvant3 from "@/assets/bobillot-avant-3.jpg";
 
-const quaifleursApres1 = "/images/quai-aux-fleurs-apres-1.jpg";
-const quaifleursApres2 = "/images/quai-aux-fleurs-apres-2.jpg";
-const quaifleursApres3 = "/images/quai-aux-fleurs-apres-3.jpg";
-const quaifleursApres4 = "/images/quai-aux-fleurs-apres-4.jpg";
-const quaifleursAvant1 = "/images/quai-fleurs-avant-1.jpg";
-const quaifleursAvant2 = "/images/quai-fleurs-avant-2.jpg";
-const quaifleursApresDouche = "/images/quai-fleurs/apres-douche.jpg";
-const quaifleursApresVueEnsemble = "/images/quai-fleurs/apres-vue-ensemble.jpg";
-const quaifleursApresWcRangements = "/images/quai-fleurs/apres-wc-rangements.jpg";
-const quaifleursApresPlacardTechnique = "/images/quai-fleurs/apres-placard-technique.jpg";
-const quaifleursApresMeubleVasqueFenetre = "/images/quai-fleurs/apres-meuble-vasque-fenetre.jpg";
-const quaifleursAvantAncienneEntree = "/images/quai-fleurs/avant-ancienne-entree.jpg";
-const quaifleursAvantCouloirWc = "/images/quai-fleurs/avant-couloir-wc.jpg";
-const quaifleursAvantCouloirEntree = "/images/quai-fleurs/avant-couloir-entree.jpg";
+// Quai aux Fleurs Paris 4ème
+import quaifleursApres1 from "@/assets/quai-aux-fleurs-apres-1.jpg";
+import quaifleursApres2 from "@/assets/quai-aux-fleurs-apres-2.jpg";
+import quaifleursApres3 from "@/assets/quai-aux-fleurs-apres-3.jpg";
+import quaifleursApres4 from "@/assets/quai-aux-fleurs-apres-4.jpg";
+import quaifleursAvant1 from "@/assets/quai-fleurs-avant-1.jpg";
+import quaifleursAvant2 from "@/assets/quai-fleurs-avant-2.jpg";
+// Quai aux Fleurs - Nouvelles photos
+const quaifleursApresDouche = "/projects/quai-fleurs/apres-douche.jpg";
+const quaifleursApresVueEnsemble = "/projects/quai-fleurs/apres-vue-ensemble.jpg";
+const quaifleursApresWcRangements = "/projects/quai-fleurs/apres-wc-rangements.jpg";
+const quaifleursApresPlacardTechnique = "/projects/quai-fleurs/apres-placard-technique.jpg";
+const quaifleursApresMeubleVasqueFenetre = "/projects/quai-fleurs/apres-meuble-vasque-fenetre.jpg";
+const quaifleursAvantAncienneEntree = "/projects/quai-fleurs/avant-ancienne-entree.jpg";
+const quaifleursAvantCouloirWc = "/projects/quai-fleurs/avant-couloir-wc.jpg";
+const quaifleursAvantCouloirEntree = "/projects/quai-fleurs/avant-couloir-entree.jpg";
 
-const coursVincennesSdb1 = "/images/cours-vincennes-sdb-1.jpg";
-const coursVincennesSdb2 = "/images/cours-vincennes-sdb-2.jpg";
-const coursVincennesSdb3 = "/images/cours-vincennes-sdb-3.jpg";
-const coursVincennesSdb4 = "/images/cours-vincennes-sdb-4.jpg";
-const coursVincennesSdb5 = "/images/cours-vincennes-sdb-5.jpg";
-const coursVincennesSdbAvant1 = "/images/cours-vincennes-sdb-avant-1.jpg";
-const coursVincennesSdbAvant2 = "/images/cours-vincennes-sdb-avant-2.jpg";
-const coursVincennesWcAvant2 = "/images/cours-vincennes-wc-avant-2.jpg";
+// Cours de Vincennes Paris 12ème - SDB
+import coursVincennesSdb1 from "@/assets/cours-vincennes-sdb-1.jpg";
+import coursVincennesSdb2 from "@/assets/cours-vincennes-sdb-2.jpg";
+import coursVincennesSdb3 from "@/assets/cours-vincennes-sdb-3.jpg";
+import coursVincennesSdb4 from "@/assets/cours-vincennes-sdb-4.jpg";
+import coursVincennesSdb5 from "@/assets/cours-vincennes-sdb-5.jpg";
+import coursVincennesSdbAvant1 from "@/assets/cours-vincennes-sdb-avant-1.jpg";
+import coursVincennesSdbAvant2 from "@/assets/cours-vincennes-sdb-avant-2.jpg";
+import coursVincennesWcAvant2 from "@/assets/cours-vincennes-wc-avant-2.jpg";
 
-const coursVincennesMadame1 = "/images/cours-vincennes-madame-1.jpg";
-const coursVincennesMadame2 = "/images/cours-vincennes-madame-2.jpg";
-const coursVincennesMadame3 = "/images/cours-vincennes-madame-3.jpg";
-const coursVincennesMadame4 = "/images/cours-vincennes-madame-4.jpg";
-const coursVincennesMadame5 = "/images/cours-vincennes-madame-5.jpg";
-const coursVincennesMadameAvant1 = "/images/cours-vincennes-madame-avant-1.jpg";
-const coursVincennesMadameAvant2 = "/images/cours-vincennes-madame-avant-2.jpg";
-const coursVincennesMadameAvant3 = "/images/cours-vincennes-madame-avant-3.jpg";
+// Cours de Vincennes Paris 12ème - SDB Madame
+import coursVincennesMadame1 from "@/assets/cours-vincennes-madame-1.jpg";
+import coursVincennesMadame2 from "@/assets/cours-vincennes-madame-2.jpg";
+import coursVincennesMadame3 from "@/assets/cours-vincennes-madame-3.jpg";
+import coursVincennesMadame4 from "@/assets/cours-vincennes-madame-4.jpg";
+import coursVincennesMadame5 from "@/assets/cours-vincennes-madame-5.jpg";
+import coursVincennesMadameAvant1 from "@/assets/cours-vincennes-madame-avant-1.jpg";
+import coursVincennesMadameAvant2 from "@/assets/cours-vincennes-madame-avant-2.jpg";
+import coursVincennesMadameAvant3 from "@/assets/cours-vincennes-madame-avant-3.jpg";
 
-const charenton1 = "/images/charenton-1.jpg";
-const charenton2 = "/images/charenton-2.jpg";
-const charenton3 = "/images/charenton-3.jpg";
-const charenton4 = "/images/charenton-4.jpg";
-const charenton5 = "/images/charenton-5.jpg";
-const charenton6 = "/images/charenton-6.jpg";
-const charenton7 = "/images/charenton-7.jpg";
-const charenton8 = "/images/charenton-8.jpg";
-const charenton9 = "/images/charenton-9.jpg";
-const charenton10 = "/images/charenton-10.jpg";
-const charenton11 = "/images/charenton-11.jpg";
-const charenton12 = "/images/charenton-12.jpg";
-const charenton13 = "/images/charenton-13.jpg";
-const charenton14 = "/images/charenton-14.jpg";
-const charenton15 = "/images/charenton-15.jpg";
-const charenton16 = "/images/charenton-16.jpg";
-const charenton17 = "/images/charenton-17.jpg";
-const charenton18 = "/images/charenton-18.jpg";
-const charenton19 = "/images/charenton-19.jpg";
-const charentonAvant5 = "/images/charenton-avant-5.jpg";
-const charentonAvant6 = "/images/charenton-avant-6.jpg";
-const charentonAvant7 = "/images/charenton-avant-7.jpg";
-const charentonAvant8 = "/images/charenton-avant-8.jpg";
+// Charenton-le-Pont (94)
+import charenton1 from "@/assets/charenton-1.jpg";
+import charenton2 from "@/assets/charenton-2.jpg";
+import charenton3 from "@/assets/charenton-3.jpg";
+import charenton4 from "@/assets/charenton-4.jpg";
+import charenton5 from "@/assets/charenton-5.jpg";
+import charenton6 from "@/assets/charenton-6.jpg";
+import charenton7 from "@/assets/charenton-7.jpg";
+import charenton8 from "@/assets/charenton-8.jpg";
+import charenton9 from "@/assets/charenton-9.jpg";
+import charenton10 from "@/assets/charenton-10.jpg";
+import charenton11 from "@/assets/charenton-11.jpg";
+import charenton12 from "@/assets/charenton-12.jpg";
+import charenton13 from "@/assets/charenton-13.jpg";
+import charenton14 from "@/assets/charenton-14.jpg";
+import charenton15 from "@/assets/charenton-15.jpg";
+import charenton16 from "@/assets/charenton-16.jpg";
+import charenton17 from "@/assets/charenton-17.jpg";
+import charenton18 from "@/assets/charenton-18.jpg";
+import charenton19 from "@/assets/charenton-19.jpg";
+import charentonAvant5 from "@/assets/charenton-avant-5.jpg";
+import charentonAvant6 from "@/assets/charenton-avant-6.jpg";
+import charentonAvant7 from "@/assets/charenton-avant-7.jpg";
+import charentonAvant8 from "@/assets/charenton-avant-8.jpg";
 
-const generalLeclerc1 = "/images/general-leclerc-1.jpg";
-const generalLeclerc2 = "/images/general-leclerc-2.jpg";
-const generalLeclerc3 = "/images/general-leclerc-3.jpg";
-const generalLeclerc4 = "/images/general-leclerc-4.jpg";
-const generalLeclerc5 = "/images/general-leclerc-5.jpg";
-const generalLeclerc6 = "/images/general-leclerc-6.jpg";
-const generalLeclerc7 = "/images/general-leclerc-7.jpg";
-const generalLeclerc8 = "/images/general-leclerc-8.jpg";
-const generalLeclercSchluter1 = "/images/general-leclerc-schluter-1.jpg";
-const generalLeclercSchluter2 = "/images/general-leclerc-schluter-2.jpg";
-const generalLeclercSchluter3 = "/images/general-leclerc-schluter-3.jpg";
-const generalLeclercWc1 = "/images/general-leclerc-wc-1.jpg";
-const generalLeclercWc2 = "/images/general-leclerc-wc-2.jpg";
-const generalLeclercWcTravaux1 = "/images/general-leclerc-wc-travaux-1.jpg";
+// Charenton-le-Pont - Général Leclerc
+import generalLeclerc1 from "@/assets/general-leclerc-1.jpg";
+import generalLeclerc2 from "@/assets/general-leclerc-2.jpg";
+import generalLeclerc3 from "@/assets/general-leclerc-3.jpg";
+import generalLeclerc4 from "@/assets/general-leclerc-4.jpg";
+import generalLeclerc5 from "@/assets/general-leclerc-5.jpg";
+import generalLeclerc6 from "@/assets/general-leclerc-6.jpg";
+import generalLeclerc7 from "@/assets/general-leclerc-7.jpg";
+import generalLeclerc8 from "@/assets/general-leclerc-8.jpg";
+import generalLeclercSchluter1 from "@/assets/general-leclerc-schluter-1.jpg";
+import generalLeclercSchluter2 from "@/assets/general-leclerc-schluter-2.jpg";
+import generalLeclercSchluter3 from "@/assets/general-leclerc-schluter-3.jpg";
+import generalLeclercWc1 from "@/assets/general-leclerc-wc-1.jpg";
+import generalLeclercWc2 from "@/assets/general-leclerc-wc-2.jpg";
+import generalLeclercWcTravaux1 from "@/assets/general-leclerc-wc-travaux-1.jpg";
 
-const portRoyal1 = "/images/port-royal-1.jpg";
-const portRoyalAvant1 = "/images/port-royal-avant-1.jpg";
-const portRoyalAvant2 = "/images/port-royal-avant-2.jpg";
+// Port-Royal Paris 5ème
+import portRoyal1 from "@/assets/port-royal-1.jpg";
+import portRoyalAvant1 from "@/assets/port-royal-avant-1.jpg";
+import portRoyalAvant2 from "@/assets/port-royal-avant-2.jpg";
 
-const laTourAvant1 = "/images/la-tour-avant-1.jpg";
-const laTourAvant2 = "/images/la-tour-avant-2.jpg";
-const laTourAvant3 = "/images/la-tour-avant-3.jpg";
+// La Tour Paris 16ème
+import laTourAvant1 from "@/assets/la-tour-avant-1.jpg";
+import laTourAvant2 from "@/assets/la-tour-avant-2.jpg";
+import laTourAvant3 from "@/assets/la-tour-avant-3.jpg";
+import laTourAvant4 from "@/assets/la-tour-avant-4.jpg";
+import laTourAvant5 from "@/assets/la-tour-avant-5.jpg";
 
-const courbevoieLalyreAvant1 = "/photos/courbevoie-lalyre/avant-sdb.jpg";
+// Courbevoie Lalyre
+import courbevoieLalyreAvant1 from "@/assets/courbevoie-lalyre-avant-1.jpg";
 
-const courbevoieStGuillaumeChantier1 = "/images/courbevoie-st-guillaume-chantier-1.jpg";
+// Courbevoie Saint-Guillaume (en cours)
+import courbevoieStGuillaumeChantier1 from "@/assets/courbevoie-st-guillaume-chantier-1.jpg";
 
-const edmondNocard1 = "/images/albums/saint-maurice-edmond-nocard/douche-zellige-bleu.jpg";
-const edmondNocard2 = "/images/albums/saint-maurice-edmond-nocard/beton-blanc.jpg";
-const edmondNocard3 = "/images/albums/saint-maurice-edmond-nocard/vasque-ikea.jpg";
-const edmondNocard4 = "/images/albums/saint-maurice-edmond-nocard/lave-linge-cache.jpg";
+// Saint-Maurice - Rue Edmond Nocard
+import edmondNocard1 from "@/assets/albums/saint-maurice-edmond-nocard/douche-zellige-bleu.jpg";
+import edmondNocard2 from "@/assets/albums/saint-maurice-edmond-nocard/beton-blanc.jpg";
+import edmondNocard3 from "@/assets/albums/saint-maurice-edmond-nocard/vasque-ikea.jpg";
+import edmondNocard4 from "@/assets/albums/saint-maurice-edmond-nocard/lave-linge-cache.jpg";
 
-const armandCarrel1 = "/images/armand-carrel-1.jpg";
-const armandCarrel2 = "/images/armand-carrel-2.jpg";
-const armandCarrel3 = "/images/armand-carrel-3.jpg";
-const armandCarrel4 = "/images/armand-carrel-4.jpg";
-const armandCarrel5 = "/images/armand-carrel-5.jpg";
-const armandCarrel6 = "/images/armand-carrel-6.jpg";
-const armandCarrel7 = "/images/armand-carrel-7.jpg";
-const armandCarrel8 = "/images/armand-carrel-8.jpg";
+// Armand Carrel Paris 19ème
+import armandCarrel1 from "@/assets/armand-carrel-1.jpg";
+import armandCarrel2 from "@/assets/armand-carrel-2.jpg";
+import armandCarrel3 from "@/assets/armand-carrel-3.jpg";
+import armandCarrel4 from "@/assets/armand-carrel-4.jpg";
+import armandCarrel5 from "@/assets/armand-carrel-5.jpg";
+import armandCarrel6 from "@/assets/armand-carrel-6.jpg";
+import armandCarrel7 from "@/assets/armand-carrel-7.jpg";
+import armandCarrel8 from "@/assets/armand-carrel-8.jpg";
 
-const bauchartApres1 = "/images/bauchart-apres-1.jpg";
-const bauchartApres2 = "/images/bauchart-apres-2.jpg";
-const bauchartAvant1 = "/images/bauchart-avant-1.jpg";
-const bauchartAvant2 = "/images/bauchart-avant-2.jpg";
-const bauchartAvant3 = "/images/bauchart-avant-3.jpg";
+// Sergent Beauchart Paris 12ème
+import bauchartApres1 from "@/assets/bauchart-apres-1.jpg";
+import bauchartApres2 from "@/assets/bauchart-apres-2.jpg";
+import bauchartAvant1 from "@/assets/bauchart-avant-1.jpg";
+import bauchartAvant2 from "@/assets/bauchart-avant-2.jpg";
+import bauchartAvant3 from "@/assets/bauchart-avant-3.jpg";
 
-const soisy1 = "/images/soisy-1.jpg";
-const soisy2 = "/images/soisy-2.jpg";
-const soisy3 = "/images/soisy-3.jpg";
-const soisyAvant = "/images/soisy-avant.jpg";
-const soisySdb1 = "/images/soisy-sdb-1.jpg";
-const soisySdb2 = "/images/soisy-sdb-2.jpg";
-const soisySdb3 = "/images/soisy-sdb-3.jpg";
-const soisySdb4 = "/images/soisy-sdb-4.jpg";
-const soisySdb5 = "/images/soisy-sdb-5.jpg";
-const soisySdbAvant = "/images/soisy-sdb-avant.jpg";
-const soisyParentVisuel = "/images/soisy-parent-1er-visuel.jpg";
-const soisySdbAvant2 = "/images/soisy-sdb-avant-2.jpg";
-const soisySdbAvant3 = "/images/soisy-sdb-avant-3.jpg";
-const soisyEnfants1 = "/images/soisy-enfants-1.jpg";
-const soisyEnfants2 = "/images/soisy-enfants-2.jpg";
-const soisyEnfants3 = "/images/soisy-enfants-3.jpg";
-const soisyEnfants4 = "/images/soisy-enfants-4.jpg";
-const soisyEnfants5 = "/images/soisy-enfants-5.jpg";
-const soisyEnfantsAvant1 = "/images/soisy-enfants-avant-1.jpg";
-const soisyEnfantsAvant2 = "/images/soisy-enfants-avant-2.jpg";
+// Soisy-sous-Montmorency (95)
+import soisy1 from "@/assets/soisy-1.jpg";
+import soisy2 from "@/assets/soisy-2.jpg";
+import soisy3 from "@/assets/soisy-3.jpg";
+import soisyAvant from "@/assets/soisy-avant.jpg";
+import soisySdb1 from "@/assets/soisy-sdb-1.jpg";
+import soisySdb2 from "@/assets/soisy-sdb-2.jpg";
+import soisySdb3 from "@/assets/soisy-sdb-3.jpg";
+import soisySdb4 from "@/assets/soisy-sdb-4.jpg";
+import soisySdb5 from "@/assets/soisy-sdb-5.jpg";
+import soisySdbAvant from "@/assets/soisy-sdb-avant.jpg";
+import soisyParentVisuel from "@/assets/soisy-parent-1er-visuel.jpg";
+import soisySdbAvant2 from "@/assets/soisy-sdb-avant-2.jpg";
+import soisySdbAvant3 from "@/assets/soisy-sdb-avant-3.jpg";
+import soisyEnfants1 from "@/assets/soisy-enfants-1.jpg";
+import soisyEnfants2 from "@/assets/soisy-enfants-2.jpg";
+import soisyEnfants3 from "@/assets/soisy-enfants-3.jpg";
+import soisyEnfants4 from "@/assets/soisy-enfants-4.jpg";
+import soisyEnfants5 from "@/assets/soisy-enfants-5.jpg";
+import soisyEnfantsAvant1 from "@/assets/soisy-enfants-avant-1.jpg";
+import soisyEnfantsAvant2 from "@/assets/soisy-enfants-avant-2.jpg";
 
-const placeDaumesnil1 = "/images/place-daumesnil-1.jpg";
-const placeDaumesnil2 = "/images/place-daumesnil-2.jpg";
+// Place Daumesnil Paris 12ème
+import placeDaumesnil1 from "@/assets/place-daumesnil-1.jpg";
+import placeDaumesnil2 from "@/assets/place-daumesnil-2.jpg";
 
-const vitryApres1 = "/images/vitry-apres-1.jpg";
-const vitryApres2 = "/images/vitry-apres-2.jpg";
-const vitryApres3 = "/images/vitry-apres-3.jpg";
-const vitryApres4 = "/images/vitry-apres-4.jpg";
-const vitryAvant1 = "/images/vitry-avant-1.jpg";
-const vitryAvant2 = "/images/vitry-avant-2.jpg";
-const vitryAvant3 = "/images/vitry-avant-3.jpg";
-const vitryAvant4 = "/images/vitry-avant-4.jpg";
-const vitryAvant5 = "/images/vitry-avant-5.jpg";
-const vitryAvant6 = "/images/vitry-avant-6.jpg";
-const vitryAvant7 = "/images/vitry-avant-7.jpg";
-const vitryAvant8 = "/images/vitry-avant-8.jpg";
-const vitryAvant9 = "/images/vitry-avant-9.jpg";
-const vitryAvant10 = "/images/vitry-avant-10.jpg";
+// Vitry-sur-Seine
+import vitryApres1 from "@/assets/vitry-apres-1.jpg";
+import vitryApres2 from "@/assets/vitry-apres-2.jpg";
+import vitryApres3 from "@/assets/vitry-apres-3.jpg";
+import vitryApres4 from "@/assets/vitry-apres-4.jpg";
+import vitryAvant1 from "@/assets/vitry-avant-1.jpg";
+import vitryAvant2 from "@/assets/vitry-avant-2.jpg";
+import vitryAvant3 from "@/assets/vitry-avant-3.jpg";
+import vitryAvant4 from "@/assets/vitry-avant-4.jpg";
+import vitryAvant5 from "@/assets/vitry-avant-5.jpg";
+import vitryAvant6 from "@/assets/vitry-avant-6.jpg";
+import vitryAvant7 from "@/assets/vitry-avant-7.jpg";
+import vitryAvant8 from "@/assets/vitry-avant-8.jpg";
+import vitryAvant9 from "@/assets/vitry-avant-9.jpg";
+import vitryAvant10 from "@/assets/vitry-avant-10.jpg";
 
-const alexandreCabanel1 = "/images/alexandre-cabanel-1.jpg";
-const alexandreCabanel2 = "/images/alexandre-cabanel-2.jpg";
-const alexandreCabanel3 = "/images/alexandre-cabanel-3.jpg";
-const alexandreCabanel4 = "/images/alexandre-cabanel-4.jpg";
-const alexandreCabanel5 = "/images/alexandre-cabanel-5.jpg";
-const alexandreCabanel6 = "/images/alexandre-cabanel-6.jpg";
-const alexandreCabanel7 = "/images/alexandre-cabanel-7.jpg";
-const alexandreCabanel8 = "/images/alexandre-cabanel-8.jpg";
-const alexandreCabanelAvant1 = "/images/alexandre-cabanel-avant-1.jpg";
-const alexandreCabanelAvant2 = "/images/alexandre-cabanel-avant-2.jpg";
-const alexandreCabanelAvant3 = "/images/alexandre-cabanel-avant-3.jpg";
-const alexandreCabanelAvant4 = "/images/alexandre-cabanel-avant-4.jpg";
-const alexandreCabanelAvant5 = "/images/alexandre-cabanel-avant-5.jpg";
-const alexandreCabanelAvant6 = "/images/alexandre-cabanel-avant-6.jpg";
-const alexandreCabanelAvant7 = "/images/alexandre-cabanel-avant-7.jpg";
-const alexandreCabanelAvant8 = "/images/alexandre-cabanel-avant-8.jpg";
-const alexandreCabanelAvant9 = "/images/alexandre-cabanel-avant-9.jpg";
-const alexandreCabanelAvant10 = "/images/alexandre-cabanel-avant-10.jpg";
-const alexandreCabanelAvant11 = "/images/alexandre-cabanel-avant-11.jpg";
-const alexandreCabanelAvant12 = "/images/alexandre-cabanel-avant-12.jpg";
+// Alexandre Cabanel Paris 15ème
+import alexandreCabanel1 from "@/assets/alexandre-cabanel-1.jpg";
+import alexandreCabanel2 from "@/assets/alexandre-cabanel-2.jpg";
+import alexandreCabanel3 from "@/assets/alexandre-cabanel-3.jpg";
+import alexandreCabanel4 from "@/assets/alexandre-cabanel-4.jpg";
+import alexandreCabanel5 from "@/assets/alexandre-cabanel-5.jpg";
+import alexandreCabanel6 from "@/assets/alexandre-cabanel-6.jpg";
+import alexandreCabanel7 from "@/assets/alexandre-cabanel-7.jpg";
+import alexandreCabanel8 from "@/assets/alexandre-cabanel-8.jpg";
+import alexandreCabanelAvant1 from "@/assets/alexandre-cabanel-avant-1.jpg";
+import alexandreCabanelAvant2 from "@/assets/alexandre-cabanel-avant-2.jpg";
+import alexandreCabanelAvant3 from "@/assets/alexandre-cabanel-avant-3.jpg";
+import alexandreCabanelAvant4 from "@/assets/alexandre-cabanel-avant-4.jpg";
+import alexandreCabanelAvant5 from "@/assets/alexandre-cabanel-avant-5.jpg";
+import alexandreCabanelAvant6 from "@/assets/alexandre-cabanel-avant-6.jpg";
+import alexandreCabanelAvant7 from "@/assets/alexandre-cabanel-avant-7.jpg";
+import alexandreCabanelAvant8 from "@/assets/alexandre-cabanel-avant-8.jpg";
+import alexandreCabanelAvant9 from "@/assets/alexandre-cabanel-avant-9.jpg";
+import alexandreCabanelAvant10 from "@/assets/alexandre-cabanel-avant-10.jpg";
+import alexandreCabanelAvant11 from "@/assets/alexandre-cabanel-avant-11.jpg";
+import alexandreCabanelAvant12 from "@/assets/alexandre-cabanel-avant-12.jpg";
 
-const montreuilSuite1 = "/images/montreuil-suite-1.jpg";
-const montreuilSuite2 = "/images/montreuil-suite-2.jpg";
-const montreuilSuite3 = "/images/montreuil-suite-3.jpg";
-const montreuilSuite4 = "/images/montreuil-suite-4.jpg";
-const montreuilSuite5 = "/images/montreuil-suite-5.jpg";
-const montreuilSuite6 = "/images/montreuil-suite-6.jpg";
-const montreuilSuite7 = "/images/montreuil-suite-7.jpg";
-const montreuilSuite8 = "/images/montreuil-suite-8.jpg";
-const montreuilSuite9 = "/images/montreuil-suite-9.jpg";
-const montreuilAvant1 = "/images/montreuil-avant-1.jpg";
-const montreuilAvant2 = "/images/montreuil-avant-2.jpg";
-const montreuilAvant3 = "/images/montreuil-avant-3.jpg";
-const montreuilAvant4 = "/images/montreuil-avant-4.jpg";
-const montreuilAvant5 = "/images/montreuil-avant-5.jpg";
+// Montreuil Suite Parentale
+import montreuilSuite1 from "@/assets/montreuil-suite-1.jpg";
+import montreuilSuite2 from "@/assets/montreuil-suite-2.jpg";
+import montreuilSuite3 from "@/assets/montreuil-suite-3.jpg";
+import montreuilSuite4 from "@/assets/montreuil-suite-4.jpg";
+import montreuilSuite5 from "@/assets/montreuil-suite-5.jpg";
+import montreuilSuite6 from "@/assets/montreuil-suite-6.jpg";
+import montreuilSuite7 from "@/assets/montreuil-suite-7.jpg";
+import montreuilSuite8 from "@/assets/montreuil-suite-8.jpg";
+import montreuilSuite9 from "@/assets/montreuil-suite-9.jpg";
+// Montreuil Suite - Photos Houzz AVANT (récupérées depuis Houzz)
+import montreuilAvant1 from "@/assets/montreuil-avant-1.jpg";
+import montreuilAvant2 from "@/assets/montreuil-avant-2.jpg";
+import montreuilAvant3 from "@/assets/montreuil-avant-3.jpg";
+import montreuilAvant4 from "@/assets/montreuil-avant-4.jpg";
+import montreuilAvant5 from "@/assets/montreuil-avant-5.jpg";
 
-const chercheMidiCover = "/images/cherche-midi/cover-vue-longueur.jpg";
-const chercheMidiVasque = "/images/cherche-midi/vasque-face.jpg";
-const chercheMidiPlacardOuvert = "/images/cherche-midi/cherche-midi-2.jpg";
-const chercheMidiPlacardFerme = "/images/cherche-midi/placard-ferme.jpg";
-const chercheMidiVueLongueur = "/images/cherche-midi/vue-longueur.jpg";
-const chercheMidiNiches = "/images/cherche-midi/niches-douche.jpg";
-const chercheMidiEntree = "/images/cherche-midi/entree-sdb.jpg";
-const chercheMidiSejour = "/images/cherche-midi/vue-sejour.jpg";
-const chercheMidiAvant1 = "/images/cherche-midi/avant-original.jpg";
-const chercheMidiAvant2 = "/images/cherche-midi/cherche-midi-avant.jpg";
-const chercheMidiAvant3 = "/images/cherche-midi/avant-cuisine.jpg";
-const chercheMidiAvant4 = "/images/cherche-midi/avant-wc-fenetre.jpg";
-const chercheMidiChantier1 = "/images/cherche-midi/chantier-demolition.jpg";
-const chercheMidiChantier2 = "/images/cherche-midi/chantier-cablage.jpg";
+// Cherche-Midi Paris 6ème
+const chercheMidiCover = "/projects/cherche-midi/cover-vue-longueur.jpg";
+const chercheMidiVasque = "/projects/cherche-midi/vasque-face.jpg";
+const chercheMidiPlacardOuvert = "/projects/cherche-midi/cherche-midi-2.jpg";
+const chercheMidiPlacardFerme = "/projects/cherche-midi/placard-ferme.jpg";
+const chercheMidiVueLongueur = "/projects/cherche-midi/vue-longueur.jpg";
+const chercheMidiNiches = "/projects/cherche-midi/niches-douche.jpg";
+const chercheMidiEntree = "/projects/cherche-midi/entree-sdb.jpg";
+const chercheMidiSejour = "/projects/cherche-midi/vue-sejour.jpg";
+const chercheMidiAvant1 = "/projects/cherche-midi/avant-original.jpg";
+const chercheMidiAvant2 = "/projects/cherche-midi/cherche-midi-avant.jpg";
+const chercheMidiAvant3 = "/projects/cherche-midi/avant-cuisine.jpg";
+const chercheMidiAvant4 = "/projects/cherche-midi/avant-wc-fenetre.jpg";
+const chercheMidiChantier1 = "/projects/cherche-midi/chantier-demolition.jpg";
+const chercheMidiChantier2 = "/projects/cherche-midi/chantier-cablage.jpg";
 
 // ===== INTERFACES =====
 export interface Photo {
@@ -1578,41 +1627,30 @@ Ce projet démontre qu'une rénovation prend tout son sens lorsqu'elle est guid�
   // ========== 📍 SAINT-DENIS (93) ==========
   {
     id: "saint-denis-delaune",
-    slug: "salle-de-bain-saint-denis-93-renovation-optimisation-metro-blanc-noir",
-    title: "Rénovation Salle de Bain à Saint-Denis (93) – Rue Auguste Delaune",
-    subtitle: "Optimisation complète d'une salle de bain en longueur en centre-ville piéton",
+    slug: "salle-de-bain-saint-denis-93-appartement-feminin-verriere-metro-blanc",
+    title: "Salle de bain Saint-Denis — Appartement au féminin",
+    subtitle: "Verrière noire, métro blanc & sol graphique",
     location: "Saint-Denis (93) — Rue Auguste Delaune",
-    description: `À Saint-Denis (93200), rue Auguste Delaune, en plein centre piéton, nous avons réalisé la rénovation complète d'une salle de bain dans le cadre d'un projet global d'optimisation d'appartement.
+    description: `Un écrin de féminité dans cet appartement de Saint-Denis, où la salle de bain devient une véritable extension de la chambre parentale. La verrière atelier en acier noir crée une connexion visuelle élégante tout en préservant l'intimité.
 
-Avec Thierry Pelmard, nous avons retravaillé les plans afin d'améliorer la circulation et d'optimiser chaque mètre carré du logement. La salle de bain faisait partie des espaces stratégiques à restructurer.
+Au sol, le carrelage NEOCIM KERION Orient Titane affiche un motif géométrique 3D en noir et gris qui structure l'espace avec audace. Les murs reçoivent le carrelage métro blanc brillant, apportant luminosité et charme intemporel à la douche.
 
-La première décision a été de fermer l'ancien accès à la chambre afin de créer un mur exploitable et d'optimiser l'agencement. Cette modification a permis d'améliorer la cohérence du volume et de créer une future tête de lit côté chambre.
+Le meuble vasque épouse les standards IKEA pour un confort d'usage optimal : le GODMORGON blanc effet chêne blanchi (2 tiroirs, IKEA 802.261.99) surmonté du plan EKBACKEN sur mesure gris blanc crée une base fonctionnelle. On y dépose la vasque à poser Lila en céramique blanche (40.5 x 40.5 cm), dotée d'une bonde clic-clac EQUATION avec trop-plein pour une vidange fluide. La robinetterie SENSEA Hao chromée complète cette vasque avec élégance. Le miroir Barbier noir carré (53 x 53 cm, LM 70819063) reprend la géométrie de l'espace tout en créant un point focal raffiné.
 
-Dans cette salle de bain en longueur, nous avons intégré : un grand receveur de douche, un meuble vasque avec rangement, un WC, un lave-linge intégré sous plan, un chauffe-eau dissimulé dans un placard, une VMC pour une ventilation performante, un sèche-serviettes pour le confort thermique, et des rangements dédiés aux serviettes.
-
-La douche ouverte avec paroi vitrée noire permet d'agrandir visuellement l'espace. Le lave-linge s'intègre discrètement sous le plan vasque. Les rangements absorbent le quotidien sans alourdir la pièce. La technique est maîtrisée, les volumes sont optimisés, la circulation est naturelle.
+Pour la douche, le receveur rectangulaire Mila en résine blanche (120 x 80 cm) accueille la colonne Nessy Cuadrado avec ses finitions chromées. La paroi italienne en verre transparent 6 mm (90 cm de large) délimite l'espace sans l'enfermer. Les niches encastrées offrent un rangement pratique, tandis que la colonne de douche garantit confort et fonctionnalité.
 
 Ce projet illustre parfaitement notre approche : un chantier heureux, fondé sur l'anticipation, la coordination des travaux et la sérénité du client.`,
-    coverImage: saintDenisFinal1,
+    coverImage: saintDenisDelaune3,
     photos: [
-      { id: 1, image: saintDenisFinal1, title: "Après — Vue vasque, douche & lave-linge", description: "Meuble vasque avec lave-linge intégré et paroi vitrée noire" },
-      { id: 2, image: saintDenisFinal2, title: "Après — Vasque & douche italienne", description: "Carrelage métro blanc et robinetterie noire" },
-      { id: 3, image: saintDenisFinal3, title: "Après — Détail vasque & robinetterie", description: "Vasque à poser et mitigeur noir mat" },
-      { id: 4, image: saintDenisFinal4, title: "Après — Colonne de douche", description: "Paroi vitrée noire et ciel de pluie" },
-      { id: 5, image: saintDenisFinal5, title: "Après — Détail miroir & vasque", description: "Niche encastrée visible dans le miroir" },
-      { id: 6, image: saintDenisFinal6, title: "Après — Douche & sèche-serviettes", description: "Lave-linge intégré et sèche-serviettes blanc" },
-      { id: 7, image: saintDenisAvant5, title: "Avant — Salle de bain vétuste", description: "Cabine de douche, WC et lavabo d'origine" },
-      { id: 8, image: saintDenisAvant6, title: "Avant — Vue en longueur", description: "Configuration étroite avec cabine de douche" },
-      { id: 9, image: saintDenisAvant3, title: "Avant — Chambre & accès", description: "Ancien accès chambre-salle de bain à fermer" },
-      
+      { id: 1, image: saintDenisDelaune3, title: "Après — Vue vasque & miroir", description: "Meuble bois clair, vasque à poser et miroir barbier noir" },
+      { id: 2, image: saintDenisDelaune4, title: "Après — Vue d'ensemble", description: "Rangements blancs et détail croix rose pharmacie" },
+      { id: 3, image: saintDenisDelaune6, title: "Après — Douche & vasque", description: "Carrelage métro blanc et colonne chromée" },
+      { id: 4, image: saintDenisDelaune5, title: "Après — Détail douche", description: "Niches encastrées et ciel de pluie" },
+      { id: 5, image: saintDenisDelaune1, title: "Après — Vue depuis la chambre", description: "Verrière atelier et connexion chambre-salle de bain" },
+      { id: 6, image: saintDenisDelaune2, title: "Après — Détail verrière", description: "Acier noir et sol géométrique 3D" },
     ],
-    finitionSol: "gres-cerame-uni",
+    finitionSol: "gres-cerame-motif",
     finitionMur: "metro-allonge",
-    review: {
-      text: "J'ai fait appel à Qualirénovation car j'habite loin de l'appartement que je souhaitais faire rénover et il m'était impossible de m'occuper moi-même des travaux ou d'en assurer le suivi régulier. Un projet de rénovation à distance peut être source de stress, mais Carina m'a accompagné et a été particulièrement rassurante du début à la fin. J'ai bénéficié d'un suivi régulier et clair, avec des comptes rendus fréquents, des photos et des échanges à chaque étape clé du chantier. Tout a été coordonné et géré par ses soins, jusqu'à la réalisation du DPE pour la mise en location, mais aussi l'achat et le montage des meubles. Tout s'est fait sans que je n'aie à me déplacer une seule fois sur le chantier. Aujourd'hui, l'appartement est entièrement rénové, meublé et loué. Même après la fin des travaux, Carina est à l'écoute et assure le suivi ! Je recommande donc vivement !",
-      author: "Ronan Ynard",
-      link: "https://www.houzz.fr/viewReview/2205354/QUALIRENOVATION-by-Qualiconcept-review"
-    },
   },
   // ========== 📍 CHARENTON-LE-PONT (94) ==========
   {
@@ -2045,11 +2083,15 @@ export const inProgressAlbums: Album[] = [
     coverImage: butteschaumont1,
     isInProgress: true,
     photos: [
-      { id: 1, image: butteschaumont1, title: "En cours — Douche terrazzo", description: "Pose de la paroi et robinetterie laiton" },
-      { id: 2, image: butteschaumont2, title: "Travaux — Étanchéité", description: "Application de l'étanchéité bleue" },
-      { id: 3, image: butteschaumont3, title: "Travaux — Relevé laser", description: "Prise de cotes au laser pour la douche" },
-      { id: 4, image: butteschaumont4, title: "Avant — Salle de bain", description: "Salle de bain avant rénovation" },
-      { id: 5, image: butteschaumont5, title: "Avant — Vue générale", description: "Configuration initiale" },
+      { id: 1, image: butteschaumont9, title: "Travaux — Étanchéité", description: "Application Weber Aquastop bleue" },
+      { id: 2, image: butteschaumont8, title: "Travaux — Préparation", description: "Mise en œuvre de l'étanchéité" },
+      { id: 3, image: butteschaumont7, title: "Travaux — Protection", description: "Étanchéité des angles" },
+      { id: 4, image: butteschaumont6, title: "Travaux — Douche", description: "Receveur en cours de pose" },
+      { id: 5, image: butteschaumont5, title: "Travaux — Vue générale", description: "Avancement du chantier" },
+      { id: 6, image: butteschaumont4, title: "Travaux — Détail", description: "Préparation des murs" },
+      { id: 7, image: butteschaumont3, title: "Avant — État initial", description: "Salle de bain à rénover" },
+      { id: 8, image: butteschaumont2, title: "Avant — Vue générale", description: "Configuration initiale" },
+      { id: 9, image: butteschaumont1, title: "Avant — Vue d'ensemble", description: "État des lieux" },
     ],
   },
   {
@@ -2061,19 +2103,15 @@ export const inProgressAlbums: Album[] = [
     coverImage: rocroy1,
     isInProgress: true,
     photos: [
-      { id: 1, image: "/photos/rocroy/avant-baignoire.jpg", title: "Avant — Baignoire existante", description: "Salle de bain avant rénovation avec baignoire sabot et carrelage d'origine" },
-      { id: 2, image: "/photos/rocroy/demolition.jpg", title: "Démolition et restructuration", description: "Phase de démolition : ouverture des cloisons et passage des réseaux électriques" },
-      { id: 3, image: "/photos/rocroy/materiaux-carrelage.jpg", title: "Matériaux et carrelage déco", description: "Préparation des matériaux : colle Weber, étanchéité Webersys et carreaux de ciment graphiques" },
-      { id: 4, image: "/photos/rocroy/pose-receveur.jpg", title: "Pose du receveur de douche", description: "Installation du receveur extra-plat et raccordement de la robinetterie encastrée" },
-      { id: 5, image: "/photos/rocroy/carrelage-mur.jpg", title: "Carrelage mural motif géométrique", description: "Pose du carrelage vert et blanc à motif géométrique en cabine de douche" },
-      { id: 6, image: "/photos/rocroy/carrelage-sol.jpg", title: "Carrelage sol terminé", description: "Vue d'ensemble du carrelage de sol à motif géométrique vert et blanc posé" },
+      { id: 1, image: rocroy1, title: "État initial", description: "Avant démolition" },
+      { id: 2, image: rocroy2, title: "Travaux", description: "En cours de rénovation" },
     ],
   },
   {
     id: "port-royal",
-    slug: "chantier-paris-13-port-royal",
+    slug: "chantier-paris-5-port-royal",
     title: "Rénovation complète",
-    location: "Paris 13ème - Boulevard de Port-Royal",
+    location: "Paris 5ème - Boulevard de Port-Royal",
     description: "Transformation d'une salle de bain années 70 avec mosaïque bleue. Création d'une douche à l'italienne et rénovation des WC. Chantier en cours — restez connecté pour découvrir cette transformation !",
     coverImage: portRoyal1,
     isInProgress: true,
@@ -2089,12 +2127,14 @@ export const inProgressAlbums: Album[] = [
     title: "Restructuration complète",
     location: "Paris 16ème - Rue de la Tour",
     description: "Projet ambitieux de restructuration : démolition de la salle de bain existante pour agrandir la cuisine. Création d'une nouvelle salle de douche et WC au fond de l'appartement, en exploitant la colonne d'évacuation. Chantier en cours — restez connecté pour découvrir cette transformation !",
-    coverImage: laTourAvant1,
+    coverImage: laTourAvant4,
     isInProgress: true,
     photos: [
-      { id: 1, image: laTourAvant1, title: "Avant - Salon avec cheminée", description: "Pièce de réception avec cheminée en marbre et miroir doré" },
-      { id: 2, image: laTourAvant2, title: "Avant - Séjour lumineux", description: "Grand séjour avec vitrail et bow-window" },
-      { id: 3, image: laTourAvant3, title: "Avant - Couloir", description: "Couloir avec rangements et papier peint oiseaux" },
+      { id: 1, image: laTourAvant4, title: "Avant - Vue douche", description: "Colonne de douche existante" },
+      { id: 2, image: laTourAvant3, title: "Avant - Vue générale", description: "Rangements et vasque" },
+      { id: 3, image: laTourAvant1, title: "Avant - Vasque", description: "Vasque marbre et sèche-serviettes" },
+      { id: 4, image: laTourAvant2, title: "Avant - Détail", description: "Aménagement existant" },
+      { id: 5, image: laTourAvant5, title: "Avant - WC", description: "WC suspendu à rénover" },
     ],
   },
   {
@@ -2106,11 +2146,7 @@ export const inProgressAlbums: Album[] = [
     coverImage: courbevoieLalyreAvant1,
     isInProgress: true,
     photos: [
-      { id: 1, image: "/photos/courbevoie-lalyre/avant-sdb.jpg", title: "Avant — Salle de bain existante", description: "Salle de bain avant rénovation : carrelage et baignoire d'origine" },
-      { id: 3, image: "/photos/courbevoie-lalyre/etancheite-sdb.jpg", title: "Étanchéité salle de bain", description: "Application du système d'étanchéité liquide (SEL) conforme DTU 52.2" },
-      { id: 4, image: "/photos/courbevoie-lalyre/etancheite-wc.jpg", title: "Étanchéité WC", description: "Protection étanche du sol des WC avant pose du carrelage" },
-      { id: 5, image: "/photos/courbevoie-lalyre/pose-bati-geberit.jpg", title: "Pose bâti-support Geberit", description: "Installation du bâti-support Geberit pour WC suspendu" },
-      { id: 6, image: "/photos/courbevoie-lalyre/carrelage-baignoire.jpg", title: "Carrelage baignoire", description: "Pose du carrelage grand format autour de la baignoire avec niches intégrées" },
+      { id: 1, image: courbevoieLalyreAvant1, title: "Avant — Vue vasque et ensemble", description: "Salle de bain avant rénovation" },
     ],
   },
 ];
@@ -2125,11 +2161,12 @@ export interface ProjectLocation {
 }
 
 export const projectLocations: ProjectLocation[] = [
-  { id: "buttes-chaumont", name: "Buttes-Chaumont", area: "19ème", x: 58, y: 33 },
-  { id: "rocroy", name: "Rue de Rocroy", area: "10ème", x: 54, y: 44 },
-  { id: "port-royal", name: "Port-Royal", area: "13ème", x: 57, y: 55 },
-  { id: "la-tour", name: "Rue de la Tour", area: "16ème", x: 42, y: 46 },
-  { id: "courbevoie-lalyre", name: "Rue Ernest Lalyre", area: "Courbevoie (92)", x: 32, y: 30 },
+  { id: "buttes-chaumont", name: "Buttes-Chaumont", area: "19ème", x: 68, y: 25 },
+  { id: "rocroy", name: "Rue de Rocroy", area: "10ème", x: 55, y: 32 },
+  { id: "port-royal", name: "Port-Royal", area: "5ème", x: 48, y: 60 },
+  { id: "la-tour", name: "Rue de la Tour", area: "16ème", x: 25, y: 45 },
+  { id: "courbevoie-lalyre", name: "Rue Ernest Lalyre", area: "Courbevoie", x: 15, y: 20 },
+  
 ];
 
 // ===== CATEGORY MAPPING =====

@@ -117,7 +117,6 @@ export const redirectMap: Record<string, string> = {
   "saint-ouen-93-mondrian": "salle-de-bain-saint-ouen-93-mondrian-conception-meuble-sur-mesure",
   "salle-de-bain-saint-ouen-93": "salle-de-bain-saint-ouen-93-mondrian-conception-meuble-sur-mesure",
   "saint-ouen-mondrian": "salle-de-bain-saint-ouen-93-mondrian-conception-meuble-sur-mesure",
-  "salle-de-bain-saint-denis-93-appartement-feminin-verriere-metro-blanc": "salle-de-bain-saint-denis-93-renovation-optimisation-metro-blanc-noir",
   "suite-parentale-montreuil-93-verriere-zellige": "suite-parentale-montreuil-93-renovation-verriere-zellige-turquoise",
   "montreuil-suite-parentale": "suite-parentale-montreuil-93-renovation-verriere-zellige-turquoise",
   
@@ -155,8 +154,7 @@ export const redirectMap: Record<string, string> = {
   
   // Chantiers en cours - redirections des anciens slugs vers les nouveaux
   "chantier-paris-10-renovation-petite-salle-de-bain": "chantier-paris-10-rocroy",
-  "chantier-paris-5-renovation-complete-douche-italienne": "chantier-paris-13-port-royal",
-  "chantier-paris-5-port-royal": "chantier-paris-13-port-royal",
+  "chantier-paris-5-renovation-complete-douche-italienne": "chantier-paris-5-port-royal",
   "chantier-paris-16-restructuration-complete": "chantier-paris-16-la-tour",
   "chantier-paris-19-renovation-buttes-chaumont": "chantier-paris-19-buttes-chaumont",
   "chantier-courbevoie-92-renovation-contemporaine": "chantier-courbevoie-92-lalyre",

@@ -1,6 +1,6 @@
-const houzzAnnouncement = "/images/houzz-announcement-final.jpg";
-const houzzSquare = "/images/houzz-instagram-square.jpg";
-const houzzStory = "/images/houzz-instagram-story.jpg";
+import houzzAnnouncement from "@/assets/houzz-announcement-final.jpg";
+import houzzSquare from "@/assets/houzz-instagram-square.jpg";
+import houzzStory from "@/assets/houzz-instagram-story.jpg";
 
 export default function VisuelsHouzz() {
   return (

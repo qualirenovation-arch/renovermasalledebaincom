@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
+import qualirenovationLogo from "@/assets/logos/qualirenovation-logo-new.png";
+import houzzLogo from "@/assets/logos/houzz-logo.png";
 import RMSBLogo from "@/components/brand/RMSBLogo";
 
 const footerLinks = {
@@ -35,24 +37,24 @@ const footerLinks = {
 };
 export function Footer() {
   return <footer className="bg-primary text-primary-foreground">
-      <div className="container-custom py-6 md:py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      <div className="container-custom section-padding">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <Link to="/" className="inline-block mb-2">
+            <Link to="/" className="inline-block mb-4">
               <img 
-                src="/images/logos/qualirenovation-logo-new.png" 
-                alt="QualiRénovation by QualiConcept" 
-                className="h-12 w-auto"
+                src={qualirenovationLogo} 
+                alt="QualiRénovation Logo" 
+                className="h-16 w-auto"
               />
             </Link>
-            <p className="text-primary-foreground/80 mb-1 text-sm leading-snug">
+            <p className="text-primary-foreground/80 mb-2 leading-relaxed">
               <strong>6 rue d'Armaillé, 75017 Paris</strong>
             </p>
-            <p className="text-primary-foreground/80 mb-4 text-sm leading-snug">
+            <p className="text-primary-foreground/80 mb-6 leading-relaxed">
               Spécialiste de la rénovation de salle de bain et douche à l'italienne à Paris et en Île-de-France.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-4">
               <a href="https://wa.me/33659764685" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center hover:bg-[#20BD5A] transition-colors" aria-label="WhatsApp">
                 <MessageCircle className="w-5 h-5 text-white" />
               </a>
@@ -62,17 +64,17 @@ export function Footer() {
               <a href="https://www.linkedin.com/in/carina-nahmani-b30619167/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors" aria-label="LinkedIn">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#4DBC15] flex items-center justify-center hover:bg-[#3DA012] transition-colors" aria-label="Houzz">
-                <span className="text-white font-bold text-lg leading-none">H</span>
+              <a href="https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors" aria-label="Houzz">
+                <img src={houzzLogo} alt="Houzz" className="w-5 h-5 object-contain" />
               </a>
             </div>
           </div>
 
           {/* Navigation */}
           <div>
-            <h4 className="font-display text-sm font-semibold mb-2">Navigation</h4>
-            <ul className="space-y-1">
-              {footerLinks.navigation.map(link => <li key={link.path} className="text-sm">
+            <h4 className="font-display text-lg font-semibold mb-4">Navigation</h4>
+            <ul className="space-y-3">
+              {footerLinks.navigation.map(link => <li key={link.path}>
                   <Link to={link.path} className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                     {link.label}
                   </Link>
@@ -82,9 +84,9 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-display text-sm font-semibold mb-2">Nos services</h4>
-            <ul className="space-y-1">
-              {footerLinks.services.map((service, index) => <li key={index} className="text-primary-foreground/80 text-sm">
+            <h4 className="font-display text-lg font-semibold mb-4">Nos services</h4>
+            <ul className="space-y-3">
+              {footerLinks.services.map((service, index) => <li key={index} className="text-primary-foreground/80">
                   {service}
                 </li>)}
             </ul>
@@ -92,8 +94,8 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-display text-sm font-semibold mb-2">Contact</h4>
-            <ul className="space-y-2">
+            <h4 className="font-display text-lg font-semibold mb-4">Contact</h4>
+            <ul className="space-y-4">
               <li>
                 <a href="tel:+33659764685" className="flex items-center gap-3 text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   <Phone className="w-5 h-5 text-accent" />
@@ -106,6 +108,14 @@ export function Footer() {
                   gestion@qualiconcept.fr
                 </a>
               </li>
+              <li className="flex items-start gap-3 text-primary-foreground/80">
+                <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                <span>6 rue d'Armaillé<br />75017 Paris</span>
+              </li>
+              <li className="flex items-start gap-3 text-primary-foreground/80">
+                <Clock className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                <span>Lun - Ven : 8h - 18h<br />Sam : 9h - 12h</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -113,7 +123,7 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-primary-foreground/10">
-        <div className="container-custom py-4 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-primary-foreground/60">
+        <div className="container-custom py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
           <div className="flex items-center gap-4">
             <RMSBLogo size="sm" variant="light" />
             <div className="text-center md:text-left">

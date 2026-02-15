@@ -30,52 +30,48 @@ import { FormProgressBar } from "@/components/devis/FormProgressBar";
 import { DevisTypeSelector } from "@/components/devis/DevisTypeSelector";
 import { WaterDamageQuoteForm } from "@/components/devis/WaterDamageQuoteForm";
 import { AddressAutocomplete } from "@/components/ui/address-autocomplete";
-// Images de référence - chemins statiques public
-const stylesCarrelageImage = "/images/styles-carrelage-fr.jpg";
-const totsParoiItalienneImage = "/images/tots-paroi-italienne.jpg";
-const totsPortePivotanteImage = "/images/tots-porte-pivotante.jpg";
-const totsPorteCoulissanteImage = "/images/tots-porte-coulissante.jpg";
-const totsPortePliableImage = "/images/tots-porte-pliable.jpg";
-const vasqueSuspendueImage = "/images/vasque-suspendue.jpg";
-const meubleSuspenduImage = "/images/meuble-suspendu.jpg";
-const meubleSurPiedsImage = "/images/meuble-sur-pieds.jpg";
-const meubleDoubleVasqueImage = "/images/meuble-double-vasque.jpg";
-const meubleSimpleVasqueImage = "/images/meuble-simple-vasque.jpg";
-const wcTypesImage = "/images/wc-types.jpg";
-const chateletDouchetteImage = "/images/chatelet-douchette.jpg";
-const chateletColonneImage = "/images/chatelet-colonne-dore.jpg";
-const chateletEncastreImage = "/images/chatelet-encastre-inox.jpg";
-const chateletCielPluieImage = "/images/chatelet-ciel-pluie-plafond.jpg";
-const receveursImage = "/images/receveurs-douche.jpg";
-const baignoiresImage = "/images/baignoires-styles.jpg";
-const robinetterieAppliqueImage = "/images/robinetterie-applique.jpg";
-const robinetterieEncastreImage = "/images/robinetterie-encastre.jpg";
-const robinetterieSurGorgeImage = "/images/robinetterie-sur-gorge.jpg";
-const mitigeurBainDoucheMuralImage = "/images/mitigeur-bain-douche-mural.jpg";
-const mitigeurBainDoucheEncastreImage = "/images/mitigeur-bain-douche-encastre.jpg";
-const mitigeurDoucheMuralImage = "/images/mitigeur-douche-mural.jpg";
-const mitigeurDoucheEncastreImage = "/images/mitigeur-douche-encastre.jpg";
-const finitionChromeImage = "/images/finition-chrome.jpg";
-const finitionInoxImage = "/images/finition-inox.jpg";
-const finitionInoxBrosseImage = "/images/finition-inox-brosse.jpg";
-const finitionNickelImage = "/images/finition-nickel.jpg";
-const finitionNickelBrosseImage = "/images/finition-nickel-brosse.jpg";
-const finitionNoirMatImage = "/images/finition-noir-mat.jpg";
-const finitionGrisAnthraciteImage = "/images/finition-gris-anthracite.jpg";
-const finitionLaitonImage = "/images/finition-laiton.jpg";
-const finitionLaitonBrosseImage = "/images/finition-laiton-brosse.jpg";
-const finitionOrImage = "/images/finition-or.jpg";
-const finitionOrBrosseImage = "/images/finition-or-brosse.jpg";
-const finitionCuivreImage = "/images/finition-cuivre.jpg";
-const finitionBlancImage = "/images/finition-blanc.jpg";
-const finitionBlancMatImage = "/images/finition-blanc-mat.jpg";
-const carrelageZelligeImage = "/images/carrelage-zellige.jpg";
-const carrelageMarbeImage = "/images/carrelage-marbre.jpg";
-const carrelageBetonImage = "/images/carrelage-beton.jpg";
-const carrelageTerazzoImage = "/images/carrelage-terrazzo.jpg";
-const carrelageMetroImage = "/images/carrelage-metro.jpg";
-const carrelageGraphiqueImage = "/images/carrelage-graphique.jpg";
-const carrelageNaturelImage = "/images/carrelage-naturel.jpg";
+// Images de référence Châtelet supprimées - chaque finition a maintenant sa propre photo
+import stylesCarrelageImage from "@/assets/styles-carrelage-fr.jpg";
+import totsParoiItalienneImage from "@/assets/tots-paroi-italienne.jpg";
+import totsPortePivotanteImage from "@/assets/tots-porte-pivotante.jpg";
+import totsPorteCoulissanteImage from "@/assets/tots-porte-coulissante.jpg";
+import totsPortePliableImage from "@/assets/tots-porte-pliable.jpg";
+import vasqueSuspendueImage from "@/assets/vasque-suspendue.jpg";
+import meubleSuspenduImage from "@/assets/meuble-suspendu.jpg";
+import meubleSurPiedsImage from "@/assets/meuble-sur-pieds.jpg";
+import meubleDoubleVasqueImage from "@/assets/meuble-double-vasque.jpg";
+import meubleSimpleVasqueImage from "@/assets/meuble-simple-vasque.jpg";
+import wcTypesImage from "@/assets/wc-types.jpg";
+import chateletDouchetteImage from "@/assets/chatelet-douchette.jpg";
+import chateletColonneImage from "@/assets/chatelet-colonne-dore.jpg";
+import chateletEncastreImage from "@/assets/chatelet-encastre-inox.jpg";
+import chateletCielPluieImage from "@/assets/chatelet-ciel-pluie-plafond.jpg";
+import receveursImage from "@/assets/receveurs-douche.jpg";
+import baignoiresImage from "@/assets/baignoires-styles.jpg";
+import robinetterieAppliqueImage from "@/assets/robinetterie-applique.jpg";
+import robinetterieEncastreImage from "@/assets/robinetterie-encastre.jpg";
+import robinetterieSurGorgeImage from "@/assets/robinetterie-sur-gorge.jpg";
+import finitionChromeImage from "@/assets/finition-chrome.jpg";
+import finitionInoxImage from "@/assets/finition-inox.jpg";
+import finitionInoxBrosseImage from "@/assets/finition-inox-brosse.jpg";
+import finitionNickelImage from "@/assets/finition-nickel.jpg";
+import finitionNickelBrosseImage from "@/assets/finition-nickel-brosse.jpg";
+import finitionNoirMatImage from "@/assets/finition-noir-mat.jpg";
+import finitionGrisAnthraciteImage from "@/assets/finition-gris-anthracite.jpg";
+import finitionLaitonImage from "@/assets/finition-laiton.jpg";
+import finitionLaitonBrosseImage from "@/assets/finition-laiton-brosse.jpg";
+import finitionOrImage from "@/assets/finition-or.jpg";
+import finitionOrBrosseImage from "@/assets/finition-or-brosse.jpg";
+import finitionCuivreImage from "@/assets/finition-cuivre.jpg";
+import finitionBlancImage from "@/assets/finition-blanc.jpg";
+import finitionBlancMatImage from "@/assets/finition-blanc-mat.jpg";
+import carrelageZelligeImage from "@/assets/carrelage-zellige.jpg";
+import carrelageMarbeImage from "@/assets/carrelage-marbre.jpg";
+import carrelageBetonImage from "@/assets/carrelage-beton.jpg";
+import carrelageTerazzoImage from "@/assets/carrelage-terrazzo.jpg";
+import carrelageMetroImage from "@/assets/carrelage-metro.jpg";
+import carrelageGraphiqueImage from "@/assets/carrelage-graphique.jpg";
+import carrelageNaturelImage from "@/assets/carrelage-naturel.jpg";
 
 interface FormData {
   prenom: string;
@@ -240,13 +236,9 @@ const typeBaignoireOptions = [
 ];
 
 const robinetterieBaignoireOptions = [
-  { value: "mitigeur-bain-douche-mural", label: "Mitigeur bain-douche mural", image: mitigeurBainDoucheMuralImage },
-  { value: "mitigeur-bain-douche-encastre", label: "Mitigeur bain-douche encastré", image: mitigeurBainDoucheEncastreImage },
-];
-
-const robinetterieDouchemOptions = [
-  { value: "mitigeur-douche-mural", label: "Mitigeur douche mural", image: mitigeurDoucheMuralImage },
-  { value: "mitigeur-douche-encastre", label: "Mitigeur douche encastré", image: mitigeurDoucheEncastreImage },
+  { value: "applique", label: "En applique (sur le mur)", image: robinetterieAppliqueImage },
+  { value: "encastre", label: "Encastré (dans le mur)", image: robinetterieEncastreImage },
+  { value: "sur-gorge", label: "Sur gorge (sur le rebord)", image: robinetterieSurGorgeImage },
 ];
 
 const emplacementMachineOptions = [
@@ -835,10 +827,7 @@ export default function Devis() {
                   </h2>
                   <RadioGroup 
                     value={formData.typeInstallation} 
-                    onValueChange={(value) => {
-                      handleChange("typeInstallation", value);
-                      handleChange("robinetterieBaignoire", "");
-                    }}
+                    onValueChange={(value) => handleChange("typeInstallation", value)}
                     className="grid grid-cols-1 md:grid-cols-3 gap-4"
                   >
                     {[
@@ -853,10 +842,7 @@ export default function Devis() {
                             ? 'border-foreground bg-foreground/5' 
                             : 'border-border bg-card hover:border-foreground/30'
                         }`}
-                        onClick={() => {
-                          handleChange("typeInstallation", option.value);
-                          handleChange("robinetterieBaignoire", "");
-                        }}
+                        onClick={() => handleChange("typeInstallation", option.value)}
                       >
                         <RadioGroupItem value={option.value} id={option.value} className="pointer-events-none" />
                         <Label htmlFor={option.value} className="cursor-pointer flex-1 font-medium">{option.label}</Label>
@@ -1082,7 +1068,7 @@ export default function Devis() {
                     Configurez l'ensemble de votre robinetterie : types, styles et finitions.
                   </p>
 
-                  <div key={`robinetterie-section-${formData.typeInstallation}`} className="space-y-8">
+                  <div className="space-y-8">
                     {/* Robinetterie douche - visible si douche ou indécis */}
                     {(formData.typeInstallation === "douche" || formData.typeInstallation === "indecis" || !formData.typeInstallation) && (
                     <div className="space-y-6">
@@ -1155,15 +1141,13 @@ export default function Devis() {
                     </div>
                     )}
 
-                    {/* Robinetterie - options conditionnelles selon type d'installation */}
+                    {/* Robinetterie baignoire - visible si baignoire ou indécis */}
+                    {(formData.typeInstallation === "baignoire" || formData.typeInstallation === "indecis" || !formData.typeInstallation) && (
                     <div className="p-4 rounded-xl bg-muted/30">
-                      <Label className="text-sm font-semibold text-foreground mb-3 block">
-                        {formData.typeInstallation === "baignoire" ? "🛁 Mitigeur bain-douche" : "🚿 Mitigeur douche"}
-                      </Label>
+                      <Label className="text-sm font-semibold text-foreground mb-3 block">🛁 Robinetterie baignoire</Label>
                       
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                         <Select 
-                          key={`robinetterie-${formData.typeInstallation}`}
                           value={formData.robinetterieBaignoire} 
                           onValueChange={(value) => handleChange("robinetterieBaignoire", value)}
                         >
@@ -1171,7 +1155,7 @@ export default function Devis() {
                             <SelectValue placeholder="Choisir un type de robinetterie..." />
                           </SelectTrigger>
                       <SelectContent>
-                        {(formData.typeInstallation === "baignoire" ? robinetterieBaignoireOptions : robinetterieDouchemOptions).map((option) => (
+                        {robinetterieBaignoireOptions.map((option) => (
                           <SelectItem key={option.value} value={option.value}>
                             {option.label}
                           </SelectItem>
@@ -1181,8 +1165,7 @@ export default function Devis() {
 
                     {formData.robinetterieBaignoire && (
                       (() => {
-                        const options = formData.typeInstallation === "baignoire" ? robinetterieBaignoireOptions : robinetterieDouchemOptions;
-                        const selectedOption = options.find(opt => opt.value === formData.robinetterieBaignoire);
+                        const selectedOption = robinetterieBaignoireOptions.find(opt => opt.value === formData.robinetterieBaignoire);
                         if (!selectedOption) return null;
                         return (
                               <div className="flex items-center gap-4 ml-auto">
@@ -1196,7 +1179,7 @@ export default function Devis() {
                         )}
                       </div>
                     </div>
-
+                    )}
 
                     {/* Robinetterie machine à laver - conditionnel */}
                     {formData.machineLaver === "oui" && (

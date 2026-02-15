@@ -1,6 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { OGTags } from "@/components/seo/OGTags";
-const micLogo = "/images/logos/mic-insurance.jpg";
+import micLogo from "@/assets/logos/mic-insurance.jpg";
 
 export default function MentionsLegales() {
   return (
