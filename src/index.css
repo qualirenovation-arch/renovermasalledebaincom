@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 /* renovermasalledebain.com - Premium Design System
    Blue Expertise #124A66 + Gold/Luxury palette
@@ -41,7 +41,7 @@
     --accent-foreground: 0 0% 98%;
 
     /* Gold/Bronze - Luxurious tones */
-    --gold: 35 60% 48%;
+    --gold: 45 76% 52%;
     --gold-light: 38 50% 70%;
     --gold-dark: 30 55% 38%;
     --gold-foreground: 0 0% 12%;
@@ -185,11 +185,13 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cinzel', serif;
+    color: hsl(var(--primary));
   }
 }
 
