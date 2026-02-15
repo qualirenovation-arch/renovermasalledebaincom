@@ -127,7 +127,7 @@ function generateEmailHtml(
     </head>
     <body>
       <div class="header">
-        <img src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/logo-rmsb.png?v=2" alt="Rénover Ma Salle de Bain" />
+        <img src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/logo-rmsb-new.png" alt="Rénover Ma Salle de Bain" />
         <h1>🛁 ${periodTitle}</h1>
         <p style="margin:10px 0 0 0;opacity:0.9;">Demandes de devis ${periodLabel}</p>
       </div>
