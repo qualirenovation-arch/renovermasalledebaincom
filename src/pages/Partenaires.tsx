@@ -268,7 +268,6 @@ export default function Partenaires() {
         title="Nos partenaires – Marques et fournisseurs"
         description="Découvrez les marques et fournisseurs de confiance avec lesquels nous travaillons pour vos rénovations de salle de bain : Grohe, Geberit, Schlüter, Wedi..."
         path="/partenaires"
-        image={{ type: "page", title: "Nos partenaires", subtitle: "Marques de confiance" }}
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-stone to-background py-16 md:py-24">

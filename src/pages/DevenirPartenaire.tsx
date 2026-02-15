@@ -605,7 +605,6 @@ export default function DevenirPartenaire() {
         title="Devenir partenaire sous-traitant"
         description="Rejoignez le réseau QualiRénovation by QualiConcept. Candidature pour artisans et entreprises du bâtiment souhaitant collaborer sur nos chantiers."
         path="/devenir-partenaire"
-        image={{ type: "page", title: "Devenir partenaire", subtitle: "Artisans & fournisseurs" }}
       />
       <section className="section-padding bg-gradient-to-b from-background to-muted/20">
         <div className="container-custom">

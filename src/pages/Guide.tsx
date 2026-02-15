@@ -93,7 +93,6 @@ const Guide = () => {
         title="Guide Travaux – Réussir sa salle de bain"
         description="Guide complet pour réussir la rénovation de votre salle de bain : étanchéité, plomberie, VMC, choix techniques et accompagnement maître d'œuvre à Paris."
         path="/guide-travaux"
-        image={{ type: "page", title: "Guide Travaux", subtitle: "Conseils d'experts" }}
       />
       {/* JSON-LD Schema for FAQ */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />

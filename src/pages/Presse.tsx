@@ -383,7 +383,6 @@ export default function Presse() {
         title="Presse & Médias"
         description="Découvrez les articles de presse mettant en avant nos réalisations. Elle Décoration, Marie Claire Maison, Houzz, 18h39 : référence en rénovation salle de bain Paris."
         path="/presse"
-        image={{ type: "page", title: "Presse & Médias", subtitle: "Nos projets dans les médias" }}
       />
 
       {/* Hero Section */}

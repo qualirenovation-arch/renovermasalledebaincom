@@ -92,7 +92,6 @@ export default function Index() {
         title="Rénovation salle de bain Paris"
         description="Rénovation de salle de bain haut de gamme à Paris et Île-de-France. Conception + réalisation clé en main. Un chantier heureux, maîtrisé de A à Z."
         path="/"
-        image={{ type: "default" }}
       />
       {/* Hero Section - Premium design */}
       <section className="bg-gradient-to-b from-stone to-background py-12 md:py-20 lg:py-24">

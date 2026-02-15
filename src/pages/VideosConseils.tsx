@@ -28,7 +28,6 @@ export default function VideosConseils() {
         title="Vidéos conseils"
         description="Découvrez nos vidéos conseils pour votre rénovation de salle de bain : avantages, inconvénients et astuces d'experts."
         path="/videos-conseils"
-        image={{ type: "page", title: "Vidéos conseils", subtitle: "Astuces d'experts" }}
       />
 
       {/* Hero Section */}

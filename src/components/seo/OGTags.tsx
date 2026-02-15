@@ -4,7 +4,6 @@ import {
   OG_SITE_NAME, 
   OG_DEFAULT_TITLE, 
   OG_DEFAULT_DESCRIPTION,
-  getOgImageUrl,
   getOgTitle
 } from "@/lib/og";
 
@@ -13,18 +12,9 @@ interface OGTagsProps {
   description: string;
   path: string;
   type?: "website" | "article";
-  image?: {
-    type: "default" | "page" | "album";
-    title?: string;
-    subtitle?: string;
-    location?: string;
-    style?: string;
-    tag1?: string;
-    tag2?: string;
-  };
-  // Pour les albums, on peut aussi passer une image de couverture directe
+  // Image OG directe (URL absolue ou chemin relatif)
   coverImage?: string;
-  // Pour les pages qui ne doivent pas être indexées (confirmation, admin, etc.)
+  // Pour les pages qui ne doivent pas être indexées
   noindex?: boolean;
 }
 
@@ -33,7 +23,6 @@ export function OGTags({
   description, 
   path, 
   type = "website",
-  image,
   coverImage,
   noindex = false
 }: OGTagsProps) {
@@ -44,23 +33,12 @@ export function OGTags({
   let ogImageUrl: string;
   
   if (coverImage) {
-    // Si une image de couverture est fournie directement
     ogImageUrl = coverImage.startsWith("http") 
       ? coverImage 
       : `${OG_BASE_URL}${coverImage}`;
-  } else if (image) {
-    // Utiliser le générateur d'images OG dynamique
-    ogImageUrl = getOgImageUrl(image.type, {
-      title: image.title,
-      subtitle: image.subtitle,
-      location: image.location,
-      style: image.style,
-      tag1: image.tag1,
-      tag2: image.tag2
-    });
   } else {
-    // Image par défaut
-    ogImageUrl = getOgImageUrl("default");
+    // Image par défaut statique
+    ogImageUrl = `${OG_BASE_URL}/og/default-og.jpg`;
   }
   
   // Tronquer la description pour les meta tags
