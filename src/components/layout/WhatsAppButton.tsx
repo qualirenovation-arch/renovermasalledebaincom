@@ -9,7 +9,7 @@ export function WhatsAppButton() {
         href="https://cal.com/votre-conseiller-travaux-siw706/30min"
         target="_blank"
         rel="noopener noreferrer"
-        className="hidden md:flex fixed bottom-16 right-6 z-40 bg-primary text-primary-foreground rounded-full items-center justify-center gap-3 px-5 py-3 shadow-lg hover:shadow-xl transition-shadow"
+        className="hidden md:flex fixed bottom-16 right-6 z-40 bg-primary text-white rounded-full items-center justify-center gap-3 px-5 py-3 shadow-lg hover:shadow-xl transition-shadow"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ delay: 1, type: "spring", stiffness: 200 }}
