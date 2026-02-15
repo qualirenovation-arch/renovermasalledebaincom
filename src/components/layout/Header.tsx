@@ -51,10 +51,10 @@ export function Header() {
       }`}
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between h-20 md:h-24">
+        <div className="flex items-center justify-between h-20 md:h-24 gap-2">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
-            <RMSBTextLogo size="lg" variant="dark" className="h-14 sm:h-18 md:h-24 w-auto -ml-2 md:-ml-8 max-w-[60vw] sm:max-w-none" />
+          <Link to="/" className="flex items-center gap-3 group flex-shrink min-w-0">
+            <RMSBTextLogo size="lg" variant="dark" className="h-12 sm:h-16 md:h-24 w-auto -ml-2 md:-ml-8 max-w-[55vw] sm:max-w-none" />
           </Link>
 
           {/* Desktop Navigation */}
