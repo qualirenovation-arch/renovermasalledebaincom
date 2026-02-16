@@ -5,6 +5,7 @@ import { Footer } from "./Footer";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { MobileStickyNav } from "./MobileStickyNav";
 import { PageTransition } from "./PageTransition";
+import { ScrollToTopButton } from "./ScrollToTopButton";
 
 interface LayoutProps {
   children: ReactNode;
@@ -21,6 +22,7 @@ export function Layout({ children }: LayoutProps) {
       <Footer />
       <WhatsAppButton />
       <MobileStickyNav />
+      <ScrollToTopButton />
     </div>
   );
 }
