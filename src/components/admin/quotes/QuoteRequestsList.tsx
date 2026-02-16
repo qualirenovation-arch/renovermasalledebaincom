@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Search, Phone, Mail, RefreshCw, Filter, Droplets, Home } from "lucide-react";
+import { Search, Phone, Mail, RefreshCw, Filter, Droplets, Home, PhoneCall } from "lucide-react";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 
@@ -21,6 +21,8 @@ interface QuoteRequest {
   property_postal_code: string | null;
   status: string;
   priority: string;
+  lead_status: string;
+  callback_requested: boolean | null;
   water_damage_insurance_declared: string | null;
   water_damage_scope: string | null;
 }
@@ -64,6 +66,11 @@ const PRIORITY_COLORS: Record<string, string> = {
   normale: "text-foreground",
   haute: "text-amber-600 font-medium",
   urgente: "text-red-600 font-bold",
+};
+
+const LEAD_STATUS_CONFIG: Record<string, { label: string; className: string }> = {
+  etape_1: { label: "Étape 1", className: "bg-orange-100 text-orange-800" },
+  qualifie: { label: "Qualifié", className: "bg-green-100 text-green-800" },
 };
 
 export function QuoteRequestsList({ onSelectQuote }: QuoteRequestsListProps) {
@@ -234,6 +241,7 @@ export function QuoteRequestsList({ onSelectQuote }: QuoteRequestsListProps) {
               <TableHead>Client</TableHead>
               <TableHead>Localisation</TableHead>
               <TableHead>Détails</TableHead>
+              <TableHead>Lead</TableHead>
               <TableHead>Statut</TableHead>
               <TableHead>Priorité</TableHead>
               <TableHead>Actions</TableHead>
@@ -242,7 +250,7 @@ export function QuoteRequestsList({ onSelectQuote }: QuoteRequestsListProps) {
           <TableBody>
             {filteredQuotes.length === 0 ? (
               <TableRow>
-                <TableCell colSpan={8} className="text-center py-8 text-muted-foreground">
+                <TableCell colSpan={9} className="text-center py-8 text-muted-foreground">
                   Aucune demande trouvée
                 </TableCell>
               </TableRow>
@@ -297,6 +305,19 @@ export function QuoteRequestsList({ onSelectQuote }: QuoteRequestsListProps) {
                     ) : (
                       <span className="text-muted-foreground">-</span>
                     )}
+                  </TableCell>
+                  <TableCell>
+                    <div className="flex flex-col gap-1">
+                      <Badge className={LEAD_STATUS_CONFIG[quote.lead_status]?.className || "bg-gray-100"}>
+                        {LEAD_STATUS_CONFIG[quote.lead_status]?.label || quote.lead_status}
+                      </Badge>
+                      {quote.callback_requested && (
+                        <Badge className="bg-violet-100 text-violet-800">
+                          <PhoneCall className="w-3 h-3 mr-1" />
+                          Rappel
+                        </Badge>
+                      )}
+                    </div>
                   </TableCell>
                   <TableCell>
                     <Badge className={STATUS_COLORS[quote.status] || "bg-gray-100"}>
