@@ -121,7 +121,7 @@ const handler = async (req: Request): Promise<Response> => {
     const safePostal = escapeHtml(codePostal);
     const safeProjectType = escapeHtml(projectTypeLabels[projectType] || projectType);
 
-    const siteBaseUrl = "https://renovermasalledebaincom.lovable.app";
+    const siteBaseUrl = "https://renovermasalledebain.com";
     const step2Url = `${siteBaseUrl}/devis/completer?token=${accessToken}`;
     const callbackUrl = `${siteBaseUrl}/devis/rappel?token=${accessToken}`;
     const calUrl = "https://cal.com/votre-conseiller-travaux-siw706/30min?overlayCalendar=true";
