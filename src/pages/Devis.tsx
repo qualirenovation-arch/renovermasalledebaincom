@@ -24,7 +24,8 @@ import {
   Gem,
   Wrench,
   Building2,
-  Home
+  Home,
+  Loader2
 } from "lucide-react";
 import { FormProgressBar } from "@/components/devis/FormProgressBar";
 import { DevisTypeSelector } from "@/components/devis/DevisTypeSelector";
@@ -311,19 +312,63 @@ export default function Devis() {
   const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const [devisType, setDevisType] = useState<'selector' | 'classique' | 'degat_eaux'>('selector');
+  const [leadToken, setLeadToken] = useState<string | null>(null);
+  const [leadId, setLeadId] = useState<string | null>(null);
+  const [isLoadingLead, setIsLoadingLead] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const captchaRef = useRef<HCaptcha>(null);
   const { toast } = useToast();
 
-  // Check URL params for direct form access
+  // Check URL params for direct form access or token
   useEffect(() => {
     const typeParam = searchParams.get('type');
-    if (typeParam === 'degat_eaux') {
+    const tokenParam = searchParams.get('token');
+    
+    if (tokenParam) {
+      // Token-based access from Step 1 email
+      setLeadToken(tokenParam);
+      setDevisType('classique');
+      setIsLoadingLead(true);
+      
+      // Load lead data
+      const loadLead = async () => {
+        try {
+          const { data, error } = await supabase
+            .from('quote_requests')
+            .select('*')
+            .eq('access_token', tokenParam)
+            .maybeSingle();
+          
+          if (error || !data) {
+            toast({ title: "Lien invalide", description: "Ce lien n'est plus valide.", variant: "destructive" });
+            setIsLoadingLead(false);
+            return;
+          }
+          
+          setLeadId(data.id);
+          // Pre-fill form with existing data
+          setFormData(prev => ({
+            ...prev,
+            prenom: data.client_first_name || "",
+            nom: data.client_last_name || "",
+            email: data.client_email || "",
+            telephone: data.client_phone || "",
+            codePostal: data.property_postal_code || "",
+          }));
+        } catch (err) {
+          console.error("Error loading lead:", err);
+        } finally {
+          setIsLoadingLead(false);
+        }
+      };
+      
+      loadLead();
+    } else if (typeParam === 'degat_eaux') {
       setDevisType('degat_eaux');
     } else if (typeParam === 'classique') {
       setDevisType('classique');
     }
-  }, [searchParams]);
+  }, [searchParams, toast]);
 
   // hCaptcha handlers
   const onCaptchaVerify = useCallback((token: string) => {
@@ -412,47 +457,105 @@ export default function Devis() {
     setIsSubmitting(true);
     
     try {
-      // Send confirmation emails via edge function
-      const { data, error } = await supabase.functions.invoke('send-devis-confirmation', {
-        body: {
-          clientEmail: formData.email,
-          clientFirstName: formData.prenom,
-          clientLastName: formData.nom,
-          clientPhone: formData.telephone,
-          captchaToken: getEffectiveCaptchaToken(captchaToken),
-          projectDetails: {
-            logement: formData.typeLogement,
-            adresse: formData.adresse,
-            ville: formData.ville,
-            codePostal: formData.codePostal,
-            etage: formData.etage,
-            ascenseur: formData.ascenseur,
-            surface: formData.dimensionPiece,
-            typeInstallation: formData.typeInstallation,
-            typeDouche: formData.typeDouche,
-            typePommeau: formData.typePommeau,
-            typeReceveur: formData.typeReceveur,
-            typeBaignoire: formData.typeBaignoire,
-            robinetterieBaignoire: formData.robinetterieBaignoire,
-            wcType: formData.wcType,
-            meubleVasque: formData.meubleVasque,
-            porteDouche: formData.porteDouche,
-            machineLaver: formData.machineLaver,
-            emplacementMachine: formData.emplacementMachine,
-            typeMachine: formData.typeMachine,
-            robinetterieMLaver: formData.robinetterieMLaver,
-            robinetterie: formData.finitionsRobinetterie,
-            carrelage: formData.styleCarrelage,
-            message: formData.message,
-          },
-        },
-      });
+      // Upload photos if any
+      let photoUrls: string[] = [];
+      if (uploadedFiles.length > 0 && leadId) {
+        for (const file of uploadedFiles) {
+          const filePath = `${leadId}/${Date.now()}-${file.name}`;
+          const { data: uploadData, error: uploadError } = await supabase.storage
+            .from('project-photos')
+            .upload(filePath, file);
+          
+          if (!uploadError && uploadData) {
+            photoUrls.push(uploadData.path);
+          }
+        }
+      }
 
-      if (error) {
-        console.error("Email sending error:", error);
-        // Still mark as submitted even if email fails - the request was received
+      if (leadToken && leadId) {
+        // Step 2: Update existing lead
+        const { error: updateError } = await supabase.functions.invoke('send-devis-confirmation', {
+          body: {
+            clientEmail: formData.email,
+            clientFirstName: formData.prenom,
+            clientLastName: formData.nom,
+            clientPhone: formData.telephone,
+            captchaToken: getEffectiveCaptchaToken(captchaToken),
+            leadId: leadId,
+            photoUrls: photoUrls,
+            projectDetails: {
+              logement: formData.typeLogement,
+              adresse: formData.adresse,
+              ville: formData.ville,
+              codePostal: formData.codePostal,
+              etage: formData.etage,
+              ascenseur: formData.ascenseur,
+              surface: formData.dimensionPiece,
+              typeInstallation: formData.typeInstallation,
+              typeDouche: formData.typeDouche,
+              typePommeau: formData.typePommeau,
+              typeReceveur: formData.typeReceveur,
+              typeBaignoire: formData.typeBaignoire,
+              robinetterieBaignoire: formData.robinetterieBaignoire,
+              wcType: formData.wcType,
+              meubleVasque: formData.meubleVasque,
+              porteDouche: formData.porteDouche,
+              machineLaver: formData.machineLaver,
+              emplacementMachine: formData.emplacementMachine,
+              typeMachine: formData.typeMachine,
+              robinetterieMLaver: formData.robinetterieMLaver,
+              robinetterie: formData.finitionsRobinetterie,
+              carrelage: formData.styleCarrelage,
+              message: formData.message,
+            },
+          },
+        });
+
+        if (updateError) {
+          console.error("Step 2 submission error:", updateError);
+        }
       } else {
-        console.log("Emails sent successfully:", data);
+        // Direct access (no token): standard flow
+        const { data, error } = await supabase.functions.invoke('send-devis-confirmation', {
+          body: {
+            clientEmail: formData.email,
+            clientFirstName: formData.prenom,
+            clientLastName: formData.nom,
+            clientPhone: formData.telephone,
+            captchaToken: getEffectiveCaptchaToken(captchaToken),
+            projectDetails: {
+              logement: formData.typeLogement,
+              adresse: formData.adresse,
+              ville: formData.ville,
+              codePostal: formData.codePostal,
+              etage: formData.etage,
+              ascenseur: formData.ascenseur,
+              surface: formData.dimensionPiece,
+              typeInstallation: formData.typeInstallation,
+              typeDouche: formData.typeDouche,
+              typePommeau: formData.typePommeau,
+              typeReceveur: formData.typeReceveur,
+              typeBaignoire: formData.typeBaignoire,
+              robinetterieBaignoire: formData.robinetterieBaignoire,
+              wcType: formData.wcType,
+              meubleVasque: formData.meubleVasque,
+              porteDouche: formData.porteDouche,
+              machineLaver: formData.machineLaver,
+              emplacementMachine: formData.emplacementMachine,
+              typeMachine: formData.typeMachine,
+              robinetterieMLaver: formData.robinetterieMLaver,
+              robinetterie: formData.finitionsRobinetterie,
+              carrelage: formData.styleCarrelage,
+              message: formData.message,
+            },
+          },
+        });
+
+        if (error) {
+          console.error("Email sending error:", error);
+        } else {
+          console.log("Emails sent successfully:", data);
+        }
       }
 
       setIsSubmitted(true);
@@ -463,7 +566,6 @@ export default function Devis() {
       });
     } catch (err) {
       console.error("Submission error:", err);
-      // Still mark as submitted - better UX than showing error
       setIsSubmitted(true);
       toast({
         title: "Demande envoyée !",
@@ -475,6 +577,19 @@ export default function Devis() {
       captchaRef.current?.resetCaptcha();
     }
   };
+
+  if (isLoadingLead) {
+    return (
+      <Layout>
+        <section className="section-padding min-h-[70vh] flex items-center justify-center">
+          <div className="flex flex-col items-center gap-4">
+            <Loader2 className="w-12 h-12 animate-spin text-primary" />
+            <p className="text-muted-foreground">Chargement de votre projet...</p>
+          </div>
+        </section>
+      </Layout>
+    );
+  }
 
   if (isSubmitted) {
     return (
@@ -490,14 +605,13 @@ export default function Devis() {
                 <CalendarCheck className="w-12 h-12 text-foreground" />
               </div>
               <h1 className="font-display text-3xl md:text-4xl font-semibold mb-6">
-                Demande de RDV envoyée !
+                Demande complète envoyée !
               </h1>
               <p className="text-muted-foreground text-lg mb-8">
-                Merci pour votre demande. Notre équipe vous recontactera sous 24h 
+                Merci pour votre demande détaillée. Notre équipe vous recontactera sous 24h 
                 pour planifier une <strong>visite technique gratuite sur site</strong>.
               </p>
               
-              {/* Info email confirmation */}
               <div className="bg-accent/30 rounded-xl p-6 mb-8 text-left">
                 <div className="flex items-start gap-3">
                   <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
@@ -514,13 +628,6 @@ export default function Devis() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="default" size="lg" asChild>
                   <a href="/">Retourner sur le site</a>
-                </Button>
-                <Button variant="outline" size="lg" onClick={() => {
-                  setIsSubmitted(false);
-                  setFormData(initialFormData);
-                  setUploadedFiles([]);
-                }}>
-                  Faire une nouvelle demande
                 </Button>
               </div>
             </motion.div>
@@ -570,7 +677,7 @@ export default function Devis() {
         description="Demandez votre devis gratuit pour la rénovation de votre salle de bain à Paris. Un chantier heureux, sans stress et sans imprévus. Réponse sous 48h."
         path="/devis"
       />
-      {/* Hero - Premium design */}
+      {/* Hero - Step 2 intro when accessed via token */}
       <section className="relative py-12 md:py-20 bg-gradient-to-b from-stone to-background overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 right-0 w-96 h-96 bg-gold rounded-full blur-3xl" />
@@ -588,10 +695,13 @@ export default function Devis() {
               Visite gratuite
             </span>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6 tracking-tight">
-              Demandez votre devis gratuit
+              {leadToken ? "Affinons votre projet" : "Demandez votre devis gratuit"}
             </h1>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-xl">
-              Un chantier heureux commence par une bonne préparation. RDV gratuit chez vous pour étudier votre projet.
+              {leadToken 
+                ? "Merci pour ces premières informations. Ces précisions nous permettront de préparer efficacement la visite technique."
+                : "Un chantier heureux commence par une bonne préparation. RDV gratuit chez vous pour étudier votre projet."
+              }
             </p>
           </motion.div>
         </div>
@@ -1479,7 +1589,7 @@ export default function Devis() {
                   disabled={isSubmitting || !captchaToken}
                 >
                   <CalendarCheck className="w-5 h-5 mr-2" />
-                  {isSubmitting ? "Envoi en cours..." : "Demander mon RDV gratuit sur site"}
+                  {isSubmitting ? "Envoi en cours..." : leadToken ? "👉 Envoyer ma demande complète" : "Demander mon RDV gratuit sur site"}
                 </Button>
               </form>
             </motion.div>

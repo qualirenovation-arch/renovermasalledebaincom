@@ -3,6 +3,12 @@ project_id = "wacqnrxbszvznfqiiuxm"
 [functions.send-devis-confirmation]
 verify_jwt = false
 
+[functions.send-step1-confirmation]
+verify_jwt = false
+
+[functions.handle-callback-request]
+verify_jwt = false
+
 [functions.setup-first-admin]
 verify_jwt = false
 

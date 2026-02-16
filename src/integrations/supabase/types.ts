@@ -180,7 +180,10 @@ export type Database = {
       }
       quote_requests: {
         Row: {
+          access_token: string | null
           assigned_to: string | null
+          callback_requested: boolean | null
+          callback_requested_at: string | null
           client_email: string
           client_first_name: string
           client_last_name: string
@@ -189,9 +192,13 @@ export type Database = {
           id: string
           internal_notes: string | null
           last_contacted_at: string | null
+          lead_status: string
           message: string | null
           next_followup_at: string | null
+          photo_urls: string[] | null
           priority: string
+          project_room_type: string | null
+          project_type: string | null
           property_address: string | null
           property_city: string | null
           property_elevator: string | null
@@ -217,6 +224,7 @@ export type Database = {
           renovation_wc_type: string[] | null
           source: string
           status: string
+          step2_completed_at: string | null
           type_devis: string
           updated_at: string
           water_damage_claim_number: string | null
@@ -231,7 +239,10 @@ export type Database = {
           water_damage_works_other: string | null
         }
         Insert: {
+          access_token?: string | null
           assigned_to?: string | null
+          callback_requested?: boolean | null
+          callback_requested_at?: string | null
           client_email: string
           client_first_name: string
           client_last_name: string
@@ -240,9 +251,13 @@ export type Database = {
           id?: string
           internal_notes?: string | null
           last_contacted_at?: string | null
+          lead_status?: string
           message?: string | null
           next_followup_at?: string | null
+          photo_urls?: string[] | null
           priority?: string
+          project_room_type?: string | null
+          project_type?: string | null
           property_address?: string | null
           property_city?: string | null
           property_elevator?: string | null
@@ -268,6 +283,7 @@ export type Database = {
           renovation_wc_type?: string[] | null
           source?: string
           status?: string
+          step2_completed_at?: string | null
           type_devis?: string
           updated_at?: string
           water_damage_claim_number?: string | null
@@ -282,7 +298,10 @@ export type Database = {
           water_damage_works_other?: string | null
         }
         Update: {
+          access_token?: string | null
           assigned_to?: string | null
+          callback_requested?: boolean | null
+          callback_requested_at?: string | null
           client_email?: string
           client_first_name?: string
           client_last_name?: string
@@ -291,9 +310,13 @@ export type Database = {
           id?: string
           internal_notes?: string | null
           last_contacted_at?: string | null
+          lead_status?: string
           message?: string | null
           next_followup_at?: string | null
+          photo_urls?: string[] | null
           priority?: string
+          project_room_type?: string | null
+          project_type?: string | null
           property_address?: string | null
           property_city?: string | null
           property_elevator?: string | null
@@ -319,6 +342,7 @@ export type Database = {
           renovation_wc_type?: string[] | null
           source?: string
           status?: string
+          step2_completed_at?: string | null
           type_devis?: string
           updated_at?: string
           water_damage_claim_number?: string | null

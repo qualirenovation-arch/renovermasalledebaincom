@@ -12,7 +12,9 @@ import ProjetDetail from "./pages/ProjetDetail";
 import Presse from "./pages/Presse";
 import Partenaires from "./pages/Partenaires";
 import PartenairesContact from "./pages/PartenairesContact";
+import DevisStep1 from "./pages/DevisStep1";
 import Devis from "./pages/Devis";
+import DevisCallback from "./pages/DevisCallback";
 import FAQ from "./pages/FAQ";
 import MentionsLegales from "./pages/MentionsLegales";
 import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
@@ -49,7 +51,9 @@ const App = () => (
           <Route path="/presse" element={<Presse />} />
           <Route path="/partenaires" element={<Partenaires />} />
           <Route path="/partenaires/contact" element={<PartenairesContact />} />
-          <Route path="/devis" element={<Devis />} />
+          <Route path="/devis" element={<DevisStep1 />} />
+          <Route path="/devis/completer" element={<Devis />} />
+          <Route path="/devis/rappel" element={<DevisCallback />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/mentions-legales" element={<MentionsLegales />} />
           <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
