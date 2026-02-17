@@ -152,7 +152,7 @@ const handler = async (req: Request): Promise<Response> => {
     const { allowed, remaining } = await checkRateLimit(supabase, ip, endpoint);
     
     if (!allowed) {
-      console.log(`Rate limit exceeded for IP: ${ip}`);
+      console.log("Rate limit exceeded for submit-partner-contact endpoint");
       return new Response(
         JSON.stringify({ error: "Trop de demandes. Veuillez réessayer dans une heure." }),
         { 

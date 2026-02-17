@@ -10,9 +10,20 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
+// Rate limiting for token lookups - stricter than other endpoints
+const RATE_LIMIT_MAX_REQUESTS = 10;
+const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
+
 function escapeHtml(unsafe: string): string {
   if (!unsafe) return '';
   return unsafe.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+}
+
+function maskEmail(email: string): string {
+  if (!email) return '';
+  const [local, domain] = email.split('@');
+  if (!domain) return '***';
+  return `${local[0]}***@${domain}`;
 }
 
 const handler = async (req: Request): Promise<Response> => {
@@ -22,7 +33,31 @@ const handler = async (req: Request): Promise<Response> => {
 
   const supabase = createClient(SUPABASE_URL!, SUPABASE_SERVICE_ROLE_KEY!);
 
+  // Get client IP for rate limiting
+  const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || req.headers.get("x-real-ip") || "unknown";
+  const endpoint = "handle-callback-request";
+
   try {
+    // Rate limiting for token lookups
+    const oneHourAgo = new Date(Date.now() - RATE_LIMIT_WINDOW_MS).toISOString();
+    const { count } = await supabase
+      .from('rate_limits')
+      .select('*', { count: 'exact', head: true })
+      .eq('ip_address', ip)
+      .eq('endpoint', endpoint)
+      .gte('created_at', oneHourAgo);
+
+    if ((count || 0) >= RATE_LIMIT_MAX_REQUESTS) {
+      console.log("Rate limit exceeded for token lookup endpoint");
+      return new Response(
+        JSON.stringify({ error: "Trop de demandes. Veuillez réessayer dans une heure." }),
+        { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    // Record rate limit hit
+    await supabase.from('rate_limits').insert({ ip_address: ip, endpoint });
+
     const { token } = await req.json();
 
     if (!token || typeof token !== 'string' || token.length < 10) {
@@ -32,11 +67,12 @@ const handler = async (req: Request): Promise<Response> => {
     // Find the lead by token
     const { data: lead, error: findError } = await supabase
       .from('quote_requests')
-      .select('*')
+      .select('id, client_first_name, client_last_name, client_email, client_phone, property_postal_code')
       .eq('access_token', token)
       .maybeSingle();
 
     if (findError || !lead) {
+      console.log("Token lookup: not found");
       return new Response(JSON.stringify({ error: "Demande non trouvée" }), { status: 404, headers: { ...corsHeaders, "Content-Type": "application/json" } });
     }
 
@@ -53,6 +89,8 @@ const handler = async (req: Request): Promise<Response> => {
       console.error("Update error:", updateError);
       throw updateError;
     }
+
+    console.log("Callback requested for lead:", lead.id);
 
     // Send notification to admin
     const safeName = escapeHtml(`${lead.client_first_name} ${lead.client_last_name}`);
@@ -89,16 +127,14 @@ const handler = async (req: Request): Promise<Response> => {
       }),
     });
 
-    // Send WhatsApp notification via wa.me link (logged for admin reference)
-    const whatsappMessage = `📞 Rappel demandé par ${lead.client_first_name} ${lead.client_last_name} - Tel: ${lead.client_phone || 'N/A'} - Email: ${lead.client_email}`;
-    console.log("WhatsApp notification:", `https://wa.me/33659764685?text=${encodeURIComponent(whatsappMessage)}`);
+    console.log("Callback notification sent for lead:", lead.id);
 
     return new Response(
       JSON.stringify({ success: true }),
       { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   } catch (error: any) {
-    console.error("Error:", error);
+    console.error("Error in handle-callback-request:", error.message || error);
     return new Response(
       JSON.stringify({ error: "Une erreur est survenue." }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
