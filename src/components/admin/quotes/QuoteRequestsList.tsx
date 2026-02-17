@@ -19,10 +19,12 @@ interface QuoteRequest {
   client_phone: string | null;
   property_city: string | null;
   property_postal_code: string | null;
+  project_type: string | null;
   status: string;
   priority: string;
   lead_status: string;
   callback_requested: boolean | null;
+  step2_completed_at: string | null;
   water_damage_insurance_declared: string | null;
   water_damage_scope: string | null;
 }
@@ -71,6 +73,14 @@ const PRIORITY_COLORS: Record<string, string> = {
 const LEAD_STATUS_CONFIG: Record<string, { label: string; className: string }> = {
   etape_1: { label: "Étape 1", className: "bg-orange-100 text-orange-800" },
   qualifie: { label: "Qualifié", className: "bg-green-100 text-green-800" },
+};
+
+const PROJECT_TYPE_LABELS: Record<string, string> = {
+  "baignoire-vers-douche": "Baignoire → Douche",
+  "moderniser": "Moderniser SDB",
+  "installer-baignoire": "Installer baignoire",
+  "repenser-espace": "Repenser l'espace",
+  "nouvelle-sdb": "Nouvelle SDB",
 };
 
 export function QuoteRequestsList({ onSelectQuote }: QuoteRequestsListProps) {
@@ -240,6 +250,7 @@ export function QuoteRequestsList({ onSelectQuote }: QuoteRequestsListProps) {
               <TableHead>Type</TableHead>
               <TableHead>Client</TableHead>
               <TableHead>Localisation</TableHead>
+              <TableHead>Travaux</TableHead>
               <TableHead>Détails</TableHead>
               <TableHead>Lead</TableHead>
               <TableHead>Statut</TableHead>
@@ -250,7 +261,7 @@ export function QuoteRequestsList({ onSelectQuote }: QuoteRequestsListProps) {
           <TableBody>
             {filteredQuotes.length === 0 ? (
               <TableRow>
-                <TableCell colSpan={9} className="text-center py-8 text-muted-foreground">
+                <TableCell colSpan={10} className="text-center py-8 text-muted-foreground">
                   Aucune demande trouvée
                 </TableCell>
               </TableRow>
@@ -284,9 +295,17 @@ export function QuoteRequestsList({ onSelectQuote }: QuoteRequestsListProps) {
                     <div className="text-sm text-muted-foreground">{quote.client_email}</div>
                   </TableCell>
                   <TableCell className="text-sm">
-                    {quote.property_postal_code && quote.property_city
-                      ? `${quote.property_postal_code} ${quote.property_city}`
+                    {quote.property_postal_code
+                      ? quote.property_city
+                        ? `${quote.property_postal_code} ${quote.property_city}`
+                        : quote.property_postal_code
                       : "-"}
+                  </TableCell>
+                  <TableCell className="text-sm">
+                    {quote.project_type
+                      ? <span className="text-xs">{PROJECT_TYPE_LABELS[quote.project_type] || quote.project_type}</span>
+                      : <span className="text-muted-foreground">-</span>
+                    }
                   </TableCell>
                   <TableCell className="text-sm">
                     {quote.type_devis === "degat_des_eaux" ? (
@@ -316,6 +335,9 @@ export function QuoteRequestsList({ onSelectQuote }: QuoteRequestsListProps) {
                           <PhoneCall className="w-3 h-3 mr-1" />
                           Rappel
                         </Badge>
+                      )}
+                      {quote.callback_requested && !quote.step2_completed_at && (
+                        <span className="text-xs text-amber-600">⚠ Formulaire incomplet</span>
                       )}
                     </div>
                   </TableCell>
