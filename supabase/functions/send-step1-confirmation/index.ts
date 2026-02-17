@@ -114,6 +114,7 @@ const handler = async (req: Request): Promise<Response> => {
     }
 
     console.log("Lead saved:", lead.id);
+    const maskEmail = (e: string) => { const [l, d] = e.split('@'); return d ? `${l[0]}***@${d}` : '***'; };
 
     // Build email
     const safeName = escapeHtml(`${clientFirstName} ${clientLastName}`);
@@ -188,7 +189,7 @@ const handler = async (req: Request): Promise<Response> => {
     });
 
     const emailData = await emailResponse.json();
-    console.log("Client email sent:", emailData);
+    console.log("Client email sent to:", maskEmail(clientEmail));
 
     // Send notification to company
     const companyEmailResponse = await fetch("https://api.resend.com/emails", {
@@ -236,7 +237,7 @@ const handler = async (req: Request): Promise<Response> => {
     });
 
     const companyData = await companyEmailResponse.json();
-    console.log("Company notification sent:", companyData);
+    console.log("Company notification sent for lead:", lead.id);
 
     return new Response(
       JSON.stringify({ success: true, leadId: lead.id }),

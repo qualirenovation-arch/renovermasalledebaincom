@@ -147,7 +147,7 @@ const handler = async (req: Request): Promise<Response> => {
     const { allowed, remaining } = await checkRateLimit(supabase, ip, endpoint);
     
     if (!allowed) {
-      console.log(`Rate limit exceeded for IP: ${ip}`);
+      console.log("Rate limit exceeded for send-water-damage-quote endpoint");
       return new Response(
         JSON.stringify({ error: "Trop de demandes. Veuillez réessayer dans une heure." }),
         { 
@@ -326,7 +326,7 @@ const handler = async (req: Request): Promise<Response> => {
     });
 
     const clientEmailData = await clientEmailResponse.json();
-    console.log("Client email sent:", clientEmailData);
+    console.log("Client email sent for quote:", insertedData.id);
 
     // Send notification to company
     const companyEmailResponse = await fetch("https://api.resend.com/emails", {
@@ -416,7 +416,7 @@ const handler = async (req: Request): Promise<Response> => {
     });
 
     const companyEmailData = await companyEmailResponse.json();
-    console.log("Company notification email sent:", companyEmailData);
+    console.log("Company notification sent for quote:", insertedData.id);
 
     return new Response(
       JSON.stringify({ 

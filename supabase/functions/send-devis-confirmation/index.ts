@@ -114,7 +114,7 @@ const handler = async (req: Request): Promise<Response> => {
     const { allowed, remaining } = await checkRateLimit(supabase, ip, endpoint);
     
     if (!allowed) {
-      console.log(`Rate limit exceeded for IP: ${ip}`);
+      console.log("Rate limit exceeded for send-devis-confirmation endpoint");
       return new Response(
         JSON.stringify({ error: "Trop de demandes. Veuillez réessayer dans une heure." }),
         { 
@@ -133,7 +133,8 @@ const handler = async (req: Request): Promise<Response> => {
     const { clientEmail, clientFirstName, clientLastName, clientPhone, captchaToken, projectDetails, leadId, photoUrls } = requestData;
     const clientName = `${clientFirstName} ${clientLastName}`.trim();
 
-    console.log("Processing devis request for:", clientEmail);
+    const maskEmail = (e: string) => { const [l, d] = e.split('@'); return d ? `${l[0]}***@${d}` : '***'; };
+    console.log("Processing devis request for:", maskEmail(clientEmail));
 
     // Validate required fields
     if (!clientEmail || !clientFirstName) {
@@ -299,7 +300,7 @@ const handler = async (req: Request): Promise<Response> => {
       return arr.map(item => escapeHtml(item)).join(", ");
     };
 
-    console.log("Sending confirmation email to:", clientEmail);
+    console.log("Sending confirmation email to:", maskEmail(clientEmail));
 
     // Send confirmation email to client using Resend API directly
     const clientEmailResponse = await fetch("https://api.resend.com/emails", {
@@ -374,7 +375,7 @@ const handler = async (req: Request): Promise<Response> => {
     });
 
     const clientEmailData = await clientEmailResponse.json();
-    console.log("Client email sent:", clientEmailData);
+    console.log("Client email sent successfully");
 
     // Send notification email to the company
     const companyEmailResponse = await fetch("https://api.resend.com/emails", {
@@ -438,7 +439,7 @@ const handler = async (req: Request): Promise<Response> => {
     });
 
     const companyEmailData = await companyEmailResponse.json();
-    console.log("Company notification email sent:", companyEmailData);
+    console.log("Company notification sent successfully");
 
     return new Response(
       JSON.stringify({ 
