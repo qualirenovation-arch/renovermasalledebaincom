@@ -222,10 +222,21 @@ async function sendExpiryNotification(
   }
 }
 
+const CRON_SECRET = Deno.env.get("CRON_SECRET");
+
 const handler = async (req: Request): Promise<Response> => {
   // Handle CORS preflight
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
+  }
+
+  // Validate cron secret to prevent unauthorized invocations
+  const authHeader = req.headers.get("Authorization");
+  if (!CRON_SECRET || authHeader !== `Bearer ${CRON_SECRET}`) {
+    return new Response(
+      JSON.stringify({ error: "Unauthorized" }),
+      { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+    );
   }
 
   try {
