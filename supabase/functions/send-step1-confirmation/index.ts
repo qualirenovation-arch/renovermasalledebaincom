@@ -159,7 +159,7 @@ const handler = async (req: Request): Promise<Response> => {
   </div>
   <div class="content">
     <p>Bonjour <strong>${escapeHtml(clientFirstName)}</strong>,</p>
-    <p>Merci pour votre demande concernant votre projet à <strong>${safeFullAddress}</strong>.</p>
+    <p>Merci pour votre demande concernant votre projet <strong>« ${safeProjectType} »</strong>${safeFullAddress ? ` à <strong>${safeFullAddress}</strong>` : ''}.</p>
     <p>Pour établir un devis précis, une visite sur site sera indispensable.<br>
     Mais avant cela, nous devons affiner certains éléments avec vous.</p>
     <p><strong>Vous avez trois façons de poursuivre :</strong></p>
