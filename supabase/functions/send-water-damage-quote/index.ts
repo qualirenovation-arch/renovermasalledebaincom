@@ -203,7 +203,7 @@ const handler = async (req: Request): Promise<Response> => {
 </style></head>
 <body>
   <div class="header">
-    <img src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/logo-rmsb-new.png" alt="RenoverMaSalleDeBain.com" style="max-width:300px;" />
+    <img src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/logo-rmsb-horizontal.png?v=1" alt="RenoverMaSalleDeBain.com" style="max-width:300px;" />
     <h1>💧 Dégât des eaux – Dossier enregistré</h1>
   </div>
   <div class="content">
