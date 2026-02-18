@@ -129,8 +129,8 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    const requestData: DevisRequest & { leadId?: string; photoUrls?: string[] } = await req.json();
-    const { clientEmail, clientFirstName, clientLastName, clientPhone, captchaToken, projectDetails, leadId, photoUrls } = requestData;
+    const requestData: DevisRequest & { leadId?: string; photoUrls?: string[]; isWaterDamageStep2?: boolean; waterDamageStep2?: { requiredWorks: string[]; requiredWorksOther: string; renovationScope: string; message: string; documentPaths: string[] } } = await req.json();
+    const { clientEmail, clientFirstName, clientLastName, clientPhone, captchaToken, projectDetails, leadId, photoUrls, isWaterDamageStep2, waterDamageStep2 } = requestData;
     const clientName = `${clientFirstName} ${clientLastName}`.trim();
 
     const maskEmail = (e: string) => { const [l, d] = e.split('@'); return d ? `${l[0]}***@${d}` : '***'; };
@@ -190,8 +190,31 @@ const handler = async (req: Request): Promise<Response> => {
     await recordRequest(supabase, ip, endpoint);
 
     let insertedData: any;
-    
-    if (leadId) {
+
+    if (isWaterDamageStep2 && leadId && waterDamageStep2) {
+      // Water damage Step 2: Update existing lead with steps 4-7
+      const { data: updatedData, error: updateError } = await supabase
+        .from('quote_requests')
+        .update({
+          water_damage_works: waterDamageStep2.requiredWorks || [],
+          water_damage_works_other: waterDamageStep2.requiredWorksOther || null,
+          water_damage_scope: waterDamageStep2.renovationScope || null,
+          water_damage_documents: waterDamageStep2.documentPaths || [],
+          message: waterDamageStep2.message || null,
+          lead_status: 'qualifie',
+          step2_completed_at: new Date().toISOString(),
+        })
+        .eq('id', leadId)
+        .select()
+        .single();
+      
+      if (updateError) {
+        console.error("Database update error:", updateError);
+      } else {
+        insertedData = updatedData;
+        console.log("Water damage step 2 completed:", insertedData.id);
+      }
+    } else if (leadId) {
       // Step 2: Update existing lead
       const { data: updatedData, error: updateError } = await supabase
         .from('quote_requests')

@@ -30,6 +30,7 @@ import {
 import { FormProgressBar } from "@/components/devis/FormProgressBar";
 import { DevisTypeSelector } from "@/components/devis/DevisTypeSelector";
 import { WaterDamageQuoteForm } from "@/components/devis/WaterDamageQuoteForm";
+import { WaterDamageStep2Form } from "@/components/devis/WaterDamageStep2Form";
 import { AddressAutocomplete } from "@/components/ui/address-autocomplete";
 // Images de référence Châtelet supprimées - chaque finition a maintenant sa propre photo
 import stylesCarrelageImage from "@/assets/styles-carrelage-fr.jpg";
@@ -314,6 +315,9 @@ export default function Devis() {
   const [devisType, setDevisType] = useState<'selector' | 'classique' | 'degat_eaux'>('selector');
   const [leadToken, setLeadToken] = useState<string | null>(null);
   const [leadId, setLeadId] = useState<string | null>(null);
+  const [leadTypeDevis, setLeadTypeDevis] = useState<string | null>(null);
+  const [leadFirstName, setLeadFirstName] = useState("");
+  const [leadEmail, setLeadEmail] = useState("");
   const [isLoadingLead, setIsLoadingLead] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const captchaRef = useRef<HCaptcha>(null);
@@ -327,7 +331,6 @@ export default function Devis() {
     if (tokenParam) {
       // Token-based access from Step 1 email
       setLeadToken(tokenParam);
-      setDevisType('classique');
       setIsLoadingLead(true);
       
       // Load lead data
@@ -346,7 +349,18 @@ export default function Devis() {
           }
           
           setLeadId(data.id);
-          // Pre-fill form with existing data
+          setLeadTypeDevis(data.type_devis);
+          setLeadFirstName(data.client_first_name || "");
+          setLeadEmail(data.client_email || "");
+          
+          // Route to correct form type
+          if (data.type_devis === 'degat_des_eaux') {
+            setDevisType('degat_eaux');
+          } else {
+            setDevisType('classique');
+          }
+          
+          // Pre-fill form with existing data (for classic)
           setFormData(prev => ({
             ...prev,
             prenom: data.client_first_name || "",
@@ -741,7 +755,15 @@ export default function Devis() {
           {/* Water Damage Form */}
           {devisType === 'degat_eaux' && (
             <div className="max-w-3xl mx-auto">
-              <WaterDamageQuoteForm onBack={() => setDevisType('selector')} />
+              {leadToken && leadId && leadTypeDevis === 'degat_des_eaux' ? (
+                <WaterDamageStep2Form
+                  leadId={leadId}
+                  clientFirstName={leadFirstName}
+                  clientEmail={leadEmail}
+                />
+              ) : (
+                <WaterDamageQuoteForm onBack={() => setDevisType('selector')} />
+              )}
             </div>
           )}
 
