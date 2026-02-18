@@ -145,7 +145,7 @@ const handler = async (req: Request): Promise<Response> => {
 <style>
   body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; }
   .header { background: linear-gradient(135deg, #124A66 0%, #0d3a52 100%); color: white; padding: 30px; text-align: center; }
-  .header img { max-width: 180px; margin-bottom: 10px; }
+  .header img { max-width: 300px; margin-bottom: 0; }
   .content { padding: 30px; background: #f9f9f9; }
   .option-box { background: white; padding: 20px; border-radius: 8px; margin: 16px 0; border-left: 4px solid #124A66; }
   .option-box h3 { margin-top: 0; color: #124A66; font-size: 16px; }
@@ -154,8 +154,7 @@ const handler = async (req: Request): Promise<Response> => {
 </style></head>
 <body>
   <div class="header">
-    <img src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/logo-rmsb-new.png" alt="RenoverMaSalleDeBain" />
-    <h1>🛁 RenoverMaSalleDeBain.com</h1>
+    <img src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/logo-rmsb-new.png" alt="RenoverMaSalleDeBain.com" style="max-width:300px;" />
   </div>
   <div class="content">
     <p>Bonjour <strong>${escapeHtml(clientFirstName)}</strong>,</p>
