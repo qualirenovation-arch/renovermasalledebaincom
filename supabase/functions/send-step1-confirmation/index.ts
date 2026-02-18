@@ -52,7 +52,7 @@ const handler = async (req: Request): Promise<Response> => {
       return new Response(JSON.stringify({ error: "Trop de demandes. Veuillez réessayer dans une heure." }), { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } });
     }
 
-    const { clientFirstName, clientLastName, clientEmail, clientPhone, codePostal, projectType, roomType, captchaToken } = await req.json();
+    const { clientFirstName, clientLastName, clientEmail, clientPhone, clientAddress, clientCity, codePostal, projectType, roomType, captchaToken } = await req.json();
 
     // Validate required fields
     if (!clientEmail || !clientFirstName || !clientLastName || !clientPhone || !codePostal || !projectType) {
@@ -96,6 +96,8 @@ const handler = async (req: Request): Promise<Response> => {
         client_last_name: clientLastName,
         client_email: clientEmail,
         client_phone: clientPhone,
+        property_address: clientAddress || null,
+        property_city: clientCity || null,
         property_postal_code: codePostal,
         project_type: projectType,
         project_room_type: roomType || null,
@@ -120,6 +122,9 @@ const handler = async (req: Request): Promise<Response> => {
     const safeName = escapeHtml(`${clientFirstName} ${clientLastName}`);
     const safeEmail = escapeHtml(clientEmail);
     const safePostal = escapeHtml(codePostal);
+    const safeAddress = clientAddress ? escapeHtml(clientAddress) : "";
+    const safeCity = clientCity ? escapeHtml(clientCity) : "";
+    const safeFullAddress = [safeAddress, safePostal, safeCity].filter(Boolean).join(", ");
     const safeProjectType = escapeHtml(projectTypeLabels[projectType] || projectType);
 
     const siteBaseUrl = "https://renovermasalledebain.com";
@@ -154,7 +159,7 @@ const handler = async (req: Request): Promise<Response> => {
   </div>
   <div class="content">
     <p>Bonjour <strong>${escapeHtml(clientFirstName)}</strong>,</p>
-    <p>Merci pour votre demande concernant votre projet à <strong>${safePostal}</strong>.</p>
+    <p>Merci pour votre demande concernant votre projet à <strong>${safeFullAddress}</strong>.</p>
     <p>Pour établir un devis précis, une visite sur site sera indispensable.<br>
     Mais avant cela, nous devons affiner certains éléments avec vous.</p>
     <p><strong>Vous avez trois façons de poursuivre :</strong></p>
@@ -219,7 +224,7 @@ const handler = async (req: Request): Promise<Response> => {
         <tr><td>Nom</td><td>${safeName}</td></tr>
         <tr><td>Email</td><td><a href="mailto:${safeEmail}">${safeEmail}</a></td></tr>
         <tr><td>Téléphone</td><td>${escapeHtml(clientPhone)}</td></tr>
-        <tr><td>Code postal</td><td>${safePostal}</td></tr>
+        <tr><td>Adresse</td><td>${safeFullAddress}</td></tr>
       </table>
     </div>
     <div class="info-box">
