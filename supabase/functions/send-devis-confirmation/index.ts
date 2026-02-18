@@ -314,6 +314,9 @@ const handler = async (req: Request): Promise<Response> => {
     const safeClientEmail = escapeHtml(clientEmail);
     const safeClientPhone = escapeHtml(clientPhone || "");
     const safeLogement = escapeHtml(projectDetails.logement || "");
+    const safeAdresse = escapeHtml(projectDetails.adresse || "");
+    const safeVille = escapeHtml(projectDetails.ville || "");
+    const safeCodePostal = escapeHtml(projectDetails.codePostal || "");
     const safeSurface = escapeHtml(projectDetails.surface || "");
     const safeMessage = escapeHtml(projectDetails.message || "");
 
@@ -351,36 +354,66 @@ const handler = async (req: Request): Promise<Response> => {
               .info-box h3 { margin-top: 0; color: #124A66; }
               .footer { padding: 20px; text-align: center; font-size: 12px; color: #666; background: #f0f0f0; }
               .cta { display: inline-block; background: #124A66; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; margin-top: 20px; }
+              .detail-row { padding: 6px 0; border-bottom: 1px solid #f0f0f0; }
+              .detail-row:last-child { border-bottom: none; }
+              .detail-label { color: #666; font-size: 13px; }
+              .detail-value { font-weight: 600; color: #333; }
             </style>
           </head>
           <body>
             <div class="header">
               <img src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/logo-rmsb-new.png" alt="Rénover Ma Salle de Bain" />
-              <h1>🛁 Rénover Ma Salle de Bain</h1>
+              <h1>Demande de devis confirmée</h1>
             </div>
             <div class="content">
               <p>Bonjour <strong>${safeClientName}</strong>,</p>
-              <p>Nous avons bien reçu votre demande de devis et nous vous en remercions !</p>
+              <p>Merci pour votre confiance ! Nous avons bien enregistré votre demande de devis pour la rénovation de votre salle de bain.</p>
               
               <div class="info-box">
-                <h3>📋 Récapitulatif de votre demande</h3>
-                <p><strong>Type de logement :</strong> ${safeLogement || "Non spécifié"}</p>
-                <p><strong>Surface :</strong> ${safeSurface || "Non spécifiée"}</p>
-                <p><strong>Receveur/Baignoire :</strong> ${formatArray(projectDetails.typeReceveur)}</p>
-                <p><strong>Type de WC :</strong> ${formatArray(projectDetails.wcType)}</p>
-                <p><strong>Robinetterie :</strong> ${formatArray(projectDetails.robinetterie)}</p>
-                <p><strong>Style carrelage :</strong> ${formatArray(projectDetails.carrelage)}</p>
-                ${safeMessage ? `<p><strong>Message :</strong> ${safeMessage}</p>` : ""}
+                <h3>📍 Votre projet</h3>
+                ${safeAdresse || safeVille || safeCodePostal ? `
+                <div class="detail-row">
+                  <span class="detail-label">Adresse du projet</span><br>
+                  <span class="detail-value">${[safeAdresse, safeCodePostal, safeVille].filter(Boolean).join(", ")}</span>
+                </div>` : ""}
+                <div class="detail-row">
+                  <span class="detail-label">Type de logement</span><br>
+                  <span class="detail-value">${safeLogement || "Non spécifié"}</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Surface estimée</span><br>
+                  <span class="detail-value">${safeSurface || "Non spécifiée"}</span>
+                </div>
               </div>
 
               <div class="info-box">
-                <h3>📞 Prochaines étapes</h3>
-                <p>Un membre de notre équipe vous contactera dans les <strong>24 à 48 heures</strong> pour planifier une visite gratuite sur site et établir un devis personnalisé.</p>
-                <p><strong>Vos coordonnées :</strong></p>
-                <p>📧 ${safeClientEmail}<br>📱 ${safeClientPhone || "Non communiqué"}</p>
+                <h3>🛁 Équipements sélectionnés</h3>
+                <div class="detail-row">
+                  <span class="detail-label">Receveur / Baignoire</span><br>
+                  <span class="detail-value">${formatArray(projectDetails.typeReceveur)}</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">WC</span><br>
+                  <span class="detail-value">${formatArray(projectDetails.wcType)}</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Robinetterie</span><br>
+                  <span class="detail-value">${formatArray(projectDetails.robinetterie)}</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Carrelage</span><br>
+                  <span class="detail-value">${formatArray(projectDetails.carrelage)}</span>
+                </div>
+                ${safeMessage ? `<div class="detail-row"><span class="detail-label">Votre message</span><br><span class="detail-value">${safeMessage}</span></div>` : ""}
               </div>
 
-              <p>En attendant, n'hésitez pas à consulter nos réalisations sur notre site !</p>
+              <div class="info-box">
+                <h3>📞 Et maintenant ?</h3>
+                <p>Notre équipe va étudier votre demande et vous recontacter sous <strong>24 à 48 heures</strong> afin de convenir d'une <strong>visite gratuite sur site</strong>.</p>
+                <p style="font-size: 13px; color: #666;">Vos coordonnées : ${safeClientEmail} ${safeClientPhone ? `· ${safeClientPhone}` : ""}</p>
+              </div>
+
+              <p>En attendant, découvrez nos dernières réalisations !</p>
               
               <center>
                 <a href="https://renovermasalledebain.com/realisations" class="cta">Voir nos réalisations</a>
@@ -437,6 +470,7 @@ const handler = async (req: Request): Promise<Response> => {
                   <tr><td>Nom</td><td>${safeClientName}</td></tr>
                   <tr><td>Email</td><td><a href="mailto:${safeClientEmail}">${safeClientEmail}</a></td></tr>
                   <tr><td>Téléphone</td><td>${safeClientPhone || "Non communiqué"}</td></tr>
+                  ${safeAdresse || safeVille || safeCodePostal ? `<tr><td>Adresse du projet</td><td>${[safeAdresse, safeCodePostal, safeVille].filter(Boolean).join(", ")}</td></tr>` : ""}
                 </table>
               </div>
 
