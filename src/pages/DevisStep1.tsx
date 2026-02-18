@@ -69,6 +69,8 @@ export default function DevisStep1() {
     nom: "",
     email: "",
     telephone: "",
+    adresse: "",
+    ville: "",
     codePostal: "",
     projectType: "",
     roomType: "",
@@ -88,7 +90,7 @@ export default function DevisStep1() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!formData.prenom || !formData.nom || !formData.email || !formData.telephone || !formData.codePostal || !formData.projectType) {
+    if (!formData.prenom || !formData.nom || !formData.email || !formData.telephone || !formData.adresse || !formData.codePostal || !formData.ville || !formData.projectType) {
       toast({ title: "Champs manquants", description: "Veuillez remplir tous les champs obligatoires.", variant: "destructive" });
       return;
     }
@@ -113,6 +115,8 @@ export default function DevisStep1() {
           clientLastName: formData.nom,
           clientEmail: formData.email,
           clientPhone: formData.telephone,
+          clientAddress: formData.adresse,
+          clientCity: formData.ville,
           codePostal: formData.codePostal,
           projectType: formData.projectType,
           roomType: formData.projectType === "nouvelle-sdb" ? formData.roomType : null,
@@ -169,7 +173,7 @@ export default function DevisStep1() {
                 </Button>
                 <Button variant="outline" size="lg" onClick={() => {
                   setIsSubmitted(false);
-                  setFormData({ prenom: "", nom: "", email: "", telephone: "", codePostal: "", projectType: "", roomType: "" });
+                  setFormData({ prenom: "", nom: "", email: "", telephone: "", adresse: "", ville: "", codePostal: "", projectType: "", roomType: "" });
                 }}>
                   Nouvelle demande
                 </Button>
@@ -268,8 +272,16 @@ export default function DevisStep1() {
                       <Input id="telephone" type="tel" value={formData.telephone} onChange={(e) => handleChange("telephone", e.target.value)} placeholder="06 12 34 56 78" required className="rounded-xl" />
                     </div>
                     <div className="space-y-2 md:col-span-2">
-                      <Label htmlFor="codePostal">Code postal du projet *</Label>
+                      <Label htmlFor="adresse">Adresse du projet *</Label>
+                      <Input id="adresse" value={formData.adresse} onChange={(e) => handleChange("adresse", e.target.value)} placeholder="4 villa Georges Sand" required className="rounded-xl" />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="codePostal">Code postal *</Label>
                       <Input id="codePostal" value={formData.codePostal} onChange={(e) => handleChange("codePostal", e.target.value)} placeholder="75017" required className="rounded-xl" />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="ville">Ville *</Label>
+                      <Input id="ville" value={formData.ville} onChange={(e) => handleChange("ville", e.target.value)} placeholder="Paris" required className="rounded-xl" />
                     </div>
                   </div>
                 </div>
