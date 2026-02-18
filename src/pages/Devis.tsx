@@ -363,11 +363,21 @@ export default function Devis() {
           setFormData(prev => ({
             ...prev,
             prenom: fnData.clientFirstName || "",
-            nom: "",
+            nom: fnData.clientLastName || "",
             email: fnData.clientEmail || "",
-            telephone: "",
-            codePostal: "",
+            telephone: fnData.clientPhone || "",
+            adresse: fnData.propertyAddress || "",
+            ville: fnData.propertyCity || "",
+            codePostal: fnData.propertyPostalCode || "",
           }));
+          
+          // Scroll to technical questions after a short delay
+          setTimeout(() => {
+            const technicalSection = document.getElementById('section-logement');
+            if (technicalSection) {
+              technicalSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }, 500);
         } catch (err) {
           console.error("Error loading lead:", err);
         } finally {
@@ -885,7 +895,7 @@ export default function Devis() {
                       />
                     </div>
                     
-                    <div className="space-y-2 md:col-span-2">
+                    <div id="section-logement" className="space-y-2 md:col-span-2 scroll-mt-28">
                       <Label htmlFor="dimensionPiece">Quelle est la dimension de votre pièce ? (en m²)</Label>
                       <Input
                         id="dimensionPiece"
