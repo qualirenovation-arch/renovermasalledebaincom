@@ -336,25 +336,24 @@ export default function Devis() {
       // Load lead data
       const loadLead = async () => {
         try {
-          const { data, error } = await supabase
-            .from('quote_requests')
-            .select('*')
-            .eq('access_token', tokenParam)
-            .maybeSingle();
+          const { data: fnData, error: fnError } = await supabase.functions.invoke('lookup-lead-by-token', {
+            body: { token: tokenParam },
+          });
           
-          if (error || !data) {
-            toast({ title: "Lien invalide", description: "Ce lien n'est plus valide.", variant: "destructive" });
+          if (fnError || !fnData || fnData.error) {
+            const msg = fnData?.error || "Ce lien n'est plus valide.";
+            toast({ title: "Lien invalide", description: msg, variant: "destructive" });
             setIsLoadingLead(false);
             return;
           }
           
-          setLeadId(data.id);
-          setLeadTypeDevis(data.type_devis);
-          setLeadFirstName(data.client_first_name || "");
-          setLeadEmail(data.client_email || "");
+          setLeadId(fnData.id);
+          setLeadTypeDevis(fnData.typeDevis);
+          setLeadFirstName(fnData.clientFirstName || "");
+          setLeadEmail(fnData.clientEmail || "");
           
           // Route to correct form type
-          if (data.type_devis === 'degat_des_eaux') {
+          if (fnData.typeDevis === 'degat_des_eaux') {
             setDevisType('degat_eaux');
           } else {
             setDevisType('classique');
@@ -363,11 +362,11 @@ export default function Devis() {
           // Pre-fill form with existing data (for classic)
           setFormData(prev => ({
             ...prev,
-            prenom: data.client_first_name || "",
-            nom: data.client_last_name || "",
-            email: data.client_email || "",
-            telephone: data.client_phone || "",
-            codePostal: data.property_postal_code || "",
+            prenom: fnData.clientFirstName || "",
+            nom: "",
+            email: fnData.clientEmail || "",
+            telephone: "",
+            codePostal: "",
           }));
         } catch (err) {
           console.error("Error loading lead:", err);

@@ -29,3 +29,6 @@ verify_jwt = false
 
 [functions.og]
 verify_jwt = false
+
+[functions.lookup-lead-by-token]
+verify_jwt = false
