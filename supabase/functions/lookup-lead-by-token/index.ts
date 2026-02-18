@@ -29,7 +29,7 @@ Deno.serve(async (req) => {
     // Only return the minimal fields needed for step 2 forms
     const { data, error } = await supabase
       .from("quote_requests")
-      .select("id, client_first_name, client_email, type_devis, lead_status, step2_completed_at")
+      .select("id, client_first_name, client_last_name, client_email, client_phone, property_address, property_city, property_postal_code, type_devis, lead_status, step2_completed_at")
       .eq("access_token", token)
       .maybeSingle();
 
@@ -51,7 +51,12 @@ Deno.serve(async (req) => {
       JSON.stringify({
         id: data.id,
         clientFirstName: data.client_first_name,
+        clientLastName: data.client_last_name,
         clientEmail: data.client_email,
+        clientPhone: data.client_phone,
+        propertyAddress: data.property_address,
+        propertyCity: data.property_city,
+        propertyPostalCode: data.property_postal_code,
         typeDevis: data.type_devis,
         leadStatus: data.lead_status,
       }),
