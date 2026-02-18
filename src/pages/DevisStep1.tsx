@@ -1,5 +1,5 @@
-import { useState, useRef, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useRef, useCallback, useEffect } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -11,6 +11,8 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { OGTags } from "@/components/seo/OGTags";
 import { supabase } from "@/integrations/supabase/client";
 import { CalendarCheck, Mail, Phone, MapPin, Info } from "lucide-react";
+import { DevisTypeSelector } from "@/components/devis/DevisTypeSelector";
+import { WaterDamageQuoteForm } from "@/components/devis/WaterDamageQuoteForm";
 
 const projectTypeOptions = [
   { value: "baignoire-vers-douche", label: "Remplacer une baignoire par une douche" },
@@ -44,11 +46,23 @@ const getEffectiveCaptchaToken = (token: string | null) => {
 
 export default function DevisStep1() {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const captchaRef = useRef<HCaptcha>(null);
+  const [devisType, setDevisType] = useState<'selector' | 'classique' | 'degat_eaux'>('selector');
+
+  // Check URL params for direct type access
+  useEffect(() => {
+    const typeParam = searchParams.get('type');
+    if (typeParam === 'degat_eaux') {
+      setDevisType('degat_eaux');
+    } else if (typeParam === 'classique') {
+      setDevisType('classique');
+    }
+  }, [searchParams]);
 
   const [formData, setFormData] = useState({
     prenom: "",
@@ -200,8 +214,30 @@ export default function DevisStep1() {
       {/* Form */}
       <section id="devis-form" className="py-10 md:py-16 bg-background scroll-mt-24 md:scroll-mt-28">
         <div className="container-custom">
+          {/* Type Selector */}
+          {devisType === 'selector' && (
+            <DevisTypeSelector
+              onSelectClassic={() => setDevisType('classique')}
+              onSelectWaterDamage={() => setDevisType('degat_eaux')}
+            />
+          )}
+
+          {/* Water Damage Form */}
+          {devisType === 'degat_eaux' && (
+            <div className="max-w-3xl mx-auto">
+              <WaterDamageQuoteForm onBack={() => setDevisType('selector')} />
+            </div>
+          )}
+
+          {/* Classic Form */}
+          {devisType === 'classique' && (
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
             <motion.div className="lg:col-span-2" initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
+              {/* Back button */}
+              <Button type="button" variant="ghost" onClick={() => setDevisType('selector')} className="mb-4">
+                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+                Choisir un autre type de devis
+              </Button>
               <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
                 {/* Coordonnées */}
                 <div className="card-elevated p-5 md:p-8">
@@ -383,7 +419,8 @@ export default function DevisStep1() {
                 </div>
               </div>
             </motion.div>
-          </div>
+           </div>
+          )}
         </div>
       </section>
     </Layout>
