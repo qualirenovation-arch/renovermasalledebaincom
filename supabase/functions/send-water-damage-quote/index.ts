@@ -188,11 +188,13 @@ const handler = async (req: Request): Promise<Response> => {
         to: [formData.email],
         subject: "Votre dossier dégât des eaux – comment souhaitez-vous avancer ?",
         html: `<!DOCTYPE html>
-<html><head><meta charset="utf-8">
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; }
-  .header { background: linear-gradient(135deg, #124A66 0%, #0d3a52 100%); color: white; padding: 30px; text-align: center; }
-  .header img { max-width: 300px; margin-bottom: 0; }
+  .header { background: linear-gradient(135deg, #124A66 0%, #0d3a52 100%); color: white; padding: 24px 16px; text-align: center; }
+  .logo-text { font-family: 'Georgia', serif; font-weight: bold; color: #ffffff; letter-spacing: 0.5px; white-space: nowrap; font-size: 18px; }
+  .logo-text .accent { color: #A0845C; }
+  .logo-sub { font-family: Arial, sans-serif; font-size: 9px; font-weight: 400; color: rgba(255,255,255,0.85); letter-spacing: 2.5px; padding-top: 2px; }
   .content { padding: 30px; background: #f9f9f9; }
   .option-box { background: white; padding: 20px; border-radius: 8px; margin: 16px 0; border-left: 4px solid #124A66; }
   .option-box h3 { margin-top: 0; color: #124A66; font-size: 16px; }
@@ -200,16 +202,19 @@ const handler = async (req: Request): Promise<Response> => {
   .info-box h3 { margin-top: 0; color: #dc2626; }
   .cta { display: inline-block; background: #124A66; color: white !important; padding: 12px 24px; text-decoration: none; border-radius: 6px; margin-top: 10px; font-weight: bold; }
   .footer { padding: 20px; text-align: center; font-size: 12px; color: #666; background: #f0f0f0; }
+  @media only screen and (max-width: 480px) {
+    .logo-text { font-size: 14px !important; }
+    .logo-sub { font-size: 8px !important; letter-spacing: 1.5px !important; }
+    .header h1 { font-size: 18px !important; }
+    .content { padding: 20px 16px !important; }
+    .option-box { padding: 14px !important; }
+  }
 </style></head>
 <body>
   <div class="header">
     <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
-      <tr><td align="center" style="font-family:'Georgia',serif;font-size:18px;font-weight:bold;color:#ffffff;letter-spacing:0.5px;white-space:nowrap;">
-        Ren<span style="color:#A0845C;">🚿</span>verMaSalleDeBain.com
-      </td></tr>
-      <tr><td align="center" style="font-family:Arial,sans-serif;font-size:9px;font-weight:400;color:rgba(255,255,255,0.85);letter-spacing:2.5px;padding-top:2px;">
-        Une expertise QUALIRÉNOVATION
-      </td></tr>
+      <tr><td align="center" class="logo-text">Ren<span class="accent">🚿</span>verMaSalleDeBain.com</td></tr>
+      <tr><td align="center" class="logo-sub">Une expertise QUALIRÉNOVATION</td></tr>
     </table>
     <h1>💧 Dégât des eaux – Dossier enregistré</h1>
   </div>

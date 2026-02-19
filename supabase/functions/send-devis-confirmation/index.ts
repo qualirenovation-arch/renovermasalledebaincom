@@ -340,38 +340,43 @@ const handler = async (req: Request): Promise<Response> => {
         to: [clientEmail],
         subject: "Confirmation de votre demande de devis - Rénover Ma Salle de Bain",
         html: `
-          <!DOCTYPE html>
-          <html>
-          <head>
-            <meta charset="utf-8">
-            <style>
-              body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; }
-              .header { background: linear-gradient(135deg, #124A66 0%, #0d3a52 100%); color: white; padding: 30px; text-align: center; }
-              .header img { max-width: 300px; margin-bottom: 0; }
-              .header h1 { margin: 0; font-size: 24px; }
-              .content { padding: 30px; background: #f9f9f9; }
-              .info-box { background: white; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #124A66; }
-              .info-box h3 { margin-top: 0; color: #124A66; }
-              .footer { padding: 20px; text-align: center; font-size: 12px; color: #666; background: #f0f0f0; }
-              .cta { display: inline-block; background: #124A66; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; margin-top: 20px; }
-              .detail-row { padding: 6px 0; border-bottom: 1px solid #f0f0f0; }
-              .detail-row:last-child { border-bottom: none; }
-              .detail-label { color: #666; font-size: 13px; }
-              .detail-value { font-weight: 600; color: #333; }
-            </style>
-          </head>
-          <body>
-            <div class="header">
-              <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
-                <tr><td align="center" style="font-family:'Georgia',serif;font-size:18px;font-weight:bold;color:#ffffff;letter-spacing:0.5px;white-space:nowrap;">
-                  Ren<span style="color:#A0845C;">🚿</span>verMaSalleDeBain.com
-                </td></tr>
-                <tr><td align="center" style="font-family:Arial,sans-serif;font-size:9px;font-weight:400;color:rgba(255,255,255,0.85);letter-spacing:2.5px;padding-top:2px;">
-                  Une expertise QUALIRÉNOVATION
-                </td></tr>
-              </table>
-              <h1>Demande de devis confirmée</h1>
-            </div>
+           <!DOCTYPE html>
+           <html>
+           <head>
+             <meta charset="utf-8">
+             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             <style>
+               body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; }
+               .header { background: linear-gradient(135deg, #124A66 0%, #0d3a52 100%); color: white; padding: 24px 16px; text-align: center; }
+               .logo-text { font-family: 'Georgia', serif; font-weight: bold; color: #ffffff; letter-spacing: 0.5px; white-space: nowrap; font-size: 18px; }
+               .logo-text .accent { color: #A0845C; }
+               .logo-sub { font-family: Arial, sans-serif; font-size: 9px; font-weight: 400; color: rgba(255,255,255,0.85); letter-spacing: 2.5px; padding-top: 2px; }
+               .header h1 { margin: 10px 0 0; font-size: 24px; }
+               .content { padding: 30px; background: #f9f9f9; }
+               .info-box { background: white; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #124A66; }
+               .info-box h3 { margin-top: 0; color: #124A66; }
+               .footer { padding: 20px; text-align: center; font-size: 12px; color: #666; background: #f0f0f0; }
+               .cta { display: inline-block; background: #124A66; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; margin-top: 20px; }
+               .detail-row { padding: 6px 0; border-bottom: 1px solid #f0f0f0; }
+               .detail-row:last-child { border-bottom: none; }
+               .detail-label { color: #666; font-size: 13px; }
+               .detail-value { font-weight: 600; color: #333; }
+               @media only screen and (max-width: 480px) {
+                 .logo-text { font-size: 14px !important; }
+                 .logo-sub { font-size: 8px !important; letter-spacing: 1.5px !important; }
+                 .header h1 { font-size: 18px !important; }
+                 .content { padding: 20px 16px !important; }
+               }
+             </style>
+           </head>
+           <body>
+             <div class="header">
+               <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
+                 <tr><td align="center" class="logo-text">Ren<span class="accent">🚿</span>verMaSalleDeBain.com</td></tr>
+                 <tr><td align="center" class="logo-sub">Une expertise QUALIRÉNOVATION</td></tr>
+               </table>
+               <h1>Demande de devis confirmée</h1>
+             </div>
             <div class="content">
               <p>Bonjour <strong>${safeClientName}</strong>,</p>
               <p>Merci pour votre confiance ! Nous avons bien enregistré votre demande de devis pour la rénovation de votre salle de bain.</p>
