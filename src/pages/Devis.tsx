@@ -698,7 +698,7 @@ export default function Devis() {
       <OGTags
         title="Devis rénovation salle de bain"
         description="Demandez votre devis gratuit pour la rénovation de votre salle de bain à Paris. Un chantier heureux, sans stress et sans imprévus. Réponse sous 48h."
-        path="/devis"
+        path="/devis/completer"
       />
       {/* Hero - Step 2 intro when accessed via token */}
       <section className="relative py-12 md:py-20 bg-gradient-to-b from-stone to-background overflow-hidden">
