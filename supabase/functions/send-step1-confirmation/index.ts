@@ -154,7 +154,7 @@ const handler = async (req: Request): Promise<Response> => {
 </style></head>
 <body>
   <div class="header">
-    <img src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/logo-rmsb-horizontal.png?v=1" alt="RenoverMaSalleDeBain.com" style="max-width:300px;" />
+    <img src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/logo-rmsb-circle.png" alt="RenoverMaSalleDeBain.com" style="max-width:120px;" />
   </div>
   <div class="content">
     <p>Bonjour <strong>${escapeHtml(clientFirstName)}</strong>,</p>
