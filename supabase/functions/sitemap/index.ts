@@ -28,11 +28,16 @@ const staticPages = [
 const projectSlugs = [
   // Paris 3ème
   "salle-de-bain-paris-3-renovation-style-masculin-bois-noir",
+  // Paris 4ème
+  "salle-de-bain-paris-4-ile-cite-quai-aux-fleurs-fenetre-interieure",
   // Paris 5ème
   "salle-de-bain-paris-5-renovation-optimisation-petit-espace",
   "salle-de-bain-paris-5-renovation-baignoire-saint-germain",
+  // Paris 6ème
+  "salle-de-bain-paris-6-renovation-etroite-longueur-cherche-midi",
   // Paris 8ème
   "salle-de-bain-paris-8-renovation-locative-douche-italienne",
+  "salle-de-bain-paris-8-renovation-degat-des-eaux-marbre-noir-mat",
   // Paris 9ème
   "salle-de-bain-paris-9-renovation-douche-italienne-carrelage-pierre",
   // Paris 10ème
@@ -48,13 +53,17 @@ const projectSlugs = [
   "salle-de-bain-paris-12-renovation-garcon-noir-blanc-contemporain",
   "salle-de-bain-paris-12-renovation-madame-marbre-rangements",
   "salle-de-bain-paris-12-renovation-bleu-mineral-beton-reuilly",
+  "salle-de-bain-paris-12-renovation-monsieur-noyer-blanc-robinetterie-noire",
   // Paris 13ème
   "salle-de-bain-paris-13-renovation-locative-zellige-beige",
   "salle-de-bain-paris-13-renovation-zellige-turquoise-or",
   "salle-de-bain-paris-13-renovation-wc-zellige-turquoise-laiton",
+  "salle-de-bain-paris-13-transformation-baignoire-douche-carreaux-ciment-bleu",
   // Paris 15ème
   "salle-de-bain-paris-15-renovation-scandinave-buanderie-integree",
   "salle-de-bain-paris-15-renovation-douche-wc-separes-hague-blue",
+  "salle-de-bain-paris-15-renovation-marbre-bois-noir-baignoire",
+  "salle-de-bain-paris-15-saint-charles-baignoire-balneo-metro-blanc",
   // Paris 16ème
   "salle-de-bain-paris-16-renovation-masculine-pierre-inox",
   "salle-de-bain-paris-16-renovation-parisien-chic-auteuil",
@@ -70,24 +79,25 @@ const projectSlugs = [
   "salle-de-bain-boulogne-92-ambiance-marine",
   "salle-de-bain-courbevoie-92-becon-sinistre",
   // Banlieue 93
-  "salle-de-bain-saint-ouen-93-renovation",
+  "salle-de-bain-saint-ouen-93-mondrian-conception-meuble-sur-mesure",
   "salle-de-bain-saint-denis-93-appartement-feminin-verriere-metro-blanc",
+  "salle-de-bain-saint-denis-93-renovation-optimisation-metro-blanc-noir",
+  "suite-parentale-montreuil-93-renovation-verriere-zellige-turquoise",
   // Banlieue 94
-  "salle-de-bain-charenton-94-renovation-complete-douche-double-vasque",
+  "salle-de-bain-charenton-94-renovation-gres-marbre-laiton-grande-vasque",
   "salle-de-bain-charenton-94-duo-douche-baignoire",
-  "salle-de-bain-charenton-94-renovation-wc-chauffe-eau-dissimule",
-  "salle-de-bain-saint-mande-94-renovation-douche-italienne",
-  "salle-de-bain-saint-maur-94-renovation-complete-avant-apres",
-  "salle-de-bain-saint-maur-94-renovation-enfants-inspiration-coreenne",
-  "salle-de-bain-vincennes-94-renovation-garcon-noir-blanc",
+  "salle-de-bain-charenton-94-wc-chauffe-eau-dissimule",
+  "salle-de-bain-saint-mande-94-renovation",
+  "salle-de-bain-saint-maur-94-renovation-avant-apres",
+  "salle-de-bain-saint-maur-94-enfants-bleu-beige-ancienne-guinguette",
+  "salle-de-bain-saint-maur-94-renovation-blanc-epure-petit-beaubourg",
   "salle-de-bain-vitry-94-renovation-complete-avant-apres",
-  "salle-de-bain-saint-maurice-94-renovation-avenue-verdun-pullman",
+  "salle-de-bain-saint-maurice-94-pullman-noir-blanc",
+  "salle-de-bain-saint-maurice-94-renovation-zellige-bleu-beton-blanc",
   // Banlieue 95
-  "salle-de-bain-soisy-95-suite-parentale-maison-1900",
-  "salle-de-bain-soisy-95-rose-terracotta",
-  "salle-de-bain-soisy-95-enfants-terrazzo-menthe",
-  // Paris 4ème
-  "salle-de-bain-paris-4-ile-cite-quai-aux-fleurs-fenetre-interieure",
+  "wc-soisy-95-renovation-invites-zellige-terracotta",
+  "salle-de-bain-soisy-95-renovation-rose-terracotta-baignoire-ilot",
+  "salle-de-bain-soisy-95-renovation-enfants-terrazzo-menthe",
 ];
 
 // Chantiers en cours

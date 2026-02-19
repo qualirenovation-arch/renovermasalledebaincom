@@ -91,8 +91,7 @@ export const redirectMap: Record<string, string> = {
   
   // Paris 19ème
   "salle-de-bain-paris-19-armand-carrel-mosaique-noir-mat": "salle-de-bain-paris-19-renovation-tout-en-un-mosaique-noir-mat",
-  "chantier-paris-19-buttes-chaumont": "chantier-paris-19-renovation-buttes-chaumont",
-  
+
   // Paris 20ème
   "projet-paris-20-gambetta-italienne": "salle-de-bain-paris-20-gambetta-douche-italienne",
   
@@ -104,10 +103,9 @@ export const redirectMap: Record<string, string> = {
   "projet-neuilly-92-luxe": "salle-de-bain-neuilly-92-luxe-parisien",
   "salle-de-bain-bois-colombes-92-renovation-complete": "salle-de-bain-bois-colombes-92-terrazzo-mineral-vert-eau-laiton",
   "salle-de-bain-bois-colombes-92-renovation-complete-avant-apres": "salle-de-bain-bois-colombes-92-terrazzo-mineral-vert-eau-laiton",
-  "salle-de-bain-boulogne-92-ambiance-marine": "salle-de-bain-boulogne-92-renovation-ambiance-marine-thalasso",
-  "salle-de-bain-courbevoie-92-becon-sinistre": "salle-de-bain-courbevoie-92-renovation-sinistre-terrazzo-teck",
-  "chantier-boulogne-92-renovation": "salle-de-bain-boulogne-92-renovation",
-  "chantier-courbevoie-92-lalyre": "chantier-courbevoie-92-renovation-contemporaine",
+  "salle-de-bain-boulogne-92-renovation-ambiance-marine-thalasso": "salle-de-bain-boulogne-92-ambiance-marine",
+  "salle-de-bain-courbevoie-92-renovation-sinistre-terrazzo-teck": "salle-de-bain-courbevoie-92-becon-sinistre",
+  "chantier-boulogne-92-renovation": "salle-de-bain-boulogne-92-ambiance-marine",
   
   // Banlieue 93
   "projet-pantin-93-industrielle": "salle-de-bain-pantin-93-style-industriel",
@@ -130,16 +128,17 @@ export const redirectMap: Record<string, string> = {
   "salle-de-bain-charenton-94-renovation-gres-marbre-laiton-double-vasque": "salle-de-bain-charenton-94-renovation-gres-marbre-laiton-grande-vasque",
   "projet-vincennes-94-renovation": "salle-de-bain-vincennes-94-renovation-complete",
   
-  "salle-de-bain-charenton-94-wc-chauffe-eau-dissimule": "salle-de-bain-charenton-94-renovation-wc-chauffe-eau-dissimule",
-  "salle-de-bain-saint-mande-94-renovation": "salle-de-bain-saint-mande-94-renovation-douche-italienne",
-  "salle-de-bain-saint-maur-94-renovation-avant-apres": "salle-de-bain-saint-maur-94-renovation-complete-avant-apres",
+  "salle-de-bain-charenton-94-renovation-wc-chauffe-eau-dissimule": "salle-de-bain-charenton-94-wc-chauffe-eau-dissimule",
+  "salle-de-bain-saint-mande-94-renovation-douche-italienne": "salle-de-bain-saint-mande-94-renovation",
+  "salle-de-bain-saint-maur-94-renovation-complete-avant-apres": "salle-de-bain-saint-maur-94-renovation-avant-apres",
   "salle-de-bain-saint-maur-94-enfants-inspiration-coreenne": "salle-de-bain-saint-maur-94-enfants-bleu-beige-ancienne-guinguette",
   "salle-de-bain-saint-maur-94-renovation-enfants-inspiration-coreenne": "salle-de-bain-saint-maur-94-enfants-bleu-beige-ancienne-guinguette",
   "salle-de-bain-vincennes-94-garcon-noir-blanc": "salle-de-bain-paris-12-renovation-monsieur-noyer-blanc-robinetterie-noire",
   "salle-de-bain-vincennes-94-renovation-garcon-noir-blanc": "salle-de-bain-paris-12-renovation-monsieur-noyer-blanc-robinetterie-noire",
   "salle-de-bain-paris-12-renovation-monsieur-noir-blanc-contemporain": "salle-de-bain-paris-12-renovation-monsieur-noyer-blanc-robinetterie-noire",
   "salle-de-bain-vitry-94-renovation-avant-apres": "salle-de-bain-vitry-94-renovation-complete-avant-apres",
-  "salle-de-bain-saint-maurice-94-pullman-noir-blanc": "salle-de-bain-saint-maurice-94-renovation-pullman-noir-blanc",
+  "salle-de-bain-saint-maurice-94-renovation-pullman-noir-blanc": "salle-de-bain-saint-maurice-94-pullman-noir-blanc",
+  "salle-de-bain-saint-maurice-94-renovation-avenue-verdun-pullman": "salle-de-bain-saint-maurice-94-pullman-noir-blanc",
   
   // Banlieue 95
   "projet-argenteuil-95-familiale": "salle-de-bain-argenteuil-95-familiale",

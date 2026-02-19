@@ -85,9 +85,14 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  <!-- Projets individuels -->
+  <!-- Projets terminés -->
   <url>
     <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-3-renovation-style-masculin-bois-noir</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-4-ile-cite-quai-aux-fleurs-fenetre-interieure</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -102,7 +107,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-6-renovation-etroite-longueur-cherche-midi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-8-renovation-locative-douche-italienne</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-8-renovation-degat-des-eaux-marbre-noir-mat</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -162,6 +177,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-12-renovation-monsieur-noyer-blanc-robinetterie-noire</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-13-renovation-locative-zellige-beige</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -177,12 +197,27 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-13-transformation-baignoire-douche-carreaux-ciment-bleu</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-15-renovation-scandinave-buanderie-integree</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-15-renovation-douche-wc-separes-hague-blue</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-15-renovation-marbre-bois-noir-baignoire</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-15-saint-charles-baignoire-balneo-metro-blanc</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -237,7 +272,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-saint-ouen-93-renovation</loc>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-saint-ouen-93-mondrian-conception-meuble-sur-mesure</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -247,7 +282,17 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-charenton-94-renovation-complete-douche-double-vasque</loc>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-saint-denis-93-renovation-optimisation-metro-blanc-noir</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/suite-parentale-montreuil-93-renovation-verriere-zellige-turquoise</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-charenton-94-renovation-gres-marbre-laiton-grande-vasque</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -257,27 +302,27 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-charenton-94-renovation-wc-chauffe-eau-dissimule</loc>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-charenton-94-wc-chauffe-eau-dissimule</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-saint-mande-94-renovation-douche-italienne</loc>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-saint-mande-94-renovation</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-saint-maur-94-renovation-complete-avant-apres</loc>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-saint-maur-94-renovation-avant-apres</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-saint-maur-94-renovation-enfants-inspiration-coreenne</loc>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-saint-maur-94-enfants-bleu-beige-ancienne-guinguette</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-vincennes-94-renovation-garcon-noir-blanc</loc>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-saint-maur-94-renovation-blanc-epure-petit-beaubourg</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -287,27 +332,27 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-saint-maurice-94-renovation-avenue-verdun-pullman</loc>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-saint-maurice-94-pullman-noir-blanc</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-soisy-95-suite-parentale-maison-1900</loc>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-saint-maurice-94-renovation-zellige-bleu-beton-blanc</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-soisy-95-rose-terracotta</loc>
+    <loc>https://renovermasalledebain.com/realisations/wc-soisy-95-renovation-invites-zellige-terracotta</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-soisy-95-enfants-terrazzo-menthe</loc>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-soisy-95-renovation-rose-terracotta-baignoire-ilot</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-paris-4-ile-cite-quai-aux-fleurs-fenetre-interieure</loc>
+    <loc>https://renovermasalledebain.com/realisations/salle-de-bain-soisy-95-renovation-enfants-terrazzo-menthe</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
