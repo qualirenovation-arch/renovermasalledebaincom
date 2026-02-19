@@ -362,7 +362,14 @@ const handler = async (req: Request): Promise<Response> => {
           </head>
           <body>
             <div class="header">
-              <img src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/logo-rmsb-circle.png" alt="RenoverMaSalleDeBain.com" style="max-width:120px;" />
+              <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
+                <tr><td align="center" style="font-family:'Georgia',serif;font-size:28px;font-weight:bold;color:#ffffff;letter-spacing:1px;">
+                  Ren<span style="color:#A0845C;">🚿</span>verMaSalleDeBain.com
+                </td></tr>
+                <tr><td align="center" style="font-family:Arial,sans-serif;font-size:11px;font-weight:400;color:rgba(255,255,255,0.85);letter-spacing:3px;padding-top:4px;">
+                  Une expertise QUALIRÉNOVATION
+                </td></tr>
+              </table>
               <h1>Demande de devis confirmée</h1>
             </div>
             <div class="content">
