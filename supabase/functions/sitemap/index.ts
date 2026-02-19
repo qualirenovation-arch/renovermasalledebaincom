@@ -86,6 +86,17 @@ const projectSlugs = [
   "salle-de-bain-soisy-95-suite-parentale-maison-1900",
   "salle-de-bain-soisy-95-rose-terracotta",
   "salle-de-bain-soisy-95-enfants-terrazzo-menthe",
+  // Paris 4ème
+  "salle-de-bain-paris-4-ile-cite-quai-aux-fleurs-fenetre-interieure",
+];
+
+// Chantiers en cours
+const chantierSlugs = [
+  "chantier-paris-19-buttes-chaumont",
+  "chantier-paris-10-rocroy",
+  "chantier-paris-5-port-royal",
+  "chantier-paris-16-la-tour",
+  "chantier-courbevoie-92-lalyre",
 ];
 
 const generateSitemap = (): string => {
@@ -113,6 +124,17 @@ const generateSitemap = (): string => {
     <lastmod>${today}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+`;
+  }
+
+  // Ajouter les chantiers en cours
+  for (const slug of chantierSlugs) {
+    xml += `  <url>
+    <loc>${BASE_URL}/realisations/${slug}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
 `;
   }
