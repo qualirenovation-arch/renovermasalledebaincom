@@ -155,10 +155,10 @@ const handler = async (req: Request): Promise<Response> => {
 <body>
   <div class="header">
     <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
-      <tr><td align="center" style="font-family:'Georgia',serif;font-size:28px;font-weight:bold;color:#ffffff;letter-spacing:1px;">
+      <tr><td align="center" style="font-family:'Georgia',serif;font-size:18px;font-weight:bold;color:#ffffff;letter-spacing:0.5px;white-space:nowrap;">
         Ren<span style="color:#A0845C;">🚿</span>verMaSalleDeBain.com
       </td></tr>
-      <tr><td align="center" style="font-family:Arial,sans-serif;font-size:11px;font-weight:400;color:rgba(255,255,255,0.85);letter-spacing:3px;padding-top:4px;">
+      <tr><td align="center" style="font-family:Arial,sans-serif;font-size:9px;font-weight:400;color:rgba(255,255,255,0.85);letter-spacing:2.5px;padding-top:2px;">
         Une expertise QUALIRÉNOVATION
       </td></tr>
     </table>
