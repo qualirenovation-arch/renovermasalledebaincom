@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
+import { OGTags } from "@/components/seo/OGTags";
 import { supabase } from "@/integrations/supabase/client";
 import { Phone, CheckCircle, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -34,6 +35,12 @@ export default function DevisCallback() {
 
   return (
     <Layout>
+      <OGTags
+        title="Demande de rappel"
+        description="Confirmation de votre demande de rappel pour votre projet de rénovation de salle de bain."
+        path="/devis/rappel"
+        noindex={true}
+      />
       <section className="section-padding min-h-[70vh] flex items-center">
         <div className="container-custom">
           <motion.div className="max-w-2xl mx-auto text-center" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }}>
