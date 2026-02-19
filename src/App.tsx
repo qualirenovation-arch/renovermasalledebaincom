@@ -31,7 +31,7 @@ import AdminLogin from "./pages/AdminLogin";
 import AdminPartenaires from "./pages/AdminPartenaires";
 import AdminDevis from "./pages/AdminDevis";
 import AdminFinitions from "./pages/AdminFinitions";
-import LogoCapture from "./pages/LogoCapture";
+
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -71,7 +71,7 @@ const App = () => (
           <Route path="/admin/partenaires" element={<AdminPartenaires />} />
           <Route path="/admin/devis" element={<AdminDevis />} />
           <Route path="/admin/finitions" element={<AdminFinitions />} />
-          <Route path="/logo-capture" element={<LogoCapture />} />
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
