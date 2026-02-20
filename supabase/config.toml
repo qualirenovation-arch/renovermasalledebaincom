@@ -32,3 +32,6 @@ verify_jwt = false
 
 [functions.lookup-lead-by-token]
 verify_jwt = false
+
+[functions.prerender]
+verify_jwt = false
