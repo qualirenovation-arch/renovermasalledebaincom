@@ -2200,17 +2200,17 @@ export interface ProjectLocation {
 }
 
 export const projectLocations: ProjectLocation[] = [
-  // Coordonnées géographiques précises sur carte IDF sans pins statiques
-  // Paris 19e — nord-est de Paris intra-muros, entre Belleville et canal de l'Ourcq
-  { id: "buttes-chaumont",   name: "Buttes-Chaumont",   area: "Paris (19e)",     x: 64, y: 40 },
-  // Paris 10e — centre-nord, gare du Nord / gare de l'Est
-  { id: "rocroy",            name: "Rue de Rocroy",     area: "Paris (10e)",     x: 58, y: 46 },
-  // Paris 5e — rive gauche, Panthéon / Port-Royal
-  { id: "port-royal",        name: "Port-Royal",        area: "Paris (5e)",      x: 56, y: 57 },
-  // Paris 16e — ouest de Paris, Trocadéro / La Muette
-  { id: "la-tour",           name: "Rue de la Tour",    area: "Paris (16e)",     x: 44, y: 51 },
-  // Courbevoie 92 — nord-ouest, La Défense / Bécon
-  { id: "courbevoie-lalyre", name: "Rue Ernest Lalyre", area: "Courbevoie (92)", x: 36, y: 35 },
+  // Coordonnées calées visuellement sur carte-chantiers-idf-clean.png (image 1024×1024)
+  // Paris 19e — label "19e" visible sur la carte, nord-est intra-muros
+  { id: "buttes-chaumont",   name: "Buttes-Chaumont",   area: "Paris (19e)",     x: 63, y: 43 },
+  // Paris 10e — label "10e" visible sur la carte, centre-nord
+  { id: "rocroy",            name: "Rue de Rocroy",     area: "Paris (10e)",     x: 59, y: 50 },
+  // Paris 5e — rive gauche sud du centre, sous le label "1er"
+  { id: "port-royal",        name: "Port-Royal",        area: "Paris (5e)",      x: 56, y: 61 },
+  // Paris 16e — label "16e" visible sur la carte, ouest de Paris
+  { id: "la-tour",           name: "Rue de la Tour",    area: "Paris (16e)",     x: 43, y: 58 },
+  // Courbevoie 92 — petite couronne nord-ouest, entre 17e et Seine (La Défense)
+  { id: "courbevoie-lalyre", name: "Rue Ernest Lalyre", area: "Courbevoie (92)", x: 44, y: 43 },
 ];
 
 // ===== CATEGORY MAPPING =====
