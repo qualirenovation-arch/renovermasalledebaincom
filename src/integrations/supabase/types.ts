@@ -14,6 +14,39 @@ export type Database = {
   }
   public: {
     Tables: {
+      map_pin_positions: {
+        Row: {
+          area: string
+          id: string
+          name: string
+          pin_id: string
+          updated_at: string
+          updated_by: string | null
+          x: number
+          y: number
+        }
+        Insert: {
+          area: string
+          id?: string
+          name: string
+          pin_id: string
+          updated_at?: string
+          updated_by?: string | null
+          x: number
+          y: number
+        }
+        Update: {
+          area?: string
+          id?: string
+          name?: string
+          pin_id?: string
+          updated_at?: string
+          updated_by?: string | null
+          x?: number
+          y?: number
+        }
+        Relationships: []
+      }
       partner_contacts: {
         Row: {
           activity_type:

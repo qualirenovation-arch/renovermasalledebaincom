@@ -3,12 +3,11 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { ArrowRight, ArrowLeft, ChevronLeft, ChevronRight, MapPin, X } from "lucide-react";
+import { ArrowRight, ArrowLeft, ChevronLeft, ChevronRight, MapPin, X, Settings2 } from "lucide-react";
 import { OGTags } from "@/components/seo/OGTags";
 import { 
   albums, 
-  inProgressAlbums, 
-  projectLocations, 
+  inProgressAlbums,
   Album, 
   Photo,
   FinitionType
@@ -19,6 +18,10 @@ import {
   FinitionsBadge,
   FINITION_TYPES 
 } from "@/components/realisations/FinitionsFilter";
+import { useAdminAuth } from "@/hooks/useAdminAuth";
+import { usePinPositions } from "@/hooks/usePinPositions";
+import { MapPinCalibrator } from "@/components/admin/MapPinCalibrator";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 export default function Realisations() {
   const location = useLocation();
@@ -27,6 +30,9 @@ export default function Realisations() {
   const [selectedAlbum, setSelectedAlbum] = useState<Album | null>(null);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [selectedFinitions, setSelectedFinitions] = useState<FinitionType[]>([]);
+  const [calibratorOpen, setCalibratorOpen] = useState(false);
+  const { isAdmin } = useAdminAuth();
+  const { pins: projectLocations } = usePinPositions();
 
   // Defensive: ensure the "completed" list never includes in-progress entries
   const completedAlbums = albums.filter((a) => !a.isInProgress);
@@ -240,7 +246,7 @@ export default function Realisations() {
               animate={{ opacity: 1, scale: 1 }}
               className="relative max-w-4xl mx-auto"
             >
-              {/* Carte illustrée Île-de-France — l'image contient déjà le titre et les instructions */}
+              {/* Carte illustrée Île-de-France */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src="/lovable-uploads/carte-chantiers-idf-clean.png"
@@ -268,7 +274,7 @@ export default function Realisations() {
                     }}
                     title={loc.name}
                   >
-                    {/* Pin SVG interactif — légèrement transparent pour ne pas masquer les pins de l'image */}
+                    {/* Pin SVG interactif */}
                     <svg
                       viewBox="0 0 36 48"
                       className="w-8 h-11 drop-shadow-xl transition-transform duration-200 group-hover:scale-125 group-hover:-translate-y-1"
@@ -305,12 +311,37 @@ export default function Realisations() {
                   </motion.button>
                 ))}
               </div>
+
+              {/* Bouton calibration admin */}
+              {isAdmin && (
+                <div className="absolute top-3 right-3 z-20">
+                  <Button
+                    size="sm"
+                    variant="secondary"
+                    className="shadow-lg opacity-80 hover:opacity-100"
+                    onClick={() => setCalibratorOpen(true)}
+                  >
+                    <Settings2 className="w-4 h-4 mr-1" />
+                    Calibrer les pins
+                  </Button>
+                </div>
+              )}
             </motion.div>
           </div>
         </section>
       )}
 
-      {/* Albums Grid */}
+      {/* Dialog de calibration (admin only) */}
+      <Dialog open={calibratorOpen} onOpenChange={setCalibratorOpen}>
+        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>Calibration des pins — Carte chantiers</DialogTitle>
+          </DialogHeader>
+          <MapPinCalibrator onClose={() => setCalibratorOpen(false)} />
+        </DialogContent>
+      </Dialog>
+
+
       <section className="section-padding">
         <div className="container-custom">
           <AnimatePresence mode="wait">
