@@ -349,19 +349,17 @@ serve(async (req) => {
     const userAgent = req.headers.get("user-agent") || "";
     const path = url.searchParams.get("path") || "/";
 
-    // Si ce n'est pas un bot, rediriger directement vers le SPA
-    if (!isBot(userAgent)) {
-      const redirectUrl = `${BASE_URL}${path}`;
+    const canonicalUrl = `${BASE_URL}${path}`;
+
+    // Si ce n'est pas un bot ET pas un appel direct à l'edge function (pas de ?path=),
+    // rediriger vers le SPA. On laisse passer si path est explicitement fourni.
+    const hasExplicitPath = url.searchParams.has("path");
+    if (!isBot(userAgent) && !hasExplicitPath) {
       return new Response(null, {
         status: 302,
-        headers: {
-          ...corsHeaders,
-          Location: redirectUrl,
-        },
+        headers: { ...corsHeaders, Location: `${BASE_URL}/` },
       });
     }
-
-    const canonicalUrl = `${BASE_URL}${path}`;
 
     // ── Pages statiques ──
     if (STATIC_PAGES[path]) {
@@ -394,6 +392,17 @@ serve(async (req) => {
           },
         });
       }
+
+      // Slug album inconnu → fallback avec image statique générique /realisations
+      const fallbackAlbumMeta = STATIC_PAGES["/realisations"] ?? STATIC_PAGES["/"];
+      const html = buildHtml(fallbackAlbumMeta.title, fallbackAlbumMeta.description, fallbackAlbumMeta.image, canonicalUrl, canonicalUrl);
+      return new Response(html, {
+        headers: {
+          ...corsHeaders,
+          "Content-Type": "text/html; charset=utf-8",
+          "Cache-Control": "public, max-age=3600",
+        },
+      });
     }
 
     // ── Fallback : page par défaut ──
