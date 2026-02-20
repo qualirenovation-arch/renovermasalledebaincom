@@ -233,26 +233,15 @@ export default function Realisations() {
 
       {/* Paris Map for In Progress */}
       {viewMode === "inProgress" && !selectedAlbum && (
-        <section className="py-12 bg-stone">
+        <section className="py-8 bg-stone">
           <div className="container-custom">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-center mb-8"
-            >
-              <h2 className="font-display text-2xl md:text-3xl font-semibold mb-2">
-                Nos chantiers en cours sur Paris
-              </h2>
-              <p className="text-muted-foreground">Cliquez sur un point pour voir le projet</p>
-            </motion.div>
-
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="relative max-w-3xl mx-auto"
+              className="relative max-w-4xl mx-auto"
             >
-              {/* Carte illustrée Île-de-France */}
-              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-border bg-transparent">
+              {/* Carte illustrée Île-de-France — l'image contient déjà le titre et les instructions */}
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src="/lovable-uploads/carte-chantiers-idf-clean.png"
                   alt="Carte des chantiers en cours en Île-de-France"
@@ -260,7 +249,7 @@ export default function Realisations() {
                   draggable={false}
                 />
 
-                {/* Pins des chantiers positionnés sur la carte */}
+                {/* Pins interactifs positionnés par-dessus la carte */}
                 {projectLocations.map((loc, index) => (
                   <motion.button
                     key={loc.id}
@@ -279,37 +268,39 @@ export default function Realisations() {
                     }}
                     title={loc.name}
                   >
-                    {/* Pin SVG style */}
+                    {/* Pin SVG interactif — légèrement transparent pour ne pas masquer les pins de l'image */}
                     <svg
                       viewBox="0 0 36 48"
-                      className="w-9 h-12 drop-shadow-lg transition-transform duration-200 group-hover:scale-125 group-hover:-translate-y-1"
+                      className="w-8 h-11 drop-shadow-xl transition-transform duration-200 group-hover:scale-125 group-hover:-translate-y-1"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M18 0C8.059 0 0 8.059 0 18c0 13.5 18 30 18 30S36 31.5 36 18C36 8.059 27.941 0 18 0z"
-                        fill="#6B4F2E"
+                        fill="#1a4a6b"
+                        fillOpacity="0.85"
                       />
-                      <circle cx="18" cy="18" r="9" fill="white" />
-                      <circle cx="18" cy="18" r="5" fill="#6B4F2E" />
+                      <circle cx="18" cy="18" r="9" fill="white" fillOpacity="0.95" />
+                      <circle cx="18" cy="18" r="5" fill="#1a4a6b" />
                     </svg>
 
                     {/* Pulse ring */}
                     <span
-                      className="absolute rounded-full animate-ping opacity-30 bg-wood pointer-events-none"
+                      className="absolute rounded-full animate-ping opacity-40 pointer-events-none"
                       style={{
-                        width: "36px",
-                        height: "36px",
+                        width: "32px",
+                        height: "32px",
                         top: 0,
                         left: "50%",
                         transform: "translateX(-50%)",
+                        backgroundColor: "#1a4a6b",
                       }}
                     />
 
                     {/* Tooltip au survol */}
-                    <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 whitespace-nowrap bg-foreground text-background text-xs font-medium px-2.5 py-1.5 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none">
+                    <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 whitespace-nowrap bg-foreground text-background text-xs font-medium px-2.5 py-1.5 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-10">
                       <span className="font-semibold">{loc.name}</span>
-                      <span className="text-muted ml-1 text-[10px]">• {loc.area}</span>
+                      <span className="opacity-70 ml-1 text-[10px]">• {loc.area}</span>
                     </span>
                   </motion.button>
                 ))}
