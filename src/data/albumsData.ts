@@ -2200,12 +2200,12 @@ export interface ProjectLocation {
 }
 
 export const projectLocations: ProjectLocation[] = [
-  { id: "buttes-chaumont", name: "Buttes-Chaumont", area: "19ème", x: 68, y: 25 },
-  { id: "rocroy", name: "Rue de Rocroy", area: "10ème", x: 55, y: 32 },
-  { id: "port-royal", name: "Port-Royal", area: "5ème", x: 48, y: 60 },
-  { id: "la-tour", name: "Rue de la Tour", area: "16ème", x: 25, y: 45 },
-  { id: "courbevoie-lalyre", name: "Rue Ernest Lalyre", area: "Courbevoie", x: 15, y: 20 },
-  
+  // Coordonnées calées sur carte-chantiers-idf-clean.png (format ~4:3)
+  { id: "buttes-chaumont",   name: "Buttes-Chaumont",   area: "Paris (19e)",       x: 66, y: 34 },
+  { id: "rocroy",            name: "Rue de Rocroy",     area: "Paris (10e)",       x: 57, y: 43 },
+  { id: "port-royal",        name: "Port-Royal",        area: "Paris (5e)",        x: 56, y: 55 },
+  { id: "la-tour",           name: "Rue de la Tour",    area: "Paris (16e)",       x: 43, y: 48 },
+  { id: "courbevoie-lalyre", name: "Rue Ernest Lalyre", area: "Courbevoie (92)",   x: 33, y: 30 },
 ];
 
 // ===== CATEGORY MAPPING =====
