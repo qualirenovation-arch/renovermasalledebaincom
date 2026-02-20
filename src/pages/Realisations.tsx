@@ -251,62 +251,66 @@ export default function Realisations() {
               animate={{ opacity: 1, scale: 1 }}
               className="relative max-w-3xl mx-auto"
             >
-              {/* Carte stylisée de Paris */}
-              <div className="relative bg-accent/20 rounded-3xl overflow-hidden aspect-[4/3] border border-border">
-                {/* Fond avec forme de Paris simplifiée */}
-                <svg viewBox="0 0 400 300" className="w-full h-full">
-                  {/* Forme simplifiée de Paris */}
-                  <path
-                    d="M80 150 Q60 100 100 60 Q150 30 200 40 Q280 30 330 70 Q370 100 360 150 Q370 200 320 250 Q260 280 200 270 Q140 280 90 240 Q50 200 80 150 Z"
-                    fill="hsl(var(--accent))"
-                    stroke="hsl(var(--border))"
-                    strokeWidth="2"
-                    opacity="0.5"
-                  />
-                  {/* Seine */}
-                  <path
-                    d="M40 165 Q120 140 200 160 Q280 180 360 155"
-                    fill="none"
-                    stroke="hsl(var(--primary))"
-                    strokeWidth="6"
-                    opacity="0.3"
-                    strokeLinecap="round"
-                  />
-                  {/* Arrondissements labels */}
-                  <text x="160" y="85" className="fill-muted-foreground text-[10px] font-medium">18e</text>
-                  <text x="260" y="70" className="fill-muted-foreground text-[10px] font-medium">19e</text>
-                  <text x="310" y="120" className="fill-muted-foreground text-[10px] font-medium">20e</text>
-                  <text x="200" y="105" className="fill-muted-foreground text-[10px] font-medium">9e</text>
-                  <text x="230" y="100" className="fill-muted-foreground text-[10px] font-medium">10e</text>
-                  <text x="200" y="150" className="fill-muted-foreground text-[10px] font-medium">1er</text>
-                  <text x="140" y="130" className="fill-muted-foreground text-[10px] font-medium">8e</text>
-                  <text x="100" y="170" className="fill-muted-foreground text-[10px] font-medium">16e</text>
-                  <text x="150" y="200" className="fill-muted-foreground text-[10px] font-medium">15e</text>
-                  <text x="280" y="200" className="fill-muted-foreground text-[10px] font-medium">12e</text>
-                </svg>
+              {/* Carte illustrée Île-de-France */}
+              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-border bg-transparent">
+                <img
+                  src="/lovable-uploads/carte-chantiers-idf-clean.png"
+                  alt="Carte des chantiers en cours en Île-de-France"
+                  className="w-full h-auto block"
+                  draggable={false}
+                />
 
-                {/* Points des chantiers */}
+                {/* Pins des chantiers positionnés sur la carte */}
                 {projectLocations.map((loc, index) => (
                   <motion.button
                     key={loc.id}
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ delay: 0.3 + index * 0.1, type: "spring" }}
-                    className="absolute transform -translate-x-1/2 -translate-y-1/2 group"
-                    style={{ left: `${loc.x}%`, top: `${loc.y}%` }}
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ delay: 0.3 + index * 0.1, type: "spring", stiffness: 260, damping: 20 }}
+                    className="absolute group"
+                    style={{
+                      left: `${loc.x}%`,
+                      top: `${loc.y}%`,
+                      transform: "translate(-50%, -100%)",
+                    }}
                     onClick={() => {
                       const album = inProgressAlbums.find(a => a.id === loc.id);
                       if (album) setSelectedAlbum(album);
                     }}
+                    title={loc.name}
                   >
-                    <span className="flex items-center justify-center w-10 h-10 bg-wood text-white rounded-full shadow-lg transition-transform duration-300 group-hover:scale-125">
-                      <MapPin className="w-5 h-5" />
+                    {/* Pin SVG style */}
+                    <svg
+                      viewBox="0 0 36 48"
+                      className="w-9 h-12 drop-shadow-lg transition-transform duration-200 group-hover:scale-125 group-hover:-translate-y-1"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18 0C8.059 0 0 8.059 0 18c0 13.5 18 30 18 30S36 31.5 36 18C36 8.059 27.941 0 18 0z"
+                        fill="#6B4F2E"
+                      />
+                      <circle cx="18" cy="18" r="9" fill="white" />
+                      <circle cx="18" cy="18" r="5" fill="#6B4F2E" />
+                    </svg>
+
+                    {/* Pulse ring */}
+                    <span
+                      className="absolute rounded-full animate-ping opacity-30 bg-wood pointer-events-none"
+                      style={{
+                        width: "36px",
+                        height: "36px",
+                        top: 0,
+                        left: "50%",
+                        transform: "translateX(-50%)",
+                      }}
+                    />
+
+                    {/* Tooltip au survol */}
+                    <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 whitespace-nowrap bg-foreground text-background text-xs font-medium px-2.5 py-1.5 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none">
+                      <span className="font-semibold">{loc.name}</span>
+                      <span className="text-muted ml-1 text-[10px]">• {loc.area}</span>
                     </span>
-                    <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-foreground text-background text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                      {loc.name}
-                    </span>
-                    {/* Pulse animation */}
-                    <span className="absolute inset-0 w-10 h-10 bg-wood rounded-full animate-ping opacity-30" />
                   </motion.button>
                 ))}
               </div>
