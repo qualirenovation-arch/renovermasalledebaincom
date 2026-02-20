@@ -2200,17 +2200,16 @@ export interface ProjectLocation {
 }
 
 export const projectLocations: ProjectLocation[] = [
-  // Coordonnées calées visuellement sur carte-chantiers-idf-clean.png (image 1024×1024)
-  // Paris 19e — label "19e" visible sur la carte, nord-est intra-muros
-  { id: "buttes-chaumont",   name: "Buttes-Chaumont",   area: "Paris (19e)",     x: 63, y: 43 },
-  // Paris 10e — label "10e" visible sur la carte, centre-nord
-  { id: "rocroy",            name: "Rue de Rocroy",     area: "Paris (10e)",     x: 59, y: 50 },
-  // Paris 5e — rive gauche sud du centre, sous le label "1er"
-  { id: "port-royal",        name: "Port-Royal",        area: "Paris (5e)",      x: 56, y: 61 },
-  // Paris 16e — label "16e" visible sur la carte, ouest de Paris
-  { id: "la-tour",           name: "Rue de la Tour",    area: "Paris (16e)",     x: 43, y: 58 },
-  // Courbevoie 92 — petite couronne nord-ouest, entre 17e et Seine (La Défense)
-  { id: "courbevoie-lalyre", name: "Rue Ernest Lalyre", area: "Courbevoie (92)", x: 44, y: 43 },
+  // Paris 19e — nord-est intra-muros (beige), entre labels "19e" et "20e"
+  { id: "buttes-chaumont",   name: "Buttes-Chaumont",   area: "Paris (19e)",     x: 62, y: 34 },
+  // Paris 10e — nord-centre intra-muros, sur label "10e" (à gauche du "20e")
+  { id: "rocroy",            name: "Rue de Rocroy",     area: "Paris (10e)",     x: 56, y: 38 },
+  // Paris 5e (Port-Royal) — rive gauche, juste sous la Seine, entre "1er" et "15e"
+  { id: "port-royal",        name: "Port-Royal",        area: "Paris (5e)",      x: 55, y: 53 },
+  // Paris 16e — ouest intra-muros, sur label "16e" (à gauche de la Seine)
+  { id: "la-tour",           name: "Rue de la Tour",    area: "Paris (16e)",     x: 44, y: 47 },
+  // Courbevoie 92 — petite couronne ouest, juste à gauche du 17e parisien (zone 92, entre "78" et "18e")
+  { id: "courbevoie-lalyre", name: "Rue Ernest Lalyre", area: "Courbevoie (92)", x: 40, y: 38 },
 ];
 
 // ===== CATEGORY MAPPING =====
