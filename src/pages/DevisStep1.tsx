@@ -191,6 +191,7 @@ export default function DevisStep1() {
         title="Devis rénovation salle de bain"
         description="Demandez votre devis gratuit pour la rénovation de votre salle de bain à Paris. Réponse sous 48h."
         path="/devis"
+        coverImage="https://renovermasalledebain.com/og/devis.jpg"
       />
 
       {/* Hero */}
