@@ -1,0 +1,4 @@
+# Memory: features/portfolio/current-projects-map-v7-fr
+Updated: now
+
+La carte des 'Chantiers en cours' (/realisations) utilise un fond de carte statique épuré 'public/lovable-uploads/carte-chantiers-idf-clean.png' (sans aucun marqueur intégré) pour garantir une lisibilité optimale. Cinq épingles interactives SVG bleu marine (#1a4a6b) avec une animation de pulsation (ping) sont superposées dynamiquement. Les coordonnées (x,y en %) sont calibrées géographiquement : Buttes-Chaumont (19e, x:64, y:40), Rue de Rocroy (10e, x:58, y:46), Port-Royal (5e, x:56, y:57), Rue de la Tour (16e, x:44, y:51), et Rue Ernest Lalyre (92/Courbevoie, x:36, y:35). Chaque épingle affiche un tooltip au survol et redirige vers la fiche projet correspondante au clic. Le transform CSS est translate(-50%, -100%) — la pointe du pin touche exactement le point (x%, y%).
