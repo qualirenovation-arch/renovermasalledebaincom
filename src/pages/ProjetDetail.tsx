@@ -87,8 +87,20 @@ const ProjetDetail = () => {
     category: album.category
   });
 
-  // Use static OG image from /public/og/ folder
-  const ogImageUrl = `${OG_BASE_URL}/og/${album.slug}.jpg`;
+  // Build dynamic OG image URL using the edge function with the album cover
+  // album.coverImage is a bundled ES6 asset URL (e.g. /assets/xxx.jpg)
+  // We pass it as absolute URL to the edge function for compositing
+  const coverAbsoluteUrl = album.coverImage.startsWith("http")
+    ? album.coverImage
+    : `${OG_BASE_URL}${album.coverImage}`;
+
+  const ogParams = new URLSearchParams({
+    type: "album",
+    title: album.title,
+    location: album.location,
+    cover: coverAbsoluteUrl,
+  });
+  const ogImageUrl = `https://wacqnrxbszvznfqiiuxm.supabase.co/functions/v1/og?${ogParams.toString()}`;
 
   // Short description for OG
   const shortDescription = `${album.location} • ${ogData.style}${ogData.tag1 ? ` • ${ogData.tag1}` : ""}${ogData.tag2 ? ` • ${ogData.tag2}` : ""} • Salle de bain Leroy Merlin, meuble salle de bain Ikea. Finitions premium.`;
