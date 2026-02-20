@@ -81,6 +81,7 @@ export default function WhyUs() {
         title="Notre méthode – Un chantier heureux"
         description="Découvrez notre approche pour une rénovation de salle de bain sans stress à Paris. Un chantier heureux, maîtrisé de A à Z."
         path="/pourquoi-nous"
+        coverImage="https://renovermasalledebain.com/og/pourquoi-nous.jpg"
       />
       {/* Hero */}
       <section className="relative py-16 md:py-32 overflow-hidden">

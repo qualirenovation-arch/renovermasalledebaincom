@@ -56,6 +56,7 @@ export default function Avis() {
         title="Avis clients vérifiés"
         description="Découvrez les avis vérifiés par Houzz de nos clients. Plus de 40 avis 5 étoiles pour nos rénovations de salles de bain à Paris et Île-de-France."
         path="/avis"
+        coverImage="https://renovermasalledebain.com/og/avis.jpg"
       />
 
       {/* Hero Section */}
