@@ -2200,15 +2200,15 @@ export interface ProjectLocation {
 }
 
 export const projectLocations: ProjectLocation[] = [
-  // Paris 19e — nord-est intra-muros (beige), entre labels "19e" et "20e"
+  // Paris 19e — validé par l'utilisateur ✓
   { id: "buttes-chaumont",   name: "Buttes-Chaumont",   area: "Paris (19e)",     x: 62, y: 34 },
-  // Paris 10e — nord-centre intra-muros, sur label "10e" (à gauche du "20e")
+  // Paris 10e — nord-centre intra-muros
   { id: "rocroy",            name: "Rue de Rocroy",     area: "Paris (10e)",     x: 56, y: 38 },
-  // Paris 5e (Port-Royal) — rive gauche, juste sous la Seine, entre "1er" et "15e"
+  // Paris 5e (Port-Royal) — rive gauche, sous la Seine
   { id: "port-royal",        name: "Port-Royal",        area: "Paris (5e)",      x: 55, y: 53 },
-  // Paris 16e — ouest intra-muros, sur label "16e" (à gauche de la Seine)
-  { id: "la-tour",           name: "Rue de la Tour",    area: "Paris (16e)",     x: 44, y: 47 },
-  // Courbevoie 92 — petite couronne ouest, juste à gauche du 17e parisien (zone 92, entre "78" et "18e")
+  // Paris 16e — décalé plus bas et plus à gauche (feedback utilisateur)
+  { id: "la-tour",           name: "Rue de la Tour",    area: "Paris (16e)",     x: 38, y: 54 },
+  // Courbevoie 92 — petite couronne ouest, à gauche du 17e
   { id: "courbevoie-lalyre", name: "Rue Ernest Lalyre", area: "Courbevoie (92)", x: 40, y: 38 },
 ];
 
