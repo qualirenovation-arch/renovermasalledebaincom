@@ -153,7 +153,8 @@ export const redirectMap: Record<string, string> = {
   
   // Chantiers en cours - redirections des anciens slugs vers les nouveaux
   "chantier-paris-10-renovation-petite-salle-de-bain": "chantier-paris-10-rocroy",
-  "chantier-paris-5-renovation-complete-douche-italienne": "chantier-paris-5-port-royal",
+  "chantier-paris-5-renovation-complete-douche-italienne": "chantier-paris-13-port-royal",
+  "chantier-paris-5-port-royal": "chantier-paris-13-port-royal",
   "chantier-paris-16-restructuration-complete": "chantier-paris-16-la-tour",
   "chantier-paris-19-renovation-buttes-chaumont": "chantier-paris-19-buttes-chaumont",
   "chantier-courbevoie-92-renovation-contemporaine": "chantier-courbevoie-92-lalyre",
