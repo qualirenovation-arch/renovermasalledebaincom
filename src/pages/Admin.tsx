@@ -1,7 +1,7 @@
 import { Navigate, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
-import { LogOut, Loader2, ShieldX, Handshake, FileText, Users, Wrench } from "lucide-react";
+import { LogOut, Loader2, ShieldX, Handshake, FileText, Users, Wrench, Image } from "lucide-react";
 import { useAdminAuth } from "@/hooks/useAdminAuth";
 import { useToast } from "@/hooks/use-toast";
 import { DashboardStats } from "@/components/admin/DashboardStats";
@@ -67,6 +67,7 @@ export default function Admin() {
     { to: "/admin/devis", icon: FileText, label: "Devis", description: "Gérer les demandes de devis", color: "text-blue-600", bg: "bg-blue-50" },
     { to: "/admin/partenaires", icon: Handshake, label: "Partenaires", description: "Gérer les contacts partenaires", color: "text-violet-600", bg: "bg-violet-50" },
     { to: "/admin/finitions", icon: Wrench, label: "Finitions", description: "Catalogue des finitions", color: "text-amber-600", bg: "bg-amber-50" },
+    { to: "/admin/albums", icon: Image, label: "Réalisations", description: "Gérer le portfolio", color: "text-emerald-600", bg: "bg-emerald-50" },
   ];
 
   return (
