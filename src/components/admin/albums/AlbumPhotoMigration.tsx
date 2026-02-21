@@ -73,12 +73,15 @@ export function AlbumPhotoMigration() {
         const staticAlbum = staticBySlug.get(lookupSlug);
         if (!staticAlbum || staticAlbum.photos.length === 0) continue;
 
+        const origin = window.location.origin;
+        const toAbsolute = (url: string) => url.startsWith("http") ? url : `${origin}${url.startsWith("/") ? url : `/${url}`}`;
+
         albumsToMigrate.push({
           album_id: dbAlbum.id,
           slug: dbAlbum.slug,
-          cover_image_url: staticAlbum.coverImage || undefined,
+          cover_image_url: staticAlbum.coverImage ? toAbsolute(staticAlbum.coverImage) : undefined,
           photos: staticAlbum.photos.map((p, i) => ({
-            url: p.image,
+            url: toAbsolute(p.image),
             title: p.title,
             description: p.description,
             alt_text: p.title,
