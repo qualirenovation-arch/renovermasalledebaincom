@@ -2200,16 +2200,16 @@ export interface ProjectLocation {
 }
 
 export const projectLocations: ProjectLocation[] = [
-  // Paris 19e — validé ✓
-  { id: "buttes-chaumont",   name: "Buttes-Chaumont",   area: "Paris (19e)",     x: 62, y: 34 },
-  // Paris 10e — légèrement plus bas et plus à droite (centre-nord intra-muros)
-  { id: "rocroy",            name: "Rue de Rocroy",     area: "Paris (10e)",     x: 57, y: 43 },
-  // Paris 5e (Port-Royal) — rive gauche, sous centre Paris
-  { id: "port-royal",        name: "Port-Royal",        area: "Paris (5e)",      x: 55, y: 57 },
-  // Paris 16e — ouest intra-muros, sous le 17e
-  { id: "la-tour",           name: "Rue de la Tour",    area: "Paris (16e)",     x: 41, y: 52 },
-  // Courbevoie 92 — banlieue ouest, à gauche du 17e parisien, plus haut que le 16e
-  { id: "courbevoie-lalyre", name: "Rue Ernest Lalyre", area: "Courbevoie (92)", x: 33, y: 36 },
+  // Paris 19e — nord-est intra-muros
+  { id: "buttes-chaumont",   name: "Buttes-Chaumont",   area: "Paris (19e)",     x: 66.5, y: 32 },
+  // Paris 10e — nord, gare du Nord / gare de l'Est
+  { id: "rocroy",            name: "Rue de Rocroy",     area: "Paris (10e)",     x: 61, y: 37 },
+  // Paris 5e — rive gauche, boulevard de Port-Royal
+  { id: "port-royal",        name: "Port-Royal",        area: "Paris (5e)",      x: 59, y: 55 },
+  // Paris 16e — ouest intra-muros, Trocadéro
+  { id: "la-tour",           name: "Rue de la Tour",    area: "Paris (16e)",     x: 44, y: 50 },
+  // Courbevoie 92 — banlieue ouest, au-delà du 17e
+  { id: "courbevoie-lalyre", name: "Rue Ernest Lalyre", area: "Courbevoie (92)", x: 34, y: 33 },
 ];
 
 // ===== CATEGORY MAPPING =====
