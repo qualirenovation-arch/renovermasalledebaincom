@@ -1,6 +1,6 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { albums } from "@/data/albumsData";
+import { usePublicAlbums } from "@/hooks/usePublicAlbums";
 import { FINITION_TYPES, type FinitionType } from "@/components/realisations/FinitionsFilter";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
@@ -23,17 +23,24 @@ interface AlbumFinitions {
 }
 
 export default function AdminFinitions() {
+  const { albums } = usePublicAlbums();
+  
   // État local pour les modifications
-  const [finitions, setFinitions] = useState<Record<string, { sol?: FinitionType; mur?: FinitionType }>>(() => {
-    const initial: Record<string, { sol?: FinitionType; mur?: FinitionType }> = {};
-    albums.forEach(album => {
-      initial[album.id] = {
-        sol: album.finitionSol,
-        mur: album.finitionMur,
-      };
-    });
-    return initial;
-  });
+  const [finitions, setFinitions] = useState<Record<string, { sol?: FinitionType; mur?: FinitionType }>>({});
+
+  // Initialize finitions when albums load
+  useEffect(() => {
+    if (albums.length > 0 && Object.keys(finitions).length === 0) {
+      const initial: Record<string, { sol?: FinitionType; mur?: FinitionType }> = {};
+      albums.forEach(album => {
+        initial[album.id] = {
+          sol: album.finitionSol,
+          mur: album.finitionMur,
+        };
+      });
+      setFinitions(initial);
+    }
+  }, [albums]);
 
   const [copied, setCopied] = useState(false);
 

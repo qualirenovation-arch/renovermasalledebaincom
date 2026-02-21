@@ -6,13 +6,15 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, ChevronLeft, ChevronRight, X, ArrowRight } from "lucide-react";
 import { OGTags } from "@/components/seo/OGTags";
 import { OG_BASE_URL, getAlbumOgData } from "@/lib/og";
-import { albums, getAlbumBySlug, Album, Photo } from "@/data/albumsData";
+import { Album, Photo } from "@/data/albumsData";
+import { usePublicAlbums } from "@/hooks/usePublicAlbums";
 import { getRedirectSlug } from "@/data/redirects";
 
 const ProjetDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
+  const { albums, getAlbumBySlug, inProgressAlbums } = usePublicAlbums();
   
   // Check for redirect first
   const redirectSlug = slug ? getRedirectSlug(slug) : null;
@@ -24,11 +26,11 @@ const ProjetDetail = () => {
     }
   }, [redirectSlug, navigate]);
   
-  const album = slug ? getAlbumBySlug(slug) : null;
+  const album = slug ? getAlbumBySlug(slug) : undefined;
   
   // Get completed albums for navigation
   const completedAlbums = albums.filter(a => !a.isInProgress);
-  const currentIndex = album ? completedAlbums.findIndex(a => a.id === album.id) : -1;
+  const currentIndex = album ? completedAlbums.findIndex(a => a.slug === album.slug) : -1;
   const prevAlbum = currentIndex > 0 ? completedAlbums[currentIndex - 1] : null;
   const nextAlbum = currentIndex < completedAlbums.length - 1 ? completedAlbums[currentIndex + 1] : null;
 

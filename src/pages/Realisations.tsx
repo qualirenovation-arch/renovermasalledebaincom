@@ -6,12 +6,11 @@ import { Layout } from "@/components/layout/Layout";
 import { ArrowRight, ArrowLeft, ChevronLeft, ChevronRight, MapPin, X, Settings2 } from "lucide-react";
 import { OGTags } from "@/components/seo/OGTags";
 import { 
-  albums, 
-  inProgressAlbums,
   Album, 
   Photo,
   FinitionType
 } from "@/data/albumsData";
+import { usePublicAlbums } from "@/hooks/usePublicAlbums";
 import { 
   FinitionsFilter, 
   NoResultsMessage, 
@@ -33,6 +32,7 @@ export default function Realisations() {
   const [calibratorOpen, setCalibratorOpen] = useState(false);
   const { isAdmin } = useAdminAuth();
   const { pins: projectLocations } = usePinPositions();
+  const { albums, inProgressAlbums: inProgressAlbumsList } = usePublicAlbums();
 
   // Defensive: ensure the "completed" list never includes in-progress entries
   const completedAlbums = albums.filter((a) => !a.isInProgress);
@@ -121,7 +121,7 @@ export default function Realisations() {
     }
   }, [selectedAlbum]);
 
-  const currentAlbums = viewMode === "completed" ? filteredCompletedAlbums : inProgressAlbums;
+  const currentAlbums = viewMode === "completed" ? filteredCompletedAlbums : inProgressAlbumsList;
 
   // Keyboard navigation for lightbox
   useEffect(() => {
@@ -221,7 +221,7 @@ export default function Realisations() {
                   : "bg-secondary text-foreground hover:bg-secondary/80"
               }`}
             >
-              🚧 Chantiers en cours ({inProgressAlbums.length})
+              🚧 Chantiers en cours ({inProgressAlbumsList.length})
             </button>
           </div>
           
@@ -269,7 +269,7 @@ export default function Realisations() {
                       transform: "translate(-50%, -100%)",
                     }}
                     onClick={() => {
-                      const album = inProgressAlbums.find(a => a.id === loc.id);
+                      const album = inProgressAlbumsList.find(a => a.id === loc.id);
                       if (album) setSelectedAlbum(album);
                     }}
                     title={loc.name}

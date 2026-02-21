@@ -4,7 +4,7 @@ import { Layout } from "@/components/layout/Layout";
 import { ScrollAnimation } from "@/components/ui/scroll-animation";
 import { Star, ArrowRight, ExternalLink, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { albums } from "@/data/albumsData";
+import { usePublicAlbums } from "@/hooks/usePublicAlbums";
 import { OGTags } from "@/components/seo/OGTags";
 import { InstagramVideoCard } from "@/components/ui/instagram-video-card";
 
@@ -46,10 +46,10 @@ const videoTestimonials = [
   },
 ];
 
-// Récupérer tous les albums qui ont un avis
-const albumsWithReviews = albums.filter(album => album.review);
-
 export default function Avis() {
+  const { albums } = usePublicAlbums();
+  const albumsWithReviews = albums.filter(album => album.review);
+
   return (
     <Layout>
       <OGTags
