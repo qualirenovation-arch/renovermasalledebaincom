@@ -7,6 +7,7 @@ import { useAdminAuth } from "@/hooks/useAdminAuth";
 import { useToast } from "@/hooks/use-toast";
 import { AlbumsList } from "@/components/admin/albums/AlbumsList";
 import { AlbumForm } from "@/components/admin/albums/AlbumForm";
+import { AlbumPhotoMigration } from "@/components/admin/albums/AlbumPhotoMigration";
 import type { Album } from "@/hooks/useAlbums";
 
 type View = { type: "list" } | { type: "form"; album?: Album };
@@ -66,10 +67,13 @@ export default function AdminAlbums() {
 
       <main className="container mx-auto px-4 py-8">
         {view.type === "list" ? (
-          <AlbumsList
-            onEdit={(album) => setView({ type: "form", album })}
-            onCreate={() => setView({ type: "form" })}
-          />
+          <div className="space-y-8">
+            <AlbumsList
+              onEdit={(album) => setView({ type: "form", album })}
+              onCreate={() => setView({ type: "form" })}
+            />
+            <AlbumPhotoMigration />
+          </div>
         ) : (
           <AlbumForm
             album={view.album}

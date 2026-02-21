@@ -30,6 +30,7 @@ interface DbAlbum {
   display_order: number;
   is_in_progress: boolean;
   is_featured: boolean;
+  album_photos: { image_url: string; title: string; alt_text: string | null; description: string | null; display_order: number }[];
   album_tags: { tag: string }[];
   album_seo: { meta_title: string | null; meta_description: string | null } | null;
 }
@@ -46,6 +47,24 @@ function mergeAlbum(dbAlbum: DbAlbum, staticAlbum: Album | undefined): Album {
     photos: [],
   };
 
+  // Use DB photos if they exist (migrated to cloud storage), otherwise keep static
+  const hasDbPhotos = dbAlbum.album_photos && dbAlbum.album_photos.length > 0;
+  const photos: Photo[] = hasDbPhotos
+    ? dbAlbum.album_photos
+        .sort((a, b) => a.display_order - b.display_order)
+        .map((p, i) => ({
+          id: i + 1,
+          image: p.image_url,
+          title: p.title || "",
+          description: p.description || p.alt_text || "",
+        }))
+    : base.photos;
+
+  // Use DB cover image if it looks like a storage URL, otherwise keep static
+  const coverImage = dbAlbum.cover_image && dbAlbum.cover_image.startsWith("http")
+    ? dbAlbum.cover_image
+    : base.coverImage;
+
   return {
     ...base,
     // DB overrides for metadata fields
@@ -55,9 +74,9 @@ function mergeAlbum(dbAlbum: DbAlbum, staticAlbum: Album | undefined): Album {
     description: dbAlbum.description,
     category: (dbAlbum.category as Album["category"]) ?? base.category,
     isInProgress: dbAlbum.is_in_progress,
+    coverImage,
+    photos,
     // Keep static fields that aren't in DB yet
-    coverImage: base.coverImage,
-    photos: base.photos,
     review: base.review,
     instagramLink: base.instagramLink,
     instagramLinks: base.instagramLinks,
@@ -70,7 +89,7 @@ function mergeAlbum(dbAlbum: DbAlbum, staticAlbum: Album | undefined): Album {
 async function fetchDbAlbums(): Promise<DbAlbum[]> {
   const { data, error } = await supabase
     .from("albums")
-    .select("*, album_tags(tag), album_seo(*)")
+    .select("*, album_photos(image_url, title, alt_text, description, display_order), album_tags(tag), album_seo(*)")
     .order("display_order", { ascending: true });
 
   if (error) throw error;
