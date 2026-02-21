@@ -128,6 +128,7 @@ export type Database = {
           is_in_progress: boolean
           location: string
           slug: string
+          static_slug: string | null
           subtitle: string | null
           title: string
           updated_at: string
@@ -143,6 +144,7 @@ export type Database = {
           is_in_progress?: boolean
           location: string
           slug: string
+          static_slug?: string | null
           subtitle?: string | null
           title: string
           updated_at?: string
@@ -158,6 +160,7 @@ export type Database = {
           is_in_progress?: boolean
           location?: string
           slug?: string
+          static_slug?: string | null
           subtitle?: string | null
           title?: string
           updated_at?: string
