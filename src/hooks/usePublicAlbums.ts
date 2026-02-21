@@ -20,6 +20,7 @@ import {
 interface DbAlbum {
   id: string;
   slug: string;
+  static_slug: string | null;
   title: string;
   subtitle: string | null;
   location: string;
@@ -92,9 +93,10 @@ export function usePublicAlbums() {
   const staticBySlug = new Map(allStatic.map((a) => [a.slug, a]));
 
   if (query.data) {
-    // Merge DB albums with static data
+    // Merge DB albums with static data — use static_slug for matching when available
     const merged = query.data.map((dbAlbum) => {
-      const staticAlbum = staticBySlug.get(dbAlbum.slug);
+      const lookupSlug = dbAlbum.static_slug || dbAlbum.slug;
+      const staticAlbum = staticBySlug.get(lookupSlug);
       return mergeAlbum(dbAlbum, staticAlbum);
     });
 
