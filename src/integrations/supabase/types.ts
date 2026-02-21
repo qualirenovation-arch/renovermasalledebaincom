@@ -14,6 +14,156 @@ export type Database = {
   }
   public: {
     Tables: {
+      album_photos: {
+        Row: {
+          album_id: string
+          alt_text: string | null
+          created_at: string
+          description: string | null
+          display_order: number
+          id: string
+          image_url: string
+          title: string
+        }
+        Insert: {
+          album_id: string
+          alt_text?: string | null
+          created_at?: string
+          description?: string | null
+          display_order?: number
+          id?: string
+          image_url: string
+          title?: string
+        }
+        Update: {
+          album_id?: string
+          alt_text?: string | null
+          created_at?: string
+          description?: string | null
+          display_order?: number
+          id?: string
+          image_url?: string
+          title?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "album_photos_album_id_fkey"
+            columns: ["album_id"]
+            isOneToOne: false
+            referencedRelation: "albums"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      album_seo: {
+        Row: {
+          album_id: string
+          id: string
+          meta_description: string | null
+          meta_title: string | null
+          updated_at: string
+        }
+        Insert: {
+          album_id: string
+          id?: string
+          meta_description?: string | null
+          meta_title?: string | null
+          updated_at?: string
+        }
+        Update: {
+          album_id?: string
+          id?: string
+          meta_description?: string | null
+          meta_title?: string | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "album_seo_album_id_fkey"
+            columns: ["album_id"]
+            isOneToOne: true
+            referencedRelation: "albums"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      album_tags: {
+        Row: {
+          album_id: string
+          created_at: string
+          id: string
+          tag: string
+        }
+        Insert: {
+          album_id: string
+          created_at?: string
+          id?: string
+          tag: string
+        }
+        Update: {
+          album_id?: string
+          created_at?: string
+          id?: string
+          tag?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "album_tags_album_id_fkey"
+            columns: ["album_id"]
+            isOneToOne: false
+            referencedRelation: "albums"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      albums: {
+        Row: {
+          category: string | null
+          cover_image: string
+          created_at: string
+          description: string
+          display_order: number
+          id: string
+          is_featured: boolean
+          is_in_progress: boolean
+          location: string
+          slug: string
+          subtitle: string | null
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          category?: string | null
+          cover_image?: string
+          created_at?: string
+          description?: string
+          display_order?: number
+          id?: string
+          is_featured?: boolean
+          is_in_progress?: boolean
+          location: string
+          slug: string
+          subtitle?: string | null
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          category?: string | null
+          cover_image?: string
+          created_at?: string
+          description?: string
+          display_order?: number
+          id?: string
+          is_featured?: boolean
+          is_in_progress?: boolean
+          location?: string
+          slug?: string
+          subtitle?: string | null
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       map_pin_positions: {
         Row: {
           area: string
