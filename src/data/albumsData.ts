@@ -474,7 +474,7 @@ import generalLeclercWc1 from "@/assets/general-leclerc-wc-1.jpg";
 import generalLeclercWc2 from "@/assets/general-leclerc-wc-2.jpg";
 import generalLeclercWcTravaux1 from "@/assets/general-leclerc-wc-travaux-1.jpg";
 
-// Port-Royal Paris 5ème
+// Port-Royal Paris 13ème
 import portRoyal1 from "@/assets/port-royal-1.jpg";
 import portRoyalAvant1 from "@/assets/port-royal-avant-1.jpg";
 import portRoyalAvant2 from "@/assets/port-royal-avant-2.jpg";
@@ -2148,9 +2148,9 @@ export const inProgressAlbums: Album[] = [
   },
   {
     id: "port-royal",
-    slug: "chantier-paris-5-port-royal",
+    slug: "chantier-paris-13-port-royal",
     title: "Rénovation complète",
-    location: "Paris 5ème - Boulevard de Port-Royal",
+    location: "Paris 13ème - Boulevard de Port-Royal",
     description: "Transformation d'une salle de bain années 70 avec mosaïque bleue. Création d'une douche à l'italienne et rénovation des WC. Chantier en cours — restez connecté pour découvrir cette transformation !",
     coverImage: portRoyal1,
     isInProgress: true,
@@ -2204,8 +2204,8 @@ export const projectLocations: ProjectLocation[] = [
   { id: "buttes-chaumont",   name: "Buttes-Chaumont",   area: "Paris (19e)",     x: 66.5, y: 32 },
   // Paris 10e — nord, gare du Nord / gare de l'Est
   { id: "rocroy",            name: "Rue de Rocroy",     area: "Paris (10e)",     x: 61, y: 37 },
-  // Paris 5e — rive gauche, boulevard de Port-Royal
-  { id: "port-royal",        name: "Port-Royal",        area: "Paris (5e)",      x: 59, y: 55 },
+  // Paris 13e — rive gauche, boulevard de Port-Royal
+  { id: "port-royal",        name: "Port-Royal",        area: "Paris (13e)",     x: 59, y: 55 },
   // Paris 16e — ouest intra-muros, Trocadéro
   { id: "la-tour",           name: "Rue de la Tour",    area: "Paris (16e)",     x: 44, y: 50 },
   // Courbevoie 92 — banlieue ouest, au-delà du 17e
