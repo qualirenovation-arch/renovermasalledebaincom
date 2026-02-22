@@ -62,15 +62,10 @@ export default function About() {
               <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">
                 20 ans d'expertise chantier au service de vos projets
               </h1>
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
                 <strong>renovermasalledebain.com</strong> est une expertise de <strong>QualiRénovation</strong>. 
                 Société créée en 2019, nous mettons à votre disposition une maître d'œuvre expérimentée 
                 pour transformer votre salle de bain.
-              </p>
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                Notre équipe réunit des artisans passionnés et qualifiés, formés aux dernières techniques 
-                et certifiés par les plus grandes marques (Schlüter, Wedi, Geberit). Ensemble, nous 
-                transformons vos espaces avec rigueur et créativité.
               </p>
             </motion.div>
             <motion.div
@@ -312,10 +307,10 @@ export default function About() {
                 </div>
 
                 <div>
-                  <div className="w-16 h-16 rounded-2xl bg-accent/30 flex items-center justify-center mx-auto lg:mx-0 mb-6">
-                    <HardHat className="w-8 h-8 text-wood" />
+                  <div className="w-20 h-20 rounded-2xl bg-gold/15 flex items-center justify-center mx-auto lg:mx-0 mb-6">
+                    <HardHat className="w-10 h-10 text-gold" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-display text-2xl font-semibold mb-4">
+                  <h3 className="font-display text-3xl md:text-4xl font-semibold mb-4 text-gold">
                     Carina Nahmani – Maître d'œuvre
                   </h3>
                   <div className="space-y-4 text-primary-foreground/80 leading-relaxed">
