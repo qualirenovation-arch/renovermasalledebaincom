@@ -384,14 +384,43 @@ export default function Index() {
 
           <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8 max-w-5xl mx-auto" staggerDelay={0.1}>
             {[
-              { icon: "💬", title: "Conseils personnalisés", desc: "Écoute & expertise" },
-              { icon: "📦", title: "Choix matériaux", desc: "Qualité premium" },
-              { icon: "✓", title: "Garantie décennale", desc: "Sérénité totale" },
-              { icon: "⏱", title: "Délais respectés", desc: "Planning maîtrisé" }
+              { icon: (
+                <svg className="w-8 h-8 md:w-10 md:h-10" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M8 36c0 2.2 1.8 4 4 4h24c2.2 0 4-1.8 4-4V20H8v16z" />
+                  <path d="M4 14h40v6H4z" />
+                  <circle cx="24" cy="28" r="4" />
+                  <path d="M24 32v4" />
+                </svg>
+              ), title: "Conseils personnalisés", desc: "Écoute & expertise" },
+              { icon: (
+                <svg className="w-8 h-8 md:w-10 md:h-10" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="6" y="14" width="36" height="28" rx="3" />
+                  <path d="M6 22h36" />
+                  <path d="M16 14V8h16v6" />
+                  <circle cx="24" cy="32" r="5" />
+                  <path d="M24 29v6M21 32h6" />
+                </svg>
+              ), title: "Choix matériaux", desc: "Qualité premium" },
+              { icon: (
+                <svg className="w-8 h-8 md:w-10 md:h-10" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 4h24c2.2 0 4 1.8 4 4v32c0 2.2-1.8 4-4 4H12c-2.2 0-4-1.8-4-4V8c0-2.2 1.8-4 4-4z" />
+                  <path d="M16 20l5 5 11-11" />
+                  <path d="M14 34h20" />
+                  <path d="M14 38h12" />
+                </svg>
+              ), title: "Garantie décennale", desc: "Sérénité totale" },
+              { icon: (
+                <svg className="w-8 h-8 md:w-10 md:h-10" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="24" cy="26" r="16" />
+                  <path d="M24 16v10l7 7" />
+                  <path d="M20 6h8" />
+                  <path d="M24 2v4" />
+                </svg>
+              ), title: "Délais respectés", desc: "Planning maîtrisé" }
             ].map((item, index) => (
               <StaggerItem key={index}>
                 <div className="text-center p-6 md:p-8 bg-card rounded-2xl border border-border/50 hover:border-gold/30 hover:shadow-lg transition-all duration-300 h-full">
-                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gold/10 flex items-center justify-center mx-auto mb-4 md:mb-5 text-3xl md:text-4xl">
+                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gold/10 flex items-center justify-center mx-auto mb-4 md:mb-5 text-gold">
                     {item.icon}
                   </div>
                   <h3 className="font-display text-sm md:text-base font-semibold mb-2">{item.title}</h3>
