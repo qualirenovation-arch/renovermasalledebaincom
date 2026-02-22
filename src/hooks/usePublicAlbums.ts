@@ -47,23 +47,29 @@ function mergeAlbum(dbAlbum: DbAlbum, staticAlbum: Album | undefined): Album {
     photos: [],
   };
 
-  // Use DB photos if they exist (migrated to cloud storage), otherwise keep static
+  // Prefer static photos (Vite-resolved, always reliable) when available.
+  // Only use DB photos for albums without a static counterpart.
+  const hasStaticPhotos = staticAlbum && base.photos.length > 0;
   const hasDbPhotos = dbAlbum.album_photos && dbAlbum.album_photos.length > 0;
-  const photos: Photo[] = hasDbPhotos
-    ? dbAlbum.album_photos
-        .sort((a, b) => a.display_order - b.display_order)
-        .map((p, i) => ({
-          id: i + 1,
-          image: p.image_url,
-          title: p.title || "",
-          description: p.description || p.alt_text || "",
-        }))
-    : base.photos;
+  const photos: Photo[] = hasStaticPhotos
+    ? base.photos
+    : hasDbPhotos
+      ? dbAlbum.album_photos
+          .sort((a, b) => a.display_order - b.display_order)
+          .map((p, i) => ({
+            id: i + 1,
+            image: p.image_url,
+            title: p.title || "",
+            description: p.description || p.alt_text || "",
+          }))
+      : base.photos;
 
-  // Use DB cover image if it looks like a storage URL, otherwise keep static
-  const coverImage = dbAlbum.cover_image && dbAlbum.cover_image.startsWith("http")
-    ? dbAlbum.cover_image
-    : base.coverImage;
+  // Prefer static cover image when available (Vite-resolved, always reliable).
+  const coverImage = hasStaticPhotos
+    ? base.coverImage
+    : dbAlbum.cover_image && dbAlbum.cover_image.startsWith("http")
+      ? dbAlbum.cover_image
+      : base.coverImage;
 
   return {
     ...base,
