@@ -205,58 +205,73 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 max-w-4xl mx-auto mb-10 md:mb-14">
             {/* Baignoire */}
             <ScrollAnimation variant="fadeLeft" delay={0.1}>
-              <div className="bg-stone rounded-2xl p-6 md:p-10 h-full">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-wood/10 flex items-center justify-center">
-                    <svg className="w-6 h-6 md:w-8 md:h-8 text-wood" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M4 12h16a1 1 0 0 1 1 1v3a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-3a1 1 0 0 1 1-1z"/>
-                      <path d="M6 12V5a2 2 0 0 1 2-2h3"/>
-                      <circle cx="12" cy="5" r="1"/>
-                    </svg>
+              <Link to="/devis#devis-form" className="block h-full">
+                <div className="bg-stone rounded-2xl p-6 md:p-10 h-full hover:shadow-lg hover:border-gold/30 border border-transparent transition-all duration-300">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-wood/10 flex items-center justify-center">
+                      <svg className="w-6 h-6 md:w-8 md:h-8 text-wood" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M4 12h16a1 1 0 0 1 1 1v3a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-3a1 1 0 0 1 1-1z"/>
+                        <path d="M6 12V5a2 2 0 0 1 2-2h3"/>
+                        <circle cx="12" cy="5" r="1"/>
+                      </svg>
+                    </div>
+                    <h3 className="font-display text-xl md:text-2xl font-semibold">Plutôt baignoire</h3>
                   </div>
-                  <h3 className="font-display text-xl md:text-2xl font-semibold">Plutôt baignoire</h3>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-center gap-3"><span className="text-wood text-lg">•</span>Vous aimez prendre le temps</li>
+                    <li className="flex items-center gap-3"><span className="text-wood text-lg">•</span>Vous avez des enfants</li>
+                    <li className="flex items-center gap-3"><span className="text-wood text-lg">•</span>Côté cocooning et intemporel</li>
+                  </ul>
+                  <div className="mt-4 flex items-center gap-2 text-gold font-medium text-sm">
+                    Demander un devis <ArrowRight className="w-4 h-4" />
+                  </div>
                 </div>
-                <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex items-center gap-3"><span className="text-wood text-lg">•</span>Vous aimez prendre le temps</li>
-                  <li className="flex items-center gap-3"><span className="text-wood text-lg">•</span>Vous avez des enfants</li>
-                  <li className="flex items-center gap-3"><span className="text-wood text-lg">•</span>Côté cocooning et intemporel</li>
-                </ul>
-              </div>
+              </Link>
             </ScrollAnimation>
 
             {/* Douche */}
             <ScrollAnimation variant="fadeRight" delay={0.2}>
-              <div className="bg-accent/30 rounded-2xl p-6 md:p-10 h-full">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-foreground/10 flex items-center justify-center">
-                    <svg className="w-6 h-6 md:w-8 md:h-8 text-foreground" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M4 4a2 2 0 0 1 2-2h.5a2 2 0 0 1 2 2v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V4a2 2 0 0 1 2-2h.5a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4z"/>
-                      <path d="M6 8v2m3-2v4m3-4v2m3-2v4"/>
-                      <path d="M10 8v12"/>
-                    </svg>
+              <Link to="/devis#devis-form" className="block h-full">
+                <div className="bg-accent/30 rounded-2xl p-6 md:p-10 h-full hover:shadow-lg hover:border-gold/30 border border-transparent transition-all duration-300">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-foreground/10 flex items-center justify-center">
+                      <svg className="w-6 h-6 md:w-8 md:h-8 text-foreground" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M4 4a2 2 0 0 1 2-2h.5a2 2 0 0 1 2 2v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V4a2 2 0 0 1 2-2h.5a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4z"/>
+                        <path d="M6 8v2m3-2v4m3-4v2m3-2v4"/>
+                        <path d="M10 8v12"/>
+                      </svg>
+                    </div>
+                    <h3 className="font-display text-xl md:text-2xl font-semibold">Plutôt douche</h3>
                   </div>
-                  <h3 className="font-display text-xl md:text-2xl font-semibold">Plutôt douche</h3>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-center gap-3"><span className="text-wood text-lg">•</span>Praticité au quotidien</li>
+                    <li className="flex items-center gap-3"><span className="text-wood text-lg">•</span>Gain d'espace</li>
+                    <li className="flex items-center gap-3"><span className="text-wood text-lg">•</span>Accessibilité et fluidité</li>
+                  </ul>
+                  <div className="mt-4 flex items-center gap-2 text-gold font-medium text-sm">
+                    Demander un devis <ArrowRight className="w-4 h-4" />
+                  </div>
                 </div>
-                <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex items-center gap-3"><span className="text-wood text-lg">•</span>Praticité au quotidien</li>
-                  <li className="flex items-center gap-3"><span className="text-wood text-lg">•</span>Gain d'espace</li>
-                  <li className="flex items-center gap-3"><span className="text-wood text-lg">•</span>Accessibilité et fluidité</li>
-                </ul>
-              </div>
+              </Link>
             </ScrollAnimation>
           </div>
 
           {/* Notre rôle */}
           <ScrollAnimation delay={0.3}>
-            <div className="max-w-2xl mx-auto text-center bg-foreground/5 rounded-2xl p-6 md:p-10">
-              <div className="flex items-center justify-center gap-3 mb-3">
-                <Sparkles className="w-6 h-6 text-wood" strokeWidth={2} />
-                <span className="font-display font-semibold text-lg md:text-xl">Notre rôle</span>
+            <Link to="/pourquoi-nous" className="block max-w-2xl mx-auto">
+              <div className="text-center bg-foreground/5 rounded-2xl p-6 md:p-10 hover:shadow-lg hover:bg-foreground/10 transition-all duration-300 cursor-pointer">
+                <div className="flex items-center justify-center gap-3 mb-3">
+                  <Sparkles className="w-6 h-6 text-wood" strokeWidth={2} />
+                  <span className="font-display font-semibold text-lg md:text-xl">Notre rôle</span>
+                </div>
+                <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                  Vous guider vers le bon choix pour vous. Chaque projet est unique.
+                </p>
+                <div className="mt-4 flex items-center justify-center gap-2 text-gold font-medium text-sm">
+                  Découvrir notre approche <ArrowRight className="w-4 h-4" />
+                </div>
               </div>
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                Vous guider vers le bon choix pour vous. Chaque projet est unique.
-              </p>
-            </div>
+            </Link>
           </ScrollAnimation>
 
           <ScrollAnimation delay={0.4} className="text-center mt-8 md:mt-12">
