@@ -26,7 +26,7 @@ export function HeroSlideshow() {
   const current = heroImages[index];
 
   return (
-    <div className="relative w-full h-full">
+    <div className="absolute inset-0">
       <AnimatePresence mode="wait">
         <motion.img
           key={index}
