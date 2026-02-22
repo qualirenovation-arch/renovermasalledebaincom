@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import houzzBestOf2026Photo from "@/assets/logos/houzz-best-of-2026-photo-award.png";
+import houzzBestOf2026Photo from "@/assets/houzz-award-2026.png";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
@@ -138,7 +138,7 @@ export default function Index() {
             <img 
               src={houzzBestOf2026Photo} 
               alt="Lauréat Best of Houzz 2026 – Photo" 
-              className="h-24 md:h-32" 
+              className="h-40 md:h-52 rounded-lg" 
             />
           </div>
           <div className="text-center sm:text-left max-w-2xl">
