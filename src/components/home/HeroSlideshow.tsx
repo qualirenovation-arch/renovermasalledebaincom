@@ -19,7 +19,7 @@ export function HeroSlideshow() {
   }, []);
 
   useEffect(() => {
-    const timer = setInterval(next, 5000);
+    const timer = setInterval(next, 60000);
     return () => clearInterval(timer);
   }, [next]);
 
