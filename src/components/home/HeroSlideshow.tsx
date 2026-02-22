@@ -2,9 +2,23 @@ import { useState, useEffect, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { albums } from "@/data/albumsData";
 
-// Pick cover images from completed albums, excluding degat des eaux
-const heroImages = albums
-  .filter((a) => !a.isInProgress && a.coverImage && a.category !== "degat-eaux")
+// Sélection manuelle des albums pour le slideshow hero
+const heroAlbumIds = [
+  "paris10-dore",
+  "nicolas-roret",
+  "cours-vincennes-sdb",
+  "cours-vincennes-madame",
+  "cours-vincennes-wc",
+  "cherche-midi",
+  "matignon",
+  "st-honore",
+  "montreuil-suite",
+  "vincennes-mr",
+];
+
+const heroImages = heroAlbumIds
+  .map((id) => albums.find((a) => a.id === id))
+  .filter((a): a is NonNullable<typeof a> => !!a && !!a.coverImage)
   .map((a) => ({
     src: a.coverImage,
     alt: a.title,
