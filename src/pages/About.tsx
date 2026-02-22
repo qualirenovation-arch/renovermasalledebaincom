@@ -338,16 +338,16 @@ export default function About() {
                     </p>
                   </div>
                   <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
-                    <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
+                    <span className="px-4 py-2 rounded-full bg-white/15 text-white text-sm font-bold">
                       Chef d'orchestre
                     </span>
-                    <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
+                    <span className="px-4 py-2 rounded-full bg-white/15 text-white text-sm font-bold">
                       20+ ans d'expérience
                     </span>
-                    <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
+                    <span className="px-4 py-2 rounded-full bg-white/15 text-white text-sm font-bold">
                       Expertise DTU
                     </span>
-                    <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium">
+                    <span className="px-4 py-2 rounded-full bg-white/15 text-white text-sm font-bold">
                       Toujours disponible
                     </span>
                   </div>
