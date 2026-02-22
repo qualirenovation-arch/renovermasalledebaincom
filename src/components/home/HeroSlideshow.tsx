@@ -32,10 +32,13 @@ export function HeroSlideshow() {
           key={index}
           src={current.src}
           alt={current.alt}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, scale: 1 }}
+          animate={{ opacity: 1, scale: 1.08 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{
+            opacity: { duration: 0.8 },
+            scale: { duration: 60, ease: "linear" },
+          }}
           className="absolute inset-0 w-full h-full object-cover object-center"
           loading={index === 0 ? "eager" : "lazy"}
         />
