@@ -2,9 +2,10 @@ import { useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Plus, Pencil, Trash2, GripVertical, ArrowUp, ArrowDown, Image, Search } from "lucide-react";
+import { Switch } from "@/components/ui/switch";
+import { Plus, Pencil, Trash2, ArrowUp, ArrowDown, Image, Search, Monitor } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { useAlbums, useDeleteAlbum, useUpdateAlbumOrder, type Album } from "@/hooks/useAlbums";
+import { useAlbums, useDeleteAlbum, useUpdateAlbumOrder, useUpdateAlbum, type Album } from "@/hooks/useAlbums";
 import { useToast } from "@/hooks/use-toast";
 import {
   albums as staticAlbums,
@@ -61,6 +62,7 @@ export function AlbumsList({ onEdit, onCreate }: AlbumsListProps) {
   const { data: albums = [], isLoading } = useAlbums();
   const deleteAlbum = useDeleteAlbum();
   const updateOrder = useUpdateAlbumOrder();
+  const updateAlbum = useUpdateAlbum();
   const { toast } = useToast();
   const [deleteId, setDeleteId] = useState<string | null>(null);
   const [search, setSearch] = useState("");
@@ -160,10 +162,11 @@ export function AlbumsList({ onEdit, onCreate }: AlbumsListProps) {
 
                 {/* Info */}
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-1">
+                  <div className="flex items-center gap-2 mb-1 flex-wrap">
                     <p className="font-semibold truncate">{album.title}</p>
                     {album.is_in_progress && <Badge variant="secondary" className="text-xs">En cours</Badge>}
                     {album.is_featured && <Badge className="text-xs bg-gold/20 text-gold-dark">Mis en avant</Badge>}
+                    {album.show_in_hero && <Badge className="text-xs bg-blue-100 text-blue-700"><Monitor className="w-3 h-3 mr-1" />Hero</Badge>}
                   </div>
                   <p className="text-sm text-muted-foreground">{album.location}</p>
                   <div className="flex items-center gap-2 mt-1">
@@ -182,7 +185,19 @@ export function AlbumsList({ onEdit, onCreate }: AlbumsListProps) {
                 </div>
 
                 {/* Actions */}
-                <div className="flex gap-2 shrink-0">
+                <div className="flex items-center gap-2 shrink-0">
+                  <Switch
+                    checked={album.show_in_hero}
+                    onCheckedChange={async (checked) => {
+                      try {
+                        await updateAlbum.mutateAsync({ id: album.id, show_in_hero: checked });
+                        toast({ title: checked ? "Ajouté au slideshow hero" : "Retiré du slideshow hero" });
+                      } catch {
+                        toast({ title: "Erreur", variant: "destructive" });
+                      }
+                    }}
+                    title="Afficher dans le slideshow hero"
+                  />
                   <Button variant="ghost" size="icon" onClick={() => onEdit(album)}>
                     <Pencil className="w-4 h-4" />
                   </Button>
