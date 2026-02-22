@@ -193,7 +193,7 @@ export function NoResultsMessage() {
         </p>
         <Button variant="cta" size="lg" asChild>
           <a href="/devis#devis-form">
-            Lancer mon projet
+            Je crée ma nouvelle salle de bain
           </a>
         </Button>
       </div>

@@ -112,7 +112,7 @@ export default function Index() {
                 className="rounded-full px-10 w-full sm:w-auto text-base shadow-lg hover:shadow-xl transition-shadow"
               >
                 <Link to="/devis#devis-form">
-                  LANCER MON PROJET
+                  JE CRÉE MA NOUVELLE SALLE DE BAIN
                 </Link>
               </Button>
             </ScrollAnimation>
