@@ -1,41 +1,58 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { albums } from "@/data/albumsData";
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
+import { albums as staticAlbums } from "@/data/albumsData";
 
-// Sélection manuelle des albums pour le slideshow hero
-const heroAlbumIds = [
-  "paris10-dore",
-  "nicolas-roret",
-  "cours-vincennes-sdb",
-  "cours-vincennes-madame",
-  "cours-vincennes-wc",
-  "cherche-midi",
-  "matignon",
-  "st-honore",
-  "montreuil-suite",
-  "vincennes-mr",
-];
-
-const heroImages = heroAlbumIds
-  .map((id) => albums.find((a) => a.id === id))
-  .filter((a): a is NonNullable<typeof a> => !!a && !!a.coverImage)
-  .map((a) => ({
-    src: a.coverImage,
-    alt: a.title,
-    location: a.location,
-  }));
+// Build static cover lookup once
+const staticCoverBySlug = new Map(
+  staticAlbums.map((a) => [a.id, { coverImage: a.coverImage, title: a.title, location: a.location }])
+);
 
 export function HeroSlideshow() {
   const [index, setIndex] = useState(0);
 
+  const { data: heroImages = [] } = useQuery({
+    queryKey: ["hero-slideshow"],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("albums")
+        .select("static_slug, slug, title, location, cover_image")
+        .eq("show_in_hero", true)
+        .eq("is_in_progress", false)
+        .order("display_order", { ascending: true });
+
+      if (error) throw error;
+      return (data ?? []).map((a) => {
+        const staticData = staticCoverBySlug.get(a.static_slug || "");
+        return {
+          src: staticData?.coverImage || a.cover_image,
+          alt: staticData?.title || a.title,
+          location: staticData?.location || a.location,
+        };
+      }).filter((img) => !!img.src);
+    },
+    staleTime: 5 * 60 * 1000,
+  });
+
   const next = useCallback(() => {
-    setIndex((prev) => (prev + 1) % heroImages.length);
-  }, []);
+    setIndex((prev) => (heroImages.length > 0 ? (prev + 1) % heroImages.length : 0));
+  }, [heroImages.length]);
 
   useEffect(() => {
+    if (heroImages.length <= 1) return;
     const timer = setInterval(next, 30000);
     return () => clearInterval(timer);
-  }, [next]);
+  }, [next, heroImages.length]);
+
+  // Reset index if it's out of bounds
+  useEffect(() => {
+    if (heroImages.length > 0 && index >= heroImages.length) {
+      setIndex(0);
+    }
+  }, [heroImages.length, index]);
+
+  if (heroImages.length === 0) return null;
 
   const current = heroImages[index];
 

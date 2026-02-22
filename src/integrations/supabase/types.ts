@@ -127,6 +127,7 @@ export type Database = {
           is_featured: boolean
           is_in_progress: boolean
           location: string
+          show_in_hero: boolean
           slug: string
           static_slug: string | null
           subtitle: string | null
@@ -143,6 +144,7 @@ export type Database = {
           is_featured?: boolean
           is_in_progress?: boolean
           location: string
+          show_in_hero?: boolean
           slug: string
           static_slug?: string | null
           subtitle?: string | null
@@ -159,6 +161,7 @@ export type Database = {
           is_featured?: boolean
           is_in_progress?: boolean
           location?: string
+          show_in_hero?: boolean
           slug?: string
           static_slug?: string | null
           subtitle?: string | null
