@@ -46,26 +46,41 @@ export default function About() {
         path="/a-propos"
       />
       {/* Hero */}
-      <section className="relative py-24 md:py-32">
+      <section className="relative py-16 md:py-24">
         <div className="absolute inset-0 bg-stone" />
         <div className="relative container-custom px-4">
-          <motion.div 
-            className="max-w-3xl mx-auto md:mx-0 text-center md:text-left"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <span className="inline-block px-4 py-2 rounded-full bg-accent/30 text-wood text-sm font-medium mb-6">
-              À propos de nous
-            </span>
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">
-              20 ans d'expertise chantier au service de vos projets
-            </h1>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-              Qualirenovation by Qualiconcept, société créée en 2019, met à votre disposition 
-              une maître d'œuvre expérimentée pour transformer votre salle de bain.
-            </p>
-          </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <motion.div 
+              className="text-center lg:text-left"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="inline-block px-4 py-2 rounded-full bg-accent/30 text-wood text-sm font-medium mb-6">
+                À propos de nous
+              </span>
+              <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">
+                20 ans d'expertise chantier au service de vos projets
+              </h1>
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                <strong>renovermasalledebain.com</strong> est une expertise de <strong>QualiRénovation</strong>. 
+                Société créée en 2019, nous mettons à votre disposition une maître d'œuvre expérimentée 
+                pour transformer votre salle de bain.
+              </p>
+            </motion.div>
+            <motion.div
+              className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg"
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <img 
+                src={teamPhoto} 
+                alt="L'équipe QualiRénovation sur chantier" 
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 
