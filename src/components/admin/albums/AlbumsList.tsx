@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -6,6 +6,15 @@ import { Plus, Pencil, Trash2, GripVertical, ArrowUp, ArrowDown, Image, Search }
 import { Input } from "@/components/ui/input";
 import { useAlbums, useDeleteAlbum, useUpdateAlbumOrder, type Album } from "@/hooks/useAlbums";
 import { useToast } from "@/hooks/use-toast";
+import {
+  albums as staticAlbums,
+  inProgressAlbums as staticInProgressAlbums,
+} from "@/data/albumsData";
+
+// Build static cover lookup once
+const staticCoverBySlug = new Map(
+  [...staticAlbums, ...staticInProgressAlbums].map((a) => [a.slug, a.coverImage])
+);
 import {
   AlertDialog,
   AlertDialogAction,
@@ -16,6 +25,32 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
+
+function AlbumCover({ album }: { album: Album }) {
+  const [imgError, setImgError] = useState(false);
+  const staticSlug = album.static_slug || album.slug;
+  const staticCover = staticCoverBySlug.get(staticSlug);
+  const src = imgError && staticCover ? staticCover : album.cover_image;
+
+  if (!src && !staticCover) {
+    return (
+      <div className="w-16 h-16 rounded-lg bg-muted overflow-hidden shrink-0 flex items-center justify-center">
+        <Image className="w-6 h-6 text-muted-foreground" />
+      </div>
+    );
+  }
+
+  return (
+    <div className="w-16 h-16 rounded-lg bg-muted overflow-hidden shrink-0">
+      <img
+        src={src || staticCover || ""}
+        alt=""
+        className="w-full h-full object-cover"
+        onError={() => { if (!imgError) setImgError(true); }}
+      />
+    </div>
+  );
+}
 
 interface AlbumsListProps {
   onEdit: (album: Album) => void;
@@ -121,15 +156,7 @@ export function AlbumsList({ onEdit, onCreate }: AlbumsListProps) {
                 </div>
 
                 {/* Cover */}
-                <div className="w-16 h-16 rounded-lg bg-muted overflow-hidden shrink-0">
-                  {album.cover_image ? (
-                    <img src={album.cover_image} alt="" className="w-full h-full object-cover" />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center">
-                      <Image className="w-6 h-6 text-muted-foreground" />
-                    </div>
-                  )}
-                </div>
+                <AlbumCover album={album} />
 
                 {/* Info */}
                 <div className="flex-1 min-w-0">
