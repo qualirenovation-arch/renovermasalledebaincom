@@ -2,9 +2,9 @@ import { useState, useEffect, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { albums } from "@/data/albumsData";
 
-// Pick cover images from completed albums (after/general views)
+// Pick cover images from completed albums, excluding degat des eaux
 const heroImages = albums
-  .filter((a) => !a.isInProgress && a.coverImage)
+  .filter((a) => !a.isInProgress && a.coverImage && a.category !== "degat-eaux")
   .map((a) => ({
     src: a.coverImage,
     alt: a.title,
