@@ -245,41 +245,27 @@ export default function About() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
-            <motion.div
-              className="aspect-[4/3] rounded-2xl overflow-hidden"
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+          <motion.div
+              className="max-w-2xl mx-auto mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <img 
-                src={teamPhoto} 
-                alt="L'équipe Qualiconcept sur chantier" 
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <div className="grid grid-cols-3 gap-6 text-center mb-8">
+              <div className="grid grid-cols-3 gap-6 text-center">
                 <div>
-                  <div className="text-4xl font-display font-bold text-accent mb-2">20+</div>
+                  <div className="text-4xl font-display font-bold text-white mb-2">20+</div>
                   <p className="text-primary-foreground/80 text-sm">Années d'expérience</p>
                 </div>
                 <div>
-                  <div className="text-4xl font-display font-bold text-accent mb-2">2019</div>
+                  <div className="text-4xl font-display font-bold text-white mb-2">2019</div>
                   <p className="text-primary-foreground/80 text-sm">Création</p>
                 </div>
                 <div>
-                  <div className="text-4xl font-display font-bold text-accent mb-2">100%</div>
+                  <div className="text-4xl font-display font-bold text-white mb-2">100%</div>
                   <p className="text-primary-foreground/80 text-sm">Clé en main</p>
                 </div>
               </div>
             </motion.div>
-          </div>
 
           {/* Carina Nahmani - Maître d'œuvre */}
           <motion.div
