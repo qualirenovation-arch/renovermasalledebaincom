@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { Wrench, Search, Sparkles } from "lucide-react";
+
+const iconMap: Record<string, React.ElementType> = {
+  wrench: Wrench,
+  search: Search,
+  sparkles: Sparkles,
+};
 
 interface PartnerTypeCardProps {
   icon: string;
@@ -10,6 +17,8 @@ interface PartnerTypeCardProps {
 }
 
 export function PartnerTypeCard({ icon, title, description, isSelected, onClick }: PartnerTypeCardProps) {
+  const IconComponent = iconMap[icon];
+
   return (
     <motion.button
       type="button"
@@ -25,7 +34,13 @@ export function PartnerTypeCard({ icon, title, description, isSelected, onClick 
       whileTap={{ scale: 0.98 }}
     >
       <div className="flex items-start gap-4">
-        <span className="text-3xl">{icon}</span>
+        <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0">
+          {IconComponent ? (
+            <IconComponent className="w-6 h-6 text-gold" strokeWidth={1.5} />
+          ) : (
+            <span className="text-2xl">{icon}</span>
+          )}
+        </div>
         <div className="flex-1">
           <h3 className="font-display text-lg font-semibold mb-2">{title}</h3>
           <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>

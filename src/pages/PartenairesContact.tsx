@@ -12,19 +12,19 @@ type PartnerType = "sub_traitant" | "installateur" | "marque_site" | null;
 const PARTNER_TYPES = [
   {
     id: "sub_traitant" as const,
-    icon: "🔧",
+    icon: "wrench",
     title: "Sous-traitant",
     description: "Vous êtes artisan ou entreprise du bâtiment et souhaitez collaborer sur nos chantiers de rénovation.",
   },
   {
     id: "installateur" as const,
-    icon: "🔍",
+    icon: "search",
     title: "Installateur (recherche de prestation)",
     description: "Vous êtes installateur et recherchez un prestataire qualifié pour vos projets clients.",
   },
   {
     id: "marque_site" as const,
-    icon: "✨",
+    icon: "sparkles",
     title: "Marque / Site / Point de vente / Site déco",
     description: "Vous êtes une marque, fabricant, distributeur, showroom ou site déco souhaitant collaborer.",
   },

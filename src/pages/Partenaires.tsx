@@ -96,7 +96,7 @@ interface PartnerCategory {
 const brandCategories: PartnerCategory[] = [
   {
     title: "Étanchéité & Carrelage",
-    icon: "🛁",
+    icon: "",
     partners: [
       { name: "Schlüter-Systems", url: "https://www.schluter.fr", description: "Systèmes d'étanchéité et profilés", logo: schluterLogo },
       { name: "Florim", url: "https://www.florim.com/fr", description: "Carrelages grands formats italiens", logo: florimLogo },
@@ -120,7 +120,7 @@ const brandCategories: PartnerCategory[] = [
   },
   {
     title: "Sanitaires & Plomberie",
-    icon: "🚿",
+    icon: "",
     partners: [
       { name: "Geberit", url: "https://www.geberit.fr", description: "Systèmes sanitaires", logo: geberitLogo },
       { name: "Grohe", url: "https://www.grohe.fr", description: "Robinetterie et systèmes sanitaires", logo: groheLogo },
@@ -131,7 +131,7 @@ const brandCategories: PartnerCategory[] = [
   },
   {
     title: "Robinetterie & Équipements",
-    icon: "🔧",
+    icon: "",
     partners: [
       { name: "Dornbracht", url: "https://www.dornbracht.com/fr", description: "Robinetterie allemande ultra-premium", logo: dornbrachtLogo },
       { name: "Zucchetti", url: "https://www.zucchettidesign.it", description: "Robinetterie design italienne", logo: zucchettiLogo },
@@ -142,7 +142,7 @@ const brandCategories: PartnerCategory[] = [
   },
   {
     title: "Électricité",
-    icon: "⚡",
+    icon: "",
     partners: [
       { name: "Legrand", url: "https://www.legrand.fr", description: "Électricité et domotique", logo: legrandLogo },
       { name: "Schneider Electric", url: "https://www.se.com/fr", description: "Solutions électriques", logo: schneiderLogo },
@@ -153,7 +153,7 @@ const brandCategories: PartnerCategory[] = [
   },
   {
     title: "Chauffe-eau & Eau Chaude",
-    icon: "🔥",
+    icon: "",
     partners: [
       { name: "Atlantic", url: "https://www.atlantic.fr", description: "Chauffe-eau et pompes à chaleur", logo: atlanticLogo },
       { name: "Thermor", url: "https://www.thermor.fr", description: "Chauffe-eau et radiateurs", logo: thermorLogo },
@@ -161,7 +161,7 @@ const brandCategories: PartnerCategory[] = [
   },
   {
     title: "Mobilier & Design",
-    icon: "✨",
+    icon: "",
     partners: [
       { name: "Sklum", url: "https://www.sklum.com/fr", description: "Mobilier design et décoration", logo: sklumLogo },
       { name: "Sweeek", url: "https://www.sweeek.fr", description: "Mobilier et équipements maison", logo: sweeekLogo },
@@ -177,7 +177,7 @@ const brandCategories: PartnerCategory[] = [
   },
   {
     title: "Peinture",
-    icon: "🎨",
+    icon: "",
     partners: [
       { name: "Farrow & Ball", url: "https://www.farrow-ball.com/fr", description: "Peintures et papiers peints haut de gamme", logo: farrowBallLogo },
       { name: "Little Greene", url: "https://www.littlegreene.fr", description: "Peintures et couleurs britanniques", logo: littleGreeneLogo },
@@ -193,7 +193,7 @@ const brandCategories: PartnerCategory[] = [
 const supplierCategories: PartnerCategory[] = [
    {
      title: "Négoce & Matériaux",
-     icon: "🏗️",
+     icon: "",
      partners: [
        { name: "Point.P", url: "https://www.pointp.fr", description: "Matériaux de construction", logo: pointpLogo },
        { name: "La Plateforme du Bâtiment", url: "https://www.laplateforme.com", description: "Matériaux de construction", logo: laPlateformeLogo },
@@ -206,7 +206,7 @@ const supplierCategories: PartnerCategory[] = [
    },
   {
     title: "Distribution Sanitaire & Électrique",
-    icon: "📦",
+    icon: "",
     partners: [
       { name: "Cedeo", url: "https://www.cedeo.fr", description: "Distribution sanitaire chauffage", logo: cedeoLogo },
       { name: "Espace Aubade", url: "https://www.frenchaubade.fr", description: "Sanitaires et salles de bain", logo: espaceAubadeLogo },
@@ -216,7 +216,7 @@ const supplierCategories: PartnerCategory[] = [
   },
   {
     title: "Showrooms & Spécialistes",
-    icon: "🏠",
+    icon: "",
     partners: [
       { name: "David B", url: "https://www.davidb.fr", description: "Salles de bain design" },
       { name: "Envie de Bain", url: "https://www.enviedebain.fr", description: "Showroom salle de bain" },
@@ -230,7 +230,7 @@ const supplierCategories: PartnerCategory[] = [
   },
   {
     title: "Carrelage & Revêtements",
-    icon: "🔲",
+    icon: "",
     partners: [
       { name: "Ceramica.fr", url: "https://www.ceramica.fr", description: "Carrelages et céramiques" },
       { name: "Parquet-Carrelage.com", url: "https://www.parquet-carrelage.com", description: "Revêtements de sol" },
@@ -240,7 +240,7 @@ const supplierCategories: PartnerCategory[] = [
   },
   {
     title: "Grandes Surfaces & E-commerce",
-    icon: "🛒",
+    icon: "",
     partners: [
       { name: "Leroy Merlin", url: "https://www.leroymerlin.fr", description: "Grande surface de bricolage", logo: leroyMerlinLogo },
       { name: "IKEA", url: "https://www.ikea.com/fr", description: "Mobilier et accessoires", logo: ikeaLogo },
@@ -254,7 +254,7 @@ const supplierCategories: PartnerCategory[] = [
 // Partenaires Métier
 const professionalPartners: PartnerCategory = {
   title: "Partenaires Métier",
-  icon: "🤝",
+  icon: "",
   partners: [
     { name: "Houzz", url: "https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept", description: "Notre profil professionnel", logo: houzzLogo },
     { name: "Instagram", url: "https://www.instagram.com/qualirenovation__travaux/", description: "Suivez nos réalisations", iconComponent: <Instagram className="w-8 h-8 md:w-10 md:h-10" /> },
@@ -299,7 +299,9 @@ export default function Partenaires() {
             viewport={{ once: true }}
           >
             <div className="flex items-center gap-4 mb-4">
-              <span className="text-3xl">🏷️</span>
+              <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center">
+                <svg className="w-5 h-5 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z" /><line x1="7" y1="7" x2="7.01" y2="7" /></svg>
+              </div>
               <h2 className="font-display text-3xl md:text-4xl font-semibold text-primary">
                 Marques
               </h2>
@@ -319,7 +321,6 @@ export default function Partenaires() {
                 transition={{ delay: categoryIndex * 0.1 }}
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <span className="text-xl">{category.icon}</span>
                   <h3 className="font-display text-xl md:text-2xl font-semibold">
                     {category.title}
                   </h3>
@@ -390,7 +391,9 @@ export default function Partenaires() {
             viewport={{ once: true }}
           >
             <div className="flex items-center gap-4 mb-4">
-              <span className="text-3xl">🏪</span>
+              <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center">
+                <svg className="w-5 h-5 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
+              </div>
               <h2 className="font-display text-3xl md:text-4xl font-semibold text-primary">
                 Fournisseurs & Distributeurs
               </h2>
@@ -410,7 +413,6 @@ export default function Partenaires() {
                 transition={{ delay: categoryIndex * 0.1 }}
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <span className="text-xl">{category.icon}</span>
                   <h3 className="font-display text-xl md:text-2xl font-semibold">
                     {category.title}
                   </h3>
@@ -480,7 +482,6 @@ export default function Partenaires() {
             viewport={{ once: true }}
           >
             <div className="flex items-center gap-3 mb-6">
-              <span className="text-2xl">{professionalPartners.icon}</span>
               <h2 className="font-display text-2xl md:text-3xl font-semibold">
                 {professionalPartners.title}
               </h2>

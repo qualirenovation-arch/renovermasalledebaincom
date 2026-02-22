@@ -20,7 +20,7 @@ const degatsEauxVideos = [
     id: "degats-eaux-2",
     title: "Dégât des eaux : les bons réflexes",
     description: "Découvrez nos conseils d'experts pour éviter les sinistres et protéger votre rénovation.",
-    tip: "👉 Les points essentiels à surveiller pour une installation pérenne.",
+    tip: "→ Les points essentiels à surveiller pour une installation pérenne.",
     videoSrc: "/videos/degats-eaux-2.mp4",
     views: "15.8k",
   },
@@ -28,7 +28,7 @@ const degatsEauxVideos = [
     id: "degats-eaux-1",
     title: "Prévenir les dégâts des eaux",
     description: "Un dégât des eaux peut ruiner une rénovation et entraîner des frais considérables. La clé : des raccords de qualité, une étanchéité parfaite et des contrôles réguliers.",
-    tip: "👉 Dans cette vidéo, je vous montre les erreurs à éviter et les bonnes pratiques à adopter.",
+    tip: "→ Dans cette vidéo, je vous montre les erreurs à éviter et les bonnes pratiques à adopter.",
     videoSrc: "/videos/degats-eaux-1.mp4",
     views: "3.7k",
   },
@@ -146,7 +146,7 @@ const DegatsEaux = () => {
               <Droplets className="w-7 h-7 text-blue-600" />
             </div>
             <h1 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-foreground">
-              Dégât des eaux ? Et si c'était l'occasion de faire mieux ? ✨
+              Dégât des eaux ? Et si c'était l'occasion de faire mieux ?
             </h1>
             <p className="text-muted-foreground text-lg">
               On vous aide à transformer un sinistre en opportunité.
@@ -159,7 +159,7 @@ const DegatsEaux = () => {
       <section className="py-8 md:py-10 bg-background">
         <div className="container-custom">
           <h2 className="font-display text-xl md:text-2xl font-bold mb-6 text-center text-foreground">
-            🎬 Nos conseils en vidéo
+            Nos conseils en vidéo
           </h2>
           <div className="grid grid-cols-2 gap-4 max-w-xl mx-auto">
             {degatsEauxVideos.map((video) => (
@@ -217,15 +217,15 @@ const DegatsEaux = () => {
       <section className="py-8 md:py-10 bg-background">
         <div className="container-custom max-w-2xl mx-auto">
           <h2 className="font-display text-xl md:text-2xl font-bold text-foreground mb-4 text-center">
-            📋 Que faire en cas de dégât des eaux ?
+            Que faire en cas de dégât des eaux ?
           </h2>
           <div className="space-y-2">
             {[
-              "1️⃣ Déclarez le sinistre à votre assurance rapidement.",
-              "2️⃣ Faites intervenir un professionnel pour identifier la fuite.",
-              "3️⃣ Contactez votre syndic si la fuite est commune.",
-              "4️⃣ Organisez la recherche de fuite avec les voisins concernés.",
-              "5️⃣ Attendez le passage de l'expert avant de commencer les travaux."
+              "1. Déclarez le sinistre à votre assurance rapidement.",
+              "2. Faites intervenir un professionnel pour identifier la fuite.",
+              "3. Contactez votre syndic si la fuite est commune.",
+              "4. Organisez la recherche de fuite avec les voisins concernés.",
+              "5. Attendez le passage de l'expert avant de commencer les travaux."
             ].map((text, index) => (
               <div key={index} className="bg-white rounded-lg p-3 shadow-sm border border-border/30 text-sm text-foreground">
                 {text}

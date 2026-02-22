@@ -326,7 +326,7 @@ export default function About() {
                       assurant à ses clients un accompagnement complet et une parfaite maîtrise des enjeux techniques, réglementaires et juridiques.
                     </p>
                     <p>
-                      👉 Grâce à son savoir-faire, ses projets sont régulièrement repris dans la presse, pour la plus grande fierté de ses clients.
+                      → Grâce à son savoir-faire, ses projets sont régulièrement repris dans la presse, pour la plus grande fierté de ses clients.
                     </p>
                     <p>
                       Au final, vous ne retenez pas seulement un beau chantier, mais un <strong className="text-primary-foreground">projet durable, 
@@ -504,7 +504,7 @@ export default function About() {
           >
             <div className="text-center mb-8">
               <span className="inline-block px-4 py-2 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 text-sm font-medium mb-4">
-                🏆 Best of Houzz 2026
+                Best of Houzz 2026
               </span>
               <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
                 Lauréat Best of Houzz 2026 – Photo
