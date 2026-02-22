@@ -13,11 +13,65 @@ import {
 } from "@/data/albumsData";
 
 interface MigrationResult {
-  album_id: string;
   slug: string;
   photos_migrated: number;
   cover_migrated: boolean;
   errors: string[];
+}
+
+/**
+ * Fetches an image from a Vite-resolved URL (works in browser),
+ * converts to blob and uploads directly to Supabase Storage.
+ */
+async function fetchAndUpload(
+  imageUrl: string,
+  storagePath: string,
+  errors: string[]
+): Promise<string | null> {
+  try {
+    const resp = await fetch(imageUrl);
+    if (!resp.ok) {
+      errors.push(`Fetch failed ${storagePath}: ${resp.status}`);
+      return null;
+    }
+    const blob = await resp.blob();
+    // Vite-resolved images have correct content-type
+    const contentType = blob.type || "image/jpeg";
+
+    if (contentType.includes("html")) {
+      errors.push(`Got HTML instead of image for ${storagePath} — skipping`);
+      return null;
+    }
+
+    const { error: uploadErr } = await supabase.storage
+      .from("album-photos")
+      .upload(storagePath, blob, { contentType, upsert: true });
+
+    if (uploadErr) {
+      errors.push(`Upload error ${storagePath}: ${uploadErr.message}`);
+      return null;
+    }
+
+    const { data: publicUrl } = supabase.storage
+      .from("album-photos")
+      .getPublicUrl(storagePath);
+
+    return publicUrl.publicUrl;
+  } catch (e: any) {
+    errors.push(`Error ${storagePath}: ${e.message}`);
+    return null;
+  }
+}
+
+function getExtension(url: string): string {
+  try {
+    const pathname = new URL(url, "https://placeholder.com").pathname;
+    const match = pathname.match(/\.(jpg|jpeg|png|webp|gif|svg|mp4)(\?|$)/i);
+    if (match) return `.${match[1].toLowerCase()}`;
+    const viteMatch = pathname.match(/\.([a-z0-9]+)$/i);
+    if (viteMatch) return `.${viteMatch[1].toLowerCase()}`;
+  } catch {}
+  return ".jpg";
 }
 
 export function AlbumPhotoMigration() {
@@ -37,7 +91,6 @@ export function AlbumPhotoMigration() {
     setDone(false);
 
     try {
-      // Fetch DB albums to get IDs and static_slug mapping
       const { data: dbAlbums, error } = await supabase
         .from("albums")
         .select("id, slug, static_slug");
@@ -49,82 +102,101 @@ export function AlbumPhotoMigration() {
         return;
       }
 
-      // Build mapping: DB album -> static album
       const staticBySlug = new Map(allStaticAlbums.map((a) => [a.slug, a]));
 
-      type AlbumPayload = {
-        album_id: string;
-        slug: string;
-        cover_image_url?: string;
-        photos: {
-          url: string;
-          title: string;
-          description: string;
-          alt_text: string;
-          display_order: number;
-          is_video?: boolean;
-        }[];
-      };
-
-      const albumsToMigrate: AlbumPayload[] = [];
-
+      // Build list of albums to migrate
+      const toMigrate: { dbId: string; dbSlug: string; staticAlbum: StaticAlbum }[] = [];
       for (const dbAlbum of dbAlbums) {
         const lookupSlug = dbAlbum.static_slug || dbAlbum.slug;
         const staticAlbum = staticBySlug.get(lookupSlug);
         if (!staticAlbum || staticAlbum.photos.length === 0) continue;
-
-        const origin = window.location.origin;
-        const toAbsolute = (url: string) => url.startsWith("http") ? url : `${origin}${url.startsWith("/") ? url : `/${url}`}`;
-
-        albumsToMigrate.push({
-          album_id: dbAlbum.id,
-          slug: dbAlbum.slug,
-          cover_image_url: staticAlbum.coverImage ? toAbsolute(staticAlbum.coverImage) : undefined,
-          photos: staticAlbum.photos.map((p, i) => ({
-            url: toAbsolute(p.image),
-            title: p.title,
-            description: p.description,
-            alt_text: p.title,
-            display_order: i,
-            is_video: p.isVideo,
-          })),
-        });
+        toMigrate.push({ dbId: dbAlbum.id, dbSlug: dbAlbum.slug, staticAlbum });
       }
 
-      if (albumsToMigrate.length === 0) {
+      if (toMigrate.length === 0) {
         toast({ title: "Aucun album à migrer", description: "Pas de correspondance statique trouvée." });
         setMigrating(false);
         return;
       }
 
-      // Process in batches of 3 to avoid timeouts
-      const BATCH_SIZE = 3;
       const allResults: MigrationResult[] = [];
 
-      for (let i = 0; i < albumsToMigrate.length; i += BATCH_SIZE) {
-        const batch = albumsToMigrate.slice(i, i + BATCH_SIZE);
-        setCurrentAlbum(batch.map((a) => a.slug).join(", "));
-        setProgress(Math.round((i / albumsToMigrate.length) * 100));
+      for (let i = 0; i < toMigrate.length; i++) {
+        const { dbId, dbSlug, staticAlbum } = toMigrate[i];
+        setCurrentAlbum(dbSlug);
+        setProgress(Math.round((i / toMigrate.length) * 100));
 
-        const { data: session } = await supabase.auth.getSession();
-        const token = session?.session?.access_token;
-        if (!token) throw new Error("Non authentifié");
+        const result: MigrationResult = { slug: dbSlug, photos_migrated: 0, cover_migrated: false, errors: [] };
 
-        const response = await supabase.functions.invoke("migrate-album-photos", {
-          body: { albums: batch },
-        });
-
-        if (response.error) {
-          toast({ title: "Erreur batch", description: response.error.message, variant: "destructive" });
-          continue;
+        // Upload cover image
+        if (staticAlbum.coverImage) {
+          const ext = getExtension(staticAlbum.coverImage);
+          const coverPath = `${dbSlug}/cover${ext}`;
+          const newUrl = await fetchAndUpload(staticAlbum.coverImage, coverPath, result.errors);
+          if (newUrl) {
+            await supabase.from("albums").update({ cover_image: newUrl }).eq("id", dbId);
+            result.cover_migrated = true;
+          }
         }
 
-        if (response.data?.results) {
-          allResults.push(...response.data.results);
+        // Upload photos
+        const photoInserts: {
+          album_id: string;
+          image_url: string;
+          title: string;
+          alt_text: string | null;
+          description: string | null;
+          display_order: number;
+        }[] = [];
+
+        for (let j = 0; j < staticAlbum.photos.length; j++) {
+          const photo = staticAlbum.photos[j];
+
+          if (photo.isVideo) {
+            // Keep video URLs as-is
+            photoInserts.push({
+              album_id: dbId,
+              image_url: photo.image,
+              title: photo.title,
+              alt_text: photo.title,
+              description: photo.description || null,
+              display_order: j,
+            });
+            result.photos_migrated++;
+            continue;
+          }
+
+          const ext = getExtension(photo.image);
+          const fileName = `photo-${String(j).padStart(3, "0")}${ext}`;
+          const storagePath = `${dbSlug}/${fileName}`;
+          const newUrl = await fetchAndUpload(photo.image, storagePath, result.errors);
+
+          if (newUrl) {
+            photoInserts.push({
+              album_id: dbId,
+              image_url: newUrl,
+              title: photo.title,
+              alt_text: photo.title,
+              description: photo.description || null,
+              display_order: j,
+            });
+            result.photos_migrated++;
+          }
         }
+
+        // Replace album_photos in DB
+        if (photoInserts.length > 0) {
+          await supabase.from("album_photos").delete().eq("album_id", dbId);
+          const { error: insertErr } = await supabase.from("album_photos").insert(photoInserts);
+          if (insertErr) {
+            result.errors.push(`DB insert error: ${insertErr.message}`);
+          }
+        }
+
+        allResults.push(result);
+        setResults([...allResults]);
       }
 
-      setResults(allResults);
       setProgress(100);
       setDone(true);
 
@@ -151,8 +223,8 @@ export function AlbumPhotoMigration() {
       </CardHeader>
       <CardContent className="space-y-4">
         <p className="text-sm text-muted-foreground">
-          Cette opération télécharge les {allStaticAlbums.reduce((s, a) => s + a.photos.length, 0)} photos
-          statiques des {allStaticAlbums.length} albums et les envoie dans le storage Cloud.
+          Upload direct depuis le navigateur : les {allStaticAlbums.reduce((s, a) => s + a.photos.length, 0)} photos
+          des {allStaticAlbums.length} albums seront envoyées vers le storage Cloud.
           Les URLs en base seront mises à jour automatiquement.
         </p>
 
@@ -182,7 +254,7 @@ export function AlbumPhotoMigration() {
         {results.length > 0 && (
           <div className="space-y-2 max-h-64 overflow-y-auto">
             {results.map((r) => (
-              <div key={r.album_id} className="flex items-center gap-2 text-sm p-2 bg-muted/30 rounded">
+              <div key={r.slug} className="flex items-center gap-2 text-sm p-2 bg-muted/30 rounded">
                 {r.errors.length === 0 ? (
                   <CheckCircle className="w-4 h-4 text-primary shrink-0" />
                 ) : (
