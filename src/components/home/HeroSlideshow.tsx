@@ -19,7 +19,7 @@ export function HeroSlideshow() {
   }, []);
 
   useEffect(() => {
-    const timer = setInterval(next, 60000);
+    const timer = setInterval(next, 30000);
     return () => clearInterval(timer);
   }, [next]);
 
@@ -37,7 +37,7 @@ export function HeroSlideshow() {
           exit={{ opacity: 0 }}
           transition={{
             opacity: { duration: 0.8 },
-            scale: { duration: 60, ease: "linear" },
+            scale: { duration: 30, ease: "linear" },
           }}
           className="absolute inset-0 w-full h-full object-cover object-center"
           loading={index === 0 ? "eager" : "lazy"}
