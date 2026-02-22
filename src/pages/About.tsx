@@ -278,11 +278,6 @@ export default function About() {
                   <p className="text-primary-foreground/80 text-sm">Clé en main</p>
                 </div>
               </div>
-              <p className="text-primary-foreground/90 leading-relaxed">
-                Notre équipe réunit des artisans passionnés et qualifiés, formés aux dernières techniques 
-                et certifiés par les plus grandes marques (Schlüter, Wedi, Geberit). Ensemble, nous 
-                transformons vos espaces avec rigueur et créativité.
-              </p>
             </motion.div>
           </div>
 
