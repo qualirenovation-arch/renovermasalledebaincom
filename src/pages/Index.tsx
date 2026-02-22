@@ -6,7 +6,7 @@ import { Layout } from "@/components/layout/Layout";
 import { ScrollAnimation, StaggerContainer, StaggerItem } from "@/components/ui/scroll-animation";
 import { ArrowRight, Phone, Pencil, Gem, Wrench, Play, Sparkles, ChevronRight, Newspaper, BookOpen, Video } from "lucide-react";
 import jemmapes1 from "@/assets/jemmapes-1.jpg";
-import heroImage from "@/assets/houzz-base-photo.jpg";
+import { HeroSlideshow } from "@/components/home/HeroSlideshow";
 import vincennesMr1 from "@/assets/vincennes-mr-1.jpg";
 import nicolasRoretDouche from "@/assets/nicolas-roret-douche.jpg";
 import { presseNews, guideConseils, videoConseils } from "@/data/newsData";
@@ -123,12 +123,7 @@ export default function Index() {
               className="relative order-first lg:order-last"
             >
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-[0_20px_60px_-15px_hsl(0_0%_0%/0.2)]">
-                <img
-                  src={heroImage}
-                  alt="Salle de bain moderne marbre blanc"
-                  className="w-full h-full object-cover object-[25%_center] hover:scale-105 transition-transform duration-700"
-                  loading="eager"
-                />
+                <HeroSlideshow />
               </div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-gold/10 -z-10 hidden lg:block" />
             </ScrollAnimation>
