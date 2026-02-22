@@ -251,7 +251,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div className="grid grid-cols-3 gap-6 text-center">
+              <div className="flex justify-center items-baseline gap-12 text-center">
                 <div>
                   <div className="text-4xl font-display font-bold text-white mb-2">20+</div>
                   <p className="text-primary-foreground/80 text-sm">Années d'expérience</p>
