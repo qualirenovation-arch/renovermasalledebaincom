@@ -8,12 +8,12 @@ import { useState } from "react";
 
 const faqCategories = [
   {
-    title: "✨ Notre engagement",
-    intro: "Cette FAQ répond à vos interrogations. Mais parce que nous sommes avant tout dans une relation humaine, tout est dit dès le départ, avant le premier coup de marteau. Le devis est clair, précis, et chaque étape est expliquée en amont. 👉 Aucune surprise, aucun coût caché, budget maîtrisé.",
+    title: "Notre engagement",
+    intro: "Cette FAQ répond à vos interrogations. Mais parce que nous sommes avant tout dans une relation humaine, tout est dit dès le départ, avant le premier coup de marteau. Le devis est clair, précis, et chaque étape est expliquée en amont. → Aucune surprise, aucun coût caché, budget maîtrisé.",
     questions: []
   },
   {
-    title: "🧾 Devis, budget et validation",
+    title: "Devis, budget et validation",
     questions: [
       {
         question: "Comment valider le devis ?",
@@ -21,12 +21,12 @@ const faqCategories = [
       },
       {
         question: "Y a-t-il des travaux supplémentaires imprévus ?",
-        answer: "Non. Chaque plus-value ou moins-value est expliquée, chiffrée, et validée par vos soins avant exécution. 👉 Vous gardez la maîtrise totale de votre budget."
+        answer: "Non. Chaque plus-value ou moins-value est expliquée, chiffrée, et validée par vos soins avant exécution. → Vous gardez la maîtrise totale de votre budget."
       }
     ]
   },
   {
-    title: "📐 Plans, croquis et 3D",
+    title: "Plans, croquis et 3D",
     questions: [
       {
         question: "Faites-vous des plans ou des 3D ?",
@@ -40,7 +40,7 @@ const faqCategories = [
     ]
   },
   {
-    title: "👷 Suivi de chantier",
+    title: "Suivi de chantier",
     questions: [
       {
         question: "Qui gère le chantier ?",
@@ -53,25 +53,25 @@ const faqCategories = [
     ]
   },
   {
-    title: "🧱 Démolition & vérifications techniques",
+    title: "Démolition & vérifications techniques",
     questions: [
       {
         question: "Vérifiez-vous l'existant ?",
-        answer: "Oui, systématiquement après la démolition : réseaux, évacuations, colonnes en fonte ou en plomb, accès techniques et compteurs. 👉 C'est le bon moment pour corriger, afin d'éviter de recasser plus tard."
+        answer: "Oui, systématiquement après la démolition : réseaux, évacuations, colonnes en fonte ou en plomb, accès techniques et compteurs. → C'est le bon moment pour corriger, afin d'éviter de recasser plus tard."
       }
     ]
   },
   {
-    title: "🏢 Copropriété, syndic et voisins",
+    title: "Copropriété, syndic et voisins",
     questions: [
       {
         question: "Le syndic est-il informé ?",
-        answer: "Oui. Dès le devis signé, vous recevez : un avis de travaux à afficher, un mail type à adresser au syndic. Les voisins sont informés et les parties communes sont protégées. 👉 Nous ne faisons pas de travaux à la sauvage."
+        answer: "Oui. Dès le devis signé, vous recevez : un avis de travaux à afficher, un mail type à adresser au syndic. Les voisins sont informés et les parties communes sont protégées. → Nous ne faisons pas de travaux à la sauvage."
       }
     ]
   },
   {
-    title: "🛡️ Assurances",
+    title: "Assurances",
     questions: [
       {
         question: "Êtes-vous assuré ?",
@@ -80,20 +80,20 @@ const faqCategories = [
     ]
   },
   {
-    title: "📝 Réception des travaux",
+    title: "Réception des travaux",
     questions: [
       {
         question: "Comment se passe la réception du chantier ?",
-        answer: "Nous organisons une réunion de pré-réception pour lister les finitions et détails à ajuster. Une fois ces points traités, le procès-verbal de réception de chantier est signé. 👉 La signature du PV marque la fin officielle des travaux et le démarrage des garanties."
+        answer: "Nous organisons une réunion de pré-réception pour lister les finitions et détails à ajuster. Une fois ces points traités, le procès-verbal de réception de chantier est signé. → La signature du PV marque la fin officielle des travaux et le démarrage des garanties."
       }
     ]
   },
   {
-    title: "📸 Inspirations & réalisations",
+    title: "Inspirations & réalisations",
     questions: [
       {
         question: "Où puis-je voir vos réalisations ?",
-        answer: "Nous partageons régulièrement nos réalisations et conseils techniques. 👉 Les photos valent souvent mieux que mille explications !",
+        answer: "Nous partageons régulièrement nos réalisations et conseils techniques. → Les photos valent souvent mieux que mille explications !",
         actionLinks: [
           { type: "internal", label: "Voir nos réalisations", link: "/realisations" },
           { type: "instagram", label: "Instagram", link: "https://www.instagram.com/qualirenovation__travaux/" },
@@ -143,12 +143,12 @@ const faqCategories = [
     ]
   },
   {
-    title: "🤝 Partenaires & Fournisseurs",
+    title: "Partenaires & Fournisseurs",
     intro: "Comprendre l'écosystème des marques, distributeurs et fournisseurs est essentiel pour bien préparer votre projet. Voici les explications clés.",
     questions: [
       {
         question: "Quelle est la différence entre une marque et un fournisseur ?",
-        answer: "Une marque (ou fabricant) conçoit et fabrique les produits : robinetterie, sanitaires, carrelages. Un fournisseur (ou distributeur) est le point de vente qui commercialise ces produits : showrooms, négoces, sites e-commerce. 👉 Exemple : Grohe est une marque, Cedeo est un fournisseur qui vend des produits Grohe."
+        answer: "Une marque (ou fabricant) conçoit et fabrique les produits : robinetterie, sanitaires, carrelages. Un fournisseur (ou distributeur) est le point de vente qui commercialise ces produits : showrooms, négoces, sites e-commerce. → Exemple : Grohe est une marque, Cedeo est un fournisseur qui vend des produits Grohe."
       },
       {
         question: "Puis-je choisir mes propres marques et fournisseurs ?",
@@ -156,7 +156,7 @@ const faqCategories = [
       },
       {
         question: "Comment accéder aux catalogues des marques partenaires ?",
-        answer: "Consultez notre annuaire de marques pour accéder directement aux sites internet des fabricants. Vous y trouverez leurs catalogues, gammes et inspirations. 👉 Pour les distributeurs, notre annuaire fournisseurs liste tous les points de vente avec lesquels nous travaillons régulièrement.",
+        answer: "Consultez notre annuaire de marques pour accéder directement aux sites internet des fabricants. Vous y trouverez leurs catalogues, gammes et inspirations. → Pour les distributeurs, notre annuaire fournisseurs liste tous les points de vente avec lesquels nous travaillons régulièrement.",
         actionLinks: [
           { type: "internal", label: "Voir nos marques", link: "/partenaires#marques" },
           { type: "internal", label: "Voir nos fournisseurs", link: "/partenaires#fournisseurs" }

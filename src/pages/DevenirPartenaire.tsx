@@ -540,7 +540,7 @@ export default function DevenirPartenaire() {
               </p>
               <div className="bg-muted/50 rounded-xl p-6 mb-8 text-left">
                 <p className="text-sm text-muted-foreground">
-                  <strong>📌 Note :</strong> Si votre situation évolue, n'hésitez pas à recandidater ultérieurement.
+                  <strong>Note :</strong> Si votre situation évolue, n'hésitez pas à recandidater ultérieurement.
                 </p>
               </div>
               <Button 
@@ -582,7 +582,7 @@ export default function DevenirPartenaire() {
               </p>
               <div className="bg-muted/50 rounded-xl p-6 mb-8 text-left">
                 <p className="text-sm text-muted-foreground">
-                  <strong>📌 Important :</strong> Aucune intervention ne pourra être programmée sans validation complète du dossier.
+                  <strong>Important :</strong> Aucune intervention ne pourra être programmée sans validation complète du dossier.
                 </p>
               </div>
               <Button 

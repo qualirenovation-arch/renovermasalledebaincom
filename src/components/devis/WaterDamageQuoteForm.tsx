@@ -331,7 +331,7 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
       </SectionCard>
 
       {/* Step 1 - Insurance */}
-      <SectionCard icon={AlertTriangle} title="💧 Étape 1 — Le sinistre" iconBg="bg-red-100" iconColor="text-red-600">
+      <SectionCard icon={AlertTriangle} title="Étape 1 — Le sinistre" iconBg="bg-red-100" iconColor="text-red-600">
         <div className="space-y-4">
           <div className="space-y-2">
             <Label>Le dégât des eaux est-il déclaré à l'assurance ?</Label>
@@ -352,7 +352,7 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
       </SectionCard>
 
       {/* Step 2 - Origin */}
-      <SectionCard icon={Droplets} title="💧 Étape 2 — Origine du dégât" iconBg="bg-blue-100" iconColor="text-blue-600">
+      <SectionCard icon={Droplets} title="Étape 2 — Origine du dégât" iconBg="bg-blue-100" iconColor="text-blue-600">
         <div className="space-y-4">
           <div className="space-y-2">
             <Label>Origine présumée</Label>
@@ -380,7 +380,7 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
       </SectionCard>
 
       {/* Step 3 - Rooms */}
-      <SectionCard icon={Home} title="🏠 Étape 3 — Pièces concernées" iconBg="bg-purple-100" iconColor="text-purple-600">
+      <SectionCard icon={Home} title="Étape 3 — Pièces concernées" iconBg="bg-purple-100" iconColor="text-purple-600">
         <div className="space-y-4">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {roomOptions.map(opt => (
@@ -445,7 +445,7 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
         disabled={isSubmitting || !captchaToken}
       >
         <CalendarCheck className="w-5 h-5 mr-2" />
-        {isSubmitting ? "Envoi en cours..." : "👉 Recevoir la suite de mon estimation"}
+        {isSubmitting ? "Envoi en cours..." : "Recevoir la suite de mon estimation"}
       </Button>
     </form>
   );

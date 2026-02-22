@@ -176,7 +176,7 @@ export function WaterDamageStep2Form({ leadId, clientFirstName, clientEmail }: P
         </p>
         <div className="bg-blue-50 rounded-xl p-4 mb-6 text-left">
           <p className="text-sm text-blue-800">
-            <strong>💡 Conseil :</strong> Conservez tous les documents liés à votre sinistre 
+            <strong>Conseil :</strong> Conservez tous les documents liés à votre sinistre 
             (photos, constat amiable, rapports d'expertise) pour faciliter le traitement de votre dossier.
           </p>
         </div>
@@ -209,7 +209,7 @@ export function WaterDamageStep2Form({ leadId, clientFirstName, clientEmail }: P
     <div className="max-w-3xl mx-auto">
       <div className="mb-8">
         <h2 className="font-display text-2xl md:text-3xl font-semibold mb-2">
-          Bonjour {clientFirstName} 👋
+          Bonjour {clientFirstName}
         </h2>
         <p className="text-muted-foreground">
           Complétez votre dossier dégât des eaux pour que nous puissions préparer au mieux votre visite technique.
@@ -218,7 +218,7 @@ export function WaterDamageStep2Form({ leadId, clientFirstName, clientEmail }: P
 
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Step 4 - Works */}
-        <SectionCard icon={Wrench} title="🛠️ Étape 4 — Travaux à réaliser" iconBg="bg-orange-100" iconColor="text-orange-600">
+        <SectionCard icon={Wrench} title="Étape 4 — Travaux à réaliser" iconBg="bg-orange-100" iconColor="text-orange-600">
           <div className="space-y-4">
             <div className="grid grid-cols-2 gap-3">
               {worksOptions.map(opt => (
@@ -247,7 +247,7 @@ export function WaterDamageStep2Form({ leadId, clientFirstName, clientEmail }: P
         </SectionCard>
 
         {/* Step 5 - Scope */}
-        <SectionCard icon={Wrench} title="➕ Étape 5 — Souhaitez-vous aller plus loin ?" iconBg="bg-green-100" iconColor="text-green-600">
+        <SectionCard icon={Wrench} title="Étape 5 — Souhaitez-vous aller plus loin ?" iconBg="bg-green-100" iconColor="text-green-600">
           <div className="space-y-4">
             <p className="text-sm text-muted-foreground mb-4">
               Nous pouvons intervenir uniquement pour la remise en état après sinistre 
@@ -276,7 +276,7 @@ export function WaterDamageStep2Form({ leadId, clientFirstName, clientEmail }: P
         </SectionCard>
 
         {/* Step 6 - Documents */}
-        <SectionCard icon={Upload} title="📎 Étape 6 — Documents" iconBg="bg-indigo-100" iconColor="text-indigo-600">
+        <SectionCard icon={Upload} title="Étape 6 — Documents" iconBg="bg-indigo-100" iconColor="text-indigo-600">
           <div className="space-y-4">
             <p className="text-sm text-muted-foreground">
               Ajoutez des photos des dégâts, rapport d'expertise, constat amiable ou documents d'assurance.
@@ -318,7 +318,7 @@ export function WaterDamageStep2Form({ leadId, clientFirstName, clientEmail }: P
         </SectionCard>
 
         {/* Step 7 - Message */}
-        <SectionCard icon={MessageSquare} title="📝 Étape 7 — Commentaires" iconBg="bg-teal-100" iconColor="text-teal-600">
+        <SectionCard icon={MessageSquare} title="Étape 7 — Commentaires" iconBg="bg-teal-100" iconColor="text-teal-600">
           <Textarea
             value={message}
             onChange={(e) => setMessage(e.target.value)}

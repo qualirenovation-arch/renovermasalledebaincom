@@ -383,7 +383,7 @@ export default function DevisStep1() {
                   disabled={isSubmitting || !captchaToken}
                 >
                   <CalendarCheck className="w-5 h-5 mr-2" />
-                  {isSubmitting ? "Envoi en cours..." : "👉 Recevoir la suite de mon estimation"}
+                  {isSubmitting ? "Envoi en cours..." : "Recevoir la suite de mon estimation"}
                 </Button>
               </form>
             </motion.div>
@@ -426,7 +426,7 @@ export default function DevisStep1() {
                 </div>
                 <div className="mt-8 p-4 rounded-xl bg-[hsl(var(--tag-peach))]">
                   <p className="text-sm text-foreground">
-                    <strong>✓ Réponse sous 24h</strong><br />
+                    <strong>Réponse sous 24h</strong><br />
                     Nous vous rappelons rapidement pour fixer la date de visite.
                   </p>
                 </div>
