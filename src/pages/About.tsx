@@ -62,10 +62,15 @@ export default function About() {
               <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">
                 20 ans d'expertise chantier au service de vos projets
               </h1>
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
                 <strong>renovermasalledebain.com</strong> est une expertise de <strong>QualiRénovation</strong>. 
                 Société créée en 2019, nous mettons à votre disposition une maître d'œuvre expérimentée 
                 pour transformer votre salle de bain.
+              </p>
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                Notre équipe réunit des artisans passionnés et qualifiés, formés aux dernières techniques 
+                et certifiés par les plus grandes marques (Schlüter, Wedi, Geberit). Ensemble, nous 
+                transformons vos espaces avec rigueur et créativité.
               </p>
             </motion.div>
             <motion.div
