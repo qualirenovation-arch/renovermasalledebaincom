@@ -117,7 +117,7 @@ export default function WhyUs() {
             viewport={{ once: true }}
           >
             <div className="w-20 h-20 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-8">
-              <Handshake className="w-10 h-10 text-accent" />
+              <Handshake className="w-10 h-10 text-white" />
             </div>
             <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6">
               Le projet, on le construit ensemble
@@ -136,7 +136,7 @@ export default function WhyUs() {
                 transition={{ delay: 0.1 }}
               >
                 <div className="w-12 h-12 rounded-full bg-accent/30 flex items-center justify-center mx-auto mb-4">
-                  <Home className="w-6 h-6 text-accent" />
+                  <Home className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="font-display text-lg font-semibold mb-2">Adapté à votre vie</h3>
                 <p className="text-primary-foreground/80 text-sm">
@@ -152,7 +152,7 @@ export default function WhyUs() {
                 transition={{ delay: 0.2 }}
               >
                 <div className="w-12 h-12 rounded-full bg-accent/30 flex items-center justify-center mx-auto mb-4">
-                  <Lightbulb className="w-6 h-6 text-accent" />
+                  <Lightbulb className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="font-display text-lg font-semibold mb-2">Solutions techniques</h3>
                 <p className="text-primary-foreground/80 text-sm">
@@ -168,7 +168,7 @@ export default function WhyUs() {
                 transition={{ delay: 0.3 }}
               >
                 <div className="w-12 h-12 rounded-full bg-accent/30 flex items-center justify-center mx-auto mb-4">
-                  <Diamond className="w-6 h-6 text-accent" />
+                  <Diamond className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="font-display text-lg font-semibold mb-2">Confort optimal</h3>
                 <p className="text-primary-foreground/80 text-sm">
@@ -192,7 +192,7 @@ export default function WhyUs() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="w-16 h-16 rounded-full bg-accent/30 flex items-center justify-center mb-6">
-                  <Camera className="w-8 h-8 text-wood" />
+                  <Camera className="w-8 h-8 text-white" />
                 </div>
                 <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6">
                   Votre transformation immortalisée
@@ -313,7 +313,7 @@ export default function WhyUs() {
             delay: index * 0.1
           }}>
                 <div className="w-14 h-14 rounded-2xl bg-accent/30 flex items-center justify-center mb-6">
-                  <benefit.icon className="w-7 h-7 text-wood" />
+                  <benefit.icon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="font-display text-xl font-semibold mb-3">{benefit.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
