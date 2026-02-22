@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { OGTags } from "@/components/seo/OGTags";
-import { Shield, Award, Users, Clock, CheckCircle2, ArrowRight, Camera, PenTool, HardHat } from "lucide-react";
+import { Shield, Award, Users, Clock, CheckCircle2, ArrowRight, Camera, PenTool } from "lucide-react";
 import aboutHistoire from "@/assets/about-histoire.jpg";
 import teamPhoto from "@/assets/team-photo.jpg";
 import teamChantier1 from "@/assets/team-chantier-1.jpg";
@@ -308,7 +308,15 @@ export default function About() {
 
                 <div>
                   <div className="w-20 h-20 rounded-2xl bg-gold/15 flex items-center justify-center mx-auto lg:mx-0 mb-6">
-                    <HardHat className="w-10 h-10 text-gold" strokeWidth={1.5} />
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-gold">
+                      <path d="M2 20h20" />
+                      <path d="M5 20V7l7-4 7 4v13" />
+                      <path d="M9 20v-5h6v5" />
+                      <path d="M9 11h.01" />
+                      <path d="M15 11h.01" />
+                      <path d="M12 11h.01" />
+                      <path d="M12 7v1" />
+                    </svg>
                   </div>
                   <h3 className="font-display text-3xl md:text-4xl font-semibold mb-4 text-gold">
                     Carina Nahmani – Maître d'œuvre
