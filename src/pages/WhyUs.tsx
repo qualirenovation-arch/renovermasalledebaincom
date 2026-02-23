@@ -234,8 +234,8 @@ export default function WhyUs() {
                 >
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <span className="text-primary font-bold">1</span>
+                      <div className="w-10 h-10 rounded-xl bg-white border border-border flex items-center justify-center flex-shrink-0">
+                        <span className="text-accent font-bold">1</span>
                       </div>
                       <div>
                         <h4 className="font-semibold mb-1">Shooting "Avant"</h4>
@@ -244,8 +244,8 @@ export default function WhyUs() {
                     </div>
                     
                     <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center flex-shrink-0">
-                        <Hammer className="w-5 h-5 text-wood" />
+                      <div className="w-10 h-10 rounded-xl bg-white border border-border flex items-center justify-center flex-shrink-0">
+                        <Hammer className="w-5 h-5 text-accent" strokeWidth={1.5} />
                       </div>
                       <div>
                         <h4 className="font-semibold mb-1">Transformation</h4>
@@ -254,8 +254,8 @@ export default function WhyUs() {
                     </div>
                     
                     <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-full bg-cta/20 flex items-center justify-center flex-shrink-0">
-                        <span className="text-cta font-bold">2</span>
+                      <div className="w-10 h-10 rounded-xl bg-white border border-border flex items-center justify-center flex-shrink-0">
+                        <span className="text-accent font-bold">2</span>
                       </div>
                       <div>
                         <h4 className="font-semibold mb-1">Shooting "Après"</h4>
@@ -264,8 +264,8 @@ export default function WhyUs() {
                     </div>
                     
                     <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <Diamond className="w-5 h-5 text-primary" />
+                      <div className="w-10 h-10 rounded-xl bg-white border border-border flex items-center justify-center flex-shrink-0">
+                        <Diamond className="w-5 h-5 text-accent" strokeWidth={1.5} />
                       </div>
                       <div>
                         <h4 className="font-semibold mb-1">Votre souvenir</h4>
