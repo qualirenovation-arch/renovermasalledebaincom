@@ -368,52 +368,41 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
-              <div className="text-center lg:text-left">
-                <div className="w-16 h-16 rounded-2xl bg-white border border-border flex items-center justify-center mx-auto lg:mx-0 mb-6">
-                  <PenTool className="w-8 h-8 text-accent" strokeWidth={1.5} />
+            <div className="max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                  <div className="w-16 h-16 rounded-2xl bg-white border border-border flex items-center justify-center mb-6">
+                    <PenTool className="w-8 h-8 text-accent" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="font-display text-3xl md:text-4xl font-semibold mb-4 text-white">
+                    Thierry Pelmard – Architecte d'intérieur
+                  </h3>
+                  <p className="text-primary-foreground/80 leading-relaxed mb-6">
+                    Fondateur de P3D Concept, Thierry collabore avec nous depuis plusieurs années sur 
+                    <strong className="text-accent"> plus de 60 projets</strong>. Il réalise les plans techniques 
+                    et les visualisations 3D de votre future salle de bain, garantissant une conception 
+                    sur-mesure parfaitement adaptée à vos besoins et à votre espace.
+                  </p>
+                  <Button variant="outline" size="lg" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                    <a href="https://www.p3dconcept.fr" target="_blank" rel="noopener noreferrer">
+                      Découvrir Thierry Pelmard
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </a>
+                  </Button>
                 </div>
-                <h3 className="font-display text-2xl font-semibold mb-4">
-                  Thierry Pelmard, notre architecte d'intérieur partenaire
-                </h3>
-                <p className="text-primary-foreground/80 leading-relaxed mb-6">
-                  Fondateur de P3D Concept, Thierry collabore avec nous depuis plusieurs années sur 
-                  <strong className="text-accent"> plus de 60 projets</strong>. Il réalise les plans techniques 
-                  et les visualisations 3D de votre future salle de bain, garantissant une conception 
-                  sur-mesure parfaitement adaptée à vos besoins et à votre espace.
-                </p>
-                <Button variant="outline" size="lg" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-                  <a href="https://www.p3dconcept.fr" target="_blank" rel="noopener noreferrer">
-                    Découvrir Thierry Pelmard
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </a>
-                </Button>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <motion.div 
-                  className="overflow-hidden rounded-2xl shadow-lg"
-                  initial={{ opacity: 0, x: 20 }}
+
+                <motion.div
+                  className="aspect-[4/3] rounded-3xl overflow-hidden shadow-lg"
+                  initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
                 >
                   <img 
                     src={thierryPelmard1} 
-                    alt="Thierry Pelmard - P3D Concept" 
-                    className="w-full h-56 object-cover"
-                  />
-                </motion.div>
-                <motion.div 
-                  className="overflow-hidden rounded-2xl shadow-lg"
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 }}
-                >
-                  <img 
-                    src={thierryPelmard2} 
-                    alt="Thierry Pelmard avec l'équipe" 
-                    className="w-full h-56 object-cover"
+                    alt="Thierry Pelmard – Architecte d'intérieur, P3D Concept" 
+                    className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </motion.div>
               </div>
@@ -463,40 +452,44 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
-              <div className="text-center lg:text-left">
-                <div className="w-16 h-16 rounded-2xl bg-white border border-border flex items-center justify-center mx-auto lg:mx-0 mb-6">
-                  <Camera className="w-8 h-8 text-accent" strokeWidth={1.5} />
+            <div className="max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                  <div className="w-16 h-16 rounded-2xl bg-white border border-border flex items-center justify-center mb-6">
+                    <Camera className="w-8 h-8 text-accent" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="font-display text-3xl md:text-4xl font-semibold mb-4 text-white">
+                    Stéphane Vasco – Photographe
+                  </h3>
+                  <p className="text-primary-foreground/80 leading-relaxed mb-6">
+                    Avant les travaux, nous immortalisons votre salle de bain. À la fin du chantier, 
+                    Stéphane réalise un shooting professionnel pour capturer la transformation et vous 
+                    offrir un album souvenir unique de cette aventure. Les réalisations que vous découvrez 
+                    sur notre site sont le fruit de son travail assidu à nos côtés.
+                  </p>
+                  <Button variant="outline" size="lg" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                    <Link to="/photographe">
+                      Découvrir Stéphane Vasco
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                  </Button>
                 </div>
-                <h3 className="font-display text-2xl font-semibold mb-4">
-                  Stéphane Vasco, notre photographe partenaire
-                </h3>
-                <p className="text-primary-foreground/80 leading-relaxed mb-6">
-                  Avant les travaux, nous immortalisons votre salle de bain. À la fin du chantier, 
-                  Stéphane réalise un shooting professionnel pour capturer la transformation et vous 
-                  offrir un album souvenir unique de cette aventure. Les réalisations que vous découvrez 
-                  sur notre site sont le fruit de son travail assidu à nos côtés.
-                </p>
-                <Button variant="outline" size="lg" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-                  <Link to="/photographe">
-                    Découvrir Stéphane Vasco
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </Button>
+
+                <motion.div
+                  className="aspect-[4/3] rounded-3xl overflow-hidden shadow-lg"
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                >
+                  <img 
+                    src={stephaneVasco} 
+                    alt="Stéphane Vasco en action sur un de nos chantiers" 
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </motion.div>
               </div>
-              <motion.div 
-                className="overflow-hidden rounded-2xl shadow-lg"
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-              >
-                <img 
-                  src={stephaneVasco} 
-                  alt="Stéphane Vasco en action sur un de nos chantiers" 
-                  className="w-full h-72 object-cover"
-                />
-              </motion.div>
             </div>
           </motion.div>
         </div>
