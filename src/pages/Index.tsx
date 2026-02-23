@@ -237,14 +237,17 @@ export default function Index() {
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl bg-white border border-border flex items-center justify-center">
                       <svg className="w-6 h-6 md:w-8 md:h-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M4 4l9 9"/>
-                        <circle cx="14" cy="6" r="4"/>
-                        <path d="M14 10v2"/>
-                        <path d="M11.5 8.5L10 10"/>
-                        <path d="M16.5 8.5L18 10"/>
-                        <path d="M12 6h-2"/>
-                        <path d="M16 6h2"/>
-                        <path d="M14 4V2"/>
+                        {/* Barre verticale */}
+                        <path d="M12 4v16"/>
+                        {/* Pommeau rond en haut */}
+                        <circle cx="12" cy="3" r="2"/>
+                        {/* Bras horizontal du pommeau */}
+                        <path d="M12 5v0"/>
+                        {/* Support mural */}
+                        <path d="M12 8h3"/>
+                        {/* Douchette en bas */}
+                        <path d="M12 18l3 2"/>
+                        <ellipse cx="16" cy="21" rx="1.5" ry="1"/>
                       </svg>
                     </div>
                     <h3 className="font-display text-xl md:text-2xl font-semibold">Plutôt douche</h3>
