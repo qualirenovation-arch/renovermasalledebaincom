@@ -117,7 +117,7 @@ export default function WhyUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="w-20 h-20 rounded-2xl bg-white/20 flex items-center justify-center mx-auto mb-8">
+            <div className="w-20 h-20 rounded-2xl bg-white border border-white/30 flex items-center justify-center mx-auto mb-8">
               <Handshake className="w-10 h-10 text-accent" strokeWidth={1.5} />
             </div>
             <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6">
