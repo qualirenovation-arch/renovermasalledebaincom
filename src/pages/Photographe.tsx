@@ -118,7 +118,7 @@ export default function Photographe() {
                 transition={{ delay: 0.2 }}
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-white/20 border border-white/10 flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-2xl bg-white border border-white/30 flex items-center justify-center">
                     <Camera className="w-8 h-8 text-accent" strokeWidth={1.5} />
                   </div>
                   <div>
