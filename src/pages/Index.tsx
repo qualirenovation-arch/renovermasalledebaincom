@@ -236,18 +236,22 @@ export default function Index() {
                 <div className="bg-accent/30 rounded-2xl p-6 md:p-10 h-full hover:shadow-lg hover:border-gold/30 border border-transparent transition-all duration-300">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl bg-white border border-border flex items-center justify-center">
-                      <svg className="w-6 h-6 md:w-8 md:h-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        {/* Tuyau */}
-                        <path d="M4 4v4a2 2 0 0 0 2 2h6"/>
-                        {/* Tête de douche */}
-                        <path d="M12 6a4 4 0 0 1 4 4v1H12V6z"/>
-                        {/* Gouttes */}
-                        <line x1="13" y1="13" x2="12" y2="16"/>
-                        <line x1="14.5" y1="13" x2="13.5" y2="16"/>
-                        <line x1="16" y1="13" x2="15" y2="16"/>
-                        <line x1="13" y1="17" x2="12.5" y2="19"/>
-                        <line x1="15" y1="17" x2="14.5" y2="19"/>
-                        <line x1="14" y1="20" x2="13.5" y2="22"/>
+                      <svg className="w-6 h-6 md:w-8 md:h-8 text-primary" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        {/* Tuyau courbé */}
+                        <path d="M6 2v6a6 6 0 0 0 6 6h2"/>
+                        {/* Tête arrondie */}
+                        <path d="M14 10c0-2.2 1.8-4 4-4h4c2.2 0 4 1.8 4 4v2a2 2 0 0 1-2 2H16a2 2 0 0 1-2-2v-2z"/>
+                        {/* Jets diagonaux */}
+                        <line x1="16" y1="16" x2="14" y2="20"/>
+                        <line x1="19" y1="16" x2="17" y2="20"/>
+                        <line x1="22" y1="16" x2="20" y2="20"/>
+                        <line x1="25" y1="16" x2="23" y2="20"/>
+                        <line x1="15" y1="21" x2="13.5" y2="24"/>
+                        <line x1="18" y1="21" x2="16.5" y2="24"/>
+                        <line x1="21" y1="21" x2="19.5" y2="24"/>
+                        <line x1="24" y1="21" x2="22.5" y2="24"/>
+                        <line x1="17" y1="25" x2="16" y2="28"/>
+                        <line x1="20" y1="25" x2="19" y2="28"/>
                       </svg>
                     </div>
                     <h3 className="font-display text-xl md:text-2xl font-semibold">Plutôt douche</h3>
