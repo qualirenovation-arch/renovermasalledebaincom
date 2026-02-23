@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { OGTags } from "@/components/seo/OGTags";
 import { Shield, Award, Users, Clock, CheckCircle2, ArrowRight, Camera, PenTool } from "lucide-react";
+import { PageCTA } from "@/components/layout/PageCTA";
 import aboutHistoire from "@/assets/about-histoire.jpg";
 import teamPhoto from "@/assets/team-photo.jpg";
 import teamChantier1 from "@/assets/team-chantier-1.jpg";
@@ -568,30 +569,11 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding">
-        <div className="container-custom text-center">
-          <motion.div
-            className="max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6">
-              Discutons de votre projet
-            </h2>
-            <p className="text-muted-foreground text-lg mb-8">
-              Rencontrez notre équipe et découvrez comment nous pouvons transformer 
-              votre salle de bain.
-            </p>
-            <Button variant="cta" size="xl" asChild>
-              <Link to="/devis#devis-form">
-                Demander un devis gratuit
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </Button>
-          </motion.div>
-        </div>
-      </section>
+      <PageCTA
+        title="Discutons de votre projet."
+        description="Notre rôle : concevoir, coordonner et sécuriser votre chantier."
+        buttonText="Je démarre mon projet sereinement"
+      />
     </Layout>
   );
 }

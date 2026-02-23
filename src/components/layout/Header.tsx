@@ -66,7 +66,7 @@ export function Header() {
           </Link>
           
           <Button variant="cta" size="sm" asChild className="text-xs px-3 py-1.5 flex-shrink-0 ml-auto">
-            <Link to="/devis#devis-form">Devis</Link>
+            <Link to="/devis#devis-form">Mon étude</Link>
           </Button>
         </div>
 
@@ -94,7 +94,7 @@ export function Header() {
 
           <div className="flex items-center ml-6">
             <Button variant="cta" size="lg" asChild>
-              <Link to="/devis#devis-form">Devis gratuit</Link>
+              <Link to="/devis#devis-form">Je demande mon étude personnalisée</Link>
             </Button>
           </div>
         </div>

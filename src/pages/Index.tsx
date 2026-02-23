@@ -14,6 +14,7 @@ import { TestimonialsSlider } from "@/components/home/TestimonialsSlider";
 import { Recompenses } from "@/components/layout/Recompenses";
 import { PartnerCTA } from "@/components/home/PartnerCTA";
 import { OGTags } from "@/components/seo/OGTags";
+import { PageCTA } from "@/components/layout/PageCTA";
 
 // Section "Pourquoi choisir" - 3 colonnes avec pictos SVG
 const whyChoose = [
@@ -112,7 +113,7 @@ export default function Index() {
                 className="rounded-full px-10 w-full sm:w-auto text-base shadow-lg hover:shadow-xl transition-shadow"
               >
                 <Link to="/devis#devis-form">
-                  JE CRÉE MA NOUVELLE SALLE DE BAIN
+                  JE DEMANDE MON ÉTUDE PERSONNALISÉE
                 </Link>
               </Button>
             </ScrollAnimation>
@@ -439,46 +440,13 @@ export default function Index() {
       <PartnerCTA />
 
 
-      {/* CTA Final - Premium dark section */}
-      <section className="py-6 md:py-10 bg-primary text-primary-foreground">
-        <div className="container-custom text-center">
-          <ScrollAnimation>
-            <div className="max-w-2xl mx-auto">
-              <div className="w-16 h-1 rounded-full bg-gold mx-auto mb-8" />
-              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold mb-5 md:mb-6">
-                Prêt à transformer votre salle de bain ?
-              </h2>
-              <p className="text-primary-foreground/70 text-base md:text-lg mb-10 md:mb-12">
-                Visite technique gratuite • Accompagnement de A à Z
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  variant="gold"
-                  size="lg" 
-                  asChild
-                  className="w-full sm:w-auto"
-                >
-                  <Link to="/devis#devis-form">
-                    Devis gratuit
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Link>
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  asChild
-                  className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto"
-                >
-                  <a href="tel:+33659764685">
-                    <Phone className="w-5 h-5 mr-2" />
-                    06 59 76 46 85
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </ScrollAnimation>
-        </div>
-      </section>
+      {/* CTA Final */}
+      <PageCTA
+        title="Prête à transformer votre salle de bain ?"
+        description="Chaque projet commence par une étude sérieuse et personnalisée."
+        buttonText="Je lance mon étude personnalisée"
+        variant="dark"
+      />
     </Layout>
   );
 }

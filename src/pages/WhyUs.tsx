@@ -5,6 +5,7 @@ import { Layout } from "@/components/layout/Layout";
 import { PartnersLogos } from "@/components/layout/PartnersLogos";
 import { OGTags } from "@/components/seo/OGTags";
 import { MessageSquare, Palette, Diamond, Hammer, Shield, Headphones, Check, X, ArrowRight, ClipboardCheck, UserCheck, Handshake, Lightbulb, Home, Camera } from "lucide-react";
+import { PageCTA } from "@/components/layout/PageCTA";
 const benefits = [{
   icon: ClipboardCheck,
   title: "Maître d'œuvre dès le 1er RDV",
@@ -413,32 +414,10 @@ export default function WhyUs() {
       <PartnersLogos />
 
       {/* CTA */}
-      <section className="section-padding">
-        <div className="container-custom text-center">
-          <motion.div className="max-w-2xl mx-auto" initial={{
-          opacity: 0,
-          y: 30
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} viewport={{
-          once: true
-        }}>
-            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6">
-              Convaincu par notre approche ?
-            </h2>
-            <p className="text-muted-foreground text-lg mb-8">
-              Contactez-nous pour une étude gratuite de votre projet. 
-              Nous vous répondons sous 24h.
-            </p>
-            <Button variant="cta" size="xl" asChild>
-              <Link to="/devis#devis-form">
-                Demander un devis gratuit
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </Button>
-          </motion.div>
-        </div>
-      </section>
+      <PageCTA
+        title="Vous cherchez un accompagnement structuré ?"
+        description="Confiez votre projet à une équipe expérimentée et organisée."
+        buttonText="Je confie mon projet à votre équipe"
+      />
     </Layout>;
 }
