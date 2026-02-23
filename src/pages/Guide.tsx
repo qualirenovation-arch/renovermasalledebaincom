@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LazyVideo } from "@/components/ui/lazy-video";
 import { ArrowRight, CheckCircle, AlertTriangle, Droplets, Shield, Wrench, Sparkles, Eye, Users, Home, Phone, Paintbrush, Wind, HardHat, Building, Hammer, Ruler, HelpCircle, Play, Lightbulb, Thermometer, Flame, ExternalLink } from "lucide-react";
+import { PageCTA } from "@/components/layout/PageCTA";
 import { OGTags } from "@/components/seo/OGTags";
 
 // Images
@@ -1792,37 +1793,11 @@ const Guide = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-2xl mx-auto text-center"
-          >
-            <h2 className="text-2xl md:text-3xl font-serif mb-4">
-              Prêt à concrétiser votre projet ?
-            </h2>
-            <p className="text-muted-foreground mb-8">
-              Discutons ensemble de votre future salle de bain
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="group">
-                <Link to="/devis#devis-form">
-                  Demander un devis gratuit
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="group">
-                <a href="tel:+33659764685">
-                  <Phone className="mr-2 w-4 h-4" />
-                  Nous appeler
-                </a>
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <PageCTA
+        title="Besoin d'un avis professionnel ?"
+        description="Avant de vous lancer, faisons le point ensemble."
+        buttonText="Je fais analyser mon projet"
+      />
     </Layout>
   );
 };

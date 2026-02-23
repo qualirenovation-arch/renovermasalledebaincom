@@ -21,6 +21,7 @@ import { useAdminAuth } from "@/hooks/useAdminAuth";
 import { usePinPositions } from "@/hooks/usePinPositions";
 import { MapPinCalibrator } from "@/components/admin/MapPinCalibrator";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { PageCTA } from "@/components/layout/PageCTA";
 
 export default function Realisations() {
   const location = useLocation();
@@ -670,29 +671,12 @@ export default function Realisations() {
       </AnimatePresence>
 
       {/* CTA */}
-      <section className="section-padding bg-primary text-primary-foreground">
-        <div className="container-custom text-center">
-          <motion.div
-            className="max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6">
-              Votre projet nous intéresse
-            </h2>
-            <p className="text-primary-foreground/80 text-lg mb-8">
-              Envie d'une transformation similaire ? Contactez-nous pour une étude gratuite.
-            </p>
-            <Button variant="cta" size="xl" asChild>
-              <Link to="/devis#devis-form">
-                Demander un devis gratuit
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </Button>
-          </motion.div>
-        </div>
-      </section>
+      <PageCTA
+        title="Vous imaginez cette transformation chez vous ?"
+        description="Nous adaptons chaque projet à votre espace, vos contraintes et votre budget."
+        buttonText="Je veux la même transformation chez moi"
+        variant="dark"
+      />
     </Layout>
   );
 }

@@ -78,7 +78,7 @@ export function MobileStickyNav() {
             className="flex-1 flex items-center justify-center gap-2 bg-cta hover:bg-cta-hover text-white py-3 px-4 rounded-xl font-medium text-sm transition-all active:scale-95"
           >
             <Calendar className="w-4 h-4" />
-            Réserver un créneau
+            Parler de mon projet
           </button>
         </div>
       </motion.div>
