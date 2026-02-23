@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { OGTags } from "@/components/seo/OGTags";
-import { Shield, Award, Users, Clock, CheckCircle2, ArrowRight, Camera, PenTool } from "lucide-react";
+import { Shield, Award, Users, Clock, CheckCircle2, ArrowRight, Camera, Ruler } from "lucide-react";
 import { PageCTA } from "@/components/layout/PageCTA";
 import aboutHistoire from "@/assets/about-histoire.jpg";
 import teamPhoto from "@/assets/team-photo.jpg";
@@ -372,7 +372,7 @@ export default function About() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
                   <div className="w-16 h-16 rounded-2xl bg-white border border-border flex items-center justify-center mb-6">
-                    <PenTool className="w-8 h-8 text-accent" strokeWidth={1.5} />
+                    <Ruler className="w-8 h-8 text-accent" strokeWidth={1.5} />
                   </div>
                   <h3 className="font-display text-3xl md:text-4xl font-semibold mb-4 text-white">
                     Thierry Pelmard – Architecte d'intérieur
