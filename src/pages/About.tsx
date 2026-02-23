@@ -289,7 +289,7 @@ export default function About() {
                       <path d="M12 7v1" />
                     </svg>
                   </div>
-                  <h3 className="font-display text-3xl md:text-4xl font-semibold mb-4 text-gold">
+                  <h3 className="font-display text-3xl md:text-4xl font-semibold mb-4 text-white">
                     Carina Nahmani – Maître d'œuvre
                   </h3>
                   <div className="space-y-4 text-primary-foreground/80 leading-relaxed">
