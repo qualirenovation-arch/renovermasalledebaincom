@@ -85,6 +85,14 @@ const Guide = () => {
           "text": "Obligation DTU 52.2 : nous utilisons des systèmes certifiés (Schlüter, Wedi, Weber Aquastop) avec SEL/SPEC et bandes d'étanchéité. Garantie 10 ans + décennale MIC Assurances."
         }
       },
+      {
+        "@type": "Question",
+        "name": "Comment choisir sa paroi de douche ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Le choix d'une paroi de douche repose sur 3 critères : le type d'ouverture (fixe, coulissante ou pivotante selon l'espace disponible), la couleur du profilé (noir mat, laiton, chromé) à harmoniser avec la robinetterie, et le type de verre (transparent, dépoli ou sérigraphié) en 6 à 8 mm minimum avec traitement anticalcaire conseillé."
+        }
+      },
     ]
   };
 
@@ -308,6 +316,10 @@ const Guide = () => {
               <a href="#section-13" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
                 <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">13</span>
                 <span className="line-clamp-1">Éclairage & chauffage</span>
+              </a>
+              <a href="#section-paroi" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
+                <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">14</span>
+                <span className="line-clamp-1">Paroi de douche</span>
               </a>
             </div>
           </motion.div>
@@ -1792,7 +1804,169 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Section 14 – Paroi de douche */}
+      <section id="section-paroi" className="py-16 bg-background scroll-mt-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <span className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold">14</span>
+              <h2 className="text-2xl md:text-3xl font-serif text-foreground">
+                Paroi de douche : quelle ouverture, quelle couleur et quel verre choisir ?
+              </h2>
+            </div>
+
+            <div className="text-muted-foreground space-y-4 mb-12">
+              <p>
+                Choisir une <strong>paroi de douche sur mesure</strong> ne se limite pas à une question esthétique.
+                Le type d'ouverture, la finition des profilés et le choix du verre influencent le <strong>confort</strong>, l'<strong>entretien</strong> et la <strong>durabilité</strong> de votre rénovation salle de bain.
+              </p>
+              <p>
+                Voici les 3 éléments essentiels à considérer avant de faire votre choix.
+              </p>
+            </div>
+
+            {/* Sous-section 1 – Type d'ouverture */}
+            <div className="mb-12">
+              <h3 className="text-xl md:text-2xl font-serif text-foreground mb-6 flex items-center gap-2">
+                <Shield className="w-5 h-5 text-primary" />
+                Quel type d'ouverture choisir ?
+              </h3>
+              <div className="grid gap-4">
+                <div className="bg-accent/20 rounded-xl p-6">
+                  <h4 className="font-semibold text-foreground mb-2">Paroi fixe</h4>
+                  <p className="text-muted-foreground">
+                    Minimaliste et épurée, elle est idéale pour une <strong>douche italienne</strong> ouverte. Pas de porte, pas de mécanisme : juste du verre. Elle nécessite un bon dimensionnement pour éviter les éclaboussures tout en conservant une circulation fluide.
+                  </p>
+                </div>
+                <div className="bg-accent/20 rounded-xl p-6">
+                  <h4 className="font-semibold text-foreground mb-2">Porte coulissante</h4>
+                  <p className="text-muted-foreground">
+                    Le meilleur choix pour les <strong>petites surfaces</strong>. Elle ne nécessite aucun dégagement et permet un gain de place précieux dans les salles de bain étroites. Idéale en <strong>rénovation salle de bain en Île-de-France</strong>.
+                  </p>
+                </div>
+                <div className="bg-accent/20 rounded-xl p-6">
+                  <h4 className="font-semibold text-foreground mb-2">Porte battante ou pivotante</h4>
+                  <p className="text-muted-foreground">
+                    Elle offre un <strong>confort d'accès maximal</strong> et une ouverture large. En revanche, elle nécessite un espace de dégagement suffisant devant la douche.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-4 bg-primary/5 border border-primary/20 rounded-xl p-4 flex items-start gap-3">
+                <Lightbulb className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-muted-foreground">
+                  Le choix dépend toujours de la <strong>surface disponible</strong> et de la <strong>circulation dans la pièce</strong>. C'est un point que nous analysons systématiquement lors de la visite technique.
+                </p>
+              </div>
+            </div>
+
+            {/* Sous-section 2 – Couleur du profilé */}
+            <div className="mb-12">
+              <h3 className="text-xl md:text-2xl font-serif text-foreground mb-6 flex items-center gap-2">
+                <Paintbrush className="w-5 h-5 text-primary" />
+                Quelle couleur de profilé choisir ?
+              </h3>
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="bg-accent/20 rounded-xl p-6 text-center">
+                  <div className="w-12 h-12 rounded-full bg-foreground mx-auto mb-3" />
+                  <h4 className="font-semibold text-foreground mb-2">Noir mat</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Style atelier, contemporain. Très tendance, il structure l'espace et apporte du caractère.
+                  </p>
+                </div>
+                <div className="bg-accent/20 rounded-xl p-6 text-center">
+                  <div className="w-12 h-12 rounded-full bg-gold mx-auto mb-3" />
+                  <h4 className="font-semibold text-foreground mb-2">Laiton / Doré brossé</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Ambiance chaleureuse et raffinée. Parfait pour les salles de bain à l'esprit boutique-hôtel.
+                  </p>
+                </div>
+                <div className="bg-accent/20 rounded-xl p-6 text-center">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-muted to-background border border-border mx-auto mb-3" />
+                  <h4 className="font-semibold text-foreground mb-2">Chromé</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Intemporel et facile à harmoniser. Le choix sûr, qui s'adapte à tous les styles.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-4 bg-primary/5 border border-primary/20 rounded-xl p-4 flex items-start gap-3">
+                <Lightbulb className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-muted-foreground">
+                  Toujours <strong>harmoniser la paroi avec la robinetterie et les accessoires</strong> (porte-serviettes, plaque de chasse, sèche-serviettes) pour un rendu cohérent et soigné.
+                </p>
+              </div>
+            </div>
+
+            {/* Sous-section 3 – Type de verre */}
+            <div className="mb-8">
+              <h3 className="text-xl md:text-2xl font-serif text-foreground mb-6 flex items-center gap-2">
+                <Eye className="w-5 h-5 text-primary" />
+                Quel type de verre sélectionner ?
+              </h3>
+              <div className="grid gap-4">
+                <div className="bg-accent/20 rounded-xl p-6">
+                  <h4 className="font-semibold text-foreground mb-2">Verre transparent</h4>
+                  <p className="text-muted-foreground">
+                    Agrandit visuellement l'espace. C'est le choix le plus courant pour les <strong>douches italiennes</strong>, car il laisse circuler la lumière et met en valeur le carrelage.
+                  </p>
+                </div>
+                <div className="bg-accent/20 rounded-xl p-6">
+                  <h4 className="font-semibold text-foreground mb-2">Verre dépoli</h4>
+                  <p className="text-muted-foreground">
+                    Plus d'intimité, tout en conservant la luminosité. Idéal pour les configurations ouvertes sur la chambre ou les salles de bain partagées.
+                  </p>
+                </div>
+                <div className="bg-accent/20 rounded-xl p-6">
+                  <h4 className="font-semibold text-foreground mb-2">Verre sérigraphié</h4>
+                  <p className="text-muted-foreground">
+                    Effet décoratif avec des motifs imprimés. Permet de personnaliser la paroi tout en préservant l'intimité.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-4 bg-primary/5 border border-primary/20 rounded-xl p-4 flex items-start gap-3">
+                <Lightbulb className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <div className="text-sm text-muted-foreground space-y-1">
+                  <p><strong>Épaisseur recommandée :</strong> 6 à 8 mm minimum pour la solidité et la sécurité.</p>
+                  <p><strong>Traitement anticalcaire :</strong> vivement conseillé pour faciliter l'entretien au quotidien.</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Paroi */}
+      <section className="py-16 md:py-24 bg-stone">
+        <div className="container-custom text-center">
+          <motion.div
+            className="max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="w-16 h-1 rounded-full bg-gold mx-auto mb-8" />
+            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold mb-5 md:mb-6">
+              Vous hésitez sur le choix de votre paroi de douche ?
+            </h2>
+            <p className="text-base md:text-lg mb-10 md:mb-12 leading-relaxed text-muted-foreground">
+              Nous étudions votre configuration pour vous proposer une solution adaptée à votre espace et à votre budget.
+            </p>
+            <Button variant="gold" size="xl" asChild className="rounded-full">
+              <Link to="/devis#devis-form">
+                Je fais analyser mon projet
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA général */}
       <PageCTA
         title="Besoin d'un avis professionnel ?"
         description="Avant de vous lancer, faisons le point ensemble."
