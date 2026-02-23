@@ -32,7 +32,14 @@ const footerLinks = {
     label: "Devenir partenaire",
     path: "/partenaires/contact"
   }],
-  services: ["Création de douche à l'italienne", "Rénovation salle de bain", "Étanchéité garantie", "Pose de carrelage", "Installation receveur", "Parois sur mesure"]
+  services: [
+    { label: "Création de douche à l'italienne", path: "/guide-travaux#section-7" },
+    { label: "Rénovation salle de bain", path: "/guide-travaux" },
+    { label: "Étanchéité garantie", path: "/guide-travaux#section-6" },
+    { label: "Pose de carrelage", path: "/guide-travaux#section-8" },
+    { label: "Installation receveur", path: "/guide-travaux#section-7" },
+    { label: "Parois sur mesure", path: "/guide-travaux#section-9" }
+  ]
 };
 export function Footer() {
   return <footer className="bg-primary text-primary-foreground">
@@ -75,8 +82,10 @@ export function Footer() {
           <div>
             <h4 className="font-display text-[16px] font-semibold mb-3">Nos services</h4>
             <ul className="space-y-1.5">
-              {footerLinks.services.map((service, index) => <li key={index} className="text-[14px] text-primary-foreground/80 font-sans">
-                  {service}
+              {footerLinks.services.map((service, index) => <li key={index}>
+                  <Link to={service.path} className="text-[14px] text-primary-foreground/80 hover:text-primary-foreground transition-colors font-sans">
+                    {service.label}
+                  </Link>
                 </li>)}
             </ul>
           </div>
