@@ -3,7 +3,8 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ChevronLeft, ChevronRight, X, ArrowRight } from "lucide-react";
+import { ArrowLeft, ChevronLeft, ChevronRight, X } from "lucide-react";
+import { AlbumCTA } from "@/components/albums/AlbumCTA";
 import { OGTags } from "@/components/seo/OGTags";
 import { OG_BASE_URL, getAlbumOgData } from "@/lib/og";
 import { Album, Photo } from "@/data/albumsData";
@@ -303,37 +304,10 @@ const ProjetDetail = () => {
             </div>
           </motion.div>
 
-          {/* CTA Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="mt-16 text-center p-8 md:p-12 bg-gradient-to-br from-wood/10 to-wood/5 rounded-2xl"
-          >
-            <h2 className="font-display text-2xl md:text-3xl font-semibold mb-4">
-              Vous souhaitez une salle de bain similaire ?
-            </h2>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Que ce soit pour y habiter, pour le louer ou pour le remettre à la vente, une salle de bain bien pensée constitue un véritable levier de valeur immobilière.
-            </p>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto italic">
-              Ce projet illustre parfaitement notre approche : un chantier heureux, fondé sur l'anticipation, la coordination des travaux et la sérénité du client.
-            </p>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Nos experts vous accompagnent de A à Z dans votre projet de rénovation.
-              <br />
-              👉 Demandez votre devis gratuit et sans engagement.
-            </p>
-            <Link
-              to="/devis"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-wood hover:bg-wood-dark text-white rounded-lg transition-colors font-medium"
-            >
-              Demander un devis gratuit
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </motion.div>
         </div>
       </section>
+
+      <AlbumCTA album={album} />
 
       {/* Lightbox */}
       <AnimatePresence>
