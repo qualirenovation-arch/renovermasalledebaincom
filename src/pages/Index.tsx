@@ -173,8 +173,8 @@ export default function Index() {
             {advantages.map((item, index) => (
               <StaggerItem key={index}>
                 <div className="flex items-start gap-4 p-6 md:p-8 bg-card rounded-2xl border border-border/50 shadow-sm hover:shadow-lg hover:border-gold/30 transition-all duration-300 h-full">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center">
-                    <item.icon className="w-7 h-7 text-gold" strokeWidth={1.5} />
+                  <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-white border border-border flex items-center justify-center">
+                    <item.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
                   </div>
                   <div>
                     <h3 className="font-display font-semibold text-lg md:text-xl mb-2">{item.title}</h3>
@@ -208,8 +208,8 @@ export default function Index() {
               <Link to="/devis#devis-form" className="block h-full">
                 <div className="bg-stone rounded-2xl p-6 md:p-10 h-full hover:shadow-lg hover:border-gold/30 border border-transparent transition-all duration-300">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-wood/10 flex items-center justify-center">
-                      <svg className="w-6 h-6 md:w-8 md:h-8 text-wood" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl bg-white border border-border flex items-center justify-center">
+                      <svg className="w-6 h-6 md:w-8 md:h-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M4 12h16a1 1 0 0 1 1 1v3a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-3a1 1 0 0 1 1-1z"/>
                         <path d="M6 12V5a2 2 0 0 1 2-2h3"/>
                         <circle cx="12" cy="5" r="1"/>
@@ -218,9 +218,9 @@ export default function Index() {
                     <h3 className="font-display text-xl md:text-2xl font-semibold">Plutôt baignoire</h3>
                   </div>
                   <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-center gap-3"><span className="text-wood text-lg">•</span>Vous aimez prendre le temps</li>
-                    <li className="flex items-center gap-3"><span className="text-wood text-lg">•</span>Vous avez des enfants</li>
-                    <li className="flex items-center gap-3"><span className="text-wood text-lg">•</span>Côté cocooning et intemporel</li>
+                    <li className="flex items-center gap-3"><span className="text-primary text-lg">•</span>Vous aimez prendre le temps</li>
+                    <li className="flex items-center gap-3"><span className="text-primary text-lg">•</span>Vous avez des enfants</li>
+                    <li className="flex items-center gap-3"><span className="text-primary text-lg">•</span>Côté cocooning et intemporel</li>
                   </ul>
                   <div className="mt-4 flex items-center gap-2 text-gold font-medium text-sm">
                     Demander un devis <ArrowRight className="w-4 h-4" />
@@ -234,8 +234,8 @@ export default function Index() {
               <Link to="/devis#devis-form" className="block h-full">
                 <div className="bg-accent/30 rounded-2xl p-6 md:p-10 h-full hover:shadow-lg hover:border-gold/30 border border-transparent transition-all duration-300">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-foreground/10 flex items-center justify-center">
-                      <svg className="w-6 h-6 md:w-8 md:h-8 text-foreground" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl bg-white border border-border flex items-center justify-center">
+                      <svg className="w-6 h-6 md:w-8 md:h-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M4 4a2 2 0 0 1 2-2h.5a2 2 0 0 1 2 2v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V4a2 2 0 0 1 2-2h.5a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4z"/>
                         <path d="M6 8v2m3-2v4m3-4v2m3-2v4"/>
                         <path d="M10 8v12"/>
@@ -244,9 +244,9 @@ export default function Index() {
                     <h3 className="font-display text-xl md:text-2xl font-semibold">Plutôt douche</h3>
                   </div>
                   <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-center gap-3"><span className="text-wood text-lg">•</span>Praticité au quotidien</li>
-                    <li className="flex items-center gap-3"><span className="text-wood text-lg">•</span>Gain d'espace</li>
-                    <li className="flex items-center gap-3"><span className="text-wood text-lg">•</span>Accessibilité et fluidité</li>
+                    <li className="flex items-center gap-3"><span className="text-primary text-lg">•</span>Praticité au quotidien</li>
+                    <li className="flex items-center gap-3"><span className="text-primary text-lg">•</span>Gain d'espace</li>
+                    <li className="flex items-center gap-3"><span className="text-primary text-lg">•</span>Accessibilité et fluidité</li>
                   </ul>
                   <div className="mt-4 flex items-center gap-2 text-gold font-medium text-sm">
                     Demander un devis <ArrowRight className="w-4 h-4" />
@@ -261,7 +261,7 @@ export default function Index() {
             <Link to="/pourquoi-nous" className="block max-w-2xl mx-auto">
               <div className="text-center bg-foreground/5 rounded-2xl p-6 md:p-10 hover:shadow-lg hover:bg-foreground/10 transition-all duration-300 cursor-pointer">
                 <div className="flex items-center justify-center gap-3 mb-3">
-                  <Sparkles className="w-6 h-6 text-wood" strokeWidth={2} />
+                  <Sparkles className="w-6 h-6 text-primary" strokeWidth={1.5} />
                   <span className="font-display font-semibold text-lg md:text-xl">Notre rôle</span>
                 </div>
                 <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
@@ -420,7 +420,7 @@ export default function Index() {
             ].map((item, index) => (
               <StaggerItem key={index}>
                 <div className="text-center p-6 md:p-8 bg-card rounded-2xl border border-border/50 hover:border-gold/30 hover:shadow-lg transition-all duration-300 h-full">
-                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gold/10 flex items-center justify-center mx-auto mb-4 md:mb-5 text-gold">
+                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white border border-border flex items-center justify-center mx-auto mb-4 md:mb-5 text-primary">
                     {item.icon}
                   </div>
                   <h3 className="font-display text-sm md:text-base font-semibold mb-2">{item.title}</h3>

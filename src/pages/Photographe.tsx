@@ -47,7 +47,7 @@ export default function Photographe() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block px-4 py-2 rounded-full bg-accent/30 text-wood text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-2 rounded-full bg-white border border-border text-primary text-sm font-medium mb-6">
               Notre photographe partenaire
             </span>
             <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6">
@@ -118,8 +118,8 @@ export default function Photographe() {
                 transition={{ delay: 0.2 }}
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-accent/30 flex items-center justify-center">
-                    <Camera className="w-8 h-8 text-accent" />
+                  <div className="w-16 h-16 rounded-2xl bg-white/20 border border-white/10 flex items-center justify-center">
+                    <Camera className="w-8 h-8 text-accent" strokeWidth={1.5} />
                   </div>
                   <div>
                     <h3 className="font-display text-xl font-semibold">Stéphane Vasco</h3>
@@ -241,8 +241,8 @@ export default function Photographe() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <div className="w-14 h-14 rounded-2xl bg-accent/30 flex items-center justify-center mx-auto mb-4">
-                  <specialty.icon className="w-7 h-7 text-wood" />
+                <div className="w-14 h-14 rounded-2xl bg-white border border-border flex items-center justify-center mx-auto mb-4">
+                  <specialty.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-display text-lg font-semibold mb-2">{specialty.title}</h3>
                 <p className="text-muted-foreground text-sm">{specialty.description}</p>
