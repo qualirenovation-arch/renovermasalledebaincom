@@ -264,6 +264,9 @@ const ProjetDetail = () => {
             ))}
           </div>
 
+          {/* CTA Button after photos */}
+          <AlbumCTA album={album} />
+
           {/* Navigation between projects */}
           <motion.div 
             className="mt-12 pt-8 border-t border-border"
@@ -307,9 +310,8 @@ const ProjetDetail = () => {
         </div>
       </section>
 
-      <AlbumCTA album={album} />
 
-      {/* Lightbox */}
+
       <AnimatePresence>
         {selectedPhotoIndex !== null && currentPhoto && (
           <motion.div
