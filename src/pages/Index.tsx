@@ -309,9 +309,9 @@ export default function Index() {
           {/* Carrousel mobile / Grille desktop */}
           <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:pb-0">
             {[
-              { img: jemmapes1, style: "Élégance parisienne", location: "Paris 10ème", tag: "Douche italienne", borderClass: "photo-card-beige" },
-              { img: vincennesMr1, style: "Contemporain épuré", location: "Vincennes", tag: "Finitions soignées", borderClass: "photo-card-terracotta" },
-              { img: nicolasRoretDouche, style: "Zellige & Laiton", location: "Paris 13ème", tag: "Robinetterie dorée", borderClass: "photo-card-mint" }
+              { img: jemmapes1, style: "Élégance parisienne", location: "Paris 10ème", tag: "Douche italienne", borderClass: "photo-card-beige", slug: "salle-de-bain-paris-10-renovation-style-masculin-jemmapes" },
+              { img: vincennesMr1, style: "Contemporain épuré", location: "Vincennes", tag: "Finitions soignées", borderClass: "photo-card-terracotta", slug: "salle-de-bain-vincennes-94-mr-renovation-noir-blanc" },
+              { img: nicolasRoretDouche, style: "Zellige & Laiton", location: "Paris 13ème", tag: "Robinetterie dorée", borderClass: "photo-card-mint", slug: "salle-de-bain-paris-13-renovation-zellige-turquoise-or" }
             ].map((project, index) => (
               <motion.div
                 key={index}
@@ -321,19 +321,21 @@ export default function Index() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15 }}
               >
-                <div className={`aspect-[3/4] ${project.borderClass} mb-4 md:mb-5 overflow-hidden`}>
-                  <img
-                    src={project.img}
-                    alt={`${project.style} ${project.location}`}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 className="font-display text-lg md:text-xl font-semibold text-foreground mb-1 text-center">{project.style}</h3>
-                <p className="text-muted-foreground text-sm mb-2 text-center">{project.location}</p>
-                <div className="text-center">
-                  <span className="tag-beige text-xs">{project.tag}</span>
-                </div>
+                <Link to={`/realisations/${project.slug}`} className="block">
+                  <div className={`aspect-[3/4] ${project.borderClass} mb-4 md:mb-5 overflow-hidden`}>
+                    <img
+                      src={project.img}
+                      alt={`${project.style} ${project.location}`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </div>
+                  <h3 className="font-display text-lg md:text-xl font-semibold text-foreground mb-1 text-center">{project.style}</h3>
+                  <p className="text-muted-foreground text-sm mb-2 text-center">{project.location}</p>
+                  <div className="text-center">
+                    <span className="tag-beige text-xs">{project.tag}</span>
+                  </div>
+                </Link>
               </motion.div>
             ))}
           </div>
