@@ -289,7 +289,7 @@ export default function About() {
                 </div>
 
                 <div>
-                  <div className="w-20 h-20 rounded-2xl bg-white border border-border flex items-center justify-center mx-auto lg:mx-0 mb-6">
+                  <div className="w-20 h-20 rounded-2xl bg-white/20 border border-white/10 flex items-center justify-center mx-auto lg:mx-0 mb-6">
                     <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-accent">
                       <path d="M2 20h20" />
                       <path d="M5 20V7l7-4 7 4v13" />
