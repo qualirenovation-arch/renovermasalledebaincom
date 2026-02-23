@@ -390,6 +390,7 @@ export default function FAQ() {
             {faqCategories.map((category, categoryIndex) => (
               <motion.div
                 key={categoryIndex}
+                id={category.title === "Rénovation salle de bain" ? "renovation-salle-de-bain" : undefined}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
