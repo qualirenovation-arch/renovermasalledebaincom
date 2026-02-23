@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
+import { PageCTA } from "@/components/layout/PageCTA";
 import { ArrowRight, ExternalLink, Calendar, Newspaper, Star } from "lucide-react";
 import { OGTags } from "@/components/seo/OGTags";
 
@@ -639,6 +640,11 @@ export default function Presse() {
           </motion.div>
         </div>
       </section>
+      <PageCTA
+        title="Envie d'une salle de bain digne d'un magazine ?"
+        description="Nos réalisations font parler d'elles. Et la vôtre pourrait être la prochaine."
+        buttonText="Je veux un projet d'exception"
+      />
     </Layout>
   );
 }

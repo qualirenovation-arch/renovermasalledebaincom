@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollAnimation } from "@/components/ui/scroll-animation";
 import { Star, ArrowRight, ExternalLink, CheckCircle2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { PageCTA } from "@/components/layout/PageCTA";
 import { usePublicAlbums } from "@/hooks/usePublicAlbums";
 import { OGTags } from "@/components/seo/OGTags";
 import { InstagramVideoCard } from "@/components/ui/instagram-video-card";
@@ -221,32 +221,11 @@ export default function Avis() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-12 md:py-16 bg-stone">
-        <div className="container-custom">
-          <ScrollAnimation className="text-center max-w-2xl mx-auto">
-            <h2 className="font-display text-2xl md:text-3xl font-semibold mb-4">
-              Rejoignez nos clients satisfaits
-            </h2>
-            <p className="text-muted-foreground mb-8">
-              Demandez votre devis gratuit et bénéficiez d'un accompagnement personnalisé pour votre projet de rénovation.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button variant="cta" size="lg" asChild>
-                <Link to="/devis#devis-form">
-                  Demander un devis gratuit
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <Link to="/realisations">
-                  Voir toutes nos réalisations
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </Button>
-            </div>
-          </ScrollAnimation>
-        </div>
-      </section>
+      <PageCTA
+        title="Vous aussi, vivez une rénovation sereine"
+        description="Rejoignez nos clients satisfaits et bénéficiez d'un accompagnement sur-mesure."
+        buttonText="Je demande mon étude personnalisée"
+      />
     </Layout>
   );
 }

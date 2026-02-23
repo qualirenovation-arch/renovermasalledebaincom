@@ -1,9 +1,8 @@
 import { Layout } from "@/components/layout/Layout";
 import { motion } from "framer-motion";
 import { OGTags } from "@/components/seo/OGTags";
-import { AlertTriangle, ArrowRight, ClipboardList, HardHat, HelpCircle, ChevronDown, Droplets } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { AlertTriangle, ClipboardList, HardHat, HelpCircle, ChevronDown, Droplets } from "lucide-react";
+import { PageCTA } from "@/components/layout/PageCTA";
 import { useState } from "react";
 import { LazyVideo } from "@/components/ui/lazy-video";
 
@@ -262,19 +261,11 @@ const DegatsEaux = () => {
         </div>
       </section>
 
-      {/* CTA final */}
-      <section className="py-8 md:py-10 bg-background">
-        <div className="container-custom max-w-2xl mx-auto text-center">
-          <Link to="/devis?type=degat_eaux#devis-form">
-            <Button variant="cta" size="lg" className="group">
-              Être accompagné après un dégât des eaux
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </Link>
-        </div>
-      </section>
-
-
+      <PageCTA
+        title="Besoin d'être accompagné après un sinistre ?"
+        description="On prend en charge votre dossier, de l'expertise à la remise en état."
+        buttonText="Je me fais accompagner"
+      />
     </Layout>
   );
 };
