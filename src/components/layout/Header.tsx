@@ -54,18 +54,18 @@ export function Header() {
         {/* Mobile layout */}
         <div className="flex xl:hidden items-center h-20 px-1">
           <button
-            className="p-2 text-foreground hover:bg-secondary rounded-lg transition-colors flex-shrink-0 z-10"
+            className="p-3 text-foreground hover:bg-secondary rounded-lg transition-colors flex-shrink-0 z-10"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Menu"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </button>
           
           <Link to="/" className="flex items-center flex-1 min-w-0 ml-1 mr-3">
-            <RMSBTextLogo size="lg" variant="dark" className="h-20 sm:h-24 w-auto max-w-[65vw]" />
+            <RMSBTextLogo size="lg" variant="dark" className="h-20 sm:h-24 w-auto max-w-[55vw]" />
           </Link>
           
-          <Button variant="cta" size="sm" asChild className="text-xs px-3 py-1.5 flex-shrink-0 ml-auto">
+          <Button variant="cta" size="default" asChild className="text-sm px-5 py-2.5 flex-shrink-0 ml-auto font-semibold shadow-md">
             <Link to="/devis#devis-form">Mon étude</Link>
           </Button>
         </div>
