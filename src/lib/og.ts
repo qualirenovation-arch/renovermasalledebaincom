@@ -65,7 +65,7 @@ export const PAGE_OG_CONFIG: Record<string, {
   },
   "/realisations": {
     title: "Nos réalisations",
-    description: "Découvrez nos rénovations de salles de bain à Paris et IDF : zellige, marbre, terrazzo. Avant/Après de nos chantiers.",
+    description: "Découvrez nos rénovations de salles de bain à Paris et Île-de-France : zellige, marbre, terrazzo. Avant/Après de nos chantiers.",
     subtitle: "Paris & Île-de-France"
   },
   "/guide-travaux": {
