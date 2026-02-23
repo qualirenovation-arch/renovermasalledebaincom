@@ -237,12 +237,14 @@ export default function Index() {
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl bg-white border border-border flex items-center justify-center">
                       <svg className="w-6 h-6 md:w-8 md:h-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M12 3v3"/>
-                        <path d="M8 6l1.5 2"/>
-                        <path d="M16 6l-1.5 2"/>
-                        <path d="M10 8h4a1 1 0 0 1 1 1v1H9V9a1 1 0 0 1 1-1z"/>
-                        <path d="M12 10v10"/>
-                        <rect x="8" y="20" width="8" height="1" rx="0.5"/>
+                        <path d="M4 4l9 9"/>
+                        <circle cx="14" cy="6" r="4"/>
+                        <path d="M14 10v2"/>
+                        <path d="M11.5 8.5L10 10"/>
+                        <path d="M16.5 8.5L18 10"/>
+                        <path d="M12 6h-2"/>
+                        <path d="M16 6h2"/>
+                        <path d="M14 4V2"/>
                       </svg>
                     </div>
                     <h3 className="font-display text-xl md:text-2xl font-semibold">Plutôt douche</h3>
