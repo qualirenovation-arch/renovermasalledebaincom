@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Handshake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function PartnerCTA() {
@@ -16,7 +16,12 @@ export function PartnerCTA() {
         >
           {/* Left: Text */}
           <div className="flex-1 text-center md:text-left">
-            <span className="text-sm font-medium text-muted-foreground mb-3 block">Réseau de confiance</span>
+            <div className="flex items-center justify-center md:justify-start gap-2.5 mb-3">
+              <div className="w-9 h-9 rounded-xl bg-white border border-border/60 flex items-center justify-center shadow-sm">
+                <Handshake className="w-4.5 h-4.5 text-primary" />
+              </div>
+              <span className="text-sm font-medium text-muted-foreground">Réseau de confiance</span>
+            </div>
             <h2 className="font-display text-xl md:text-2xl lg:text-3xl font-semibold mb-3">
               Rejoignez notre réseau de partenaires
             </h2>
