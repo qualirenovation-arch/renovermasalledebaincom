@@ -38,7 +38,7 @@ const footerLinks = {
     { label: "Étanchéité garantie", path: "/guide-travaux#section-6" },
     { label: "Pose de carrelage", path: "/guide-travaux#section-8" },
     { label: "Installation receveur", path: "/guide-travaux#section-7" },
-    { label: "Parois sur mesure", path: "/guide-travaux#section-9" }
+    { label: "Parois sur mesure", path: "/guide-travaux#section-paroi" }
   ]
 };
 export function Footer() {
