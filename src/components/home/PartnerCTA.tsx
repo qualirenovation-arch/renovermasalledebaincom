@@ -16,9 +16,9 @@ export function PartnerCTA() {
         >
           {/* Left: Text */}
           <div className="flex-1 text-center md:text-left">
-            <div className="flex items-center justify-center md:justify-start gap-2.5 mb-3">
-              <div className="w-9 h-9 rounded-xl bg-white border border-border/60 flex items-center justify-center shadow-sm">
-                <Handshake className="w-4.5 h-4.5 text-primary" />
+            <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+              <div className="w-14 h-14 rounded-xl bg-white border border-border flex items-center justify-center">
+                <Handshake className="w-7 h-7 text-primary" strokeWidth={1.5} />
               </div>
               <span className="text-sm font-medium text-muted-foreground">Réseau de confiance</span>
             </div>
