@@ -168,8 +168,8 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <div className="w-16 h-16 rounded-2xl bg-accent/30 flex items-center justify-center mx-auto mb-6">
-                  <value.icon className="w-8 h-8 text-wood" />
+                <div className="w-16 h-16 rounded-2xl bg-white border border-border flex items-center justify-center mx-auto mb-6">
+                  <value.icon className="w-8 h-8 text-accent" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-display text-xl font-semibold mb-3">{value.title}</h3>
                 <p className="text-muted-foreground">{value.description}</p>
@@ -195,8 +195,8 @@ export default function About() {
               <ul className="space-y-4">
                 {guarantees.map((guarantee, index) => (
                   <li key={index} className="flex items-center gap-4">
-                    <div className="w-8 h-8 rounded-full bg-accent/30 flex items-center justify-center flex-shrink-0">
-                      <CheckCircle2 className="w-5 h-5 text-wood" />
+                    <div className="w-8 h-8 rounded-xl bg-white border border-border flex items-center justify-center flex-shrink-0">
+                      <CheckCircle2 className="w-5 h-5 text-accent" strokeWidth={1.5} />
                     </div>
                     <span className="text-foreground">{guarantee}</span>
                   </li>
@@ -216,8 +216,8 @@ export default function About() {
               <ul className="space-y-4">
                 {certifications.map((cert, index) => (
                   <li key={index} className="flex items-center gap-4">
-                    <div className="w-8 h-8 rounded-full bg-accent/30 flex items-center justify-center flex-shrink-0">
-                      <Award className="w-5 h-5 text-wood" />
+                    <div className="w-8 h-8 rounded-xl bg-white border border-border flex items-center justify-center flex-shrink-0">
+                      <Award className="w-5 h-5 text-accent" strokeWidth={1.5} />
                     </div>
                     <span className="text-foreground">{cert}</span>
                   </li>
@@ -288,8 +288,8 @@ export default function About() {
                 </div>
 
                 <div>
-                  <div className="w-20 h-20 rounded-2xl bg-gold/15 flex items-center justify-center mx-auto lg:mx-0 mb-6">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-gold">
+                  <div className="w-20 h-20 rounded-2xl bg-white border border-border flex items-center justify-center mx-auto lg:mx-0 mb-6">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-accent">
                       <path d="M2 20h20" />
                       <path d="M5 20V7l7-4 7 4v13" />
                       <path d="M9 20v-5h6v5" />
@@ -365,8 +365,8 @@ export default function About() {
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
               <div className="text-center lg:text-left">
-                <div className="w-16 h-16 rounded-2xl bg-accent/30 flex items-center justify-center mx-auto lg:mx-0 mb-6">
-                  <PenTool className="w-8 h-8 text-wood" />
+                <div className="w-16 h-16 rounded-2xl bg-white/20 border border-white/10 flex items-center justify-center mx-auto lg:mx-0 mb-6">
+                  <PenTool className="w-8 h-8 text-accent" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-display text-2xl font-semibold mb-4">
                   Thierry Pelmard, notre architecte d'intérieur partenaire
@@ -460,8 +460,8 @@ export default function About() {
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
               <div className="text-center lg:text-left">
-                <div className="w-16 h-16 rounded-2xl bg-accent/30 flex items-center justify-center mx-auto lg:mx-0 mb-6">
-                  <Camera className="w-8 h-8 text-wood" />
+                <div className="w-16 h-16 rounded-2xl bg-white/20 border border-white/10 flex items-center justify-center mx-auto lg:mx-0 mb-6">
+                  <Camera className="w-8 h-8 text-accent" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-display text-2xl font-semibold mb-4">
                   Stéphane Vasco, notre photographe partenaire
