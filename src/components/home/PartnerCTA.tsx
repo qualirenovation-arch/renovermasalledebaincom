@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Users, Wrench, Handshake } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function PartnerCTA() {
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-r from-wood/10 via-gold/5 to-wood/10">
+    <section className="py-12 md:py-16 bg-background border-t border-border/50">
       <div className="container-custom">
         <motion.div
           className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12"
@@ -14,23 +14,9 @@ export function PartnerCTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          {/* Left: Icons + Text */}
+          {/* Left: Text */}
           <div className="flex-1 text-center md:text-left">
-            <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
-              <div className="flex -space-x-2">
-                <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center border-2 border-background">
-                  <Wrench className="w-5 h-5 text-gold" />
-                </div>
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center border-2 border-background">
-                  <Users className="w-5 h-5 text-primary" />
-                </div>
-                <div className="w-10 h-10 rounded-full bg-wood/20 flex items-center justify-center border-2 border-background">
-                  <Handshake className="w-5 h-5 text-wood" />
-                </div>
-              </div>
-              <span className="text-sm font-medium text-muted-foreground">Réseau de confiance</span>
-            </div>
-            
+            <span className="text-sm font-medium text-muted-foreground mb-3 block">Réseau de confiance</span>
             <h2 className="font-display text-xl md:text-2xl lg:text-3xl font-semibold mb-3">
               Rejoignez notre réseau de partenaires
             </h2>
@@ -49,6 +35,7 @@ export function PartnerCTA() {
             >
               <Link to="/partenaires/contact">
                 Devenir partenaire
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>
           </div>
