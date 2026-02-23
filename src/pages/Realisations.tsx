@@ -169,7 +169,7 @@ export default function Realisations() {
     <Layout>
       <OGTags
         title="Nos réalisations de salles de bain"
-        description="Découvrez nos rénovations de salles de bain à Paris et IDF : zellige, marbre, terrazzo. Avant/Après de nos chantiers. Des projets premium, livrés sereinement."
+        description="Découvrez nos rénovations de salles de bain à Paris et Île-de-France : zellige, marbre, terrazzo. Avant/Après de nos chantiers. Des projets premium, livrés sereinement."
         path="/realisations"
         coverImage="https://renovermasalledebain.com/og/realisations.jpg"
       />
@@ -182,7 +182,7 @@ export default function Realisations() {
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6">
-              Nos réalisations de salles de bain à Paris et IDF
+              Nos réalisations de salles de bain à Paris et Île-de-France
             </h1>
             <p className="text-muted-foreground text-lg">
               Chaque projet présenté ici est conçu pour garantir un chantier heureux, sans stress et avec un résultat durable.
