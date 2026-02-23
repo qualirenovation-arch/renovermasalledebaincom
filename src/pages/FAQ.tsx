@@ -183,6 +183,29 @@ const faqCategories = [
     ]
   },
   {
+    title: "Pose carrelage salle de bain à Paris",
+    questions: [
+      {
+        question: "Quels sont les différents types de pose de carrelage salle de bain ?",
+        answer: "En rénovation salle de bain à Paris, les principaux types de pose de carrelage sont : Pose droite (alignée) — idéale pour carrelage grand format 60×60 ou 120×60. Pose décalée (1/3 recommandé) — adaptée aux formats rectangulaires et imitation parquet. Pose chevron / en V — pose technique et haut de gamme. Le choix dépend du format du carreau, de la surface et de la planéité du support.",
+        guideLink: "/guide-travaux#section-8"
+      },
+      {
+        question: "Le type de pose influence-t-il le prix de la pose carrelage ?",
+        answer: "Oui. Une pose droite salle de bain est plus rapide à exécuter qu'une pose chevron, qui nécessite découpes précises et calepinage millimétré. À Paris : Pose droite — 90 €/m² ; Pose chevron — 120 €/m². Le tarif inclut primaire, colle adaptée et joint."
+      },
+      {
+        question: "Quel type de pose choisir pour un carrelage grand format ?",
+        answer: "Pour un carrelage grand format (60×60, 120×60), la pose droite est recommandée pour limiter les défauts visuels. Une pose décalée 50 % est déconseillée car elle accentue les irrégularités du support. Le double encollage et une colle déformable C2S1 ou S2 sont indispensables."
+      },
+      {
+        question: "Le type de pose change-t-il la préparation du support ?",
+        answer: "Oui. Une pose chevron ou décalée exige un support parfaitement plan. Un ragréage sol peut être nécessaire avant la pose du carrelage. En douche italienne, l'étanchéité autour du receveur type Wedi est obligatoire, quel que soit le type de pose choisi.",
+        guideLink: "/guide-travaux#section-6"
+      }
+    ]
+  },
+  {
     title: "Travaux et matériaux",
     questions: [
       {
