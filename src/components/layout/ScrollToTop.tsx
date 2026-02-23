@@ -2,14 +2,22 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 export function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    // Scroll to top on route change, unless there's a hash (anchor link)
-    if (!window.location.hash) {
+    if (hash) {
+      // Delay to allow framer-motion animations to render the target element
+      const timeout = setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 300);
+      return () => clearTimeout(timeout);
+    } else {
       window.scrollTo({ top: 0, behavior: "instant" });
     }
-  }, [pathname]);
+  }, [pathname, hash]);
 
   return null;
 }
