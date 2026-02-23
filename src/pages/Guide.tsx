@@ -1501,9 +1501,9 @@ const Guide = () => {
                 </div>
                 <div className="space-y-3">
                   <div className="flex flex-wrap gap-2 text-xs">
-                    <span className="bg-accent px-2 py-1 rounded-full">Spots trimless</span>
-                    <span className="bg-accent px-2 py-1 rounded-full">4000K</span>
-                    <span className="bg-accent px-2 py-1 rounded-full">IP44/65</span>
+                    <span className="bg-primary text-primary-foreground px-2 py-1 rounded-full font-medium">Spots trimless</span>
+                    <span className="bg-primary text-primary-foreground px-2 py-1 rounded-full font-medium">4000K</span>
+                    <span className="bg-primary text-primary-foreground px-2 py-1 rounded-full font-medium">IP44/65</span>
                   </div>
                   <p className="text-muted-foreground text-sm">
                     Sèche-serviette électrique ou mixte. Chauffe-eau accessible.
