@@ -327,17 +327,17 @@ export default function About() {
                       bien construit, dans les règles de l'art</strong>, porté par une équipe soudée et engagée.
                     </p>
                   </div>
-                  <div className="mt-8 flex flex-wrap gap-4">
-                    <span className="px-4 py-2 rounded-full bg-white/15 text-white text-sm font-bold">
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    <span className="px-3 py-1.5 rounded-full bg-white/15 text-white text-xs font-bold">
                       Chef d'orchestre
                     </span>
-                    <span className="px-4 py-2 rounded-full bg-white/15 text-white text-sm font-bold">
+                    <span className="px-3 py-1.5 rounded-full bg-white/15 text-white text-xs font-bold">
                       20+ ans d'expérience
                     </span>
-                    <span className="px-4 py-2 rounded-full bg-white/15 text-white text-sm font-bold">
+                    <span className="px-3 py-1.5 rounded-full bg-white/15 text-white text-xs font-bold">
                       Expertise DTU
                     </span>
-                    <span className="px-4 py-2 rounded-full bg-white/15 text-white text-sm font-bold">
+                    <span className="px-3 py-1.5 rounded-full bg-white/15 text-white text-xs font-bold">
                       Toujours disponible
                     </span>
                   </div>
