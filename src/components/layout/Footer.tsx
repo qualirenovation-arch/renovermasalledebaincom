@@ -33,7 +33,7 @@ const footerLinks = {
     path: "/partenaires/contact"
   }],
   services: [
-    { label: "Création de douche à l'italienne", path: "/guide-travaux#section-7" },
+    { label: "Création de douche à l'italienne", path: "/guide-travaux#questions-frequentes" },
     { label: "Rénovation salle de bain", path: "/guide-travaux" },
     { label: "Étanchéité garantie", path: "/guide-travaux#section-6" },
     { label: "Pose de carrelage", path: "/guide-travaux#section-8" },
