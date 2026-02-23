@@ -136,7 +136,7 @@ export default function WhyUs() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
               >
-                <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 rounded-xl bg-white border border-white/30 flex items-center justify-center mx-auto mb-4">
                    <Home className="w-6 h-6 text-accent" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-display text-lg font-bold mb-2">Adapté à votre vie</h3>
@@ -152,7 +152,7 @@ export default function WhyUs() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
               >
-                <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 rounded-xl bg-white border border-white/30 flex items-center justify-center mx-auto mb-4">
                    <Lightbulb className="w-6 h-6 text-accent" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-display text-lg font-bold mb-2">Solutions techniques</h3>
@@ -168,7 +168,7 @@ export default function WhyUs() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
               >
-                <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 rounded-xl bg-white border border-white/30 flex items-center justify-center mx-auto mb-4">
                    <Diamond className="w-6 h-6 text-accent" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-display text-lg font-bold mb-2">Confort optimal</h3>
