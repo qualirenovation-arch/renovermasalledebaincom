@@ -310,7 +310,7 @@ export default function Index() {
           <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:pb-0">
             {[
               { img: jemmapes1, style: "Élégance parisienne", location: "Paris 10ème", tag: "Douche italienne", borderClass: "photo-card-beige", slug: "salle-de-bain-paris-10-renovation-style-masculin-jemmapes" },
-              { img: vincennesMr1, style: "Contemporain épuré", location: "Vincennes", tag: "Finitions soignées", borderClass: "photo-card-terracotta", slug: "salle-de-bain-vincennes-94-mr-renovation-noir-blanc" },
+              { img: vincennesMr1, style: "Contemporain épuré", location: "Vincennes", tag: "Finitions soignées", borderClass: "photo-card-terracotta", slug: "salle-de-bain-paris-12-renovation-madame-marbre-rangements" },
               { img: nicolasRoretDouche, style: "Zellige & Laiton", location: "Paris 13ème", tag: "Robinetterie dorée", borderClass: "photo-card-mint", slug: "salle-de-bain-paris-13-renovation-zellige-turquoise-or" }
             ].map((project, index) => (
               <motion.div
