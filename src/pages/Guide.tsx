@@ -2015,32 +2015,6 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* CTA Paroi */}
-      <section className="py-16 md:py-24 bg-stone">
-        <div className="container-custom text-center">
-          <motion.div
-            className="max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="w-16 h-1 rounded-full bg-gold mx-auto mb-8" />
-            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold mb-5 md:mb-6">
-              Vous hésitez sur le choix de votre paroi de douche ?
-            </h2>
-            <p className="text-base md:text-lg mb-10 md:mb-12 leading-relaxed text-muted-foreground">
-              Nous étudions votre configuration pour vous proposer une solution adaptée à votre espace et à votre budget.
-            </p>
-            <Button variant="gold" size="xl" asChild className="rounded-full">
-              <Link to="/devis#devis-form">
-                Je fais analyser mon projet
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </Button>
-          </motion.div>
-        </div>
-      </section>
 
       {/* CTA général */}
       <PageCTA
