@@ -289,7 +289,7 @@ export default function About() {
                 </div>
 
                 <div>
-                  <div className="w-20 h-20 rounded-2xl bg-white/20 border border-white/10 flex items-center justify-center mx-auto lg:mx-0 mb-6">
+                  <div className="w-20 h-20 rounded-2xl bg-white border border-border flex items-center justify-center mx-auto lg:mx-0 mb-6">
                     <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-accent">
                       <path d="M2 20h20" />
                       <path d="M5 20V7l7-4 7 4v13" />
@@ -366,7 +366,7 @@ export default function About() {
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
               <div className="text-center lg:text-left">
-                <div className="w-16 h-16 rounded-2xl bg-white/20 border border-white/10 flex items-center justify-center mx-auto lg:mx-0 mb-6">
+                <div className="w-16 h-16 rounded-2xl bg-white border border-border flex items-center justify-center mx-auto lg:mx-0 mb-6">
                   <PenTool className="w-8 h-8 text-accent" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-display text-2xl font-semibold mb-4">
@@ -461,7 +461,7 @@ export default function About() {
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
               <div className="text-center lg:text-left">
-                <div className="w-16 h-16 rounded-2xl bg-white/20 border border-white/10 flex items-center justify-center mx-auto lg:mx-0 mb-6">
+                <div className="w-16 h-16 rounded-2xl bg-white border border-border flex items-center justify-center mx-auto lg:mx-0 mb-6">
                   <Camera className="w-8 h-8 text-accent" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-display text-2xl font-semibold mb-4">
