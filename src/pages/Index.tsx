@@ -237,16 +237,17 @@ export default function Index() {
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl bg-white border border-border flex items-center justify-center">
                       <svg className="w-6 h-6 md:w-8 md:h-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        {/* Pommeau incliné vers le haut */}
-                        <path d="M6 14l4-8"/>
-                        <ellipse cx="11" cy="4.5" rx="3" ry="1.5" transform="rotate(-25 11 4.5)"/>
-                        {/* Gouttes d'eau */}
-                        <path d="M9 9l-1 3"/>
-                        <path d="M11 8l0 3"/>
-                        <path d="M13 9l1 3"/>
-                        <path d="M8 14l-1.5 3"/>
-                        <path d="M11 13l0 3"/>
-                        <path d="M14 14l1.5 3"/>
+                        {/* Tuyau */}
+                        <path d="M4 4v4a2 2 0 0 0 2 2h6"/>
+                        {/* Tête de douche */}
+                        <path d="M12 6a4 4 0 0 1 4 4v1H12V6z"/>
+                        {/* Gouttes */}
+                        <line x1="13" y1="13" x2="12" y2="16"/>
+                        <line x1="14.5" y1="13" x2="13.5" y2="16"/>
+                        <line x1="16" y1="13" x2="15" y2="16"/>
+                        <line x1="13" y1="17" x2="12.5" y2="19"/>
+                        <line x1="15" y1="17" x2="14.5" y2="19"/>
+                        <line x1="14" y1="20" x2="13.5" y2="22"/>
                       </svg>
                     </div>
                     <h3 className="font-display text-xl md:text-2xl font-semibold">Plutôt douche</h3>
