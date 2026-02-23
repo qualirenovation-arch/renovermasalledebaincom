@@ -275,22 +275,11 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="max-w-4xl mx-auto text-center lg:text-left">
-              <div className="grid gap-8 lg:grid-cols-[220px_1fr] items-start">
-                <div className="mx-auto lg:mx-0 w-full max-w-[260px]">
-                  <div className="aspect-square rounded-2xl overflow-hidden bg-accent/10">
-                    <img
-                      src={carinaNahmani1}
-                      alt="Portrait de Carina Nahmani, maître d'œuvre"
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-
+            <div className="max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
-                  <div className="w-20 h-20 rounded-2xl bg-white border border-border flex items-center justify-center mx-auto lg:mx-0 mb-6">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-accent">
+                  <div className="w-16 h-16 rounded-2xl bg-white border border-border flex items-center justify-center mb-6">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-accent">
                       <path d="M2 20h20" />
                       <path d="M5 20V7l7-4 7 4v13" />
                       <path d="M9 20v-5h6v5" />
@@ -338,7 +327,7 @@ export default function About() {
                       bien construit, dans les règles de l'art</strong>, porté par une équipe soudée et engagée.
                     </p>
                   </div>
-                  <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
+                  <div className="mt-8 flex flex-wrap gap-4">
                     <span className="px-4 py-2 rounded-full bg-white/15 text-white text-sm font-bold">
                       Chef d'orchestre
                     </span>
@@ -353,6 +342,21 @@ export default function About() {
                     </span>
                   </div>
                 </div>
+
+                <motion.div
+                  className="aspect-[4/3] rounded-3xl overflow-hidden shadow-lg"
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                >
+                  <img
+                    src={carinaNahmani1}
+                    alt="Carina Nahmani, maître d'œuvre – renovermasalledebain.com"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </motion.div>
               </div>
             </div>
           </motion.div>
