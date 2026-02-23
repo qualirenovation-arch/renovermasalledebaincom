@@ -69,23 +69,19 @@ export function AlbumCTA({ album }: AlbumCTAProps) {
   const cta = getCTAForAlbum(album);
 
   return (
-    <section className="py-16 md:py-24 bg-stone">
-      <div className="container-custom text-center">
-        <motion.div
-          className="max-w-2xl mx-auto"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <Button variant="gold" size="xl" asChild className="rounded-full">
-            <Link to="/devis#devis-form">
-              {cta.buttonText}
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-          </Button>
-        </motion.div>
-      </div>
-    </section>
+    <motion.div
+      className="flex justify-center mt-12"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+    >
+      <Button variant="gold" size="xl" asChild className="rounded-full">
+        <Link to="/devis#devis-form">
+          {cta.buttonText}
+          <ArrowRight className="w-5 h-5 ml-2" />
+        </Link>
+      </Button>
+    </motion.div>
   );
 }
