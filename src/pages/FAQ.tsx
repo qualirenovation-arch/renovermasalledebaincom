@@ -412,8 +412,9 @@ export default function FAQ() {
           <div className="max-w-4xl mx-auto space-y-12">
             {faqCategories.map((category, categoryIndex) => (
               <motion.div
+                className="scroll-mt-24"
                 key={categoryIndex}
-                id={category.title === "Rénovation salle de bain" ? "renovation-salle-de-bain" : undefined}
+                id={category.title === "Rénovation salle de bain" ? "renovation-salle-de-bain" : category.title === "Pose carrelage salle de bain à Paris" ? "pose-carrelage" : undefined}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
