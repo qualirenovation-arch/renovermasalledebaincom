@@ -404,7 +404,7 @@ export default function WhyUs() {
               <blockquote className="font-display text-xl md:text-2xl italic mb-8">
                 "Je recommande avec beaucoup d'enthousiasme les prestations de QualiConcept. Carina a géré mon chantier avec beaucoup de professionnalisme et de rigueur, elle est très à l'écoute de ses clients. Le chantier a été livré dans le délai imparti, avec des finitions soignées et beaucoup de créativité. Le résultat est formidable et dépasse même mes ambitions initiales !"
               </blockquote>
-              <p className="text-primary-foreground font-semibold">— Marie C. <span className="text-accent underline ml-2">Voir sur Houzz →</span></p>
+              <p className="text-primary-foreground font-semibold">— Marie C. <span className="underline ml-2" style={{ color: '#C9B575' }}>Voir sur Houzz →</span></p>
             </a>
           </motion.div>
         </div>
