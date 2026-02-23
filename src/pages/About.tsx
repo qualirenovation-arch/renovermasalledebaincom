@@ -297,11 +297,11 @@ export default function About() {
                       Véritable <strong className="text-primary-foreground">chef d'orchestre de votre chantier</strong>, 
                       Carina Nahmani pilote chaque projet avec exigence, sang-froid et engagement.
                     </p>
-                    <p className="text-lg italic text-accent">
+                    <p className="text-lg italic" style={{ color: '#C9B575' }}>
                       Sa devise : seul on n'avance pas, en équipe oui.
                     </p>
                     <p>
-                      <strong className="text-accent">Femme du BTP</strong>, féminine et déterminée, elle possède la poigne 
+                      <strong style={{ color: '#C9B575' }}>Femme du BTP</strong>, féminine et déterminée, elle possède la poigne
                       nécessaire pour orchestrer l'ensemble des intervenants, gérer la pression des équipes comme celle des 
                       clients et maintenir un climat de travail fondé sur le respect, la confiance et la bonne humeur. 
                       Toujours à l'écoute, disponible à la moindre question ou au moindre doute, elle ne laisse jamais ses 
@@ -315,8 +315,8 @@ export default function About() {
                       afin de garantir des solutions techniques toujours à jour et parfaitement exécutées.
                     </p>
                     <p>
-                      Pour sécuriser chaque projet, elle s'entoure également d'un <strong className="text-accent">expert construction</strong>, 
-                      d'un <strong className="text-accent">expert d'assurance</strong> et d'un <strong className="text-accent">avocat</strong>, 
+                      Pour sécuriser chaque projet, elle s'entoure également d'un <strong style={{ color: '#C9B575' }}>expert construction</strong>, 
+                      d'un <strong style={{ color: '#C9B575' }}>expert d'assurance</strong> et d'un <strong style={{ color: '#C9B575' }}>avocat</strong>,
                       assurant à ses clients un accompagnement complet et une parfaite maîtrise des enjeux techniques, réglementaires et juridiques.
                     </p>
                     <p>
@@ -379,7 +379,7 @@ export default function About() {
                   </h3>
                   <p className="text-primary-foreground/80 leading-relaxed mb-6">
                     Fondateur de P3D Concept, Thierry collabore avec nous depuis plusieurs années sur 
-                    <strong className="text-accent"> plus de 60 projets</strong>. Il réalise les plans techniques 
+                    <strong style={{ color: '#C9B575' }}> plus de 60 projets</strong>. Il réalise les plans techniques 
                     et les visualisations 3D de votre future salle de bain, garantissant une conception 
                     sur-mesure parfaitement adaptée à vos besoins et à votre espace.
                   </p>

@@ -129,33 +129,33 @@ export default function Photographe() {
                 
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <MapPin className="w-5 h-5 text-accent flex-shrink-0" />
+                    <MapPin className="w-5 h-5 flex-shrink-0" style={{ color: '#C9B575' }} />
                     <span>Île-de-France (Bessancourt 95 / Colombes 92)</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Phone className="w-5 h-5 text-accent flex-shrink-0" />
-                    <a href="tel:0667986450" className="hover:text-accent transition-colors">
+                    <Phone className="w-5 h-5 flex-shrink-0" style={{ color: '#C9B575' }} />
+                    <a href="tel:0667986450" className="transition-colors hover:opacity-80">
                       06 67 98 64 50
                     </a>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Globe className="w-5 h-5 text-accent flex-shrink-0" />
+                    <Globe className="w-5 h-5 flex-shrink-0" style={{ color: '#C9B575' }} />
                     <a 
                       href="https://www.stephanevasco.fr" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="hover:text-accent transition-colors"
+                      className="transition-colors hover:opacity-80"
                     >
                       www.stephanevasco.fr
                     </a>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Award className="w-5 h-5 text-accent flex-shrink-0" />
+                    <Award className="w-5 h-5 flex-shrink-0" style={{ color: '#C9B575' }} />
                     <a 
                       href="https://www.houzz.fr/professionnels/photographe/stephane-vasco-pfvwfr-pf~2115748756" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="hover:text-accent transition-colors"
+                      className="transition-colors hover:opacity-80"
                     >
                       Portfolio Houzz (57 projets)
                     </a>
@@ -266,7 +266,7 @@ export default function Photographe() {
               pour en faire un souvenir intemporel. Travailler avec Qualirenovation, c'est immortaliser 
               des projets où le savoir-faire artisanal rencontre l'excellence."
             </blockquote>
-            <p className="text-accent font-semibold">— Stéphane Vasco, Photographe</p>
+            <p className="font-semibold" style={{ color: '#C9B575' }}>— Stéphane Vasco, Photographe</p>
           </motion.div>
         </div>
       </section>
