@@ -740,8 +740,8 @@ export default function Devis() {
               { icon: Wrench, title: "Experts certifiés" }
             ].map((item, index) => (
               <div key={index} className="flex items-center gap-2.5 px-4 py-2.5 bg-card rounded-full border border-border/50 shadow-sm">
-                <div className="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center">
-                  <item.icon className="w-4 h-4 text-gold" strokeWidth={1.5} />
+                <div className="w-8 h-8 rounded-xl bg-white border border-border flex items-center justify-center">
+                  <item.icon className="w-4 h-4 text-primary" strokeWidth={1.5} />
                 </div>
                 <span className="font-medium text-sm">{item.title}</span>
               </div>
