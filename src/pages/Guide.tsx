@@ -1856,34 +1856,6 @@ const Guide = () => {
                   </p>
                 </div>
               </div>
-              {/* Photos réalisations – Ouvertures */}
-              <div className="mt-5 flex gap-3 overflow-x-auto pb-2">
-                <Link to="/realisations/salle-de-bain-saint-maurice-94-renovation-zellige-bleu-beton-blanc" className="flex-shrink-0">
-                  <img
-                    src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/album-photos/salle-de-bain-saint-maurice-94-renovation-zellige-bleu-beton-blanc/photo-000.jpg"
-                    alt="Douche italienne avec paroi fixe – zellige bleu marine"
-                    className="w-28 h-28 object-cover rounded-lg hover:opacity-80 transition-opacity"
-                    loading="lazy"
-                  />
-                </Link>
-                <Link to="/realisations/salle-de-bain-paris-15-renovation-marbre-bois-noir-baignoire" className="flex-shrink-0">
-                  <img
-                    src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/album-photos/salle-de-bain-paris-15-renovation-marbre-bois-noir-baignoire/photo-003.jpg"
-                    alt="Paroi verrière pivotante noire – marbre blanc et robinetterie noire"
-                    className="w-28 h-28 object-cover rounded-lg hover:opacity-80 transition-opacity"
-                    loading="lazy"
-                  />
-                </Link>
-                <Link to="/realisations/salle-de-bain-paris-13-renovation-locative-zellige-beige" className="flex-shrink-0">
-                  <img
-                    src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/album-photos/salle-de-bain-paris-13-renovation-locative-zellige-beige/photo-004.jpg"
-                    alt="Paroi vitrée coulissante avec profilé doré – zellige beige"
-                    className="w-28 h-28 object-cover rounded-lg hover:opacity-80 transition-opacity"
-                    loading="lazy"
-                  />
-                </Link>
-              </div>
-              <p className="text-xs text-muted-foreground/60 mt-1 italic">Nos réalisations en Île-de-France</p>
               <div className="mt-4 bg-primary/5 border border-primary/20 rounded-xl p-4 flex items-start gap-3">
                 <Lightbulb className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <p className="text-sm text-muted-foreground">
@@ -1921,34 +1893,6 @@ const Guide = () => {
                   </p>
                 </div>
               </div>
-              {/* Photos réalisations – Profilés */}
-              <div className="mt-5 flex gap-3 overflow-x-auto pb-2">
-                <Link to="/realisations/salle-de-bain-paris-15-renovation-marbre-bois-noir-baignoire" className="flex-shrink-0">
-                  <img
-                    src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/album-photos/salle-de-bain-paris-15-renovation-marbre-bois-noir-baignoire/photo-000.jpg"
-                    alt="Profilé noir mat – salle de bain marbre blanc et chêne"
-                    className="w-28 h-28 object-cover rounded-lg hover:opacity-80 transition-opacity"
-                    loading="lazy"
-                  />
-                </Link>
-                <Link to="/realisations/salle-de-bain-paris-13-renovation-locative-zellige-beige" className="flex-shrink-0">
-                  <img
-                    src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/album-photos/salle-de-bain-paris-13-renovation-locative-zellige-beige/photo-005.jpg"
-                    alt="Colonne thermostatique laiton brossé – zellige beige"
-                    className="w-28 h-28 object-cover rounded-lg hover:opacity-80 transition-opacity"
-                    loading="lazy"
-                  />
-                </Link>
-                <Link to="/realisations/salle-de-bain-saint-mande-94-renovation" className="flex-shrink-0">
-                  <img
-                    src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/album-photos/salle-de-bain-saint-mande-94-renovation/photo-000.jpg"
-                    alt="Douche italienne chromée – rénovation Saint-Mandé"
-                    className="w-28 h-28 object-cover rounded-lg hover:opacity-80 transition-opacity"
-                    loading="lazy"
-                  />
-                </Link>
-              </div>
-              <p className="text-xs text-muted-foreground/60 mt-1 italic">Exemples de finitions réalisées</p>
               <div className="mt-4 bg-primary/5 border border-primary/20 rounded-xl p-4 flex items-start gap-3">
                 <Lightbulb className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <p className="text-sm text-muted-foreground">
@@ -1983,26 +1927,6 @@ const Guide = () => {
                   </p>
                 </div>
               </div>
-              {/* Photos réalisations – Verres */}
-              <div className="mt-5 flex gap-3 overflow-x-auto pb-2">
-                <Link to="/realisations/salle-de-bain-paris-13-renovation-locative-zellige-beige" className="flex-shrink-0">
-                  <img
-                    src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/album-photos/salle-de-bain-paris-13-renovation-locative-zellige-beige/photo-002.jpg"
-                    alt="Verre transparent – meuble vasque et douche avec paroi vitrée"
-                    className="w-28 h-28 object-cover rounded-lg hover:opacity-80 transition-opacity"
-                    loading="lazy"
-                  />
-                </Link>
-                <Link to="/realisations/salle-de-bain-paris-15-renovation-marbre-bois-noir-baignoire" className="flex-shrink-0">
-                  <img
-                    src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/album-photos/salle-de-bain-paris-15-renovation-marbre-bois-noir-baignoire/photo-004.jpg"
-                    alt="Verre transparent avec profilé noir – niche marbre"
-                    className="w-28 h-28 object-cover rounded-lg hover:opacity-80 transition-opacity"
-                    loading="lazy"
-                  />
-                </Link>
-              </div>
-              <p className="text-xs text-muted-foreground/60 mt-1 italic">Parois vitrées posées par nos équipes</p>
               <div className="mt-4 bg-primary/5 border border-primary/20 rounded-xl p-4 flex items-start gap-3">
                 <Lightbulb className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div className="text-sm text-muted-foreground space-y-1">
