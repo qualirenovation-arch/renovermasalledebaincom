@@ -65,9 +65,10 @@ export function GuideStickyTOC() {
     <nav>
       <Collapsible open={isOpen} onOpenChange={setIsOpen}>
         <CollapsibleTrigger className="w-full flex items-center justify-between py-2.5 px-3 rounded-lg text-sm font-medium text-foreground bg-accent/30 hover:bg-accent/50 transition-colors">
-          <span className="flex items-center gap-2">
-            📋 <span className="text-muted-foreground">Sommaire ·</span>
-            <span className="truncate max-w-[120px]">{activeLabel}</span>
+          <span className="flex items-center gap-1.5 min-w-0">
+            <span className="text-muted-foreground flex-shrink-0">Sommaire</span>
+            <span className="text-muted-foreground/50 flex-shrink-0">›</span>
+            <span className="truncate text-foreground">{activeLabel}</span>
           </span>
           <ChevronDown
             className={cn(
