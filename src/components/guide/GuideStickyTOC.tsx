@@ -44,6 +44,15 @@ export function GuideStickyTOC() {
     return () => observer.disconnect();
   }, []);
 
+  // Auto-scroll TOC to keep active item visible
+  useEffect(() => {
+    if (!activeId) return;
+    const btn = document.querySelector(`[data-toc-id="${activeId}"]`);
+    if (btn) {
+      btn.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  }, [activeId]);
+
   const handleClick = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
@@ -60,6 +69,7 @@ export function GuideStickyTOC() {
         {tocItems.map(({ id, label, badge }) => (
           <li key={id}>
             <button
+              data-toc-id={id}
               onClick={() => handleClick(id)}
               className={cn(
                 "w-full flex items-center gap-2 text-xs py-1.5 px-2 rounded-md transition-all text-left",
