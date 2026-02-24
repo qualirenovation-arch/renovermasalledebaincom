@@ -77,11 +77,10 @@ export function GuideMobileTOC() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY + 150;
       let currentId = "";
       for (const { id } of allItems) {
         const el = document.getElementById(id);
-        if (el && scrollY >= el.offsetTop) {
+        if (el && el.getBoundingClientRect().top <= 150) {
           currentId = id;
         }
       }
