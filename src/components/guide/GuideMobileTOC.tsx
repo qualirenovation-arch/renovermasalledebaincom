@@ -119,7 +119,7 @@ export function GuideMobileTOC() {
           </DrawerTrigger>
           <div className="h-0.5 w-full bg-muted/30">
             <motion.div
-              className="h-full bg-primary/50 rounded-full"
+              className="h-full rounded-full bg-gradient-to-r from-primary/30 via-primary/60 to-primary"
               animate={{ width: `${progress}%` }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             />
