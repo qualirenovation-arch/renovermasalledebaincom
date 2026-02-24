@@ -14,6 +14,7 @@ import { GuideDetailsSections } from "@/components/guide/GuideDetailsSections";
 import { GuideComfortSections } from "@/components/guide/GuideComfortSections";
 import { GuideParoiSection } from "@/components/guide/GuideParoiSection";
 import { GuideSummary } from "@/components/guide/GuideSummary";
+import { GuideGarantiesSection } from "@/components/guide/GuideGarantiesSection";
 import { GuideFAQ } from "@/components/guide/GuideFAQ";
 
 const faqSchema = {
@@ -58,6 +59,7 @@ const Guide = () => {
           <GuideComfortSections />
           <GuideParoiSection />
           <GuideSummary />
+          <GuideGarantiesSection />
           <GuideFAQ />
         </div>
 
