@@ -330,7 +330,7 @@ const Guide = () => {
       {/* Main content with sticky TOC sidebar */}
       <div className="lg:flex lg:gap-0 relative">
         {/* Content column */}
-        <div className="flex-1 min-w-0">
+        <div className="flex-1 min-w-0 overflow-hidden">
 
       {/* Section Planning - Durée des travaux */}
       <section id="section-planning" className="py-16 bg-gradient-to-r from-mint/10 via-mint/20 to-mint/10 scroll-mt-20">
@@ -1948,8 +1948,8 @@ const Guide = () => {
         </div>{/* end content column */}
 
         {/* Sticky TOC sidebar - desktop only */}
-        <aside className="hidden lg:block w-56 xl:w-64 flex-shrink-0">
-          <div className="py-8 px-4">
+        <aside className="hidden lg:block w-56 xl:w-64 flex-shrink-0 relative z-10">
+          <div className="sticky top-24 py-8 px-4">
             <GuideStickyTOC />
           </div>
         </aside>
