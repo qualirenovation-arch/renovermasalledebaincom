@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ChevronRight, List, X } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import {
   Drawer,
@@ -133,63 +133,73 @@ export function GuideMobileTOC() {
               </DrawerClose>
             </DrawerHeader>
             <div className="px-4 pb-6 pt-2 overflow-y-auto">
-              <Accordion
-                type="single"
-                collapsible
-                value={openCategory}
-                onValueChange={setOpenCategory}
-                className="space-y-1"
-              >
-                {tocCategories.map((category) => {
-                  const isCatActive = category.items.some((i) => i.id === activeId);
-                  return (
-                    <motion.div
-                      key={category.label}
-                      whileHover={{ x: 3 }}
-                      transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                    >
-                    <AccordionItem
-                      value={category.label}
-                      className="border-none"
-                    >
-                      <AccordionTrigger
-                        className={cn(
-                          "py-3 px-3.5 rounded-lg text-[14px] font-medium hover:no-underline transition-all duration-200 [&>svg]:h-3.5 [&>svg]:w-3.5 [&>svg]:text-muted-foreground/60",
-                          isCatActive
-                            ? "text-primary bg-primary/[0.04]"
-                            : "text-foreground/70 hover:text-foreground hover:bg-muted/60"
-                        )}
-                      >
-                        {category.label}
-                      </AccordionTrigger>
-                      <AccordionContent className="pb-1.5 pt-1">
-                        <ul className="space-y-0.5 pl-3.5 border-l-2 border-primary/15 ml-3.5">
-                          {category.items.map(({ id, label }) => (
-                            <li key={id}>
-                              <button
-                                onClick={() => handleClick(id)}
-                                className={cn(
-                                  "w-full flex items-center gap-2.5 text-[13px] py-2 px-3 rounded-md transition-all duration-200 text-left",
-                                  activeId === id
-                                    ? "text-primary font-semibold bg-primary/[0.06]"
-                                    : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
-                                )}
-                              >
-                                <ChevronRight className={cn(
-                                  "w-2.5 h-2.5 flex-shrink-0 transition-colors duration-200",
-                                  activeId === id ? "text-primary" : "text-muted-foreground/30"
-                                )} />
-                                <span>{label}</span>
-                              </button>
-                            </li>
-                          ))}
-                        </ul>
-                      </AccordionContent>
-                    </AccordionItem>
-                    </motion.div>
-                  );
-                })}
-              </Accordion>
+              <AnimatePresence>
+                {isOpen && (
+                  <Accordion
+                    type="single"
+                    collapsible
+                    value={openCategory}
+                    onValueChange={setOpenCategory}
+                    className="space-y-1"
+                  >
+                    {tocCategories.map((category, catIndex) => {
+                      const isCatActive = category.items.some((i) => i.id === activeId);
+                      return (
+                        <motion.div
+                          key={category.label}
+                          initial={{ opacity: 0, y: 12 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{
+                            delay: catIndex * 0.06,
+                            duration: 0.3,
+                            ease: [0.25, 0.1, 0.25, 1],
+                          }}
+                          whileHover={{ x: 3 }}
+                        >
+                          <AccordionItem
+                            value={category.label}
+                            className="border-none"
+                          >
+                            <AccordionTrigger
+                              className={cn(
+                                "py-3 px-3.5 rounded-lg text-[14px] font-medium hover:no-underline transition-all duration-200 [&>svg]:h-3.5 [&>svg]:w-3.5 [&>svg]:text-muted-foreground/60",
+                                isCatActive
+                                  ? "text-primary bg-primary/[0.04]"
+                                  : "text-foreground/70 hover:text-foreground hover:bg-muted/60"
+                              )}
+                            >
+                              {category.label}
+                            </AccordionTrigger>
+                            <AccordionContent className="pb-1.5 pt-1">
+                              <ul className="space-y-0.5 pl-3.5 border-l-2 border-primary/15 ml-3.5">
+                                {category.items.map(({ id, label }) => (
+                                  <li key={id}>
+                                    <button
+                                      onClick={() => handleClick(id)}
+                                      className={cn(
+                                        "w-full flex items-center gap-2.5 text-[13px] py-2 px-3 rounded-md transition-all duration-200 text-left",
+                                        activeId === id
+                                          ? "text-primary font-semibold bg-primary/[0.06]"
+                                          : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
+                                      )}
+                                    >
+                                      <ChevronRight className={cn(
+                                        "w-2.5 h-2.5 flex-shrink-0 transition-colors duration-200",
+                                        activeId === id ? "text-primary" : "text-muted-foreground/30"
+                                      )} />
+                                      <span>{label}</span>
+                                    </button>
+                                  </li>
+                                ))}
+                              </ul>
+                            </AccordionContent>
+                          </AccordionItem>
+                        </motion.div>
+                      );
+                    })}
+                  </Accordion>
+                )}
+              </AnimatePresence>
             </div>
           </DrawerContent>
         </Drawer>
