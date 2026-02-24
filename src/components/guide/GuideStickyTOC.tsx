@@ -107,7 +107,7 @@ export function GuideStickyTOC() {
       </div>
       <div className="h-1 w-full bg-muted/40 rounded-full mb-4 overflow-hidden">
         <motion.div
-          className="h-full bg-primary/60 rounded-full"
+          className="h-full rounded-full bg-gradient-to-r from-primary/40 via-primary/70 to-primary"
           initial={{ width: 0 }}
           animate={{ width: `${progress}%` }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
