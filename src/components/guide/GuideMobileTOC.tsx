@@ -64,11 +64,7 @@ export function GuideMobileTOC() {
       <div className="container mx-auto px-4">
         <Collapsible open={isOpen} onOpenChange={setIsOpen}>
           <CollapsibleTrigger className="w-full flex items-center justify-between py-3 text-sm font-medium text-foreground">
-            <span className="flex items-center gap-1.5 min-w-0">
-              <span className="text-muted-foreground flex-shrink-0">Sommaire</span>
-              <span className="text-muted-foreground/50 flex-shrink-0">›</span>
-              <span className="truncate text-foreground">{activeLabel}</span>
-            </span>
+            <span className="text-foreground">Sommaire</span>
             <ChevronDown
               className={cn(
                 "w-4 h-4 text-muted-foreground transition-transform duration-200",
