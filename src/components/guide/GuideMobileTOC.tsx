@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { ChevronRight, List, X } from "lucide-react";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import {
   Drawer,
@@ -132,8 +133,12 @@ export function GuideMobileTOC() {
                 {tocCategories.map((category) => {
                   const isCatActive = category.items.some((i) => i.id === activeId);
                   return (
-                    <AccordionItem
+                    <motion.div
                       key={category.label}
+                      whileHover={{ x: 3 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                    >
+                    <AccordionItem
                       value={category.label}
                       className="border-none"
                     >
@@ -171,6 +176,7 @@ export function GuideMobileTOC() {
                         </ul>
                       </AccordionContent>
                     </AccordionItem>
+                    </motion.div>
                   );
                 })}
               </Accordion>
