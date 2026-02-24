@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import {
   Accordion,
@@ -109,8 +110,12 @@ export function GuideStickyTOC() {
         {tocCategories.map((category) => {
           const isCatActive = category.items.some((i) => i.id === activeId);
           return (
-            <AccordionItem
+            <motion.div
               key={category.label}
+              whileHover={{ x: 3 }}
+              transition={{ type: "spring", stiffness: 400, damping: 25 }}
+            >
+            <AccordionItem
               value={category.label}
               className="border-none"
             >
@@ -149,6 +154,7 @@ export function GuideStickyTOC() {
                 </ul>
               </AccordionContent>
             </AccordionItem>
+            </motion.div>
           );
         })}
       </Accordion>
