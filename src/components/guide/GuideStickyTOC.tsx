@@ -64,6 +64,7 @@ const allItems = tocCategories.flatMap((c) => c.items);
 export function GuideStickyTOC() {
   const [activeId, setActiveId] = useState<string>("");
   const [openCategory, setOpenCategory] = useState<string>("");
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,10 +78,12 @@ export function GuideStickyTOC() {
       }
       if (currentId && currentId !== activeId) {
         setActiveId(currentId);
-        // Auto-open the category containing the active item
         const cat = tocCategories.find((c) => c.items.some((i) => i.id === currentId));
         if (cat) setOpenCategory(cat.label);
       }
+      // Calculate reading progress
+      const idx = allItems.findIndex((i) => i.id === currentId);
+      setProgress(currentId ? Math.round(((idx + 1) / allItems.length) * 100) : 0);
     };
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -97,9 +100,20 @@ export function GuideStickyTOC() {
 
   return (
     <nav aria-label="Sommaire du guide">
-      <p className="font-display text-[11px] font-semibold uppercase tracking-[0.15em] text-primary mb-4 px-1">
-        Sommaire
-      </p>
+      <div className="flex items-center justify-between mb-4 px-1">
+        <p className="font-display text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">
+          Sommaire
+        </p>
+        <span className="text-[10px] font-medium text-muted-foreground tabular-nums">{progress}%</span>
+      </div>
+      <div className="h-1 w-full bg-muted/40 rounded-full mb-4 overflow-hidden">
+        <motion.div
+          className="h-full bg-primary/60 rounded-full"
+          initial={{ width: 0 }}
+          animate={{ width: `${progress}%` }}
+          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+        />
+      </div>
       <Accordion
         type="single"
         collapsible

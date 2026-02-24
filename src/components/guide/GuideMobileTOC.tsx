@@ -73,6 +73,7 @@ export function GuideMobileTOC() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeId, setActiveId] = useState<string>("");
   const [openCategory, setOpenCategory] = useState<string>("");
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -89,6 +90,8 @@ export function GuideMobileTOC() {
         const cat = tocCategories.find((c) => c.items.some((i) => i.id === currentId));
         if (cat) setOpenCategory(cat.label);
       }
+      const idx = allItems.findIndex((i) => i.id === currentId);
+      setProgress(currentId ? Math.round(((idx + 1) / allItems.length) * 100) : 0);
     };
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -113,7 +116,15 @@ export function GuideMobileTOC() {
               <List className="w-4 h-4 text-primary/60" />
               <span className="font-display text-[13px] uppercase tracking-[0.1em] text-primary">Sommaire</span>
             </span>
+            <span className="text-[11px] font-medium text-muted-foreground tabular-nums">{progress}%</span>
           </DrawerTrigger>
+          <div className="h-0.5 w-full bg-muted/30">
+            <motion.div
+              className="h-full bg-primary/50 rounded-full"
+              animate={{ width: `${progress}%` }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            />
+          </div>
           <DrawerContent className="max-h-[75vh]">
             <DrawerHeader className="flex items-center justify-between pb-3 border-b border-border/30">
               <DrawerTitle className="font-display text-base font-semibold text-primary tracking-wide">Sommaire</DrawerTitle>
