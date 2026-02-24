@@ -6,6 +6,7 @@ import { LazyVideo } from "@/components/ui/lazy-video";
 import { ArrowRight, CheckCircle, AlertTriangle, Droplets, Shield, Wrench, Sparkles, Eye, Users, Home, Phone, Paintbrush, Wind, HardHat, Building, Hammer, Ruler, HelpCircle, Play, Lightbulb, Thermometer, Flame, ExternalLink } from "lucide-react";
 import { PageCTA } from "@/components/layout/PageCTA";
 import { OGTags } from "@/components/seo/OGTags";
+import { GuideStickyTOC } from "@/components/guide/GuideStickyTOC";
 
 // Images
 import guideJointNoir from "@/assets/guide-joint-noir.webp";
@@ -242,8 +243,8 @@ const Guide = () => {
         </div>
       </section>
 
-      {/* Sommaire cliquable */}
-      <section className="py-8 bg-background border-b border-border">
+      {/* Sommaire cliquable - visible only on mobile */}
+      <section className="py-8 bg-background border-b border-border lg:hidden">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -254,7 +255,7 @@ const Guide = () => {
             <h2 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
               📋 Sommaire
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
               <a href="#section-planning" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-accent/50">
                 <span className="w-6 h-6 bg-mint/20 rounded-full flex items-center justify-center text-mint text-xs font-bold flex-shrink-0">⏱</span>
                 <span className="line-clamp-1">Planning & Durée</span>
@@ -325,6 +326,11 @@ const Guide = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Main content with sticky TOC sidebar */}
+      <div className="lg:flex lg:gap-0 relative">
+        {/* Content column */}
+        <div className="flex-1 min-w-0">
 
       {/* Section Planning - Durée des travaux */}
       <section id="section-planning" className="py-16 bg-gradient-to-r from-mint/10 via-mint/20 to-mint/10 scroll-mt-20">
@@ -1939,6 +1945,15 @@ const Guide = () => {
         </div>
       </section>
 
+        </div>{/* end content column */}
+
+        {/* Sticky TOC sidebar - desktop only */}
+        <aside className="hidden lg:block w-56 xl:w-64 flex-shrink-0">
+          <div className="py-8 px-4">
+            <GuideStickyTOC />
+          </div>
+        </aside>
+      </div>{/* end flex wrapper */}
 
       {/* CTA général */}
       <PageCTA
