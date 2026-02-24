@@ -25,31 +25,36 @@ export function GuideStickyTOC() {
   const [activeId, setActiveId] = useState<string>("");
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        // Find the first visible section
-        const visible = entries.filter((e) => e.isIntersecting);
-        if (visible.length > 0) {
-          setActiveId(visible[0].target.id);
+    const handleScroll = () => {
+      const scrollY = window.scrollY + 150; // offset for sticky header
+      let currentId = "";
+
+      for (const { id } of tocItems) {
+        const el = document.getElementById(id);
+        if (el) {
+          const top = el.offsetTop;
+          if (scrollY >= top) {
+            currentId = id;
+          }
         }
-      },
-      { rootMargin: "-100px 0px -60% 0px", threshold: 0 }
-    );
+      }
 
-    tocItems.forEach(({ id }) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
+      if (currentId && currentId !== activeId) {
+        setActiveId(currentId);
+      }
+    };
 
-    return () => observer.disconnect();
-  }, []);
+    handleScroll(); // initial check
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [activeId]);
 
   // Auto-scroll TOC to keep active item visible
   useEffect(() => {
     if (!activeId) return;
     const btn = document.querySelector(`[data-toc-id="${activeId}"]`);
     if (btn) {
-      btn.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      btn.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   }, [activeId]);
 
@@ -61,7 +66,7 @@ export function GuideStickyTOC() {
   };
 
   return (
-    <nav className="sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto pr-2">
+    <nav className="max-h-[calc(100vh-8rem)] overflow-y-auto pr-2">
       <h3 className="text-sm font-semibold text-foreground mb-3 flex items-center gap-2">
         📋 Sommaire
       </h3>
