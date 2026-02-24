@@ -19,6 +19,7 @@ const tocItems = [
   { id: "section-12", label: "VMC", badge: "12" },
   { id: "section-13", label: "Éclairage & chauffage", badge: "13" },
   { id: "section-paroi", label: "Paroi de douche", badge: "14" },
+  { id: "questions-frequentes", label: "Questions fréquentes", badge: "❓" },
 ];
 
 export function GuideStickyTOC() {
