@@ -26,7 +26,7 @@ export function ScrollToTopButton() {
           exit={{ opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.2 }}
           onClick={scrollToTop}
-          className="fixed right-4 z-50 w-12 h-12 rounded-full bg-primary text-primary-foreground shadow-xl flex items-center justify-center hover:bg-primary/90 active:scale-95 transition-all border-2 border-primary-foreground/20 md:bottom-8 md:right-8"
+          className="fixed right-4 z-50 w-11 h-11 rounded-xl bg-background/90 backdrop-blur-md text-foreground shadow-[0_4px_20px_-4px_hsl(0_0%_0%/0.15)] flex items-center justify-center hover:shadow-[0_6px_24px_-4px_hsl(0_0%_0%/0.2)] active:scale-95 transition-all border-2 border-accent/30 hover:border-accent/60 md:bottom-8 md:right-8"
           style={{ bottom: 'calc(7rem + env(safe-area-inset-bottom, 0px))' }}
           aria-label="Retour en haut"
         >
