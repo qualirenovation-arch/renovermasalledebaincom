@@ -1,9 +1,9 @@
-import { useState, useCallback } from "react";
+import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Switch } from "@/components/ui/switch";
-import { Plus, Pencil, Trash2, ArrowUp, ArrowDown, Image, Search, Monitor } from "lucide-react";
+import { Plus, Pencil, Trash2, ArrowUp, ArrowDown, Image, Search, Monitor, Star, AlertTriangle } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useAlbums, useDeleteAlbum, useUpdateAlbumOrder, useUpdateAlbum, type Album } from "@/hooks/useAlbums";
 import { useToast } from "@/hooks/use-toast";
@@ -26,6 +26,8 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
+
+type FilterMode = "all" | "home" | "realisations" | "none";
 
 function AlbumCover({ album }: { album: Album }) {
   const [imgError, setImgError] = useState(false);
@@ -66,12 +68,37 @@ export function AlbumsList({ onEdit, onCreate }: AlbumsListProps) {
   const { toast } = useToast();
   const [deleteId, setDeleteId] = useState<string | null>(null);
   const [search, setSearch] = useState("");
+  const [filterMode, setFilterMode] = useState<FilterMode>("all");
 
-  const filtered = albums.filter(a =>
-    a.title.toLowerCase().includes(search.toLowerCase()) ||
-    a.location.toLowerCase().includes(search.toLowerCase()) ||
-    a.slug.toLowerCase().includes(search.toLowerCase())
+  // Count featured realisations
+  const featuredReaCount = useMemo(
+    () => albums.filter(a => a.is_featured_realisations).length,
+    [albums]
   );
+
+  const filtered = useMemo(() => {
+    let list = albums;
+
+    // Apply filter mode
+    if (filterMode === "home") {
+      list = list.filter(a => a.show_in_hero);
+    } else if (filterMode === "realisations") {
+      list = list.filter(a => a.is_featured_realisations);
+    } else if (filterMode === "none") {
+      list = list.filter(a => !a.show_in_hero && !a.is_featured_realisations);
+    }
+
+    // Apply search
+    if (search) {
+      list = list.filter(a =>
+        a.title.toLowerCase().includes(search.toLowerCase()) ||
+        a.location.toLowerCase().includes(search.toLowerCase()) ||
+        a.slug.toLowerCase().includes(search.toLowerCase())
+      );
+    }
+
+    return list;
+  }, [albums, filterMode, search]);
 
   const handleDelete = async () => {
     if (!deleteId) return;
@@ -105,9 +132,16 @@ export function AlbumsList({ onEdit, onCreate }: AlbumsListProps) {
     return <div className="text-center py-12 text-muted-foreground">Chargement des albums...</div>;
   }
 
+  const filterButtons: { mode: FilterMode; label: string }[] = [
+    { mode: "all", label: "Tous" },
+    { mode: "home", label: "Accueil" },
+    { mode: "realisations", label: "Réalisations" },
+    { mode: "none", label: "Non affichés" },
+  ];
+
   return (
     <>
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
         <div>
           <h2 className="text-xl font-semibold">Réalisations ({albums.length})</h2>
           <p className="text-sm text-muted-foreground">Gérer les projets du portfolio</p>
@@ -129,9 +163,41 @@ export function AlbumsList({ onEdit, onCreate }: AlbumsListProps) {
         </div>
       </div>
 
+      {/* Filters & Counter */}
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-6">
+        <div className="flex gap-2 flex-wrap">
+          {filterButtons.map(({ mode, label }) => (
+            <button
+              key={mode}
+              onClick={() => setFilterMode(mode)}
+              className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
+                filterMode === mode
+                  ? "bg-primary text-primary-foreground"
+                  : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+
+        <div className="flex items-center gap-2">
+          <Star className="w-4 h-4 text-blue-600" />
+          <span className={`text-sm font-medium ${featuredReaCount > 8 ? "text-destructive" : "text-muted-foreground"}`}>
+            Albums Réalisations sélectionnés : {featuredReaCount} / 8
+          </span>
+          {featuredReaCount > 8 && (
+            <span className="flex items-center gap-1 text-xs text-destructive">
+              <AlertTriangle className="w-3.5 h-3.5" />
+              Seuls les 8 premiers seront affichés
+            </span>
+          )}
+        </div>
+      </div>
+
       {filtered.length === 0 ? (
         <div className="text-center py-12 text-muted-foreground">
-          {search ? "Aucun résultat" : "Aucun album. Créez-en un !"}
+          {search || filterMode !== "all" ? "Aucun résultat" : "Aucun album. Créez-en un !"}
         </div>
       ) : (
         <div className="space-y-2">
@@ -166,11 +232,21 @@ export function AlbumsList({ onEdit, onCreate }: AlbumsListProps) {
                     <p className="font-semibold truncate">{album.title}</p>
                     {album.is_in_progress && <Badge variant="secondary" className="text-xs">En cours</Badge>}
                     {album.is_featured && <Badge className="text-xs bg-gold/20 text-gold-dark">Mis en avant</Badge>}
-                    {album.show_in_hero && <Badge className="text-xs bg-blue-100 text-blue-700"><Monitor className="w-3 h-3 mr-1" />Hero</Badge>}
                   </div>
                   <p className="text-sm text-muted-foreground">{album.location}</p>
-                  <div className="flex items-center gap-2 mt-1">
+                  <div className="flex items-center gap-2 mt-1 flex-wrap">
                     <span className="text-xs text-muted-foreground">{album.album_photos.length} photo(s)</span>
+                    {/* Badges Accueil / Réalisations */}
+                    {album.show_in_hero && (
+                      <Badge className="text-[10px] px-1.5 py-0 bg-emerald-100 text-emerald-700 border-emerald-200">
+                        <Monitor className="w-2.5 h-2.5 mr-0.5" />HOME
+                      </Badge>
+                    )}
+                    {album.is_featured_realisations && (
+                      <Badge className="text-[10px] px-1.5 py-0 bg-blue-100 text-blue-700 border-blue-200">
+                        <Star className="w-2.5 h-2.5 mr-0.5" />RÉA
+                      </Badge>
+                    )}
                     {album.album_tags.length > 0 && (
                       <div className="flex gap-1">
                         {album.album_tags.slice(0, 3).map(t => (
@@ -181,23 +257,48 @@ export function AlbumsList({ onEdit, onCreate }: AlbumsListProps) {
                         )}
                       </div>
                     )}
+                    {album.click_count > 0 && (
+                      <span className="text-[10px] text-muted-foreground">👁 {album.click_count}</span>
+                    )}
                   </div>
                 </div>
 
                 {/* Actions */}
                 <div className="flex items-center gap-2 shrink-0">
-                  <Switch
-                    checked={album.show_in_hero}
-                    onCheckedChange={async (checked) => {
-                      try {
-                        await updateAlbum.mutateAsync({ id: album.id, show_in_hero: checked });
-                        toast({ title: checked ? "Ajouté au slideshow hero" : "Retiré du slideshow hero" });
-                      } catch {
-                        toast({ title: "Erreur", variant: "destructive" });
-                      }
-                    }}
-                    title="Afficher dans le slideshow hero"
-                  />
+                  {/* Hero toggle */}
+                  <div className="flex flex-col items-center gap-0.5">
+                    <Switch
+                      checked={album.show_in_hero}
+                      onCheckedChange={async (checked) => {
+                        try {
+                          await updateAlbum.mutateAsync({ id: album.id, show_in_hero: checked });
+                          toast({ title: checked ? "Ajouté au slideshow hero" : "Retiré du slideshow hero" });
+                        } catch {
+                          toast({ title: "Erreur", variant: "destructive" });
+                        }
+                      }}
+                      title="Afficher dans le slideshow hero"
+                      className="data-[state=checked]:bg-emerald-600"
+                    />
+                    <span className="text-[9px] text-muted-foreground">Home</span>
+                  </div>
+                  {/* Réalisations toggle */}
+                  <div className="flex flex-col items-center gap-0.5">
+                    <Switch
+                      checked={album.is_featured_realisations}
+                      onCheckedChange={async (checked) => {
+                        try {
+                          await updateAlbum.mutateAsync({ id: album.id, is_featured_realisations: checked });
+                          toast({ title: checked ? "Ajouté aux Réalisations" : "Retiré des Réalisations" });
+                        } catch {
+                          toast({ title: "Erreur", variant: "destructive" });
+                        }
+                      }}
+                      title="Mettre en avant sur la page Réalisations"
+                      className="data-[state=checked]:bg-blue-600"
+                    />
+                    <span className="text-[9px] text-muted-foreground">Réa</span>
+                  </div>
                   <Button variant="ghost" size="icon" onClick={() => onEdit(album)}>
                     <Pencil className="w-4 h-4" />
                   </Button>
