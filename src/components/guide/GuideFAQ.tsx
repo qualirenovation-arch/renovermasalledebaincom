@@ -166,6 +166,19 @@ export function GuideFAQ() {
                 </p>
               </div>
             </FAQCard>
+            <FAQCard question="Le WC doit-il rester fonctionnel s'il est séparé dans une autre pièce ?">
+              <div className="text-muted-foreground space-y-3 text-sm">
+                <p>
+                  <strong className="text-foreground">Oui, impérativement.</strong> Lorsque le WC est situé dans une pièce indépendante de la salle de bain, il doit rester <strong className="text-foreground">accessible et utilisable pendant toute la durée des travaux</strong>.
+                </p>
+                <p>
+                  En revanche, si le WC est intégré à la salle de bain en cours de rénovation, son utilisation sera temporairement interrompue. Dans ce cas, il est conseillé de prévoir une solution alternative (WC d'un autre étage, voisin, etc.).
+                </p>
+                <p className="font-medium text-foreground">
+                  Point important : le maintien du WC en fonctionnement est à valider en amont avec votre entrepreneur, notamment pour organiser les phases de chantier.
+                </p>
+              </div>
+            </FAQCard>
           </div>
         </motion.div>
       </div>
