@@ -13,7 +13,7 @@ export function GuideVideos() {
           className="max-w-5xl mx-auto"
         >
           <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-light mb-2" style={{ color: '#124A66' }}>
+            <h2 className="text-2xl md:text-3xl font-light mb-2">
               Vidéos Conseils
             </h2>
             <div className="w-10 h-[2px] mx-auto mb-4" style={{ backgroundColor: '#c2a016' }} />
@@ -78,7 +78,7 @@ function VideoCard({
           <p className="text-xs text-muted-foreground mt-1">{description}</p>
         )}
         {tip && (
-          <p className="text-xs mt-2 italic" style={{ color: '#124A66' }}>{tip}</p>
+          <p className="text-xs mt-2 italic text-foreground">{tip}</p>
         )}
         <p className="text-xs text-muted-foreground mt-2 flex items-center gap-1">
           <Eye className="w-3 h-3" /> {views} vues

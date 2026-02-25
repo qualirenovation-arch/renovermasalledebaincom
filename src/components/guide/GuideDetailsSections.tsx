@@ -31,7 +31,7 @@ export function GuideDetailsSections() {
             <div className="space-y-8 text-sm leading-relaxed text-muted-foreground">
               {/* Joint mortier */}
               <div>
-                <h3 className="text-lg font-light mb-4" style={{ color: '#124A66' }}>Joint mortier</h3>
+                <h3 className="text-lg font-light mb-4">Joint mortier</h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <img src={guideJointAssorti} alt="Joint assorti au carrelage" className="w-full h-48 object-cover mb-2" loading="lazy" />
@@ -46,7 +46,7 @@ export function GuideDetailsSections() {
 
               {/* Joint silicone */}
               <div>
-                <h3 className="text-lg font-light mb-3" style={{ color: '#124A66' }}>Joint silicone (angles & zones d'eau)</h3>
+                <h3 className="text-lg font-light mb-3">Joint silicone (angles & zones d'eau)</h3>
                 <p className="text-muted-foreground text-sm mb-2">
                   Souple, absorbe les mouvements, garantit l'étanchéité. À refaire dès la moindre fissure.
                 </p>
@@ -58,7 +58,7 @@ export function GuideDetailsSections() {
               {/* Profils de finition */}
               <div className="grid md:grid-cols-2 gap-6 items-center">
                 <div>
-                  <h3 className="text-lg font-light mb-3" style={{ color: '#124A66' }}>Profils de finition</h3>
+                  <h3 className="text-lg font-light mb-3">Profils de finition</h3>
                   <p className="text-sm text-muted-foreground mb-2">Choisis assortis à la robinetterie et paroi de douche.</p>
                   <p className="text-sm italic">Le profil doit s'intégrer, pas attirer l'oeil.</p>
                 </div>

@@ -108,21 +108,21 @@ export function GuideComfortSections() {
             <div className="space-y-10 text-sm leading-relaxed text-muted-foreground">
               {/* Peinture */}
               <div id="section-11-content">
-                <h3 className="text-lg font-light mb-3" style={{ color: '#124A66' }}>11. Peinture</h3>
+                <h3 className="text-lg font-light mb-3">11. Peinture</h3>
                 <p>Peinture spéciale pièces humides, résistante à la condensation, lessivable.</p>
                 <p className="italic mt-2">Unikalo – Aqualine Satin</p>
               </div>
 
               {/* VMC */}
               <div id="section-12" className="scroll-mt-20">
-                <h3 className="text-lg font-light mb-3" style={{ color: '#124A66' }}>12. VMC</h3>
+                <h3 className="text-lg font-light mb-3">12. VMC</h3>
                 <p>Sans VMC : humidité stagnante, moisissures, dégradation prématurée.</p>
                 <p className="italic mt-2">Une VMC bien pensée protège toute la salle de bain.</p>
               </div>
 
               {/* Éclairage & chauffage */}
               <div id="section-13" className="scroll-mt-20">
-                <h3 className="text-lg font-light mb-3" style={{ color: '#124A66' }}>13. Éclairage & chauffage</h3>
+                <h3 className="text-lg font-light mb-3">13. Éclairage & chauffage</h3>
                 <div className="space-y-3">
                   <p>Spots trimless — 4000K — IP44/65</p>
                   <p>Sèche-serviette électrique ou mixte. Chauffe-eau accessible.</p>

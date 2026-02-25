@@ -18,7 +18,7 @@ export function GuideFAQ() {
           <GuideSectionHeader title="Questions fréquentes" />
 
           {/* Sous-section Douche à l'italienne */}
-          <h3 className="text-lg font-light mb-4" style={{ color: '#124A66' }}>
+          <h3 className="text-lg font-light mb-4">
             Douche à l'italienne
           </h3>
           <div className="space-y-6 mb-10">
@@ -43,7 +43,7 @@ export function GuideFAQ() {
           </div>
 
           {/* Sous-section Questions techniques */}
-          <h3 className="text-lg font-light mb-4" style={{ color: '#124A66' }}>
+          <h3 className="text-lg font-light mb-4">
             Questions techniques
           </h3>
           <div className="space-y-6">

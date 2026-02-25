@@ -21,7 +21,7 @@ export function GuideSectionHeader({
           "text-2xl md:text-3xl",
           isLight ? "font-semibold" : "font-light"
         )}
-        style={isLight ? { color: '#F4F6F8', fontFamily: 'Nunito Sans, sans-serif' } : { color: '#124A66' }}
+        style={isLight ? { color: '#F4F6F8' } : undefined}
       >
         {number !== undefined && (
           <span className={cn("mr-2 text-2xl md:text-3xl", isLight ? "font-light" : "font-light")} style={isLight ? { color: 'rgba(244,246,248,0.6)' } : undefined}>{String(number).padStart(2, '0')}.</span>

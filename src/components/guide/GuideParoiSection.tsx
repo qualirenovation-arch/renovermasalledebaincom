@@ -31,7 +31,7 @@ export function GuideParoiSection() {
 
             {/* Type d'ouverture */}
             <div>
-              <h3 className="text-lg font-light mb-4" style={{ color: '#124A66' }}>Quel type d'ouverture choisir ?</h3>
+              <h3 className="text-lg font-light mb-4">Quel type d'ouverture choisir ?</h3>
               <div className="space-y-4">
                 {[
                   { title: "Paroi fixe", desc: "Minimaliste et épurée, elle est idéale pour une douche italienne ouverte. Pas de porte, pas de mécanisme : juste du verre. Elle nécessite un bon dimensionnement pour éviter les éclaboussures tout en conservant une circulation fluide." },
@@ -51,7 +51,7 @@ export function GuideParoiSection() {
 
             {/* Couleur du profilé */}
             <div>
-              <h3 className="text-lg font-light mb-4" style={{ color: '#124A66' }}>Quelle couleur de profilé choisir ?</h3>
+              <h3 className="text-lg font-light mb-4">Quelle couleur de profilé choisir ?</h3>
               <div className="space-y-3">
                 <div className="border-b border-border/20 pb-3">
                   <h4 className="font-medium text-foreground mb-1">Noir mat</h4>
@@ -73,7 +73,7 @@ export function GuideParoiSection() {
 
             {/* Type de verre */}
             <div>
-              <h3 className="text-lg font-light mb-4" style={{ color: '#124A66' }}>Quel type de verre sélectionner ?</h3>
+              <h3 className="text-lg font-light mb-4">Quel type de verre sélectionner ?</h3>
               <div className="space-y-4">
                 {[
                   { title: "Verre transparent", desc: "Agrandit visuellement l'espace. C'est le choix le plus courant pour les douches italiennes, car il laisse circuler la lumière et met en valeur le carrelage." },
