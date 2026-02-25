@@ -93,7 +93,7 @@ export function Header() {
 
           <div className="flex items-center ml-6">
             <Button variant="cta" size="lg" asChild>
-              <Link to="/devis#devis-form">Je demande mon étude personnalisée</Link>
+              <Link to="/devis#devis-form">Mon étude personnalisée</Link>
             </Button>
           </div>
         </div>
