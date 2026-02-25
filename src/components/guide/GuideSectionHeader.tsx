@@ -24,7 +24,7 @@ export function GuideSectionHeader({
         style={!isLight ? { color: '#124A66' } : undefined}
       >
         {number !== undefined && (
-          <span className="text-muted-foreground font-light mr-2 text-lg">{String(number).padStart(2, '0')}.</span>
+          <span className={cn("font-light mr-2 text-lg", isLight ? "text-white/60" : "text-muted-foreground")}>{String(number).padStart(2, '0')}.</span>
         )}
         {title}
       </h2>
