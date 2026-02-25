@@ -119,12 +119,15 @@ export type Database = {
       albums: {
         Row: {
           category: string | null
+          click_count: number
           cover_image: string
           created_at: string
           description: string
           display_order: number
+          featured_realisations_order: number
           id: string
           is_featured: boolean
+          is_featured_realisations: boolean
           is_in_progress: boolean
           location: string
           show_in_hero: boolean
@@ -136,12 +139,15 @@ export type Database = {
         }
         Insert: {
           category?: string | null
+          click_count?: number
           cover_image?: string
           created_at?: string
           description?: string
           display_order?: number
+          featured_realisations_order?: number
           id?: string
           is_featured?: boolean
+          is_featured_realisations?: boolean
           is_in_progress?: boolean
           location: string
           show_in_hero?: boolean
@@ -153,12 +159,15 @@ export type Database = {
         }
         Update: {
           category?: string | null
+          click_count?: number
           cover_image?: string
           created_at?: string
           description?: string
           display_order?: number
+          featured_realisations_order?: number
           id?: string
           is_featured?: boolean
+          is_featured_realisations?: boolean
           is_in_progress?: boolean
           location?: string
           show_in_hero?: boolean
