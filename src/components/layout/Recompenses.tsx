@@ -9,7 +9,7 @@ const HouzzBadge = ({
   year: string; 
   category: "Design" | "Service" | "Photo"; 
 }) => {
-  const categoryColor = category === "Design" ? "hsl(30, 35%, 42%)" : category === "Photo" ? "hsl(120, 50%, 35%)" : "hsl(197, 70%, 24%)";
+  const categoryColor = category === "Design" ? "hsl(30, 35%, 42%)" : category === "Photo" ? "hsl(30, 35%, 42%)" : "hsl(197, 70%, 24%)";
   
   return (
     <div className="flex flex-col items-center">
@@ -71,8 +71,6 @@ export function Recompenses() {
     { year: "2021", category: "Design" as const },
     { year: "2020", category: "Design" as const },
     { year: "2020", category: "Service" as const },
-    { year: "2019", category: "Design" as const },
-    { year: "2019", category: "Service" as const },
   ];
 
   return (
