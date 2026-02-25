@@ -93,21 +93,27 @@ export function Footer() {
           {/* Contact */}
           <div>
             <h4 className="font-display text-[16px] font-semibold mb-3">Contact</h4>
-            <ul className="space-y-2.5">
+            <ul className="space-y-3">
               <li>
-                <a href="tel:+33659764685" className="flex items-center gap-2 text-[14px] text-primary-foreground/80 hover:text-primary-foreground transition-colors font-sans">
-                  <Phone className="w-4 h-4 text-accent flex-shrink-0" />
+                <a href="tel:+33659764685" className="flex items-center gap-3 text-[14px] text-primary-foreground/80 hover:text-primary-foreground transition-colors font-sans">
+                  <div className="w-9 h-9 rounded-lg bg-white border border-white/20 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-4 h-4 text-primary" strokeWidth={1.5} />
+                  </div>
                   06 59 76 46 85
                 </a>
               </li>
               <li>
-                <a href="mailto:gestion@qualiconcept.fr" className="flex items-center gap-2 text-[14px] text-primary-foreground/80 hover:text-primary-foreground transition-colors font-sans">
-                  <Mail className="w-4 h-4 text-accent flex-shrink-0" />
+                <a href="mailto:gestion@qualiconcept.fr" className="flex items-center gap-3 text-[14px] text-primary-foreground/80 hover:text-primary-foreground transition-colors font-sans">
+                  <div className="w-9 h-9 rounded-lg bg-white border border-white/20 flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-4 h-4 text-primary" strokeWidth={1.5} />
+                  </div>
                   gestion@qualiconcept.fr
                 </a>
               </li>
-              <li className="flex items-start gap-2 text-[14px] text-primary-foreground/80 font-sans">
-                <Clock className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+              <li className="flex items-center gap-3 text-[14px] text-primary-foreground/80 font-sans">
+                <div className="w-9 h-9 rounded-lg bg-white border border-white/20 flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-4 h-4 text-primary" strokeWidth={1.5} />
+                </div>
                 <span>Lun - Ven : 8h - 18h<br />Sam : 9h - 12h</span>
               </li>
             </ul>
