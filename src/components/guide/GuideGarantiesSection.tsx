@@ -64,9 +64,9 @@ export function GuideGarantiesSection() {
             </p>
           </div>
 
-          {/* Grid */}
+          {/* Grid - 5 cartes compactes */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {garanties.map((g, i) => (
+            {garanties.slice(0, 5).map((g, i) => (
               <motion.div
                 key={g.title}
                 initial={{ opacity: 0, y: 16 }}
@@ -75,22 +75,44 @@ export function GuideGarantiesSection() {
                 transition={{ delay: i * 0.08, duration: 0.4 }}
                 className="group relative bg-background rounded-2xl border-2 border-border/60 p-6 hover:border-accent/40 hover:shadow-[0_4px_20px_-4px_hsl(0_0%_0%/0.08)] transition-all duration-300"
               >
-                {/* Badge */}
                 <Badge className="absolute top-4 right-4 bg-accent/10 text-accent border-accent/20 text-[10px] uppercase tracking-wider font-semibold hover:bg-accent/15">
                   {g.badge}
                 </Badge>
-
-                {/* Icon */}
                 <div className="w-12 h-12 rounded-full bg-white border-2 border-primary/20 flex items-center justify-center mb-4 shadow-sm">
                   <g.icon className="w-5 h-5 text-primary" />
                 </div>
-
-                {/* Content */}
                 <h3 className="text-base font-semibold text-foreground mb-2">{g.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{g.description}</p>
               </motion.div>
             ))}
           </div>
+
+          {/* Carte Budget - pleine largeur */}
+          {(() => {
+            const g = garanties[5];
+            return (
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4, duration: 0.4 }}
+                className="mt-5 group relative bg-background rounded-2xl border-2 border-primary/20 p-6 md:p-8 hover:border-primary/40 hover:shadow-[0_4px_24px_-4px_hsl(0_0%_0%/0.1)] transition-all duration-300 flex flex-col md:flex-row md:items-center gap-5"
+              >
+                <div className="flex items-center gap-4 md:w-1/3 flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-white border-2 border-primary/20 flex items-center justify-center shadow-sm">
+                    <g.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <Badge className="mb-1.5 bg-accent/10 text-accent border-accent/20 text-[10px] uppercase tracking-wider font-semibold hover:bg-accent/15">
+                      {g.badge}
+                    </Badge>
+                    <h3 className="text-base font-semibold text-foreground">{g.title}</h3>
+                  </div>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed md:border-l md:border-border/40 md:pl-6">{g.description}</p>
+              </motion.div>
+            );
+          })()}
         </motion.div>
       </div>
     </section>
