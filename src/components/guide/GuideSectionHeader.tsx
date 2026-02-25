@@ -18,13 +18,13 @@ export function GuideSectionHeader({
     <div className="mb-8">
       <h2
         className={cn(
-          "text-2xl md:text-3xl font-light",
-          isLight ? "text-white" : ""
+          "text-2xl md:text-3xl",
+          isLight ? "font-semibold" : "font-light"
         )}
-        style={!isLight ? { color: '#124A66' } : undefined}
+        style={isLight ? { color: '#F4F6F8', fontFamily: 'Nunito Sans, sans-serif' } : { color: '#124A66' }}
       >
         {number !== undefined && (
-          <span className={cn("font-light mr-2 text-lg", isLight ? "text-white/60" : "text-muted-foreground")}>{String(number).padStart(2, '0')}.</span>
+          <span className={cn("mr-2 text-lg", isLight ? "font-light" : "font-light")} style={isLight ? { color: 'rgba(244,246,248,0.6)' } : { color: undefined }}>{String(number).padStart(2, '0')}.</span>
         )}
         {title}
       </h2>
