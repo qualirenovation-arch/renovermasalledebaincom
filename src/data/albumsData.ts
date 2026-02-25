@@ -678,8 +678,11 @@ export interface Album {
   instagramLinks?: string[];
   ctaButton?: { label: string; link: string };
   category?: AlbumCategory;
-  finitionSol?: FinitionType; // Carrelage sol principal
-  finitionMur?: FinitionType; // Carrelage mur (optionnel)
+  finitionSol?: FinitionType;
+  finitionMur?: FinitionType;
+  isFeaturedRealisations?: boolean;
+  featuredRealisationsOrder?: number;
+  clickCount?: number;
 }
 
 // ===== ALBUMS TERMINÉS =====
