@@ -16,6 +16,7 @@ import { GuideParoiSection } from "@/components/guide/GuideParoiSection";
 import { GuideSummary } from "@/components/guide/GuideSummary";
 import { GuideGarantiesSection } from "@/components/guide/GuideGarantiesSection";
 import { GuideFAQ } from "@/components/guide/GuideFAQ";
+import { GuideReadingProgress } from "@/components/guide/GuideReadingProgress";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -43,39 +44,42 @@ const Guide = () => {
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <GuideHero />
-      <GuideVideos />
-      <GuideMobileTOC />
+      <div className="guide-page">
+        <GuideReadingProgress />
+        <GuideHero />
+        <GuideVideos />
+        <GuideMobileTOC />
 
-      {/* Main content with sticky TOC sidebar */}
-      <div className="lg:flex lg:gap-0 relative">
-        <div className="flex-1 min-w-0 overflow-hidden">
-          <GuidePlanningSection />
-          <GuideInspectionSections />
-          <GuideMaitreOeuvreSection />
-          <GuideInfrastructureSections />
-          <GuideDesignSections />
-          <GuideDetailsSections />
-          <GuideComfortSections />
-          <GuideParoiSection />
-          <GuideSummary />
-          <GuideGarantiesSection />
-          <GuideFAQ />
+        {/* Main content with sticky TOC sidebar */}
+        <div className="lg:flex lg:gap-0 relative">
+          {/* Sticky TOC sidebar - desktop only - LEFT side */}
+          <aside className="hidden lg:block w-56 xl:w-64 flex-shrink-0 relative z-10">
+            <div className="sticky top-24 py-8 px-4">
+              <GuideStickyTOC />
+            </div>
+          </aside>
+
+          <div className="flex-1 min-w-0 overflow-hidden">
+            <GuidePlanningSection />
+            <GuideInspectionSections />
+            <GuideMaitreOeuvreSection />
+            <GuideInfrastructureSections />
+            <GuideDesignSections />
+            <GuideDetailsSections />
+            <GuideComfortSections />
+            <GuideParoiSection />
+            <GuideSummary />
+            <GuideGarantiesSection />
+            <GuideFAQ />
+          </div>
         </div>
 
-        {/* Sticky TOC sidebar - desktop only */}
-        <aside className="hidden lg:block w-56 xl:w-64 flex-shrink-0 relative z-10">
-          <div className="sticky top-24 py-8 px-4">
-            <GuideStickyTOC />
-          </div>
-        </aside>
+        <PageCTA
+          title="Besoin d'un avis professionnel ?"
+          description="Avant de vous lancer, faisons le point ensemble."
+          buttonText="Je fais analyser mon projet"
+        />
       </div>
-
-      <PageCTA
-        title="Besoin d'un avis professionnel ?"
-        description="Avant de vous lancer, faisons le point ensemble."
-        buttonText="Je fais analyser mon projet"
-      />
     </Layout>
   );
 };

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { ChevronRight } from "lucide-react";
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import {
+  ClipboardList, Search, HardHat, Wrench, Paintbrush, Sofa, Shield, HelpCircle,
+} from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -12,6 +13,7 @@ import {
 const tocCategories = [
   {
     label: "Préparation",
+    icon: ClipboardList,
     items: [
       { id: "section-planning", label: "Planning & Durée" },
       { id: "section-1", label: "Visite chantier" },
@@ -21,12 +23,14 @@ const tocCategories = [
   },
   {
     label: "Accompagnement",
+    icon: HardHat,
     items: [
       { id: "section-4", label: "Maître d'œuvre" },
     ],
   },
   {
     label: "Infrastructure",
+    icon: Wrench,
     items: [
       { id: "section-5", label: "Plomberie" },
       { id: "section-6", label: "Étanchéité" },
@@ -35,6 +39,7 @@ const tocCategories = [
   },
   {
     label: "Design & Finitions",
+    icon: Paintbrush,
     items: [
       { id: "section-niches", label: "Les niches" },
       { id: "section-8", label: "Joints & finitions" },
@@ -44,6 +49,7 @@ const tocCategories = [
   },
   {
     label: "Confort & Équipement",
+    icon: Sofa,
     items: [
       { id: "section-11", label: "Peinture" },
       { id: "section-12", label: "VMC" },
@@ -53,12 +59,14 @@ const tocCategories = [
   },
   {
     label: "Garanties",
+    icon: Shield,
     items: [
       { id: "section-garanties", label: "Nos garanties" },
     ],
   },
   {
     label: "FAQ",
+    icon: HelpCircle,
     items: [
       { id: "questions-frequentes", label: "Questions fréquentes" },
     ],
@@ -70,7 +78,6 @@ const allItems = tocCategories.flatMap((c) => c.items);
 export function GuideStickyTOC() {
   const [activeId, setActiveId] = useState<string>("");
   const [openCategory, setOpenCategory] = useState<string>("");
-  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -86,9 +93,6 @@ export function GuideStickyTOC() {
         const cat = tocCategories.find((c) => c.items.some((i) => i.id === currentId));
         if (cat) setOpenCategory(cat.label);
       }
-      // Calculate reading progress
-      const idx = allItems.findIndex((i) => i.id === currentId);
-      setProgress(currentId ? Math.round(((idx + 1) / allItems.length) * 100) : 0);
     };
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -105,20 +109,9 @@ export function GuideStickyTOC() {
 
   return (
     <nav aria-label="Sommaire du guide">
-      <div className="flex items-center justify-between mb-4 px-1">
-        <p className="font-display text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">
-          Sommaire
-        </p>
-        <span className="text-[10px] font-medium text-muted-foreground tabular-nums">{progress}%</span>
-      </div>
-      <div className="h-1 w-full bg-muted/40 rounded-full mb-4 overflow-hidden">
-        <motion.div
-          className="h-full rounded-full bg-gradient-to-r from-primary/40 via-primary/70 to-primary"
-          initial={{ width: 0 }}
-          animate={{ width: `${progress}%` }}
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        />
-      </div>
+      <p className="text-xs font-semibold uppercase tracking-[0.15em] mb-6" style={{ color: '#124A66' }}>
+        Sommaire
+      </p>
       <Accordion
         type="single"
         collapsible
@@ -128,52 +121,52 @@ export function GuideStickyTOC() {
       >
         {tocCategories.map((category) => {
           const isCatActive = category.items.some((i) => i.id === activeId);
+          const IconComp = category.icon;
           return (
-            <motion.div
-              key={category.label}
-              whileHover={{ x: 3 }}
-              transition={{ type: "spring", stiffness: 400, damping: 25 }}
-            >
             <AccordionItem
+              key={category.label}
               value={category.label}
               className="border-none"
             >
               <AccordionTrigger
                 className={cn(
-                  "py-2.5 px-3 rounded-lg text-[13px] font-medium hover:no-underline transition-all duration-200 [&>svg]:h-3 [&>svg]:w-3 [&>svg]:text-muted-foreground/60",
+                  "py-3 px-2 text-[13px] font-medium hover:no-underline transition-colors duration-200 [&>svg]:h-3 [&>svg]:w-3 gap-2",
                   isCatActive
-                    ? "text-primary bg-primary/[0.04] hover:bg-primary/[0.07]"
-                    : "text-foreground/70 hover:text-foreground hover:bg-muted/60"
+                    ? "text-[#124A66]"
+                    : "text-muted-foreground hover:text-foreground"
                 )}
               >
-                {category.label}
+                <span className="flex items-center gap-2">
+                  <IconComp className="w-4 h-4" style={{ color: '#124A66' }} />
+                  {category.label}
+                </span>
               </AccordionTrigger>
-              <AccordionContent className="pb-1.5 pt-1">
-                <ul className="space-y-0.5 pl-3 border-l-2 border-primary/15 ml-3">
+              <AccordionContent className="pb-2 pt-0.5">
+                <ul className="space-y-0.5 ml-6">
                   {category.items.map(({ id, label }) => (
-                    <li key={id}>
+                    <li key={id} className="relative">
+                      {/* Active gold bar */}
+                      {activeId === id && (
+                        <div className="absolute left-0 top-1 bottom-1 w-[2px]" style={{ backgroundColor: '#c2a016' }} />
+                      )}
                       <button
                         data-toc-id={id}
                         onClick={() => handleClick(id)}
                         className={cn(
-                          "w-full flex items-center gap-2 text-[12px] py-1.5 px-2.5 rounded-md transition-all duration-200 text-left",
+                          "w-full text-left text-[12px] py-1.5 pl-3 transition-colors duration-200",
                           activeId === id
-                            ? "text-primary font-semibold bg-primary/[0.06]"
-                            : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
+                            ? "font-semibold"
+                            : "text-muted-foreground hover:text-foreground"
                         )}
+                        style={activeId === id ? { color: '#124A66' } : undefined}
                       >
-                        <ChevronRight className={cn(
-                          "w-2.5 h-2.5 flex-shrink-0 transition-colors duration-200",
-                          activeId === id ? "text-primary" : "text-muted-foreground/30"
-                        )} />
-                        <span className="truncate">{label}</span>
+                        {label}
                       </button>
                     </li>
                   ))}
                 </ul>
               </AccordionContent>
             </AccordionItem>
-            </motion.div>
           );
         })}
       </Accordion>
