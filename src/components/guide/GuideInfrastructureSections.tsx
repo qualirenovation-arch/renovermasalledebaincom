@@ -85,6 +85,7 @@ export function GuideInfrastructureSections() {
                   src={butteschaumont6}
                   alt="Étanchéité Weber Aquastop sous carrelage salle de bain"
                   className="w-full h-64 object-cover"
+                  loading="lazy"
                 />
                 <p className="text-xs text-muted-foreground mt-2 text-center">
                   Étanchéité Weber Aquastop — obligatoire sous carrelage

@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { OGTags } from "@/components/seo/OGTags";
 import { PageCTA } from "@/components/layout/PageCTA";
@@ -5,18 +6,20 @@ import { GuideStickyTOC } from "@/components/guide/GuideStickyTOC";
 import { GuideHero } from "@/components/guide/GuideHero";
 import { GuideVideos } from "@/components/guide/GuideVideos";
 import { GuideMobileTOC } from "@/components/guide/GuideMobileTOC";
-import { GuidePlanningSection } from "@/components/guide/GuidePlanningSection";
-import { GuideInspectionSections } from "@/components/guide/GuideInspectionSections";
-import { GuideMaitreOeuvreSection } from "@/components/guide/GuideMaitreOeuvreSection";
-import { GuideInfrastructureSections } from "@/components/guide/GuideInfrastructureSections";
-import { GuideDesignSections } from "@/components/guide/GuideDesignSections";
-import { GuideDetailsSections } from "@/components/guide/GuideDetailsSections";
-import { GuideComfortSections } from "@/components/guide/GuideComfortSections";
-import { GuideParoiSection } from "@/components/guide/GuideParoiSection";
-import { GuideSummary } from "@/components/guide/GuideSummary";
-import { GuideGarantiesSection } from "@/components/guide/GuideGarantiesSection";
-import { GuideFAQ } from "@/components/guide/GuideFAQ";
 import { GuideReadingProgress } from "@/components/guide/GuideReadingProgress";
+
+// Lazy-loaded below-fold sections for code splitting
+const GuidePlanningSection = lazy(() => import("@/components/guide/GuidePlanningSection").then(m => ({ default: m.GuidePlanningSection })));
+const GuideInspectionSections = lazy(() => import("@/components/guide/GuideInspectionSections").then(m => ({ default: m.GuideInspectionSections })));
+const GuideMaitreOeuvreSection = lazy(() => import("@/components/guide/GuideMaitreOeuvreSection").then(m => ({ default: m.GuideMaitreOeuvreSection })));
+const GuideInfrastructureSections = lazy(() => import("@/components/guide/GuideInfrastructureSections").then(m => ({ default: m.GuideInfrastructureSections })));
+const GuideDesignSections = lazy(() => import("@/components/guide/GuideDesignSections").then(m => ({ default: m.GuideDesignSections })));
+const GuideDetailsSections = lazy(() => import("@/components/guide/GuideDetailsSections").then(m => ({ default: m.GuideDetailsSections })));
+const GuideComfortSections = lazy(() => import("@/components/guide/GuideComfortSections").then(m => ({ default: m.GuideComfortSections })));
+const GuideParoiSection = lazy(() => import("@/components/guide/GuideParoiSection").then(m => ({ default: m.GuideParoiSection })));
+const GuideSummary = lazy(() => import("@/components/guide/GuideSummary").then(m => ({ default: m.GuideSummary })));
+const GuideGarantiesSection = lazy(() => import("@/components/guide/GuideGarantiesSection").then(m => ({ default: m.GuideGarantiesSection })));
+const GuideFAQ = lazy(() => import("@/components/guide/GuideFAQ").then(m => ({ default: m.GuideFAQ })));
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -60,17 +63,19 @@ const Guide = () => {
           </aside>
 
           <div className="flex-1 min-w-0 overflow-x-hidden">
-            <GuidePlanningSection />
-            <GuideInspectionSections />
-            <GuideMaitreOeuvreSection />
-            <GuideInfrastructureSections />
-            <GuideDesignSections />
-            <GuideDetailsSections />
-            <GuideComfortSections />
-            <GuideParoiSection />
-            <GuideSummary />
-            <GuideGarantiesSection />
-            <GuideFAQ />
+            <Suspense fallback={null}>
+              <GuidePlanningSection />
+              <GuideInspectionSections />
+              <GuideMaitreOeuvreSection />
+              <GuideInfrastructureSections />
+              <GuideDesignSections />
+              <GuideDetailsSections />
+              <GuideComfortSections />
+              <GuideParoiSection />
+              <GuideSummary />
+              <GuideGarantiesSection />
+              <GuideFAQ />
+            </Suspense>
           </div>
         </div>
 

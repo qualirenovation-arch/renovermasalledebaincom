@@ -56,11 +56,11 @@ export function GuideComfortSections() {
                 <h3 className="text-base font-medium text-foreground mb-3">Rangements intégrés</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <img src={baignoireRangementNiches} alt="Baignoire avec niches de rangement intégrées" className="w-full h-48 object-cover" />
+                    <img src={baignoireRangementNiches} alt="Baignoire avec niches de rangement intégrées" className="w-full h-48 object-cover" loading="lazy" />
                     <p className="text-xs text-muted-foreground mt-1 text-center">Niches intégrées au tablier</p>
                   </div>
                   <div>
-                    <img src={baignoireRangementTiroirs} alt="Baignoire avec tiroirs de rangement" className="w-full h-48 object-cover" />
+                    <img src={baignoireRangementTiroirs} alt="Baignoire avec tiroirs de rangement" className="w-full h-48 object-cover" loading="lazy" />
                     <p className="text-xs text-muted-foreground mt-1 text-center">Tiroirs sous baignoire</p>
                   </div>
                 </div>
