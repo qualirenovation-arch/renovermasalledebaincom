@@ -11,6 +11,7 @@ import {
   FinitionType
 } from "@/data/albumsData";
 import { usePublicAlbums } from "@/hooks/usePublicAlbums";
+import { trackAlbumClick } from "@/hooks/useClickTracking";
 import { 
   FinitionsFilter, 
   NoResultsMessage, 
@@ -30,6 +31,7 @@ export default function Realisations() {
   const [selectedAlbum, setSelectedAlbum] = useState<Album | null>(null);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [selectedFinitions, setSelectedFinitions] = useState<FinitionType[]>([]);
+  const [showAllAlbums, setShowAllAlbums] = useState(false);
   const [calibratorOpen, setCalibratorOpen] = useState(false);
   const { isAdmin } = useAdminAuth();
   const { pins: projectLocations } = usePinPositions();
@@ -37,6 +39,40 @@ export default function Realisations() {
 
   // Defensive: ensure the "completed" list never includes in-progress entries
   const completedAlbums = albums.filter((a) => !a.isInProgress);
+
+  // === 8 FIXED + 7 DYNAMIC LOGIC ===
+  const { fixedAlbums, dynamicAlbums, allFeaturedAlbums } = useMemo(() => {
+    // Step A: 8 fixed albums (is_featured_realisations, ordered)
+    const fixed = completedAlbums
+      .filter(a => a.isFeaturedRealisations)
+      .sort((a, b) => (a.featuredRealisationsOrder ?? 0) - (b.featuredRealisationsOrder ?? 0))
+      .slice(0, 8);
+
+    const fixedIds = new Set(fixed.map(a => a.id));
+
+    // Step B: 7 dynamic albums (not fixed, sorted by clickCount with light shuffle)
+    const candidates = completedAlbums
+      .filter(a => !fixedIds.has(a.id))
+      .sort((a, b) => (b.clickCount ?? 0) - (a.clickCount ?? 0))
+      .slice(0, 20);
+
+    // Light shuffle on top 20
+    const shuffled = [...candidates];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      // Bias towards keeping original order (swap only ~30% of the time)
+      if (Math.random() < 0.3) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+    }
+    const dynamic = shuffled.slice(0, 7);
+
+    return {
+      fixedAlbums: fixed,
+      dynamicAlbums: dynamic,
+      allFeaturedAlbums: [...fixed, ...dynamic],
+    };
+  }, [completedAlbums]);
   
   // Calculer les compteurs de finitions
   const finitionCounts = useMemo(() => {
@@ -68,13 +104,8 @@ export default function Realisations() {
 
   // Helper function to extract arrondissement or department number for sorting
   const getGeographicOrder = (location: string): number => {
-    // Paris arrondissements: "Paris 3ème", "Paris 15ème" etc. -> order by arrondissement (1-20)
     const parisMatch = location.match(/Paris\s+(\d+)/i);
-    if (parisMatch) {
-      return parseInt(parisMatch[1], 10); // 1-20
-    }
-    
-    // IDF departments: "(92)", "(93)", "(94)", "(95)" -> order after Paris (21-24)
+    if (parisMatch) return parseInt(parisMatch[1], 10);
     const deptMatch = location.match(/\((\d{2})\)/);
     if (deptMatch) {
       const dept = parseInt(deptMatch[1], 10);
@@ -82,30 +113,30 @@ export default function Realisations() {
       if (dept === 93) return 22;
       if (dept === 94) return 23;
       if (dept === 95) return 24;
-      return 25 + dept; // Other departments after
+      return 25 + dept;
     }
-    
-    return 100; // Unknown locations at the end
+    return 100;
   };
 
-  // Filter by finitions (OR logic - album matches if it has at least one selected finition)
-  // Then sort geographically: Paris arrondissements first (1-20), then IDF departments (92, 93, 94, 95)
+  // When filters active, show filtered results; when showAll, show all; otherwise show 15 featured
   const filteredCompletedAlbums = useMemo(() => {
-    let filtered = completedAlbums;
-    
     if (selectedFinitions.length > 0) {
-      filtered = completedAlbums.filter(album => {
-        return selectedFinitions.some(finition => 
+      const filtered = completedAlbums.filter(album =>
+        selectedFinitions.some(finition => 
           album.finitionSol === finition || album.finitionMur === finition
-        );
-      });
+        )
+      );
+      return [...filtered].sort((a, b) => getGeographicOrder(a.location) - getGeographicOrder(b.location));
     }
-    
-    // Sort by geographic order
-    return [...filtered].sort((a, b) => {
-      return getGeographicOrder(a.location) - getGeographicOrder(b.location);
-    });
-  }, [completedAlbums, selectedFinitions]);
+    if (showAllAlbums) {
+      return [...completedAlbums].sort((a, b) => getGeographicOrder(a.location) - getGeographicOrder(b.location));
+    }
+    // Default: show 15 featured (8 fixed + 7 dynamic), or all if no featured configured yet
+    if (allFeaturedAlbums.length === 0) {
+      return [...completedAlbums].sort((a, b) => getGeographicOrder(a.location) - getGeographicOrder(b.location));
+    }
+    return allFeaturedAlbums;
+  }, [completedAlbums, selectedFinitions, allFeaturedAlbums, showAllAlbums]);
 
   // Determine if we should show the in-progress view based on URL hash
   useEffect(() => {
@@ -154,16 +185,17 @@ export default function Realisations() {
 
   const handleAlbumClick = (album: Album) => {
     if (album.isInProgress) {
-      // For in-progress projects, show them in modal
       setSelectedAlbum(album);
     } else {
-      // For completed projects, navigate to dedicated page
+      // Track click for dynamic ranking
+      trackAlbumClick(album.slug);
       navigate(`/realisations/${album.slug}`);
     }
   };
 
   const handleFinitionsChange = (finitions: FinitionType[]) => {
     setSelectedFinitions(finitions);
+    setShowAllAlbums(false); // Reset to featured view when filtering
   };
 
   return (
@@ -401,6 +433,26 @@ export default function Realisations() {
                         </div>
                       </motion.div>
                     ))}
+                  </motion.div>
+                )}
+
+                {/* "Voir tout" button - only when showing featured 15 (no filter active) */}
+                {viewMode === "completed" && selectedFinitions.length === 0 && !showAllAlbums && completedAlbums.length > 15 && (
+                  <motion.div
+                    className="flex justify-center mt-12"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                  >
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      onClick={() => setShowAllAlbums(true)}
+                      className="rounded-full"
+                    >
+                      Découvrir toutes nos réalisations
+                      <ArrowRight className="w-5 h-5 ml-2" />
+                    </Button>
                   </motion.div>
                 )}
               </>

@@ -816,6 +816,10 @@ export type Database = {
         }
         Returns: boolean
       }
+      increment_album_click: {
+        Args: { album_slug: string }
+        Returns: undefined
+      }
     }
     Enums: {
       app_role: "admin" | "user"

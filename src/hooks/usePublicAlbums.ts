@@ -30,6 +30,9 @@ interface DbAlbum {
   display_order: number;
   is_in_progress: boolean;
   is_featured: boolean;
+  is_featured_realisations: boolean;
+  featured_realisations_order: number;
+  click_count: number;
   album_photos: { image_url: string; title: string; alt_text: string | null; description: string | null; display_order: number }[];
   album_tags: { tag: string }[];
   album_seo: { meta_title: string | null; meta_description: string | null } | null;
@@ -80,6 +83,9 @@ function mergeAlbum(dbAlbum: DbAlbum, staticAlbum: Album | undefined): Album {
     description: dbAlbum.description,
     category: (dbAlbum.category as Album["category"]) ?? base.category,
     isInProgress: dbAlbum.is_in_progress,
+    isFeaturedRealisations: dbAlbum.is_featured_realisations,
+    featuredRealisationsOrder: dbAlbum.featured_realisations_order,
+    clickCount: dbAlbum.click_count,
     coverImage,
     photos,
     // Keep static fields that aren't in DB yet
