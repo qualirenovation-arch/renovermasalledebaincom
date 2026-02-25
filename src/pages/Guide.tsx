@@ -33,6 +33,7 @@ const faqSchema = {
     { "@type": "Question", "name": "Peut-on installer une douche à l'italienne dans un appartement ancien ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, dans la plupart des appartements, même anciens." } },
     { "@type": "Question", "name": "Comment garantissez-vous l'étanchéité d'une douche à l'italienne ?", "acceptedAnswer": { "@type": "Answer", "text": "Obligation DTU 52.2 : systèmes certifiés avec SEL/SPEC et bandes d'étanchéité." } },
     { "@type": "Question", "name": "Comment choisir sa paroi de douche ?", "acceptedAnswer": { "@type": "Answer", "text": "Le choix repose sur 3 critères : type d'ouverture, couleur du profilé, et type de verre." } },
+    { "@type": "Question", "name": "Le WC doit-il rester fonctionnel s'il est séparé dans une autre pièce ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, impérativement. Un WC situé dans une pièce indépendante doit rester accessible et utilisable pendant toute la durée des travaux." } },
   ]
 };
 
