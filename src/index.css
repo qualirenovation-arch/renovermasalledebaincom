@@ -185,8 +185,25 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Montserrat', sans-serif;
+      font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+  }
+
+  /* Guide Travaux - Nunito Sans typography override */
+  .guide-page {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+  }
+
+  .guide-page h1,
+  .guide-page h2,
+  .guide-page h3,
+  .guide-page h4,
+  .guide-page h5,
+  .guide-page h6 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+    color: hsl(197 70% 24%);
   }
 
   h1, h2, h3, h4, h5, h6 {

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { ChevronRight, List, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { List, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
   Drawer,
@@ -29,9 +28,7 @@ const tocCategories = [
   },
   {
     label: "Accompagnement",
-    items: [
-      { id: "section-4", label: "Maître d'œuvre" },
-    ],
+    items: [{ id: "section-4", label: "Maître d'œuvre" }],
   },
   {
     label: "Infrastructure",
@@ -61,15 +58,11 @@ const tocCategories = [
   },
   {
     label: "Garanties",
-    items: [
-      { id: "section-garanties", label: "Nos garanties" },
-    ],
+    items: [{ id: "section-garanties", label: "Nos garanties" }],
   },
   {
     label: "FAQ",
-    items: [
-      { id: "questions-frequentes", label: "Questions fréquentes" },
-    ],
+    items: [{ id: "questions-frequentes", label: "Questions fréquentes" }],
   },
 ];
 
@@ -79,7 +72,6 @@ export function GuideMobileTOC() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeId, setActiveId] = useState<string>("");
   const [openCategory, setOpenCategory] = useState<string>("");
-  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -95,8 +87,6 @@ export function GuideMobileTOC() {
         const cat = tocCategories.find((c) => c.items.some((i) => i.id === currentId));
         if (cat) setOpenCategory(cat.label);
       }
-      const idx = allItems.findIndex((i) => i.id === currentId);
-      setProgress(currentId ? Math.round(((idx + 1) / allItems.length) * 100) : 0);
     };
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -113,99 +103,75 @@ export function GuideMobileTOC() {
   };
 
   return (
-    <div className="sticky top-20 z-40 lg:hidden bg-background/98 backdrop-blur-xl border-b border-border">
+    <div className="sticky top-20 z-40 lg:hidden bg-background border-b border-border/50">
       <div className="container mx-auto px-4">
         <Drawer open={isOpen} onOpenChange={setIsOpen}>
-          <DrawerTrigger className="w-full flex items-center justify-between py-3.5 text-sm font-medium text-foreground">
-            <span className="flex items-center gap-2.5">
-              <List className="w-4 h-4 text-primary/60" />
-              <span className="font-display text-[13px] uppercase tracking-[0.1em] text-primary">Sommaire</span>
+          <DrawerTrigger className="w-full flex items-center justify-between py-3 text-sm">
+            <span className="flex items-center gap-2">
+              <List className="w-4 h-4 text-muted-foreground" />
+              <span className="text-xs font-semibold uppercase tracking-[0.1em]" style={{ color: '#124A66' }}>Sommaire</span>
             </span>
-            <span className="text-[11px] font-medium text-muted-foreground tabular-nums">{progress}%</span>
           </DrawerTrigger>
-          <div className="h-0.5 w-full bg-muted/30">
-            <motion.div
-              className="h-full rounded-full bg-gradient-to-r from-primary/30 via-primary/60 to-primary"
-              animate={{ width: `${progress}%` }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            />
-          </div>
           <DrawerContent className="max-h-[75vh]">
             <DrawerHeader className="flex items-center justify-between pb-3 border-b border-border/30">
-              <DrawerTitle className="font-display text-base font-semibold text-primary tracking-wide">Sommaire</DrawerTitle>
-              <DrawerClose className="rounded-full p-1 opacity-60 hover:opacity-100 hover:bg-muted/50 transition-all">
+              <DrawerTitle className="text-base font-semibold" style={{ color: '#124A66' }}>Sommaire</DrawerTitle>
+              <DrawerClose className="rounded-full p-1 opacity-60 hover:opacity-100 transition-all">
                 <X className="h-4 w-4" />
                 <span className="sr-only">Fermer</span>
               </DrawerClose>
             </DrawerHeader>
             <div className="px-4 pb-6 pt-2 overflow-y-auto">
-              <AnimatePresence>
-                {isOpen && (
-                  <Accordion
-                    type="single"
-                    collapsible
-                    value={openCategory}
-                    onValueChange={setOpenCategory}
-                    className="space-y-1"
-                  >
-                    {tocCategories.map((category, catIndex) => {
-                      const isCatActive = category.items.some((i) => i.id === activeId);
-                      return (
-                        <motion.div
-                          key={category.label}
-                          initial={{ opacity: 0, y: 12 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{
-                            delay: catIndex * 0.06,
-                            duration: 0.3,
-                            ease: [0.25, 0.1, 0.25, 1],
-                          }}
-                          whileHover={{ x: 3 }}
-                        >
-                          <AccordionItem
-                            value={category.label}
-                            className="border-none"
-                          >
-                            <AccordionTrigger
-                              className={cn(
-                                "py-3 px-3.5 rounded-lg text-[14px] font-medium hover:no-underline transition-all duration-200 [&>svg]:h-3.5 [&>svg]:w-3.5 [&>svg]:text-muted-foreground/60",
-                                isCatActive
-                                  ? "text-primary bg-primary/[0.04]"
-                                  : "text-foreground/70 hover:text-foreground hover:bg-muted/60"
+              <Accordion
+                type="single"
+                collapsible
+                value={openCategory}
+                onValueChange={setOpenCategory}
+                className="space-y-1"
+              >
+                {tocCategories.map((category) => {
+                  const isCatActive = category.items.some((i) => i.id === activeId);
+                  return (
+                    <AccordionItem
+                      key={category.label}
+                      value={category.label}
+                      className="border-none"
+                    >
+                      <AccordionTrigger
+                        className={cn(
+                          "py-3 px-3 text-[14px] font-medium hover:no-underline transition-colors [&>svg]:h-3.5 [&>svg]:w-3.5",
+                          isCatActive
+                            ? "text-[#124A66]"
+                            : "text-muted-foreground hover:text-foreground"
+                        )}
+                      >
+                        {category.label}
+                      </AccordionTrigger>
+                      <AccordionContent className="pb-1.5 pt-1">
+                        <ul className="space-y-0.5 ml-3">
+                          {category.items.map(({ id, label }) => (
+                            <li key={id} className="relative">
+                              {activeId === id && (
+                                <div className="absolute left-0 top-1 bottom-1 w-[2px]" style={{ backgroundColor: '#c2a016' }} />
                               )}
-                            >
-                              {category.label}
-                            </AccordionTrigger>
-                            <AccordionContent className="pb-1.5 pt-1">
-                              <ul className="space-y-0.5 pl-3.5 border-l-2 border-primary/15 ml-3.5">
-                                {category.items.map(({ id, label }) => (
-                                  <li key={id}>
-                                    <button
-                                      onClick={() => handleClick(id)}
-                                      className={cn(
-                                        "w-full flex items-center gap-2.5 text-[13px] py-2 px-3 rounded-md transition-all duration-200 text-left",
-                                        activeId === id
-                                          ? "text-primary font-semibold bg-primary/[0.06]"
-                                          : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
-                                      )}
-                                    >
-                                      <ChevronRight className={cn(
-                                        "w-2.5 h-2.5 flex-shrink-0 transition-colors duration-200",
-                                        activeId === id ? "text-primary" : "text-muted-foreground/30"
-                                      )} />
-                                      <span>{label}</span>
-                                    </button>
-                                  </li>
-                                ))}
-                              </ul>
-                            </AccordionContent>
-                          </AccordionItem>
-                        </motion.div>
-                      );
-                    })}
-                  </Accordion>
-                )}
-              </AnimatePresence>
+                              <button
+                                onClick={() => handleClick(id)}
+                                className={cn(
+                                  "w-full text-left text-[13px] py-2 pl-4 transition-colors",
+                                  activeId === id
+                                    ? "font-semibold text-[#124A66]"
+                                    : "text-muted-foreground hover:text-foreground"
+                                )}
+                              >
+                                {label}
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
+                      </AccordionContent>
+                    </AccordionItem>
+                  );
+                })}
+              </Accordion>
             </div>
           </DrawerContent>
         </Drawer>
