@@ -53,6 +53,8 @@ export function AlbumForm({ album, onBack }: AlbumFormProps) {
   const [isInProgress, setIsInProgress] = useState(album?.is_in_progress ?? false);
   const [isFeatured, setIsFeatured] = useState(album?.is_featured ?? false);
   const [displayOrder, setDisplayOrder] = useState(album?.display_order ?? 0);
+  const [isFeaturedRealisations, setIsFeaturedRealisations] = useState(album?.is_featured_realisations ?? false);
+  const [featuredRealisationsOrder, setFeaturedRealisationsOrder] = useState(album?.featured_realisations_order ?? 0);
 
   // Photos
   const [photos, setPhotos] = useState<{ image_url: string; title: string; alt_text: string; display_order: number }[]>(
@@ -124,6 +126,8 @@ export function AlbumForm({ album, onBack }: AlbumFormProps) {
         is_in_progress: isInProgress,
         is_featured: isFeatured,
         display_order: displayOrder,
+        is_featured_realisations: isFeaturedRealisations,
+        featured_realisations_order: featuredRealisationsOrder,
       };
 
       if (isEditing && albumId) {
@@ -242,6 +246,24 @@ export function AlbumForm({ album, onBack }: AlbumFormProps) {
                 <div className="flex items-center gap-3 pt-6">
                   <Switch id="featured" checked={isFeatured} onCheckedChange={setIsFeatured} />
                   <Label htmlFor="featured">Mis en avant</Label>
+                </div>
+              </div>
+
+              {/* Réalisations section */}
+              <div className="border-t pt-4 mt-2">
+                <h3 className="text-sm font-medium text-muted-foreground mb-3">Page Réalisations</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="flex items-center gap-3">
+                    <Switch id="featured-rea" checked={isFeaturedRealisations} onCheckedChange={setIsFeaturedRealisations} className="data-[state=checked]:bg-blue-600" />
+                    <Label htmlFor="featured-rea">Mettre en avant sur la page Réalisations</Label>
+                  </div>
+                  {isFeaturedRealisations && (
+                    <div className="space-y-2">
+                      <Label htmlFor="rea-order">Ordre Réalisations</Label>
+                      <Input id="rea-order" type="number" value={featuredRealisationsOrder} onChange={e => setFeaturedRealisationsOrder(Number(e.target.value))} min={0} />
+                      <p className="text-xs text-muted-foreground">Les 8 premiers (ordre croissant) seront affichés en priorité.</p>
+                    </div>
+                  )}
                 </div>
               </div>
             </CardContent>
