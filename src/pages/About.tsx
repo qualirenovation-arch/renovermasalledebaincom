@@ -14,6 +14,7 @@ import thierryPelmard1 from "@/assets/thierry-pelmard-1.jpg";
 import thierryPelmard2 from "@/assets/thierry-pelmard-2.jpg";
 import carinaNahmani1 from "@/assets/carina-nahmani-1.jpg";
 import houzzBestOf2026Photo from "@/assets/logos/houzz-best-of-2026-photo-award.png";
+import lartDeRenoverSignature from "@/assets/lart-de-renover-by-carina-n.svg";
 
 const values = [
   { icon: Award, title: "Excellence", description: "Nous visons la perfection dans chaque détail de nos réalisations" },
@@ -340,6 +341,14 @@ export default function About() {
                     <span className="px-3 py-1.5 rounded-full bg-white/15 text-white text-xs font-bold">
                       Toujours disponible
                     </span>
+                   </div>
+                  {/* Signature */}
+                  <div className="mt-6">
+                    <img
+                      src={lartDeRenoverSignature}
+                      alt="L'Art de Rénover by Carina N."
+                      className="h-14 md:h-18 w-auto opacity-90"
+                    />
                   </div>
                 </div>
 
