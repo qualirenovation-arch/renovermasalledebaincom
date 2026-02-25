@@ -35,9 +35,9 @@ const garanties = [
   },
   {
     icon: Handshake,
-    title: "Devis transparent",
-    description: "Prix ferme et définitif, sans surprise ni supplément caché en cours de chantier.",
-    badge: "Prix fixe",
+    title: "Budget encadré, évolutif et transparent",
+    description: "Nos devis sont exhaustifs et conçus pour anticiper chaque étape du chantier. Toute évolution liée aux choix de matériaux ou d'équipements est formalisée et validée avant exécution. Le budget est piloté avec précision : chaque plus-value ou moins-value est détaillée, expliquée et intégrée dans un suivi financier clair. Vous gardez la maîtrise. Nous assurons le cadre.",
+    badge: "Suivi financier",
   },
 ];
 
