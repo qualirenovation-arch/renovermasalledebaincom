@@ -4,8 +4,7 @@ import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
-import logoCircle from "@/assets/logo-rmsb-circle.png";
-import RMSBTextLogo from "@/components/brand/RMSBTextLogo";
+import logoSvg from "@/assets/logos/logo-renover.svg";
 
 // Navigation simplifiée pour mobile (max 5 entrées)
 const mobileNavItems = [
@@ -62,7 +61,7 @@ export function Header() {
           </button>
           
           <Link to="/" className="flex items-center flex-1 min-w-0 ml-1 mr-3">
-            <RMSBTextLogo size="lg" variant="dark" className="h-20 sm:h-24 w-auto max-w-[55vw]" />
+            <img src={logoSvg} alt="RénoverMaSalleDeBain.com" className="h-14 sm:h-16 w-auto max-w-[55vw]" />
           </Link>
           
           <Button variant="cta" size="default" asChild className="text-sm px-5 py-2.5 flex-shrink-0 ml-auto font-semibold shadow-md">
@@ -73,7 +72,7 @@ export function Header() {
         {/* Desktop layout */}
         <div className="hidden xl:flex items-center justify-between h-24">
           <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
-            <RMSBTextLogo size="lg" variant="dark" className="h-24 xl:h-[6.5rem] w-auto -ml-8" />
+            <img src={logoSvg} alt="RénoverMaSalleDeBain.com" className="h-16 xl:h-20 w-auto -ml-4" />
           </Link>
 
           <nav className="flex items-center gap-1 ml-8">
