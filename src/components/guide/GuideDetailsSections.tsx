@@ -34,11 +34,11 @@ export function GuideDetailsSections() {
                 <h3 className="text-lg font-light mb-4" style={{ color: '#124A66' }}>Joint mortier</h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <img src={guideJointAssorti} alt="Joint assorti au carrelage" className="w-full h-48 object-cover mb-2" />
+                    <img src={guideJointAssorti} alt="Joint assorti au carrelage" className="w-full h-48 object-cover mb-2" loading="lazy" />
                     <p className="text-sm"><strong>Joint assorti</strong> — Rendu uniforme et élégant</p>
                   </div>
                   <div>
-                    <img src={guideJointNoir} alt="Joint contrasté foncé" className="w-full h-48 object-cover mb-2" />
+                    <img src={guideJointNoir} alt="Joint contrasté foncé" className="w-full h-48 object-cover mb-2" loading="lazy" />
                     <p className="text-sm"><strong>Joint foncé</strong> — Souligne la pose et le calepinage</p>
                   </div>
                 </div>
@@ -63,7 +63,7 @@ export function GuideDetailsSections() {
                   <p className="text-sm italic">Le profil doit s'intégrer, pas attirer l'oeil.</p>
                 </div>
                 <div>
-                  <img src={guideProfilFinition} alt="Profil Schlüter assorti robinetterie" className="w-full h-48 object-cover" />
+                  <img src={guideProfilFinition} alt="Profil Schlüter assorti robinetterie" className="w-full h-48 object-cover" loading="lazy" />
                 </div>
               </div>
             </div>
@@ -107,6 +107,7 @@ export function GuideDetailsSections() {
                   src={cielDePluiePlafond}
                   alt="Ciel de pluie encastré au plafond avec robinetterie noire"
                   className="w-full h-72 object-cover"
+                  loading="lazy"
                 />
                 <p className="text-xs text-muted-foreground mt-2 text-center">
                   Ciel de pluie encastré plafond — finition noire mate

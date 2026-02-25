@@ -106,6 +106,7 @@ export function GuideFAQ() {
                     src={batiSupportGeberit}
                     alt="Bâti-support Geberit Sigma pour WC suspendu"
                     className="w-40 md:w-48 h-auto object-contain"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -124,9 +125,9 @@ export function GuideFAQ() {
                   </p>
                 </div>
                 <div className="flex gap-2 flex-shrink-0">
-                  <img src={plaqueGeberitNoir} alt="Plaque Geberit noire" className="w-16 md:w-20 h-auto object-contain" />
-                  <img src={plaqueGeberitLaiton} alt="Plaque Geberit laiton" className="w-16 md:w-20 h-auto object-contain" />
-                  <img src={plaqueGeberitChrome} alt="Plaque Geberit chromée" className="w-16 md:w-20 h-auto object-contain" />
+                  <img src={plaqueGeberitNoir} alt="Plaque Geberit noire" className="w-16 md:w-20 h-auto object-contain" loading="lazy" />
+                  <img src={plaqueGeberitLaiton} alt="Plaque Geberit laiton" className="w-16 md:w-20 h-auto object-contain" loading="lazy" />
+                  <img src={plaqueGeberitChrome} alt="Plaque Geberit chromée" className="w-16 md:w-20 h-auto object-contain" loading="lazy" />
                 </div>
               </div>
             </FAQCard>

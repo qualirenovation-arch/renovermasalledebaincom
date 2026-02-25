@@ -30,7 +30,7 @@ export function GuideDesignSections() {
             <div className="space-y-6 text-sm leading-relaxed text-muted-foreground">
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div className="overflow-hidden">
-                  <img src={receveursDouche} alt="Différents types de receveurs de douche" className="w-full h-48 object-cover" />
+                  <img src={receveursDouche} alt="Différents types de receveurs de douche" className="w-full h-48 object-cover" loading="lazy" />
                 </div>
                 <div className="text-sm space-y-4">
                   <div>
@@ -107,6 +107,7 @@ export function GuideDesignSections() {
                     src={boulogne3}
                     alt="Niche au-dessus de la baignoire - Projet Boulogne"
                     className="w-full h-40 md:h-48 object-cover"
+                    loading="lazy"
                   />
                   <p className="text-xs text-muted-foreground mt-1">Boulogne — Baignoire</p>
                 </div>
@@ -115,6 +116,7 @@ export function GuideDesignSections() {
                     src={nicolasRoretDouche}
                     alt="Niche encastrée dans une douche - Projet Nicolas Roret"
                     className="w-full h-40 md:h-48 object-cover"
+                    loading="lazy"
                   />
                   <p className="text-xs text-muted-foreground mt-1">Nicolas Roret — Douche</p>
                 </div>
