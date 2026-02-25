@@ -458,7 +458,7 @@ export default function Index() {
       <PageCTA
         title="Prête à transformer votre salle de bain ?"
         description="Chaque projet commence par une étude sérieuse et personnalisée."
-        buttonText="Je lance mon étude personnalisée"
+        buttonText="Mon étude personnalisée"
         variant="dark"
       />
     </Layout>
