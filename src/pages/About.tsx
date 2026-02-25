@@ -347,7 +347,7 @@ export default function About() {
                     <img
                       src={lartDeRenoverSignature}
                       alt="L'Art de Rénover by Carina N."
-                      className="h-20 md:h-28 w-auto opacity-90"
+                      className="h-28 md:h-36 w-auto opacity-90"
                     />
                   </div>
                 </div>
