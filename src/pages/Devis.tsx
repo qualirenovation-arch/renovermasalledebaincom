@@ -1644,8 +1644,8 @@ export default function Devis() {
                     href="tel:+33659764685"
                     className="flex items-center gap-4 p-4 rounded-xl bg-[hsl(var(--tag-beige))] hover:opacity-90 transition-opacity"
                   >
-                    <div className="w-12 h-12 rounded-full bg-background flex items-center justify-center">
-                      <Phone className="w-6 h-6 text-foreground" />
+                    <div className="w-12 h-12 rounded-xl bg-white border border-border flex items-center justify-center">
+                      <Phone className="w-6 h-6 text-primary" strokeWidth={1.5} />
                     </div>
                     <div>
                       <p className="font-semibold">Téléphone</p>
@@ -1657,8 +1657,8 @@ export default function Devis() {
                     href="mailto:contact@qualiconcept.fr"
                     className="flex items-center gap-4 p-4 rounded-xl bg-[hsl(var(--tag-mint))] hover:opacity-90 transition-opacity"
                   >
-                    <div className="w-12 h-12 rounded-full bg-background flex items-center justify-center">
-                      <Mail className="w-6 h-6 text-foreground" />
+                    <div className="w-12 h-12 rounded-xl bg-white border border-border flex items-center justify-center">
+                      <Mail className="w-6 h-6 text-primary" strokeWidth={1.5} />
                     </div>
                     <div>
                       <p className="font-semibold">Email</p>
@@ -1667,8 +1667,8 @@ export default function Devis() {
                   </a>
 
                   <div className="flex items-start gap-4 p-4 rounded-xl bg-[hsl(var(--tag-blue))]">
-                    <div className="w-12 h-12 rounded-full bg-background flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-foreground" />
+                    <div className="w-12 h-12 rounded-xl bg-white border border-border flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-primary" strokeWidth={1.5} />
                     </div>
                     <div>
                       <p className="font-semibold">Zone d'intervention</p>

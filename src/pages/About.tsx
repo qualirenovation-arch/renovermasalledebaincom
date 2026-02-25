@@ -171,7 +171,7 @@ export default function About() {
                 transition={{ delay: index * 0.1 }}
               >
                 <div className="w-16 h-16 rounded-2xl bg-white border border-border flex items-center justify-center mx-auto mb-6">
-                  <value.icon className="w-8 h-8 text-accent" strokeWidth={1.5} />
+                  <value.icon className="w-8 h-8 text-primary" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-display text-xl font-semibold mb-3">{value.title}</h3>
                 <p className="text-muted-foreground">{value.description}</p>
@@ -198,7 +198,7 @@ export default function About() {
                 {guarantees.map((guarantee, index) => (
                   <li key={index} className="flex items-center gap-4">
                     <div className="w-8 h-8 rounded-xl bg-white border border-border flex items-center justify-center flex-shrink-0">
-                      <CheckCircle2 className="w-5 h-5 text-accent" strokeWidth={1.5} />
+                      <CheckCircle2 className="w-5 h-5 text-primary" strokeWidth={1.5} />
                     </div>
                     <span className="text-foreground">{guarantee}</span>
                   </li>
@@ -219,7 +219,7 @@ export default function About() {
                 {certifications.map((cert, index) => (
                   <li key={index} className="flex items-center gap-4">
                     <div className="w-8 h-8 rounded-xl bg-white border border-border flex items-center justify-center flex-shrink-0">
-                      <Award className="w-5 h-5 text-accent" strokeWidth={1.5} />
+                      <Award className="w-5 h-5 text-primary" strokeWidth={1.5} />
                     </div>
                     <span className="text-foreground">{cert}</span>
                   </li>
