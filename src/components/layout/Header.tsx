@@ -51,20 +51,20 @@ export function Header() {
     >
       <div className="container-custom">
         {/* Mobile layout */}
-        <div className="flex xl:hidden items-center h-20 px-1">
+        <div className="flex xl:hidden items-center h-16 sm:h-20 px-1 gap-1">
           <button
-            className="p-3 text-foreground hover:bg-secondary rounded-lg transition-colors flex-shrink-0 z-10"
+            className="p-2 sm:p-3 text-foreground hover:bg-secondary rounded-lg transition-colors flex-shrink-0 z-10"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Menu"
           >
-            {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+            {isMenuOpen ? <X className="w-6 h-6 sm:w-7 sm:h-7" /> : <Menu className="w-6 h-6 sm:w-7 sm:h-7" />}
           </button>
           
-          <Link to="/" className="flex items-center flex-1 min-w-0 ml-1 mr-2">
-            <img src={logoSvg} alt="RénoverMaSalleDeBain.com" className="h-12 sm:h-14 w-auto max-w-[45vw] object-contain" />
+          <Link to="/" className="flex items-center flex-1 min-w-0 overflow-hidden">
+            <img src={logoSvg} alt="RénoverMaSalleDeBain.com" className="h-10 sm:h-14 w-auto max-w-[40vw] sm:max-w-[45vw] object-contain object-left" />
           </Link>
           
-          <Button variant="cta" size="default" asChild className="text-xs sm:text-sm px-3 sm:px-5 py-2 sm:py-2.5 flex-shrink-0 ml-auto font-semibold shadow-md whitespace-nowrap">
+          <Button variant="cta" size="default" asChild className="text-xs sm:text-sm px-3 sm:px-5 py-2 sm:py-2.5 flex-shrink-0 font-semibold shadow-md whitespace-nowrap">
             <Link to="/devis#devis-form">Mon étude</Link>
           </Button>
         </div>
