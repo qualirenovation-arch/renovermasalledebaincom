@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import lartDeRenoverSignature from "@/assets/lart-de-renover-by-carina-n.svg";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
@@ -178,21 +177,6 @@ export default function WhyUs() {
                 </p>
               </motion.div>
             </div>
-
-            {/* Signature */}
-            <motion.div
-              className="mt-12 flex justify-center"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-            >
-              <img
-                src={lartDeRenoverSignature}
-                alt="L'Art de Rénover by Carina N."
-                className="h-16 md:h-20 w-auto opacity-90"
-              />
-            </motion.div>
           </motion.div>
         </div>
       </section>
