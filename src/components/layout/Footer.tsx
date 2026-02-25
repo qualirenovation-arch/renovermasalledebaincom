@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
 import houzzLogo from "@/assets/logos/houzz-logo.png";
-import logoSvg from "@/assets/logos/logo-renover.svg";
+import logoNeg from "@/assets/logos/logo-renover-neg.svg";
 
 const footerLinks = {
   navigation: [{
@@ -48,7 +48,7 @@ export function Footer() {
           {/* Brand */}
           <div className="flex flex-col items-center lg:items-start justify-center">
             <Link to="/" className="inline-block mb-4">
-              <img src={logoSvg} alt="RénoverMaSalleDeBain.com" className="w-[260px] h-auto brightness-0 invert" />
+              <img src={logoNeg} alt="RénoverMaSalleDeBain.com" className="w-[260px] h-auto" />
             </Link>
             <div className="flex gap-3">
               <a href="https://wa.me/33659764685" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center hover:bg-[#20BD5A] transition-colors" aria-label="WhatsApp">
@@ -119,7 +119,7 @@ export function Footer() {
       <div className="border-t border-primary-foreground/10">
         <div className="container-custom py-5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
           <div className="flex items-center gap-4">
-            <img src={logoSvg} alt="RénoverMaSalleDeBain.com" className="w-[240px] h-auto brightness-0 invert" />
+            <img src={logoNeg} alt="RénoverMaSalleDeBain.com" className="w-[240px] h-auto" />
             <div className="text-center md:text-left">
               <p>6 rue d'Armaillé, 75017 Paris — © 2024 Tous droits réservés.</p>
               <p className="mt-1 text-xs">Site édité par Qualirenovation by Qualiconcept</p>
