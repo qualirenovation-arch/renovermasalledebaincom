@@ -121,7 +121,7 @@ export function GuideFAQ() {
                     Elle permet d'actionner la chasse (simple ou double débit) et donne accès au mécanisme pour la maintenance.
                   </p>
                   <p className="italic">
-                    Elle se choisit en fonction du bâti-support installé : la compatibilité est à valider avec votre entrepreneur.
+                    Elle se choisit en fonction du bâti-support installé : la compatibilité est à valider avec vous.
                   </p>
                 </div>
                 <div className="flex gap-2 flex-shrink-0">
@@ -143,7 +143,7 @@ export function GuideFAQ() {
                   Pour un changement de couleur ou de finition, la plaque doit être <strong className="text-foreground">rachetée séparément</strong>.
                 </p>
                 <p className="italic">
-                  Info importante à valider en amont avec votre entrepreneur pour éviter les surprises.
+                  Info importante à valider en amont avec vous pour éviter les surprises.
                 </p>
               </div>
             </div>
@@ -175,7 +175,7 @@ export function GuideFAQ() {
                   En revanche, si le WC est intégré à la salle de bain en cours de rénovation, son utilisation sera temporairement interrompue. Dans ce cas, il est conseillé de prévoir une solution alternative (WC d'un autre étage, voisin, etc.).
                 </p>
                 <p className="font-medium text-foreground">
-                  Point important : le maintien du WC en fonctionnement est à valider en amont avec votre entrepreneur, notamment pour organiser les phases de chantier.
+                  Point important : le maintien du WC en fonctionnement est à valider en amont avec vous, notamment pour organiser les phases de chantier.
                 </p>
               </div>
             </FAQCard>
