@@ -60,11 +60,11 @@ export function Header() {
             {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </button>
           
-          <Link to="/" className="flex items-center flex-1 min-w-0 ml-1 mr-3">
-            <img src={logoSvg} alt="RénoverMaSalleDeBain.com" className="h-14 sm:h-16 w-auto max-w-[55vw]" />
+          <Link to="/" className="flex items-center flex-1 min-w-0 ml-1 mr-2">
+            <img src={logoSvg} alt="RénoverMaSalleDeBain.com" className="h-12 sm:h-14 w-auto max-w-[45vw] object-contain" />
           </Link>
           
-          <Button variant="cta" size="default" asChild className="text-sm px-5 py-2.5 flex-shrink-0 ml-auto font-semibold shadow-md">
+          <Button variant="cta" size="default" asChild className="text-xs sm:text-sm px-3 sm:px-5 py-2 sm:py-2.5 flex-shrink-0 ml-auto font-semibold shadow-md whitespace-nowrap">
             <Link to="/devis#devis-form">Mon étude</Link>
           </Button>
         </div>
