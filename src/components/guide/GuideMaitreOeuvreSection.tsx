@@ -15,20 +15,20 @@ export function GuideMaitreOeuvreSection() {
           <GuideSectionHeader number={4} title="Maître d'oeuvre : votre allié de A à Z" variant="light" />
 
           <div className="space-y-[10px]" style={{ lineHeight: '1.6' }}>
-            <p style={{ fontFamily: 'Nunito Sans, sans-serif', fontWeight: 600, fontSize: '17px', color: '#F4F6F8' }}>
+            <p className="text-[17px] font-semibold" style={{ color: '#F4F6F8' }}>
               Votre présence n'est pas nécessaire sur le chantier. Je gère, je coordonne, je vous informe.
             </p>
-            <p style={{ fontFamily: 'Nunito Sans, sans-serif', fontWeight: 400, fontSize: '16px', color: '#E6EEF2' }}>
+            <p className="text-base" style={{ color: '#E6EEF2' }}>
               Ce n'est pas une obligation légale, mais c'est inclus dans notre prestation car nous ne sommes pas des exécutants :
-              <span style={{ fontWeight: 600, color: '#F4F6F8' }}> nous sommes des experts en rénovation</span>.
+              <span className="font-semibold" style={{ color: '#F4F6F8' }}> nous sommes des experts en rénovation</span>.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mt-8">
               <div>
-                <h3 style={{ fontFamily: 'Nunito Sans, sans-serif', fontWeight: 600, fontSize: '18px', color: '#F4F6F8', marginBottom: '12px' }}>
+                <h3 className="text-lg font-semibold mb-3" style={{ color: '#F4F6F8' }}>
                   Ce que je fais pour vous :
                 </h3>
-                <ul className="space-y-[8px]" style={{ fontFamily: 'Nunito Sans, sans-serif', fontWeight: 400, fontSize: '16px', color: '#E6EEF2', lineHeight: '1.6' }}>
+                <ul className="space-y-2 text-base leading-relaxed" style={{ color: '#E6EEF2' }}>
                   <li>Assistance démarches syndic</li>
                   <li>Coordination artisans & intervenants</li>
                   <li>Gestion des décisions techniques</li>
@@ -36,10 +36,10 @@ export function GuideMaitreOeuvreSection() {
                 </ul>
               </div>
               <div>
-                <h3 style={{ fontFamily: 'Nunito Sans, sans-serif', fontWeight: 600, fontSize: '18px', color: '#F4F6F8', marginBottom: '12px' }}>
+                <h3 className="text-lg font-semibold mb-3" style={{ color: '#F4F6F8' }}>
                   Ce que vous gagnez :
                 </h3>
-                <ul className="space-y-[8px]" style={{ fontFamily: 'Nunito Sans, sans-serif', fontWeight: 400, fontSize: '16px', color: '#E6EEF2', lineHeight: '1.6' }}>
+                <ul className="space-y-2 text-base leading-relaxed" style={{ color: '#E6EEF2' }}>
                   <li>Un interlocuteur unique</li>
                   <li>Compatibilité technique vérifiée</li>
                   <li>Délais et livraisons coordonnés</li>
@@ -48,7 +48,7 @@ export function GuideMaitreOeuvreSection() {
               </div>
             </div>
 
-            <p className="mt-6 italic" style={{ fontFamily: 'Nunito Sans, sans-serif', fontWeight: 400, fontSize: '16px', color: '#F4F6F8', lineHeight: '1.6' }}>
+            <p className="mt-6 italic text-base leading-relaxed" style={{ color: '#F4F6F8' }}>
               Chacun son métier. Le maître d'oeuvre ne fait pas "à peu près" : c'est l'art de bien faire, avec méthode et anticipation.
             </p>
 
@@ -57,8 +57,8 @@ export function GuideMaitreOeuvreSection() {
                 href="https://www.houzz.fr/magazine/pourquoi-est-il-judicieux-de-faire-appel-a-un-maitre-d-oeuvre-stsetivw-vs~87724005"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 underline underline-offset-4 transition-colors"
-                style={{ fontFamily: 'Nunito Sans, sans-serif', fontSize: '15px', color: '#E6EEF2' }}
+                className="inline-flex items-center gap-2 underline underline-offset-4 transition-colors text-[15px]"
+                style={{ color: '#E6EEF2' }}
               >
                 <ExternalLink className="w-4 h-4" />
                 <span>Lire l'interview Houzz : "Pourquoi faire appel à un maître d'oeuvre ?"</span>

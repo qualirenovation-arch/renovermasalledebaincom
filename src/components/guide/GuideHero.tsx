@@ -17,7 +17,7 @@ export function GuideHero() {
             </h1>
             {/* Gold underline */}
             <div className="w-[60px] h-[2px] mx-auto mb-6" style={{ backgroundColor: '#c2a016' }} />
-            <p className="text-lg md:text-xl font-normal mb-4" style={{ color: '#124A66' }}>
+            <p className="text-lg md:text-xl font-normal mb-4">
               Le guide complet pour une rénovation durable et sans mauvaises surprises
             </p>
             <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed">

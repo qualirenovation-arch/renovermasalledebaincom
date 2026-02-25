@@ -33,7 +33,7 @@ export function GuidePlanningSection() {
             </p>
 
             <div className="space-y-4 mt-6">
-              <h3 className="text-lg font-light" style={{ color: '#124A66' }}>Chaque artisan joue sa partition</h3>
+              <h3 className="text-lg font-light">Chaque artisan joue sa partition</h3>
               <div className="space-y-3">
                 {[
                   { role: "Le plombier = la basse", desc: "Il pose les fondations. Sans lui, rien ne tient. Il intervient tôt et donne le tempo au chantier." },
@@ -55,7 +55,7 @@ export function GuidePlanningSection() {
             </div>
 
             <div className="mt-8">
-              <h3 className="text-lg font-light mb-4" style={{ color: '#124A66' }}>Pourquoi les artisans ne peuvent pas jouer ensemble ?</h3>
+              <h3 className="text-lg font-light mb-4">Pourquoi les artisans ne peuvent pas jouer ensemble ?</h3>
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li>
                   <strong className="text-foreground">Les violons ne supportent pas la poussière des percussions</strong> — La poussière de coupe de carrelage contaminerait les peintures fraîches et créerait des défauts irréversibles.
@@ -70,7 +70,7 @@ export function GuidePlanningSection() {
             </div>
 
             <div className="mt-8">
-              <h3 className="text-lg font-light mb-4" style={{ color: '#124A66' }}>Un timing chronométré pour réussir</h3>
+              <h3 className="text-lg font-light mb-4">Un timing chronométré pour réussir</h3>
               <p className="text-muted-foreground mb-4">
                 Pour une salle de bain réussie, chaque étape doit respecter un timing précis :
               </p>
@@ -88,7 +88,7 @@ export function GuidePlanningSection() {
                   { day: "J25+", task: "Pose sanitaires & accessoires" },
                 ].map(({ day, task }) => (
                   <div key={day} className="flex items-baseline gap-4 py-1.5 border-b border-border/20">
-                    <span className="font-semibold text-sm w-16 flex-shrink-0" style={{ color: '#124A66' }}>{day}</span>
+                    <span className="font-semibold text-sm w-16 flex-shrink-0 text-foreground">{day}</span>
                     <span className="text-muted-foreground">{task}</span>
                   </div>
                 ))}
