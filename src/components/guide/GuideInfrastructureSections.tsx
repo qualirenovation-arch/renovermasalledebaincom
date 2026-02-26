@@ -475,6 +475,25 @@ export function GuideInfrastructureSections() {
                     Dimensions, finition (laqué, bois, stratifié) et type de vasque (posée, encastrée, intégrée) — tout se décide en amont avec le maître d'œuvre.
                   </p>
                 </div>
+
+                {/* Bloc citation Meuble vasque */}
+                <div className="py-8 px-6 mt-8 text-center" style={{ backgroundColor: '#124A66' }}>
+                  <p
+                    className="italic font-light leading-[1.9]"
+                    style={{ fontSize: '1.2em', color: '#E6EEF2', fontFamily: "'Nunito Sans', sans-serif" }}
+                  >
+                    "Un meuble bien pensé structure l'espace.<br />
+                    Il ne se contente pas de ranger — il compose."
+                  </p>
+                  <div className="flex justify-end mt-5">
+                    <img
+                      src={carinaSig}
+                      alt="Carina N."
+                      className="w-[70px] md:w-[100px] opacity-90"
+                      style={{ filter: 'brightness(0) invert(1)' }}
+                    />
+                  </div>
+                </div>
               </div>
 
               {/* Chauffe-eau */}
