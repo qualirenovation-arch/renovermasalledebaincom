@@ -140,6 +140,22 @@ export function Header() {
                   </Link>
                 </motion.div>
               ))}
+
+              {/* CTA Urgence dégât des eaux in mobile menu */}
+              <motion.div
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: mobileNavItems.length * 0.05 }}
+              >
+                <Link
+                  to="/devis?type=degat_eaux#devis-form"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="flex items-center gap-2 px-4 py-3 rounded-lg text-base font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-colors border border-primary mt-2"
+                >
+                  <Droplets className="w-4 h-4" />
+                  Urgence dégât des eaux
+                </Link>
+              </motion.div>
               
               {/* Phone CTA in mobile menu */}
               <motion.a 
