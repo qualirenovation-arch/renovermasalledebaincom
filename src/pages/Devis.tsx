@@ -717,7 +717,7 @@ export default function Devis() {
               <CalendarCheck className="w-4 h-4" />
               Visite gratuite
             </span>
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6 tracking-tight">
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6 tracking-tight text-primary">
               {leadToken ? "Affinons votre projet" : "Demandez votre devis gratuit"}
             </h1>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-xl">

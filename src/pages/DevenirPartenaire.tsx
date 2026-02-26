@@ -613,7 +613,7 @@ export default function DevenirPartenaire() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 text-primary">
               Devenir partenaire sous-traitant
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">

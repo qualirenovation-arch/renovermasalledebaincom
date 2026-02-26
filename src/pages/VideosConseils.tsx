@@ -38,7 +38,7 @@ export default function VideosConseils() {
               <PlayCircle className="w-4 h-4" />
               Vidéos Instagram
             </div>
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-primary mb-6">
               Vidéos Conseils
             </h1>
             <p className="text-lg text-muted-foreground">

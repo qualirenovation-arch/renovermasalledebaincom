@@ -214,7 +214,7 @@ export default function Realisations() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6">
+            <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6 text-primary">
               Nos réalisations de salles de bain à Paris et Île-de-France
             </h1>
             <p className="text-muted-foreground text-lg">

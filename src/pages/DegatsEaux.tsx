@@ -144,7 +144,7 @@ const DegatsEaux = () => {
             <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-4">
               <Droplets className="w-7 h-7 text-blue-600" />
             </div>
-            <h1 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-foreground">
+            <h1 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-primary">
               Dégât des eaux ? Et si c'était l'occasion de faire mieux ?
             </h1>
             <p className="text-muted-foreground text-lg">
