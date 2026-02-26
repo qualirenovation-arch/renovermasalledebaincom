@@ -519,17 +519,30 @@ export function GuideInfrastructureSections() {
                 <h4 className="text-base font-semibold mb-3" style={{ color: '#124A66' }}>Mise en œuvre & alignement</h4>
                 <div className="space-y-2 mb-6">
                   <p>Lorsque le chauffe-eau est positionné au-dessus d'un WC suspendu, l'implantation doit être calculée avec précision.</p>
-                  <p>Nous anticipons :</p>
+
+                  <p className="font-semibold mt-3" style={{ color: '#124A66' }}>Calcul de la profondeur totale :</p>
+                  <p>Avant de poser le bâti-support, il faut valider la profondeur nécessaire. Le calcul est simple :</p>
+                  <ul className="list-disc list-inside space-y-1.5">
+                    <li>Profondeur du bâti-support (ex : 12 cm ou 8 cm)</li>
+                    <li>+ BA13 collé ou vissé</li>
+                    <li>+ épaisseur du carrelage + colle</li>
+                    <li>= <span className="font-semibold">profondeur totale du coffrage</span></li>
+                  </ul>
+                  <p className="mt-2">Le placard au-dessus doit être construit en conséquence : le ballon fait déjà environ 30 cm de profondeur, plus la porte, plus les finitions…</p>
+
+                  <p className="font-semibold mt-3" style={{ color: '#124A66' }}>Nous anticipons également :</p>
                   <ul className="list-disc list-inside space-y-1.5">
                     <li>La hauteur du bâti-support (ex : 112 cm ou 80 cm)</li>
-                    <li>L'épaisseur de l'habillage</li>
-                    <li>L'épaisseur du carrelage</li>
                     <li>Les hauteurs finies</li>
                     <li>L'alignement des portes de placard</li>
                   </ul>
                   <p className="mt-3">Le chauffe-eau, le bâti et le parement doivent former une ligne continue, sans décalage visuel.</p>
                   <p className="italic">Quelques millimètres d'erreur peuvent casser l'harmonie de l'ensemble.</p>
                   <p>C'est pourquoi les hauteurs sont définies avant la fermeture des cloisons et avant la commande des menuiseries.</p>
+
+                  <p className="mt-4 italic text-sm" style={{ color: '#124A66' }}>
+                    Bâti + BA13 + colle + carrelage + ballon + porte + finitions… Ça, c'est de la maîtrise d'œuvre. On vous épargne le casse-tête.
+                  </p>
                 </div>
 
                 {/* Bloc citation Chauffe-eau */}
