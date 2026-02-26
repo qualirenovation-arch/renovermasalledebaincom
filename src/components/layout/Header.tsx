@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Droplets } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -91,7 +91,18 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center ml-6">
+          <div className="flex items-center ml-6 gap-3">
+            <Button 
+              variant="outline" 
+              size="sm" 
+              asChild 
+              className="rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors hidden xl:inline-flex"
+            >
+              <Link to="/degats-eaux">
+                <Droplets className="w-4 h-4 mr-1.5" />
+                Urgence dégât des eaux
+              </Link>
+            </Button>
             <Button variant="cta" size="lg" asChild>
               <Link to="/devis#devis-form">Mon étude personnalisée</Link>
             </Button>
