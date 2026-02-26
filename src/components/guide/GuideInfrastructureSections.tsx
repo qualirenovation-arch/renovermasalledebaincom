@@ -8,6 +8,7 @@ import batiSupportGeberit from "@/assets/images/bati-support-geberit.png";
 import plaqueGeberitNoir from "@/assets/images/plaque-geberit-noir.png";
 import plaqueGeberitLaiton from "@/assets/images/plaque-geberit-laiton.png";
 import plaqueGeberitChrome from "@/assets/images/plaque-geberit-chrome.png";
+import carinaSig from "@/assets/carina-signature.svg";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-4 mt-16"><div className="max-w-4xl mx-auto border-b border-border/30" /></div>
@@ -371,36 +372,91 @@ export function GuideInfrastructureSections() {
             <div className="space-y-10 text-sm leading-relaxed text-muted-foreground">
               {/* WC */}
               <div id="section-wc" className="scroll-mt-20">
-                <h3 className="text-lg font-light mb-4">WC suspendu</h3>
-                <div className="flex flex-col md:flex-row gap-6 mb-4">
-                  <div className="flex-1 space-y-3">
-                    <p>
-                      Le <strong className="text-foreground">bâti-support</strong> est une structure métallique encastrée dans le mur qui supporte la cuvette, intègre le réservoir de chasse et reçoit la plaque de déclenchement. Il est recouvert de BA13, que nous recommandons de carreler pour sa durabilité.
-                    </p>
-                    <p>
-                      La <strong className="text-foreground">plaque de déclenchement</strong> est le bouton de chasse visible. Elle est livrée en blanc par défaut — pour un changement de couleur, elle doit être rachetée séparément.
-                    </p>
-                    <p>
-                      Nous recommandons systématiquement les <strong className="text-foreground">cuvettes sans bride</strong> : plus hygiéniques, plus faciles à nettoyer.
-                    </p>
+                <h3 className="text-lg font-semibold mb-4" style={{ color: '#124A66' }}>
+                  WC suspendu : le choix du bâti-support fait toute la différence
+                </h3>
+
+                <div className="space-y-3 mb-6">
+                  <p>Le WC suspendu est aujourd'hui le standard en rénovation.</p>
+                  <p>Mais derrière la cuvette se cache un élément déterminant : <strong className="text-foreground">le bâti-support</strong>.</p>
+                </div>
+
+                <div className="flex flex-col md:flex-row gap-6 mb-6">
+                  <div className="flex-1">
+                    <h4 className="text-base font-semibold mb-3" style={{ color: '#124A66' }}>Profondeur & hauteur</h4>
+                    <p className="mb-2">Tous les bâtis ne sont pas identiques. Exemple reconnu : <strong className="text-foreground">Geberit Duofix</strong>.</p>
+                    <ul className="space-y-1.5 list-disc list-inside">
+                      <li>Version standard : environ 12 cm d'épaisseur</li>
+                      <li>Version faible profondeur : à partir de 8 cm</li>
+                      <li>Hauteur standard : 112 cm</li>
+                      <li>Version hauteur réduite : environ 80 cm (idéal sous fenêtre)</li>
+                    </ul>
+                    <p className="mt-3">Le choix dépend de la profondeur disponible, de la hauteur sous allège et de la configuration des évacuations.</p>
                   </div>
                   <div className="flex-shrink-0">
                     <img
                       src={batiSupportGeberit}
-                      alt="Bâti-support Geberit Sigma pour WC suspendu"
+                      alt="Bâti-support Geberit Duofix pour WC suspendu"
                       className="w-40 md:w-48 h-auto object-contain"
                       loading="lazy"
                     />
                   </div>
                 </div>
+
+                <h4 className="text-base font-semibold mb-3" style={{ color: '#124A66' }}>Portant ou autoportant ?</h4>
+                <div className="space-y-2 mb-6">
+                  <p><strong className="text-foreground">Bâti autoportant</strong> — Fixation principale au sol. Idéal sur cloison légère.</p>
+                  <p><strong className="text-foreground">Bâti portant</strong> — Fixation mur + sol. Adapté aux murs porteurs.</p>
+                  <p>Le système doit toujours être adapté au support existant.</p>
+                </div>
+
+                <div className="border-l-2 p-5 mb-6" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
+                  <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#124A66' }}>Astuce de pro</p>
+                  <div className="space-y-1.5 text-sm" style={{ color: '#011115' }}>
+                    <p>Si le WC est posé sur une cloison en BA13 :</p>
+                    <ul className="list-disc list-inside space-y-1">
+                      <li>Intégrer un panneau OSB en renfort</li>
+                      <li>Utiliser une plaque haute résistance type Habito</li>
+                      <li>Renforcer la structure métallique si nécessaire</li>
+                    </ul>
+                    <p className="mt-2">Un WC suspendu peut supporter plus de 400 kg, à condition que la structure soit correctement dimensionnée.</p>
+                  </div>
+                </div>
+
+                <h4 className="text-base font-semibold mb-3" style={{ color: '#124A66' }}>Alignement & détail</h4>
+                <div className="space-y-2 mb-4">
+                  <p>Lorsque le WC est intégré dans un placard (ex : chauffe-eau au-dessus), le calcul des hauteurs est essentiel.</p>
+                  <p>Bâti + habillage + carrelage doivent s'aligner parfaitement avec les portes.</p>
+                  <p className="italic">Quelques millimètres d'écart suffisent à casser l'harmonie.</p>
+                </div>
+
                 <div className="flex gap-3 mb-4">
                   <img src={plaqueGeberitNoir} alt="Plaque Geberit noire" className="w-16 md:w-20 h-auto object-contain" loading="lazy" />
                   <img src={plaqueGeberitLaiton} alt="Plaque Geberit laiton" className="w-16 md:w-20 h-auto object-contain" loading="lazy" />
                   <img src={plaqueGeberitChrome} alt="Plaque Geberit chromée" className="w-16 md:w-20 h-auto object-contain" loading="lazy" />
                 </div>
-                <p className="text-xs text-muted-foreground italic">
+                <p className="text-xs text-muted-foreground italic mb-6">
                   Plaques Geberit Sigma — noir, laiton, chromé. Compatibilité à valider selon le bâti installé.
                 </p>
+
+                {/* Bloc citation WC */}
+                <div className="py-8 px-6 mt-8 text-center" style={{ backgroundColor: '#124A66' }}>
+                  <p
+                    className="italic font-light leading-[1.9]"
+                    style={{ fontSize: '1.2em', color: '#E6EEF2', fontFamily: "'Nunito Sans', sans-serif" }}
+                  >
+                    "Les détails ne sont pas accessoires.<br />
+                    Ils font la différence."
+                  </p>
+                  <div className="flex justify-end mt-5">
+                    <img
+                      src={carinaSig}
+                      alt="Carina N."
+                      className="w-[70px] md:w-[100px] opacity-90"
+                      style={{ filter: 'brightness(0) invert(1)' }}
+                    />
+                  </div>
+                </div>
               </div>
 
               {/* Meuble vasque */}
@@ -423,17 +479,60 @@ export function GuideInfrastructureSections() {
 
               {/* Chauffe-eau */}
               <div id="section-chauffe-eau" className="scroll-mt-20">
-                <h3 className="text-lg font-light mb-4">Chauffe-eau</h3>
-                <div className="space-y-3">
-                  <p>Le chauffe-eau doit rester <strong className="text-foreground">accessible</strong> pour la maintenance et adapté à la consommation du foyer.</p>
-                  <div className="space-y-2">
-                    <p><strong className="text-foreground">Cumulus (ballon)</strong> — Le plus courant. Stocke l'eau chaude (100 à 300L). Nécessite de l'espace.</p>
-                    <p><strong className="text-foreground">Thermodynamique</strong> — Jusqu'à 70% d'économie d'énergie. Plus cher à l'achat, rentable sur la durée.</p>
-                    <p><strong className="text-foreground">Instantané</strong> — Compact, chauffe à la demande. Adapté aux petits logements ou en complément.</p>
-                  </div>
-                  <p className="font-medium text-foreground mt-3">
-                    Le chauffe-eau nécessite une ligne électrique dédiée au tableau, avec disjoncteur adapté.
+                <h3 className="text-lg font-semibold mb-4" style={{ color: '#124A66' }}>
+                  Chauffe-eau : optimiser l'espace sans compromettre le confort
+                </h3>
+
+                <div className="space-y-3 mb-6">
+                  <p>Dans une salle de bain rénovée, chaque centimètre compte.</p>
+                  <p>Aujourd'hui, les <strong className="text-foreground">ballons plats</strong> permettent :</p>
+                  <ul className="list-disc list-inside space-y-1.5">
+                    <li>Un gain de place important</li>
+                    <li>Une pose verticale ou horizontale</li>
+                    <li>Une meilleure intégration en placard</li>
+                    <li>Une consommation optimisée</li>
+                  </ul>
+                  <p>Nous recommandons des modèles performants comme : <strong className="text-foreground">Velis</strong> ou <strong className="text-foreground">Malicio</strong>.</p>
+                </div>
+
+                <h4 className="text-base font-semibold mb-3" style={{ color: '#124A66' }}>Chauffe-eau connecté</h4>
+                <div className="space-y-2 mb-6">
+                  <p>Certains modèles peuvent être pilotés à distance. Ils permettent :</p>
+                  <ul className="list-disc list-inside space-y-1.5">
+                    <li>D'éteindre le ballon en cas d'absence prolongée</li>
+                    <li>De le relancer avant votre retour</li>
+                    <li>De programmer les plages de chauffe</li>
+                    <li>De suivre la consommation</li>
+                  </ul>
+                  <p className="italic">Idéal pour les personnes souvent en déplacement ou pour une résidence secondaire.</p>
+                </div>
+
+                <div className="border-l-2 p-5 mb-6" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
+                  <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#124A66' }}>Anticipation</p>
+                  <ul className="space-y-1.5 text-sm" style={{ color: '#011115' }}>
+                    <li>Le chauffe-eau doit rester accessible pour la maintenance</li>
+                    <li>Disposer d'une ligne électrique dédiée</li>
+                    <li>Être positionné en cohérence avec les hauteurs finies</li>
+                  </ul>
+                </div>
+
+                {/* Bloc citation Chauffe-eau */}
+                <div className="py-8 px-6 mt-8 text-center" style={{ backgroundColor: '#124A66' }}>
+                  <p
+                    className="italic font-light leading-[1.9]"
+                    style={{ fontSize: '1.2em', color: '#E6EEF2', fontFamily: "'Nunito Sans', sans-serif" }}
+                  >
+                    "Un équipement bien choisi ne se voit pas.<br />
+                    Il s'adapte à votre quotidien."
                   </p>
+                  <div className="flex justify-end mt-5">
+                    <img
+                      src={carinaSig}
+                      alt="Carina N."
+                      className="w-[70px] md:w-[100px] opacity-90"
+                      style={{ filter: 'brightness(0) invert(1)' }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
