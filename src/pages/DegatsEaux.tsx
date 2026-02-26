@@ -264,7 +264,8 @@ const DegatsEaux = () => {
       <PageCTA
         title="Besoin d'être accompagné après un sinistre ?"
         description="On prend en charge votre dossier, de l'expertise à la remise en état."
-        buttonText="Je me fais accompagner"
+        buttonText="Mon étude personnalisée"
+        invertCTA
       />
     </Layout>
   );

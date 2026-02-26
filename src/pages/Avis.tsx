@@ -224,7 +224,7 @@ export default function Avis() {
       <PageCTA
         title="Vous aussi, vivez une rénovation sereine"
         description="Rejoignez nos clients satisfaits et bénéficiez d'un accompagnement sur-mesure."
-        buttonText="Je demande mon étude personnalisée"
+        buttonText="Mon étude personnalisée"
       />
     </Layout>
   );

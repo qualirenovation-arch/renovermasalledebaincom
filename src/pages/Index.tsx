@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollAnimation, StaggerContainer, StaggerItem } from "@/components/ui/scroll-animation";
-import { ArrowRight, Phone, Pencil, Gem, Wrench, Play, Sparkles, ChevronRight, Newspaper, BookOpen, Video } from "lucide-react";
+import { ArrowRight, Phone, Pencil, Gem, Wrench, Play, Sparkles, ChevronRight, Newspaper, BookOpen, Video, Droplets } from "lucide-react";
 import jemmapes1 from "@/assets/jemmapes-1.jpg";
 import { HeroSlideshow } from "@/components/home/HeroSlideshow";
 import vincennesMr1 from "@/assets/vincennes-mr-1.jpg";
@@ -106,16 +106,29 @@ export default function Index() {
               <p className="text-muted-foreground text-base md:text-lg lg:text-xl mb-8 md:mb-10 leading-relaxed max-w-lg lg:max-w-none">
                 Rénover votre salle de bain sans stress, sans mauvaises surprises, grâce à une conception maîtrisée et un accompagnement de A à Z.
               </p>
-              <Button 
-                variant="gold" 
-                size="lg" 
-                asChild 
-                className="rounded-full px-10 w-full sm:w-auto text-base shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <Link to="/devis#devis-form">
-                  JE DEMANDE MON ÉTUDE PERSONNALISÉE
-                </Link>
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <Button 
+                  variant="gold" 
+                  size="lg" 
+                  asChild 
+                  className="rounded-full px-10 w-full sm:w-auto text-base shadow-lg hover:shadow-xl transition-shadow"
+                >
+                  <Link to="/devis#devis-form">
+                    Mon étude personnalisée
+                  </Link>
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  asChild 
+                  className="rounded-full px-8 w-full sm:w-auto text-base border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                >
+                  <Link to="/degats-eaux">
+                    <Droplets className="w-4 h-4 mr-2" />
+                    Urgence dégât des eaux
+                  </Link>
+                </Button>
+              </div>
             </ScrollAnimation>
             
             <ScrollAnimation 

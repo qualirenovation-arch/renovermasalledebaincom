@@ -1,16 +1,18 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Droplets } from "lucide-react";
 
 interface PageCTAProps {
   title: string;
   description: string;
   buttonText: string;
   variant?: "light" | "dark";
+  /** If true, invert hierarchy: water damage is primary, classic is secondary */
+  invertCTA?: boolean;
 }
 
-export function PageCTA({ title, description, buttonText, variant = "light" }: PageCTAProps) {
+export function PageCTA({ title, description, buttonText, variant = "light", invertCTA = false }: PageCTAProps) {
   const isDark = variant === "dark";
 
   return (
@@ -30,12 +32,47 @@ export function PageCTA({ title, description, buttonText, variant = "light" }: P
           <p className={`text-base md:text-lg mb-10 md:mb-12 leading-relaxed ${isDark ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
             {description}
           </p>
-          <Button variant="gold" size="xl" asChild className="rounded-full">
-            <Link to="/devis#devis-form">
-              {buttonText}
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            {invertCTA ? (
+              <>
+                {/* Water damage = primary on /degats-eaux */}
+                <Button variant="default" size="xl" asChild className="rounded-full w-full sm:w-auto">
+                  <Link to="/degats-eaux">
+                    <Droplets className="w-5 h-5 mr-2" />
+                    Urgence dégât des eaux
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
+                </Button>
+                <Button variant="gold" size="xl" asChild className="rounded-full w-full sm:w-auto">
+                  <Link to="/devis#devis-form">
+                    {buttonText}
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
+                </Button>
+              </>
+            ) : (
+              <>
+                {/* Classic = primary everywhere else */}
+                <Button variant="gold" size="xl" asChild className="rounded-full w-full sm:w-auto">
+                  <Link to="/devis#devis-form">
+                    {buttonText}
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="xl" 
+                  asChild 
+                  className="rounded-full w-full sm:w-auto border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                >
+                  <Link to="/degats-eaux">
+                    <Droplets className="w-5 h-5 mr-2" />
+                    Urgence dégât des eaux
+                  </Link>
+                </Button>
+              </>
+            )}
+          </div>
         </motion.div>
       </div>
     </section>
