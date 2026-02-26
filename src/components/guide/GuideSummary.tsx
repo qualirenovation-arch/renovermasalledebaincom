@@ -50,6 +50,7 @@ export function GuideSummary() {
               src={carinaSig}
               alt="Carina N."
               className="w-[100px] md:w-[150px] opacity-90"
+              style={{ filter: 'brightness(0) invert(1)' }}
             />
           </div>
         </motion.div>
