@@ -24,7 +24,6 @@ const desktopNavItems = [
   { label: "Avis", path: "/avis" },
   { label: "Presse", path: "/presse#parutions" },
   { label: "Guide travaux", path: "/guide-travaux" },
-  { label: "Dégâts des eaux", path: "/degats-eaux" },
 ];
 
 export function Header() {
