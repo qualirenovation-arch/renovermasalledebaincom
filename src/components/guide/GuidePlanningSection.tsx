@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { GuideSectionHeader } from "./GuideSectionHeader";
+import carinaSig from "@/assets/carina-signature.svg";
 
 export function GuidePlanningSection() {
   return (
@@ -11,7 +12,9 @@ export function GuidePlanningSection() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <GuideSectionHeader title="Planning & Durée : 3 semaines à 1 mois" />
+          {/* ============ BLOC 1 : Durée & orchestration ============ */}
+          <GuideSectionHeader title="Planning & Durée" />
+          <p className="text-lg font-light text-muted-foreground -mt-4 mb-8">3 semaines à 1 mois</p>
 
           {/* À retenir */}
           <div className="border-l-2 p-5 mb-8" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
@@ -19,109 +22,140 @@ export function GuidePlanningSection() {
             <ul className="space-y-1.5 text-sm" style={{ color: '#011115' }}>
               <li>Une rénovation complète prend 3 semaines à 1 mois</li>
               <li>Chaque corps de métier intervient dans un ordre précis</li>
-              <li>Le maître d'oeuvre coordonne l'ensemble comme un chef d'orchestre</li>
+              <li>Le maître d'œuvre coordonne l'ensemble</li>
             </ul>
           </div>
 
-          {/* Content */}
-          <div className="space-y-6 text-sm leading-relaxed text-muted-foreground">
+          {/* Texte court orchestre */}
+          <div className="space-y-4 text-sm leading-relaxed text-muted-foreground mb-8">
             <p>
-              <strong className="text-foreground">Une rénovation de salle de bain prend entre 3 semaines et 1 mois.</strong> Pourquoi ? Parce que chaque corps de métier doit intervenir dans un ordre précis, sans jamais se chevaucher.
-            </p>
-            <p>
-              Un chantier, c'est comme un orchestre : les artisans ne peuvent pas tous jouer en même temps.
-            </p>
-
-            <div className="space-y-4 mt-6">
-              <h3 className="text-lg font-light">Chaque artisan joue sa partition</h3>
-              <div className="space-y-3">
-                {[
-                  { role: "Le plombier = la basse", desc: "Il pose les fondations. Sans lui, rien ne tient. Il intervient tôt et donne le tempo au chantier." },
-                  { role: "L'électricien = le clavier", desc: "Il tisse les connexions invisibles. Discret mais essentiel, il travaille en parallèle de la basse." },
-                  { role: "Le plâtrier = les cuivres", desc: "Il structure l'espace. Faux plafonds et cloisons dessinent la forme finale de la pièce." },
-                  { role: "Le carreleur = les percussions", desc: "Précision millimétrée, rythme soutenu. Il crée le tempo visuel de votre salle de bain." },
-                  { role: "Le menuisier = le piano", desc: "Il apporte la mélodie. Meubles et rangements donnent l'âme et le caractère à la pièce." },
-                  { role: "Le peintre = les violons", desc: "Il intervient en dernier, en finesse. Ses finitions subliment l'ensemble et signent l'oeuvre." },
-                ].map(({ role, desc }) => (
-                  <div key={role} className="border-b border-border/30 pb-3">
-                    <strong className="text-foreground text-sm">{role}</strong>
-                    <p className="text-sm text-muted-foreground mt-1">{desc}</p>
-                  </div>
-                ))}
-              </div>
-              <p className="text-sm text-muted-foreground italic">
-                Et le maître d'oeuvre ? C'est le chef d'orchestre qui coordonne tout le monde.
-              </p>
-            </div>
-
-            <div className="mt-8">
-              <h3 className="text-lg font-light mb-4">Pourquoi les artisans ne peuvent pas jouer ensemble ?</h3>
-              <ul className="space-y-3 text-sm text-muted-foreground">
-                <li>
-                  <strong className="text-foreground">Les violons ne supportent pas la poussière des percussions</strong> — La poussière de coupe de carrelage contaminerait les peintures fraîches et créerait des défauts irréversibles.
-                </li>
-                <li>
-                  <strong className="text-foreground">La basse et les violons ne partagent pas la scène</strong> — Les échelles, les outils et les zones de travail se chevauchent. Un seul artisan peut occuper l'espace efficacement.
-                </li>
-                <li>
-                  <strong className="text-foreground">Chaque mouvement prépare le suivant</strong> — Impossible de carreler avant que la plomberie soit faite. Impossible de peindre avant que le carrelage soit sec.
-                </li>
-              </ul>
-            </div>
-
-            <div className="mt-8">
-              <h3 className="text-lg font-light mb-4">Un timing chronométré pour réussir</h3>
-              <p className="text-muted-foreground mb-4">
-                Pour une salle de bain réussie, chaque étape doit respecter un timing précis :
-              </p>
-              <div className="space-y-2 text-sm">
-                {[
-                  { day: "J1", task: "Protection + dépose sanitaires & plomberie" },
-                  { day: "J2-J3", task: "Démolition & évacuation" },
-                  { day: "J3", task: "Réunion de chantier (plan & choix)" },
-                  { day: "J4-J5", task: "Plâtrerie (faux plafond, cloisons)" },
-                  { day: "J6-J9", task: "Électricité & plomberie" },
-                  { day: "J10-J11", task: "Étanchéité & séchage" },
-                  { day: "J12-J17", task: "Carrelage sol & murs" },
-                  { day: "J18-J19", task: "Menuiserie (meubles, rangements)" },
-                  { day: "J20-J24", task: "Peinture & finitions" },
-                  { day: "J25+", task: "Pose sanitaires & accessoires" },
-                ].map(({ day, task }) => (
-                  <div key={day} className="flex items-baseline gap-4 py-1.5 border-b border-border/20">
-                    <span className="font-semibold text-sm w-16 flex-shrink-0 text-foreground">{day}</span>
-                    <span className="text-muted-foreground">{task}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-8 grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-base font-medium mb-3 text-foreground">Nettoyage de fin de chantier</h3>
-                <p className="text-muted-foreground text-sm mb-2">
-                  La poussière se propage malgré nos protections. C'est pourquoi nous prévoyons :
-                </p>
-                <ul className="space-y-1 text-sm text-muted-foreground">
-                  <li><strong>2 personnes pendant 1 journée</strong> pour astiquer la salle de bain et votre appartement</li>
-                  <li><strong>Évacuation des gravats</strong> par camion en cours de chantier</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-base font-medium mb-3 text-foreground">Vous vivez sur place ?</h3>
-                <p className="text-muted-foreground text-sm mb-2">
-                  Nous organisons le chantier pour préserver votre confort au quotidien :
-                </p>
-                <ul className="space-y-1 text-sm text-muted-foreground">
-                  <li><strong>L'eau reste active</strong> dans la cuisine</li>
-                  <li><strong>WC fonctionnel</strong> pendant toute la durée des travaux</li>
-                </ul>
-              </div>
-            </div>
-
-            <p className="mt-6 text-foreground font-medium text-sm">
-              Respecter ce timing, c'est la garantie d'un chantier sans accroc et d'une salle de bain qui dure dans le temps.
+              <strong className="text-foreground">Un chantier fonctionne comme un orchestre.</strong><br />
+              Les artisans ne peuvent pas tous intervenir en même temps.<br />
+              Chaque étape prépare la suivante.
             </p>
           </div>
+
+          {/* Rôles simplifiés */}
+          <div className="space-y-2 mb-8">
+            {[
+              { role: "Plombier", desc: "donne le tempo" },
+              { role: "Électricien", desc: "prépare les connexions" },
+              { role: "Plâtrier", desc: "structure l'espace" },
+              { role: "Carreleur", desc: "pose le rythme visuel" },
+              { role: "Menuisier", desc: "apporte la fonctionnalité" },
+              { role: "Peintre", desc: "finalise en finesse" },
+            ].map(({ role, desc }) => (
+              <div key={role} className="flex items-baseline gap-3 py-1.5 border-b border-border/20">
+                <span className="font-semibold text-sm text-foreground w-28 flex-shrink-0">{role}</span>
+                <span className="text-sm text-muted-foreground">– {desc}</span>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-sm text-foreground font-medium mb-12">
+            Le maître d'œuvre est le chef d'orchestre.<br />
+            Il coordonne, anticipe et évite les chevauchements.
+          </p>
+
+          {/* ============ BLOC 2 : Déroulé chronologique ============ */}
+          <div className="mt-4">
+            <h3 className="text-xl md:text-2xl font-light text-foreground mb-6">Déroulé type d'un chantier</h3>
+            <div className="w-10 h-[2px] mb-8" style={{ backgroundColor: '#c2a016' }} />
+
+            <div className="space-y-8">
+              {/* Semaine 1 */}
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#124A66' }}>Semaine 1</p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ backgroundColor: '#c2a016' }} />
+                    Protection &amp; dépose
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ backgroundColor: '#c2a016' }} />
+                    Démolition
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ backgroundColor: '#c2a016' }} />
+                    Réseaux (plomberie / électricité)
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ backgroundColor: '#c2a016' }} />
+                    Plâtrerie
+                  </li>
+                </ul>
+              </div>
+
+              {/* Semaine 2 */}
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#124A66' }}>Semaine 2</p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ backgroundColor: '#c2a016' }} />
+                    Étanchéité &amp; séchage
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ backgroundColor: '#c2a016' }} />
+                    Pose carrelage
+                  </li>
+                </ul>
+              </div>
+
+              {/* Semaine 3 */}
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#124A66' }}>Semaine 3</p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ backgroundColor: '#c2a016' }} />
+                    Menuiserie
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ backgroundColor: '#c2a016' }} />
+                    Peinture &amp; finitions
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ backgroundColor: '#c2a016' }} />
+                    Pose sanitaires &amp; accessoires
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* En bas */}
+            <div className="mt-8 space-y-1.5 text-sm text-muted-foreground">
+              <p><strong className="text-foreground">Nettoyage complet</strong> du chantier</p>
+              <p><strong className="text-foreground">Évacuation des gravats</strong> organisée</p>
+            </div>
+          </div>
+
+          {/* ============ CONFORT CLIENT ============ */}
+          <div className="border-l-2 p-5 mt-10 mb-10" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
+            <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#124A66' }}>Vous vivez sur place ?</p>
+            <ul className="space-y-1.5 text-sm" style={{ color: '#011115' }}>
+              <li>Eau maintenue en cuisine</li>
+              <li>WC fonctionnel pendant les travaux</li>
+            </ul>
+          </div>
+
+          {/* ============ BLOC SIGNATURE ============ */}
+          <div className="py-8 px-6 text-center" style={{ backgroundColor: '#124A66' }}>
+            <p
+              className="italic font-light leading-[1.9]"
+              style={{ fontSize: '1.2em', color: '#E6EEF2', fontFamily: "'Nunito Sans', sans-serif" }}
+            >
+              "Un planning maîtrisé,<br />
+              c'est un chantier sans improvisation."
+            </p>
+            <div className="flex justify-end mt-5">
+              <img
+                src={carinaSig}
+                alt="Carina N."
+                className="w-[70px] md:w-[100px] opacity-90"
+                style={{ filter: 'brightness(0) invert(1)' }}
+              />
+            </div>
+          </div>
+
         </motion.div>
       </div>
 
