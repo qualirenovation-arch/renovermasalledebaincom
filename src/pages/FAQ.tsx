@@ -209,6 +209,26 @@ const faqCategories = [
     title: "Travaux et matériaux",
     questions: [
       {
+        question: "Faut-il refaire toute la plomberie lors d'une rénovation ?",
+        answer: "Oui, dans la grande majorité des cas. Le plomb est remplacé par du cuivre ou du multicouche, et des nourrices eau chaude / eau froide sont posées pour sécuriser l'installation.",
+        guideLink: "/guide-travaux#section-5"
+      },
+      {
+        question: "La bonde doit-elle rester accessible ?",
+        answer: "Toujours. Une trappe d'accès carrelée est indispensable pour intervenir rapidement en cas de problème.",
+        guideLink: "/guide-travaux#section-7"
+      },
+      {
+        question: "L'électricité est-elle remise aux normes ?",
+        answer: "Oui, systématiquement : volumes de sécurité, mise à la terre, disjoncteur 30mA, conformité NF C 15-100.",
+        guideLink: "/guide-travaux#section-13"
+      },
+      {
+        question: "Les finitions et profilés sont-ils importants ?",
+        answer: "Oui. Les profilés assurent la protection contre les chocs et l'humidité, et sont assortis aux robinetteries (noir mat, chrome, laiton, doré).",
+        guideLink: "/guide-travaux#section-8"
+      },
+      {
         question: "Quels travaux de plomberie réalisez-vous ?",
         answer: "Nous réalisons tous les travaux de plomberie salle de bain : dépose et repose des équipements sanitaires, création ou déplacement des arrivées d'eau et évacuations, installation de robinetterie (chrome, noir, laiton, nickel mat), raccordements et mise en conformité."
       },
@@ -218,7 +238,8 @@ const faqCategories = [
       },
       {
         question: "Posez-vous des baignoires ?",
-        answer: "Oui, nous installons des baignoires îlots, encastrées ou d'angle selon votre projet. Nous pouvons également transformer une baignoire en douche à l'italienne si vous souhaitez gagner de l'espace et du confort."
+        answer: "Oui, nous installons des baignoires îlots, encastrées ou d'angle selon votre projet. Nous pouvons également transformer une baignoire en douche à l'italienne si vous souhaitez gagner de l'espace et du confort.",
+        guideLink: "/guide-travaux#section-10"
       }
     ]
   }
@@ -484,10 +505,19 @@ export default function FAQ() {
                   <span>Réception préparée et encadrée</span>
                 </li>
               </ul>
-              <p className="mt-6 text-muted-foreground italic">
+            <p className="mt-6 text-muted-foreground italic">
                 Chez Qualiconcept, on ne fait pas que rénover un lieu : 
                 <span className="text-primary font-medium"> on vous accompagne, sereinement, du début à la fin.</span>
               </p>
+              <div className="mt-6">
+                <Link
+                  to="/guide-travaux"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors"
+                >
+                  <ArrowRight className="w-4 h-4" />
+                  Consulter le Guide Travaux complet
+                </Link>
+              </div>
             </motion.div>
           </div>
         </div>

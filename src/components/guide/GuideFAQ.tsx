@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import { GuideSectionHeader } from "./GuideSectionHeader";
 import batiSupportGeberit from "@/assets/images/bati-support-geberit.png";
 import plaqueGeberitNoir from "@/assets/images/plaque-geberit-noir.png";
@@ -38,59 +40,16 @@ export function GuideFAQ() {
                 <p className="font-medium text-foreground">
                   Garantie étanchéité 10 ans + décennale MIC Assurances.
                 </p>
+                <GuideLink to="/guide-travaux#section-6" label="Voir la section Étanchéité du Guide" />
               </div>
             </FAQCard>
           </div>
 
-          {/* Sous-section Questions techniques */}
+          {/* Sous-section Équipements WC */}
           <h3 className="text-lg font-light mb-4">
-            Questions techniques
+            Équipements WC
           </h3>
-          <div className="space-y-6">
-            <FAQCard question="Faut-il refaire toute la plomberie lors d'une rénovation de salle de bain ?">
-              <div className="text-muted-foreground space-y-3 text-sm">
-                <p>
-                  <strong className="text-foreground">Oui, dans la grande majorité des cas.</strong><br />
-                  Les DTU imposent que toute installation modifiée soit mise aux normes actuelles : le plomb est interdit, les raccords encastrés non accessibles sont proscrits, et les matériaux autorisés sont le cuivre ou le multicouche.
-                </p>
-                <p>
-                  Côté assurances, une plomberie ancienne conservée peut entraîner un refus de prise en charge en cas de fuite.
-                </p>
-                <p className="font-medium text-foreground">
-                  Conclusion : refaire la plomberie, c'est sécuriser l'installation, le chantier… et l'assurance.
-                </p>
-              </div>
-            </FAQCard>
-            <FAQCard
-              question="La bonde doit-elle rester accessible ?"
-              answer="Toujours. Une trappe d'accès est indispensable pour intervenir rapidement en cas de problème."
-            />
-            <FAQCard question="L'électricité est-elle toujours conforme lors d'une rénovation de salle de bain ?">
-              <div className="text-muted-foreground space-y-3 text-sm">
-                <p>
-                  Lors d'une rénovation de salle de bain, l'installation électrique est systématiquement vérifiée et remise aux normes en vigueur. Cela inclut le respect des volumes de sécurité, la mise à la terre, les protections au tableau électrique (disjoncteur différentiel 30mA) et la conformité selon la norme NF C 15-100.
-                </p>
-                <p>
-                  Certains équipements comme le chauffe-eau, le sèche-serviette ou le plancher chauffant nécessitent un raccordement direct au tableau avec une ligne dédiée.
-                </p>
-                <p className="font-medium text-foreground">
-                  Le beau est important, mais la conformité et la sécurité sont des obligations légales non négociables.
-                </p>
-              </div>
-            </FAQCard>
-            <FAQCard question="Pourquoi les finitions et profilés sont-ils si importants ?">
-              <div className="text-muted-foreground space-y-3 text-sm">
-                <p>
-                  Les profilés de finition jouent un rôle clé dans le rendu final d'une salle de bain. Ils assurent la protection des matériaux contre les chocs et l'humidité, et la cohérence esthétique de l'ensemble.
-                </p>
-                <p>
-                  Les profilés sont assortis aux robinetteries et finitions : noir mat, chrome brillant, inox brossé, laiton vieilli ou doré.
-                </p>
-                <p className="font-medium text-foreground">
-                  Ce sont souvent ces détails discrets qui font la différence entre une salle de bain correcte et une salle de bain réellement aboutie.
-                </p>
-              </div>
-            </FAQCard>
+          <div className="space-y-6 mb-10">
             <FAQCard question="Qu'est-ce qu'un bâti-support ?">
               <div className="flex flex-col md:flex-row gap-6">
                 <div className="text-muted-foreground space-y-3 flex-1 text-sm">
@@ -180,9 +139,37 @@ export function GuideFAQ() {
               </div>
             </FAQCard>
           </div>
+
+          {/* Lien vers la FAQ complète */}
+          <div className="mt-10 pt-8 border-t border-border/30 text-center">
+            <p className="text-muted-foreground text-sm mb-4">
+              Retrouvez toutes nos réponses sur le budget, le suivi de chantier, les matériaux et plus encore.
+            </p>
+            <Link
+              to="/faq"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-colors"
+              style={{ backgroundColor: '#124A66', color: '#F4F6F8' }}
+            >
+              <ArrowRight className="w-4 h-4" />
+              Consulter la FAQ complète
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>
+  );
+}
+
+function GuideLink({ to, label }: { to: string; label: string }) {
+  return (
+    <Link
+      to={to}
+      className="inline-flex items-center gap-1.5 mt-2 text-sm font-medium transition-colors hover:underline"
+      style={{ color: '#124A66' }}
+    >
+      <ArrowRight className="w-3.5 h-3.5" />
+      {label}
+    </Link>
   );
 }
 

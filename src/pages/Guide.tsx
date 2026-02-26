@@ -25,14 +25,12 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "Combien de temps durent les travaux de rénovation d'une salle de bain ?", "acceptedAnswer": { "@type": "Answer", "text": "Une rénovation de salle de bain complète dure entre 3 semaines et 1 mois en moyenne." } },
-    { "@type": "Question", "name": "Faut-il refaire toute la plomberie lors d'une rénovation de salle de bain ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, pour éviter les fuites et sécuriser l'installation." } },
-    { "@type": "Question", "name": "La bonde doit-elle rester accessible ?", "acceptedAnswer": { "@type": "Answer", "text": "Toujours. Une trappe d'accès est indispensable." } },
-    { "@type": "Question", "name": "Maître d'œuvre intégré : chacun son métier", "acceptedAnswer": { "@type": "Answer", "text": "Avec un maître d'œuvre intégré, tout est pensé avec vous et pour vous." } },
     { "@type": "Question", "name": "Qu'est-ce qu'une douche à l'italienne ?", "acceptedAnswer": { "@type": "Answer", "text": "Une douche de plain-pied, sans marche ni receveur surélevé." } },
     { "@type": "Question", "name": "Peut-on installer une douche à l'italienne dans un appartement ancien ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, dans la plupart des appartements, même anciens." } },
     { "@type": "Question", "name": "Comment garantissez-vous l'étanchéité d'une douche à l'italienne ?", "acceptedAnswer": { "@type": "Answer", "text": "Obligation DTU 52.2 : systèmes certifiés avec SEL/SPEC et bandes d'étanchéité." } },
-    { "@type": "Question", "name": "Comment choisir sa paroi de douche ?", "acceptedAnswer": { "@type": "Answer", "text": "Le choix repose sur 3 critères : type d'ouverture, couleur du profilé, et type de verre." } },
+    { "@type": "Question", "name": "Qu'est-ce qu'un bâti-support ?", "acceptedAnswer": { "@type": "Answer", "text": "Structure métallique encastrée dans le mur pour installer un WC suspendu." } },
+    { "@type": "Question", "name": "Qu'est-ce qu'une plaque de déclenchement ?", "acceptedAnswer": { "@type": "Answer", "text": "Le bouton de chasse d'eau visible sur un WC suspendu, livré en blanc par défaut." } },
+    { "@type": "Question", "name": "Qu'est-ce qu'une cuvette sans bride ?", "acceptedAnswer": { "@type": "Answer", "text": "Une cuvette sans rebord intérieur, plus hygiénique et facile à nettoyer." } },
     { "@type": "Question", "name": "Le WC doit-il rester fonctionnel s'il est séparé dans une autre pièce ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, impérativement. Un WC situé dans une pièce indépendante doit rester accessible et utilisable pendant toute la durée des travaux." } },
   ]
 };
