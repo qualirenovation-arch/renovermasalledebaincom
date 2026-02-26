@@ -69,7 +69,7 @@ export function Header() {
             </Link>
           </Button>
           <Button variant="cta" size="default" asChild className="text-xs sm:text-sm px-3 sm:px-5 py-2 sm:py-2.5 flex-shrink-0 font-semibold shadow-md whitespace-nowrap">
-            <Link to="/devis#devis-form">Mon étude</Link>
+            <Link to="/devis?type=classique#devis-form">Mon étude</Link>
           </Button>
         </div>
 
