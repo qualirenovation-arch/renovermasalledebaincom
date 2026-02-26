@@ -37,7 +37,7 @@ export function PageCTA({ title, description, buttonText, variant = "light", inv
               <>
                 {/* Water damage = primary on /degats-eaux */}
                 <Button variant="default" size="xl" asChild className="rounded-full w-full sm:w-auto">
-                  <Link to="/degats-eaux">
+                  <Link to="/devis?type=degat_eaux#devis-form">
                     <Droplets className="w-5 h-5 mr-2" />
                     Urgence dégât des eaux
                     <ArrowRight className="w-5 h-5 ml-2" />
@@ -65,7 +65,7 @@ export function PageCTA({ title, description, buttonText, variant = "light", inv
                   asChild 
                   className="rounded-full w-full sm:w-auto border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
                 >
-                  <Link to="/degats-eaux">
+                  <Link to="/devis?type=degat_eaux#devis-form">
                     <Droplets className="w-5 h-5 mr-2" />
                     Urgence dégât des eaux
                   </Link>
