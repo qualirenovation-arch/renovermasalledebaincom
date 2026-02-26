@@ -1,6 +1,8 @@
 import { Layout } from "@/components/layout/Layout";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { OGTags } from "@/components/seo/OGTags";
+import { Button } from "@/components/ui/button";
 import { AlertTriangle, ClipboardList, HardHat, HelpCircle, ChevronDown, Droplets } from "lucide-react";
 import { PageCTA } from "@/components/layout/PageCTA";
 import { useState } from "react";
@@ -147,9 +149,22 @@ const DegatsEaux = () => {
             <h1 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-primary">
               Dégât des eaux ? Et si c'était l'occasion de faire mieux ?
             </h1>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-lg mb-8">
               On vous aide à transformer un sinistre en opportunité.
             </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button variant="default" size="lg" asChild className="rounded-full w-full sm:w-auto">
+                <Link to="/devis?type=degat_eaux#devis-form">
+                  <Droplets className="w-4 h-4 mr-2" />
+                  Demander un devis sinistre
+                </Link>
+              </Button>
+              <Button variant="gold" size="lg" asChild className="rounded-full w-full sm:w-auto">
+                <Link to="/devis#devis-form">
+                  Mon étude personnalisée
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
