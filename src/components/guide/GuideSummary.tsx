@@ -49,8 +49,7 @@ export function GuideSummary() {
             <img
               src={carinaSig}
               alt="Carina N."
-              className="w-[70px] md:w-[100px] opacity-90"
-              style={{ filter: 'brightness(0) invert(1)' }}
+              className="w-[100px] md:w-[150px] opacity-90"
             />
           </div>
         </motion.div>
