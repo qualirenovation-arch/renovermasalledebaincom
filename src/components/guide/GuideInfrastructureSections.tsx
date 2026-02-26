@@ -516,6 +516,22 @@ export function GuideInfrastructureSections() {
                   </ul>
                 </div>
 
+                <h4 className="text-base font-semibold mb-3" style={{ color: '#124A66' }}>Mise en œuvre & alignement</h4>
+                <div className="space-y-2 mb-6">
+                  <p>Lorsque le chauffe-eau est positionné au-dessus d'un WC suspendu, l'implantation doit être calculée avec précision.</p>
+                  <p>Nous anticipons :</p>
+                  <ul className="list-disc list-inside space-y-1.5">
+                    <li>La hauteur du bâti-support (ex : 112 cm ou 80 cm)</li>
+                    <li>L'épaisseur de l'habillage</li>
+                    <li>L'épaisseur du carrelage</li>
+                    <li>Les hauteurs finies</li>
+                    <li>L'alignement des portes de placard</li>
+                  </ul>
+                  <p className="mt-3">Le chauffe-eau, le bâti et le parement doivent former une ligne continue, sans décalage visuel.</p>
+                  <p className="italic">Quelques millimètres d'erreur peuvent casser l'harmonie de l'ensemble.</p>
+                  <p>C'est pourquoi les hauteurs sont définies avant la fermeture des cloisons et avant la commande des menuiseries.</p>
+                </div>
+
                 {/* Bloc citation Chauffe-eau */}
                 <div className="py-8 px-6 mt-8 text-center" style={{ backgroundColor: '#124A66' }}>
                   <p
