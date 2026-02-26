@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import signatureCarina from "@/assets/signature-carina.png";
 
 export function GuideSummary() {
   return (
@@ -29,10 +30,29 @@ export function GuideSummary() {
               </div>
             ))}
           </div>
-          <p className="text-lg italic text-white/80 font-light leading-relaxed">
+
+          {/* Citation — NunitoSans Light Italic, 120%, blanc cassé, line-height augmenté */}
+          <p
+            className="italic font-light leading-[1.9]"
+            style={{
+              fontSize: '1.2em',
+              color: '#E6EEF2',
+              fontFamily: "'Nunito Sans', sans-serif",
+            }}
+          >
             "Réussir sa salle de bain, ce n'est pas faire des choix au hasard.<br />
             C'est faire les bons choix, au bon moment, avec les bonnes personnes."
           </p>
+
+          {/* Signature Carina N. — alignée à droite, discrète, premium */}
+          <div className="flex justify-end mt-6">
+            <img
+              src={signatureCarina}
+              alt="Carina N."
+              className="w-[70px] md:w-[100px] opacity-90"
+              style={{ filter: 'brightness(0) invert(1)' }}
+            />
+          </div>
         </motion.div>
       </div>
     </section>
