@@ -13,10 +13,8 @@ const GuidePlanningSection = lazy(() => import("@/components/guide/GuidePlanning
 const GuideInspectionSections = lazy(() => import("@/components/guide/GuideInspectionSections").then(m => ({ default: m.GuideInspectionSections })));
 const GuideMaitreOeuvreSection = lazy(() => import("@/components/guide/GuideMaitreOeuvreSection").then(m => ({ default: m.GuideMaitreOeuvreSection })));
 const GuideInfrastructureSections = lazy(() => import("@/components/guide/GuideInfrastructureSections").then(m => ({ default: m.GuideInfrastructureSections })));
-const GuideDesignSections = lazy(() => import("@/components/guide/GuideDesignSections").then(m => ({ default: m.GuideDesignSections })));
 const GuideDetailsSections = lazy(() => import("@/components/guide/GuideDetailsSections").then(m => ({ default: m.GuideDetailsSections })));
 const GuideComfortSections = lazy(() => import("@/components/guide/GuideComfortSections").then(m => ({ default: m.GuideComfortSections })));
-const GuideParoiSection = lazy(() => import("@/components/guide/GuideParoiSection").then(m => ({ default: m.GuideParoiSection })));
 const GuideSummary = lazy(() => import("@/components/guide/GuideSummary").then(m => ({ default: m.GuideSummary })));
 const GuideGarantiesSection = lazy(() => import("@/components/guide/GuideGarantiesSection").then(m => ({ default: m.GuideGarantiesSection })));
 const GuideFAQ = lazy(() => import("@/components/guide/GuideFAQ").then(m => ({ default: m.GuideFAQ })));
@@ -67,10 +65,8 @@ const Guide = () => {
               <GuideInspectionSections />
               <GuideMaitreOeuvreSection />
               <GuideInfrastructureSections />
-              <GuideDesignSections />
               <GuideDetailsSections />
               <GuideComfortSections />
-              <GuideParoiSection />
               <GuideSummary />
               <GuideGarantiesSection />
               <GuideFAQ />

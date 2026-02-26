@@ -4,12 +4,14 @@ import guideJointNoir from "@/assets/guide-joint-noir.webp";
 import guideJointAssorti from "@/assets/guide-joint-assorti.webp";
 import guideProfilFinition from "@/assets/guide-profil-finition.webp";
 import cielDePluiePlafond from "@/assets/chatelet-ciel-pluie-plafond.jpg";
+import nicolasRoretDouche from "@/assets/nicolas-roret-douche.jpg";
+import boulogne3 from "@/assets/boulogne-3.jpg";
 
 export function GuideDetailsSections() {
   return (
     <>
-      {/* Section 8 - Joints & finitions */}
-      <section id="section-8" className="py-16 bg-background scroll-mt-20">
+      {/* Section Niches */}
+      <section id="section-niches" className="py-16 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -17,7 +19,70 @@ export function GuideDetailsSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={8} title="Joints, profils et finitions : le diable se cache dans le détail" />
+            <GuideSectionHeader title="Une niche, c'est quoi ?" />
+
+            <div className="border-l-2 p-5 mb-8" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
+              <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#124A66' }}>À retenir</p>
+              <ul className="space-y-1.5 text-sm" style={{ color: '#011115' }}>
+                <li>Renfoncement dans le mur pour ranger shampoings et savons</li>
+                <li>Design épuré et entretien facile</li>
+                <li>Une niche bien positionnée change le confort au quotidien</li>
+              </ul>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              <div className="grid grid-cols-2 gap-3">
+                <div className="overflow-hidden">
+                  <img
+                    src={boulogne3}
+                    alt="Niche au-dessus de la baignoire - Projet Boulogne"
+                    className="w-full h-40 md:h-48 object-cover"
+                    loading="lazy"
+                  />
+                  <p className="text-xs text-muted-foreground mt-1">Boulogne — Baignoire</p>
+                </div>
+                <div className="overflow-hidden">
+                  <img
+                    src={nicolasRoretDouche}
+                    alt="Niche encastrée dans une douche - Projet Nicolas Roret"
+                    className="w-full h-40 md:h-48 object-cover"
+                    loading="lazy"
+                  />
+                  <p className="text-xs text-muted-foreground mt-1">Nicolas Roret — Douche</p>
+                </div>
+              </div>
+
+              <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
+                <p>
+                  Une <strong className="text-foreground">niche</strong> est un renfoncement créé dans le mur de la douche ou de la baignoire.
+                  Elle permet de ranger shampoings, savons et produits sans encombrer l'espace.
+                </p>
+                <ul className="space-y-2">
+                  <li><strong className="text-foreground">Gain de place</strong> : pas de panier suspendu ni d'étagère au sol</li>
+                  <li><strong className="text-foreground">Design épuré</strong> : rangement invisible intégré au carrelage</li>
+                  <li><strong className="text-foreground">Entretien facile</strong> : pas d'accessoire à nettoyer autour</li>
+                  <li><strong className="text-foreground">Durabilité</strong> : intégrée au mur, elle ne bouge pas et ne rouille pas</li>
+                </ul>
+                <p className="italic">
+                  Une niche bien positionnée (à hauteur d'épaule) change le confort au quotidien.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+        <div className="container mx-auto px-4 mt-16"><div className="max-w-4xl mx-auto border-b border-border/30" /></div>
+      </section>
+
+      {/* Section 11 - Joints & finitions */}
+      <section id="section-11" className="py-16 bg-background scroll-mt-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <GuideSectionHeader number={11} title="Joints, profils et finitions : le diable se cache dans le détail" />
 
             <div className="border-l-2 p-5 mb-8" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#124A66' }}>À retenir</p>
@@ -29,7 +94,6 @@ export function GuideDetailsSections() {
             </div>
 
             <div className="space-y-8 text-sm leading-relaxed text-muted-foreground">
-              {/* Joint mortier */}
               <div>
                 <h3 className="text-lg font-light mb-4">Joint mortier</h3>
                 <div className="grid md:grid-cols-2 gap-6">
@@ -44,7 +108,6 @@ export function GuideDetailsSections() {
                 </div>
               </div>
 
-              {/* Joint silicone */}
               <div>
                 <h3 className="text-lg font-light mb-3">Joint silicone (angles & zones d'eau)</h3>
                 <p className="text-muted-foreground text-sm mb-2">
@@ -55,7 +118,6 @@ export function GuideDetailsSections() {
                 </p>
               </div>
 
-              {/* Profils de finition */}
               <div className="grid md:grid-cols-2 gap-6 items-center">
                 <div>
                   <h3 className="text-lg font-light mb-3">Profils de finition</h3>
@@ -72,8 +134,8 @@ export function GuideDetailsSections() {
         <div className="container mx-auto px-4 mt-16"><div className="max-w-4xl mx-auto border-b border-border/30" /></div>
       </section>
 
-      {/* Section 9 - Robinetterie encastrée */}
-      <section id="section-9" className="py-16 bg-background scroll-mt-20">
+      {/* Section 12 - Robinetterie encastrée */}
+      <section id="section-12" className="py-16 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -81,7 +143,7 @@ export function GuideDetailsSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={9} title="Robinetterie encastrée : anticiper dès la conception" />
+            <GuideSectionHeader number={12} title="Robinetterie encastrée : anticiper dès la conception" />
 
             <div className="border-l-2 p-5 mb-8" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#124A66' }}>À retenir</p>
