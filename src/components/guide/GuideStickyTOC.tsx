@@ -34,7 +34,10 @@ const tocCategories = [
     items: [
       { id: "section-5", label: "Plomberie" },
       { id: "section-6", label: "Étanchéité" },
-      { id: "section-7", label: "Receveur & baignoire" },
+      { id: "section-7", label: "Receveur de douche" },
+      { id: "section-8", label: "Baignoire" },
+      { id: "section-9", label: "Paroi de douche" },
+      { id: "section-10", label: "WC, vasque & chauffe-eau" },
     ],
   },
   {
@@ -42,19 +45,15 @@ const tocCategories = [
     icon: Paintbrush,
     items: [
       { id: "section-niches", label: "Les niches" },
-      { id: "section-8", label: "Joints & finitions" },
-      { id: "section-9", label: "Robinetterie" },
-      { id: "section-10", label: "Choisir sa baignoire" },
+      { id: "section-11", label: "Joints & finitions" },
+      { id: "section-12", label: "Robinetterie" },
     ],
   },
   {
     label: "Confort & Équipement",
     icon: Sofa,
     items: [
-      { id: "section-11", label: "Peinture" },
-      { id: "section-12", label: "VMC" },
-      { id: "section-13", label: "Éclairage & chauffage" },
-      { id: "section-paroi", label: "Paroi de douche" },
+      { id: "section-13", label: "Peinture, VMC & Éclairage" },
     ],
   },
   {
@@ -145,7 +144,6 @@ export function GuideStickyTOC() {
                 <ul className="space-y-0.5 ml-6">
                   {category.items.map(({ id, label }) => (
                     <li key={id} className="relative">
-                      {/* Active gold bar */}
                       {activeId === id && (
                         <div className="absolute left-0 top-1 bottom-1 w-[2px]" style={{ backgroundColor: '#c2a016' }} />
                       )}

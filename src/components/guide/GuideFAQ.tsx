@@ -2,10 +2,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { GuideSectionHeader } from "./GuideSectionHeader";
-import batiSupportGeberit from "@/assets/images/bati-support-geberit.png";
-import plaqueGeberitNoir from "@/assets/images/plaque-geberit-noir.png";
-import plaqueGeberitLaiton from "@/assets/images/plaque-geberit-laiton.png";
-import plaqueGeberitChrome from "@/assets/images/plaque-geberit-chrome.png";
 
 export function GuideFAQ() {
   return (
@@ -45,84 +41,17 @@ export function GuideFAQ() {
             </FAQCard>
           </div>
 
-          {/* Sous-section Équipements WC */}
+          {/* Sous-section Équipements - résumé avec lien vers le Guide */}
           <h3 className="text-lg font-light mb-4">
             Équipements WC
           </h3>
           <div className="space-y-6 mb-10">
-            <FAQCard question="Qu'est-ce qu'un bâti-support ?">
-              <div className="flex flex-col md:flex-row gap-6">
-                <div className="text-muted-foreground space-y-3 flex-1 text-sm">
-                  <p>
-                    Un bâti-support est une structure métallique encastrée dans le mur qui permet d'installer un <strong className="text-foreground">WC suspendu</strong>. Il supporte la cuvette, intègre le réservoir de chasse et reçoit la plaque de déclenchement.
-                  </p>
-                  <p>
-                    Il est toujours recouvert de BA13, qui peut être carrelé ou peint — nous recommandons le carrelage pour sa durabilité.
-                  </p>
-                </div>
-                <div className="flex-shrink-0">
-                  <img
-                    src={batiSupportGeberit}
-                    alt="Bâti-support Geberit Sigma pour WC suspendu"
-                    className="w-40 md:w-48 h-auto object-contain"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </FAQCard>
-            <FAQCard question="Qu'est-ce qu'une plaque de déclenchement ?">
-              <div className="flex flex-col md:flex-row gap-6">
-                <div className="text-muted-foreground space-y-3 flex-1 text-sm">
-                  <p>
-                    La plaque de déclenchement est le <strong className="text-foreground">bouton de chasse d'eau visible</strong> sur un WC suspendu.
-                  </p>
-                  <p>
-                    Elle permet d'actionner la chasse (simple ou double débit) et donne accès au mécanisme pour la maintenance.
-                  </p>
-                  <p className="italic">
-                    Elle se choisit en fonction du bâti-support installé : la compatibilité est à valider avec vous.
-                  </p>
-                </div>
-                <div className="flex gap-2 flex-shrink-0">
-                  <img src={plaqueGeberitNoir} alt="Plaque Geberit noire" className="w-16 md:w-20 h-auto object-contain" loading="lazy" />
-                  <img src={plaqueGeberitLaiton} alt="Plaque Geberit laiton" className="w-16 md:w-20 h-auto object-contain" loading="lazy" />
-                  <img src={plaqueGeberitChrome} alt="Plaque Geberit chromée" className="w-16 md:w-20 h-auto object-contain" loading="lazy" />
-                </div>
-              </div>
-            </FAQCard>
-            <div className="border-l-2 py-4 pl-5" style={{ borderColor: '#c2a016' }}>
-              <h3 className="font-medium text-foreground text-base mb-2">
-                La plaque de déclenchement est-elle livrée en plusieurs couleurs ?
-              </h3>
-              <div className="text-muted-foreground space-y-3 text-sm">
+            <FAQCard question="WC suspendu, bâti-support et plaques : l'essentiel">
+              <div className="text-muted-foreground space-y-2 text-sm">
                 <p>
-                  <strong className="text-foreground">Attention :</strong> en règle générale, la plaque de déclenchement est livrée <strong className="text-foreground">en blanc</strong> avec le bâti-support.
+                  Le WC suspendu repose sur un <strong className="text-foreground">bâti-support Geberit</strong> encastré. La plaque de déclenchement est livrée en blanc par défaut (surcoût pour noir, laiton ou chromé). Nous recommandons les <strong className="text-foreground">cuvettes sans bride</strong> pour l'hygiène.
                 </p>
-                <p>
-                  Pour un changement de couleur ou de finition, la plaque doit être <strong className="text-foreground">rachetée séparément</strong>.
-                </p>
-                <p className="italic">
-                  Info importante à valider en amont avec vous pour éviter les surprises.
-                </p>
-              </div>
-            </div>
-            <FAQCard question="Qu'est-ce qu'une cuvette avec ou sans bride ?">
-              <div className="text-muted-foreground space-y-3 text-sm">
-                <p><strong className="text-foreground">Avec bride :</strong> cuvette classique avec un rebord intérieur, plus économique mais moins hygiénique.</p>
-                <p><strong className="text-foreground">Sans bride :</strong> cuvette sans rebord, plus hygiénique, plus facile à nettoyer et aujourd'hui largement recommandée.</p>
-                <p className="italic">
-                  Nous recommandons systématiquement les cuvettes sans bride pour leur facilité d'entretien.
-                </p>
-              </div>
-            </FAQCard>
-            <FAQCard question="Existe-t-il des cuvettes de couleurs différentes ?">
-              <div className="text-muted-foreground space-y-3 text-sm">
-                <p>
-                  <strong className="text-foreground">Oui.</strong> En plus du blanc, il existe des cuvettes en <strong className="text-foreground">noir, gris, beige, sable</strong> ou autres finitions, selon les marques et les gammes.
-                </p>
-                <p className="italic">
-                  Attention : les couleurs sont souvent en option et peuvent impacter le budget.
-                </p>
+                <GuideLink to="/guide-travaux#section-10" label="Voir le détail complet dans le Guide" />
               </div>
             </FAQCard>
             <FAQCard question="Le WC doit-il rester fonctionnel s'il est séparé dans une autre pièce ?">
@@ -131,10 +60,7 @@ export function GuideFAQ() {
                   <strong className="text-foreground">Oui, impérativement.</strong> Lorsque le WC est situé dans une pièce indépendante de la salle de bain, il doit rester <strong className="text-foreground">accessible et utilisable pendant toute la durée des travaux</strong>.
                 </p>
                 <p>
-                  En revanche, si le WC est intégré à la salle de bain en cours de rénovation, son utilisation sera temporairement interrompue. Dans ce cas, il est conseillé de prévoir une solution alternative (WC d'un autre étage, voisin, etc.).
-                </p>
-                <p className="font-medium text-foreground">
-                  Point important : le maintien du WC en fonctionnement est à valider en amont avec vous, notamment pour organiser les phases de chantier.
+                  En revanche, si le WC est intégré à la salle de bain en cours de rénovation, son utilisation sera temporairement interrompue.
                 </p>
               </div>
             </FAQCard>
