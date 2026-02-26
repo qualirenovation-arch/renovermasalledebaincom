@@ -100,7 +100,7 @@ export default function WhyUs() {
             <span className="inline-block px-4 py-2 rounded-full bg-accent/30 text-wood text-sm font-medium mb-6">
               Notre approche
             </span>
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 break-words">
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 break-words text-primary">
               Un chantier heureux, ça se prépare
             </h1>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed">Découvrez notre méthode pour une rénovation de salle de bain sans stress à Paris. Un chantier heureux, maîtrisé de A à Z.</p>
