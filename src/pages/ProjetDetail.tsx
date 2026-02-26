@@ -136,7 +136,7 @@ const ProjetDetail = () => {
             className="mb-8"
           >
             <p className="text-sm text-wood font-medium mb-2">{album.location}</p>
-            <h1 className="font-display text-3xl md:text-4xl font-semibold mb-2">{album.title}</h1>
+            <h1 className="font-display text-3xl md:text-4xl font-semibold mb-2 text-primary">{album.title}</h1>
             {album.subtitle && (
               <h2 className="font-display text-lg md:text-xl text-wood italic mb-4">{album.subtitle}</h2>
             )}

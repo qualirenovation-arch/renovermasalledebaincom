@@ -278,7 +278,7 @@ export default function Partenaires() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold mb-6">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 text-primary">
               Nos Partenaires
             </h1>
             <p className="text-muted-foreground text-lg md:text-xl">

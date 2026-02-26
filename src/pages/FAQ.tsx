@@ -395,7 +395,7 @@ export default function FAQ() {
             <span className="inline-block px-4 py-2 rounded-full bg-accent/30 text-wood text-sm font-medium mb-6">
               Foire aux questions
             </span>
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 text-primary">
               Questions fréquentes sur la rénovation de salle de bain
             </h1>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed">

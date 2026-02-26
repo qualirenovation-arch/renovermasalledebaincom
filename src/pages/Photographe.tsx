@@ -50,7 +50,7 @@ export default function Photographe() {
             <span className="inline-block px-4 py-2 rounded-full bg-white border border-border text-primary text-sm font-medium mb-6">
               Notre photographe partenaire
             </span>
-            <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6">
+            <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6 text-primary">
               Stéphane Vasco
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
