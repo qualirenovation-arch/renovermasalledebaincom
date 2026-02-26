@@ -123,7 +123,7 @@ export default function Index() {
                   asChild 
                   className="rounded-full px-8 w-full sm:w-auto text-base border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
                 >
-                  <Link to="/degats-eaux">
+                  <Link to="/devis?type=degat_eaux#devis-form">
                     <Droplets className="w-4 h-4 mr-2" />
                     Urgence dégât des eaux
                   </Link>

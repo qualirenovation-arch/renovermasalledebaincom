@@ -97,7 +97,7 @@ export function Header() {
               asChild 
               className="rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors hidden xl:inline-flex"
             >
-              <Link to="/degats-eaux">
+              <Link to="/devis?type=degat_eaux#devis-form">
                 <Droplets className="w-4 h-4 mr-1.5" />
                 Urgence dégât des eaux
               </Link>
