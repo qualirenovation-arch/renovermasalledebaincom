@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import carinaSig from "@/assets/carina-signature.svg";
+import { GuideSectionHeader } from "./GuideSectionHeader";
 
 export function GuideSummary() {
   return (
@@ -11,10 +12,9 @@ export function GuideSummary() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto text-center"
         >
-          <h2 className="text-2xl md:text-3xl font-light text-white mb-2">
-            En résumé
-          </h2>
-          <div className="w-10 h-[2px] mx-auto mb-8" style={{ backgroundColor: '#c2a016' }} />
+          <div className="text-center">
+            <GuideSectionHeader title="En résumé" variant="light" />
+          </div>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-10">
             {[
