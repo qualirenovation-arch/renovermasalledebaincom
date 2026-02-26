@@ -120,13 +120,28 @@ export function GuideComfortSections() {
                 <p className="italic mt-2">Une VMC bien pensée protège toute la salle de bain.</p>
               </div>
 
+              {/* Électricité & conformité */}
+              <div id="section-electricite" className="scroll-mt-20">
+                <h3 className="text-lg font-light mb-3">Électricité & conformité</h3>
+                <div className="space-y-3">
+                  <p>
+                    Lors d'une rénovation de salle de bain, l'installation électrique est systématiquement vérifiée et remise aux normes en vigueur. Cela inclut le respect des <strong className="text-foreground">volumes de sécurité</strong>, la mise à la terre, les protections au tableau électrique (disjoncteur différentiel 30mA) et la conformité selon la norme <strong className="text-foreground">NF C 15-100</strong>.
+                  </p>
+                  <p>
+                    Certains équipements comme le chauffe-eau, le sèche-serviette ou le plancher chauffant nécessitent un raccordement direct au tableau avec une ligne dédiée.
+                  </p>
+                  <p className="font-medium text-foreground">
+                    Le beau est important, mais la conformité et la sécurité sont des obligations légales non négociables.
+                  </p>
+                </div>
+              </div>
+
               {/* Éclairage & chauffage */}
               <div id="section-13" className="scroll-mt-20">
                 <h3 className="text-lg font-light mb-3">13. Éclairage & chauffage</h3>
                 <div className="space-y-3">
                   <p>Spots trimless — 4000K — IP44/65</p>
                   <p>Sèche-serviette électrique ou mixte. Chauffe-eau accessible.</p>
-                  <p className="italic">Norme NF C 15-100</p>
                 </div>
               </div>
 
