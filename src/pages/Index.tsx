@@ -99,7 +99,7 @@ export default function Index() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
             <ScrollAnimation variant="fadeUp" className="text-center lg:text-left">
-              <h1 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-5 md:mb-7 text-foreground leading-[1.1] tracking-tight">
+              <h1 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-5 md:mb-7 text-primary leading-[1.1] tracking-tight">
                 UN CHANTIER HEUREUX<br />
                 POUR VOTRE <span className="italic font-normal text-gold">SALLE DE BAIN</span>
               </h1>
