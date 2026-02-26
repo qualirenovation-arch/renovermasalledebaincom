@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import carinaSig from "@/assets/carina-signature.svg";
 
 export function GuideSummary() {
   return (
@@ -43,19 +44,14 @@ export function GuideSummary() {
             C'est faire les bons choix, au bon moment, avec les bonnes personnes."
           </p>
 
-          {/* Signature Carina N. — L'Oreal Heritage Regular, alignée à droite */}
+          {/* Signature Carina N. — SVG, alignée à droite, premium */}
           <div className="flex justify-end mt-6">
-            <span
-              className="opacity-90"
-              style={{
-                fontFamily: "'LOreal Heritage', 'Brush Script MT', 'Segoe Script', cursive",
-                fontSize: 'clamp(1.4rem, 2.5vw, 2rem)',
-                color: '#E6EEF2',
-                fontWeight: 400,
-              }}
-            >
-              Carina N.
-            </span>
+            <img
+              src={carinaSig}
+              alt="Carina N."
+              className="w-[70px] md:w-[100px] opacity-90"
+              style={{ filter: 'brightness(0) invert(1)' }}
+            />
           </div>
         </motion.div>
       </div>
