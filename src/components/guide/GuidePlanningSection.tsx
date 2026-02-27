@@ -4,7 +4,7 @@ import carinaSig from "@/assets/carina-signature.svg";
 
 export function GuidePlanningSection() {
   return (
-    <section id="section-planning" className="py-10 bg-background scroll-mt-20">
+    <section id="section-planning" className="py-8 bg-background scroll-mt-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -13,8 +13,8 @@ export function GuidePlanningSection() {
           className="max-w-4xl mx-auto"
         >
           {/* ============ BLOC 1 : Durée & orchestration ============ */}
-          <GuideSectionHeader title="Planning & Durée" />
-          <p className="text-lg font-light text-muted-foreground -mt-4 mb-4">3 semaines à 1 mois</p>
+          <GuideSectionHeader number={1} title="Planning & Durée" />
+          <p className="text-lg font-light text-muted-foreground -mt-4 mb-3">3 semaines à 1 mois</p>
 
           {/* À retenir */}
           <div className="border-l-2 p-4 mb-4" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
@@ -48,15 +48,15 @@ export function GuidePlanningSection() {
             ))}
           </div>
 
-          <p className="text-sm text-foreground font-medium mb-6">
+          <p className="text-sm text-foreground font-medium mb-4">
             Le maître d'œuvre est le chef d'orchestre. Il coordonne, anticipe et évite les chevauchements.
           </p>
 
           {/* ============ BLOC 2 : Déroulé chronologique en tableau ============ */}
-          <h3 className="text-xl md:text-2xl font-light text-foreground mb-3">Déroulé type d'un chantier</h3>
-          <div className="w-10 h-[2px] mb-4" style={{ backgroundColor: '#c2a016' }} />
+          <h3 className="text-xl md:text-2xl font-light text-foreground mb-2">Déroulé type d'un chantier</h3>
+          <div className="w-10 h-[2px] mb-3" style={{ backgroundColor: '#c2a016' }} />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-3">
             {/* Semaine 1 */}
             <div className="border border-border/30 rounded p-4">
               <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: '#124A66' }}>Semaine 1</p>
@@ -86,22 +86,21 @@ export function GuidePlanningSection() {
             </div>
           </div>
 
-          <div className="flex gap-6 text-sm text-muted-foreground mb-4">
+          <div className="flex gap-6 text-sm text-muted-foreground mb-3">
             <p><strong className="text-foreground">Nettoyage complet</strong> du chantier</p>
             <p><strong className="text-foreground">Évacuation des gravats</strong> organisée</p>
           </div>
 
-          {/* ============ CONFORT CLIENT ============ */}
-          <div className="border-l-2 p-4 mb-6" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
-            <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: '#124A66' }}>Vous vivez sur place ?</p>
-            <ul className="space-y-1 text-sm" style={{ color: '#011115' }}>
+          <div className="border-l-2 p-3 mb-4" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
+            <p className="text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ color: '#124A66' }}>Vous vivez sur place ?</p>
+            <ul className="space-y-0.5 text-sm" style={{ color: '#011115' }}>
               <li>Eau maintenue en cuisine</li>
               <li>WC fonctionnel pendant les travaux</li>
             </ul>
           </div>
 
-          {/* ============ BLOC SIGNATURE ============ */}
-          <div className="py-6 px-6 text-center" style={{ backgroundColor: '#124A66' }}>
+          {/* ============ BLOC SIGNATURE — identique au bloc "En résumé" ============ */}
+          <div className="py-16 px-6 text-center" style={{ backgroundColor: '#124A66' }}>
             <p
               className="italic font-light leading-[1.9]"
               style={{ fontSize: '1.2em', color: '#E6EEF2', fontFamily: "'Nunito Sans', sans-serif" }}
@@ -109,11 +108,11 @@ export function GuidePlanningSection() {
               "Un planning maîtrisé,<br />
               c'est un chantier sans improvisation."
             </p>
-            <div className="flex justify-end mt-4">
+            <div className="flex justify-end mt-6">
               <img
                 src={carinaSig}
                 alt="Carina N."
-                className="w-[70px] md:w-[100px] opacity-90"
+                className="w-[100px] md:w-[150px] opacity-90"
                 style={{ filter: 'brightness(0) invert(1)' }}
               />
             </div>
@@ -123,7 +122,7 @@ export function GuidePlanningSection() {
       </div>
 
       {/* Section separator */}
-      <div className="container mx-auto px-4 mt-10">
+      <div className="container mx-auto px-4 mt-8">
         <div className="max-w-4xl mx-auto border-b border-border/30" />
       </div>
     </section>
