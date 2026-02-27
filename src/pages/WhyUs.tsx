@@ -137,7 +137,7 @@ export default function WhyUs() {
                 transition={{ delay: 0.1 }}
               >
                 <div className="w-12 h-12 rounded-xl bg-white border border-white/30 flex items-center justify-center mx-auto mb-4">
-                   <Home className="w-6 h-6 text-accent" strokeWidth={1.5} />
+                   <Home className="w-6 h-6 text-primary" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-display text-lg font-bold mb-2 text-primary-foreground">Adapté à votre vie</h3>
                 <p className="text-primary-foreground/80 text-sm">
@@ -153,7 +153,7 @@ export default function WhyUs() {
                 transition={{ delay: 0.2 }}
               >
                 <div className="w-12 h-12 rounded-xl bg-white border border-white/30 flex items-center justify-center mx-auto mb-4">
-                   <Lightbulb className="w-6 h-6 text-accent" strokeWidth={1.5} />
+                   <Lightbulb className="w-6 h-6 text-primary" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-display text-lg font-bold mb-2 text-primary-foreground">Solutions techniques</h3>
                 <p className="text-primary-foreground/80 text-sm">
@@ -169,7 +169,7 @@ export default function WhyUs() {
                 transition={{ delay: 0.3 }}
               >
                 <div className="w-12 h-12 rounded-xl bg-white border border-white/30 flex items-center justify-center mx-auto mb-4">
-                   <Diamond className="w-6 h-6 text-accent" strokeWidth={1.5} />
+                   <Diamond className="w-6 h-6 text-primary" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-display text-lg font-bold mb-2 text-primary-foreground">Confort optimal</h3>
                 <p className="text-primary-foreground/80 text-sm">
