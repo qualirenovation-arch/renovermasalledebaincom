@@ -13,7 +13,7 @@ export function GuideInspectionSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={1} title="La visite chantier : la technique avant l'esthétique" />
+            <GuideSectionHeader number={2} title="La visite chantier : la technique avant l'esthétique" />
 
             <div className="border-l-2 p-5 mb-8" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#124A66' }}>À retenir</p>
@@ -66,7 +66,7 @@ export function GuideInspectionSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={2} title="Démolition et inspection des réseaux existants" />
+            <GuideSectionHeader number={3} title="Démolition et inspection des réseaux existants" />
 
             <div className="border-l-2 p-5 mb-8" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#124A66' }}>À retenir</p>
@@ -102,7 +102,7 @@ export function GuideInspectionSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={3} title="Colonnes en fonte et syndic : anticiper pour éviter les blocages" />
+            <GuideSectionHeader number={4} title="Colonnes en fonte et syndic : anticiper pour éviter les blocages" />
 
             <div className="border-l-2 p-5 mb-8" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#124A66' }}>À retenir</p>

@@ -12,7 +12,7 @@ export function GuideMaitreOeuvreSection() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <GuideSectionHeader number={4} title="Maître d'oeuvre : votre allié de A à Z" variant="light" />
+          <GuideSectionHeader number={5} title="Maître d'oeuvre : votre allié de A à Z" variant="light" />
 
           <div className="space-y-[10px]" style={{ lineHeight: '1.6' }}>
             <p className="text-[17px] font-semibold" style={{ color: '#F4F6F8' }}>
