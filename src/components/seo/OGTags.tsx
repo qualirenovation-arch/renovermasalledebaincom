@@ -6,15 +6,15 @@ import {
   OG_DEFAULT_DESCRIPTION,
   getOgTitle
 } from "@/lib/og";
+import { normalizeCanonicalUrl, shouldNoIndex } from "@/lib/seo-utils";
 
 interface OGTagsProps {
   title: string;
   description: string;
   path: string;
   type?: "website" | "article";
-  // Image OG directe (URL absolue ou chemin relatif)
   coverImage?: string;
-  // Pour les pages qui ne doivent pas être indexées
+  /** Forcer le noindex (sinon détection automatique par path) */
   noindex?: boolean;
 }
 
@@ -24,24 +24,26 @@ export function OGTags({
   path, 
   type = "website",
   coverImage,
-  noindex = false
+  noindex
 }: OGTagsProps) {
-  const canonicalUrl = `${OG_BASE_URL}${path}`;
+  // Canonical normalisée (HTTPS, sans params, sans trailing slash)
+  const canonicalUrl = normalizeCanonicalUrl(path);
   const formattedTitle = getOgTitle(title);
   
-  // Déterminer l'URL de l'image OG
-  let ogImageUrl: string;
+  // Noindex : soit forcé par prop, soit détecté automatiquement
+  const isNoIndex = noindex ?? shouldNoIndex(path);
   
+  // URL de l'image OG
+  let ogImageUrl: string;
   if (coverImage) {
     ogImageUrl = coverImage.startsWith("http") 
       ? coverImage 
       : `${OG_BASE_URL}${coverImage}`;
   } else {
-    // Image par défaut statique
     ogImageUrl = `${OG_BASE_URL}/og/default-og.jpg`;
   }
   
-  // Tronquer la description pour les meta tags
+  // Tronquer la description
   const truncatedDescription = description.length > 155 
     ? description.substring(0, 152) + "..." 
     : description;
@@ -54,11 +56,7 @@ export function OGTags({
       <link rel="canonical" href={canonicalUrl} />
       
       {/* Robots directive */}
-      {noindex ? (
-        <meta name="robots" content="noindex, nofollow" />
-      ) : (
-        <meta name="robots" content="index, follow" />
-      )}
+      <meta name="robots" content={isNoIndex ? "noindex, nofollow" : "index, follow"} />
       
       {/* Open Graph */}
       <meta property="og:type" content={type} />
@@ -80,5 +78,4 @@ export function OGTags({
   );
 }
 
-// Export des constantes pour un usage direct si nécessaire
 export { OG_BASE_URL, OG_SITE_NAME, OG_DEFAULT_TITLE, OG_DEFAULT_DESCRIPTION };
