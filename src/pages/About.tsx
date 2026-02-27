@@ -381,7 +381,7 @@ export default function About() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
                   <div className="w-16 h-16 rounded-2xl bg-white border border-border flex items-center justify-center mb-6">
-                    <Ruler className="w-8 h-8 text-accent" strokeWidth={1.5} />
+                    <Ruler className="w-8 h-8 text-primary" strokeWidth={1.5} />
                   </div>
                   <h3 className="font-display text-3xl md:text-4xl font-semibold mb-4 text-white">
                     Thierry Pelmard – Architecte d'intérieur
@@ -465,7 +465,7 @@ export default function About() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
                   <div className="w-16 h-16 rounded-2xl bg-white border border-border flex items-center justify-center mb-6">
-                    <Camera className="w-8 h-8 text-accent" strokeWidth={1.5} />
+                    <Camera className="w-8 h-8 text-primary" strokeWidth={1.5} />
                   </div>
                   <h3 className="font-display text-3xl md:text-4xl font-semibold mb-4 text-white">
                     Stéphane Vasco – Photographe
