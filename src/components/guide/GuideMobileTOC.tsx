@@ -18,7 +18,7 @@ import {
 
 const tocCategories = [
   {
-    label: "Préparation",
+    label: "Préparation d'un chantier de salle de bain",
     items: [
       { id: "section-planning", label: "Planning & Durée" },
       { id: "section-1", label: "Visite chantier" },
