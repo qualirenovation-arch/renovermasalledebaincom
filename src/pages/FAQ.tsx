@@ -10,6 +10,24 @@ import { FAQMobileTOC } from "@/components/faq/FAQMobileTOC";
 
 const faqCategories = [
   {
+    title: "Notre entreprise",
+    questions: [
+      {
+        question: "Pourquoi choisir votre entreprise de salle de bain à Paris ?",
+        answer: "renovermasalledebain.com (Qualirenovation by Qualiconcept) repose sur une promesse simple : Un chantier heureux. Notre maître d'œuvre Carina, forte de 20 ans d'expérience sur les chantiers parisiens, coordonne chaque projet de A à Z. Dès le premier rendez-vous, une visite technique gratuite permet d'analyser la faisabilité et de présenter tous les plans possibles. Nous sommes certifiés Schlüter et Wedi, assurés chez MIC Assurances, et vous bénéficiez d'un suivi visuel quotidien par WhatsApp et vidéo.",
+        guideLink: "/guide-travaux"
+      },
+      {
+        question: "Quelle est votre zone d'intervention ?",
+        answer: "Nous intervenons sur Paris et toute l'Île-de-France : Paris (75), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94), Yvelines (78), Essonne (91), Val-d'Oise (95) et Seine-et-Marne (77). Déplacement gratuit pour l'étude de votre projet."
+      },
+      {
+        question: "Qu'est-ce qu'un maître d'œuvre salle de bain ?",
+        answer: "Le maître d'œuvre salle de bain est votre chef de projet dédié. Il coordonne tous les corps de métier (plomberie salle de bain, carrelage, électricité), contrôle la qualité des travaux, veille au respect du budget et des délais. Chez nous, Carina supervise personnellement chaque chantier."
+      }
+    ]
+  },
+  {
     title: "Notre engagement",
     intro: "Cette FAQ répond à vos interrogations. Mais parce que nous sommes avant tout dans une relation humaine, tout est dit dès le départ, avant le premier coup de marteau. Le devis est clair, précis, et chaque étape est expliquée en amont. → Aucune surprise, aucun coût caché, budget maîtrisé.",
     questions: []
@@ -141,24 +159,6 @@ const faqCategories = [
     ]
   },
   {
-    title: "Notre entreprise",
-    questions: [
-      {
-        question: "Pourquoi choisir votre entreprise de salle de bain à Paris ?",
-        answer: "renovermasalledebain.com (Qualirenovation by Qualiconcept) repose sur une promesse simple : Un chantier heureux. Notre maître d'œuvre Carina, forte de 20 ans d'expérience sur les chantiers parisiens, coordonne chaque projet de A à Z. Dès le premier rendez-vous, une visite technique gratuite permet d'analyser la faisabilité et de présenter tous les plans possibles. Nous sommes certifiés Schlüter et Wedi, assurés chez MIC Assurances, et vous bénéficiez d'un suivi visuel quotidien par WhatsApp et vidéo.",
-        guideLink: "/guide-travaux"
-      },
-      {
-        question: "Quelle est votre zone d'intervention ?",
-        answer: "Nous intervenons sur Paris et toute l'Île-de-France : Paris (75), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94), Yvelines (78), Essonne (91), Val-d'Oise (95) et Seine-et-Marne (77). Déplacement gratuit pour l'étude de votre projet."
-      },
-      {
-        question: "Qu'est-ce qu'un maître d'œuvre salle de bain ?",
-        answer: "Le maître d'œuvre salle de bain est votre chef de projet dédié. Il coordonne tous les corps de métier (plomberie salle de bain, carrelage, électricité), contrôle la qualité des travaux, veille au respect du budget et des délais. Chez nous, Carina supervise personnellement chaque chantier."
-      }
-    ]
-  },
-  {
     title: "Partenaires & Fournisseurs",
     intro: "Comprendre l'écosystème des marques, distributeurs et fournisseurs est essentiel pour bien préparer votre projet. Voici les explications clés.",
     questions: [
@@ -199,30 +199,7 @@ const faqCategories = [
     ]
   },
   {
-    title: "Pose carrelage salle de bain à Paris",
-    questions: [
-      {
-        question: "Quels sont les différents types de pose de carrelage salle de bain ?",
-        answer: "En rénovation salle de bain à Paris, les principaux types de pose de carrelage sont : Pose droite (alignée) — idéale pour carrelage grand format 60×60 ou 120×60. Pose décalée (1/3 recommandé) — adaptée aux formats rectangulaires et imitation parquet. Pose chevron / en V — pose technique et haut de gamme. Le choix dépend du format du carreau, de la surface et de la planéité du support.",
-        guideLink: "/guide-travaux#section-8"
-      },
-      {
-        question: "Le type de pose influence-t-il le prix de la pose carrelage ?",
-        answer: "Oui. Une pose droite salle de bain est plus rapide à exécuter qu'une pose chevron, qui nécessite découpes précises et calepinage millimétré. À Paris : Pose droite — 90 €/m² ; Pose chevron — 120 €/m². Le tarif inclut primaire, colle adaptée et joint."
-      },
-      {
-        question: "Quel type de pose choisir pour un carrelage grand format ?",
-        answer: "Pour un carrelage grand format (60×60, 120×60), la pose droite est recommandée pour limiter les défauts visuels. Une pose décalée 50 % est déconseillée car elle accentue les irrégularités du support. Le double encollage et une colle déformable C2S1 ou S2 sont indispensables."
-      },
-      {
-        question: "Le type de pose change-t-il la préparation du support ?",
-        answer: "Oui. Une pose chevron ou décalée exige un support parfaitement plan. Un ragréage sol peut être nécessaire avant la pose du carrelage. En douche italienne, l'étanchéité autour du receveur type Wedi est obligatoire, quel que soit le type de pose choisi.",
-        guideLink: "/guide-travaux#section-6"
-      }
-    ]
-  },
-  {
-    title: "Travaux et matériaux",
+    title: "Travaux, matériaux & pose carrelage",
     questions: [
       {
         question: "Comment garantissez-vous l'étanchéité d'une douche à l'italienne ?",
@@ -270,6 +247,24 @@ const faqCategories = [
         question: "Posez-vous des baignoires ?",
         answer: "Oui, nous installons des baignoires îlots, encastrées ou d'angle selon votre projet. Nous pouvons également transformer une baignoire en douche à l'italienne si vous souhaitez gagner de l'espace.",
         guideLink: "/guide-travaux#section-10"
+      },
+      {
+        question: "Quels sont les différents types de pose de carrelage salle de bain ?",
+        answer: "En rénovation salle de bain à Paris, les principaux types de pose de carrelage sont : Pose droite (alignée) — idéale pour carrelage grand format 60×60 ou 120×60. Pose décalée (1/3 recommandé) — adaptée aux formats rectangulaires et imitation parquet. Pose chevron / en V — pose technique et haut de gamme. Le choix dépend du format du carreau, de la surface et de la planéité du support.",
+        guideLink: "/guide-travaux#section-8"
+      },
+      {
+        question: "Le type de pose influence-t-il le prix de la pose carrelage ?",
+        answer: "Oui. Une pose droite salle de bain est plus rapide à exécuter qu'une pose chevron, qui nécessite découpes précises et calepinage millimétré. À Paris : Pose droite — 90 €/m² ; Pose chevron — 120 €/m². Le tarif inclut primaire, colle adaptée et joint."
+      },
+      {
+        question: "Quel type de pose choisir pour un carrelage grand format ?",
+        answer: "Pour un carrelage grand format (60×60, 120×60), la pose droite est recommandée pour limiter les défauts visuels. Une pose décalée 50 % est déconseillée car elle accentue les irrégularités du support. Le double encollage et une colle déformable C2S1 ou S2 sont indispensables."
+      },
+      {
+        question: "Le type de pose change-t-il la préparation du support ?",
+        answer: "Oui. Une pose chevron ou décalée exige un support parfaitement plan. Un ragréage sol peut être nécessaire avant la pose du carrelage. En douche italienne, l'étanchéité autour du receveur type Wedi est obligatoire, quel que soit le type de pose choisi.",
+        guideLink: "/guide-travaux#section-6"
       }
     ]
   }
