@@ -2,7 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Nunito Sans — self-hosted */
+@font-face { font-family: 'Nunito Sans'; font-weight: 200; font-style: normal; font-display: swap; src: url('/fonts/NunitoSans-ExtraLight.ttf') format('truetype'); }
+@font-face { font-family: 'Nunito Sans'; font-weight: 200; font-style: italic; font-display: swap; src: url('/fonts/NunitoSans-ExtraLightItalic.ttf') format('truetype'); }
+@font-face { font-family: 'Nunito Sans'; font-weight: 300; font-style: normal; font-display: swap; src: url('/fonts/NunitoSans-Light.ttf') format('truetype'); }
+@font-face { font-family: 'Nunito Sans'; font-weight: 300; font-style: italic; font-display: swap; src: url('/fonts/NunitoSans-LightItalic.ttf') format('truetype'); }
+@font-face { font-family: 'Nunito Sans'; font-weight: 400; font-style: normal; font-display: swap; src: url('/fonts/NunitoSans-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Nunito Sans'; font-weight: 400; font-style: italic; font-display: swap; src: url('/fonts/NunitoSans-Italic.ttf') format('truetype'); }
+@font-face { font-family: 'Nunito Sans'; font-weight: 600; font-style: normal; font-display: swap; src: url('/fonts/NunitoSans-SemiBold.ttf') format('truetype'); }
+@font-face { font-family: 'Nunito Sans'; font-weight: 600; font-style: italic; font-display: swap; src: url('/fonts/NunitoSans-SemiBoldItalic.ttf') format('truetype'); }
+@font-face { font-family: 'Nunito Sans'; font-weight: 800; font-style: normal; font-display: swap; src: url('/fonts/NunitoSans-ExtraBold.ttf') format('truetype'); }
+@font-face { font-family: 'Nunito Sans'; font-weight: 800; font-style: italic; font-display: swap; src: url('/fonts/NunitoSans-ExtraBoldItalic.ttf') format('truetype'); }
 
 /* renovermasalledebain.com - Premium Design System
    Blue Expertise #124A66 + Gold/Luxury palette
