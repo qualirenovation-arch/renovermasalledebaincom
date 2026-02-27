@@ -75,7 +75,7 @@ const faqCategories = [
     questions: [
       {
         question: "Êtes-vous assuré ?",
-        answer: "Oui. Les attestations d'assurance (RC pro et décennale) sont fournies avant la signature du devis et transmises au syndic avec les avis de travaux."
+        answer: "Oui. Nous sommes assurés en décennale et en responsabilité civile professionnelle auprès de MIC Insurance. Conformément à nos obligations légales, les références de notre contrat d'assurance sont inscrites sur chaque devis, et un exemplaire de l'attestation vous est remis avant signature. Les attestations sont également transmises au syndic avec les avis de travaux."
       }
     ]
   },
