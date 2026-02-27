@@ -99,6 +99,30 @@ export function GuidePlanningSection() {
             </ul>
           </div>
 
+          {/* ============ BLOC 2 : Coordination & anticipation ============ */}
+          <h3 className="text-xl md:text-2xl font-light text-foreground mb-2">Coordination & anticipation</h3>
+          <div className="w-10 h-[2px] mb-3" style={{ backgroundColor: '#c2a016' }} />
+
+          <div className="text-sm leading-relaxed text-muted-foreground space-y-3 mb-4">
+            <p>
+              Lorsque chaque artisan intervient sans coordination globale,<br />
+              vous êtes souvent mis face au résultat final… <strong className="text-foreground">trop tard.</strong>
+            </p>
+            <p>
+              <strong className="text-foreground">Un chantier ne s'improvise pas.</strong><br />
+              Il s'anticipe.
+            </p>
+            <p>
+              Profondeurs, hauteurs, alignements, volumes…<br />
+              tout doit être pensé en amont.
+            </p>
+            <p>
+              C'est précisément notre rôle :<br />
+              <strong className="text-foreground">coordonner les équipes pour que chaque intervention s'emboîte parfaitement.</strong>
+            </p>
+            <p className="font-medium text-foreground">Rien n'est laissé au hasard.</p>
+          </div>
+
           {/* ============ BLOC SIGNATURE — identique au bloc "En résumé" ============ */}
           <div className="py-16 px-6 text-center" style={{ backgroundColor: '#124A66' }}>
             <p
