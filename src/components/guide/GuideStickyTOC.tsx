@@ -12,7 +12,7 @@ import {
 
 const tocCategories = [
   {
-    label: "Préparation",
+    label: "Préparation d'un chantier de salle de bain",
     icon: ClipboardList,
     items: [
       { id: "section-planning", label: "Planning & Durée" },
