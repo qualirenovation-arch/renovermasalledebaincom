@@ -76,6 +76,10 @@ const faqCategories = [
       {
         question: "Êtes-vous assuré ?",
         answer: "Oui. Nous sommes assurés en décennale et en responsabilité civile professionnelle auprès de MIC Insurance. Conformément à nos obligations légales, les références de notre contrat d'assurance sont inscrites sur chaque devis, et un exemplaire de l'attestation vous est remis avant signature. Les attestations sont également transmises au syndic avec les avis de travaux."
+      },
+      {
+        question: "Quels sont les délais de garantie et le service après-vente ?",
+        answer: "La garantie décennale couvre les désordres affectant la solidité de l'ouvrage pendant 10 ans à compter de la réception des travaux. La garantie de parfait achèvement court pendant 1 an et couvre tous les défauts signalés. En cas de besoin, notre service après-vente reste joignable et intervient dans les meilleurs délais pour tout problème couvert par ces garanties."
       }
     ]
   },
