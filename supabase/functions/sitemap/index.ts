@@ -1,9 +1,10 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-// URL canonique du site (domaine final)
+// URL canonique du site
 const BASE_URL = "https://renovermasalledebain.com";
 
-// Liste des pages statiques à indexer
+// Pages statiques indexables
 const staticPages = [
   { url: "/", priority: "1.0", changefreq: "weekly" },
   { url: "/realisations", priority: "0.9", changefreq: "weekly" },
@@ -24,100 +25,33 @@ const staticPages = [
   { url: "/politique-confidentialite", priority: "0.3", changefreq: "yearly" },
 ];
 
-// Liste des slugs de projets (réalisations terminées)
-const projectSlugs = [
-  // Paris 3ème
-  "salle-de-bain-paris-3-renovation-style-masculin-bois-noir",
-  // Paris 4ème
-  "salle-de-bain-paris-4-ile-cite-quai-aux-fleurs-fenetre-interieure",
-  // Paris 5ème
-  "salle-de-bain-paris-5-renovation-optimisation-petit-espace",
-  "salle-de-bain-paris-5-renovation-baignoire-saint-germain",
-  // Paris 6ème
-  "salle-de-bain-paris-6-renovation-etroite-longueur-cherche-midi",
-  // Paris 8ème
-  "salle-de-bain-paris-8-renovation-locative-douche-italienne",
-  "salle-de-bain-paris-8-renovation-degat-des-eaux-marbre-noir-mat",
-  // Paris 9ème
-  "salle-de-bain-paris-9-renovation-douche-italienne-carrelage-pierre",
-  // Paris 10ème
-  "salle-de-bain-paris-10-renovation-style-masculin-jemmapes",
-  "salle-de-bain-paris-10-renovation-elegance-doree-faubourg-saint-denis",
-  "salle-de-bain-paris-10-renovation-noir-marbre-faubourg-saint-martin",
-  // Paris 11ème
-  "salle-de-bain-paris-11-renovation-retro-noir-blanc-charonne",
-  "salle-de-bain-paris-11-renovation-petite-surface-3m2",
-  // Paris 12ème
-  "salle-de-bain-paris-12-renovation-degat-des-eaux-transformation",
-  "salle-de-bain-paris-12-renovation-wc-design-onyx-blue",
-  "salle-de-bain-paris-12-renovation-garcon-noir-blanc-contemporain",
-  "salle-de-bain-paris-12-renovation-madame-marbre-rangements",
-  "salle-de-bain-paris-12-renovation-bleu-mineral-beton-reuilly",
-  "salle-de-bain-paris-12-renovation-monsieur-noyer-blanc-robinetterie-noire",
-  // Paris 13ème
-  "salle-de-bain-paris-13-renovation-locative-zellige-beige",
-  "salle-de-bain-paris-13-renovation-zellige-turquoise-or",
-  "salle-de-bain-paris-13-renovation-wc-zellige-turquoise-laiton",
-  "salle-de-bain-paris-13-transformation-baignoire-douche-carreaux-ciment-bleu",
-  // Paris 15ème
-  "salle-de-bain-paris-15-renovation-scandinave-buanderie-integree",
-  "salle-de-bain-paris-15-renovation-douche-wc-separes-hague-blue",
-  "salle-de-bain-paris-15-renovation-marbre-bois-noir-baignoire",
-  "salle-de-bain-paris-15-saint-charles-baignoire-balneo-metro-blanc",
-  // Paris 16ème
-  "salle-de-bain-paris-16-renovation-masculine-pierre-inox",
-  "salle-de-bain-paris-16-renovation-parisien-chic-auteuil",
-  "salle-de-bain-paris-16-renovation-elegance-parisienne-lauriston",
-  // Paris 17ème
-  "salle-de-bain-paris-17-renovation-suite-parentale-claustra-bois",
-  "salle-de-bain-paris-17-renovation-degat-des-eaux-terrazzo",
-  // Paris 19ème
-  "salle-de-bain-paris-19-renovation-tout-en-un-mosaique-noir-mat",
-  // Banlieue 92
-  "salle-de-bain-suresnes-92-renovation-onyx-blue-marbre",
-  "salle-de-bain-bois-colombes-92-terrazzo-mineral-vert-eau-laiton",
-  "salle-de-bain-boulogne-92-ambiance-marine",
-  "salle-de-bain-courbevoie-92-becon-sinistre",
-  // Banlieue 93
-  "salle-de-bain-saint-ouen-93-mondrian-conception-meuble-sur-mesure",
-  "salle-de-bain-saint-denis-93-appartement-feminin-verriere-metro-blanc",
-  "salle-de-bain-saint-denis-93-renovation-optimisation-metro-blanc-noir",
-  "suite-parentale-montreuil-93-renovation-verriere-zellige-turquoise",
-  // Banlieue 94
-  "salle-de-bain-charenton-94-renovation-gres-marbre-laiton-grande-vasque",
-  "salle-de-bain-charenton-94-duo-douche-baignoire",
-  "salle-de-bain-charenton-94-wc-chauffe-eau-dissimule",
-  "salle-de-bain-saint-mande-94-renovation",
-  "salle-de-bain-saint-maur-94-renovation-avant-apres",
-  "salle-de-bain-saint-maur-94-enfants-bleu-beige-ancienne-guinguette",
-  "salle-de-bain-saint-maur-94-renovation-blanc-epure-petit-beaubourg",
-  "salle-de-bain-vitry-94-renovation-complete-avant-apres",
-  "salle-de-bain-saint-maurice-94-pullman-noir-blanc",
-  "salle-de-bain-saint-maurice-94-renovation-zellige-bleu-beton-blanc",
-  // Banlieue 95
-  "wc-soisy-95-renovation-invites-zellige-terracotta",
-  "salle-de-bain-soisy-95-renovation-rose-terracotta-baignoire-ilot",
-  "salle-de-bain-soisy-95-renovation-enfants-terrazzo-menthe",
-];
+// Préfixes/mots-clés exclus du sitemap (cohérent avec seo-utils.ts)
+const EXCLUDED_PREFIXES = ["/admin", "/og-preview", "/visuels-houzz", "/404"];
 
-// Chantiers en cours
-const chantierSlugs = [
-  "chantier-paris-19-buttes-chaumont",
-  "chantier-paris-10-rocroy",
-  "chantier-paris-5-port-royal",
-  "chantier-paris-16-la-tour",
-  "chantier-courbevoie-92-lalyre",
-];
-
-const generateSitemap = (): string => {
+const generateSitemap = async (): Promise<string> => {
   const today = new Date().toISOString().split("T")[0];
+
+  // Récupérer les albums depuis la DB
+  const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+  const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+  const supabase = createClient(supabaseUrl, supabaseKey);
+
+  const { data: albums, error } = await supabase
+    .from("albums")
+    .select("slug, is_in_progress, updated_at")
+    .order("display_order", { ascending: true });
+
+  if (error) {
+    console.error("Error fetching albums:", error);
+  }
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 `;
 
-  // Ajouter les pages statiques
+  // Pages statiques (exclure les noindex)
   for (const page of staticPages) {
+    if (EXCLUDED_PREFIXES.some(p => page.url.startsWith(p))) continue;
     xml += `  <url>
     <loc>${BASE_URL}${page.url}</loc>
     <lastmod>${today}</lastmod>
@@ -127,35 +61,29 @@ const generateSitemap = (): string => {
 `;
   }
 
-  // Ajouter les pages de projets
-  for (const slug of projectSlugs) {
-    xml += `  <url>
-    <loc>${BASE_URL}/realisations/${slug}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-`;
-  }
+  // Pages albums dynamiques depuis la DB
+  if (albums && albums.length > 0) {
+    for (const album of albums) {
+      const lastmod = album.updated_at
+        ? album.updated_at.split("T")[0]
+        : today;
+      const isInProgress = album.is_in_progress;
 
-  // Ajouter les chantiers en cours
-  for (const slug of chantierSlugs) {
-    xml += `  <url>
-    <loc>${BASE_URL}/realisations/${slug}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+      xml += `  <url>
+    <loc>${BASE_URL}/realisations/${album.slug}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>${isInProgress ? "weekly" : "monthly"}</changefreq>
+    <priority>${isInProgress ? "0.6" : "0.7"}</priority>
   </url>
 `;
+    }
   }
 
   xml += `</urlset>`;
-
   return xml;
 };
 
 serve(async (req) => {
-  // Handle CORS preflight
   if (req.method === "OPTIONS") {
     return new Response(null, {
       headers: {
@@ -166,13 +94,17 @@ serve(async (req) => {
     });
   }
 
-  const sitemap = generateSitemap();
-
-  return new Response(sitemap, {
-    headers: {
-      "Content-Type": "application/xml; charset=utf-8",
-      "Cache-Control": "public, max-age=86400", // Cache 24h
-      "Access-Control-Allow-Origin": "*",
-    },
-  });
+  try {
+    const sitemap = await generateSitemap();
+    return new Response(sitemap, {
+      headers: {
+        "Content-Type": "application/xml; charset=utf-8",
+        "Cache-Control": "public, max-age=3600, s-maxage=86400",
+        "Access-Control-Allow-Origin": "*",
+      },
+    });
+  } catch (err) {
+    console.error("Sitemap generation error:", err);
+    return new Response("Internal Server Error", { status: 500 });
+  }
 });

@@ -160,6 +160,20 @@ export const redirectMap: Record<string, string> = {
   "chantier-courbevoie-92-renovation-contemporaine": "chantier-courbevoie-92-lalyre",
 };
 
+/**
+ * Résout la redirection en suivant les chaînes jusqu'à la cible finale.
+ * Empêche les boucles infinies (max 10 sauts).
+ */
 export const getRedirectSlug = (oldSlug: string): string | null => {
-  return redirectMap[oldSlug] || null;
+  let target = redirectMap[oldSlug] || null;
+  if (!target) return null;
+  
+  // Résoudre les chaînes : si la cible est aussi une source, suivre
+  let hops = 0;
+  while (target && redirectMap[target] && hops < 10) {
+    target = redirectMap[target];
+    hops++;
+  }
+  
+  return target;
 };
