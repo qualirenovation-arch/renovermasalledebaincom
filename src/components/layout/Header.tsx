@@ -76,10 +76,10 @@ export function Header() {
         {/* Desktop layout */}
         <div className="hidden xl:flex items-center justify-between h-24">
           <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
-            <img src={logoSvg} alt="RénoverMaSalleDeBain.com" className="h-16 xl:h-20 w-auto -ml-4" />
+            <img src={logoSvg} alt="RénoverMaSalleDeBain.com" className="h-14 xl:h-16 w-auto -ml-4" />
           </Link>
 
-          <nav className="flex items-center gap-1 ml-8">
+          <nav className="flex items-center gap-0.5 ml-4">
             {desktopNavItems.map((item) => (
               <Link
                 key={item.path}
@@ -95,7 +95,7 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center ml-6 gap-3">
+          <div className="flex items-center ml-4 gap-2 flex-shrink-0">
             <Button 
               variant="outline" 
               size="sm" 
@@ -107,8 +107,8 @@ export function Header() {
                 Urgence dégât des eaux
               </Link>
             </Button>
-            <Button variant="cta" size="default" asChild className="whitespace-nowrap">
-              <Link to="/devis#devis-form">Mon étude personnalisée</Link>
+            <Button variant="cta" size="sm" asChild className="whitespace-nowrap">
+              <Link to="/devis#devis-form">Mon étude</Link>
             </Button>
           </div>
         </div>
