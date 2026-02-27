@@ -95,7 +95,7 @@ export default function Index() {
         path="/"
       />
       {/* Hero Section - Premium design */}
-      <section className="bg-gradient-to-b from-stone to-background py-12 md:py-20 lg:py-24">
+      <section className="bg-gradient-to-b from-stone to-background py-6 md:py-20 lg:py-24">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
             <ScrollAnimation variant="fadeUp" className="text-center lg:text-left">
@@ -106,7 +106,7 @@ export default function Index() {
               <p className="text-muted-foreground text-base md:text-lg lg:text-xl mb-8 md:mb-10 leading-relaxed max-w-lg lg:max-w-none">
                 Rénover votre salle de bain sans stress, sans mauvaises surprises, grâce à une conception maîtrisée et un accompagnement de A à Z.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto pb-24 sm:pb-0">
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto pb-36 sm:pb-0">
                 <Button 
                   variant="gold" 
                   size="lg" 
