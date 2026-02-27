@@ -1356,7 +1356,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     title: "Rénovation salle de bain Paris 16ème — Style masculin en pierre et inox",
     location: "Paris 16ème - Rue Pierre Guérin",
     description: "Rénovation d'une salle de bain pour un appartement au masculin. Douche à l'italienne avec carrelage pierre naturelle, robinetterie encastrée chromée haut de gamme, niches de rangement intégrées et rangements sur-mesure avec buanderie dissimulée.",
-    coverImage: pierreGuerin1,
+    coverImage: pierreGuerin3,
     review: {
       text: "J'ai fait appel à Qualirenovation pour deux chantiers dont une rénovation d'envergure d'un appartement. La qualité d'exécution fut exemplaire. Carina est rapidement devenue non plus un prestataire mais un véritable partenaire. Des années après la fin des travaux, Carina est toujours disponible pour assurer un suivi ou fournir un conseil quel que soit le sujet. Bravo et merci Carina.",
       author: "Julien",
