@@ -1,4 +1,3 @@
-import { lazy, Suspense } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { OGTags } from "@/components/seo/OGTags";
 import { PageCTA } from "@/components/layout/PageCTA";
@@ -7,17 +6,15 @@ import { GuideHero } from "@/components/guide/GuideHero";
 import { GuideVideos } from "@/components/guide/GuideVideos";
 import { GuideMobileTOC } from "@/components/guide/GuideMobileTOC";
 import { GuideReadingProgress } from "@/components/guide/GuideReadingProgress";
-
-// Lazy-loaded below-fold sections for code splitting
-const GuidePlanningSection = lazy(() => import("@/components/guide/GuidePlanningSection").then(m => ({ default: m.GuidePlanningSection })));
-const GuideInspectionSections = lazy(() => import("@/components/guide/GuideInspectionSections").then(m => ({ default: m.GuideInspectionSections })));
-const GuideMaitreOeuvreSection = lazy(() => import("@/components/guide/GuideMaitreOeuvreSection").then(m => ({ default: m.GuideMaitreOeuvreSection })));
-const GuideInfrastructureSections = lazy(() => import("@/components/guide/GuideInfrastructureSections").then(m => ({ default: m.GuideInfrastructureSections })));
-const GuideDetailsSections = lazy(() => import("@/components/guide/GuideDetailsSections").then(m => ({ default: m.GuideDetailsSections })));
-const GuideComfortSections = lazy(() => import("@/components/guide/GuideComfortSections").then(m => ({ default: m.GuideComfortSections })));
-const GuideSummary = lazy(() => import("@/components/guide/GuideSummary").then(m => ({ default: m.GuideSummary })));
-const GuideGarantiesSection = lazy(() => import("@/components/guide/GuideGarantiesSection").then(m => ({ default: m.GuideGarantiesSection })));
-const GuideFAQ = lazy(() => import("@/components/guide/GuideFAQ").then(m => ({ default: m.GuideFAQ })));
+import { GuidePlanningSection } from "@/components/guide/GuidePlanningSection";
+import { GuideInspectionSections } from "@/components/guide/GuideInspectionSections";
+import { GuideMaitreOeuvreSection } from "@/components/guide/GuideMaitreOeuvreSection";
+import { GuideInfrastructureSections } from "@/components/guide/GuideInfrastructureSections";
+import { GuideDetailsSections } from "@/components/guide/GuideDetailsSections";
+import { GuideComfortSections } from "@/components/guide/GuideComfortSections";
+import { GuideSummary } from "@/components/guide/GuideSummary";
+import { GuideGarantiesSection } from "@/components/guide/GuideGarantiesSection";
+import { GuideFAQ } from "@/components/guide/GuideFAQ";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -51,26 +48,22 @@ const Guide = () => {
         <GuideMobileTOC />
 
         {/* Main content with sticky TOC sidebar */}
-        <div className="lg:flex lg:gap-0 relative">
+        <div className="relative">
           {/* Sticky TOC sidebar - desktop only - LEFT side */}
-          <aside className="hidden lg:block w-56 xl:w-64 flex-shrink-0 relative z-10">
-            <div className="sticky top-24 py-8 px-4">
-              <GuideStickyTOC />
-            </div>
+          <aside className="hidden lg:block fixed top-24 left-0 w-56 xl:w-64 z-10 py-8 px-4">
+            <GuideStickyTOC />
           </aside>
 
-          <div className="flex-1 min-w-0 overflow-x-hidden">
-            <Suspense fallback={null}>
-              <GuidePlanningSection />
-              <GuideInspectionSections />
-              <GuideMaitreOeuvreSection />
-              <GuideInfrastructureSections />
-              <GuideDetailsSections />
-              <GuideComfortSections />
-              <GuideSummary />
-              <GuideGarantiesSection />
-              <GuideFAQ />
-            </Suspense>
+          <div className="lg:ml-56 xl:ml-64">
+            <GuidePlanningSection />
+            <GuideInspectionSections />
+            <GuideMaitreOeuvreSection />
+            <GuideInfrastructureSections />
+            <GuideDetailsSections />
+            <GuideComfortSections />
+            <GuideSummary />
+            <GuideGarantiesSection />
+            <GuideFAQ />
           </div>
         </div>
 
