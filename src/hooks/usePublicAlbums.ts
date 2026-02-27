@@ -74,13 +74,18 @@ function mergeAlbum(dbAlbum: DbAlbum, staticAlbum: Album | undefined): Album {
       ? dbAlbum.cover_image
       : base.coverImage;
 
+  // Prefer the longer description (static descriptions are detailed, DB ones may be short summaries)
+  const description = staticAlbum && base.description && base.description.length > dbAlbum.description.length
+    ? base.description
+    : dbAlbum.description;
+
   return {
     ...base,
     // DB overrides for metadata fields
     title: dbAlbum.title,
     subtitle: dbAlbum.subtitle ?? base.subtitle,
     location: dbAlbum.location,
-    description: dbAlbum.description,
+    description,
     category: (dbAlbum.category as Album["category"]) ?? base.category,
     isInProgress: dbAlbum.is_in_progress,
     isFeaturedRealisations: dbAlbum.is_featured_realisations,
