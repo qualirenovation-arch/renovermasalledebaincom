@@ -119,7 +119,7 @@ export default function Photographe() {
               >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-16 h-16 rounded-2xl bg-white border border-white/30 flex items-center justify-center">
-                    <Camera className="w-8 h-8 text-accent" strokeWidth={1.5} />
+                    <Camera className="w-8 h-8 text-primary" strokeWidth={1.5} />
                   </div>
                   <div>
                     <h3 className="font-display text-xl font-semibold">Stéphane Vasco</h3>

@@ -118,7 +118,7 @@ export default function WhyUs() {
             viewport={{ once: true }}
           >
             <div className="w-20 h-20 rounded-2xl bg-white border border-white/30 flex items-center justify-center mx-auto mb-8">
-              <Handshake className="w-10 h-10 text-accent" strokeWidth={1.5} />
+              <Handshake className="w-10 h-10 text-primary" strokeWidth={1.5} />
             </div>
             <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6">
               Le projet, on le construit ensemble
@@ -193,7 +193,7 @@ export default function WhyUs() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="w-16 h-16 rounded-2xl bg-white border border-border flex items-center justify-center mb-6">
-                   <Camera className="w-8 h-8 text-accent" strokeWidth={1.5} />
+                   <Camera className="w-8 h-8 text-primary" strokeWidth={1.5} />
                 </div>
                 <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6">
                   Votre transformation immortalisée
@@ -236,7 +236,7 @@ export default function WhyUs() {
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
                       <div className="w-10 h-10 rounded-xl bg-white border border-border flex items-center justify-center flex-shrink-0">
-                        <span className="text-accent font-bold">1</span>
+                        <span className="text-primary font-bold">1</span>
                       </div>
                       <div>
                         <h4 className="font-semibold mb-1">Shooting "Avant"</h4>
@@ -246,7 +246,7 @@ export default function WhyUs() {
                     
                     <div className="flex items-start gap-4">
                       <div className="w-10 h-10 rounded-xl bg-white border border-border flex items-center justify-center flex-shrink-0">
-                        <Hammer className="w-5 h-5 text-accent" strokeWidth={1.5} />
+                        <Hammer className="w-5 h-5 text-primary" strokeWidth={1.5} />
                       </div>
                       <div>
                         <h4 className="font-semibold mb-1">Transformation</h4>
@@ -256,7 +256,7 @@ export default function WhyUs() {
                     
                     <div className="flex items-start gap-4">
                       <div className="w-10 h-10 rounded-xl bg-white border border-border flex items-center justify-center flex-shrink-0">
-                        <span className="text-accent font-bold">2</span>
+                        <span className="text-primary font-bold">2</span>
                       </div>
                       <div>
                         <h4 className="font-semibold mb-1">Shooting "Après"</h4>
@@ -266,7 +266,7 @@ export default function WhyUs() {
                     
                     <div className="flex items-start gap-4">
                       <div className="w-10 h-10 rounded-xl bg-white border border-border flex items-center justify-center flex-shrink-0">
-                        <Diamond className="w-5 h-5 text-accent" strokeWidth={1.5} />
+                        <Diamond className="w-5 h-5 text-primary" strokeWidth={1.5} />
                       </div>
                       <div>
                         <h4 className="font-semibold mb-1">Votre souvenir</h4>
@@ -314,7 +314,7 @@ export default function WhyUs() {
             delay: index * 0.1
           }}>
                 <div className="w-14 h-14 rounded-2xl bg-white border border-border flex items-center justify-center mb-6">
-                  <benefit.icon className="w-7 h-7 text-accent" strokeWidth={1.5} />
+                  <benefit.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-display text-xl font-semibold mb-3">{benefit.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
