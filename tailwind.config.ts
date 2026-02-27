@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Cinzel", "serif"],
+        display: ["Nunito Sans", "sans-serif"],
         sans: ["Montserrat", "sans-serif"],
       },
       colors: {
