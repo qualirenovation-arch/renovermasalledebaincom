@@ -6,7 +6,7 @@ import { albums as staticAlbums } from "@/data/albumsData";
 
 // Build static cover lookup once
 const staticCoverBySlug = new Map(
-  staticAlbums.map((a) => [a.id, { coverImage: a.coverImage, title: a.title, location: a.location }])
+  staticAlbums.map((a) => [a.slug, { coverImage: a.coverImage, title: a.title, location: a.location }])
 );
 
 export function HeroSlideshow() {
@@ -24,7 +24,7 @@ export function HeroSlideshow() {
 
       if (error) throw error;
       return (data ?? []).map((a) => {
-        const staticData = staticCoverBySlug.get(a.static_slug || "");
+        const staticData = staticCoverBySlug.get(a.static_slug || "") || staticCoverBySlug.get(a.slug);
         return {
           src: staticData?.coverImage || a.cover_image,
           alt: staticData?.title || a.title,
