@@ -107,7 +107,7 @@ export function Header() {
                 Urgence dégât des eaux
               </Link>
             </Button>
-            <Button variant="cta" size="lg" asChild>
+            <Button variant="cta" size="default" asChild className="whitespace-nowrap">
               <Link to="/devis#devis-form">Mon étude personnalisée</Link>
             </Button>
           </div>
