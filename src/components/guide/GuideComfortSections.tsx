@@ -5,7 +5,7 @@ export function GuideComfortSections() {
   return (
     <>
       {/* Sections Peinture, VMC & Éclairage */}
-      <section id="section-13" className="py-16 bg-background scroll-mt-20">
+      <section id="section-13" className="py-8 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

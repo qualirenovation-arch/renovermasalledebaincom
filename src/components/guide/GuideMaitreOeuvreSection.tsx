@@ -4,7 +4,7 @@ import { GuideSectionHeader } from "./GuideSectionHeader";
 
 export function GuideMaitreOeuvreSection() {
   return (
-    <section id="section-4" className="py-16 bg-background scroll-mt-20" style={{ backgroundColor: '#124A66' }}>
+    <section id="section-4" className="py-8 bg-background scroll-mt-20" style={{ backgroundColor: '#124A66' }}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
