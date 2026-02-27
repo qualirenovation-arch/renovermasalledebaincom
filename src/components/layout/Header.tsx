@@ -4,7 +4,7 @@ import { Menu, X, Phone, Droplets } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
-import logoSvg from "@/assets/logos/logo-renover.svg";
+import logoSvg from "@/assets/logos/logo-renover.png";
 
 // Navigation simplifiée pour mobile (max 5 entrées)
 const mobileNavItems = [
