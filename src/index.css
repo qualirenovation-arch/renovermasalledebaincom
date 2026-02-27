@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 /* renovermasalledebain.com - Premium Design System
    Blue Expertise #124A66 + Gold/Luxury palette
@@ -189,25 +189,9 @@
     font-weight: 400;
   }
 
-  /* Guide Travaux - Nunito Sans typography override */
-  .guide-page {
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 400;
-  }
-
-  .guide-page h1,
-  .guide-page h2,
-  .guide-page h3,
-  .guide-page h4,
-  .guide-page h5,
-  .guide-page h6 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 300;
-    color: hsl(197 70% 24%);
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cinzel', serif;
     color: hsl(var(--primary));
   }
 }
