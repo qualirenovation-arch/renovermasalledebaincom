@@ -59,10 +59,6 @@ const tocCategories = [
     label: "Garanties",
     items: [{ id: "section-garanties", label: "Nos garanties" }],
   },
-  {
-    label: "FAQ",
-    items: [{ id: "questions-frequentes", label: "Questions fréquentes" }],
-  },
 ];
 
 const allItems = tocCategories.flatMap((c) => c.items);

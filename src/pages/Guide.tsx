@@ -14,21 +14,8 @@ import { GuideDetailsSections } from "@/components/guide/GuideDetailsSections";
 import { GuideComfortSections } from "@/components/guide/GuideComfortSections";
 import { GuideSummary } from "@/components/guide/GuideSummary";
 import { GuideGarantiesSection } from "@/components/guide/GuideGarantiesSection";
-import { GuideFAQ } from "@/components/guide/GuideFAQ";
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    { "@type": "Question", "name": "Qu'est-ce qu'une douche à l'italienne ?", "acceptedAnswer": { "@type": "Answer", "text": "Une douche de plain-pied, sans marche ni receveur surélevé." } },
-    { "@type": "Question", "name": "Peut-on installer une douche à l'italienne dans un appartement ancien ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, dans la plupart des appartements, même anciens." } },
-    { "@type": "Question", "name": "Comment garantissez-vous l'étanchéité d'une douche à l'italienne ?", "acceptedAnswer": { "@type": "Answer", "text": "Obligation DTU 52.2 : systèmes certifiés avec SEL/SPEC et bandes d'étanchéité." } },
-    { "@type": "Question", "name": "Qu'est-ce qu'un bâti-support ?", "acceptedAnswer": { "@type": "Answer", "text": "Structure métallique encastrée dans le mur pour installer un WC suspendu." } },
-    { "@type": "Question", "name": "Qu'est-ce qu'une plaque de déclenchement ?", "acceptedAnswer": { "@type": "Answer", "text": "Le bouton de chasse d'eau visible sur un WC suspendu, livré en blanc par défaut." } },
-    { "@type": "Question", "name": "Qu'est-ce qu'une cuvette sans bride ?", "acceptedAnswer": { "@type": "Answer", "text": "Une cuvette sans rebord intérieur, plus hygiénique et facile à nettoyer." } },
-    { "@type": "Question", "name": "Le WC doit-il rester fonctionnel s'il est séparé dans une autre pièce ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, impérativement. Un WC situé dans une pièce indépendante doit rester accessible et utilisable pendant toute la durée des travaux." } },
-  ]
-};
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const Guide = () => {
   return (
@@ -39,7 +26,7 @@ const Guide = () => {
         path="/guide-travaux"
         coverImage="https://renovermasalledebain.com/og/guide-travaux.jpg"
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      
 
       <div className="guide-page">
         <GuideReadingProgress />
@@ -63,7 +50,24 @@ const Guide = () => {
             <GuideComfortSections />
             <GuideSummary />
             <GuideGarantiesSection />
-            <GuideFAQ />
+            {/* Lien croisé vers la FAQ */}
+            <section className="py-8">
+              <div className="container mx-auto px-4">
+                <div className="max-w-4xl mx-auto text-center border-t border-border/30 pt-8">
+                  <p className="text-muted-foreground text-sm mb-4">
+                    Pour les questions pratiques, consultez notre{" "}
+                    <Link
+                      to="/faq"
+                      className="inline-flex items-center gap-1.5 font-medium hover:underline"
+                      style={{ color: '#124A66' }}
+                    >
+                      FAQ
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </p>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
 
