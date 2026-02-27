@@ -11,14 +11,14 @@ import plaqueGeberitChrome from "@/assets/images/plaque-geberit-chrome.png";
 import carinaSig from "@/assets/carina-signature.svg";
 
 const SectionDivider = () => (
-  <div className="container mx-auto px-4 mt-16"><div className="max-w-4xl mx-auto border-b border-border/30" /></div>
+  <div className="container mx-auto px-4 mt-8"><div className="max-w-4xl mx-auto border-b border-border/30" /></div>
 );
 
 export function GuideInfrastructureSections() {
   return (
     <>
       {/* Section 5 - Plomberie */}
-      <section id="section-5" className="py-16 bg-background scroll-mt-20">
+      <section id="section-5" className="py-8 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -60,7 +60,7 @@ export function GuideInfrastructureSections() {
       </section>
 
       {/* Section 6 - Étanchéité */}
-      <section id="section-6" className="py-16 bg-background scroll-mt-20">
+      <section id="section-6" className="py-8 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -110,7 +110,7 @@ export function GuideInfrastructureSections() {
       </section>
 
       {/* Section 7 - Receveur de douche */}
-      <section id="section-7" className="py-16 bg-background scroll-mt-20">
+      <section id="section-7" className="py-8 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -183,7 +183,7 @@ export function GuideInfrastructureSections() {
       </section>
 
       {/* Section 8 - Choisir sa baignoire */}
-      <section id="section-8" className="py-16 bg-background scroll-mt-20">
+      <section id="section-8" className="py-8 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -258,7 +258,7 @@ export function GuideInfrastructureSections() {
       </section>
 
       {/* Section 9 - Paroi de douche */}
-      <section id="section-9" className="py-16 bg-background scroll-mt-20">
+      <section id="section-9" className="py-8 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -350,7 +350,7 @@ export function GuideInfrastructureSections() {
       </section>
 
       {/* Section 10 - Équipements sanitaires */}
-      <section id="section-10" className="py-16 bg-background scroll-mt-20">
+      <section id="section-10" className="py-8 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

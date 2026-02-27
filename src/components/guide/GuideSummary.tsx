@@ -4,7 +4,7 @@ import { GuideSectionHeader } from "./GuideSectionHeader";
 
 export function GuideSummary() {
   return (
-    <section className="py-16" style={{ backgroundColor: '#124A66' }}>
+    <section className="py-8" style={{ backgroundColor: '#124A66' }}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

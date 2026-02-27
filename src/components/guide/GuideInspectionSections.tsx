@@ -5,7 +5,7 @@ export function GuideInspectionSections() {
   return (
     <>
       {/* Section 1 - Visite initiale */}
-      <section id="section-1" className="py-16 bg-background scroll-mt-20">
+      <section id="section-1" className="py-8 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -90,11 +90,11 @@ export function GuideInspectionSections() {
             </div>
           </motion.div>
         </div>
-        <div className="container mx-auto px-4 mt-16"><div className="max-w-4xl mx-auto border-b border-border/30" /></div>
+        <div className="container mx-auto px-4 mt-8"><div className="max-w-4xl mx-auto border-b border-border/30" /></div>
       </section>
 
       {/* Section 3 - Colonnes en fonte & syndic */}
-      <section id="section-3" className="py-16 bg-background scroll-mt-20">
+      <section id="section-3" className="py-8 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -128,7 +128,7 @@ export function GuideInspectionSections() {
             </div>
           </motion.div>
         </div>
-        <div className="container mx-auto px-4 mt-16"><div className="max-w-4xl mx-auto border-b border-border/30" /></div>
+        <div className="container mx-auto px-4 mt-8"><div className="max-w-4xl mx-auto border-b border-border/30" /></div>
       </section>
     </>
   );
