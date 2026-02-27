@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import {
-  ClipboardList, Search, HardHat, Wrench, Paintbrush, Sofa, Shield, HelpCircle,
+  ClipboardList, Search, HardHat, Wrench, Paintbrush, Sofa, Shield,
 } from "lucide-react";
 import {
   Accordion,
@@ -61,13 +61,6 @@ const tocCategories = [
     icon: Shield,
     items: [
       { id: "section-garanties", label: "Nos garanties" },
-    ],
-  },
-  {
-    label: "FAQ",
-    icon: HelpCircle,
-    items: [
-      { id: "questions-frequentes", label: "Questions fréquentes" },
     ],
   },
 ];

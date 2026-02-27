@@ -106,12 +106,22 @@ const faqCategories = [
     title: "Rénovation salle de bain",
     questions: [
       {
+        question: "Qu'est-ce qu'une douche à l'italienne ?",
+        answer: "Une douche de plain-pied, sans marche ni receveur surélevé. Elle s'intègre au sol de la salle de bain pour un accès facile et un design épuré. C'est la solution idéale pour une salle de bain moderne et accessible.",
+        guideLink: "/guide-travaux#section-7"
+      },
+      {
+        question: "Peut-on installer une douche à l'italienne dans un appartement ancien ?",
+        answer: "Oui, dans la plupart des appartements, même anciens. Notre maître d'œuvre réalise une étude de faisabilité gratuite pour évaluer les contraintes techniques (hauteur de réservation, évacuations) et vous proposer la meilleure solution.",
+        guideLink: "/guide-travaux#section-7"
+      },
+      {
         question: "Combien coûte une rénovation de salle de bain à Paris ?",
         answer: "Le coût d'une rénovation de salle de bain à Paris varie selon la surface, les matériaux choisis et l'ampleur des travaux. Pour une rénovation complète clé en main, comptez entre 800€ et 1 500€/m². Nous établissons un devis détaillé gratuit avec photos via Graneet pour une transparence totale – zéro mauvaise surprise."
       },
       {
         question: "Combien de temps dure une rénovation de salle de bain en appartement ?",
-        answer: "Une rénovation de salle de bain en appartement dure généralement entre 3 semaines et 1 mois. Pourquoi ? Parce qu'un chantier, c'est comme un orchestre : chaque artisan doit jouer sa partition au bon moment. Le plombier pose les fondations, le carreleur donne le rythme, et le peintre sublime l'ensemble en dernier.",
+        answer: "Une rénovation de salle de bain en appartement dure généralement entre 3 semaines et 1 mois. Chaque artisan doit intervenir au bon moment : le plombier pose les fondations, le carreleur donne le rythme, et le peintre sublime l'ensemble en dernier.",
         guideLink: "/guide-travaux#section-planning"
       },
       {
@@ -209,6 +219,20 @@ const faqCategories = [
     title: "Travaux et matériaux",
     questions: [
       {
+        question: "Comment garantissez-vous l'étanchéité d'une douche à l'italienne ?",
+        answer: "Nous appliquons un système SEL/SPEC (Weber Aquastop) sur murs et sol avant carrelage, conformément au DTU 52.2. Photos de mise en œuvre envoyées systématiquement. Garantie étanchéité 10 ans + décennale MIC Assurances.",
+        guideLink: "/guide-travaux#section-6"
+      },
+      {
+        question: "WC suspendu : bâti-support et plaques de déclenchement",
+        answer: "Le WC suspendu repose sur un bâti-support Geberit encastré. La plaque de déclenchement est livrée en blanc par défaut (surcoût pour noir, laiton ou chromé). Nous recommandons les cuvettes sans bride pour l'hygiène.",
+        guideLink: "/guide-travaux#section-10"
+      },
+      {
+        question: "Le WC doit-il rester fonctionnel pendant les travaux ?",
+        answer: "Si le WC est situé dans une pièce indépendante de la salle de bain, il doit rester accessible et utilisable pendant toute la durée des travaux. En revanche, si le WC est intégré à la salle de bain en cours de rénovation, son utilisation sera temporairement interrompue."
+      },
+      {
         question: "Faut-il refaire toute la plomberie lors d'une rénovation ?",
         answer: "Oui, dans la grande majorité des cas. Le plomb est remplacé par du cuivre ou du multicouche, et des nourrices eau chaude / eau froide sont posées pour sécuriser l'installation.",
         guideLink: "/guide-travaux#section-5"
@@ -234,11 +258,11 @@ const faqCategories = [
       },
       {
         question: "Quel carrelage pour une salle de bain moderne ?",
-        answer: "Pour une salle de bain moderne, nous recommandons les carrelages grand format (60x120 ou plus) qui agrandissent visuellement l'espace, les imitations pierre naturelle ou béton ciré, et les faïences décoratives pour créer des ambiances uniques. Notre équipe vous conseille sur les tendances et les associations."
+        answer: "Pour une salle de bain moderne, nous recommandons les carrelages grand format (60x120 ou plus) qui agrandissent visuellement l'espace, les imitations pierre naturelle ou béton ciré, et les faïences décoratives pour créer des ambiances uniques."
       },
       {
         question: "Posez-vous des baignoires ?",
-        answer: "Oui, nous installons des baignoires îlots, encastrées ou d'angle selon votre projet. Nous pouvons également transformer une baignoire en douche à l'italienne si vous souhaitez gagner de l'espace et du confort.",
+        answer: "Oui, nous installons des baignoires îlots, encastrées ou d'angle selon votre projet. Nous pouvons également transformer une baignoire en douche à l'italienne si vous souhaitez gagner de l'espace.",
         guideLink: "/guide-travaux#section-10"
       }
     ]
@@ -508,6 +532,10 @@ export default function FAQ() {
             <p className="mt-6 text-muted-foreground italic">
                 Chez Qualiconcept, on ne fait pas que rénover un lieu : 
                 <span className="text-primary font-medium"> on vous accompagne, sereinement, du début à la fin.</span>
+              </p>
+              <p className="mt-4 text-sm text-muted-foreground">
+                Pour comprendre le déroulé technique complet, consultez notre{" "}
+                <Link to="/guide-travaux" className="text-primary font-medium hover:underline">Guide Travaux</Link>.
               </p>
               <div className="mt-6">
                 <Link
