@@ -60,7 +60,7 @@ export function Header() {
           </button>
           
           <Link to="/" className="flex items-center flex-1 min-w-0 overflow-hidden">
-            <img src={logoSvg} alt="RénoverMaSalleDeBain.com" className="h-10 sm:h-14 w-auto max-w-[40vw] sm:max-w-[45vw] object-contain object-left" />
+            <img src={logoSvg} alt="RénoverMaSalleDeBain.com" className="h-12 sm:h-16 w-auto max-w-[50vw] sm:max-w-[55vw] object-contain object-left" />
           </Link>
           
           <Button variant="outline" size="icon" asChild className="flex-shrink-0 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full w-9 h-9 sm:w-10 sm:h-10">
@@ -76,7 +76,7 @@ export function Header() {
         {/* Desktop layout */}
         <div className="hidden xl:flex items-center justify-between h-24">
           <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
-            <img src={logoSvg} alt="RénoverMaSalleDeBain.com" className="h-14 xl:h-16 w-auto -ml-4" />
+            <img src={logoSvg} alt="RénoverMaSalleDeBain.com" className="h-16 xl:h-20 w-auto -ml-4" />
           </Link>
 
           <nav className="flex items-center gap-0.5 ml-4">
