@@ -199,7 +199,7 @@ const faqCategories = [
     ]
   },
   {
-    title: "Travaux, matériaux & pose carrelage",
+    title: "Travaux, matériaux, pose carrelage & profilés",
     questions: [
       {
         question: "Comment garantissez-vous l'étanchéité d'une douche à l'italienne ?",
