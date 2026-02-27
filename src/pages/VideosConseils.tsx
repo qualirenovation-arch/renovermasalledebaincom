@@ -119,7 +119,7 @@ export default function VideosConseils() {
                   
                   {/* Contenu */}
                   <div className="p-5">
-                    <h3 className="font-display text-lg font-semibold text-foreground group-hover:text-destructive transition-colors mb-2 line-clamp-2">
+                    <h3 className="font-display text-lg font-light text-foreground group-hover:text-destructive transition-colors mb-2 line-clamp-2">
                       {video.title}
                     </h3>
                     <p className="text-sm text-muted-foreground line-clamp-2 mb-4">

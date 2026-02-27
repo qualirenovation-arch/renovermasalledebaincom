@@ -42,7 +42,7 @@ export function PartnerTypeCard({ icon, title, description, isSelected, onClick 
           )}
         </div>
         <div className="flex-1">
-          <h3 className="font-display text-lg font-semibold mb-2">{title}</h3>
+          <h3 className="font-display text-lg font-light mb-2">{title}</h3>
           <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
         </div>
         <div className={cn(

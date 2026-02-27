@@ -109,7 +109,7 @@ export function BrandSiteForm({ onBack }: BrandSiteFormProps) {
     return (
       <div className="text-center py-12">
         <CheckCircle2 className="w-16 h-16 text-green-500 mx-auto mb-6" />
-        <h3 className="font-display text-2xl font-semibold mb-4">Merci pour votre demande !</h3>
+        <h3 className="font-display text-2xl font-light mb-4">Merci pour votre demande !</h3>
         <p className="text-muted-foreground mb-8">
           Nous avons bien reçu votre demande de partenariat et reviendrons vers vous rapidement.
         </p>
@@ -131,7 +131,7 @@ export function BrandSiteForm({ onBack }: BrandSiteFormProps) {
         Retour au choix du profil
       </button>
 
-      <h2 className="font-display text-2xl font-semibold mb-2">Devenir partenaire</h2>
+      <h2 className="font-display text-2xl font-light mb-2">Devenir partenaire</h2>
       <p className="text-muted-foreground mb-8">
         Marque, fabricant, distributeur, showroom ou site déco — collaborons ensemble.
       </p>

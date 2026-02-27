@@ -51,7 +51,7 @@ export default function PartenairesContact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold mb-6">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light mb-6">
               Devenir partenaire
             </h1>
             <p className="text-muted-foreground text-lg md:text-xl">
@@ -73,7 +73,7 @@ export default function PartenairesContact() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
               >
-                <h2 className="font-display text-2xl font-semibold mb-2 text-center">
+                <h2 className="font-display text-2xl font-light mb-2 text-center">
                   Quel est votre profil ?
                 </h2>
                 <p className="text-muted-foreground text-center mb-8">

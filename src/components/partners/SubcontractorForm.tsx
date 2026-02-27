@@ -128,7 +128,7 @@ export function SubcontractorForm({ onBack }: SubcontractorFormProps) {
     return (
       <div className="text-center py-12">
         <CheckCircle2 className="w-16 h-16 text-primary mx-auto mb-6" />
-        <h3 className="font-display text-2xl font-semibold mb-4">Merci pour votre demande !</h3>
+        <h3 className="font-display text-2xl font-light mb-4">Merci pour votre demande !</h3>
         <p className="text-muted-foreground mb-8">
           Nous avons bien reçu votre candidature et reviendrons vers vous rapidement.
         </p>
@@ -150,7 +150,7 @@ export function SubcontractorForm({ onBack }: SubcontractorFormProps) {
         Retour au choix du profil
       </button>
 
-      <h2 className="font-display text-2xl font-semibold mb-2">Devenir sous-traitant</h2>
+      <h2 className="font-display text-2xl font-light mb-2">Devenir sous-traitant</h2>
       <p className="text-muted-foreground mb-8">
         Rejoignez notre réseau d'artisans qualifiés pour des chantiers de qualité.
       </p>

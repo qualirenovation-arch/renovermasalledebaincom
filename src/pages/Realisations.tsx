@@ -214,7 +214,7 @@ export default function Realisations() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6 text-primary">
+            <h1 className="font-display text-4xl md:text-5xl font-light mb-6 text-primary">
               Nos réalisations de salles de bain à Paris et Île-de-France
             </h1>
             <p className="text-muted-foreground text-lg">
@@ -420,7 +420,7 @@ export default function Realisations() {
                           </div>
                           <div className="p-6">
                             <p className="text-sm text-wood font-medium mb-2">{album.location}</p>
-                            <h3 className="font-display text-xl font-semibold mb-2">
+                            <h3 className="font-display text-xl font-light mb-2">
                               {album.title}
                             </h3>
                             <p className="text-muted-foreground text-sm line-clamp-2">{album.description}</p>
@@ -475,7 +475,7 @@ export default function Realisations() {
                 {/* Album header */}
                 <div className="mb-8">
                   <p className="text-sm text-wood font-medium mb-2">{selectedAlbum.location}</p>
-                  <h2 className="font-display text-3xl font-semibold mb-2">{selectedAlbum.title}</h2>
+                  <h2 className="font-display text-3xl font-light mb-2">{selectedAlbum.title}</h2>
                   {selectedAlbum.subtitle && (
                     <h3 className="font-display text-lg md:text-xl text-wood italic mb-4">{selectedAlbum.subtitle}</h3>
                   )}

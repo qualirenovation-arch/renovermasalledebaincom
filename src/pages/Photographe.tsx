@@ -50,7 +50,7 @@ export default function Photographe() {
             <span className="inline-block px-4 py-2 rounded-full bg-white border border-border text-primary text-sm font-medium mb-6">
               Notre photographe partenaire
             </span>
-            <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6 text-primary">
+            <h1 className="font-display text-4xl md:text-5xl font-light mb-6 text-primary">
               Stéphane Vasco
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
@@ -76,7 +76,7 @@ export default function Photographe() {
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="font-display text-3xl font-semibold mb-6">
+                <h2 className="font-display text-3xl font-light mb-6">
                   L'œil derrière nos albums
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-6">
@@ -122,7 +122,7 @@ export default function Photographe() {
                     <Camera className="w-8 h-8 text-primary" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="font-display text-xl font-semibold">Stéphane Vasco</h3>
+                    <h3 className="font-display text-xl font-light">Stéphane Vasco</h3>
                     <p className="text-primary-foreground/80">Photographe depuis 2010</p>
                   </div>
                 </div>
@@ -176,7 +176,7 @@ export default function Photographe() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
+            <h2 className="font-display text-3xl md:text-4xl font-light mb-4">
               Stéphane en action
             </h2>
             <p className="text-muted-foreground text-lg">
@@ -223,7 +223,7 @@ export default function Photographe() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
+            <h2 className="font-display text-3xl md:text-4xl font-light mb-4">
               Ses spécialités
             </h2>
             <p className="text-muted-foreground text-lg">
@@ -244,7 +244,7 @@ export default function Photographe() {
                 <div className="w-14 h-14 rounded-2xl bg-white border border-border flex items-center justify-center mx-auto mb-4">
                   <specialty.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-display text-lg font-semibold mb-2">{specialty.title}</h3>
+                <h3 className="font-display text-lg font-light mb-2">{specialty.title}</h3>
                 <p className="text-muted-foreground text-sm">{specialty.description}</p>
               </motion.div>
             ))}
@@ -282,7 +282,7 @@ export default function Photographe() {
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="card-elevated p-8 text-center">
-                <h3 className="font-display text-xl font-semibold mb-4">
+                <h3 className="font-display text-xl font-light mb-4">
                   Besoin d'un photographe ?
                 </h3>
                 <p className="text-muted-foreground mb-6">
@@ -302,7 +302,7 @@ export default function Photographe() {
               </div>
               
               <div className="card-elevated p-8 text-center bg-accent/10">
-                <h3 className="font-display text-xl font-semibold mb-4">
+                <h3 className="font-display text-xl font-light mb-4">
                   Envie de voir son travail ?
                 </h3>
                 <p className="text-muted-foreground mb-6">

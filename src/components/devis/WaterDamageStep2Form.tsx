@@ -169,7 +169,7 @@ export function WaterDamageStep2Form({ leadId, clientFirstName, clientEmail }: P
         <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
           <CheckCircle2 className="w-10 h-10 text-green-600" />
         </div>
-        <h2 className="font-display text-2xl md:text-3xl font-semibold mb-4">Dossier complété avec succès !</h2>
+        <h2 className="font-display text-2xl md:text-3xl font-light mb-4">Dossier complété avec succès !</h2>
         <p className="text-muted-foreground mb-6">
           Merci d'avoir complété votre dossier dégât des eaux. 
           Un membre de notre équipe vous contactera sous <strong>24h</strong> pour planifier la visite technique.
@@ -195,7 +195,7 @@ export function WaterDamageStep2Form({ leadId, clientFirstName, clientEmail }: P
     iconColor?: string;
   }) => (
     <div className="card-elevated p-5 md:p-6">
-      <h3 className="font-display text-lg font-semibold mb-4 flex items-center gap-3">
+      <h3 className="font-display text-lg font-light mb-4 flex items-center gap-3">
         <div className={`w-9 h-9 rounded-full ${iconBg} flex items-center justify-center`}>
           <Icon className={`w-4 h-4 ${iconColor}`} />
         </div>
@@ -208,7 +208,7 @@ export function WaterDamageStep2Form({ leadId, clientFirstName, clientEmail }: P
   return (
     <div className="max-w-3xl mx-auto">
       <div className="mb-8">
-        <h2 className="font-display text-2xl md:text-3xl font-semibold mb-2">
+        <h2 className="font-display text-2xl md:text-3xl font-light mb-2">
           Bonjour {clientFirstName}
         </h2>
         <p className="text-muted-foreground">

@@ -26,7 +26,7 @@ export default function PolitiqueConfidentialite() {
 
             {/* Responsable du traitement */}
             <section>
-              <h2 className="font-display text-2xl font-semibold text-primary mb-4">
+              <h2 className="font-display text-2xl font-light text-primary mb-4">
                 Responsable du traitement
               </h2>
               <ul className="list-none space-y-2 text-muted-foreground">
@@ -39,7 +39,7 @@ export default function PolitiqueConfidentialite() {
 
             {/* Données collectées */}
             <section>
-              <h2 className="font-display text-2xl font-semibold text-primary mb-4">
+              <h2 className="font-display text-2xl font-light text-primary mb-4">
                 Données collectées
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
@@ -54,7 +54,7 @@ export default function PolitiqueConfidentialite() {
 
             {/* Finalités */}
             <section>
-              <h2 className="font-display text-2xl font-semibold text-primary mb-4">
+              <h2 className="font-display text-2xl font-light text-primary mb-4">
                 Finalités du traitement
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
@@ -70,7 +70,7 @@ export default function PolitiqueConfidentialite() {
 
             {/* Base légale */}
             <section>
-              <h2 className="font-display text-2xl font-semibold text-primary mb-4">
+              <h2 className="font-display text-2xl font-light text-primary mb-4">
                 Base légale du traitement
               </h2>
               <p className="text-muted-foreground leading-relaxed">
@@ -80,7 +80,7 @@ export default function PolitiqueConfidentialite() {
 
             {/* Destinataires */}
             <section>
-              <h2 className="font-display text-2xl font-semibold text-primary mb-4">
+              <h2 className="font-display text-2xl font-light text-primary mb-4">
                 Destinataires des données
               </h2>
               <p className="text-muted-foreground leading-relaxed">
@@ -90,7 +90,7 @@ export default function PolitiqueConfidentialite() {
 
             {/* Conservation */}
             <section>
-              <h2 className="font-display text-2xl font-semibold text-primary mb-4">
+              <h2 className="font-display text-2xl font-light text-primary mb-4">
                 Durée de conservation
               </h2>
               <p className="text-muted-foreground leading-relaxed">
@@ -100,7 +100,7 @@ export default function PolitiqueConfidentialite() {
 
             {/* Droits */}
             <section>
-              <h2 className="font-display text-2xl font-semibold text-primary mb-4">
+              <h2 className="font-display text-2xl font-light text-primary mb-4">
                 Vos droits
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
@@ -121,7 +121,7 @@ export default function PolitiqueConfidentialite() {
 
             {/* Cookies */}
             <section>
-              <h2 className="font-display text-2xl font-semibold text-primary mb-4">
+              <h2 className="font-display text-2xl font-light text-primary mb-4">
                 Cookies
               </h2>
               <p className="text-muted-foreground leading-relaxed">
@@ -131,7 +131,7 @@ export default function PolitiqueConfidentialite() {
 
             {/* Sécurité */}
             <section>
-              <h2 className="font-display text-2xl font-semibold text-primary mb-4">
+              <h2 className="font-display text-2xl font-light text-primary mb-4">
                 Sécurité des données
               </h2>
               <p className="text-muted-foreground leading-relaxed">
@@ -141,7 +141,7 @@ export default function PolitiqueConfidentialite() {
 
             {/* Réclamation */}
             <section>
-              <h2 className="font-display text-2xl font-semibold text-primary mb-4">
+              <h2 className="font-display text-2xl font-light text-primary mb-4">
                 Réclamation
               </h2>
               <p className="text-muted-foreground leading-relaxed">

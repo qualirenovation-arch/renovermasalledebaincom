@@ -68,7 +68,7 @@ const ProjetDetail = () => {
       <Layout>
         <div className="min-h-[60vh] flex items-center justify-center">
           <div className="text-center">
-            <h1 className="font-display text-2xl font-semibold mb-4">Projet non trouvé</h1>
+            <h1 className="font-display text-2xl font-light mb-4">Projet non trouvé</h1>
             <Button onClick={() => navigate("/realisations")}>
               Retour aux réalisations
             </Button>
@@ -136,7 +136,7 @@ const ProjetDetail = () => {
             className="mb-8"
           >
             <p className="text-sm text-wood font-medium mb-2">{album.location}</p>
-            <h1 className="font-display text-3xl md:text-4xl font-semibold mb-2 text-primary">{album.title}</h1>
+            <h1 className="font-display text-3xl md:text-4xl font-light mb-2 text-primary">{album.title}</h1>
             {album.subtitle && (
               <h2 className="font-display text-lg md:text-xl text-wood italic mb-4">{album.subtitle}</h2>
             )}

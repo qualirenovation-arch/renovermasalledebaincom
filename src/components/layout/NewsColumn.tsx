@@ -12,7 +12,7 @@ export function NewsColumn() {
     <div className="w-80 p-4">
       {/* Section Presse */}
       <div className="mb-4">
-        <h3 className="font-display text-sm font-semibold text-primary mb-3 flex items-center gap-2 uppercase tracking-wide">
+        <h3 className="font-display text-sm font-light text-primary mb-3 flex items-center gap-2 uppercase tracking-wide">
           <Newspaper className="w-4 h-4" />
           Dans la presse
         </h3>
@@ -48,7 +48,7 @@ export function NewsColumn() {
       {/* Section Vidéos Conseils */}
       {latestVideos.length > 0 && (
         <div className="mb-4">
-          <h3 className="font-display text-sm font-semibold text-destructive mb-3 flex items-center gap-2 uppercase tracking-wide">
+          <h3 className="font-display text-sm font-light text-destructive mb-3 flex items-center gap-2 uppercase tracking-wide">
             <PlayCircle className="w-4 h-4" />
             Vidéos Conseils
           </h3>

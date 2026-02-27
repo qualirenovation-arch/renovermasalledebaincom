@@ -440,7 +440,7 @@ export default function FAQ() {
             <span className="inline-block px-4 py-2 rounded-full bg-accent/30 text-wood text-sm font-medium mb-6">
               Foire aux questions
             </span>
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 text-primary">
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-light mb-6 text-primary">
               Questions fréquentes sur la rénovation de salle de bain
             </h1>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
@@ -465,7 +465,7 @@ export default function FAQ() {
                 viewport={{ once: true }}
                 transition={{ delay: categoryIndex * 0.05 }}
               >
-                <h2 className="font-display text-2xl md:text-3xl font-semibold mb-4 text-primary">
+                <h2 className="font-display text-2xl md:text-3xl font-light mb-4 text-primary">
                   {category.title}
                 </h2>
                 {'intro' in category && category.intro && (
@@ -500,7 +500,7 @@ export default function FAQ() {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-primary/10 to-accent/20 rounded-2xl p-8 border border-primary/20"
             >
-              <h2 className="font-display text-2xl md:text-3xl font-semibold mb-6 text-primary">
+              <h2 className="font-display text-2xl md:text-3xl font-light mb-6 text-primary">
                 🤝 En résumé
               </h2>
               <ul className="space-y-3 text-foreground">
@@ -560,7 +560,7 @@ export default function FAQ() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6">
+            <h2 className="font-display text-3xl md:text-4xl font-light mb-6">
               Vous avez d'autres questions ?
             </h2>
             <p className="text-primary-foreground/80 text-lg mb-8">

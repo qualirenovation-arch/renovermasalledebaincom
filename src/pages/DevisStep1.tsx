@@ -150,7 +150,7 @@ export default function DevisStep1() {
               <div className="w-24 h-24 rounded-full bg-[hsl(var(--tag-mint))] flex items-center justify-center mx-auto mb-8">
                 <Mail className="w-12 h-12 text-foreground" />
               </div>
-              <h1 className="font-display text-3xl md:text-4xl font-semibold mb-6">Votre demande est enregistrée !</h1>
+              <h1 className="font-display text-3xl md:text-4xl font-light mb-6">Votre demande est enregistrée !</h1>
               <p className="text-muted-foreground text-lg mb-8">
                 Un email vient de vous être envoyé à <strong>{formData.email}</strong> avec 
                 <strong> 3 options</strong> pour poursuivre votre projet.
@@ -206,7 +206,7 @@ export default function DevisStep1() {
               <CalendarCheck className="w-4 h-4" />
               Visite gratuite
             </span>
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6 tracking-tight text-primary">
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-light mb-4 md:mb-6 tracking-tight text-primary">
               Parlez-nous de votre projet
             </h1>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-xl">
@@ -246,7 +246,7 @@ export default function DevisStep1() {
               <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
                 {/* Coordonnées */}
                 <div className="card-elevated p-5 md:p-8">
-                  <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
+                  <h2 className="font-display text-xl font-light mb-6 flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-[hsl(var(--tag-beige))] flex items-center justify-center">
                       <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                         <circle cx="12" cy="8" r="4" />

@@ -445,7 +445,7 @@ export default function Presse() {
             viewport={{ once: true }}
             className="text-center mb-6"
           >
-            <h2 className="font-display text-xl md:text-2xl font-semibold mb-2">
+            <h2 className="font-display text-xl md:text-2xl font-light mb-2">
               📱 Nos parutions en vidéo
             </h2>
             <p className="text-sm text-muted-foreground max-w-xl mx-auto">
@@ -620,7 +620,7 @@ export default function Presse() {
             viewport={{ once: true }}
             className="max-w-2xl mx-auto"
           >
-            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
+            <h2 className="font-display text-3xl md:text-4xl font-light mb-4">
               Vous êtes journaliste ?
             </h2>
             <p className="text-primary-foreground/80 mb-8">
