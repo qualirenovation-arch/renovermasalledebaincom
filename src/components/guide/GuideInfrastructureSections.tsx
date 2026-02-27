@@ -26,7 +26,7 @@ export function GuideInfrastructureSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={5} title="Plomberie : refaire entièrement pour éviter les fuites" />
+            <GuideSectionHeader number={6} title="Plomberie : refaire entièrement pour éviter les fuites" />
 
             <div className="border-l-2 p-5 mb-8" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#124A66' }}>À retenir</p>
@@ -68,7 +68,7 @@ export function GuideInfrastructureSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={6} title="Étanchéité salle de bain : la base invisible" />
+            <GuideSectionHeader number={7} title="Étanchéité salle de bain : la base invisible" />
 
             <div className="border-l-2 p-5 mb-8" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#124A66' }}>À retenir</p>
@@ -118,7 +118,7 @@ export function GuideInfrastructureSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={7} title="Receveur de douche : le bon choix" />
+            <GuideSectionHeader number={8} title="Receveur de douche : le bon choix" />
 
             <div className="border-l-2 p-5 mb-8" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#124A66' }}>À retenir</p>
@@ -191,7 +191,7 @@ export function GuideInfrastructureSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={8} title="Choisir sa baignoire" />
+            <GuideSectionHeader number={9} title="Choisir sa baignoire" />
 
             <div className="border-l-2 p-5 mb-8" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#124A66' }}>À retenir</p>
@@ -266,7 +266,7 @@ export function GuideInfrastructureSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={9} title="Paroi de douche : quelle ouverture, quelle couleur et quel verre choisir ?" />
+            <GuideSectionHeader number={10} title="Paroi de douche : quelle ouverture, quelle couleur et quel verre choisir ?" />
 
             <div className="border-l-2 p-5 mb-8" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#124A66' }}>À retenir</p>
@@ -358,7 +358,7 @@ export function GuideInfrastructureSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={10} title="WC, meuble vasque & chauffe-eau" />
+            <GuideSectionHeader number={11} title="WC, meuble vasque & chauffe-eau" />
 
             <div className="border-l-2 p-5 mb-8" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#124A66' }}>À retenir</p>
