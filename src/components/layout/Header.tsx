@@ -63,9 +63,9 @@ export function Header() {
             <img src={logoSvg} alt="RénoverMaSalleDeBain.com" className="h-12 sm:h-16 w-auto max-w-[50vw] sm:max-w-[55vw] object-contain object-left" />
           </Link>
           
-          <Button variant="outline" size="icon" asChild className="flex-shrink-0 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full w-9 h-9 sm:w-10 sm:h-10">
+          <Button variant="outline" size="icon" asChild className="flex-shrink-0 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full w-8 h-8 sm:w-9 sm:h-9">
             <Link to="/devis?type=degat_eaux#devis-form" aria-label="Urgence dégât des eaux">
-              <Droplets className="w-4 h-4 sm:w-5 sm:h-5" />
+              <Droplets className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </Link>
           </Button>
           <Button variant="cta" size="default" asChild className="text-xs sm:text-sm px-3 sm:px-5 py-2 sm:py-2.5 flex-shrink-0 font-semibold shadow-md whitespace-nowrap">
@@ -100,10 +100,10 @@ export function Header() {
               variant="outline" 
               size="sm" 
               asChild 
-              className="rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors hidden xl:inline-flex"
+              className="rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors hidden xl:inline-flex text-xs px-3 py-1.5"
             >
               <Link to="/devis?type=degat_eaux#devis-form">
-                <Droplets className="w-4 h-4 mr-1.5" />
+                <Droplets className="w-3.5 h-3.5 mr-1" />
                 Urgence dégât des eaux
               </Link>
             </Button>
