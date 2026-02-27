@@ -44,7 +44,7 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground pb-20 md:pb-0">
+    <footer className="bg-primary text-primary-foreground pb-24 md:pb-0">
       <div className="container-custom py-8 md:py-10">
         <div className="grid grid-cols-1 lg:grid-cols-[25%_20%_30%_25%] gap-6">
           {/* Brand - hidden on mobile, shown on lg */}
@@ -175,17 +175,17 @@ export function Footer() {
       <div className="border-t border-primary-foreground/10">
         <div className="container-custom py-4 md:py-5">
           {/* Mobile bottom bar */}
-          <div className="flex flex-col items-center gap-3 text-center md:hidden">
-            <img src={logoNeg} alt="RénoverMaSalleDeBain.com" className="w-[180px] h-auto" />
-            <p className="text-xs text-primary-foreground/60">
-              6 rue d'Armaillé, 75017 Paris — © 2024 Tous droits réservés.
+          <div className="flex flex-col items-center gap-2 text-center md:hidden pb-16">
+            <img src={logoNeg} alt="RénoverMaSalleDeBain.com" className="w-[160px] h-auto" />
+            <p className="text-[11px] text-primary-foreground/60 leading-tight">
+              6 rue d'Armaillé, 75017 Paris<br />© 2024 Tous droits réservés.
             </p>
-            <div className="flex gap-4 text-xs text-primary-foreground/60">
+            <div className="flex gap-3 text-[11px] text-primary-foreground/60">
               <Link to="/mentions-legales" className="hover:text-primary-foreground transition-colors">
                 Mentions légales
               </Link>
               <Link to="/politique-confidentialite" className="hover:text-primary-foreground transition-colors">
-                Politique de confidentialité
+                Confidentialité
               </Link>
             </div>
           </div>
