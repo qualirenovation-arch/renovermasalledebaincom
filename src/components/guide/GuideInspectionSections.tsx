@@ -104,27 +104,40 @@ export function GuideInspectionSections() {
           >
             <GuideSectionHeader number={4} title="Colonnes en fonte et syndic : anticiper pour éviter les blocages" />
 
-            <div className="border-l-2 p-5 mb-8" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
-              <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#124A66' }}>À retenir</p>
-              <ul className="space-y-1.5 text-sm" style={{ color: '#011115' }}>
+            <div className="border-l-2 p-3 mb-4" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
+              <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#124A66' }}>À retenir</p>
+              <ul className="space-y-0.5 text-sm" style={{ color: '#011115' }}>
                 <li>Les colonnes en fonte font partie des parties communes</li>
                 <li>Délai syndic : environ 15 jours à prévoir</li>
                 <li>Anticipation possible avant le démarrage du chantier</li>
               </ul>
             </div>
 
-            <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
-              <p>Les colonnes en fonte font partie des <strong className="text-foreground">parties communes</strong>.</p>
-              <p>Si les fontes sont abîmées :</p>
-              <ol className="space-y-2 list-decimal list-inside">
-                <li>Nous prévenons le syndic</li>
-                <li>Un plombier établit un devis</li>
-                <li>Le syndic valide l'intervention</li>
-                <li>La colonne est réparée ou remplacée</li>
-              </ol>
-              <p className="mt-4 font-medium text-foreground">
-                Délai à prévoir : environ 15 jours. Ce point est identifié dès le départ, car dans certains cas il est possible d'anticiper l'intervention avant le démarrage du chantier.
-              </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+              {/* Col 1 : Constat */}
+              <div className="border border-border/30 rounded p-3">
+                <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: '#124A66' }}>Constat</p>
+                <p className="text-xs text-muted-foreground">Les colonnes en fonte font partie des <strong className="text-foreground">parties communes</strong>.</p>
+                <p className="text-xs text-muted-foreground mt-1">Si elles sont abîmées, une procédure syndic s'enclenche.</p>
+              </div>
+
+              {/* Col 2 : Procédure */}
+              <div className="border border-border/30 rounded p-3">
+                <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: '#124A66' }}>Procédure</p>
+                <ol className="space-y-0.5 text-xs text-muted-foreground list-decimal list-inside">
+                  <li>Nous prévenons le syndic</li>
+                  <li>Un plombier établit un devis</li>
+                  <li>Le syndic valide l'intervention</li>
+                  <li>La colonne est réparée ou remplacée</li>
+                </ol>
+              </div>
+
+              {/* Col 3 : Délai */}
+              <div className="border border-border/30 rounded p-3">
+                <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: '#124A66' }}>Délai</p>
+                <p className="text-xs text-muted-foreground">Environ <strong className="text-foreground">15 jours</strong> à prévoir.</p>
+                <p className="text-xs text-muted-foreground mt-1">Ce point est identifié dès le départ. Dans certains cas, l'intervention peut être anticipée avant le chantier.</p>
+              </div>
             </div>
           </motion.div>
         </div>
