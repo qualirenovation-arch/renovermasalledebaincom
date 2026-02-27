@@ -4,7 +4,7 @@ import { GuideSectionHeader } from "./GuideSectionHeader";
 const garanties = [
   {
     title: "Garantie décennale",
-    description: "Tous nos travaux sont couverts par une assurance décennale, pour une tranquillité absolue.",
+    description: "Nous sommes assurés en décennale et en responsabilité civile professionnelle auprès de MIC Insurance. Conformément à nos obligations légales, les références de notre contrat d'assurance sont inscrites sur chaque devis, et un exemplaire de l'attestation vous est remis avant signature.",
     badge: "10 ans",
   },
   {
