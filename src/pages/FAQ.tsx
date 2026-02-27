@@ -79,7 +79,7 @@ const faqCategories = [
       },
       {
         question: "Quels sont les délais de garantie et le service après-vente ?",
-        answer: "La garantie décennale couvre les désordres affectant la solidité de l'ouvrage pendant 10 ans à compter de la réception des travaux. La garantie de parfait achèvement court pendant 1 an et couvre tous les défauts signalés. En cas de besoin, notre service après-vente reste joignable et intervient dans les meilleurs délais pour tout problème couvert par ces garanties."
+        answer: "La garantie de parfait achèvement court pendant 1 an et couvre tous les défauts signalés. La garantie biennale (ou de bon fonctionnement) couvre pendant 2 ans les équipements dissociables : robinetterie, mécanismes de chasse, parois de douche, etc. La garantie décennale couvre les désordres affectant la solidité de l'ouvrage pendant 10 ans à compter de la réception des travaux. En cas de besoin, notre service après-vente reste joignable et intervient dans les meilleurs délais pour tout problème couvert par ces garanties."
       }
     ]
   },
