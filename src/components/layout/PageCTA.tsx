@@ -26,7 +26,7 @@ export function PageCTA({ title, description, buttonText, variant = "light", inv
           transition={{ duration: 0.6 }}
         >
           <div className="w-16 h-1 rounded-full bg-gold mx-auto mb-8" />
-          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold mb-5 md:mb-6">
+          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-light mb-5 md:mb-6">
             {title}
           </h2>
           <p className={`text-base md:text-lg mb-10 md:mb-12 leading-relaxed ${isDark ? "text-primary-foreground/70" : "text-muted-foreground"}`}>

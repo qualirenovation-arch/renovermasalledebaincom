@@ -61,7 +61,7 @@ export default function About() {
               <span className="inline-block px-4 py-2 rounded-full bg-accent/30 text-wood text-sm font-medium mb-6">
                 À propos de nous
               </span>
-              <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">
+              <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-light mb-6">
                 20 ans d'expertise chantier au service de vos projets
               </h1>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
@@ -95,7 +95,7 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6">
+              <h2 className="font-display text-3xl md:text-4xl font-light mb-6">
                 Notre histoire
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -152,7 +152,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
+            <h2 className="font-display text-3xl md:text-4xl font-light mb-4">
               Nos valeurs
             </h2>
             <p className="text-muted-foreground text-lg">
@@ -173,7 +173,7 @@ export default function About() {
                 <div className="w-16 h-16 rounded-2xl bg-white border border-border flex items-center justify-center mx-auto mb-6">
                   <value.icon className="w-8 h-8 text-primary" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-display text-xl font-semibold mb-3">{value.title}</h3>
+                <h3 className="font-display text-xl font-light mb-3">{value.title}</h3>
                 <p className="text-muted-foreground">{value.description}</p>
               </motion.div>
             ))}
@@ -191,7 +191,7 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="font-display text-3xl font-semibold mb-8">
+              <h2 className="font-display text-3xl font-light mb-8">
                 Étanchéité et finitions garanties
               </h2>
               <ul className="space-y-4">
@@ -212,7 +212,7 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="font-display text-3xl font-semibold mb-8">
+              <h2 className="font-display text-3xl font-light mb-8">
                 Certifications
               </h2>
               <ul className="space-y-4">
@@ -239,7 +239,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
+            <h2 className="font-display text-3xl md:text-4xl font-light mb-4">
               Une équipe de passionnés
             </h2>
             <p className="text-primary-foreground/80 text-lg">
@@ -290,7 +290,7 @@ export default function About() {
                       <path d="M12 7v1" />
                     </svg>
                   </div>
-                  <h3 className="font-display text-3xl md:text-4xl font-semibold mb-4 text-white">
+                  <h3 className="font-display text-3xl md:text-4xl font-light mb-4 text-white">
                     Carina Nahmani – Maître d'œuvre
                   </h3>
                   <div className="space-y-4 text-primary-foreground/80 leading-relaxed">
@@ -383,7 +383,7 @@ export default function About() {
                   <div className="w-16 h-16 rounded-2xl bg-white border border-border flex items-center justify-center mb-6">
                     <Ruler className="w-8 h-8 text-primary" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-display text-3xl md:text-4xl font-semibold mb-4 text-white">
+                  <h3 className="font-display text-3xl md:text-4xl font-light mb-4 text-white">
                     Thierry Pelmard – Architecte d'intérieur
                   </h3>
                   <p className="text-primary-foreground/80 leading-relaxed mb-6">
@@ -425,7 +425,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-display text-2xl font-semibold text-center mb-8">
+            <h3 className="font-display text-2xl font-light text-center mb-8">
               Nos artisans en action
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -467,7 +467,7 @@ export default function About() {
                   <div className="w-16 h-16 rounded-2xl bg-white border border-border flex items-center justify-center mb-6">
                     <Camera className="w-8 h-8 text-primary" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-display text-3xl md:text-4xl font-semibold mb-4 text-white">
+                  <h3 className="font-display text-3xl md:text-4xl font-light mb-4 text-white">
                     Stéphane Vasco – Photographe
                   </h3>
                   <p className="text-primary-foreground/80 leading-relaxed mb-6">
@@ -517,7 +517,7 @@ export default function About() {
               <span className="inline-block px-4 py-2 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 text-sm font-medium mb-4">
                 Best of Houzz 2026
               </span>
-              <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
+              <h2 className="font-display text-3xl md:text-4xl font-light mb-4">
                 Lauréat Best of Houzz 2026 – Photo
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">

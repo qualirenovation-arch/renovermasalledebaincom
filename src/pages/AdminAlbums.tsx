@@ -54,7 +54,7 @@ export default function AdminAlbums() {
             <Button variant="ghost" size="sm" asChild>
               <Link to="/admin"><ArrowLeft className="w-4 h-4 mr-2" />Dashboard</Link>
             </Button>
-            <h1 className="font-display text-xl font-semibold">Gestion des réalisations</h1>
+            <h1 className="font-display text-xl font-light">Gestion des réalisations</h1>
           </div>
           <div className="flex items-center gap-4">
             <span className="text-sm text-muted-foreground hidden sm:block">{user.email}</span>

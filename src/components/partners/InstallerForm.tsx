@@ -103,7 +103,7 @@ export function InstallerForm({ onBack }: InstallerFormProps) {
     return (
       <div className="text-center py-12">
         <CheckCircle2 className="w-16 h-16 text-green-500 mx-auto mb-6" />
-        <h3 className="font-display text-2xl font-semibold mb-4">Merci pour votre demande !</h3>
+        <h3 className="font-display text-2xl font-light mb-4">Merci pour votre demande !</h3>
         <p className="text-muted-foreground mb-8">
           Nous avons bien reçu votre demande et reviendrons vers vous rapidement.
         </p>
@@ -125,7 +125,7 @@ export function InstallerForm({ onBack }: InstallerFormProps) {
         Retour au choix du profil
       </button>
 
-      <h2 className="font-display text-2xl font-semibold mb-2">Rechercher une prestation</h2>
+      <h2 className="font-display text-2xl font-light mb-2">Rechercher une prestation</h2>
       <p className="text-muted-foreground mb-8">
         Vous êtes installateur et recherchez un prestataire qualifié ? Décrivez vos besoins.
       </p>

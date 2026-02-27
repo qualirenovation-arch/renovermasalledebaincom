@@ -100,7 +100,7 @@ export default function WhyUs() {
             <span className="inline-block px-4 py-2 rounded-full bg-accent/30 text-wood text-sm font-medium mb-6">
               Notre approche
             </span>
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 break-words text-primary">
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-light mb-6 break-words text-primary">
               Un chantier heureux, ça se prépare
             </h1>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed">Découvrez notre méthode pour une rénovation de salle de bain sans stress à Paris. Un chantier heureux, maîtrisé de A à Z.</p>
@@ -120,7 +120,7 @@ export default function WhyUs() {
             <div className="w-20 h-20 rounded-2xl bg-white border border-white/30 flex items-center justify-center mx-auto mb-8">
               <Handshake className="w-10 h-10 text-primary" strokeWidth={1.5} />
             </div>
-            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6">
+            <h2 className="font-display text-3xl md:text-4xl font-light mb-6">
               Le projet, on le construit ensemble
             </h2>
             <p className="text-xl leading-relaxed text-primary-foreground/90 mb-8">
@@ -195,7 +195,7 @@ export default function WhyUs() {
                 <div className="w-16 h-16 rounded-2xl bg-white border border-border flex items-center justify-center mb-6">
                    <Camera className="w-8 h-8 text-primary" strokeWidth={1.5} />
                 </div>
-                <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6">
+                <h2 className="font-display text-3xl md:text-4xl font-light mb-6">
                   Votre transformation immortalisée
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-6">
@@ -293,7 +293,7 @@ export default function WhyUs() {
         }} viewport={{
           once: true
         }}>
-            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
+            <h2 className="font-display text-3xl md:text-4xl font-light mb-4">
               Receveur de douche et baignoire
             </h2>
             <p className="text-muted-foreground text-lg">
@@ -316,7 +316,7 @@ export default function WhyUs() {
                 <div className="w-14 h-14 rounded-2xl bg-white border border-border flex items-center justify-center mb-6">
                   <benefit.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-display text-xl font-semibold mb-3">{benefit.title}</h3>
+                <h3 className="font-display text-xl font-light mb-3">{benefit.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
               </motion.div>)}
           </div>
@@ -335,7 +335,7 @@ export default function WhyUs() {
         }} viewport={{
           once: true
         }}>
-            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
+            <h2 className="font-display text-3xl md:text-4xl font-light mb-4">
               Nous vs entreprises standards
             </h2>
             <p className="text-muted-foreground text-lg">

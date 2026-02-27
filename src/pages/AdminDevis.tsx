@@ -75,7 +75,7 @@ export default function AdminDevis() {
               </Button>
               <div className="flex items-center gap-3">
                 <FileText className="w-6 h-6 text-primary" />
-                <h1 className="font-display text-2xl md:text-3xl font-semibold">
+                <h1 className="font-display text-2xl md:text-3xl font-light">
                   Demandes de devis
                 </h1>
               </div>

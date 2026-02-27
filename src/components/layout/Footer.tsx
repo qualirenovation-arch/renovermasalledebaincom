@@ -71,7 +71,7 @@ export function Footer() {
           {/* Mobile: Navigation + Services in 2 columns */}
           <div className="grid grid-cols-2 gap-4 lg:hidden">
             <div>
-              <h4 className="font-display text-[15px] font-semibold mb-2">Navigation</h4>
+              <h4 className="font-display text-[15px] font-light mb-2">Navigation</h4>
               <ul className="space-y-1">
                 {footerLinks.navigation.map(link => (
                   <li key={link.path}>
@@ -83,7 +83,7 @@ export function Footer() {
               </ul>
             </div>
             <div>
-              <h4 className="font-display text-[15px] font-semibold mb-2">Nos services</h4>
+              <h4 className="font-display text-[15px] font-light mb-2">Nos services</h4>
               <ul className="space-y-1">
                 {footerLinks.services.map((service, index) => (
                   <li key={index}>
@@ -98,7 +98,7 @@ export function Footer() {
 
           {/* Desktop: Navigation */}
           <div className="hidden lg:block">
-            <h4 className="font-display text-[16px] font-semibold mb-3">Navigation</h4>
+            <h4 className="font-display text-[16px] font-light mb-3">Navigation</h4>
             <ul className="space-y-1.5">
               {footerLinks.navigation.map(link => (
                 <li key={link.path}>
@@ -112,7 +112,7 @@ export function Footer() {
 
           {/* Desktop: Services */}
           <div className="hidden lg:block">
-            <h4 className="font-display text-[16px] font-semibold mb-3">Nos services</h4>
+            <h4 className="font-display text-[16px] font-light mb-3">Nos services</h4>
             <ul className="space-y-1.5">
               {footerLinks.services.map((service, index) => (
                 <li key={index}>
@@ -126,7 +126,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-display text-[15px] lg:text-[16px] font-semibold mb-2 lg:mb-3">Contact</h4>
+            <h4 className="font-display text-[15px] lg:text-[16px] font-light mb-2 lg:mb-3">Contact</h4>
             <ul className="space-y-2 lg:space-y-3">
               <li>
                 <a href="tel:+33659764685" className="flex items-center gap-3 text-[13px] lg:text-[14px] text-primary-foreground/80 hover:text-primary-foreground transition-colors font-sans">

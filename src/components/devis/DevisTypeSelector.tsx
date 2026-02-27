@@ -10,7 +10,7 @@ interface Props {
 export function DevisTypeSelector({ onSelectClassic, onSelectWaterDamage }: Props) {
   return (
     <div className="max-w-3xl mx-auto mb-10">
-      <h2 className="font-display text-xl md:text-2xl font-semibold text-center mb-6">
+      <h2 className="font-display text-xl md:text-2xl font-light text-center mb-6">
         Quel type de projet souhaitez-vous réaliser ?
       </h2>
       
@@ -25,7 +25,7 @@ export function DevisTypeSelector({ onSelectClassic, onSelectWaterDamage }: Prop
             <div className="w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center mb-4">
               <Home className="w-7 h-7 text-gold" />
             </div>
-            <h3 className="font-display text-lg font-semibold mb-2">
+            <h3 className="font-display text-lg font-light mb-2">
               Rénovation classique
             </h3>
             <p className="text-muted-foreground text-sm mb-4 flex-grow">
@@ -53,7 +53,7 @@ export function DevisTypeSelector({ onSelectClassic, onSelectWaterDamage }: Prop
               <Droplets className="w-7 h-7 text-blue-600" />
             </div>
             <div className="flex items-center gap-2 mb-2">
-              <h3 className="font-display text-lg font-semibold">
+              <h3 className="font-display text-lg font-light">
                 Dégât des eaux
               </h3>
               <span className="text-xs font-medium bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">

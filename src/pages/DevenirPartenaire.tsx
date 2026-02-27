@@ -528,7 +528,7 @@ export default function DevenirPartenaire() {
               <div className="w-24 h-24 rounded-full bg-destructive/10 flex items-center justify-center mx-auto mb-8">
                 <AlertCircle className="w-12 h-12 text-destructive" />
               </div>
-              <h1 className="font-display text-3xl md:text-4xl font-semibold mb-6">
+              <h1 className="font-display text-3xl md:text-4xl font-light mb-6">
                 Candidature non éligible
               </h1>
               <p className="text-muted-foreground text-lg mb-4">
@@ -570,7 +570,7 @@ export default function DevenirPartenaire() {
               <div className="w-24 h-24 rounded-full bg-[hsl(var(--tag-mint))] flex items-center justify-center mx-auto mb-8">
                 <CheckCircle className="w-12 h-12 text-foreground" />
               </div>
-              <h1 className="font-display text-3xl md:text-4xl font-semibold mb-6">
+              <h1 className="font-display text-3xl md:text-4xl font-light mb-6">
                 Candidature envoyée !
               </h1>
               <p className="text-muted-foreground text-lg mb-4">
@@ -613,7 +613,7 @@ export default function DevenirPartenaire() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 text-primary">
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-light mb-4 text-primary">
               Devenir partenaire sous-traitant
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">

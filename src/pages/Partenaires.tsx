@@ -278,7 +278,7 @@ export default function Partenaires() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 text-primary">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light mb-6 text-primary">
               Nos Partenaires
             </h1>
             <p className="text-muted-foreground text-lg md:text-xl">
@@ -302,7 +302,7 @@ export default function Partenaires() {
               <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center">
                 <svg className="w-5 h-5 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z" /><line x1="7" y1="7" x2="7.01" y2="7" /></svg>
               </div>
-              <h2 className="font-display text-3xl md:text-4xl font-semibold text-primary">
+              <h2 className="font-display text-3xl md:text-4xl font-light text-primary">
                 Marques
               </h2>
             </div>
@@ -321,7 +321,7 @@ export default function Partenaires() {
                 transition={{ delay: categoryIndex * 0.1 }}
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <h3 className="font-display text-xl md:text-2xl font-semibold">
+                  <h3 className="font-display text-xl md:text-2xl font-light">
                     {category.title}
                   </h3>
                   <div className="flex-1 h-px bg-border ml-4" />
@@ -361,7 +361,7 @@ export default function Partenaires() {
                           </span>
                         </div>
                       )}
-                      <h4 className="font-display text-xs font-semibold text-foreground leading-tight">
+                      <h4 className="font-display text-xs font-light text-foreground leading-tight">
                         {partner.name}
                       </h4>
                       <p className="text-[10px] text-muted-foreground mt-0.5 line-clamp-1">
@@ -394,7 +394,7 @@ export default function Partenaires() {
               <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center">
                 <svg className="w-5 h-5 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
               </div>
-              <h2 className="font-display text-3xl md:text-4xl font-semibold text-primary">
+              <h2 className="font-display text-3xl md:text-4xl font-light text-primary">
                 Fournisseurs & Distributeurs
               </h2>
             </div>
@@ -413,7 +413,7 @@ export default function Partenaires() {
                 transition={{ delay: categoryIndex * 0.1 }}
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <h3 className="font-display text-xl md:text-2xl font-semibold">
+                  <h3 className="font-display text-xl md:text-2xl font-light">
                     {category.title}
                   </h3>
                   <div className="flex-1 h-px bg-border ml-4" />
@@ -453,7 +453,7 @@ export default function Partenaires() {
                           </span>
                         </div>
                       )}
-                      <h4 className="font-display text-xs font-semibold text-foreground leading-tight">
+                      <h4 className="font-display text-xs font-light text-foreground leading-tight">
                         {partner.name}
                       </h4>
                       <p className="text-[10px] text-muted-foreground mt-0.5 line-clamp-1">
@@ -482,7 +482,7 @@ export default function Partenaires() {
             viewport={{ once: true }}
           >
             <div className="flex items-center gap-3 mb-6">
-              <h2 className="font-display text-2xl md:text-3xl font-semibold">
+              <h2 className="font-display text-2xl md:text-3xl font-light">
                 {professionalPartners.title}
               </h2>
               <div className="flex-1 h-px bg-border ml-4" />
@@ -522,7 +522,7 @@ export default function Partenaires() {
                       </span>
                     </div>
                   )}
-                  <h4 className="font-display text-sm font-semibold text-foreground leading-tight">
+                  <h4 className="font-display text-sm font-light text-foreground leading-tight">
                     {partner.name}
                   </h4>
                   <p className="text-xs text-muted-foreground mt-1 line-clamp-2">

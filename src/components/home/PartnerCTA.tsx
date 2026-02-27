@@ -22,7 +22,7 @@ export function PartnerCTA() {
               </div>
               <span className="text-sm font-medium text-muted-foreground">Réseau de confiance</span>
             </div>
-            <h2 className="font-display text-xl md:text-2xl lg:text-3xl font-semibold mb-3">
+            <h2 className="font-display text-xl md:text-2xl lg:text-3xl font-light mb-3">
               Rejoignez notre réseau de partenaires
             </h2>
             <p className="text-muted-foreground text-sm md:text-base max-w-lg">

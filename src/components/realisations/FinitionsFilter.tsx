@@ -182,7 +182,7 @@ export function NoResultsMessage() {
       className="py-16 px-6 text-center max-w-2xl mx-auto"
     >
       <div className="bg-accent/30 rounded-2xl p-8 md:p-12 border border-border">
-        <h3 className="font-display text-2xl md:text-3xl font-semibold mb-4 text-foreground">
+        <h3 className="font-display text-2xl md:text-3xl font-light mb-4 text-foreground">
           Cette combinaison n'existe pas encore dans nos réalisations.
         </h3>
         <p className="text-lg text-muted-foreground mb-2">

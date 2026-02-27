@@ -96,7 +96,7 @@ export default function Avis() {
       <section className="py-12 md:py-16 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-orange-500/5">
         <div className="container-custom">
           <ScrollAnimation className="text-center mb-10">
-            <h2 className="font-display text-2xl md:text-3xl font-semibold mb-3">
+            <h2 className="font-display text-2xl md:text-3xl font-light mb-3">
               Mieux que tous les modérateurs, nos clients parlent de nous en vidéo
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -140,7 +140,7 @@ export default function Avis() {
                         <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                       ))}
                     </div>
-                    <h2 className="font-display text-lg font-semibold text-foreground">
+                    <h2 className="font-display text-lg font-light text-foreground">
                       {album.location}
                     </h2>
                   </div>
@@ -201,7 +201,7 @@ export default function Avis() {
                   <Star key={i} className="w-5 h-5 fill-accent text-accent" />
                 ))}
               </div>
-              <h3 className="font-display text-xl md:text-2xl font-semibold mb-3">
+              <h3 className="font-display text-xl md:text-2xl font-light mb-3">
                 Retrouvez plus de 40 avis sur Houzz
               </h3>
               <p className="text-muted-foreground mb-6">

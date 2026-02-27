@@ -19,7 +19,7 @@ export default function MentionsLegales() {
           <div className="prose prose-lg max-w-none space-y-8">
             {/* Éditeur du site */}
             <section>
-              <h2 className="font-display text-2xl font-semibold text-primary mb-4">
+              <h2 className="font-display text-2xl font-light text-primary mb-4">
                 Éditeur du site
               </h2>
               <p className="text-muted-foreground leading-relaxed">
@@ -37,7 +37,7 @@ export default function MentionsLegales() {
 
             {/* Directeur de publication */}
             <section>
-              <h2 className="font-display text-2xl font-semibold text-primary mb-4">
+              <h2 className="font-display text-2xl font-light text-primary mb-4">
                 Directeur de la publication
               </h2>
               <p className="text-muted-foreground leading-relaxed">
@@ -47,7 +47,7 @@ export default function MentionsLegales() {
 
             {/* Hébergement */}
             <section>
-              <h2 className="font-display text-2xl font-semibold text-primary mb-4">
+              <h2 className="font-display text-2xl font-light text-primary mb-4">
                 Hébergement
               </h2>
               <p className="text-muted-foreground leading-relaxed">
@@ -62,7 +62,7 @@ export default function MentionsLegales() {
 
             {/* Propriété intellectuelle */}
             <section>
-              <h2 className="font-display text-2xl font-semibold text-primary mb-4">
+              <h2 className="font-display text-2xl font-light text-primary mb-4">
                 Propriété intellectuelle
               </h2>
               <p className="text-muted-foreground leading-relaxed">
@@ -72,7 +72,7 @@ export default function MentionsLegales() {
                 Toute reproduction, représentation, modification, publication, transmission, dénaturation, totale ou partielle du site ou de son contenu, par quelque procédé que ce soit, et sur quelque support que ce soit est interdite sans l'autorisation écrite préalable de QUALICONCEPT.
               </p>
               <div className="mt-6 p-6 bg-secondary/50 rounded-lg border border-border">
-                <h3 className="font-display text-lg font-semibold text-primary mb-2">
+                <h3 className="font-display text-lg font-light text-primary mb-2">
                   📰 Presse & Médias
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -83,7 +83,7 @@ export default function MentionsLegales() {
 
             {/* Responsabilité */}
             <section>
-              <h2 className="font-display text-2xl font-semibold text-primary mb-4">
+              <h2 className="font-display text-2xl font-light text-primary mb-4">
                 Limitation de responsabilité
               </h2>
               <p className="text-muted-foreground leading-relaxed">
@@ -96,7 +96,7 @@ export default function MentionsLegales() {
 
             {/* Liens hypertextes */}
             <section>
-              <h2 className="font-display text-2xl font-semibold text-primary mb-4">
+              <h2 className="font-display text-2xl font-light text-primary mb-4">
                 Liens hypertextes
               </h2>
               <p className="text-muted-foreground leading-relaxed">
@@ -106,7 +106,7 @@ export default function MentionsLegales() {
 
             {/* Assurances */}
             <section>
-              <h2 className="font-display text-2xl font-semibold text-primary mb-4">
+              <h2 className="font-display text-2xl font-light text-primary mb-4">
                 Assurances professionnelles
               </h2>
               <div className="flex items-center gap-6">
@@ -124,7 +124,7 @@ export default function MentionsLegales() {
 
             {/* Droit applicable */}
             <section>
-              <h2 className="font-display text-2xl font-semibold text-primary mb-4">
+              <h2 className="font-display text-2xl font-light text-primary mb-4">
                 Droit applicable
               </h2>
               <p className="text-muted-foreground leading-relaxed">

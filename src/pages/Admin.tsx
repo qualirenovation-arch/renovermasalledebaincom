@@ -77,7 +77,7 @@ export default function Admin() {
       <header className="border-b bg-card">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="font-display text-2xl font-semibold">
+            <h1 className="font-display text-2xl font-light">
               Tableau de bord
             </h1>
             <div className="flex items-center gap-4">

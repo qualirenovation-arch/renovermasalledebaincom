@@ -56,7 +56,7 @@ export default function DevisCallback() {
                 <div className="w-24 h-24 rounded-full bg-[hsl(var(--tag-mint))] flex items-center justify-center mx-auto mb-8">
                   <CheckCircle className="w-12 h-12 text-foreground" />
                 </div>
-                <h1 className="font-display text-3xl md:text-4xl font-semibold mb-6">Demande de rappel enregistrée !</h1>
+                <h1 className="font-display text-3xl md:text-4xl font-light mb-6">Demande de rappel enregistrée !</h1>
                 <p className="text-muted-foreground text-lg mb-8">
                   Nous vous rappellerons dans les <strong>24 heures</strong> pour discuter de votre projet.
                 </p>
@@ -79,7 +79,7 @@ export default function DevisCallback() {
 
             {status === "error" && (
               <>
-                <h1 className="font-display text-3xl font-semibold mb-6">Lien invalide</h1>
+                <h1 className="font-display text-3xl font-light mb-6">Lien invalide</h1>
                 <p className="text-muted-foreground text-lg mb-8">
                   Ce lien de rappel n'est plus valide ou a déjà été utilisé.
                 </p>

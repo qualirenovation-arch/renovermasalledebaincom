@@ -191,7 +191,7 @@ export default function Index() {
                     <item.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="font-display font-semibold text-lg md:text-xl mb-2">{item.title}</h3>
+                    <h3 className="font-display font-light text-lg md:text-xl mb-2">{item.title}</h3>
                     <p className="text-muted-foreground text-sm md:text-base leading-relaxed">{item.description}</p>
                   </div>
                 </div>
@@ -229,7 +229,7 @@ export default function Index() {
                         <circle cx="12" cy="5" r="1"/>
                       </svg>
                     </div>
-                    <h3 className="font-display text-xl md:text-2xl font-semibold">Plutôt baignoire</h3>
+                    <h3 className="font-display text-xl md:text-2xl font-light">Plutôt baignoire</h3>
                   </div>
                   <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-center gap-3"><span className="text-primary text-lg">•</span>Vous aimez prendre le temps</li>
@@ -267,7 +267,7 @@ export default function Index() {
                         <line x1="20" y1="25" x2="19" y2="28"/>
                       </svg>
                     </div>
-                    <h3 className="font-display text-xl md:text-2xl font-semibold">Plutôt douche</h3>
+                    <h3 className="font-display text-xl md:text-2xl font-light">Plutôt douche</h3>
                   </div>
                   <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-center gap-3"><span className="text-primary text-lg">•</span>Praticité au quotidien</li>
@@ -288,7 +288,7 @@ export default function Index() {
               <div className="text-center bg-foreground/5 rounded-2xl p-6 md:p-10 hover:shadow-lg hover:bg-foreground/10 transition-all duration-300 cursor-pointer">
                 <div className="flex items-center justify-center gap-3 mb-3">
                   <Sparkles className="w-6 h-6 text-primary" strokeWidth={1.5} />
-                  <span className="font-display font-semibold text-lg md:text-xl">Notre rôle</span>
+                  <span className="font-display font-light text-lg md:text-xl">Notre rôle</span>
                 </div>
                 <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
                   Vous guider vers le bon choix pour vous. Chaque projet est unique.
@@ -313,7 +313,7 @@ export default function Index() {
         <div className="container-custom">
           <ScrollAnimation className="text-center mb-10 md:mb-14">
             <div className="section-divider" />
-            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 md:mb-5">
+            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-light mb-4 md:mb-5">
               Nos plus belles réalisations
             </h2>
             <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto">
@@ -355,7 +355,7 @@ export default function Index() {
                       loading="lazy"
                     />
                   </div>
-                  <h3 className="font-display text-lg md:text-xl font-semibold text-foreground mb-1 text-center">{project.style}</h3>
+                  <h3 className="font-display text-lg md:text-xl font-light text-foreground mb-1 text-center">{project.style}</h3>
                   <p className="text-muted-foreground text-sm mb-2 text-center">{project.location}</p>
                   <div className="text-center">
                     <span className="tag-beige text-xs">{project.tag}</span>
@@ -402,7 +402,7 @@ export default function Index() {
         <div className="container-custom">
           <ScrollAnimation className="text-center max-w-3xl mx-auto mb-12 md:mb-18">
             <div className="section-divider" />
-            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 md:mb-5">
+            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-light mb-4 md:mb-5">
               Un projet personnalisé
             </h2>
             <p className="text-muted-foreground text-base md:text-lg">
@@ -451,7 +451,7 @@ export default function Index() {
                   <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white border border-border flex items-center justify-center mx-auto mb-4 md:mb-5 text-primary">
                     {item.icon}
                   </div>
-                  <h3 className="font-display text-sm md:text-base font-semibold mb-2">{item.title}</h3>
+                  <h3 className="font-display text-sm md:text-base font-light mb-2">{item.title}</h3>
                   <p className="text-muted-foreground text-xs md:text-sm hidden md:block">{item.desc}</p>
                 </div>
               </StaggerItem>

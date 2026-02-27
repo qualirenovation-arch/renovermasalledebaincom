@@ -192,7 +192,7 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
         <div className="w-24 h-24 rounded-full bg-[hsl(var(--tag-mint))] flex items-center justify-center mx-auto mb-8">
           <Mail className="w-12 h-12 text-foreground" />
         </div>
-        <h1 className="font-display text-3xl md:text-4xl font-semibold mb-6">Votre demande est enregistrée !</h1>
+        <h1 className="font-display text-3xl md:text-4xl font-light mb-6">Votre demande est enregistrée !</h1>
         <p className="text-muted-foreground text-lg mb-8">
           Un email vient de vous être envoyé à <strong>{formData.email}</strong> avec 
           <strong> 3 options</strong> pour poursuivre votre dossier dégât des eaux.
@@ -232,7 +232,7 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
     iconColor?: string;
   }) => (
     <div className="card-elevated p-5 md:p-6">
-      <h3 className="font-display text-lg font-semibold mb-4 flex items-center gap-3">
+      <h3 className="font-display text-lg font-light mb-4 flex items-center gap-3">
         <div className={`w-9 h-9 rounded-full ${iconBg} flex items-center justify-center`}>
           <Icon className={`w-4 h-4 ${iconColor}`} />
         </div>

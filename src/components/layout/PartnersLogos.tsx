@@ -107,7 +107,7 @@ export function PartnersLogos() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="font-display text-2xl md:text-3xl font-semibold mb-3">
+          <h2 className="font-display text-2xl md:text-3xl font-light mb-3">
             Nos partenaires
           </h2>
           <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto">
