@@ -4,7 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { OGTags } from "@/components/seo/OGTags";
 import { ArrowRight, Plus, Minus, Play, Instagram } from "lucide-react";
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import { FAQStickyTOC } from "@/components/faq/FAQStickyTOC";
+import { FAQMobileTOC } from "@/components/faq/FAQMobileTOC";
 
 const faqCategories = [
   {
@@ -397,6 +399,16 @@ function FAQItem({ question, answer, isOpen, onClick, instagramLink, instagramPr
 export default function FAQ() {
   const [openItems, setOpenItems] = useState<Record<string, boolean>>({});
 
+  const tocItems = useMemo(() => 
+    faqCategories
+      .filter(c => c.questions.length > 0)
+      .map((c, i) => ({
+        label: c.title,
+        id: `faq-cat-${i}`,
+      })),
+    []
+  );
+
   const toggleItem = (categoryIndex: number, questionIndex: number) => {
     const key = `${categoryIndex}-${questionIndex}`;
     setOpenItems(prev => ({ ...prev, [key]: !prev[key] }));
@@ -455,15 +467,29 @@ export default function FAQ() {
         </div>
       </section>
 
+      {/* Mobile TOC */}
+      <FAQMobileTOC categories={tocItems} />
+
       {/* FAQ Content */}
       <section className="section-padding">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto space-y-12">
-            {faqCategories.map((category, categoryIndex) => (
+          <div className="flex gap-12">
+            {/* Sticky TOC - Desktop */}
+            <aside className="hidden lg:block w-64 flex-shrink-0">
+              <div className="sticky top-28">
+                <FAQStickyTOC categories={tocItems} />
+              </div>
+            </aside>
+
+            {/* Main content */}
+            <div className="flex-1 min-w-0 space-y-12">
+            {faqCategories.map((category, categoryIndex) => {
+              const tocIndex = faqCategories.filter((c, i) => i < categoryIndex && c.questions.length > 0).length;
+              return (
               <motion.div
                 className="scroll-mt-24"
                 key={categoryIndex}
-                id={category.title === "Rénovation salle de bain" ? "renovation-salle-de-bain" : category.title === "Pose carrelage salle de bain à Paris" ? "pose-carrelage" : undefined}
+                id={category.questions.length > 0 ? `faq-cat-${tocIndex}` : undefined}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -495,7 +521,8 @@ export default function FAQ() {
                   </div>
                 )}
               </motion.div>
-            ))}
+              );
+            })}
 
             {/* Résumé */}
             <motion.div
@@ -551,6 +578,7 @@ export default function FAQ() {
                 </Link>
               </div>
             </motion.div>
+            </div>
           </div>
         </div>
       </section>
