@@ -32,7 +32,7 @@ const tocCategories = [
     label: "Infrastructure",
     icon: Wrench,
     items: [
-      { id: "plomberie-renovation", label: "Plomberie" },
+      { id: "plomberie-renovation-sdb", label: "Plomberie" },
       { id: "etancheite-salle-de-bain", label: "Étanchéité" },
       { id: "receveur-douche-appartement", label: "Receveur de douche" },
       { id: "section-8", label: "Baignoire" },

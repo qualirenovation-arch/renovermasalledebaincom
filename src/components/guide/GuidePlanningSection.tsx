@@ -13,7 +13,7 @@ export function GuidePlanningSection() {
           className="max-w-4xl mx-auto"
         >
           {/* ============ BLOC 1 : Durée & orchestration ============ */}
-          <GuideSectionHeader number={1} title="Durée d'une rénovation de salle de bain" tag="h3" />
+          <GuideSectionHeader number={1} title="Durée d'une rénovation de salle de bain à Paris" tag="h3" />
           <p className="text-lg font-light text-muted-foreground -mt-4 mb-2">3 semaines à 1 mois</p>
 
           {/* À retenir */}

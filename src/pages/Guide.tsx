@@ -81,7 +81,7 @@ const Guide = () => {
             {/* H2 catégorie : Préparation */}
             <div className="container mx-auto px-4 pt-8">
               <div className="max-w-4xl mx-auto">
-                <h2 className="text-xl md:text-2xl font-light mb-1" style={{ color: '#124A66' }}>Préparation</h2>
+                <h2 className="text-xl md:text-2xl font-light mb-1" style={{ color: '#124A66' }}>Préparation d'une rénovation de salle de bain</h2>
                 <div className="w-8 h-[2px] mb-6" style={{ backgroundColor: '#c2a016' }} />
               </div>
             </div>
@@ -91,7 +91,7 @@ const Guide = () => {
             {/* H2 catégorie : Accompagnement */}
             <div className="container mx-auto px-4 pt-8">
               <div className="max-w-4xl mx-auto">
-                <h2 className="text-xl md:text-2xl font-light mb-1" style={{ color: '#124A66' }}>Accompagnement</h2>
+                <h2 className="text-xl md:text-2xl font-light mb-1" style={{ color: '#124A66' }}>Accompagnement maître d'œuvre</h2>
                 <div className="w-8 h-[2px] mb-6" style={{ backgroundColor: '#c2a016' }} />
               </div>
             </div>
@@ -100,7 +100,7 @@ const Guide = () => {
             {/* H2 catégorie : Infrastructure */}
             <div className="container mx-auto px-4 pt-8">
               <div className="max-w-4xl mx-auto">
-                <h2 className="text-xl md:text-2xl font-light mb-1" style={{ color: '#124A66' }}>Infrastructure</h2>
+                <h2 className="text-xl md:text-2xl font-light mb-1" style={{ color: '#124A66' }}>Infrastructure technique</h2>
                 <div className="w-8 h-[2px] mb-6" style={{ backgroundColor: '#c2a016' }} />
               </div>
             </div>
@@ -109,7 +109,7 @@ const Guide = () => {
             {/* H2 catégorie : Design & Finitions */}
             <div className="container mx-auto px-4 pt-8">
               <div className="max-w-4xl mx-auto">
-                <h2 className="text-xl md:text-2xl font-light mb-1" style={{ color: '#124A66' }}>Design &amp; Finitions</h2>
+                <h2 className="text-xl md:text-2xl font-light mb-1" style={{ color: '#124A66' }}>Design &amp; finitions</h2>
                 <div className="w-8 h-[2px] mb-6" style={{ backgroundColor: '#c2a016' }} />
               </div>
             </div>
@@ -118,7 +118,7 @@ const Guide = () => {
             {/* H2 catégorie : Confort & Équipement */}
             <div className="container mx-auto px-4 pt-8">
               <div className="max-w-4xl mx-auto">
-                <h2 className="text-xl md:text-2xl font-light mb-1" style={{ color: '#124A66' }}>Confort &amp; Équipement</h2>
+                <h2 className="text-xl md:text-2xl font-light mb-1" style={{ color: '#124A66' }}>Confort &amp; équipements</h2>
                 <div className="w-8 h-[2px] mb-6" style={{ backgroundColor: '#c2a016' }} />
               </div>
             </div>
@@ -128,7 +128,7 @@ const Guide = () => {
             {/* H2 catégorie : Garanties */}
             <div className="container mx-auto px-4 pt-8">
               <div className="max-w-4xl mx-auto">
-                <h2 className="text-xl md:text-2xl font-light mb-1" style={{ color: '#124A66' }}>Garanties</h2>
+                <h2 className="text-xl md:text-2xl font-light mb-1" style={{ color: '#124A66' }}>Garanties &amp; assurances</h2>
                 <div className="w-8 h-[2px] mb-6" style={{ backgroundColor: '#c2a016' }} />
               </div>
             </div>
