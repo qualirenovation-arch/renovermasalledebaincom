@@ -139,8 +139,12 @@ const handler = async (req: Request): Promise<Response> => {
           <html>
           <head><meta charset="utf-8"></head>
           <body style="font-family:Arial,sans-serif;color:#333;max-width:700px;margin:0 auto;">
-            <div style="background:#124A66;color:white;padding:20px;text-align:center;">
-              <h2 style="margin:0;">🔔 Relances du jour</h2>
+            <div style="background:linear-gradient(135deg, #124A66 0%, #0d3a52 100%);color:white;padding:24px 16px;text-align:center;">
+              <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
+                <tr><td align="center" style="font-family:'Nunito Sans',Arial,sans-serif;font-weight:300;color:#ffffff;letter-spacing:0.5px;white-space:nowrap;font-size:18px;">Ren<span style="color:#A0845C;">🚿</span>verMaSalleDeBain.com</td></tr>
+                <tr><td align="center" style="font-family:'Nunito Sans',Arial,sans-serif;font-size:9px;font-weight:400;color:rgba(255,255,255,0.85);letter-spacing:2.5px;padding-top:2px;">Une expertise QUALIRÉNOVATION</td></tr>
+              </table>
+              <h2 style="margin:10px 0 0;">🔔 Relances du jour</h2>
               <p style="margin:5px 0 0;opacity:0.9;">${new Date().toLocaleDateString("fr-FR", { weekday: "long", year: "numeric", month: "long", day: "numeric", timeZone: "Europe/Paris" })}</p>
             </div>
             

@@ -337,9 +337,12 @@ const handler = async (req: Request): Promise<Response> => {
           <head><meta charset="utf-8"></head>
           <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
             <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
-              <div style="text-align: center; padding: 20px 0; border-bottom: 2px solid #124A66;">
-                <img src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/logo-rmsb-new.png" alt="Rénover Ma Salle de Bain" style="max-width: 180px; margin-bottom: 10px;" />
-                <h1 style="color: #124A66; margin: 0;">QualiRénovation</h1>
+              <div style="text-align: center; padding: 24px 16px; background: linear-gradient(135deg, #124A66 0%, #0d3a52 100%); border-radius: 8px 8px 0 0;">
+                <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
+                  <tr><td align="center" style="font-family:'Nunito Sans',Arial,sans-serif;font-weight:300;color:#ffffff;letter-spacing:0.5px;white-space:nowrap;font-size:18px;">Ren<span style="color:#A0845C;">🚿</span>verMaSalleDeBain.com</td></tr>
+                  <tr><td align="center" style="font-family:'Nunito Sans',Arial,sans-serif;font-size:9px;font-weight:400;color:rgba(255,255,255,0.85);letter-spacing:2.5px;padding-top:2px;">Une expertise QUALIRÉNOVATION</td></tr>
+                </table>
+                <h1 style="color: #ffffff; margin: 10px 0 0;">QualiRénovation</h1>
               </div>
               
               <div style="padding: 30px 0;">

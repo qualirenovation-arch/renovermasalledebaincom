@@ -112,8 +112,14 @@ function generateEmailHtml(
       <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; }
         .header { background: linear-gradient(135deg, #124A66 0%, #0d3a52 100%); color: white; padding: 30px; text-align: center; }
-        .header img { max-width: 180px; margin-bottom: 10px; }
-        .header h1 { margin: 0; font-size: 24px; }
+        .logo-text { font-family: 'Nunito Sans', Arial, sans-serif; font-weight: 300; color: #ffffff; letter-spacing: 0.5px; white-space: nowrap; font-size: 18px; }
+        .logo-text .accent { color: #A0845C; }
+        .logo-sub { font-family: 'Nunito Sans', Arial, sans-serif; font-size: 9px; font-weight: 400; color: rgba(255,255,255,0.85); letter-spacing: 2.5px; padding-top: 2px; }
+        .header h1 { margin: 10px 0 0; font-size: 24px; }
+        @media only screen and (max-width: 480px) {
+          .logo-text { font-size: 14px !important; }
+          .logo-sub { font-size: 8px !important; letter-spacing: 1.5px !important; }
+        }
         .content { padding: 30px; background: #f9f9f9; }
         .stats-grid { display: flex; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; }
         .stat-card { background: white; padding: 20px; border-radius: 8px; flex: 1; min-width: 150px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
@@ -127,7 +133,10 @@ function generateEmailHtml(
     </head>
     <body>
       <div class="header">
-        <img src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/logo-rmsb-new.png" alt="Rénover Ma Salle de Bain" />
+        <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
+          <tr><td align="center" class="logo-text">Ren<span class="accent">🚿</span>verMaSalleDeBain.com</td></tr>
+          <tr><td align="center" class="logo-sub">Une expertise QUALIRÉNOVATION</td></tr>
+        </table>
         <h1>🛁 ${periodTitle}</h1>
         <p style="margin:10px 0 0 0;opacity:0.9;">Demandes de devis ${periodLabel}</p>
       </div>

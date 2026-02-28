@@ -108,12 +108,21 @@ const handler = async (req: Request): Promise<Response> => {
 <html><head><meta charset="utf-8">
 <style>
   body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-  .header { background: #e67e22; color: white; padding: 20px; }
+  .header { background: linear-gradient(135deg, #124A66 0%, #0d3a52 100%); color: white; padding: 24px 16px; text-align: center; }
+  .logo-text { font-family: 'Nunito Sans', Arial, sans-serif; font-weight: 300; color: #ffffff; letter-spacing: 0.5px; white-space: nowrap; font-size: 18px; }
+  .logo-text .accent { color: #A0845C; }
+  .logo-sub { font-family: 'Nunito Sans', Arial, sans-serif; font-size: 9px; font-weight: 400; color: rgba(255,255,255,0.85); letter-spacing: 2.5px; padding-top: 2px; }
   .content { padding: 20px; }
   .info-box { background: #f5f5f5; padding: 15px; border-radius: 6px; margin: 15px 0; }
 </style></head>
 <body>
-  <div class="header"><h2>📞 Demande de rappel</h2></div>
+  <div class="header">
+    <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
+      <tr><td align="center" class="logo-text">Ren<span class="accent">🚿</span>verMaSalleDeBain.com</td></tr>
+      <tr><td align="center" class="logo-sub">Une expertise QUALIRÉNOVATION</td></tr>
+    </table>
+    <h2 style="margin:10px 0 0;">📞 Demande de rappel</h2>
+  </div>
   <div class="content">
     <p><strong>${safeName}</strong> souhaite être rappelé(e) pour discuter de son projet.</p>
     <div class="info-box">
