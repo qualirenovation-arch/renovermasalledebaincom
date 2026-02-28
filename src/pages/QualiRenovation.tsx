@@ -47,15 +47,24 @@ const QualiRenovation = () => {
               <div className="flex justify-center lg:justify-start mb-8">
                 <LogoQualiRenovation width={240} height={58} />
               </div>
-              <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-light mb-5 text-primary">
-                QualiRénovation — Rénovation globale à Paris
+              <h1 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-5 text-primary leading-[1.1] tracking-tight">
+                UN CHANTIER HEUREUX<br />
+                POUR VOTRE <span className="italic font-normal text-gold">RÉNOVATION GLOBALE</span>
               </h1>
-              <p className="font-display text-xl md:text-2xl font-light tracking-wide text-primary">
-                Un chantier heureux.
+              <p className="text-muted-foreground text-base md:text-lg lg:text-xl mb-8 leading-relaxed max-w-lg lg:max-w-none">
+                Rénover votre appartement ou maison sans stress, grâce à un pilotage maître d'œuvre de A à Z.
               </p>
-              <p className="text-base md:text-lg text-muted-foreground font-light tracking-wide mt-2">
-                Pensé dans sa globalité.
-              </p>
+              <a
+                href="https://qualirenovation.fr"
+                target="_blank"
+                rel="noopener"
+                aria-label="Découvrir QualiRénovation – rénovation globale à Paris"
+              >
+                <Button variant="gold" size="lg" className="rounded-full px-10 text-base shadow-lg hover:shadow-xl transition-shadow gap-2">
+                  <ExternalLink className="w-4 h-4" />
+                  Découvrir QualiRénovation
+                </Button>
+              </a>
             </div>
 
             <div className="relative order-first lg:order-last">
