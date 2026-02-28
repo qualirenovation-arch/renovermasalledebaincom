@@ -4,6 +4,7 @@ import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LogoQualiRenovation } from "@/components/shared/LogoQualiRenovation";
 import { Link } from "react-router-dom";
+import carinaSig from "@/assets/carina-signature.svg";
 
 const jsonLdOrganization = {
   "@context": "https://schema.org",
@@ -77,17 +78,29 @@ const QualiRenovation = () => {
       </section>
 
       {/* 4 — Signature manifeste */}
-      <section className="py-14 md:py-20 bg-secondary/20">
+      <section className="py-14 md:py-20" style={{ backgroundColor: '#124A66' }}>
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center">
-            <blockquote className="border-l-4 border-primary pl-6 md:pl-8 text-left">
-              <p className="font-display text-xl md:text-2xl lg:text-3xl font-light leading-snug" style={{ color: '#124A66' }}>
-                L'exigence n'est pas une option.
-              </p>
-              <p className="font-display text-xl md:text-2xl lg:text-3xl font-light leading-snug mt-1" style={{ color: '#124A66' }}>
-                C'est une méthode.
-              </p>
-            </blockquote>
+          <div className="max-w-3xl mx-auto text-center">
+            <p
+              className="italic font-light leading-[1.9]"
+              style={{
+                fontSize: '1.2em',
+                color: '#E6EEF2',
+                fontFamily: "'Nunito Sans', sans-serif",
+              }}
+            >
+              "L'exigence n'est pas une option.<br />
+              C'est une méthode."
+            </p>
+
+            <div className="flex justify-end mt-6">
+              <img
+                src={carinaSig}
+                alt="Carina N."
+                className="w-[100px] md:w-[150px] opacity-90"
+                style={{ filter: 'brightness(0) invert(1)' }}
+              />
+            </div>
           </div>
         </div>
       </section>
