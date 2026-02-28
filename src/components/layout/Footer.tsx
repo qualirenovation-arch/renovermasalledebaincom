@@ -29,6 +29,9 @@ const footerLinks = {
     label: "Presse",
     path: "/presse#parutions"
   }, {
+    label: "QualiRénovation",
+    path: "/qualirenovation"
+  }, {
     label: "Devenir partenaire",
     path: "/partenaires/contact"
   }],
