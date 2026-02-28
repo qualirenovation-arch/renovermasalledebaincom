@@ -123,37 +123,45 @@ export function GuideInfrastructureSections() {
             <div className="border-l-2 p-3 mb-4" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#124A66' }}>À retenir</p>
               <ul className="space-y-0.5 text-sm" style={{ color: '#011115' }}>
-                <li>Extra-plat, sur pieds ou à carreler selon la configuration</li>
-                <li>La hauteur de la culotte détermine les possibilités en copropriété</li>
-                <li>Tout ce qui peut fuir doit rester accessible</li>
+                <li>La douche à l'italienne en appartement dépend de la hauteur d'évacuation</li>
+                <li>En copropriété, la culotte détermine plain-pied ou receveur sur pieds</li>
+                <li>Le siphon doit rester accessible pour éviter toute démolition future</li>
               </ul>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
               <div className="border border-border/30 rounded p-3">
                 <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: '#124A66' }}>Types</p>
-                <div className="space-y-0.5 text-xs text-muted-foreground">
-                  <p><strong>Extra-plat</strong> — plain-pied</p>
-                  <p><strong>Sur pieds</strong> — siphon accessible</p>
-                  <p><strong>À carreler</strong> — douche italienne</p>
+                <div className="space-y-2 text-xs text-muted-foreground">
+                  <div>
+                    <p><strong>Extra-plat</strong> — rendu proche du plain-pied</p>
+                    <p className="text-[11px] italic">Solution fréquente en appartement parisien.</p>
+                  </div>
+                  <div>
+                    <p><strong>Sur pieds</strong> — siphon totalement accessible</p>
+                    <p className="text-[11px] italic">Sécurisant en rénovation.</p>
+                  </div>
+                  <div>
+                    <p><strong>À carreler</strong> — esthétique douche à l'italienne</p>
+                    <p className="text-[11px] italic">Étanchéité et pente parfaitement maîtrisées obligatoires.</p>
+                  </div>
                 </div>
                 <img src={receveursDouche} alt="Receveurs de douche" className="w-full h-24 object-cover mt-2" loading="lazy" />
               </div>
               <div className="border border-border/30 rounded p-3">
                 <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: '#124A66' }}>Matériaux</p>
                 <div className="space-y-0.5 text-xs text-muted-foreground">
-                  <p><strong>Résine</strong> — durable, le plus courant</p>
+                  <p><strong>Résine</strong> — durable, le plus utilisé en rénovation</p>
                   <p><strong>Acrylique</strong> — léger, antidérapant</p>
-                  <p><strong>Grès émaillé</strong> — résistant, lourd</p>
-                  <p><strong>Acier émaillé</strong> — sur commande</p>
+                  <p><strong>Grès émaillé</strong> — très résistant, plus lourd</p>
+                  <p><strong>Acier émaillé</strong> — technique, sur commande</p>
                 </div>
               </div>
               <div className="border border-border/30 rounded p-3">
                 <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: '#124A66' }}>Accessibilité</p>
                 <div className="space-y-1 text-xs text-muted-foreground">
-                  <p><strong className="text-foreground">Copropriété</strong> — culotte détermine plain-pied ou sur pieds</p>
-                  <p><strong className="text-foreground">Maison</strong> — liberté totale</p>
-                  <p className="font-medium text-foreground mt-2">Tout ce qui peut fuir doit rester accessible.</p>
+                  <p><strong className="text-foreground">Copropriété</strong> — la hauteur d'évacuation conditionne le choix technique</p>
+                  <p className="font-medium text-foreground mt-2">Tout élément susceptible de fuir doit rester accessible.</p>
                 </div>
               </div>
             </div>
