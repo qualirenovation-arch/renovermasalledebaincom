@@ -5,7 +5,7 @@ export function GuideInspectionSections() {
   return (
     <>
       {/* Section 1 - Visite initiale */}
-      <section id="section-1" className="py-8 bg-background scroll-mt-20">
+      <section id="visite-technique-appartement-parisien" className="py-8 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -13,7 +13,7 @@ export function GuideInspectionSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={2} title="La visite chantier : la technique avant l'esthétique" />
+            <GuideSectionHeader number={2} title="Visite technique en appartement parisien" tag="h3" />
 
             <div className="border-l-2 p-3 mb-4" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#124A66' }}>À retenir</p>
@@ -27,8 +27,8 @@ export function GuideInspectionSections() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
               <div className="border border-border/30 rounded p-3">
                 <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: '#124A66' }}>Priorités</p>
-                <p className="text-xs text-muted-foreground">Lors de la visite, deux points sont prioritaires : <strong className="text-foreground">les évacuations</strong> et <strong className="text-foreground">la VMC</strong>.</p>
-                <p className="text-xs text-muted-foreground mt-1">Ces deux éléments conditionnent tout le projet.</p>
+                <p className="text-xs text-muted-foreground">Dans un appartement parisien, la visite technique est le point de départ de toute rénovation de salle de bain. Deux points sont prioritaires : <strong className="text-foreground">les évacuations</strong> et <strong className="text-foreground">la VMC</strong>.</p>
+                <p className="text-xs text-muted-foreground mt-1">Ces deux éléments conditionnent tout le projet, que ce soit pour rénover une salle de bain ancienne ou refaire entièrement la pièce.</p>
               </div>
               <div className="border border-border/30 rounded p-3">
                 <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: '#124A66' }}>Évacuations</p>
@@ -56,7 +56,7 @@ export function GuideInspectionSections() {
       </section>
 
       {/* Section 2 - Démolition */}
-      <section id="section-2" className="py-8 bg-background scroll-mt-20">
+      <section id="demolition-inspection-reseaux" className="py-8 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -64,7 +64,7 @@ export function GuideInspectionSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={3} title="Démolition et inspection des réseaux existants" />
+            <GuideSectionHeader number={3} title="Démolition et inspection des réseaux" tag="h3" />
 
             <div className="border-l-2 p-3 mb-4" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#124A66' }}>À retenir</p>
@@ -99,7 +99,7 @@ export function GuideInspectionSections() {
       </section>
 
       {/* Section 3 - Colonnes en fonte & syndic */}
-      <section id="section-3" className="py-8 bg-background scroll-mt-20">
+      <section id="colonnes-fonte-copropriete" className="py-8 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -107,12 +107,12 @@ export function GuideInspectionSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={4} title="Colonnes en fonte et syndic : anticiper pour éviter les blocages" />
+            <GuideSectionHeader number={4} title="Colonnes en fonte en copropriété" tag="h3" />
 
             <div className="border-l-2 p-3 mb-4" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#124A66' }}>À retenir</p>
               <ul className="space-y-0.5 text-sm" style={{ color: '#011115' }}>
-                <li>Les colonnes en fonte font partie des parties communes</li>
+                <li>En copropriété parisienne, les colonnes en fonte font partie des parties communes</li>
                 <li>Délai syndic : environ 15 jours à prévoir</li>
                 <li>Anticipation possible avant le démarrage du chantier</li>
               </ul>

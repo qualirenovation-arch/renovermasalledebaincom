@@ -19,7 +19,7 @@ export function GuideDetailsSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader title="Une niche, c'est quoi ?" />
+            <GuideSectionHeader title="Une niche, c'est quoi ?" tag="h3" />
 
             <div className="border-l-2 p-3 mb-4" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#124A66' }}>À retenir</p>
@@ -64,7 +64,7 @@ export function GuideDetailsSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={12} title="Joints, profils et finitions : le diable se cache dans le détail" />
+            <GuideSectionHeader number={12} title="Joints, profils et finitions" tag="h3" />
 
             <div className="border-l-2 p-3 mb-4" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#124A66' }}>À retenir</p>
@@ -113,7 +113,7 @@ export function GuideDetailsSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={13} title="Robinetterie encastrée : anticiper dès la conception" />
+            <GuideSectionHeader number={13} title="Robinetterie encastrée" tag="h3" />
 
             <div className="border-l-2 p-3 mb-4" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#124A66' }}>À retenir</p>
