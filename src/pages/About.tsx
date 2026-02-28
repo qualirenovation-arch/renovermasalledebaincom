@@ -6,6 +6,7 @@ import { Layout } from "@/components/layout/Layout";
 import { OGTags } from "@/components/seo/OGTags";
 import { Shield, Award, Users, Clock, CheckCircle2, ArrowRight, Camera, Ruler } from "lucide-react";
 import { PageCTA } from "@/components/layout/PageCTA";
+import { QualiRenovationCTA } from "@/components/shared/QualiRenovationCTA";
 import aboutHistoire from "@/assets/about-histoire.jpg";
 import teamPhoto from "@/assets/team-photo.jpg";
 import teamChantier1 from "@/assets/team-chantier-1.jpg";
@@ -637,6 +638,23 @@ export default function About() {
               </Button>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Association QualiRénovation */}
+      <section className="py-10">
+        <div className="container-custom px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
+              <strong className="text-foreground">renovermasalledebain.com</strong> est le site spécialisé en rénovation de salle de bain.
+              Pour les projets de rénovation globale, notre structure{" "}
+              <a href="https://qualirenovation.fr" target="_blank" rel="noopener" className="font-medium underline" style={{ color: '#124A66' }}>
+                QualiRénovation
+              </a>{" "}
+              gère des chantiers d'ampleur à Paris et en Île-de-France.
+            </p>
+          </div>
+          <QualiRenovationCTA variant="compact" />
         </div>
       </section>
 

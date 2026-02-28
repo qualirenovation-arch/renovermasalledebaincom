@@ -6,6 +6,7 @@ import { PartnersLogos } from "@/components/layout/PartnersLogos";
 import { OGTags } from "@/components/seo/OGTags";
 import { MessageSquare, Palette, Diamond, Hammer, Shield, Headphones, Check, X, ArrowRight, ClipboardCheck, UserCheck, Handshake, Lightbulb, Home, Camera } from "lucide-react";
 import { PageCTA } from "@/components/layout/PageCTA";
+import { QualiRenovationCTA } from "@/components/shared/QualiRenovationCTA";
 const benefits = [{
   icon: ClipboardCheck,
   title: "Maître d'œuvre dès le 1er RDV",
@@ -412,6 +413,23 @@ export default function WhyUs() {
 
       {/* Partners Section */}
       <PartnersLogos />
+
+      {/* Association QualiRénovation */}
+      <section className="py-10">
+        <div className="container-custom px-4">
+          <div className="max-w-3xl mx-auto text-center mb-6">
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+              <strong className="text-foreground">renovermasalledebain.com</strong> est le site spécialisé en rénovation de salle de bain.
+              Pour les projets de rénovation globale, notre structure{" "}
+              <a href="https://qualirenovation.fr" target="_blank" rel="noopener" className="font-medium underline" style={{ color: '#124A66' }}>
+                QualiRénovation
+              </a>{" "}
+              gère des chantiers d'ampleur à Paris et en Île-de-France.
+            </p>
+          </div>
+          <QualiRenovationCTA variant="compact" />
+        </div>
+      </section>
 
       {/* CTA */}
       <PageCTA
