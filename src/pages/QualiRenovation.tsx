@@ -45,7 +45,7 @@ const QualiRenovation = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center max-w-5xl mx-auto">
             <div className="text-center lg:text-left">
               <div className="flex justify-center lg:justify-start mb-8">
-                <img src={artRenoverLogo} alt="L'art de rénover by QualiRénovation" className="h-20 md:h-24 w-auto" />
+                <img src={artRenoverLogo} alt="L'art de rénover by QualiRénovation" className="h-28 md:h-32 w-auto" />
               </div>
               <h1 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-5 text-primary leading-[1.1] tracking-tight">
                 UN CHANTIER HEUREUX<br />
