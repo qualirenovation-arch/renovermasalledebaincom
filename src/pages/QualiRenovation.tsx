@@ -3,7 +3,7 @@ import { OGTags } from "@/components/seo/OGTags";
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LogoQualiRenovation } from "@/components/shared/LogoQualiRenovation";
-import { HeroSlideshow } from "@/components/home/HeroSlideshow";
+import { QRSlideshow } from "@/components/qualirenovation/QRSlideshow";
 import { Link } from "react-router-dom";
 import carinaSig from "@/assets/carina-signature.svg";
 
