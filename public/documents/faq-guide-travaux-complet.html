@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ & Guide Travaux — QualiRénovation</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #124A66;
+    --gold: #c2a016;
+    --text: #011115;
+    --bg-light: #eaeaea;
+    --white: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Nunito Sans', Arial, sans-serif;
+    font-weight: 400;
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 11pt;
+    background: var(--white);
+  }
+
+  /* Print */
+  @media print {
+    body { font-size: 10pt; }
+    .no-print { display: none !important; }
+    .page-break { page-break-before: always; }
+    section { page-break-inside: avoid; }
+    h2 { page-break-after: avoid; }
+    .cover { height: 100vh; }
+  }
+  @page { margin: 18mm 15mm; size: A4; }
+
+  /* Cover */
+  .cover {
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    min-height: 95vh; text-align: center; background: var(--blue); color: var(--white);
+    padding: 60px 40px;
+  }
+  .cover h1 {
+    font-size: 32pt; font-weight: 300; letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+  .cover .subtitle {
+    font-size: 14pt; font-weight: 300; opacity: 0.85;
+    margin-bottom: 40px;
+  }
+  .cover .tagline {
+    font-size: 11pt; font-weight: 300; font-style: italic;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 30px; margin-top: 30px; opacity: 0.7;
+    max-width: 400px;
+  }
+  .cover .brand {
+    font-size: 16pt; font-weight: 700; letter-spacing: 0.15em;
+    color: var(--gold); margin-bottom: 6px;
+  }
+
+  /* Download button */
+  .download-bar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: var(--blue); padding: 10px 20px;
+    display: flex; justify-content: center; gap: 16px; align-items: center;
+  }
+  .download-bar button {
+    background: var(--gold); color: var(--white); border: none;
+    padding: 8px 24px; border-radius: 4px; cursor: pointer;
+    font-family: 'Nunito Sans', sans-serif; font-weight: 600; font-size: 11pt;
+  }
+  .download-bar span { color: var(--white); font-size: 10pt; opacity: 0.8; }
+
+  /* Layout */
+  .content { max-width: 720px; margin: 0 auto; padding: 50px 30px 60px; }
+
+  /* Part header */
+  .part-header {
+    background: var(--blue); color: var(--white); padding: 28px 30px;
+    margin: 50px -30px 30px; border-radius: 0;
+  }
+  .part-header h2 {
+    font-size: 18pt; font-weight: 300; letter-spacing: 0.06em;
+  }
+  .part-header p { font-size: 10pt; opacity: 0.75; margin-top: 4px; }
+
+  /* Section */
+  h3 {
+    font-size: 13pt; font-weight: 700; color: var(--blue);
+    margin: 32px 0 10px; padding-bottom: 4px;
+    border-bottom: 2px solid var(--gold);
+  }
+  h4 {
+    font-size: 11pt; font-weight: 700; color: var(--blue);
+    margin: 18px 0 6px;
+  }
+
+  p { margin-bottom: 8px; }
+
+  /* À retenir box */
+  .callout {
+    border-left: 3px solid var(--gold); background: var(--bg-light);
+    padding: 12px 16px; margin: 12px 0 16px;
+  }
+  .callout-label {
+    font-size: 8pt; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.12em; color: var(--blue); margin-bottom: 4px;
+  }
+  .callout ul { padding-left: 16px; margin: 0; }
+  .callout li { font-size: 10pt; margin-bottom: 2px; }
+
+  /* Lists */
+  ul { padding-left: 18px; margin-bottom: 10px; }
+  li { margin-bottom: 3px; }
+
+  /* Quote */
+  blockquote {
+    border-left: 3px solid var(--gold); padding: 10px 16px;
+    font-style: italic; color: var(--blue); margin: 16px 0;
+    background: rgba(18,74,102,0.04);
+  }
+
+  /* Grid */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 10px 0; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 10px 0; }
+  .grid-box {
+    border: 1px solid #ddd; border-radius: 4px; padding: 12px;
+  }
+  .grid-box h5 {
+    font-size: 8pt; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--blue); margin-bottom: 6px;
+  }
+  .grid-box p, .grid-box li { font-size: 9.5pt; }
+
+  /* Separator */
+  hr { border: none; border-top: 1px solid #ddd; margin: 30px 0; }
+
+  /* Badge */
+  .badge {
+    display: inline-block; font-size: 8pt; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--gold); float: right;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center; padding: 30px; font-size: 9pt;
+    color: #666; border-top: 1px solid #ddd; margin-top: 40px;
+  }
+
+  /* TOC */
+  .toc { margin: 20px 0 30px; }
+  .toc h3 { border-bottom: none; margin-bottom: 12px; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin-bottom: 4px; font-size: 10pt; }
+  .toc a { color: var(--blue); text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<!-- Download bar -->
+<div class="download-bar no-print">
+  <span>Pour télécharger en PDF : Ctrl+P → Enregistrer en PDF</span>
+  <button onclick="window.print()">⬇ Imprimer / PDF</button>
+</div>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="brand">QUALIRENOVATION</div>
+  <h1>FAQ & Guide Travaux</h1>
+  <p class="subtitle">Rénovation de salle de bain à Paris & Île-de-France</p>
+  <p class="tagline">
+    Étanchéité, plomberie, VMC, choix techniques<br>
+    et accompagnement maître d'œuvre.<br><br>
+    renovermasalledebain.com
+  </p>
+</div>
+
+<div class="content">
+
+<!-- ═══════════ TABLE DES MATIÈRES ═══════════ -->
+<div class="toc">
+  <h3>Sommaire</h3>
+  <p style="font-weight:700;color:var(--blue);margin:10px 0 4px;">Partie 1 — FAQ</p>
+  <ol>
+    <li><a href="#faq-entreprise">Notre entreprise</a></li>
+    <li><a href="#faq-engagement">Notre engagement</a></li>
+    <li><a href="#faq-devis">Devis, budget et validation</a></li>
+    <li><a href="#faq-plans">Plans, croquis et 3D</a></li>
+    <li><a href="#faq-suivi">Suivi de chantier</a></li>
+    <li><a href="#faq-demolition">Démolition & vérifications</a></li>
+    <li><a href="#faq-syndic">Copropriété, syndic et voisins</a></li>
+    <li><a href="#faq-assurances">Assurances</a></li>
+    <li><a href="#faq-reception">Réception des travaux</a></li>
+    <li><a href="#faq-inspirations">Inspirations & réalisations</a></li>
+    <li><a href="#faq-renovation">Rénovation salle de bain</a></li>
+    <li><a href="#faq-partenaires">Partenaires & Fournisseurs</a></li>
+    <li><a href="#faq-materiaux">Travaux, matériaux & pose carrelage</a></li>
+  </ol>
+  <p style="font-weight:700;color:var(--blue);margin:14px 0 4px;">Partie 2 — Guide Travaux</p>
+  <ol>
+    <li><a href="#guide-planning">Planning & Durée</a></li>
+    <li><a href="#guide-visite">La visite chantier</a></li>
+    <li><a href="#guide-demolition">Démolition et inspection</a></li>
+    <li><a href="#guide-fonte">Colonnes en fonte et syndic</a></li>
+    <li><a href="#guide-moe">Maître d'œuvre</a></li>
+    <li><a href="#guide-plomberie">Plomberie</a></li>
+    <li><a href="#guide-etancheite">Étanchéité</a></li>
+    <li><a href="#guide-receveur">Receveur de douche</a></li>
+    <li><a href="#guide-baignoire">Baignoire</a></li>
+    <li><a href="#guide-paroi">Paroi de douche</a></li>
+    <li><a href="#guide-wc">WC, meuble vasque & chauffe-eau</a></li>
+    <li><a href="#guide-joints">Joints, profils et finitions</a></li>
+    <li><a href="#guide-robinetterie">Robinetterie encastrée</a></li>
+    <li><a href="#guide-confort">Peinture, VMC & Éclairage</a></li>
+    <li><a href="#guide-garanties">Garanties</a></li>
+  </ol>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!--              PARTIE 1 — FAQ                -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="page-break"></div>
+<div class="part-header">
+  <h2>Partie 1 — FAQ</h2>
+  <p>Questions fréquentes sur la rénovation de salle de bain</p>
+</div>
+
+<!-- Notre entreprise -->
+<h3 id="faq-entreprise">Notre entreprise</h3>
+
+<h4>Pourquoi choisir votre entreprise de salle de bain à Paris ?</h4>
+<p>renovermasalledebain.com (Qualirenovation by Qualiconcept) repose sur une promesse simple : <strong>Un chantier heureux.</strong> Notre maître d'œuvre Carina, forte de 20 ans d'expérience sur les chantiers parisiens, coordonne chaque projet de A à Z. Dès le premier rendez-vous, une visite technique gratuite permet d'analyser la faisabilité et de présenter tous les plans possibles. Nous sommes certifiés Schlüter et Wedi, assurés chez MIC Assurances, et vous bénéficiez d'un suivi visuel quotidien par WhatsApp et vidéo.</p>
+
+<h4>Quelle est votre zone d'intervention ?</h4>
+<p>Nous intervenons sur Paris et toute l'Île-de-France : Paris (75), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94), Yvelines (78), Essonne (91), Val-d'Oise (95) et Seine-et-Marne (77). Déplacement gratuit pour l'étude de votre projet.</p>
+
+<h4>Qu'est-ce qu'un maître d'œuvre salle de bain ?</h4>
+<p>Le maître d'œuvre salle de bain est votre chef de projet dédié. Il coordonne tous les corps de métier (plomberie, carrelage, électricité), contrôle la qualité des travaux, veille au respect du budget et des délais. Chez nous, Carina supervise personnellement chaque chantier.</p>
+
+<hr>
+
+<!-- Engagement -->
+<h3 id="faq-engagement">Notre engagement</h3>
+<p>Cette FAQ répond à vos interrogations. Mais parce que nous sommes avant tout dans une relation humaine, tout est dit dès le départ, avant le premier coup de marteau. Le devis est clair, précis, et chaque étape est expliquée en amont. → <strong>Aucune surprise, aucun coût caché, budget maîtrisé.</strong></p>
+
+<hr>
+
+<!-- Devis -->
+<h3 id="faq-devis">Devis, budget et validation</h3>
+
+<h4>Comment valider le devis ?</h4>
+<p>Le devis doit être signé et retourné, accompagné du premier acompte, par virement uniquement sur notre compte société. Le RIB, le montant de l'acompte et les CGV sont intégrés directement au devis. Tout est clair, au même endroit.</p>
+
+<h4>Y a-t-il des travaux supplémentaires imprévus ?</h4>
+<p>Non. Chaque plus-value ou moins-value est expliquée, chiffrée, et validée par vos soins avant exécution. → <strong>Vous gardez la maîtrise totale de votre budget.</strong></p>
+
+<hr>
+
+<!-- Plans -->
+<h3 id="faq-plans">Plans, croquis et 3D</h3>
+
+<h4>Faites-vous des plans ou des 3D ?</h4>
+<p>Pour les petites surfaces, un croquis et la présentation de projets similaires suffisent généralement. La 3D est possible, si le projet le nécessite et si c'est votre souhait, via un forfait dédié.</p>
+
+<h4>Avec qui réalisez-vous les plans ?</h4>
+<p>Nous travaillons avec P3D Concept, partenaire de longue date. Vous recevez un devis précis, la prestation est payée directement à P3D Concept, et vous échangez librement avec lui pour bien préparer le projet.</p>
+
+<hr>
+
+<!-- Suivi -->
+<h3 id="faq-suivi">Suivi de chantier</h3>
+
+<h4>Qui gère le chantier ?</h4>
+<p>Un interlocuteur unique assure : la coordination des artisans, le respect du planning, le contrôle qualité, et les points réguliers avec vous.</p>
+
+<h4>Comment suivre mon chantier si je suis très occupé ?</h4>
+<p>Nous assurons un suivi à distance avec : photos, comptes-rendus, échanges téléphone ou visio si nécessaire.</p>
+
+<hr>
+
+<!-- Démolition -->
+<h3 id="faq-demolition">Démolition & vérifications techniques</h3>
+
+<h4>Vérifiez-vous l'existant ?</h4>
+<p>Oui, systématiquement après la démolition : réseaux, évacuations, colonnes en fonte ou en plomb, accès techniques et compteurs. → C'est le bon moment pour corriger, afin d'éviter de recasser plus tard.</p>
+
+<hr>
+
+<!-- Syndic -->
+<h3 id="faq-syndic">Copropriété, syndic et voisins</h3>
+
+<h4>Le syndic est-il informé ?</h4>
+<p>Oui. Dès le devis signé, vous recevez : un avis de travaux à afficher, un mail type à adresser au syndic. Les voisins sont informés et les parties communes sont protégées. → <strong>Nous ne faisons pas de travaux à la sauvage.</strong></p>
+
+<hr>
+
+<!-- Assurances -->
+<h3 id="faq-assurances">Assurances</h3>
+
+<h4>Êtes-vous assuré ?</h4>
+<p>Oui. Nous sommes assurés en décennale et en responsabilité civile professionnelle auprès de MIC Insurance. Les références de notre contrat d'assurance sont inscrites sur chaque devis, et un exemplaire de l'attestation vous est remis avant signature.</p>
+
+<h4>Quels sont les délais de garantie et le SAV ?</h4>
+<p>La garantie de parfait achèvement court pendant 1 an. La garantie biennale couvre les équipements dissociables pendant 2 ans. La garantie décennale couvre les désordres affectant la solidité de l'ouvrage pendant 10 ans. Notre SAV reste joignable pour tout problème couvert.</p>
+
+<hr>
+
+<!-- Réception -->
+<h3 id="faq-reception">Réception des travaux</h3>
+
+<h4>Comment se passe la réception du chantier ?</h4>
+<p>Nous organisons une réunion de pré-réception pour lister les finitions à ajuster. Une fois traités, le procès-verbal de réception est signé. → <strong>La signature du PV marque la fin officielle des travaux et le démarrage des garanties.</strong></p>
+
+<hr>
+
+<!-- Inspirations -->
+<h3 id="faq-inspirations">Inspirations & réalisations</h3>
+
+<h4>Où puis-je voir vos réalisations ?</h4>
+<ul>
+  <li>Voir nos réalisations : renovermasalledebain.com/realisations</li>
+  <li>Instagram : @qualirenovation__travaux</li>
+  <li>Houzz : houzz.fr/pro/qualirenovation</li>
+</ul>
+
+<hr>
+
+<!-- Rénovation -->
+<h3 id="faq-renovation">Rénovation salle de bain</h3>
+
+<h4>Qu'est-ce qu'une douche à l'italienne ?</h4>
+<p>Une douche de plain-pied, sans marche ni receveur surélevé. Elle s'intègre au sol pour un accès facile et un design épuré.</p>
+
+<h4>Peut-on installer une douche à l'italienne dans un appartement ancien ?</h4>
+<p>Oui, dans la plupart des cas. Notre maître d'œuvre réalise une étude de faisabilité gratuite pour évaluer les contraintes techniques.</p>
+
+<h4>Combien coûte une rénovation de salle de bain à Paris ?</h4>
+<p>Entre <strong>800€ et 1 500€/m²</strong> pour une rénovation complète clé en main. Devis détaillé gratuit avec photos via Graneet.</p>
+
+<h4>Combien de temps dure une rénovation ?</h4>
+<p>Généralement entre <strong>3 semaines et 1 mois</strong>. Chaque artisan intervient au bon moment.</p>
+
+<h4>Proposez-vous une rénovation clé en main ?</h4>
+<p>Oui : de la conception à la livraison, nous gérons l'intégralité du projet. Un seul interlocuteur pour tous les corps de métier.</p>
+
+<h4>Intervenez-vous pour les petites salles de bain ?</h4>
+<p>Absolument ! Nous sommes spécialistes de la rénovation en appartement parisien, souvent avec des contraintes d'espace.</p>
+
+<hr>
+
+<!-- Partenaires -->
+<h3 id="faq-partenaires">Partenaires & Fournisseurs</h3>
+
+<h4>Différence entre marque et fournisseur ?</h4>
+<p>Une marque conçoit et fabrique les produits. Un fournisseur est le point de vente qui les commercialise. Exemple : Grohe est une marque, Cedeo est un fournisseur.</p>
+
+<h4>Puis-je choisir mes propres marques ?</h4>
+<p>Absolument ! Nous vous accompagnons dans vos recherches et vérifions la qualité et la disponibilité avant validation.</p>
+
+<h4>Proposez-vous des tarifs négociés ?</h4>
+<p>Oui. Nous appliquons une marge de 10% sur le prix HT remisé fournisseur pour couvrir le traitement des commandes. Les frais de livraison sont reportés sur le devis.</p>
+
+<h4>Comment postuler comme sous-traitant ?</h4>
+<p>Vous pouvez postuler via notre formulaire en ligne en quelques minutes.</p>
+
+<hr>
+
+<!-- Matériaux -->
+<h3 id="faq-materiaux">Travaux, matériaux & pose carrelage</h3>
+
+<h4>Comment garantissez-vous l'étanchéité ?</h4>
+<p>Système SEL/SPEC (Weber Aquastop) sur murs et sol avant carrelage, conformément au DTU 52.2. Garantie étanchéité 10 ans + décennale.</p>
+
+<h4>Faut-il refaire toute la plomberie ?</h4>
+<p>Oui, dans la grande majorité des cas. Le plomb est remplacé par du cuivre ou du multicouche.</p>
+
+<h4>Quels types de pose carrelage proposez-vous ?</h4>
+<p>Pose droite (alignée), pose décalée (1/3 recommandé), pose chevron / en V. Le choix dépend du format, de la surface et de la planéité.</p>
+
+<h4>Le type de pose influence-t-il le prix ?</h4>
+<p>Oui. Pose droite — <strong>90 €/m²</strong>. Pose chevron — <strong>120 €/m²</strong>. Tarif incluant primaire, colle et joint.</p>
+
+<!-- ═══════════════════════════════════════════ -->
+<!--          PARTIE 2 — GUIDE TRAVAUX         -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="page-break"></div>
+<div class="part-header">
+  <h2>Partie 2 — Guide Travaux</h2>
+  <p>Guide complet pour réussir la rénovation de votre salle de bain</p>
+</div>
+
+<!-- CATÉGORIE 01 -->
+<p style="font-size:9pt;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--gold);margin:20px 0 4px;">Catégorie 01 — Préparation</p>
+
+<!-- Section 1 : Planning -->
+<h3 id="guide-planning">Section 1 · Planning & Durée</h3>
+<p style="font-size:12pt;font-weight:300;color:#666;margin:-4px 0 8px;">3 semaines à 1 mois</p>
+
+<div class="callout">
+  <div class="callout-label">À retenir</div>
+  <ul>
+    <li>Une rénovation complète prend 3 semaines à 1 mois</li>
+    <li>Chaque corps de métier intervient dans un ordre précis</li>
+    <li>Le maître d'œuvre coordonne l'ensemble</li>
+  </ul>
+</div>
+
+<div class="grid-3">
+  <div class="grid-box">
+    <h5>L'orchestre</h5>
+    <p><strong>Plombier</strong> – le tempo<br><strong>Électricien</strong> – les connexions<br><strong>Plâtrier</strong> – la structure<br><strong>Carreleur</strong> – le rythme<br><strong>Menuisier</strong> – la fonction<br><strong>Peintre</strong> – la finesse</p>
+    <p><strong>Le maître d'œuvre est le chef d'orchestre.</strong></p>
+  </div>
+  <div class="grid-box">
+    <h5>Déroulé type</h5>
+    <p><strong>S1</strong> — Protection, dépose, démolition, réseaux, plâtrerie</p>
+    <p><strong>S2</strong> — Étanchéité, séchage, pose carrelage</p>
+    <p><strong>S3</strong> — Menuiserie, peinture, finitions, sanitaires</p>
+    <p style="font-size:9pt;margin-top:6px;border-top:1px solid #ddd;padding-top:4px;">Nettoyage complet · Gravats évacués</p>
+  </div>
+  <div class="grid-box">
+    <h5>Coordination</h5>
+    <p>Sans coordination globale, vous êtes mis face au résultat… <strong>trop tard.</strong></p>
+    <p><strong>Un chantier ne s'improvise pas.</strong> Il s'anticipe.</p>
+    <p>C'est notre rôle : <strong>coordonner pour que chaque intervention s'emboîte parfaitement.</strong></p>
+  </div>
+</div>
+
+<blockquote>"Un planning maîtrisé, c'est un chantier sans improvisation." — Carina N.</blockquote>
+
+<hr>
+
+<!-- Section 2 : Visite -->
+<h3 id="guide-visite">Section 2 · La visite chantier</h3>
+
+<div class="callout">
+  <div class="callout-label">À retenir</div>
+  <ul>
+    <li>Les évacuations et la VMC conditionnent tout le projet</li>
+    <li>L'esthétique vient après les choix techniques</li>
+    <li>Chaque détail est vérifié lors de la visite initiale</li>
+  </ul>
+</div>
+
+<div class="grid-2">
+  <div class="grid-box">
+    <h5>Évacuations</h5>
+    <ul><li>Type de colonne (fonte, PVC)</li><li>Hauteur disponible</li><li>Emplacement des colonnes</li><li>Accessibilité maintenance</li></ul>
+  </div>
+  <div class="grid-box">
+    <h5>VMC</h5>
+    <ul><li>Présence ou absence</li><li>Fonctionnement</li><li>Emplacement de la bouche</li><li>Possibilité d'optimisation</li></ul>
+  </div>
+</div>
+
+<p><strong>L'esthétique vient après, jamais avant.</strong></p>
+
+<hr>
+
+<!-- Section 3 : Démolition -->
+<h3 id="guide-demolition">Section 3 · Démolition et inspection</h3>
+
+<div class="callout">
+  <div class="callout-label">À retenir</div>
+  <ul>
+    <li>Inspection systématique des colonnes en fonte après démolition</li>
+    <li>C'est le seul moment pour voir ce qui se cache derrière les murs</li>
+    <li>Les arrivées d'eau en plomb sont remplacées</li>
+  </ul>
+</div>
+
+<p>Vérifications : colonnes d'évacuation en fonte, état des raccords, arrivées d'eau (souvent en plomb).</p>
+<p><em>C'est le seul moment où l'on peut vraiment voir ce qui se cache derrière les murs.</em></p>
+
+<hr>
+
+<!-- Section 4 : Fonte & syndic -->
+<h3 id="guide-fonte">Section 4 · Colonnes en fonte et syndic</h3>
+
+<div class="callout">
+  <div class="callout-label">À retenir</div>
+  <ul>
+    <li>Les colonnes en fonte font partie des parties communes</li>
+    <li>Délai syndic : environ 15 jours à prévoir</li>
+    <li>Anticipation possible avant le démarrage du chantier</li>
+  </ul>
+</div>
+
+<p><strong>Procédure :</strong> 1. Nous prévenons le syndic → 2. Un plombier établit un devis → 3. Le syndic valide → 4. La colonne est réparée ou remplacée.</p>
+<p>Environ <strong>15 jours</strong> à prévoir. Ce point est identifié dès le départ.</p>
+
+<hr>
+
+<!-- CATÉGORIE 02 -->
+<p style="font-size:9pt;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--gold);margin:20px 0 4px;">Catégorie 02 — Accompagnement</p>
+
+<!-- Section 5 : Maître d'œuvre -->
+<h3 id="guide-moe">Section 5 · Maître d'œuvre — votre allié de A à Z</h3>
+
+<p><strong>Votre présence n'est pas nécessaire sur le chantier.</strong> Je gère, je coordonne, je vous informe.</p>
+
+<div class="grid-2">
+  <div class="grid-box">
+    <h5>Ce que je fais pour vous</h5>
+    <ul><li>Assistance démarches syndic</li><li>Coordination artisans</li><li>Gestion des décisions techniques</li><li>Sélection & commande des produits</li></ul>
+  </div>
+  <div class="grid-box">
+    <h5>Ce que vous gagnez</h5>
+    <ul><li>Un interlocuteur unique</li><li>Compatibilité technique vérifiée</li><li>Délais et livraisons coordonnés</li><li>Aucune décision laissée au hasard</li></ul>
+  </div>
+</div>
+
+<blockquote>Chacun son métier. Le maître d'œuvre ne fait pas "à peu près" : c'est l'art de bien faire, avec méthode et anticipation.</blockquote>
+
+<hr>
+
+<!-- CATÉGORIE 03 -->
+<p style="font-size:9pt;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--gold);margin:20px 0 4px;">Catégorie 03 — Infrastructure</p>
+
+<!-- Section 6 : Plomberie -->
+<h3 id="guide-plomberie">Section 6 · Plomberie</h3>
+
+<div class="callout">
+  <div class="callout-label">À retenir</div>
+  <ul>
+    <li>Le plomb est remplacé par du cuivre ou du multicouche</li>
+    <li>Des nourrices eau chaude / eau froide sont posées</li>
+    <li>Refaire à moitié, c'est prendre le risque de refaire deux fois</li>
+  </ul>
+</div>
+
+<div class="grid-2">
+  <div class="grid-box">
+    <h5>Remplacement</h5>
+    <ul><li>Plomb → cuivre ou multicouche</li><li>Compteurs déplacés (accessibles)</li><li>Nourrices eau chaude / froide</li></ul>
+  </div>
+  <div class="grid-box">
+    <h5>Avantages</h5>
+    <ul><li>Isoler chaque point d'eau</li><li>Intervenir rapidement en cas de fuite</li><li>Sécuriser l'ensemble du logement</li></ul>
+  </div>
+</div>
+
+<blockquote>Refaire à moitié, c'est prendre le risque de refaire deux fois.</blockquote>
+
+<hr>
+
+<!-- Section 7 : Étanchéité -->
+<h3 id="guide-etancheite">Section 7 · Étanchéité — la base invisible</h3>
+
+<div class="callout">
+  <div class="callout-label">À retenir</div>
+  <ul>
+    <li>Système d'étanchéité sous carrelage obligatoire (SPEC)</li>
+    <li>Bandes d'angles et traitement des points singuliers</li>
+    <li>Un joint seul ne fait jamais une étanchéité</li>
+  </ul>
+</div>
+
+<p><strong>Avant carrelage :</strong> étanchéité sous carrelage (SPEC), bandes d'angles, points singuliers traités, continuité douche & baignoire.</p>
+<p><strong>Un joint seul ne fait jamais une étanchéité.</strong> Weber Aquastop — obligatoire.</p>
+
+<hr>
+
+<!-- Section 8 : Receveur -->
+<h3 id="guide-receveur">Section 8 · Receveur de douche</h3>
+
+<div class="callout">
+  <div class="callout-label">À retenir</div>
+  <ul>
+    <li>Extra-plat, sur pieds ou à carreler selon la configuration</li>
+    <li>La hauteur de la culotte détermine les possibilités en copropriété</li>
+    <li>Tout ce qui peut fuir doit rester accessible</li>
+  </ul>
+</div>
+
+<div class="grid-3">
+  <div class="grid-box">
+    <h5>Types</h5>
+    <p><strong>Extra-plat</strong> — plain-pied<br><strong>Sur pieds</strong> — siphon accessible<br><strong>À carreler</strong> — douche italienne</p>
+  </div>
+  <div class="grid-box">
+    <h5>Matériaux</h5>
+    <p><strong>Résine</strong> — durable<br><strong>Acrylique</strong> — léger<br><strong>Grès émaillé</strong> — résistant<br><strong>Acier émaillé</strong> — sur commande</p>
+  </div>
+  <div class="grid-box">
+    <h5>Accessibilité</h5>
+    <p><strong>Copropriété</strong> — culotte détermine plain-pied ou sur pieds<br><strong>Maison</strong> — liberté totale</p>
+  </div>
+</div>
+
+<hr>
+
+<!-- Section 9 : Baignoire -->
+<h3 id="guide-baignoire">Section 9 · Choisir sa baignoire</h3>
+
+<div class="callout">
+  <div class="callout-label">À retenir</div>
+  <ul>
+    <li>Choix selon l'espace, le confort et la structure du sol</li>
+    <li>Attention au poids : 300 à 400 kg une fois remplie</li>
+    <li>La baignoire peut devenir un vrai meuble de rangement</li>
+  </ul>
+</div>
+
+<div class="grid-3">
+  <div class="grid-box">
+    <h5>Types</h5>
+    <p><strong>Droite</strong> — Standard<br><strong>Îlot</strong> — Design<br><strong>D'angle</strong> — Optimise les coins<br><strong>Bain-douche</strong> — Combo 2-en-1</p>
+  </div>
+  <div class="grid-box">
+    <h5>Matériaux</h5>
+    <p><strong>Acrylique</strong> — bon rapport qualité-prix<br><strong>Acier émaillé</strong> — résistant<br><strong>Fonte</strong> — haut de gamme<br><strong>Solid Surface</strong> — sur mesure</p>
+  </div>
+  <div class="grid-box">
+    <h5>Rangements</h5>
+    <p><strong>Tiroirs</strong> — Produits, serviettes<br><strong>Niches</strong> — Accès facile<br><strong>Trappe</strong> — Maintenance + rangement</p>
+  </div>
+</div>
+
+<hr>
+
+<!-- Section 10 : Paroi -->
+<h3 id="guide-paroi">Section 10 · Paroi de douche</h3>
+
+<div class="callout">
+  <div class="callout-label">À retenir</div>
+  <ul>
+    <li>3 critères : ouverture, couleur du profilé, type de verre</li>
+    <li>Toujours harmoniser avec la robinetterie</li>
+    <li>Épaisseur recommandée : 6 à 8 mm minimum</li>
+  </ul>
+</div>
+
+<div class="grid-3">
+  <div class="grid-box">
+    <h5>Ouverture</h5>
+    <p><strong>Fixe</strong> — Minimaliste<br><strong>Coulissante</strong> — Gain de place<br><strong>Battante</strong> — Accès maximal</p>
+  </div>
+  <div class="grid-box">
+    <h5>Profilé</h5>
+    <p><strong>Noir mat</strong> — Contemporain<br><strong>Laiton</strong> — Raffiné<br><strong>Chromé</strong> — Intemporel</p>
+  </div>
+  <div class="grid-box">
+    <h5>Verre</h5>
+    <p><strong>Transparent</strong> — Agrandit l'espace<br><strong>Dépoli</strong> — Intimité<br><strong>Sérigraphié</strong> — Décoratif</p>
+  </div>
+</div>
+
+<hr>
+
+<!-- Section 11 : WC, vasque, chauffe-eau -->
+<h3 id="guide-wc">Section 11 · WC, meuble vasque & chauffe-eau</h3>
+
+<div class="callout">
+  <div class="callout-label">À retenir</div>
+  <ul>
+    <li>WC suspendu avec bâti-support Geberit : le standard en rénovation</li>
+    <li>Le meuble vasque structure l'espace et cache la plomberie</li>
+    <li>Le chauffe-eau doit rester accessible et adapté à la consommation</li>
+  </ul>
+</div>
+
+<div class="grid-3">
+  <div class="grid-box">
+    <h5>WC suspendu</h5>
+    <p>Bâti <strong>Geberit Duofix</strong><br>Standard 12 cm · Réduit 8 cm<br>Autoportant ou portant<br>Plaques : blanc, noir, laiton, chrome</p>
+  </div>
+  <div class="grid-box">
+    <h5>Meuble vasque</h5>
+    <p><strong>Suspendu</strong> — Aérien, nettoyage facile<br><strong>Sur pieds</strong> — Classique, stable<br>Simple / double vasque selon espace</p>
+  </div>
+  <div class="grid-box">
+    <h5>Chauffe-eau</h5>
+    <p>Ballons plats (Velis, Malicio)<br>Pose verticale ou horizontale<br>Intégration en placard<br><strong>Connecté</strong> — pilotage à distance</p>
+  </div>
+</div>
+
+<blockquote>"Les détails ne sont pas accessoires. Ils font la différence." — Carina N.</blockquote>
+
+<hr>
+
+<!-- CATÉGORIE 04 -->
+<p style="font-size:9pt;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--gold);margin:20px 0 4px;">Catégorie 04 — Design & Finitions</p>
+
+<!-- Section 12 : Joints -->
+<h3 id="guide-joints">Section 12 · Joints, profils et finitions</h3>
+
+<div class="callout">
+  <div class="callout-label">À retenir</div>
+  <ul>
+    <li>Le joint mortier définit le style : assorti ou contrasté</li>
+    <li>Le joint silicone garantit l'étanchéité aux angles</li>
+    <li>Les profils de finition doivent s'intégrer, pas attirer l'œil</li>
+  </ul>
+</div>
+
+<div class="grid-3">
+  <div class="grid-box">
+    <h5>Joint mortier</h5>
+    <p><strong>Assorti</strong> — uniforme, élégant<br><strong>Foncé</strong> — souligne le calepinage</p>
+  </div>
+  <div class="grid-box">
+    <h5>Joint silicone</h5>
+    <p>Souple, absorbe les mouvements, garantit l'étanchéité. Assorti au carrelage. À refaire dès la moindre fissure.</p>
+  </div>
+  <div class="grid-box">
+    <h5>Profils de finition</h5>
+    <p>Assortis à la robinetterie et paroi. Le profil doit s'intégrer, pas attirer l'œil.</p>
+  </div>
+</div>
+
+<hr>
+
+<!-- Section 13 : Robinetterie -->
+<h3 id="guide-robinetterie">Section 13 · Robinetterie encastrée</h3>
+
+<div class="callout">
+  <div class="callout-label">À retenir</div>
+  <ul>
+    <li>Impose un doublage mural et une anticipation dès la conception</li>
+    <li>Ce choix se fait avant les cloisons et le carrelage</li>
+    <li>Mitigeur thermostatique + ciel de pluie + douchette</li>
+  </ul>
+</div>
+
+<div class="grid-2">
+  <div class="grid-box">
+    <h5>Exigences</h5>
+    <ul><li>Doublage mural obligatoire</li><li>Anticipation dès la conception</li><li>Pose irréprochable</li><li>Choix avant cloisons et carrelage</li></ul>
+  </div>
+  <div class="grid-box">
+    <h5>Composants</h5>
+    <ul><li>Mitigeur encastré thermostatique</li><li>Ciel de pluie encastré plafond</li><li>Douchette à main complémentaire</li></ul>
+  </div>
+</div>
+
+<hr>
+
+<!-- CATÉGORIE 05 -->
+<p style="font-size:9pt;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--gold);margin:20px 0 4px;">Catégorie 05 — Confort & Équipement</p>
+
+<!-- Section 14 : Peinture, VMC -->
+<h3 id="guide-confort">Peinture, VMC & Éclairage</h3>
+
+<div class="callout">
+  <div class="callout-label">À retenir</div>
+  <ul>
+    <li>Peinture spéciale pièces humides obligatoire</li>
+    <li>Sans VMC : humidité, moisissures, dégradation</li>
+    <li>Éclairage et chauffage doivent respecter la norme NF C 15-100</li>
+  </ul>
+</div>
+
+<div class="grid-3">
+  <div class="grid-box">
+    <h5>Peinture & VMC</h5>
+    <p><strong>Peinture</strong> — Pièces humides, lessivable (Unikalo Aqualine Satin)<br><strong>VMC</strong> — Protège contre l'humidité et les moisissures</p>
+  </div>
+  <div class="grid-box">
+    <h5>Électricité</h5>
+    <p>Volumes de sécurité respectés<br>Disjoncteur 30mA<br>Norme <strong>NF C 15-100</strong></p>
+  </div>
+  <div class="grid-box">
+    <h5>Éclairage & chauffage</h5>
+    <p><strong>Spots</strong> — 500 lm, 4000K, IP44/65<br><strong>Sèche-serviette</strong> — 500-1000W<br>Ligne dédiée requise</p>
+  </div>
+</div>
+
+<hr>
+
+<!-- CATÉGORIE 06 -->
+<p style="font-size:9pt;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--gold);margin:20px 0 4px;">Catégorie 06 — Garanties</p>
+
+<!-- Garanties -->
+<h3 id="guide-garanties">Nos garanties</h3>
+
+<div class="callout">
+  <div class="callout-label">À retenir</div>
+  <ul>
+    <li>Chaque chantier est encadré par des engagements concrets et contractuels</li>
+    <li>Garantie décennale + étanchéité certifiée</li>
+    <li>Budget piloté avec précision et transparence</li>
+  </ul>
+</div>
+
+<div style="margin:12px 0;">
+  <p><strong>Garantie décennale</strong> <span class="badge">10 ans</span><br>Assurés en décennale et en RC professionnelle auprès de MIC Insurance.</p>
+  <hr style="margin:10px 0;">
+  <p><strong>Étanchéité certifiée</strong> <span class="badge">DTU 52.2</span><br>Systèmes conformes aux normes DTU 52.2, avec procès-verbal de réception.</p>
+  <hr style="margin:10px 0;">
+  <p><strong>Délais garantis</strong> <span class="badge">Contractuel</span><br>Planning contractuel avec dates engagées par écrit.</p>
+  <hr style="margin:10px 0;">
+  <p><strong>SAV réactif</strong> <span class="badge">Inclus</span><br>Un interlocuteur unique pour toute intervention après réception.</p>
+  <hr style="margin:10px 0;">
+  <p><strong>Artisans qualifiés</strong> <span class="badge">Certifié</span><br>Équipes internes formées et supervisées, aucune sous-traitance non maîtrisée.</p>
+  <hr style="margin:10px 0;">
+  <p><strong>Budget encadré</strong> <span class="badge">Suivi financier</span><br>Devis exhaustifs, toute évolution formalisée et validée avant exécution. Budget piloté avec précision.</p>
+</div>
+
+<hr>
+
+<blockquote>"Réussir sa salle de bain, ce n'est pas faire des choix au hasard. C'est faire les bons choix, au bon moment, avec les bonnes personnes." — Carina N.</blockquote>
+
+<!-- Footer -->
+<div class="footer">
+  <p><strong>QualiRénovation by QualiConcept</strong> — Paris & Île-de-France</p>
+  <p>📞 06 59 76 46 85 · ✉️ gestion@renovermasalledebain.com</p>
+  <p>renovermasalledebain.com</p>
+</div>
+
+</div><!-- /content -->
+
+</body>
+</html>
