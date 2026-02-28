@@ -4,25 +4,25 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 // URL canonique du site
 const BASE_URL = "https://renovermasalledebain.com";
 
-// Pages statiques indexables
+// Pages statiques indexables avec lastmod réel (date de dernière modification du contenu)
 const staticPages = [
-  { url: "/", priority: "1.0", changefreq: "weekly" },
-  { url: "/realisations", priority: "0.9", changefreq: "weekly" },
-  { url: "/devis", priority: "0.9", changefreq: "monthly" },
-  { url: "/guide-travaux", priority: "0.8", changefreq: "monthly" },
-  { url: "/degats-eaux", priority: "0.8", changefreq: "monthly" },
-  { url: "/pourquoi-nous", priority: "0.8", changefreq: "monthly" },
-  { url: "/a-propos", priority: "0.7", changefreq: "monthly" },
-  { url: "/faq", priority: "0.7", changefreq: "monthly" },
-  { url: "/avis", priority: "0.7", changefreq: "weekly" },
-  { url: "/videos-conseils", priority: "0.7", changefreq: "monthly" },
-  { url: "/presse", priority: "0.6", changefreq: "monthly" },
-  { url: "/partenaires", priority: "0.6", changefreq: "monthly" },
-  { url: "/devenir-partenaire", priority: "0.5", changefreq: "monthly" },
-  { url: "/partenaires/contact", priority: "0.5", changefreq: "monthly" },
-  { url: "/photographe", priority: "0.5", changefreq: "monthly" },
-  { url: "/mentions-legales", priority: "0.3", changefreq: "yearly" },
-  { url: "/politique-confidentialite", priority: "0.3", changefreq: "yearly" },
+  { url: "/", priority: "1.0", changefreq: "weekly", lastmod: "2026-02-28" },
+  { url: "/realisations", priority: "0.9", changefreq: "weekly", lastmod: "2026-02-28" },
+  { url: "/devis", priority: "0.9", changefreq: "monthly", lastmod: "2026-02-15" },
+  { url: "/guide-travaux", priority: "0.8", changefreq: "monthly", lastmod: "2026-02-25" },
+  { url: "/degats-eaux", priority: "0.8", changefreq: "monthly", lastmod: "2026-01-20" },
+  { url: "/pourquoi-nous", priority: "0.8", changefreq: "monthly", lastmod: "2026-02-10" },
+  { url: "/a-propos", priority: "0.7", changefreq: "monthly", lastmod: "2026-01-15" },
+  { url: "/faq", priority: "0.7", changefreq: "monthly", lastmod: "2026-02-27" },
+  { url: "/avis", priority: "0.7", changefreq: "weekly", lastmod: "2026-02-28" },
+  { url: "/videos-conseils", priority: "0.7", changefreq: "monthly", lastmod: "2026-01-10" },
+  { url: "/presse", priority: "0.6", changefreq: "monthly", lastmod: "2026-01-05" },
+  { url: "/partenaires", priority: "0.6", changefreq: "monthly", lastmod: "2026-02-10" },
+  { url: "/devenir-partenaire", priority: "0.5", changefreq: "monthly", lastmod: "2026-02-10" },
+  { url: "/partenaires/contact", priority: "0.5", changefreq: "monthly", lastmod: "2026-02-10" },
+  { url: "/photographe", priority: "0.5", changefreq: "monthly", lastmod: "2025-12-15" },
+  { url: "/mentions-legales", priority: "0.3", changefreq: "yearly", lastmod: "2025-06-01" },
+  { url: "/politique-confidentialite", priority: "0.3", changefreq: "yearly", lastmod: "2025-06-01" },
 ];
 
 // Préfixes/mots-clés exclus du sitemap (cohérent avec seo-utils.ts)
@@ -54,7 +54,7 @@ const generateSitemap = async (): Promise<string> => {
     if (EXCLUDED_PREFIXES.some(p => page.url.startsWith(p))) continue;
     xml += `  <url>
     <loc>${BASE_URL}${page.url}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${page.lastmod}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
   </url>
