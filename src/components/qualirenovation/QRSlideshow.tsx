@@ -3,11 +3,15 @@ import { AnimatePresence, motion } from "framer-motion";
 import chercheMidi from "@/assets/qualirenovation/cherche-midi.jpg";
 import avJeanneSalon from "@/assets/qualirenovation/av-jeanne-salon.jpg";
 import avJeanneCuisine from "@/assets/qualirenovation/av-jeanne-cuisine.jpg";
+import chambre from "@/assets/qualirenovation/chambre.jpg";
+import salonBibliotheque from "@/assets/qualirenovation/salon-bibliotheque.jpg";
 
 const slides = [
   { src: chercheMidi, alt: "Rénovation appartement Cherche-Midi, Paris", location: "Paris 6e" },
   { src: avJeanneSalon, alt: "Rénovation salon haussmannien Avenue Jeanne", location: "Île-de-France" },
   { src: avJeanneCuisine, alt: "Rénovation cuisine ouverte Avenue Jeanne", location: "Île-de-France" },
+  { src: chambre, alt: "Rénovation chambre parentale, Paris", location: "Paris" },
+  { src: salonBibliotheque, alt: "Rénovation salon avec bibliothèque sur mesure", location: "Paris" },
 ];
 
 export function QRSlideshow() {
