@@ -39,7 +39,7 @@ const QualiRenovation = () => {
       />
 
       {/* Hero */}
-      <section className="bg-gradient-to-b from-stone to-background py-16 md:py-24 lg:py-32">
+      <section className="bg-gradient-to-b from-stone to-background pt-16 md:pt-24 lg:pt-32 pb-8 md:pb-12">
         <div className="container mx-auto px-4 text-center md:text-left">
           <h1 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary leading-[1.1] tracking-tight mb-5 md:mb-7">
             UN CHANTIER<br />
