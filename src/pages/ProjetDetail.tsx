@@ -7,7 +7,6 @@ import { ArrowLeft, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { AlbumCTA } from "@/components/albums/AlbumCTA";
 import { RelatedProjects } from "@/components/albums/RelatedProjects";
 import { OGTags } from "@/components/seo/OGTags";
-import { Helmet } from "react-helmet-async";
 import { OG_BASE_URL, getAlbumOgData } from "@/lib/og";
 import { Album, Photo } from "@/data/albumsData";
 import { usePublicAlbums } from "@/hooks/usePublicAlbums";
@@ -119,33 +118,32 @@ const ProjetDetail = () => {
         type="article"
         coverImage={ogImageUrl}
       />
-      <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Accueil",
-                "item": "https://renovermasalledebain.com/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Réalisations",
-                "item": "https://renovermasalledebain.com/realisations"
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": album.title
-              }
-            ]
-          })}
-        </script>
-      </Helmet>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Accueil",
+              "item": "https://renovermasalledebain.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Réalisations",
+              "item": "https://renovermasalledebain.com/realisations"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": album.title
+            }
+          ]
+        }) }}
+      />
 
       <section className="section-padding pt-32 md:pt-40">
         <div className="container-custom">
