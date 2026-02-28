@@ -43,8 +43,8 @@ function generateDefault(title?: string, subtitle?: string): string {
   <rect width="1200" height="630" fill="url(#dots)"/>
   <rect x="0" y="0" width="1200" height="8" fill="${BLUE}"/>
   <rect x="0" y="622" width="1200" height="8" fill="url(#g)"/>
-  <text x="600" y="185" font-family="Georgia,serif" font-size="58" font-weight="bold" fill="${BLUE}" text-anchor="middle" letter-spacing="-2">RMSB</text>
-  <text x="600" y="228" font-family="Georgia,serif" font-size="22" font-style="italic" fill="${GOLD}" text-anchor="middle">Un chantier heureux</text>
+  <text x="600" y="185" font-family="'Nunito Sans',Arial,sans-serif" font-size="58" font-weight="300" fill="${BLUE}" text-anchor="middle" letter-spacing="-2">RMSB</text>
+  <text x="600" y="228" font-family="'Nunito Sans',Arial,sans-serif" font-size="22" font-weight="300" font-style="italic" fill="${GOLD}" text-anchor="middle">Un chantier heureux</text>
   <rect x="450" y="258" width="300" height="2" fill="url(#g)"/>
   <text x="600" y="340" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="${BLUE_DARK}" text-anchor="middle">${esc(t)}</text>
   <text x="600" y="405" font-family="Arial,sans-serif" font-size="21" fill="${GRAY}" text-anchor="middle">${esc(s)}</text>
@@ -78,15 +78,15 @@ function generateAlbum(title: string, location: string, cover?: string): string 
   <!-- Filet doré haut -->
   <rect x="0" y="0" width="1200" height="7" fill="url(#gold)"/>
   <!-- Logo RMSB haut gauche -->
-  <text x="60" y="76" font-family="Georgia,serif" font-size="40" font-weight="bold" fill="${WHITE}" letter-spacing="-1">RMSB</text>
-  <text x="60" y="102" font-family="Georgia,serif" font-size="14" font-style="italic" fill="${GOLD_LIGHT}">Un chantier heureux</text>
+  <text x="60" y="76" font-family="'Nunito Sans',Arial,sans-serif" font-size="40" font-weight="300" fill="${WHITE}" letter-spacing="-1">RMSB</text>
+  <text x="60" y="102" font-family="'Nunito Sans',Arial,sans-serif" font-size="14" font-weight="300" font-style="italic" fill="${GOLD_LIGHT}">Un chantier heureux</text>
   <!-- Badge Avant/Après haut droit -->
   <rect x="980" y="38" width="162" height="40" rx="20" fill="${GOLD}"/>
   <text x="1061" y="64" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="${WHITE}" text-anchor="middle">AVANT / APRÈS</text>
   <!-- Localisation -->
   <text x="60" y="490" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="${GOLD_LIGHT}">${esc(l)}</text>
   <!-- Titre -->
-  <text x="60" y="538" font-family="Georgia,serif" font-size="34" font-weight="bold" fill="${WHITE}">${esc(t)}</text>
+  <text x="60" y="538" font-family="'Nunito Sans',Arial,sans-serif" font-size="34" font-weight="300" fill="${WHITE}">${esc(t)}</text>
   <!-- CTA -->
   <rect x="60" y="564" width="320" height="48" rx="24" fill="${GOLD}"/>
   <text x="220" y="595" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="${WHITE}" text-anchor="middle">Demandez votre devis gratuit →</text>
