@@ -18,7 +18,7 @@ export function GuideInfrastructureSections() {
   return (
     <>
       {/* Section 5 - Plomberie */}
-      <section id="plomberie-renovation" className="py-8 bg-background scroll-mt-20">
+      <section id="plomberie-renovation-sdb" className="py-8 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -26,7 +26,7 @@ export function GuideInfrastructureSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={6} title="Plomberie salle de bain" tag="h3" />
+            <GuideSectionHeader number={6} title="Plomberie lors d'une rénovation de salle de bain" tag="h3" />
 
             <div className="border-l-2 p-3 mb-4" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#124A66' }}>À retenir</p>

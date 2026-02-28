@@ -107,7 +107,7 @@ export function GuideInspectionSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={4} title="Colonnes en fonte en copropriété" tag="h3" />
+            <GuideSectionHeader number={4} title="Colonnes en fonte en copropriété parisienne" tag="h3" />
 
             <div className="border-l-2 p-3 mb-4" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#124A66' }}>À retenir</p>

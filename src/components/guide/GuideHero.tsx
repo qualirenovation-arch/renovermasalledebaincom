@@ -21,8 +21,10 @@ export function GuideHero() {
               Le guide complet pour une rénovation durable et sans mauvaises surprises
             </p>
             <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Une salle de bain réussie ne se résume pas à un beau carrelage ou à une jolie robinetterie.
-              Elle repose avant tout sur des choix techniques solides, faits au bon moment, dans le bon ordre.
+              Ce guide travaux détaille toutes les étapes pour rénover une salle de bain à Paris et en Île-de-France : planning, étude technique en appartement parisien, démolition, étanchéité conforme au DTU 52.2, plomberie, pose carrelage et garanties décennales.
+            </p>
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed mt-3">
+              Que vous souhaitiez refaire une salle de bain ancienne ou moderniser un espace existant, chaque étape est expliquée avec une approche maître d'œuvre rigoureuse.
             </p>
           </motion.div>
         </div>

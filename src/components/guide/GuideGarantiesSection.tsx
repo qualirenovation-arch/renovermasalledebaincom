@@ -44,7 +44,7 @@ export function GuideGarantiesSection() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <GuideSectionHeader title="Garanties décennales" tag="h3" />
+          <GuideSectionHeader title="Garantie décennale en rénovation salle de bain" tag="h3" />
 
           <div className="border-l-2 p-5 mb-8" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
             <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#124A66' }}>À retenir</p>
