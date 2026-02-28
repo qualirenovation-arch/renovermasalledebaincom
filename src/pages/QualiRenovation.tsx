@@ -39,22 +39,18 @@ const QualiRenovation = () => {
       />
 
       {/* Hero */}
-      <section className="bg-gradient-to-b from-stone to-background pt-16 md:pt-24 lg:pt-32 pb-8 md:pb-12">
-        <div className="container mx-auto px-4 text-center md:text-left">
-          <h1 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary leading-[1.1] tracking-tight mb-5 md:mb-7">
-            UN CHANTIER<br />
-            HEUREUX<br />
-            POUR VOTRE <span className="italic font-normal text-gold">RÉNOVATION GLOBALE</span>
-          </h1>
-          <p className="text-muted-foreground text-base md:text-lg max-w-xl font-light">
-            Rénover votre appartement ou votre maison sans stress, sans mauvaises surprises, grâce à une coordination maîtrisée et un accompagnement de A&nbsp;à&nbsp;Z.
-          </p>
-        </div>
-      </section>
-
-      {/* Section principale : texte + photos */}
-      <section className="py-16 md:py-24">
+      <section className="bg-gradient-to-b from-stone to-background pt-16 md:pt-24 lg:pt-32 pb-16 md:pb-24">
         <div className="container mx-auto px-4">
+          <div className="text-center md:text-left mb-12 md:mb-16">
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary leading-[1.1] tracking-tight mb-5 md:mb-7">
+              UN CHANTIER<br />
+              HEUREUX<br />
+              POUR VOTRE <span className="italic font-normal text-gold">RÉNOVATION GLOBALE</span>
+            </h1>
+            <p className="text-muted-foreground text-base md:text-lg max-w-xl font-light">
+              Rénover votre appartement ou votre maison sans stress, sans mauvaises surprises, grâce à une coordination maîtrisée et un accompagnement de A&nbsp;à&nbsp;Z.
+            </p>
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 max-w-6xl mx-auto items-start">
 
             {/* Colonne gauche — Texte narratif */}
