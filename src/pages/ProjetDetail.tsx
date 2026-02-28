@@ -5,6 +5,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { AlbumCTA } from "@/components/albums/AlbumCTA";
+import { RelatedProjects } from "@/components/albums/RelatedProjects";
 import { OGTags } from "@/components/seo/OGTags";
 import { OG_BASE_URL, getAlbumOgData } from "@/lib/og";
 import { Album, Photo } from "@/data/albumsData";
@@ -266,6 +267,9 @@ const ProjetDetail = () => {
 
           {/* CTA Button after photos */}
           <AlbumCTA album={album} />
+
+          {/* Related projects for internal linking / SEO */}
+          <RelatedProjects currentAlbum={album} allAlbums={completedAlbums} />
 
           {/* Navigation between projects */}
           <motion.div 
