@@ -15,7 +15,8 @@ import { GuideComfortSections } from "@/components/guide/GuideComfortSections";
 import { GuideSummary } from "@/components/guide/GuideSummary";
 import { GuideGarantiesSection } from "@/components/guide/GuideGarantiesSection";
 import { Link } from "react-router-dom";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { QualiRenovationCTA } from "@/components/shared/QualiRenovationCTA";
 
 const jsonLdArticle = {
   "@context": "https://schema.org",
@@ -164,28 +165,12 @@ const Guide = () => {
                     </Link>
                   </div>
 
-                  {/* Bloc QualiRénovation */}
-                  <div className="border border-border/30 rounded p-6 text-center">
-                    <p className="text-base font-medium text-foreground mb-2">
-                      Besoin d'une rénovation globale à Paris ou en Île-de-France ?
-                    </p>
-                    <p className="text-sm text-muted-foreground mb-4">
-                      Découvrez notre société QualiRénovation spécialisée dans les chantiers d'ampleur.
-                    </p>
-                    <a
-                      href="https://qualirenovation.fr"
-                      target="_blank"
-                      rel="noopener"
-                      className="inline-flex items-center gap-2 text-sm font-medium hover:underline"
-                      style={{ color: '#124A66' }}
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      qualirenovation.fr
-                    </a>
-                  </div>
                 </div>
               </div>
             </section>
+
+            {/* Bloc QualiRénovation premium */}
+            <QualiRenovationCTA variant="full" />
           </div>
         </div>
 

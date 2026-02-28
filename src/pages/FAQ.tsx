@@ -7,6 +7,7 @@ import { ArrowRight, Plus, Minus, Play, Instagram } from "lucide-react";
 import { useState, useMemo } from "react";
 import { FAQStickyTOC } from "@/components/faq/FAQStickyTOC";
 import { FAQMobileTOC } from "@/components/faq/FAQMobileTOC";
+import { QualiRenovationCTA } from "@/components/shared/QualiRenovationCTA";
 
 const faqCategories = [
   {
@@ -603,6 +604,13 @@ export default function FAQ() {
             </motion.div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Bloc QualiRénovation compact */}
+      <section className="py-8">
+        <div className="container-custom px-4">
+          <QualiRenovationCTA variant="compact" />
         </div>
       </section>
 
