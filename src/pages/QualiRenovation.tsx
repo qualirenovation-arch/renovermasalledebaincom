@@ -92,24 +92,23 @@ const QualiRenovation = () => {
                 </Link>, qui soulignent une approche exigeante de la rénovation en appartement ancien et en contexte parisien.
               </p>
 
-              {/* Bloc signature */}
-              <div className="mt-10 pt-8 border-t border-border/40">
+              {/* Bloc signature expert */}
+              <div className="mt-10 rounded-xl bg-primary px-6 py-8 md:px-8 md:py-10">
                 <p
-                  className="italic font-light leading-[1.9]"
+                  className="italic font-light leading-[1.9] text-white/90"
                   style={{
                     fontSize: '1.15em',
-                    color: 'hsl(var(--primary))',
                     fontFamily: "'Nunito Sans', sans-serif",
                   }}
                 >
                   "L'exigence n'est pas une option.<br />
                   C'est une méthode."
                 </p>
-                <div className="mt-4">
+                <div className="mt-4 flex justify-end">
                   <img
                     src={carinaSig}
                     alt="Carina N."
-                    className="w-[100px] md:w-[130px] opacity-80"
+                    className="w-[100px] md:w-[150px] brightness-0 invert"
                   />
                 </div>
               </div>
