@@ -12,13 +12,13 @@ import {
 
 const tocCategories = [
   {
-    label: "Préparation d'un chantier de salle de bain",
+    label: "Préparation",
     icon: ClipboardList,
     items: [
-      { id: "section-planning", label: "Planning & Durée" },
-      { id: "section-1", label: "Visite chantier" },
-      { id: "section-2", label: "Démolition" },
-      { id: "section-3", label: "Fonte & syndic" },
+      { id: "duree-renovation-salle-de-bain", label: "Durée rénovation" },
+      { id: "visite-technique-appartement-parisien", label: "Visite chantier" },
+      { id: "demolition-inspection-reseaux", label: "Démolition" },
+      { id: "colonnes-fonte-copropriete", label: "Fonte & syndic" },
     ],
   },
   {
@@ -32,9 +32,9 @@ const tocCategories = [
     label: "Infrastructure",
     icon: Wrench,
     items: [
-      { id: "section-5", label: "Plomberie" },
-      { id: "section-6", label: "Étanchéité" },
-      { id: "section-7", label: "Receveur de douche" },
+      { id: "plomberie-renovation", label: "Plomberie" },
+      { id: "etancheite-salle-de-bain", label: "Étanchéité" },
+      { id: "receveur-douche-appartement", label: "Receveur de douche" },
       { id: "section-8", label: "Baignoire" },
       { id: "section-9", label: "Paroi de douche" },
       { id: "section-10", label: "WC, vasque & chauffe-eau" },
@@ -60,7 +60,7 @@ const tocCategories = [
     label: "Garanties",
     icon: Shield,
     items: [
-      { id: "section-garanties", label: "Nos garanties" },
+      { id: "garantie-decennale-salle-de-bain", label: "Garanties décennales" },
     ],
   },
 ];

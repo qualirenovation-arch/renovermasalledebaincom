@@ -18,7 +18,7 @@ export function GuideInfrastructureSections() {
   return (
     <>
       {/* Section 5 - Plomberie */}
-      <section id="section-5" className="py-8 bg-background scroll-mt-20">
+      <section id="plomberie-renovation" className="py-8 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -26,12 +26,12 @@ export function GuideInfrastructureSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={6} title="Plomberie : refaire entièrement pour éviter les fuites" />
+            <GuideSectionHeader number={6} title="Plomberie salle de bain" tag="h3" />
 
             <div className="border-l-2 p-3 mb-4" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#124A66' }}>À retenir</p>
               <ul className="space-y-0.5 text-sm" style={{ color: '#011115' }}>
-                <li>Le plomb est remplacé par du cuivre ou du multicouche</li>
+                <li>Pour refaire une salle de bain en appartement, le plomb est remplacé par du cuivre ou du multicouche</li>
                 <li>Des nourrices eau chaude / eau froide sont posées</li>
                 <li>Refaire à moitié, c'est prendre le risque de refaire deux fois</li>
               </ul>
@@ -65,7 +65,7 @@ export function GuideInfrastructureSections() {
       </section>
 
       {/* Section 6 - Étanchéité */}
-      <section id="section-6" className="py-8 bg-background scroll-mt-20">
+      <section id="etancheite-salle-de-bain" className="py-8 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -73,12 +73,12 @@ export function GuideInfrastructureSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={7} title="Étanchéité salle de bain : la base invisible" />
+            <GuideSectionHeader number={7} title="Étanchéité salle de bain – norme DTU 52.2" tag="h3" />
 
             <div className="border-l-2 p-3 mb-4" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#124A66' }}>À retenir</p>
               <ul className="space-y-0.5 text-sm" style={{ color: '#011115' }}>
-                <li>Système d'étanchéité sous carrelage obligatoire (SPEC)</li>
+                <li>Lors d'une rénovation salle de bain en Île-de-France, le système d'étanchéité sous carrelage est obligatoire (SPEC)</li>
                 <li>Bandes d'angles et traitement des points singuliers</li>
                 <li>Un joint seul ne fait jamais une étanchéité</li>
               </ul>
@@ -110,7 +110,7 @@ export function GuideInfrastructureSections() {
       </section>
 
       {/* Section 7 - Receveur de douche */}
-      <section id="section-7" className="py-8 bg-background scroll-mt-20">
+      <section id="receveur-douche-appartement" className="py-8 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -118,7 +118,7 @@ export function GuideInfrastructureSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={8} title="Receveur de douche : le bon choix" />
+            <GuideSectionHeader number={8} title="Receveur de douche en appartement" tag="h3" />
 
             <div className="border-l-2 p-3 mb-4" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#124A66' }}>À retenir</p>
@@ -171,7 +171,7 @@ export function GuideInfrastructureSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={9} title="Choisir sa baignoire" />
+            <GuideSectionHeader number={9} title="Choisir sa baignoire" tag="h3" />
 
             <div className="border-l-2 p-3 mb-4" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#124A66' }}>À retenir</p>
@@ -229,7 +229,7 @@ export function GuideInfrastructureSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={10} title="Paroi de douche : quelle ouverture, quelle couleur et quel verre choisir ?" />
+            <GuideSectionHeader number={10} title="Paroi de douche" tag="h3" />
 
             <div className="border-l-2 p-3 mb-4" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#124A66' }}>À retenir</p>
@@ -282,7 +282,7 @@ export function GuideInfrastructureSections() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <GuideSectionHeader number={11} title="WC, meuble vasque & chauffe-eau" />
+            <GuideSectionHeader number={11} title="WC, meuble vasque & chauffe-eau" tag="h3" />
 
             <div className="border-l-2 p-3 mb-4" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#124A66' }}>À retenir</p>

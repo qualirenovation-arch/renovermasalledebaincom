@@ -4,7 +4,7 @@ import carinaSig from "@/assets/carina-signature.svg";
 
 export function GuidePlanningSection() {
   return (
-    <section id="section-planning" className="py-8 bg-background scroll-mt-20">
+    <section id="duree-renovation-salle-de-bain" className="py-8 bg-background scroll-mt-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -13,14 +13,14 @@ export function GuidePlanningSection() {
           className="max-w-4xl mx-auto"
         >
           {/* ============ BLOC 1 : Durée & orchestration ============ */}
-          <GuideSectionHeader number={1} title="Planning & Durée" />
+          <GuideSectionHeader number={1} title="Durée d'une rénovation de salle de bain" tag="h3" />
           <p className="text-lg font-light text-muted-foreground -mt-4 mb-2">3 semaines à 1 mois</p>
 
           {/* À retenir */}
           <div className="border-l-2 p-3 mb-3" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
             <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#124A66' }}>À retenir</p>
             <ul className="space-y-0.5 text-sm" style={{ color: '#011115' }}>
-              <li>Une rénovation complète prend 3 semaines à 1 mois</li>
+              <li>Une rénovation de salle de bain à Paris prend 3 semaines à 1 mois</li>
               <li>Chaque corps de métier intervient dans un ordre précis</li>
               <li>Le maître d'œuvre coordonne l'ensemble</li>
             </ul>

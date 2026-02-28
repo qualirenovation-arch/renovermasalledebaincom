@@ -13,7 +13,7 @@ export function GuideHero() {
             className="max-w-3xl mx-auto text-center"
           >
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-light mb-4">
-              Réussir sa salle de bain : le guide travaux
+              Guide travaux rénovation salle de bain à Paris &amp; Île-de-France – renovermasalledebain.com
             </h1>
             {/* Gold underline */}
             <div className="w-[60px] h-[2px] mx-auto mb-6" style={{ backgroundColor: '#c2a016' }} />
@@ -38,7 +38,7 @@ export function GuideHero() {
             className="max-w-3xl mx-auto"
           >
             <p className="text-base text-muted-foreground italic border-l-2 pl-6 text-left" style={{ borderColor: '#c2a016' }}>
-              Ce guide reprend notre méthode, issue du terrain, pour concevoir et rénover une salle de bain qui fonctionne aujourd'hui… et encore dans 10 ans.
+              Ce guide reprend notre méthode, issue du terrain, pour concevoir et rénover une salle de bain en appartement parisien ou en Île-de-France — une salle de bain qui fonctionne aujourd'hui… et encore dans 10 ans.
             </p>
           </motion.div>
         </div>

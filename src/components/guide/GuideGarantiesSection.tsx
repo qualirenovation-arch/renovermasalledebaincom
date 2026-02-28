@@ -36,7 +36,7 @@ const garanties = [
 
 export function GuideGarantiesSection() {
   return (
-    <section id="section-garanties" className="py-8 bg-background scroll-mt-20">
+    <section id="garantie-decennale-salle-de-bain" className="py-8 bg-background scroll-mt-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,7 +44,7 @@ export function GuideGarantiesSection() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <GuideSectionHeader title="Nos garanties" />
+          <GuideSectionHeader title="Garanties décennales" tag="h3" />
 
           <div className="border-l-2 p-5 mb-8" style={{ borderColor: '#c2a016', backgroundColor: '#eaeaea' }}>
             <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#124A66' }}>À retenir</p>
