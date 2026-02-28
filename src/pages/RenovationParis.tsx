@@ -240,7 +240,7 @@ const RenovationParis = () => {
                 </p>
                 <p>
                   Pour en savoir plus, consultez la section dédiée dans notre{" "}
-                  <Link to="/guide-travaux#garanties-assurances-renovation" className="text-primary font-medium hover:underline">
+                  <Link to="/guide-travaux#garantie-decennale-salle-de-bain" className="text-primary font-medium hover:underline">
                     guide travaux
                   </Link>.
                 </p>

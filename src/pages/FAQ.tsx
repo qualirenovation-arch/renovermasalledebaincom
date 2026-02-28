@@ -16,12 +16,12 @@ const faqCategories = [
       {
         question: "Qu'est-ce qu'une douche à l'italienne dans une rénovation salle de bain ?",
         answer: "Une douche de plain-pied, sans marche ni receveur surélevé. Elle s'intègre au sol de la salle de bain pour un accès facile et un design épuré. C'est la solution idéale pour une salle de bain moderne et accessible.",
-        guideLink: "/guide-travaux#section-7"
+        guideLink: "/guide-travaux#receveur-douche-appartement"
       },
       {
         question: "Peut-on installer une douche à l'italienne pour rénover un appartement ancien ?",
         answer: "Oui, dans la plupart des appartements, même anciens. Notre maître d'œuvre réalise une étude de faisabilité gratuite pour évaluer les contraintes techniques (hauteur de réservation, évacuations) et vous proposer la meilleure solution.",
-        guideLink: "/guide-travaux#section-7"
+        guideLink: "/guide-travaux#receveur-douche-appartement"
       },
       {
         question: "Quel est le prix d'une rénovation de salle de bain à Paris ?",
@@ -30,7 +30,7 @@ const faqCategories = [
       {
         question: "Combien de temps faut-il pour refaire une salle de bain en appartement ?",
         answer: "Une rénovation de salle de bain en appartement dure généralement entre 3 semaines et 1 mois. Chaque artisan doit intervenir au bon moment : le plombier pose les fondations, le carreleur donne le rythme, et le peintre sublime l'ensemble en dernier.",
-        guideLink: "/guide-travaux#section-planning"
+        guideLink: "/guide-travaux#duree-renovation-salle-de-bain"
       },
       {
         question: "Proposez-vous une rénovation salle de bain clé en main ?",
@@ -48,7 +48,7 @@ const faqCategories = [
       {
         question: "Comment garantir l'étanchéité d'une salle de bain avec douche à l'italienne ?",
         answer: "Nous appliquons un système SEL/SPEC (Weber Aquastop) sur murs et sol avant carrelage, conformément au DTU 52.2. Photos de mise en œuvre envoyées systématiquement. Garantie étanchéité 10 ans + décennale MIC Assurances.",
-        guideLink: "/guide-travaux#section-6"
+        guideLink: "/guide-travaux#etancheite-salle-de-bain"
       },
       {
         question: "WC suspendu : bâti-support et plaques de déclenchement",
@@ -62,12 +62,12 @@ const faqCategories = [
       {
         question: "Faut-il refaire toute la plomberie lors d'une rénovation de salle de bain ?",
         answer: "Oui, dans la grande majorité des cas. Le plomb est remplacé par du cuivre ou du multicouche, et des nourrices eau chaude / eau froide sont posées pour sécuriser l'installation.",
-        guideLink: "/guide-travaux#section-5"
+        guideLink: "/guide-travaux#plomberie-renovation-sdb"
       },
       {
         question: "La bonde doit-elle rester accessible ?",
         answer: "Toujours. Une trappe d'accès carrelée est indispensable pour intervenir rapidement en cas de problème.",
-        guideLink: "/guide-travaux#section-7"
+        guideLink: "/guide-travaux#receveur-douche-appartement"
       },
       {
         question: "L'électricité est-elle remise aux normes lors d'une rénovation salle de bain ?",
@@ -77,7 +77,7 @@ const faqCategories = [
       {
         question: "Les finitions et profilés sont-ils importants en rénovation ?",
         answer: "Oui. Les profilés assurent la protection contre les chocs et l'humidité, et sont assortis aux robinetteries (noir mat, chrome, laiton, doré).",
-        guideLink: "/guide-travaux#section-8"
+        guideLink: "/guide-travaux#section-11"
       },
       {
         question: "Quels travaux de plomberie salle de bain réalisez-vous ?",
@@ -108,7 +108,7 @@ const faqCategories = [
       {
         question: "Le type de pose change-t-il la préparation du support ?",
         answer: "Oui. Une pose chevron ou décalée exige un support parfaitement plan. Un ragréage sol peut être nécessaire avant la pose du carrelage. En douche italienne, l'étanchéité autour du receveur type Wedi est obligatoire, quel que soit le type de pose choisi.",
-        guideLink: "/guide-travaux#section-6"
+        guideLink: "/guide-travaux#etancheite-salle-de-bain"
       }
     ]
   },
