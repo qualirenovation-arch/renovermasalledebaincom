@@ -27,8 +27,8 @@ const QualiRenovation = () => {
   return (
     <Layout>
       <OGTags
-        title="QualiRénovation – Rénovation globale à Paris | Maître d'œuvre"
-        description="QualiRénovation pilote des rénovations globales d'appartements et de maisons à Paris et en Île-de-France, sous la coordination d'un maître d'œuvre dédié."
+        title="QualiRénovation – Rénovation globale à Paris | Un chantier heureux"
+        description="QualiRénovation pilote des rénovations globales d'appartements et de maisons à Paris et en Île-de-France sous la coordination d'un maître d'œuvre dédié."
         path="/qualirenovation"
         coverImage="https://renovermasalledebain.com/og/default-og.jpg"
       />
@@ -45,17 +45,20 @@ const QualiRenovation = () => {
             <div className="flex justify-center mb-10">
               <LogoQualiRenovation width={240} height={58} />
             </div>
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-light mb-5" style={{ color: '#124A66' }}>
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-light mb-5 text-primary">
               QualiRénovation — Rénovation globale à Paris
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground font-light tracking-wide">
-              L'exigence d'une maîtrise d'œuvre intégrée
+            <p className="font-display text-xl md:text-2xl font-light tracking-wide text-primary">
+              Un chantier heureux.
+            </p>
+            <p className="text-base md:text-lg text-muted-foreground font-light tracking-wide mt-2">
+              Pensé dans sa globalité.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 3 — Texte principal */}
+      {/* 2 — Texte principal */}
       <section className="py-14 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto space-y-6 text-muted-foreground leading-relaxed text-base md:text-lg">
@@ -71,14 +74,14 @@ const QualiRenovation = () => {
               <p>Les décisions techniques sont anticipées.</p>
             </div>
             <p className="font-medium text-foreground pt-2">
-              Rien n'est improvisé.
+              Rien n'est laissé au hasard.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 4 — Signature manifeste */}
-      <section className="py-14 md:py-20" style={{ backgroundColor: '#124A66' }}>
+      {/* 3 — Signature manifeste */}
+      <section className="py-14 md:py-20 bg-primary">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <p
@@ -105,7 +108,7 @@ const QualiRenovation = () => {
         </div>
       </section>
 
-      {/* 5 — Autorité & Presse */}
+      {/* 4 — Autorité & Presse */}
       <section className="py-14 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
@@ -127,7 +130,7 @@ const QualiRenovation = () => {
         </div>
       </section>
 
-      {/* 6 — Carina Nahmani */}
+      {/* 5 — Carina Nahmani */}
       <section className="py-14 md:py-20 bg-secondary/20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto space-y-4 text-muted-foreground leading-relaxed text-base md:text-lg">
@@ -141,7 +144,7 @@ const QualiRenovation = () => {
         </div>
       </section>
 
-      {/* 7 — Lien d'entité */}
+      {/* 6 — Lien d'entité */}
       <section className="py-14 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-5">
@@ -153,19 +156,19 @@ const QualiRenovation = () => {
             </p>
             <div className="space-y-1 text-muted-foreground">
               <p>Deux expertises complémentaires.</p>
-              <p className="font-medium text-foreground">Une même exigence.</p>
+              <p className="font-medium text-foreground">Une même signature.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 8 — Différenciation */}
+      {/* 7 — Différenciation */}
       <section className="py-14 md:py-20 bg-secondary/20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="rounded-2xl border border-border/40 bg-card p-7 md:p-9 shadow-[0_4px_24px_-4px_hsl(0_0%_0%/0.06)]">
-                <h2 className="font-display text-lg font-light mb-2" style={{ color: '#124A66' }}>
+                <h2 className="font-display text-lg font-light mb-2 text-primary">
                   renovermasalledebain.com
                 </h2>
                 <p className="text-sm font-medium text-foreground mb-3">Rénovation de salle de bain</p>
@@ -174,7 +177,7 @@ const QualiRenovation = () => {
                 </p>
               </div>
               <div className="rounded-2xl border border-border/40 bg-card p-7 md:p-9 shadow-[0_4px_24px_-4px_hsl(0_0%_0%/0.06)]">
-                <h2 className="font-display text-lg font-light mb-2" style={{ color: '#124A66' }}>
+                <h2 className="font-display text-lg font-light mb-2 text-primary">
                   qualirenovation.fr
                 </h2>
                 <p className="text-sm font-medium text-foreground mb-3">Rénovation globale</p>
@@ -187,11 +190,11 @@ const QualiRenovation = () => {
         </div>
       </section>
 
-      {/* 9 — CTA final */}
+      {/* 8 — CTA final */}
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-display text-2xl md:text-3xl font-light mb-4" style={{ color: '#124A66' }}>
+            <h2 className="font-display text-2xl md:text-3xl font-light mb-4 text-primary">
               Votre projet dépasse la salle de bain ?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
