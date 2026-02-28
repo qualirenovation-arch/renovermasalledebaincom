@@ -79,7 +79,7 @@ async function sendExpiryNotification(
           <div class="container">
             <div class="header">
               <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
-                <tr><td align="center" class="logo-text">Ren<span class="accent">🚿</span>verMaSalleDeBain.com</td></tr>
+                <tr><td align="center" style="padding-bottom:6px;"><img src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/logo-renover.png" alt="RenoverMaSalleDeBain.com" width="180" style="width:180px;height:auto;" /></td></tr>
                 <tr><td align="center" class="logo-sub">Une expertise QUALIRÉNOVATION</td></tr>
               </table>
               <h1 style="color: #ffffff; margin: 10px 0 0;">QualiRénovation</h1>
