@@ -192,9 +192,9 @@ const handler = async (req: Request): Promise<Response> => {
 <style>
   body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; }
   .header { background: linear-gradient(135deg, #124A66 0%, #0d3a52 100%); color: white; padding: 24px 16px; text-align: center; }
-  .logo-text { font-family: 'Georgia', serif; font-weight: bold; color: #ffffff; letter-spacing: 0.5px; white-space: nowrap; font-size: 18px; }
+  .logo-text { font-family: 'Nunito Sans', Arial, sans-serif; font-weight: 300; color: #ffffff; letter-spacing: 0.5px; white-space: nowrap; font-size: 18px; }
   .logo-text .accent { color: #A0845C; }
-  .logo-sub { font-family: Arial, sans-serif; font-size: 9px; font-weight: 400; color: rgba(255,255,255,0.85); letter-spacing: 2.5px; padding-top: 2px; }
+  .logo-sub { font-family: 'Nunito Sans', Arial, sans-serif; font-size: 9px; font-weight: 400; color: rgba(255,255,255,0.85); letter-spacing: 2.5px; padding-top: 2px; }
   .content { padding: 30px; background: #f9f9f9; }
   .option-box { background: white; padding: 20px; border-radius: 8px; margin: 16px 0; border-left: 4px solid #124A66; }
   .option-box h3 { margin-top: 0; color: #124A66; font-size: 16px; }

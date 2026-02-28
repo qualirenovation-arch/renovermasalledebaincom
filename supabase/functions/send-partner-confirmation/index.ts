@@ -484,21 +484,31 @@ const handler = async (req: Request): Promise<Response> => {
           <head>
             <meta charset="utf-8">
             <style>
-              body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; }
+              body { font-family: 'Montserrat', Arial, sans-serif; line-height: 1.6; color: #333; }
               .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-              .header { text-align: center; padding: 20px 0; border-bottom: 2px solid #124A66; }
-              .header img { max-width: 180px; margin-bottom: 10px; }
+              .header { text-align: center; padding: 24px 16px; background: linear-gradient(135deg, #124A66 0%, #0d3a52 100%); border-radius: 8px 8px 0 0; }
+              .logo-text { font-family: 'Nunito Sans', Arial, sans-serif; font-weight: 300; color: #ffffff; letter-spacing: 0.5px; white-space: nowrap; font-size: 18px; }
+              .logo-text .accent { color: #A0845C; }
+              .logo-sub { font-family: 'Nunito Sans', Arial, sans-serif; font-size: 9px; font-weight: 400; color: rgba(255,255,255,0.85); letter-spacing: 2.5px; padding-top: 2px; }
               .content { padding: 30px 0; }
               .footer { padding-top: 20px; border-top: 1px solid #eee; font-size: 14px; color: #666; }
               .highlight { background-color: #f8f5f0; padding: 15px; border-radius: 8px; margin: 20px 0; }
+              @media only screen and (max-width: 480px) {
+                .logo-text { font-size: 14px !important; }
+                .logo-sub { font-size: 8px !important; letter-spacing: 1.5px !important; }
+              }
             </style>
           </head>
           <body>
             <div class="container">
               <div class="header">
-                <img src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/logo-rmsb-new.png" alt="Rénover Ma Salle de Bain" />
-                <h1 style="color: #124A66; margin: 0;">QualiRénovation</h1>
-                <p style="color: #666; margin: 5px 0 0;">by QualiConcept</p>
+                <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
+                  <tr><td align="center" class="logo-text">Ren<span class="accent">🚿</span>verMaSalleDeBain.com</td></tr>
+                  <tr><td align="center" class="logo-sub">Une expertise QUALIRÉNOVATION</td></tr>
+                </table>
+                <h1 style="color: #ffffff; margin: 10px 0 0;">QualiRénovation</h1>
+                <p style="color: rgba(255,255,255,0.85); margin: 5px 0 0;">by QualiConcept</p>
+              </div>
               </div>
               <div class="content">
                 <p>Bonjour,</p>
@@ -543,7 +553,7 @@ const handler = async (req: Request): Promise<Response> => {
           <head>
             <meta charset="utf-8">
             <style>
-              body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; }
+              body { font-family: 'Montserrat', Arial, sans-serif; line-height: 1.6; color: #333; }
               .container { max-width: 600px; margin: 0 auto; padding: 20px; }
               .header { background-color: ${hasMissingDocs ? '#f59e0b' : '#1a1a1a'}; color: white; padding: 20px; text-align: center; }
               .content { padding: 20px; background-color: #f8f8f8; }
