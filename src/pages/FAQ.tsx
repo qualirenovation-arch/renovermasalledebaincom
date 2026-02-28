@@ -10,33 +10,112 @@ import { FAQMobileTOC } from "@/components/faq/FAQMobileTOC";
 
 const faqCategories = [
   {
-    title: "Notre entreprise",
+    title: "Rénovation salle de bain",
     questions: [
       {
-        question: "Pourquoi choisir votre entreprise de salle de bain à Paris ?",
-        answer: "renovermasalledebain.com (Qualirenovation by Qualiconcept) repose sur une promesse simple : Un chantier heureux. Notre maître d'œuvre Carina, forte de 20 ans d'expérience sur les chantiers parisiens, coordonne chaque projet de A à Z. Dès le premier rendez-vous, une visite technique gratuite permet d'analyser la faisabilité et de présenter tous les plans possibles. Nous sommes certifiés Schlüter et Wedi, assurés chez MIC Assurances, et vous bénéficiez d'un suivi visuel quotidien par WhatsApp et vidéo.",
-        guideLink: "/guide-travaux"
+        question: "Qu'est-ce qu'une douche à l'italienne dans une rénovation salle de bain ?",
+        answer: "Une douche de plain-pied, sans marche ni receveur surélevé. Elle s'intègre au sol de la salle de bain pour un accès facile et un design épuré. C'est la solution idéale pour une salle de bain moderne et accessible.",
+        guideLink: "/guide-travaux#section-7"
       },
       {
-        question: "Quelle est votre zone d'intervention ?",
-        answer: "Nous intervenons sur Paris et toute l'Île-de-France : Paris (75), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94), Yvelines (78), Essonne (91), Val-d'Oise (95) et Seine-et-Marne (77). Déplacement gratuit pour l'étude de votre projet."
+        question: "Peut-on installer une douche à l'italienne pour rénover un appartement ancien ?",
+        answer: "Oui, dans la plupart des appartements, même anciens. Notre maître d'œuvre réalise une étude de faisabilité gratuite pour évaluer les contraintes techniques (hauteur de réservation, évacuations) et vous proposer la meilleure solution.",
+        guideLink: "/guide-travaux#section-7"
       },
       {
-        question: "Qu'est-ce qu'un maître d'œuvre salle de bain ?",
-        answer: "Le maître d'œuvre salle de bain est votre chef de projet dédié. Il coordonne tous les corps de métier (plomberie salle de bain, carrelage, électricité), contrôle la qualité des travaux, veille au respect du budget et des délais. Chez nous, Carina supervise personnellement chaque chantier."
+        question: "Quel est le prix d'une rénovation de salle de bain à Paris ?",
+        answer: "Le coût d'une rénovation de salle de bain à Paris varie selon la surface, les matériaux choisis et l'ampleur des travaux. Pour une rénovation complète clé en main, comptez entre 800€ et 1 500€/m². Nous établissons un devis détaillé gratuit avec photos via Graneet pour une transparence totale – zéro mauvaise surprise."
+      },
+      {
+        question: "Combien de temps faut-il pour refaire une salle de bain en appartement ?",
+        answer: "Une rénovation de salle de bain en appartement dure généralement entre 3 semaines et 1 mois. Chaque artisan doit intervenir au bon moment : le plombier pose les fondations, le carreleur donne le rythme, et le peintre sublime l'ensemble en dernier.",
+        guideLink: "/guide-travaux#section-planning"
+      },
+      {
+        question: "Proposez-vous une rénovation salle de bain clé en main ?",
+        answer: "Oui, nous proposons une rénovation salle de bain clé en main : de la conception à la livraison, nous gérons l'intégralité du projet. Plomberie, étanchéité, carrelage, électricité, peinture et finitions – un seul interlocuteur pour tous les corps de métier."
+      },
+      {
+        question: "Intervenez-vous pour rénover une petite salle de bain à Paris ?",
+        answer: "Absolument ! Nous sommes spécialistes de la rénovation de salle de bain en appartement parisien, souvent avec des contraintes d'espace. Notre expertise nous permet d'optimiser chaque centimètre carré pour créer une salle de bain moderne et fonctionnelle."
       }
     ]
   },
   {
-    title: "Notre engagement",
-    intro: "Cette FAQ répond à vos interrogations. Mais parce que nous sommes avant tout dans une relation humaine, tout est dit dès le départ, avant le premier coup de marteau. Le devis est clair, précis, et chaque étape est expliquée en amont. → Aucune surprise, aucun coût caché, budget maîtrisé.",
-    questions: []
+    title: "Travaux, matériaux, pose carrelage & profilés",
+    questions: [
+      {
+        question: "Comment garantir l'étanchéité d'une salle de bain avec douche à l'italienne ?",
+        answer: "Nous appliquons un système SEL/SPEC (Weber Aquastop) sur murs et sol avant carrelage, conformément au DTU 52.2. Photos de mise en œuvre envoyées systématiquement. Garantie étanchéité 10 ans + décennale MIC Assurances.",
+        guideLink: "/guide-travaux#section-6"
+      },
+      {
+        question: "WC suspendu : bâti-support et plaques de déclenchement",
+        answer: "Le WC suspendu repose sur un bâti-support Geberit encastré. La plaque de déclenchement est livrée en blanc par défaut (surcoût pour noir, laiton ou chromé). Nous recommandons les cuvettes sans bride pour l'hygiène.",
+        guideLink: "/guide-travaux#section-10"
+      },
+      {
+        question: "Le WC doit-il rester fonctionnel pendant les travaux de rénovation ?",
+        answer: "Si le WC est situé dans une pièce indépendante de la salle de bain, il doit rester accessible et utilisable pendant toute la durée des travaux. En revanche, si le WC est intégré à la salle de bain en cours de rénovation, son utilisation sera temporairement interrompue."
+      },
+      {
+        question: "Faut-il refaire toute la plomberie lors d'une rénovation de salle de bain ?",
+        answer: "Oui, dans la grande majorité des cas. Le plomb est remplacé par du cuivre ou du multicouche, et des nourrices eau chaude / eau froide sont posées pour sécuriser l'installation.",
+        guideLink: "/guide-travaux#section-5"
+      },
+      {
+        question: "La bonde doit-elle rester accessible ?",
+        answer: "Toujours. Une trappe d'accès carrelée est indispensable pour intervenir rapidement en cas de problème.",
+        guideLink: "/guide-travaux#section-7"
+      },
+      {
+        question: "L'électricité est-elle remise aux normes lors d'une rénovation salle de bain ?",
+        answer: "Oui, systématiquement : volumes de sécurité, mise à la terre, disjoncteur 30mA, conformité NF C 15-100.",
+        guideLink: "/guide-travaux#section-13"
+      },
+      {
+        question: "Les finitions et profilés sont-ils importants en rénovation ?",
+        answer: "Oui. Les profilés assurent la protection contre les chocs et l'humidité, et sont assortis aux robinetteries (noir mat, chrome, laiton, doré).",
+        guideLink: "/guide-travaux#section-8"
+      },
+      {
+        question: "Quels travaux de plomberie salle de bain réalisez-vous ?",
+        answer: "Nous réalisons tous les travaux de plomberie salle de bain : dépose et repose des équipements sanitaires, création ou déplacement des arrivées d'eau et évacuations, installation de robinetterie (chrome, noir, laiton, nickel mat), raccordements et mise en conformité."
+      },
+      {
+        question: "Quel carrelage choisir pour une salle de bain moderne ?",
+        answer: "Pour une salle de bain moderne, nous recommandons les carrelages grand format (60x120 ou plus) qui agrandissent visuellement l'espace, les imitations pierre naturelle ou béton ciré, et les faïences décoratives pour créer des ambiances uniques."
+      },
+      {
+        question: "Posez-vous des baignoires lors d'une rénovation ?",
+        answer: "Oui, nous installons des baignoires îlots, encastrées ou d'angle selon votre projet. Nous pouvons également transformer une baignoire en douche à l'italienne si vous souhaitez gagner de l'espace.",
+        guideLink: "/guide-travaux#section-10"
+      },
+      {
+        question: "Quels sont les types de pose de carrelage salle de bain ?",
+        answer: "En rénovation salle de bain à Paris, les principaux types de pose de carrelage sont : Pose droite (alignée) — idéale pour carrelage grand format 60×60 ou 120×60. Pose décalée (1/3 recommandé) — adaptée aux formats rectangulaires et imitation parquet. Pose chevron / en V — pose technique et haut de gamme. Le choix dépend du format du carreau, de la surface et de la planéité du support.",
+        guideLink: "/guide-travaux#section-8"
+      },
+      {
+        question: "Le type de pose influence-t-il le prix de la pose carrelage salle de bain ?",
+        answer: "Oui. Une pose droite salle de bain est plus rapide à exécuter qu'une pose chevron, qui nécessite découpes précises et calepinage millimétré. À Paris : Pose droite — 90 €/m² ; Pose chevron — 120 €/m². Le tarif inclut primaire, colle adaptée et joint."
+      },
+      {
+        question: "Quel type de pose choisir pour un carrelage grand format ?",
+        answer: "Pour un carrelage grand format (60×60, 120×60), la pose droite est recommandée pour limiter les défauts visuels. Une pose décalée 50 % est déconseillée car elle accentue les irrégularités du support. Le double encollage et une colle déformable C2S1 ou S2 sont indispensables."
+      },
+      {
+        question: "Le type de pose change-t-il la préparation du support ?",
+        answer: "Oui. Une pose chevron ou décalée exige un support parfaitement plan. Un ragréage sol peut être nécessaire avant la pose du carrelage. En douche italienne, l'étanchéité autour du receveur type Wedi est obligatoire, quel que soit le type de pose choisi.",
+        guideLink: "/guide-travaux#section-6"
+      }
+    ]
   },
   {
     title: "Devis, budget et validation",
     questions: [
       {
-        question: "Comment valider le devis ?",
+        question: "Comment valider le devis de rénovation salle de bain ?",
         answer: "Le devis doit être signé et retourné, accompagné du premier acompte, par virement uniquement sur notre compte société. Le RIB, le montant de l'acompte et les CGV sont intégrés directement au devis. Tout est clair, au même endroit."
       },
       {
@@ -46,10 +125,23 @@ const faqCategories = [
     ]
   },
   {
+    title: "Suivi de chantier",
+    questions: [
+      {
+        question: "Qui gère le chantier de rénovation salle de bain ?",
+        answer: "Un interlocuteur unique assure : la coordination des artisans, le respect du planning, le contrôle qualité, et les points réguliers avec vous."
+      },
+      {
+        question: "Comment suivre mon chantier si je suis très occupé, en province ou à l'étranger ?",
+        answer: "Nous assurons un suivi à distance avec : photos, comptes-rendus, échanges téléphone ou visio si nécessaire."
+      }
+    ]
+  },
+  {
     title: "Plans, croquis et 3D",
     questions: [
       {
-        question: "Faites-vous des plans ou des 3D ?",
+        question: "Faites-vous des plans ou des 3D pour une rénovation salle de bain ?",
         answer: "Pour les petites surfaces, un croquis et la présentation de projets similaires suffisent généralement. La 3D est possible, si le projet le nécessite et si c'est votre souhait, via un forfait dédié."
       },
       {
@@ -60,23 +152,10 @@ const faqCategories = [
     ]
   },
   {
-    title: "Suivi de chantier",
-    questions: [
-      {
-        question: "Qui gère le chantier ?",
-        answer: "Un interlocuteur unique assure : la coordination des artisans, le respect du planning, le contrôle qualité, et les points réguliers avec vous."
-      },
-      {
-        question: "Comment suivre mon chantier si je suis très occupé, en province ou à l'étranger ?",
-        answer: "Nous assurons un suivi à distance avec : photos, comptes-rendus, échanges téléphone ou visio si nécessaire."
-      }
-    ]
-  },
-  {
     title: "Démolition & vérifications techniques",
     questions: [
       {
-        question: "Vérifiez-vous l'existant ?",
+        question: "Vérifiez-vous l'existant avant de rénover la salle de bain ?",
         answer: "Oui, systématiquement après la démolition : réseaux, évacuations, colonnes en fonte ou en plomb, accès techniques et compteurs. → C'est le bon moment pour corriger, afin d'éviter de recasser plus tard."
       }
     ]
@@ -85,7 +164,7 @@ const faqCategories = [
     title: "Copropriété, syndic et voisins",
     questions: [
       {
-        question: "Le syndic est-il informé ?",
+        question: "Le syndic est-il informé des travaux de rénovation ?",
         answer: "Oui. Dès le devis signé, vous recevez : un avis de travaux à afficher, un mail type à adresser au syndic. Les voisins sont informés et les parties communes sont protégées. → Nous ne faisons pas de travaux à la sauvage."
       }
     ]
@@ -94,7 +173,7 @@ const faqCategories = [
     title: "Assurances",
     questions: [
       {
-        question: "Êtes-vous assuré ?",
+        question: "Êtes-vous assuré pour la rénovation de salle de bain ?",
         answer: "Oui. Nous sommes assurés en décennale et en responsabilité civile professionnelle auprès de MIC Insurance. Conformément à nos obligations légales, les références de notre contrat d'assurance sont inscrites sur chaque devis, et un exemplaire de l'attestation vous est remis avant signature. Les attestations sont également transmises au syndic avec les avis de travaux."
       },
       {
@@ -107,54 +186,26 @@ const faqCategories = [
     title: "Réception des travaux",
     questions: [
       {
-        question: "Comment se passe la réception du chantier ?",
+        question: "Comment se passe la réception d'un chantier de rénovation salle de bain ?",
         answer: "Nous organisons une réunion de pré-réception pour lister les finitions et détails à ajuster. Une fois ces points traités, le procès-verbal de réception de chantier est signé. → La signature du PV marque la fin officielle des travaux et le démarrage des garanties."
       }
     ]
   },
   {
-    title: "Inspirations & réalisations",
+    title: "Notre entreprise",
     questions: [
       {
-        question: "Où puis-je voir vos réalisations ?",
-        answer: "Nous partageons régulièrement nos réalisations et conseils techniques. → Les photos valent souvent mieux que mille explications !",
-        actionLinks: [
-          { type: "internal", label: "Voir nos réalisations", link: "/realisations" },
-          { type: "instagram", label: "Instagram", link: "https://www.instagram.com/qualirenovation__travaux/" },
-          { type: "houzz", label: "Houzz", link: "https://www.houzz.fr/pro/qualirenovation/qualirenovation" }
-        ]
-      }
-    ]
-  },
-  {
-    title: "Rénovation salle de bain",
-    questions: [
-      {
-        question: "Qu'est-ce qu'une douche à l'italienne ?",
-        answer: "Une douche de plain-pied, sans marche ni receveur surélevé. Elle s'intègre au sol de la salle de bain pour un accès facile et un design épuré. C'est la solution idéale pour une salle de bain moderne et accessible.",
-        guideLink: "/guide-travaux#section-7"
+        question: "Pourquoi choisir votre entreprise de rénovation salle de bain à Paris ?",
+        answer: "renovermasalledebain.com (Qualirenovation by Qualiconcept) repose sur une promesse simple : Un chantier heureux. Notre maître d'œuvre Carina, forte de 20 ans d'expérience sur les chantiers parisiens, coordonne chaque projet de A à Z. Dès le premier rendez-vous, une visite technique gratuite permet d'analyser la faisabilité et de présenter tous les plans possibles. Nous sommes certifiés Schlüter et Wedi, assurés chez MIC Assurances, et vous bénéficiez d'un suivi visuel quotidien par WhatsApp et vidéo.",
+        guideLink: "/guide-travaux"
       },
       {
-        question: "Peut-on installer une douche à l'italienne dans un appartement ancien ?",
-        answer: "Oui, dans la plupart des appartements, même anciens. Notre maître d'œuvre réalise une étude de faisabilité gratuite pour évaluer les contraintes techniques (hauteur de réservation, évacuations) et vous proposer la meilleure solution.",
-        guideLink: "/guide-travaux#section-7"
+        question: "Quelle est votre zone d'intervention pour rénover une salle de bain ?",
+        answer: "Nous intervenons sur Paris et toute l'Île-de-France : Paris (75), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94), Yvelines (78), Essonne (91), Val-d'Oise (95) et Seine-et-Marne (77). Déplacement gratuit pour l'étude de votre projet."
       },
       {
-        question: "Combien coûte une rénovation de salle de bain à Paris ?",
-        answer: "Le coût d'une rénovation de salle de bain à Paris varie selon la surface, les matériaux choisis et l'ampleur des travaux. Pour une rénovation complète clé en main, comptez entre 800€ et 1 500€/m². Nous établissons un devis détaillé gratuit avec photos via Graneet pour une transparence totale – zéro mauvaise surprise."
-      },
-      {
-        question: "Combien de temps dure une rénovation de salle de bain en appartement ?",
-        answer: "Une rénovation de salle de bain en appartement dure généralement entre 3 semaines et 1 mois. Chaque artisan doit intervenir au bon moment : le plombier pose les fondations, le carreleur donne le rythme, et le peintre sublime l'ensemble en dernier.",
-        guideLink: "/guide-travaux#section-planning"
-      },
-      {
-        question: "Proposez-vous une rénovation salle de bain clé en main ?",
-        answer: "Oui, nous proposons une rénovation salle de bain clé en main : de la conception à la livraison, nous gérons l'intégralité du projet. Plomberie, étanchéité, carrelage, électricité, peinture et finitions – un seul interlocuteur pour tous les corps de métier."
-      },
-      {
-        question: "Intervenez-vous pour la rénovation de petites salles de bain ?",
-        answer: "Absolument ! Nous sommes spécialistes de la rénovation de salle de bain en appartement parisien, souvent avec des contraintes d'espace. Notre expertise nous permet d'optimiser chaque centimètre carré pour créer une salle de bain moderne et fonctionnelle."
+        question: "Qu'est-ce qu'un maître d'œuvre en rénovation salle de bain ?",
+        answer: "Le maître d'œuvre salle de bain est votre chef de projet dédié. Il coordonne tous les corps de métier (plomberie salle de bain, carrelage, électricité), contrôle la qualité des travaux, veille au respect du budget et des délais. Chez nous, Carina supervise personnellement chaque chantier."
       }
     ]
   },
@@ -199,75 +250,24 @@ const faqCategories = [
     ]
   },
   {
-    title: "Travaux, matériaux, pose carrelage & profilés",
+    title: "Inspirations & réalisations",
     questions: [
       {
-        question: "Comment garantissez-vous l'étanchéité d'une douche à l'italienne ?",
-        answer: "Nous appliquons un système SEL/SPEC (Weber Aquastop) sur murs et sol avant carrelage, conformément au DTU 52.2. Photos de mise en œuvre envoyées systématiquement. Garantie étanchéité 10 ans + décennale MIC Assurances.",
-        guideLink: "/guide-travaux#section-6"
-      },
-      {
-        question: "WC suspendu : bâti-support et plaques de déclenchement",
-        answer: "Le WC suspendu repose sur un bâti-support Geberit encastré. La plaque de déclenchement est livrée en blanc par défaut (surcoût pour noir, laiton ou chromé). Nous recommandons les cuvettes sans bride pour l'hygiène.",
-        guideLink: "/guide-travaux#section-10"
-      },
-      {
-        question: "Le WC doit-il rester fonctionnel pendant les travaux ?",
-        answer: "Si le WC est situé dans une pièce indépendante de la salle de bain, il doit rester accessible et utilisable pendant toute la durée des travaux. En revanche, si le WC est intégré à la salle de bain en cours de rénovation, son utilisation sera temporairement interrompue."
-      },
-      {
-        question: "Faut-il refaire toute la plomberie lors d'une rénovation ?",
-        answer: "Oui, dans la grande majorité des cas. Le plomb est remplacé par du cuivre ou du multicouche, et des nourrices eau chaude / eau froide sont posées pour sécuriser l'installation.",
-        guideLink: "/guide-travaux#section-5"
-      },
-      {
-        question: "La bonde doit-elle rester accessible ?",
-        answer: "Toujours. Une trappe d'accès carrelée est indispensable pour intervenir rapidement en cas de problème.",
-        guideLink: "/guide-travaux#section-7"
-      },
-      {
-        question: "L'électricité est-elle remise aux normes ?",
-        answer: "Oui, systématiquement : volumes de sécurité, mise à la terre, disjoncteur 30mA, conformité NF C 15-100.",
-        guideLink: "/guide-travaux#section-13"
-      },
-      {
-        question: "Les finitions et profilés sont-ils importants ?",
-        answer: "Oui. Les profilés assurent la protection contre les chocs et l'humidité, et sont assortis aux robinetteries (noir mat, chrome, laiton, doré).",
-        guideLink: "/guide-travaux#section-8"
-      },
-      {
-        question: "Quels travaux de plomberie réalisez-vous ?",
-        answer: "Nous réalisons tous les travaux de plomberie salle de bain : dépose et repose des équipements sanitaires, création ou déplacement des arrivées d'eau et évacuations, installation de robinetterie (chrome, noir, laiton, nickel mat), raccordements et mise en conformité."
-      },
-      {
-        question: "Quel carrelage pour une salle de bain moderne ?",
-        answer: "Pour une salle de bain moderne, nous recommandons les carrelages grand format (60x120 ou plus) qui agrandissent visuellement l'espace, les imitations pierre naturelle ou béton ciré, et les faïences décoratives pour créer des ambiances uniques."
-      },
-      {
-        question: "Posez-vous des baignoires ?",
-        answer: "Oui, nous installons des baignoires îlots, encastrées ou d'angle selon votre projet. Nous pouvons également transformer une baignoire en douche à l'italienne si vous souhaitez gagner de l'espace.",
-        guideLink: "/guide-travaux#section-10"
-      },
-      {
-        question: "Quels sont les différents types de pose de carrelage salle de bain ?",
-        answer: "En rénovation salle de bain à Paris, les principaux types de pose de carrelage sont : Pose droite (alignée) — idéale pour carrelage grand format 60×60 ou 120×60. Pose décalée (1/3 recommandé) — adaptée aux formats rectangulaires et imitation parquet. Pose chevron / en V — pose technique et haut de gamme. Le choix dépend du format du carreau, de la surface et de la planéité du support.",
-        guideLink: "/guide-travaux#section-8"
-      },
-      {
-        question: "Le type de pose influence-t-il le prix de la pose carrelage ?",
-        answer: "Oui. Une pose droite salle de bain est plus rapide à exécuter qu'une pose chevron, qui nécessite découpes précises et calepinage millimétré. À Paris : Pose droite — 90 €/m² ; Pose chevron — 120 €/m². Le tarif inclut primaire, colle adaptée et joint."
-      },
-      {
-        question: "Quel type de pose choisir pour un carrelage grand format ?",
-        answer: "Pour un carrelage grand format (60×60, 120×60), la pose droite est recommandée pour limiter les défauts visuels. Une pose décalée 50 % est déconseillée car elle accentue les irrégularités du support. Le double encollage et une colle déformable C2S1 ou S2 sont indispensables."
-      },
-      {
-        question: "Le type de pose change-t-il la préparation du support ?",
-        answer: "Oui. Une pose chevron ou décalée exige un support parfaitement plan. Un ragréage sol peut être nécessaire avant la pose du carrelage. En douche italienne, l'étanchéité autour du receveur type Wedi est obligatoire, quel que soit le type de pose choisi.",
-        guideLink: "/guide-travaux#section-6"
+        question: "Où puis-je voir vos réalisations de rénovation salle de bain ?",
+        answer: "Nous partageons régulièrement nos réalisations et conseils techniques. → Les photos valent souvent mieux que mille explications !",
+        actionLinks: [
+          { type: "internal", label: "Voir nos réalisations", link: "/realisations" },
+          { type: "instagram", label: "Instagram", link: "https://www.instagram.com/qualirenovation__travaux/" },
+          { type: "houzz", label: "Houzz", link: "https://www.houzz.fr/pro/qualirenovation/qualirenovation" }
+        ]
       }
     ]
-  }
+  },
+  {
+    title: "Notre engagement",
+    intro: "Cette FAQ répond à vos interrogations. Mais parce que nous sommes avant tout dans une relation humaine, tout est dit dès le départ, avant le premier coup de marteau. Le devis est clair, précis, et chaque étape est expliquée en amont. → Aucune surprise, aucun coût caché, budget maîtrisé.",
+    questions: []
+  },
 ];
 
 type ActionLink = {
@@ -278,28 +278,32 @@ type ActionLink = {
 
 function FAQItem({ question, answer, isOpen, onClick, instagramLink, instagramProfileLink, guideLink, actionLinks }: { question: string; answer: string; isOpen: boolean; onClick: () => void; instagramLink?: string; instagramProfileLink?: string; guideLink?: string; actionLinks?: ActionLink[] }) {
   return (
-    <motion.div 
-      className="border-b border-border last:border-b-0"
-      initial={false}
-    >
-      <button
-        className="w-full py-5 flex items-center justify-between text-left gap-4"
-        onClick={onClick}
-      >
-        <span className="font-display text-lg font-medium text-foreground">{question}</span>
-        <div className="w-8 h-8 rounded-full bg-accent/30 flex items-center justify-center flex-shrink-0">
-          {isOpen ? (
-            <Minus className="w-4 h-4 text-wood" />
-          ) : (
-            <Plus className="w-4 h-4 text-wood" />
-          )}
-        </div>
-      </button>
-      <motion.div
-        initial={false}
-        animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="overflow-hidden"
+    <div className="border-b border-border last:border-b-0">
+      <h3>
+        <button
+          className="w-full py-5 flex items-center justify-between text-left gap-4"
+          onClick={onClick}
+          aria-expanded={isOpen}
+        >
+          <span className="font-display text-lg font-medium text-foreground">{question}</span>
+          <div className="w-8 h-8 rounded-full bg-accent/30 flex items-center justify-center flex-shrink-0">
+            {isOpen ? (
+              <Minus className="w-4 h-4 text-wood" />
+            ) : (
+              <Plus className="w-4 h-4 text-wood" />
+            )}
+          </div>
+        </button>
+      </h3>
+      {/* Answer always in DOM for SEO crawlers, visually hidden when closed */}
+      <div
+        style={{
+          height: isOpen ? "auto" : 0,
+          opacity: isOpen ? 1 : 0,
+          overflow: "hidden",
+          transition: "height 0.3s ease-in-out, opacity 0.3s ease-in-out",
+        }}
+        aria-hidden={!isOpen}
       >
         <p className="pb-3 text-muted-foreground leading-relaxed">{answer}</p>
         
@@ -386,8 +390,8 @@ function FAQItem({ question, answer, isOpen, onClick, instagramLink, instagramPr
           </a>
         )}
         {!instagramLink && !instagramProfileLink && !guideLink && !actionLinks && <div className="pb-2" />}
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 }
 
@@ -409,27 +413,51 @@ export default function FAQ() {
     setOpenItems(prev => ({ ...prev, [key]: !prev[key] }));
   };
 
-  // JSON-LD Schema for FAQ
+  // JSON-LD Schema for FAQ — strategic questions only
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqCategories.flatMap(category => 
-      category.questions.map(q => ({
+    "mainEntity": [
+      {
         "@type": "Question",
-        "name": q.question,
+        "name": "Quel est le prix d'une rénovation de salle de bain à Paris ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": q.answer
+          "text": "Le coût d'une rénovation de salle de bain à Paris varie selon la surface, les matériaux choisis et l'ampleur des travaux. Pour une rénovation complète clé en main, comptez entre 800€ et 1 500€/m². Nous établissons un devis détaillé gratuit avec photos via Graneet pour une transparence totale – zéro mauvaise surprise."
         }
-      }))
-    )
+      },
+      {
+        "@type": "Question",
+        "name": "Combien de temps faut-il pour refaire une salle de bain ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Une rénovation de salle de bain en appartement dure généralement entre 3 semaines et 1 mois. Chaque artisan doit intervenir au bon moment : le plombier pose les fondations, le carreleur donne le rythme, et le peintre sublime l'ensemble en dernier."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment garantir l'étanchéité d'une salle de bain ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nous appliquons un système SEL/SPEC (Weber Aquastop) sur murs et sol avant carrelage, conformément au DTU 52.2. Photos de mise en œuvre envoyées systématiquement. Garantie étanchéité 10 ans + décennale MIC Assurances."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Faut-il refaire toute la plomberie lors d'une rénovation de salle de bain ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, dans la grande majorité des cas. Le plomb est remplacé par du cuivre ou du multicouche, et des nourrices eau chaude / eau froide sont posées pour sécuriser l'installation."
+        }
+      }
+    ]
   };
 
   return (
     <Layout>
       <OGTags
-        title="Questions fréquentes – FAQ"
-        description="Réponses à vos questions sur la rénovation de salle de bain : durée des travaux, budget, matériaux, garanties. Tout ce qu'il faut savoir avant de rénover."
+        title="FAQ Rénovation salle de bain à Paris – Prix, délais, étanchéité"
+        description="Toutes les réponses sur la rénovation de salle de bain à Paris : prix au m², durée des travaux, étanchéité DTU 52.2, pose carrelage et accompagnement maître d'œuvre."
         path="/faq"
       />
       {/* JSON-LD Schema */}
@@ -452,7 +480,7 @@ export default function FAQ() {
               Foire aux questions
             </span>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-light mb-6 text-primary">
-              Questions fréquentes sur la rénovation de salle de bain
+              FAQ rénovation salle de bain à Paris & Île-de-France
             </h1>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
               Retrouvez les réponses à vos questions sur la création de douche à l'italienne, 
