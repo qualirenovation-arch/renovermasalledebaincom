@@ -26,6 +26,7 @@ import VisuelsHouzz from "./pages/VisuelsHouzz";
 import DevenirPartenaire from "./pages/DevenirPartenaire";
 import Avis from "./pages/Avis";
 import RenovationParis from "./pages/RenovationParis";
+import QualiRenovation from "./pages/QualiRenovation";
 import OGPreview from "./pages/OGPreview";
 import Admin from "./pages/Admin";
 import AdminLogin from "./pages/AdminLogin";
@@ -68,6 +69,7 @@ const App = () => (
           <Route path="/devenir-partenaire" element={<DevenirPartenaire />} />
           <Route path="/avis" element={<Avis />} />
           <Route path="/renovation-salle-de-bain-paris" element={<RenovationParis />} />
+          <Route path="/qualirenovation" element={<QualiRenovation />} />
           <Route path="/og-preview" element={<OGPreview />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/login" element={<AdminLogin />} />
