@@ -74,7 +74,7 @@ export function Header() {
         </div>
 
         {/* Desktop layout */}
-        <div className="hidden xl:flex items-center h-24">
+        <div className="hidden xl:flex items-center justify-between h-24">
           <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
             <img src={logoSvg} alt="RénoverMaSalleDeBain.com" className="h-16 xl:h-20 w-auto -ml-4" />
           </Link>
@@ -95,7 +95,7 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center ml-auto gap-2 flex-shrink-0">
+          <div className="flex items-center ml-4 gap-2 flex-shrink-0">
             <Button 
               variant="outline" 
               size="sm" 
