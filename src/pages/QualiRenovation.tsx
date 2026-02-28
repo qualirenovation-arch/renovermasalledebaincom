@@ -41,23 +41,10 @@ const QualiRenovation = () => {
       {/* Hero */}
       <section className="bg-gradient-to-b from-stone to-background py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary leading-[1.1] tracking-tight mb-4">
-            UN CHANTIER HEUREUX
+          <h1 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary leading-[1.1] tracking-tight mb-4">
+            UN CHANTIER HEUREUX<br />
+            POUR VOTRE <span className="italic font-normal text-gold">RÉNOVATION GLOBALE</span>
           </h1>
-          <p className="text-muted-foreground text-lg md:text-xl lg:text-2xl mb-10 font-light">
-            Pour votre rénovation globale
-          </p>
-          <a
-            href="https://qualirenovation.fr"
-            target="_blank"
-            rel="noopener"
-            aria-label="Découvrir QualiRénovation – rénovation globale à Paris"
-          >
-            <Button variant="gold" size="lg" className="rounded-full px-10 text-base shadow-lg hover:shadow-xl transition-shadow gap-2">
-              <ExternalLink className="w-4 h-4" />
-              Découvrir QualiRénovation
-            </Button>
-          </a>
         </div>
       </section>
 
