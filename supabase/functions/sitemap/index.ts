@@ -12,7 +12,7 @@ const staticPages = [
   { url: "/guide-travaux", priority: "0.8", changefreq: "monthly", lastmod: "2026-02-25" },
   { url: "/degats-eaux", priority: "0.8", changefreq: "monthly", lastmod: "2026-01-20" },
   { url: "/pourquoi-nous", priority: "0.8", changefreq: "monthly", lastmod: "2026-02-10" },
-  { url: "/a-propos", priority: "0.7", changefreq: "monthly", lastmod: "2026-01-15" },
+  { url: "/a-propos", priority: "0.8", changefreq: "monthly", lastmod: "2026-01-15" },
   { url: "/faq", priority: "0.7", changefreq: "monthly", lastmod: "2026-02-27" },
   { url: "/avis", priority: "0.7", changefreq: "weekly", lastmod: "2026-02-28" },
   { url: "/videos-conseils", priority: "0.7", changefreq: "monthly", lastmod: "2026-01-10" },
