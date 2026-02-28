@@ -3,6 +3,7 @@ import { OGTags } from "@/components/seo/OGTags";
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LogoQualiRenovation } from "@/components/shared/LogoQualiRenovation";
+import { HeroSlideshow } from "@/components/home/HeroSlideshow";
 import { Link } from "react-router-dom";
 import carinaSig from "@/assets/carina-signature.svg";
 
@@ -39,21 +40,30 @@ const QualiRenovation = () => {
       />
 
       {/* 1 — Hero */}
-      <section className="py-20 md:py-28 bg-secondary/30">
+      <section className="bg-gradient-to-b from-stone to-background py-10 md:py-20 lg:py-24">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="flex justify-center mb-10">
-              <LogoQualiRenovation width={240} height={58} />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center max-w-5xl mx-auto">
+            <div className="text-center lg:text-left">
+              <div className="flex justify-center lg:justify-start mb-8">
+                <LogoQualiRenovation width={240} height={58} />
+              </div>
+              <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-light mb-5 text-primary">
+                QualiRénovation — Rénovation globale à Paris
+              </h1>
+              <p className="font-display text-xl md:text-2xl font-light tracking-wide text-primary">
+                Un chantier heureux.
+              </p>
+              <p className="text-base md:text-lg text-muted-foreground font-light tracking-wide mt-2">
+                Pensé dans sa globalité.
+              </p>
             </div>
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-light mb-5 text-primary">
-              QualiRénovation — Rénovation globale à Paris
-            </h1>
-            <p className="font-display text-xl md:text-2xl font-light tracking-wide text-primary">
-              Un chantier heureux.
-            </p>
-            <p className="text-base md:text-lg text-muted-foreground font-light tracking-wide mt-2">
-              Pensé dans sa globalité.
-            </p>
+
+            <div className="relative order-first lg:order-last">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-[0_20px_60px_-15px_hsl(0_0%_0%/0.2)]">
+                <HeroSlideshow />
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-gold/10 -z-10 hidden lg:block" />
+            </div>
           </div>
         </div>
       </section>
