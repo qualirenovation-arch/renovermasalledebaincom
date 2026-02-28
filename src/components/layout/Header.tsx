@@ -50,7 +50,7 @@ export function Header() {
     >
       <div className="container-custom">
         {/* Mobile layout */}
-        <div className="flex xl:hidden items-center h-16 sm:h-20 px-1 gap-1">
+        <div className="flex lg:hidden items-center h-16 sm:h-20 px-1 gap-1">
           <button
             className="p-2 sm:p-3 text-foreground hover:bg-secondary rounded-lg transition-colors flex-shrink-0 z-10"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -74,7 +74,7 @@ export function Header() {
         </div>
 
         {/* Desktop layout */}
-        <div className="hidden xl:flex items-center h-24">
+        <div className="hidden lg:flex items-center h-24">
           <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
             <img src={logoSvg} alt="RénoverMaSalleDeBain.com" className="h-16 xl:h-20 w-auto -ml-4" />
           </Link>
@@ -100,7 +100,7 @@ export function Header() {
               variant="outline" 
               size="sm" 
               asChild 
-              className="rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors hidden xl:inline-flex text-xs px-3 py-1.5"
+              className="rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors hidden lg:inline-flex text-xs px-3 py-1.5"
             >
               <Link to="/devis?type=degat_eaux#devis-form">
                 <Droplets className="w-3.5 h-3.5 mr-1" />
@@ -122,7 +122,7 @@ export function Header() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-            className="xl:hidden bg-background border-t border-border overflow-hidden"
+            className="lg:hidden bg-background border-t border-border overflow-hidden"
           >
             <nav className="container-custom py-4 flex flex-col gap-1">
               {mobileNavItems.map((item, index) => (
