@@ -10,16 +10,22 @@ import faubourgSejour from "@/assets/qualirenovation/faubourg-saint-denis-sejour
 import faubourgCuisine from "@/assets/qualirenovation/faubourg-saint-denis-cuisine.jpg";
 import ernestSam from "@/assets/qualirenovation/ernest-savart-salle-a-manger.jpg";
 import ernestSejour from "@/assets/qualirenovation/ernest-savart-sejour.jpg";
+import rooseveltChambre from "@/assets/qualirenovation/roosevelt-chambre.jpg";
+import rooseveltChambreMarbre from "@/assets/qualirenovation/roosevelt-chambre-marbre.jpg";
+import rooseveltSejourCuisine from "@/assets/qualirenovation/roosevelt-sejour-cuisine.jpg";
 
 const slides = [
   { src: chercheMidi, alt: "Rénovation appartement Cherche-Midi, Paris", location: "Paris 6e" },
   { src: avJeanneSalon, alt: "Rénovation salon haussmannien Avenue Jeanne", location: "Île-de-France" },
   { src: avJeanneCuisine, alt: "Rénovation cuisine ouverte Avenue Jeanne", location: "Île-de-France" },
+  { src: rooseveltSejourCuisine, alt: "Rénovation séjour et cuisine Avenue Roosevelt, Paris 8e", location: "Paris 8e" },
   { src: chambre, alt: "Rénovation chambre parentale, Paris", location: "Paris" },
   { src: salonBibliotheque, alt: "Rénovation salon avec bibliothèque sur mesure", location: "Paris" },
+  { src: rooseveltChambreMarbre, alt: "Rénovation chambre marbre Avenue Roosevelt, Paris 8e", location: "Paris 8e" },
   { src: faubourgSalon, alt: "Rénovation salon Faubourg Saint-Denis, Paris", location: "Paris 10e" },
   { src: faubourgSejour, alt: "Rénovation séjour Faubourg Saint-Denis, Paris", location: "Paris 10e" },
   { src: faubourgCuisine, alt: "Rénovation cuisine ouverte Faubourg Saint-Denis", location: "Paris 10e" },
+  { src: rooseveltChambre, alt: "Rénovation chambre Avenue Roosevelt, Paris 8e", location: "Paris 8e" },
   { src: ernestSam, alt: "Rénovation salle à manger Rue Ernest Savart", location: "Île-de-France" },
   { src: ernestSejour, alt: "Rénovation séjour ouvert Rue Ernest Savart", location: "Île-de-France" },
 ];
