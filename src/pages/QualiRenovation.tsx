@@ -40,11 +40,15 @@ const QualiRenovation = () => {
 
       {/* Hero */}
       <section className="bg-gradient-to-b from-stone to-background py-16 md:py-24 lg:py-32">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary leading-[1.1] tracking-tight mb-4">
-            UN CHANTIER HEUREUX<br />
+        <div className="container mx-auto px-4 text-center md:text-left">
+          <h1 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary leading-[1.1] tracking-tight mb-5 md:mb-7">
+            UN CHANTIER<br />
+            HEUREUX<br />
             POUR VOTRE <span className="italic font-normal text-gold">RÉNOVATION GLOBALE</span>
           </h1>
+          <p className="text-muted-foreground text-base md:text-lg max-w-xl font-light">
+            Rénover votre appartement ou votre maison sans stress, sans mauvaises surprises, grâce à une coordination maîtrisée et un accompagnement de A&nbsp;à&nbsp;Z.
+          </p>
         </div>
       </section>
 
