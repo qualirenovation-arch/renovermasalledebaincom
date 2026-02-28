@@ -34,7 +34,7 @@ const footerLinks = {
   }],
   services: [
     { label: "Création de douche à l'italienne", path: "/guide-travaux#questions-frequentes" },
-    { label: "Rénovation salle de bain", path: "/faq#renovation-salle-de-bain" },
+    { label: "Rénovation salle de bain", path: "/renovation-salle-de-bain-paris" },
     { label: "Étanchéité garantie", path: "/guide-travaux#section-6" },
     { label: "Pose de carrelage", path: "/faq#pose-carrelage" },
     { label: "Installation receveur", path: "/guide-travaux#section-7" },
