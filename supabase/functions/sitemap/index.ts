@@ -10,6 +10,7 @@ const staticPages = [
   { url: "/realisations", priority: "0.9", changefreq: "weekly", lastmod: "2026-02-28" },
   { url: "/devis", priority: "0.9", changefreq: "monthly", lastmod: "2026-02-15" },
   { url: "/guide-travaux", priority: "0.8", changefreq: "monthly", lastmod: "2026-02-25" },
+  { url: "/renovation-salle-de-bain-paris", priority: "0.9", changefreq: "monthly", lastmod: "2026-02-28" },
   { url: "/degats-eaux", priority: "0.8", changefreq: "monthly", lastmod: "2026-01-20" },
   { url: "/pourquoi-nous", priority: "0.8", changefreq: "monthly", lastmod: "2026-02-10" },
   { url: "/a-propos", priority: "0.8", changefreq: "monthly", lastmod: "2026-01-15" },
