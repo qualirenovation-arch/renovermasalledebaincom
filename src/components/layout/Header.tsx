@@ -24,6 +24,7 @@ const desktopNavItems = [
   { label: "Avis", path: "/avis" },
   { label: "Presse", path: "/presse#parutions" },
   { label: "Guide travaux", path: "/guide-travaux" },
+  { label: "QualiRénovation", path: "/qualirenovation" },
 ];
 
 export function Header() {
