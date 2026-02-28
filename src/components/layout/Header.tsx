@@ -79,12 +79,12 @@ export function Header() {
             <img src={logoSvg} alt="RénoverMaSalleDeBain.com" className="h-16 xl:h-20 w-auto -ml-4" />
           </Link>
 
-          <nav className="flex items-center gap-0.5 ml-4">
+          <nav className="flex items-center gap-0 lg:gap-0.5 ml-2 lg:ml-4">
             {desktopNavItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`px-3 py-2.5 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap ${
+                className={`px-2 lg:px-3 py-2 lg:py-2.5 rounded-full text-xs lg:text-sm font-medium transition-all duration-300 whitespace-nowrap ${
                   location.pathname === item.path
                     ? "bg-primary text-primary-foreground shadow-sm"
                     : "text-foreground hover:bg-secondary hover:text-foreground"
