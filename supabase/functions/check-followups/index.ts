@@ -141,7 +141,7 @@ const handler = async (req: Request): Promise<Response> => {
           <body style="font-family:'Montserrat',Arial,sans-serif;color:#333;max-width:700px;margin:0 auto;">
             <div style="background:linear-gradient(135deg, #124A66 0%, #0d3a52 100%);color:white;padding:24px 16px;text-align:center;">
               <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
-                <tr><td align="center" style="padding-bottom:6px;"><img src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/logo-renover.png" alt="RenoverMaSalleDeBain.com" width="180" style="width:180px;height:auto;" /></td></tr>
+                <tr><td align="center" style="padding-bottom:6px;"><img src="https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/logo-renover-neg.svg" alt="RenoverMaSalleDeBain.com" width="180" style="width:180px;height:auto;" /></td></tr>
                 <tr><td align="center" style="font-family:'Nunito Sans',Arial,sans-serif;font-size:9px;font-weight:400;color:rgba(255,255,255,0.85);letter-spacing:2.5px;padding-top:2px;">Une expertise QUALIRÉNOVATION</td></tr>
               </table>
               <h2 style="margin:10px 0 0;">🔔 Relances du jour</h2>
