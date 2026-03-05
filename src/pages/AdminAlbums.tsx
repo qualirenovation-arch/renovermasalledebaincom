@@ -8,6 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import { AlbumsList } from "@/components/admin/albums/AlbumsList";
 import { AlbumForm } from "@/components/admin/albums/AlbumForm";
 import { AlbumPhotoMigration } from "@/components/admin/albums/AlbumPhotoMigration";
+import { AlbumPhotoSeoRename } from "@/components/admin/albums/AlbumPhotoSeoRename";
 import type { Album } from "@/hooks/useAlbums";
 
 type View = { type: "list" } | { type: "form"; album?: Album };
@@ -73,6 +74,7 @@ export default function AdminAlbums() {
               onCreate={() => setView({ type: "form" })}
             />
             <AlbumPhotoMigration />
+            <AlbumPhotoSeoRename />
           </div>
         ) : (
           <AlbumForm
