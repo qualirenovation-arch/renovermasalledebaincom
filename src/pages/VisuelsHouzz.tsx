@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import houzzAnnouncement from "@/assets/houzz-announcement-final.jpg";
 import houzzSquare from "@/assets/houzz-instagram-square.jpg";
 import houzzStory from "@/assets/houzz-instagram-story.jpg";
@@ -6,6 +7,44 @@ import paris10Dore from "@/assets/paris10-dore-branded.jpg";
 import houzzPiedDePage from "@/assets/houzz-pied-de-page.jpg";
 
 export default function VisuelsHouzz() {
+  const handleExportPiedDePage = useCallback(() => {
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.onload = () => {
+      const textHeight = 60;
+      const canvas = document.createElement("canvas");
+      canvas.width = img.width;
+      canvas.height = img.height + textHeight;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
+
+      // Draw image
+      ctx.drawImage(img, 0, 0);
+
+      // Draw text banner
+      ctx.fillStyle = "#f5f5f5";
+      ctx.fillRect(0, img.height, canvas.width, textHeight);
+
+      ctx.fillStyle = "#124A66";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      const fontSize = Math.max(16, Math.round(canvas.width / 55));
+      ctx.font = `500 ${fontSize}px sans-serif`;
+      ctx.fillText(
+        "Découvrez notre nouveau site dédié à la salle de bain : https://renovermasalledebain.fr",
+        canvas.width / 2,
+        img.height + textHeight / 2
+      );
+
+      // Download
+      const link = document.createElement("a");
+      link.download = "houzz-pied-de-page-complet.jpg";
+      link.href = canvas.toDataURL("image/jpeg", 0.95);
+      link.click();
+    };
+    img.src = houzzPiedDePage;
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-900 p-8">
       <h1 className="text-white text-3xl font-bold text-center mb-8">Visuels Houzz générés</h1>
@@ -79,6 +118,12 @@ export default function VisuelsHouzz() {
               </p>
             </div>
           </div>
+          <button
+            onClick={handleExportPiedDePage}
+            className="mt-4 mx-auto block bg-[#124A66] text-white px-6 py-2 rounded-lg hover:bg-[#0e3a52] transition-colors font-medium"
+          >
+            📥 Télécharger l'image complète
+          </button>
         </div>
       </div>
     </div>
