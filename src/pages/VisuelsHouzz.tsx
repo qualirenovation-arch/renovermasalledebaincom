@@ -2,6 +2,7 @@ import houzzAnnouncement from "@/assets/houzz-announcement-final.jpg";
 import houzzSquare from "@/assets/houzz-instagram-square.jpg";
 import houzzStory from "@/assets/houzz-instagram-story.jpg";
 import logoSdbParis10 from "/images/logo-salle-de-bain-paris-10.png";
+import paris10Dore from "@/assets/gallery-7.jpg";
 
 export default function VisuelsHouzz() {
   return (
@@ -36,6 +37,16 @@ export default function VisuelsHouzz() {
             src={houzzStory} 
             alt="Houzz Instagram Story" 
             className="max-h-[80vh] mx-auto rounded-lg shadow-2xl"
+          />
+        </div>
+
+        {/* Photo Paris 10 Faubourg Saint-Denis Doré */}
+        <div>
+          <h2 className="text-white text-xl mb-4">Paris 10ème — Faubourg Saint-Denis Doré</h2>
+          <img 
+            src={paris10Dore} 
+            alt="Salle de bain Paris 10 Faubourg Saint-Denis dorée" 
+            className="w-full max-w-3xl mx-auto rounded-lg shadow-2xl"
           />
         </div>
 
