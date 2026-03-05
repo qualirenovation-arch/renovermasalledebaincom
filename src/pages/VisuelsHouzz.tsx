@@ -2,7 +2,7 @@ import houzzAnnouncement from "@/assets/houzz-announcement-final.jpg";
 import houzzSquare from "@/assets/houzz-instagram-square.jpg";
 import houzzStory from "@/assets/houzz-instagram-story.jpg";
 import logoSdbParis10 from "/images/logo-salle-de-bain-paris-10.png";
-import paris10Dore from "@/assets/gallery-7.jpg";
+import paris10Dore from "@/assets/paris10-dore-branded.jpg";
 
 export default function VisuelsHouzz() {
   return (
