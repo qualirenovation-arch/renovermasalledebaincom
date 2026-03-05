@@ -3,6 +3,7 @@ import houzzSquare from "@/assets/houzz-instagram-square.jpg";
 import houzzStory from "@/assets/houzz-instagram-story.jpg";
 import logoSdbParis10 from "/images/logo-salle-de-bain-paris-10.png";
 import paris10Dore from "@/assets/paris10-dore-branded.jpg";
+import houzzPiedDePage from "@/assets/houzz-pied-de-page.jpg";
 
 export default function VisuelsHouzz() {
   return (
@@ -57,6 +58,16 @@ export default function VisuelsHouzz() {
             src={logoSdbParis10} 
             alt="Logo Salle de Bain Paris 10" 
             className="w-full max-w-3xl mx-auto rounded-lg shadow-2xl"
+          />
+        </div>
+
+        {/* Pied de page Houzz */}
+        <div>
+          <h2 className="text-white text-xl mb-4">Pied de page Houzz</h2>
+          <img 
+            src={houzzPiedDePage} 
+            alt="Pied de page Houzz" 
+            className="w-full max-w-4xl mx-auto rounded-lg shadow-2xl"
           />
         </div>
       </div>

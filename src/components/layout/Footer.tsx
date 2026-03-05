@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, Clock, MessageCircle, Instagram, Linkedin } from "lucide-react";
 import houzzLogo from "@/assets/logos/houzz-logo.png";
-import logoNeg from "@/assets/logos/qualirenovation-logo-hor-pos.svg";
+import logoNeg from "@/assets/logos/logo-renover-neg.svg";
 
 const footerLinks = {
   navigation: [{
