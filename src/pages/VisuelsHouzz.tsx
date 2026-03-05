@@ -64,11 +64,21 @@ export default function VisuelsHouzz() {
         {/* Pied de page Houzz */}
         <div>
           <h2 className="text-white text-xl mb-4">Pied de page Houzz</h2>
-          <img 
-            src={houzzPiedDePage} 
-            alt="Pied de page Houzz" 
-            className="w-full max-w-4xl mx-auto rounded-lg shadow-2xl"
-          />
+          <div className="relative max-w-4xl mx-auto">
+            <img 
+              src={houzzPiedDePage} 
+              alt="Pied de page Houzz" 
+              className="w-full rounded-t-lg shadow-2xl"
+            />
+            <div className="bg-[#f5f5f5] rounded-b-lg py-3 px-4 text-center shadow-2xl">
+              <p className="text-[#124A66] text-sm md:text-base lg:text-lg font-medium">
+                Découvrez notre nouveau site dédié à la salle de bain :{" "}
+                <a href="https://renovermasalledebain.fr" target="_blank" rel="noopener noreferrer" className="font-bold underline">
+                  https://renovermasalledebain.fr
+                </a>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
