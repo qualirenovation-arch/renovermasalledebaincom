@@ -1,6 +1,7 @@
 import houzzAnnouncement from "@/assets/houzz-announcement-final.jpg";
 import houzzSquare from "@/assets/houzz-instagram-square.jpg";
 import houzzStory from "@/assets/houzz-instagram-story.jpg";
+import logoSdbParis10 from "/images/logo-salle-de-bain-paris-10.png";
 
 export default function VisuelsHouzz() {
   return (
@@ -35,6 +36,16 @@ export default function VisuelsHouzz() {
             src={houzzStory} 
             alt="Houzz Instagram Story" 
             className="max-h-[80vh] mx-auto rounded-lg shadow-2xl"
+          />
+        </div>
+
+        {/* Logo Salle de Bain Paris 10 */}
+        <div>
+          <h2 className="text-white text-xl mb-4">Logo Salle de Bain Paris 10</h2>
+          <img 
+            src={logoSdbParis10} 
+            alt="Logo Salle de Bain Paris 10" 
+            className="w-full max-w-3xl mx-auto rounded-lg shadow-2xl"
           />
         </div>
       </div>
