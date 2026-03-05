@@ -31,7 +31,7 @@ export default function VisuelsHouzz() {
       const fontSize = Math.max(16, Math.round(canvas.width / 55));
       ctx.font = `500 ${fontSize}px sans-serif`;
       ctx.fillText(
-        "Découvrez notre nouveau site dédié à la salle de bain : https://renovermasalledebain.fr",
+        "Découvrez notre nouveau site dédié à la salle de bain : https://renovermasalledebain.com",
         canvas.width / 2,
         img.height + textHeight / 2
       );
@@ -112,8 +112,8 @@ export default function VisuelsHouzz() {
             <div className="bg-[#f5f5f5] rounded-b-lg py-3 px-4 text-center shadow-2xl">
               <p className="text-[#124A66] text-sm md:text-base lg:text-lg font-medium">
                 Découvrez notre nouveau site dédié à la salle de bain :{" "}
-                <a href="https://renovermasalledebain.fr" target="_blank" rel="noopener noreferrer" className="font-bold underline">
-                  https://renovermasalledebain.fr
+                <a href="https://renovermasalledebain.com" target="_blank" rel="noopener noreferrer" className="font-bold underline">
+                  https://renovermasalledebain.com
                 </a>
               </p>
             </div>
