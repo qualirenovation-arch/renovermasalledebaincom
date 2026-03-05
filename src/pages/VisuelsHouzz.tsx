@@ -103,7 +103,7 @@ export default function VisuelsHouzz() {
         {/* Pied de page Houzz */}
         <div>
           <h2 className="text-white text-xl mb-4">Pied de page Houzz</h2>
-          <div className="relative max-w-2xl mx-auto">
+          <div className="relative max-w-5xl mx-auto">
             <img 
               src={houzzPiedDePage} 
               alt="Pied de page Houzz" 
