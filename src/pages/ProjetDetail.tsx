@@ -113,8 +113,8 @@ const ProjetDetail = () => {
   return (
     <Layout>
       <OGTags
-        title={`${album.title} – Avant / Après`}
-        description={shortDescription}
+        title={album.metaTitle || `${album.title} – Avant / Après`}
+        description={album.metaDescription || shortDescription}
         path={`/realisations/${album.slug}`}
         type="article"
         coverImage={ogImageUrl}
