@@ -1343,11 +1343,66 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     description: "AVANT : WC vétuste avec carrelage bleu abîmé, équipements datés et peinture écaillée. APRÈS : WC suspendu luxueux avec zellige turquoise posé en chevron, lave-mains avec robinetterie laiton brossé, local technique optimisé intégrant chauffe-eau et lave-linge.",
     coverImage: nicolasRoret11,
     instagramLink: "https://www.instagram.com/reel/DTiv9H0jb06/",
+    metaTitle: "Rénovation WC suspendu Paris 13 – zellige vert Saint-Laurent | renovermasalledebain.com – qualirenovation.fr",
+    metaDescription: "Rénovation de WC à Paris 13 rue Nicolas Roret : WC suspendu, lave-mains, zellige bejmat vert Saint-Laurent, chape légère et isolation thermique.",
     photos: [
-      { id: 1, image: nicolasRoret11, title: "Après — WC suspendu", description: "Zellige chevron et lave-mains laiton brossé" },
-      { id: 2, image: nicolasRoret6, title: "Après — WC vue angle", description: "Zellige turquoise et carrelage marbre" },
-      { id: 3, image: nicolasRoretTravaux1, title: "Travaux — Pose zellige WC", description: "Installation du zellige chevron" },
-      { id: 4, image: nicolasRoretAvant1, title: "Avant — WC vétuste", description: "État initial avec carrelage bleu et équipements datés" },
+      { id: 1, image: nicolasRoret11, title: "Après — WC suspendu", description: "renovation wc paris 13 zellige vert saint laurent" },
+      { id: 2, image: nicolasRoret6, title: "Après — WC vue angle", description: "wc suspendu lave mains appartement paris" },
+      { id: 3, image: nicolasRoretTravaux1, title: "Travaux — Pose zellige WC", description: "zellige bejmat toilettes design" },
+      { id: 4, image: nicolasRoretAvant1, title: "Avant — WC vétuste", description: "avant apres renovation wc paris" },
+    ],
+    guideLinks: [
+      { label: "WC suspendu & plaques de déclenchement", anchor: "section-10" },
+      { label: "Profilés de finition", anchor: "section-11" },
+      { label: "Étanchéité sous carrelage", anchor: "etancheite-salle-de-bain" },
+      { label: "Plomberie & réseaux", anchor: "plomberie-renovation-sdb" },
+    ],
+    seoSections: [
+      {
+        title: "Description du projet",
+        content: "Dans cet appartement parisien situé rue Nicolas Roret dans le 13ᵉ arrondissement, les toilettes ont été entièrement repensées afin d'améliorer le confort et l'esthétique de cet espace.\n\nL'objectif était de créer des WC plus lumineux, plus élégants et plus pratiques grâce à l'installation d'un WC suspendu et d'un lave-mains.",
+      },
+      {
+        title: "Quelle était la problématique ?",
+        content: "Les toilettes d'origine présentaient plusieurs contraintes :",
+        listItems: [
+          "Ancien carrelage au sol à déposer",
+          "Absence de lave-mains",
+          "Éléments techniques visibles",
+          "Sensation de froid liée au rez-de-chaussée",
+        ],
+      },
+      {
+        title: "Quelles solutions ont été mises en place ?",
+        content: "Le sol existant a été entièrement déposé.\n\nUne chape légère a été réalisée afin de recréer un support parfaitement plan sans alourdir la structure du plancher.\n\nCette solution permet également d'améliorer l'isolation thermique du sol, ce qui est particulièrement intéressant dans cet appartement situé au rez-de-chaussée.\n\nAfin d'éviter la présence d'une colonne apparente dans les WC, les évacuations ont été passées par la cave.\n\nLes démarches auprès du syndic ont été assurées par Carina.",
+      },
+      {
+        title: "Les matériaux choisis",
+        content: "Le projet associe :",
+        listItems: [
+          "Zellige type bejmat mat vert Saint-Laurent",
+          "Carrelage inspiration marbre lumineux",
+          "Robinetterie et accessoires en laiton brossé",
+        ],
+      },
+      {
+        title: "Avant / Après",
+        content: "Avant les travaux, les toilettes étaient vétustes avec un ancien sol et sans lave-mains.\n\nAprès rénovation, la pièce est devenue plus lumineuse, plus élégante et plus confortable grâce à l'installation d'un WC suspendu et d'un lave-mains.",
+      },
+    ],
+    faqItems: [
+      {
+        question: "Pourquoi installer un WC suspendu ?",
+        answer: "Le WC suspendu améliore l'esthétique et facilite l'entretien.",
+      },
+      {
+        question: "Pourquoi réaliser une chape légère ?",
+        answer: "La chape légère permet de recréer un support de sol sans alourdir la structure.",
+      },
+      {
+        question: "Pourquoi passer les évacuations par la cave ?",
+        answer: "Cela permet d'éviter les colonnes apparentes.",
+      },
     ],
     finitionSol: "marbre",
     finitionMur: "zellige",
