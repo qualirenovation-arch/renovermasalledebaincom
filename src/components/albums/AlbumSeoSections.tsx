@@ -56,7 +56,7 @@ export function AlbumSeoSections({ sections, faqItems, faqTitle, externalAlbumLi
       {faqItems && faqItems.length > 0 && (
         <div>
           <h2 className="font-display text-xl md:text-2xl font-light mb-4 text-primary">
-            Questions fréquentes sur la rénovation d'une salle de bain
+            {faqTitle || "Questions fréquentes sur la rénovation d'une salle de bain"}
           </h2>
           <Accordion type="single" collapsible className="w-full">
             {faqItems.map((faq, index) => (
