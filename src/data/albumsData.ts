@@ -1961,10 +1961,23 @@ Ce projet illustre parfaitement notre approche : un chantier heureux, fondé sur
     ],
     finitionSol: "terrazzo",
     finitionMur: "terrazzo",
+    instagramLinks: [
+      "https://www.instagram.com/reel/DGvfHQ2s8Ve/",
+      "https://www.instagram.com/reel/DGtELfZMqWc/"
+    ],
+    review: {
+      text: "L'entreprise Qualirenovation, découverte sur Houzz, a pris en charge la rénovation de notre maison datant de 1900. Ce projet d'envergure incluait la démolition de deux murs porteurs, des travaux d'électricité, de plomberie, d'isolation thermique, de revêtements de sol et de peinture, tout en préservant les éléments anciens typiques. Carina Nahmani et son équipe ont su relever les défis techniques, fournissant un résultat final qualitatif à la hauteur de nos attentes.",
+      author: "Justin Montheillet",
+      link: "https://www.houzz.fr/viewReview/2042067/qualirenovation-by-qualiconcept-review"
+    },
     guideLinks: [
       { label: "VMC en salle de bain", anchor: "section-13" },
       { label: "Éclairage & spots", anchor: "section-13" },
       { label: "Choisir sa baignoire", anchor: "section-8" },
+    ],
+    pressLinks: [
+      { label: "Houzz — Comment intégrer du terrazzo dans la salle de bains ?", url: "https://www.houzz.fr/magazine/comment-integrer-du-terrazzo-dans-la-salle-de-bains-stsetivw-vs~177628691" },
+      { label: "Elle — Les astuces des architectes pour une salle de bains pour deux", url: "https://www.elle.fr/Deco/Pieces/Salle-de-bain/Les-astuces-des-architectes-pour-amenager-une-salle-de-bains-pour-deux" },
     ],
   },
   // ========== 📍 SAINT-MAURICE (94) ==========
