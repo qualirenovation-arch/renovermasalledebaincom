@@ -5,6 +5,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { AlbumCTA } from "@/components/albums/AlbumCTA";
+import { AlbumSeoSections } from "@/components/albums/AlbumSeoSections";
 import { RelatedProjects } from "@/components/albums/RelatedProjects";
 import { OGTags } from "@/components/seo/OGTags";
 import { OG_BASE_URL, getAlbumOgData } from "@/lib/og";
