@@ -1392,6 +1392,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
         content: "Avant les travaux, les toilettes étaient vétustes avec un ancien sol et sans lave-mains.\n\nAprès rénovation, la pièce est devenue plus lumineuse, plus élégante et plus confortable grâce à l'installation d'un WC suspendu et d'un lave-mains.",
       },
     ],
+    faqTitle: "Questions fréquentes sur la rénovation de WC",
     faqItems: [
       {
         question: "Pourquoi installer un WC suspendu ?",
