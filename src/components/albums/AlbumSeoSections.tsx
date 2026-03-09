@@ -10,7 +10,7 @@ interface AlbumSeoSectionsProps {
   externalAlbumLink?: { label: string; url: string };
 }
 
-export function AlbumSeoSections({ sections, faqItems, externalAlbumLink }: AlbumSeoSectionsProps) {
+export function AlbumSeoSections({ sections, faqItems, faqTitle, externalAlbumLink }: AlbumSeoSectionsProps) {
   if (!sections?.length && !faqItems?.length && !externalAlbumLink) return null;
 
   return (
