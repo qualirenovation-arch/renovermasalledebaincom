@@ -678,6 +678,7 @@ export interface Album {
   instagramLinks?: string[];
   ctaButton?: { label: string; link: string };
   category?: AlbumCategory;
+  guideLinks?: { label: string; anchor: string }[];
   finitionSol?: FinitionType;
   finitionMur?: FinitionType;
   isFeaturedRealisations?: boolean;
@@ -1959,6 +1960,11 @@ Ce projet illustre parfaitement notre approche : un chantier heureux, fondé sur
     ],
     finitionSol: "terrazzo",
     finitionMur: "terrazzo",
+    guideLinks: [
+      { label: "VMC en salle de bain", anchor: "section-13" },
+      { label: "Éclairage & spots", anchor: "section-13" },
+      { label: "Choisir sa baignoire", anchor: "section-8" },
+    ],
   },
   // ========== 📍 SAINT-MAURICE (94) ==========
   {

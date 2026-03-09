@@ -247,6 +247,29 @@ const ProjetDetail = () => {
                 )}
               </motion.div>
             )}
+
+            {/* Guide Travaux Links */}
+            {album.guideLinks && album.guideLinks.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="mt-4"
+              >
+                <p className="text-xs text-muted-foreground mb-2 font-medium uppercase tracking-wider">En savoir plus dans notre Guide Travaux</p>
+                <div className="flex flex-wrap gap-2">
+                  {album.guideLinks.map((gl, index) => (
+                    <Link
+                      key={index}
+                      to={`/guide-travaux#${gl.anchor}`}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-secondary text-foreground rounded-lg hover:bg-secondary/80 transition-colors text-sm font-medium border border-border/50"
+                    >
+                      📖 {gl.label}
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            )}
           </motion.div>
 
           {/* Photos grid */}
