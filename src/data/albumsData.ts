@@ -1365,7 +1365,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
         content: "Dans cet appartement parisien situé rue Nicolas Roret dans le 13ᵉ arrondissement, les toilettes ont été entièrement repensées afin d'améliorer le confort et l'esthétique de cet espace.\n\nL'objectif était de créer des WC plus lumineux, plus élégants et plus pratiques grâce à l'installation d'un WC suspendu et d'un lave-mains.",
       },
       {
-        title: "Quelle était la problématique ?",
+        title: "Problématique",
         content: "Les toilettes d'origine présentaient plusieurs contraintes :",
         listItems: [
           "Ancien carrelage au sol à déposer",
@@ -1375,16 +1375,20 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
         ],
       },
       {
-        title: "Quelles solutions ont été mises en place ?",
-        content: "Le sol existant a été entièrement déposé.\n\nUne chape légère a été réalisée afin de recréer un support parfaitement plan sans alourdir la structure du plancher.\n\nCette solution permet également d'améliorer l'isolation thermique du sol, ce qui est particulièrement intéressant dans cet appartement situé au rez-de-chaussée.\n\nAfin d'éviter la présence d'une colonne apparente dans les WC, les évacuations ont été passées par la cave.\n\nLes démarches auprès du syndic ont été assurées par Carina.",
+        title: "Solution technique",
+        content: "Le sol existant a été entièrement déposé.\n\nUne chape légère a été réalisée afin de recréer un support parfaitement plan sans alourdir la structure du plancher. Cette solution permet également d'améliorer l'isolation thermique du sol, ce qui est particulièrement intéressant dans cet appartement situé au rez-de-chaussée.\n\nAfin d'éviter la présence d'une colonne apparente dans les WC, les évacuations ont été passées par la cave. Les démarches auprès du syndic ont été assurées par Carina.",
       },
       {
-        title: "Les matériaux choisis",
-        content: "Le projet associe :",
+        title: "Travaux réalisés",
+        content: "Les WC ont fait l'objet d'une rénovation complète comprenant :",
         listItems: [
-          "Zellige type bejmat mat vert Saint-Laurent",
-          "Carrelage inspiration marbre lumineux",
-          "Robinetterie et accessoires en laiton brossé",
+          "Dépose de l'ancien carrelage au sol",
+          "Réalisation d'une chape légère avec isolation thermique",
+          "Passage des évacuations par la cave",
+          "Pose de zellige type bejmat mat vert Saint-Laurent en chevron",
+          "Pose de carrelage inspiration marbre lumineux",
+          "Installation d'un WC suspendu",
+          "Installation d'un lave-mains avec robinetterie en laiton brossé",
         ],
       },
       {
