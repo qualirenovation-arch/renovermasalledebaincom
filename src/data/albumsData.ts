@@ -1251,16 +1251,17 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     metaDescription: "Découvrez la rénovation d'une salle de bain à Paris 13 rue Nicolas Roret : zellige bejmat vert Saint-Laurent, meuble vasque XXL, chauffe-eau plat et optimisation des rangements.",
     description: "Dans cet appartement parisien situé dans le 13ᵉ arrondissement, la salle de bain d'origine regroupait plusieurs usages autour d'un unique point d'eau, ce qui rendait la pièce peu confortable et difficile à organiser.\n\nLa rénovation a permis de repenser entièrement l'espace sans modifier la surface existante, en améliorant l'organisation et les rangements.\n\nChaque centimètre a été exploité afin de créer une salle de bain plus fonctionnelle et plus agréable au quotidien.",
     coverImage: nicolasRoret5,
+    instagramLink: "https://www.instagram.com/reel/DTiv9H0jb06/",
     review: {
       text: "Carina est une architecte de talent, créative et toujours à l'écoute. Elle a su transformer notre petite salle de bain en un espace fonctionnel et esthétique, avec des matériaux de qualité et des finitions impeccables. Son suivi de chantier est rigoureux et elle sait gérer les imprévus avec professionnalisme.",
       author: "Mazurok",
       link: "https://www.houzz.fr/viewReview/2197601/qualirenovation-by-qualiconcept-review"
     },
+    guideLinks: [
+      { label: "Étanchéité sous carrelage", anchor: "etancheite-salle-de-bain" },
+      { label: "Plomberie & réseaux", anchor: "plomberie-renovation-sdb" },
+    ],
     seoSections: [
-      {
-        title: "Rénovation d'une salle de bain à Paris 13 – Rue Nicolas Roret",
-        content: "Dans cet appartement parisien situé dans le 13ᵉ arrondissement, la salle de bain d'origine regroupait plusieurs usages autour d'un unique point d'eau, ce qui rendait la pièce peu confortable et difficile à organiser.\n\nLa rénovation a permis de repenser entièrement l'espace sans modifier la surface existante, en améliorant l'organisation et les rangements.\n\nChaque centimètre a été exploité afin de créer une salle de bain plus fonctionnelle et plus agréable au quotidien.",
-      },
       {
         title: "Quelle était la problématique de cette salle de bain ?",
         content: "La salle de bain présentait plusieurs contraintes :",
