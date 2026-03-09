@@ -165,6 +165,7 @@ const ProjetDetail = () => {
         />
       )}
 
+      <section className="section-padding pt-32 md:pt-40">
         <div className="container-custom">
           {/* Back button */}
           <Link
