@@ -298,6 +298,13 @@ const ProjetDetail = () => {
             )}
           </motion.div>
 
+          {/* SEO Structured Sections & FAQ */}
+          <AlbumSeoSections
+            sections={album.seoSections}
+            faqItems={album.faqItems}
+            externalAlbumLink={album.externalAlbumLink}
+          />
+
           {/* Photos grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {album.photos.map((photo, index) => (
