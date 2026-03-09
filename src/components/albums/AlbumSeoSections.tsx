@@ -6,6 +6,7 @@ import { ExternalLink } from "lucide-react";
 interface AlbumSeoSectionsProps {
   sections?: AlbumSeoSection[];
   faqItems?: AlbumFaqItem[];
+  faqTitle?: string;
   externalAlbumLink?: { label: string; url: string };
 }
 

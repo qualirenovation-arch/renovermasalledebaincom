@@ -705,6 +705,8 @@ export interface Album {
   seoSections?: AlbumSeoSection[];
   /** FAQ items rendered as accordion */
   faqItems?: AlbumFaqItem[];
+  /** Custom FAQ section title */
+  faqTitle?: string;
   /** External album link (e.g. qualirenovation.fr) */
   externalAlbumLink?: { label: string; url: string };
 }
