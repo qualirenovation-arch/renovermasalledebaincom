@@ -678,6 +678,7 @@ export interface Album {
   instagramLinks?: string[];
   ctaButton?: { label: string; link: string };
   category?: AlbumCategory;
+  guideLinks?: { label: string; anchor: string }[];
   finitionSol?: FinitionType;
   finitionMur?: FinitionType;
   isFeaturedRealisations?: boolean;
