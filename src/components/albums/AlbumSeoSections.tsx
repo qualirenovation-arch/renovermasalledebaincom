@@ -6,10 +6,11 @@ import { ExternalLink } from "lucide-react";
 interface AlbumSeoSectionsProps {
   sections?: AlbumSeoSection[];
   faqItems?: AlbumFaqItem[];
+  faqTitle?: string;
   externalAlbumLink?: { label: string; url: string };
 }
 
-export function AlbumSeoSections({ sections, faqItems, externalAlbumLink }: AlbumSeoSectionsProps) {
+export function AlbumSeoSections({ sections, faqItems, faqTitle, externalAlbumLink }: AlbumSeoSectionsProps) {
   if (!sections?.length && !faqItems?.length && !externalAlbumLink) return null;
 
   return (
@@ -55,7 +56,7 @@ export function AlbumSeoSections({ sections, faqItems, externalAlbumLink }: Albu
       {faqItems && faqItems.length > 0 && (
         <div>
           <h2 className="font-display text-xl md:text-2xl font-light mb-4 text-primary">
-            Questions fréquentes sur la rénovation d'une salle de bain
+            {faqTitle || "Questions fréquentes sur la rénovation d'une salle de bain"}
           </h2>
           <Accordion type="single" collapsible className="w-full">
             {faqItems.map((faq, index) => (
