@@ -5,6 +5,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { AlbumCTA } from "@/components/albums/AlbumCTA";
+import { AlbumSeoSections } from "@/components/albums/AlbumSeoSections";
 import { RelatedProjects } from "@/components/albums/RelatedProjects";
 import { OGTags } from "@/components/seo/OGTags";
 import { OG_BASE_URL, getAlbumOgData } from "@/lib/og";
@@ -112,8 +113,8 @@ const ProjetDetail = () => {
   return (
     <Layout>
       <OGTags
-        title={`${album.title} – Avant / Après`}
-        description={shortDescription}
+        title={album.metaTitle || `${album.title} – Avant / Après`}
+        description={album.metaDescription || shortDescription}
         path={`/realisations/${album.slug}`}
         type="article"
         coverImage={ogImageUrl}
@@ -144,6 +145,25 @@ const ProjetDetail = () => {
           ]
         }) }}
       />
+
+      {/* FAQ JSON-LD for AEO */}
+      {album.faqItems && album.faqItems.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": album.faqItems.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          }) }}
+        />
+      )}
 
       <section className="section-padding pt-32 md:pt-40">
         <div className="container-custom">
@@ -296,6 +316,13 @@ const ProjetDetail = () => {
               </motion.div>
             )}
           </motion.div>
+
+          {/* SEO Structured Sections & FAQ */}
+          <AlbumSeoSections
+            sections={album.seoSections}
+            faqItems={album.faqItems}
+            externalAlbumLink={album.externalAlbumLink}
+          />
 
           {/* Photos grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
