@@ -76,7 +76,7 @@ export function AlbumCTA({ album }: AlbumCTAProps) {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
     >
-      <Button variant="gold" size="xl" asChild className="rounded-full text-center whitespace-normal max-w-full">
+      <Button variant="gold" size="xl" asChild className="rounded-2xl text-center whitespace-normal max-w-full h-auto py-4 px-8">
         <Link to="/devis#devis-form" className="flex items-center justify-center gap-2 text-center">
           <span>{cta.buttonText}</span>
           <ArrowRight className="w-5 h-5 flex-shrink-0" />
