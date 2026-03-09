@@ -146,7 +146,25 @@ const ProjetDetail = () => {
         }) }}
       />
 
-      <section className="section-padding pt-32 md:pt-40">
+      {/* FAQ JSON-LD for AEO */}
+      {album.faqItems && album.faqItems.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": album.faqItems.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          }) }}
+        />
+      )}
+
         <div className="container-custom">
           {/* Back button */}
           <Link
