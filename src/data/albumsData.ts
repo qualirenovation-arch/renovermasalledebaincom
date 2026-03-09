@@ -663,6 +663,18 @@ export type FinitionType =
   | "mosaique"
   | "carreaux-de-ciment";
 
+export interface AlbumSeoSection {
+  title: string;
+  content?: string;
+  listItems?: string[];
+  type?: "text" | "list" | "ordered-list";
+}
+
+export interface AlbumFaqItem {
+  question: string;
+  answer: string;
+}
+
 export interface Album {
   id: string;
   slug: string; // URL SEO-friendly
@@ -685,6 +697,16 @@ export interface Album {
   isFeaturedRealisations?: boolean;
   featuredRealisationsOrder?: number;
   clickCount?: number;
+  /** Custom SEO meta title override */
+  metaTitle?: string;
+  /** Custom SEO meta description override */
+  metaDescription?: string;
+  /** Structured H2 sections for SEO/AEO */
+  seoSections?: AlbumSeoSection[];
+  /** FAQ items rendered as accordion */
+  faqItems?: AlbumFaqItem[];
+  /** External album link (e.g. qualirenovation.fr) */
+  externalAlbumLink?: { label: string; url: string };
 }
 
 // ===== ALBUMS TERMINÉS =====
