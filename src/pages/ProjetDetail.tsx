@@ -321,6 +321,7 @@ const ProjetDetail = () => {
           <AlbumSeoSections
             sections={album.seoSections}
             faqItems={album.faqItems}
+            faqTitle={album.faqTitle}
             externalAlbumLink={album.externalAlbumLink}
           />
 
