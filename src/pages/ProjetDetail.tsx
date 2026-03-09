@@ -270,6 +270,31 @@ const ProjetDetail = () => {
                 </div>
               </motion.div>
             )}
+
+            {/* Press Links */}
+            {album.pressLinks && album.pressLinks.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+                className="mt-4"
+              >
+                <p className="text-xs text-muted-foreground mb-2 font-medium uppercase tracking-wider">Vu dans la presse</p>
+                <div className="flex flex-wrap gap-2">
+                  {album.pressLinks.map((pl, index) => (
+                    <a
+                      key={index}
+                      href={pl.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-secondary text-foreground rounded-lg hover:bg-secondary/80 transition-colors text-sm font-medium border border-border/50"
+                    >
+                      📰 {pl.label}
+                    </a>
+                  ))}
+                </div>
+              </motion.div>
+            )}
           </motion.div>
 
           {/* Photos grid */}
