@@ -1265,7 +1265,11 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     ],
     seoSections: [
       {
-        title: "Quelle était la problématique de cette salle de bain ?",
+        title: "Description du projet",
+        content: "Dans cet appartement parisien situé rue Nicolas Roret dans le 13ᵉ arrondissement, la salle de bain des enfants a été entièrement repensée afin d'améliorer le confort et l'esthétique de cet espace du quotidien.\n\nL'objectif était de créer une salle de bain plus fonctionnelle, avec davantage de rangements et des installations techniques modernisées, le tout dans une ambiance élégante et chaleureuse.",
+      },
+      {
+        title: "Problématique",
         content: "La salle de bain présentait plusieurs contraintes :",
         listItems: [
           "Un agencement peu fonctionnel",
@@ -1276,11 +1280,12 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
         ],
       },
       {
-        title: "Quelles solutions ont été mises en place ?",
+        title: "Solution technique",
         content: "La rénovation a permis de repenser entièrement la technique.\n\nL'ancien chauffe-eau a été remplacé par un chauffe-eau plat plus compact.\n\nNous avons effectué les démarches auprès du syndic afin de remplacer la colonne d'évacuation en fonte.\n\nLes évacuations ont été passées par la cave afin d'éviter les tuyaux apparents et les coffrages.\n\nUn meuble vasque XXL a été installé afin d'apporter davantage de rangement.\n\nLe lave-linge est dissimulé dans un placard et un placard a été créé derrière la porte pour la table à repasser.",
       },
       {
-        title: "Quels travaux ont été réalisés ?",
+        title: "Travaux réalisés",
+        content: "La salle de bain a fait l'objet d'une rénovation complète comprenant :",
         listItems: [
           "Reprise complète de la plomberie",
           "Remplacement du chauffe-eau",
@@ -1295,12 +1300,8 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
         ],
       },
       {
-        title: "Les matériaux choisis",
-        content: "Le projet se structure autour d'un zellige type bejmat en finition mate dans des tons vert Saint-Laurent.\n\nPlus épais et plus minéral que le zellige traditionnel, le bejmat apporte une texture artisanale.\n\nUn carrelage inspiration marbre brillant au mur reflète la lumière et agrandit visuellement la pièce.\n\nLes finitions en laiton brossé apportent une touche chaleureuse et élégante.",
-      },
-      {
         title: "Avant / Après",
-        content: "Avant les travaux, la salle de bain regroupait plusieurs usages autour d'un point d'eau unique et manquait de rangement.\n\nAprès rénovation, la pièce est devenue plus fonctionnelle avec des rangements intégrés et des installations techniques invisibles.",
+        content: "Avant les travaux, la salle de bain regroupait plusieurs usages autour d'un point d'eau unique et manquait de rangement.\n\nAprès rénovation, la pièce est devenue plus fonctionnelle avec des rangements intégrés et des installations techniques invisibles. Le zellige bejmat vert Saint-Laurent et les finitions en laiton brossé apportent une touche chaleureuse et élégante.",
       },
     ],
     faqItems: [
