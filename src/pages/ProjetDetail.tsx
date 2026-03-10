@@ -255,11 +255,9 @@ const ProjetDetail = () => {
             )}
           </motion.div>
 
-          {/* SEO Structured Sections & FAQ */}
+          {/* SEO Structured Sections (without FAQ, without Avant/Après — those go after photos) */}
           <AlbumSeoSections
             sections={album.seoSections?.filter(s => s.title !== "Avant / Après")}
-            faqItems={album.faqItems}
-            faqTitle={album.faqTitle}
             externalAlbumLink={album.externalAlbumLink}
           />
 
@@ -387,7 +385,15 @@ const ProjetDetail = () => {
             </motion.div>
           )}
 
-          {/* CTA Button after photos */}
+          {/* FAQ section after photos */}
+          {album.faqItems && album.faqItems.length > 0 && (
+            <AlbumSeoSections
+              faqItems={album.faqItems}
+              faqTitle={album.faqTitle}
+            />
+          )}
+
+          {/* CTA Button after photos & FAQ */}
           <AlbumCTA album={album} />
 
           {/* Related projects for internal linking / SEO */}
