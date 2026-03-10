@@ -7,6 +7,13 @@ import gallery7 from "@/assets/gallery-7.jpg";
 import gallery8 from "@/assets/gallery-8.jpg";
 import gallery9 from "@/assets/gallery-9.jpg";
 import gallery10 from "@/assets/gallery-10.jpg";
+import paris10FaubourgAvant1 from "@/assets/paris10-faubourg-avant-1.jpg";
+import paris10FaubourgAvant2 from "@/assets/paris10-faubourg-avant-2.jpg";
+import paris10FaubourgAvant3 from "@/assets/paris10-faubourg-avant-3.jpg";
+import paris10FaubourgAvant4 from "@/assets/paris10-faubourg-avant-4.jpg";
+import paris10FaubourgAvant5 from "@/assets/paris10-faubourg-avant-5.jpg";
+import paris10FaubourgAvant6 from "@/assets/paris10-faubourg-avant-6.jpg";
+import paris10FaubourgAvant7 from "@/assets/paris10-faubourg-avant-7.jpg";
 
 // Bd Pereire Paris 17ème
 import gallery11 from "@/assets/gallery-11.jpg";
