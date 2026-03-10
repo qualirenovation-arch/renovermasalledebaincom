@@ -188,7 +188,9 @@ const ProjetDetail = () => {
               <h2 className="font-display text-lg md:text-xl text-wood italic mb-4">{album.subtitle}</h2>
             )}
             
-            <p className="text-muted-foreground leading-relaxed max-w-3xl">{album.description}</p>
+            {(!album.seoSections || album.seoSections.length === 0) && (
+              <p className="text-muted-foreground leading-relaxed max-w-3xl">{album.description}</p>
+            )}
             
             {/* CTA Button */}
             {album.ctaButton && (
