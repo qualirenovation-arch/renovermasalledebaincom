@@ -698,6 +698,7 @@ export interface Album {
   ctaButton?: { label: string; link: string };
   category?: AlbumCategory;
   guideLinks?: { label: string; anchor: string }[];
+  faqLinks?: { label: string; anchor: string }[];
   pressLinks?: { label: string; url: string }[];
   finitionSol?: FinitionType;
   finitionMur?: FinitionType;
@@ -1142,6 +1143,12 @@ Après rénovation, la pièce est devenue une salle de bain haut de gamme de 3,8
       { label: "Étanchéité salle de bain", anchor: "etancheite-salle-de-bain" },
       { label: "Receveur de douche", anchor: "receveur-douche-appartement" },
       { label: "VMC & Éclairage", anchor: "section-13" },
+    ],
+    faqLinks: [
+      { label: "Prix rénovation salle de bain Paris", anchor: "prix-renovation-salle-de-bain" },
+      { label: "Délais de réalisation", anchor: "delais-renovation" },
+      { label: "Étanchéité DTU 52.2", anchor: "etancheite-dtu" },
+      { label: "Plomberie & conformité", anchor: "plomberie-conformite" },
     ],
     pressLinks: [
       { label: "Houzz — Robinetterie laiton brossé : la tendance dorée", url: "https://www.houzz.fr/magazine/quand-le-laiton-s-invite-dans-la-salle-de-bains-stsetivw-vs~136498056" },
