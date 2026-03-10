@@ -1343,7 +1343,7 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     slug: "salle-de-bain-paris-13-renovation-wc-zellige-turquoise-laiton",
     title: "Rénovation WC Paris 13ᵉ — Zellige bejmat mat, tons vert Saint-Laurent et laiton brossé",
     location: "Paris 13ème - Rue Nicolas Roret",
-    description: "AVANT : WC vétuste avec carrelage bleu abîmé, équipements datés et peinture écaillée. APRÈS : WC suspendu luxueux avec zellige turquoise posé en chevron, lave-mains avec robinetterie laiton brossé, local technique optimisé intégrant chauffe-eau et lave-linge.",
+    description: "Rénovation complète des WC dans un appartement parisien du 13ᵉ arrondissement. Installation d'un WC suspendu avec zellige bejmat vert Saint-Laurent posé en chevron, lave-mains avec robinetterie laiton brossé et local technique optimisé intégrant chauffe-eau et lave-linge.",
     coverImage: nicolasRoret11,
     instagramLink: "https://www.instagram.com/reel/DTiv9H0jb06/",
     metaTitle: "Rénovation WC suspendu Paris 13 – zellige vert Saint-Laurent | renovermasalledebain.com – qualirenovation.fr",

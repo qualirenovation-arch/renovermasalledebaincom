@@ -263,6 +263,26 @@ const ProjetDetail = () => {
             externalAlbumLink={album.externalAlbumLink}
           />
 
+          {/* Avant / Après section (rendered after SEO sections, before photos) */}
+          {album.seoSections?.filter(s => s.title === "Avant / Après").map((section, index) => (
+            <motion.div
+              key={`avant-apres-${index}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="mt-10 max-w-3xl"
+            >
+              <h2 className="font-display text-xl md:text-2xl font-light mb-4 text-primary">
+                {section.title}
+              </h2>
+              {section.content && (
+                <div className="text-muted-foreground leading-relaxed text-sm md:text-base whitespace-pre-line">
+                  {section.content}
+                </div>
+              )}
+            </motion.div>
+          ))}
+
           {/* Photos grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {album.photos.map((photo, index) => (
