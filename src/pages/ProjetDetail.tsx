@@ -385,7 +385,15 @@ const ProjetDetail = () => {
             </motion.div>
           )}
 
-          {/* CTA Button after photos */}
+          {/* FAQ section after photos */}
+          {album.faqItems && album.faqItems.length > 0 && (
+            <AlbumSeoSections
+              faqItems={album.faqItems}
+              faqTitle={album.faqTitle}
+            />
+          )}
+
+          {/* CTA Button after photos & FAQ */}
           <AlbumCTA album={album} />
 
           {/* Related projects for internal linking / SEO */}
