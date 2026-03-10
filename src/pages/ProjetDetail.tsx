@@ -232,6 +232,29 @@ const ProjetDetail = () => {
               </motion.div>
             )}
 
+            {/* FAQ Links */}
+            {album.faqLinks && album.faqLinks.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.35 }}
+                className="mt-4"
+              >
+                <p className="text-xs text-muted-foreground mb-2 font-medium uppercase tracking-wider">Questions fréquentes</p>
+                <div className="flex flex-wrap gap-2">
+                  {album.faqLinks.map((fl, index) => (
+                    <Link
+                      key={index}
+                      to={`/faq#${fl.anchor}`}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-secondary text-foreground rounded-lg hover:bg-secondary/80 transition-colors text-sm font-medium border border-border/50"
+                    >
+                      ❓ {fl.label}
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+
             {/* Press Links */}
             {album.pressLinks && album.pressLinks.length > 0 && (
               <motion.div
