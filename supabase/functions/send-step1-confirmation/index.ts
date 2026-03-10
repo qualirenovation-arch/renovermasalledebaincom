@@ -252,7 +252,7 @@ const handler = async (req: Request): Promise<Response> => {
     });
 
     const companyData = await companyEmailResponse.json();
-    console.log("Company notification sent for lead:", lead.id);
+    console.log("Company email response:", companyEmailResponse.status, JSON.stringify(companyData));
 
     return new Response(
       JSON.stringify({ success: true, leadId: lead.id }),
