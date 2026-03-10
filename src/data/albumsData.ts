@@ -2094,7 +2094,52 @@ Ce projet illustre parfaitement notre approche : un chantier heureux, fondé sur
     slug: "salle-de-bain-soisy-95-renovation-enfants-terrazzo-menthe",
     title: "SDB Enfants — Terrazzo & Menthe",
     location: "Soisy-sous-Montmorency (95) - Maison 1900",
-    description: `Description du projet\nCe projet concerne la rénovation d'une salle de bain située dans les combles d'une maison à Soisy-sous-Montmorency, occupée par une famille de quatre personnes. La pièce est destinée en grande partie aux enfants et devait être repensée pour être plus fonctionnelle et offrir davantage de rangement.\nLa configuration sous combles présentait une contrainte importante avec la présence de rampants qui empêchaient l'installation d'un meuble vasque classique.\n\nProblématique\nLa principale difficulté du projet était d'aménager une salle de bain confortable malgré la pente du toit. Le rampant ne permettait pas de poser directement un meuble vasque contre le mur.\n\nSolution technique\nPour résoudre cette contrainte, nous avons créé une ossature composée de rails et montants renforcée par des panneaux OSB afin de reconstituer une ligne droite permettant l'installation du meuble vasque.\nUne colonne en médium sur mesure a également été réalisée pour séparer le meuble vasque de la cuvette WC. À droite du meuble, un caisson bas sur mesure a été créé afin d'exploiter l'espace sous le rampant et d'ajouter du rangement.\n\nTravaux réalisés\nLa salle de bain a fait l'objet d'une rénovation complète comprenant :\n• travaux de plâtrerie\n• électricité\n• plomberie\n• installation d'une VMC avec pose d'une bouche dans la salle de bain reliée à un groupe VMC pour l'ensemble de la maison\n• mise en place d'une étanchéité sous carrelage dans les zones exposées à l'eau\n• pose du carrelage sol et murs\n• travaux de peinture\n• fabrication et pose des menuiseries sur mesure\n• installation des sanitaires\nLe choix du carrelage terrazzo apporte de la luminosité à la pièce et les profilés orange créent un rappel subtil avec les teintes du carrelage.\n\nBudget\nPour une rénovation complète de salle de bain comprenant plusieurs corps de métier (plomberie, électricité, plâtrerie, étanchéité, carrelage et menuiserie), le budget moyen se situe entre 15 000 € et 20 000 € selon les matériaux et les aménagements choisis.\n\nAvant / Après\nAvant les travaux, la salle de bain comprenait un receveur de douche placé dans l'angle, un lavabo et une cuvette WC, sans solution de rangement.\nAprès rénovation, la pièce a été entièrement repensée avec l'installation d'un grand meuble vasque, d'une baignoire et d'une cuvette WC mieux intégrée. La salle de bain dispose désormais de rangements, d'un sèche-serviettes et d'un éclairage par spots qui rendent la pièce plus lumineuse et beaucoup plus confortable pour un usage quotidien.\n\nSalle de bain enfant • Rénovation salle de bain sous combles • Salle de bain familiale • Rénovation salle de bain Soisy-sous-Montmorency • Avant après salle de bain. Salle de bain Leroy Merlin, meuble salle de bain Ikea. Finitions premium.`,
+    description: `Rénovation complète d'une salle de bain enfants sous combles à Soisy-sous-Montmorency. Carrelage terrazzo menthe, menuiseries sur mesure et aménagements optimisés pour une famille de quatre personnes. Salle de bain Leroy Merlin, meuble salle de bain Ikea. Finitions premium.`,
+    seoSections: [
+      {
+        title: "Description du projet",
+        content: `Ce projet concerne la rénovation d'une salle de bain située dans les combles d'une maison à Soisy-sous-Montmorency, occupée par une famille de quatre personnes. La pièce est destinée en grande partie aux enfants et devait être repensée pour être plus fonctionnelle et offrir davantage de rangement.
+La configuration sous combles présentait une contrainte importante avec la présence de rampants qui empêchaient l'installation d'un meuble vasque classique.`
+      },
+      {
+        title: "Problématique",
+        content: `La principale difficulté du projet était d'aménager une salle de bain confortable malgré la pente du toit. Le rampant ne permettait pas de poser directement un meuble vasque contre le mur.`
+      },
+      {
+        title: "Solution technique",
+        content: `Pour résoudre cette contrainte, nous avons créé une ossature composée de rails et montants renforcée par des panneaux OSB afin de reconstituer une ligne droite permettant l'installation du meuble vasque.
+Une colonne en médium sur mesure a également été réalisée pour séparer le meuble vasque de la cuvette WC. À droite du meuble, un caisson bas sur mesure a été créé afin d'exploiter l'espace sous le rampant et d'ajouter du rangement.`
+      },
+      {
+        title: "Travaux réalisés",
+        content: `La salle de bain a fait l'objet d'une rénovation complète comprenant :
+• travaux de plâtrerie
+• électricité
+• plomberie
+• installation d'une VMC avec pose d'une bouche dans la salle de bain reliée à un groupe VMC pour l'ensemble de la maison
+• mise en place d'une étanchéité sous carrelage dans les zones exposées à l'eau
+• pose du carrelage sol et murs
+• travaux de peinture
+• fabrication et pose des menuiseries sur mesure
+• installation des sanitaires
+Le choix du carrelage terrazzo apporte de la luminosité à la pièce et les profilés orange créent un rappel subtil avec les teintes du carrelage.`
+      },
+      {
+        title: "Budget",
+        content: `Pour une rénovation complète de salle de bain comprenant plusieurs corps de métier (plomberie, électricité, plâtrerie, étanchéité, carrelage et menuiserie), le budget moyen se situe entre 15 000 € et 20 000 € selon les matériaux et les aménagements choisis.`
+      },
+      {
+        title: "Avant / Après",
+        content: `Avant les travaux, la salle de bain comprenait un receveur de douche placé dans l'angle, un lavabo et une cuvette WC, sans solution de rangement.
+Après rénovation, la pièce a été entièrement repensée avec l'installation d'un grand meuble vasque, d'une baignoire et d'une cuvette WC mieux intégrée. La salle de bain dispose désormais de rangements, d'un sèche-serviettes et d'un éclairage par spots qui rendent la pièce plus lumineuse et beaucoup plus confortable pour un usage quotidien.`
+      },
+    ],
+    faqItems: [
+      { question: "Comment rénover une salle de bain sous combles ?", answer: "La rénovation d'une salle de bain sous combles nécessite de créer des ossatures sur mesure (rails, montants, OSB) pour compenser les rampants et permettre l'installation de meubles vasques et rangements. Un aménagement sur mesure est indispensable pour optimiser chaque centimètre." },
+      { question: "Quel budget pour une rénovation complète de salle de bain ?", answer: "Pour une rénovation complète incluant plomberie, électricité, plâtrerie, étanchéité, carrelage et menuiserie, le budget moyen se situe entre 15 000 € et 20 000 € selon les matériaux et aménagements choisis." },
+      { question: "Comment intégrer du terrazzo dans une salle de bain ?", answer: "Le carrelage terrazzo s'intègre parfaitement en salle de bain, aussi bien au sol que sur les murs. Ses éclats de couleur apportent luminosité et caractère. Des profilés colorés peuvent créer un rappel subtil avec les teintes du carrelage." },
+    ],
+    faqTitle: "Questions fréquentes — Rénovation salle de bain sous combles",
     coverImage: soisyEnfants1,
     photos: [
       { id: 1, image: soisyEnfants1, title: "Après — Terrazzo menthe", description: "Sol et murs terrazzo harmonieux" },
