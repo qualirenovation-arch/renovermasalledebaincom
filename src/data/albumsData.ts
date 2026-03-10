@@ -698,6 +698,7 @@ export interface Album {
   ctaButton?: { label: string; link: string };
   category?: AlbumCategory;
   guideLinks?: { label: string; anchor: string }[];
+  faqLinks?: { label: string; anchor: string }[];
   pressLinks?: { label: string; url: string }[];
   finitionSol?: FinitionType;
   finitionMur?: FinitionType;
