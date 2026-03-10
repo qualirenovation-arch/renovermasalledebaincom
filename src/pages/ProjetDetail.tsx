@@ -255,11 +255,9 @@ const ProjetDetail = () => {
             )}
           </motion.div>
 
-          {/* SEO Structured Sections & FAQ */}
+          {/* SEO Structured Sections (without FAQ, without Avant/Après — those go after photos) */}
           <AlbumSeoSections
             sections={album.seoSections?.filter(s => s.title !== "Avant / Après")}
-            faqItems={album.faqItems}
-            faqTitle={album.faqTitle}
             externalAlbumLink={album.externalAlbumLink}
           />
 
