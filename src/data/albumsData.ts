@@ -1065,7 +1065,49 @@ Un projet pensé pour simplifier le quotidien, anticiper les évolutions de vie 
     slug: "salle-de-bain-paris-10-renovation-elegance-doree-faubourg-saint-denis",
     title: "Rénovation salle de bain Paris 10ème — Élégance dorée au Faubourg Saint-Denis",
     location: "Paris 10ème - Faubourg Saint-Denis",
-    description: "AVANT : Salle de bain banale avec équipements standards. APRÈS : Salle de bain luxueuse avec robinetterie dorée laiton brossé, carrelage effet marbre onyx et finitions haut de gamme. Paroi vitrée à profilé doré et ciel de pluie encastré.",
+    description: `Une salle de bain raffinée dans moins de 4 m², conçue au millimètre près. Carrelage effet marbre perle et noisette, robinetterie encastrée laiton brossé gamme Châtelet, verrière bronze. Salle de bain Leroy Merlin, meuble salle de bain Ikea. Finitions premium.`,
+    seoSections: [
+      {
+        title: "Description du projet",
+        content: `Au départ, cet espace n'était qu'une kitchenette vétuste. Après démolition, il a laissé place à une salle de bain haut de gamme, conçue au millimètre près.
+
+Les matériaux donnent immédiatement le ton : un carrelage effet marbre perle et noisette, une robinetterie encastrée en laiton brossé de la gamme Châtelet (partenariat fidèle avec Ma Salle de Bain), et une verrière bronze qui structure tout en laissant passer la lumière.`
+      },
+      {
+        title: "Solution technique",
+        content: `La technique, pilier du confort :
+
+Le réseau d'évacuation a été déplacé avec l'accord du syndic.
+La vanne d'arrêt générale est centralisée dans le placard technique au-dessus des WC, via une nourrice : un seul geste suffit pour sécuriser tout l'appartement.
+Le chauffe-eau est intégré dans un placard au-dessus du plan vasque.
+La VMC reste accessible grâce à une trappe au plafond peinte et discrète.
+Sous le receveur de douche, une trappe carrelée permet d'accéder facilement au siphon.
+La plâtrerie a été refaite pour intégrer les réseaux, créer les niches et assurer des surfaces parfaitement planes.
+
+Chaque détail a été pensé pour éviter toute galère future et garantir un entretien simple.`
+      },
+      {
+        title: "Travaux réalisés",
+        content: `Côté agencement, le plan vasque de 1m20 repose d'un côté sur un meuble bas en noyer (IKEA détourné), et de l'autre sur la machine à laver, dissimulée derrière une façade qui cache le hublot.
+Dans la douche, un banc intégré et une niche murale encastrée offrent confort et rangements sans alourdir l'espace. Enfin, le plancher chauffant vient parfaire l'ensemble.
+
+Plomberie, électricité, sols et plâtrerie : les fondations d'un chantier.
+Les peintures et menuiseries ne viennent qu'après — pour le plaisir des finitions.
+
+Conception : Thierry Pelmard, architecte d'intérieur
+Maîtrise d'œuvre : Carina Nahmani, maître d'œuvre
+Surface : env. 3,8 m²`
+      },
+    ],
+    faqItems: [
+      { question: "Comment créer une salle de bain dans moins de 4 m² ?", answer: "En concevant chaque élément au millimètre près : plan vasque reposant sur un meuble et la machine à laver dissimulée, banc intégré dans la douche, niches encastrées et placards techniques optimisés. L'intervention d'un architecte d'intérieur est recommandée pour maximiser chaque centimètre." },
+      { question: "Peut-on transformer une kitchenette en salle de bain ?", answer: "Oui, à condition de déplacer les réseaux d'évacuation avec l'accord du syndic, de centraliser les vannes d'arrêt et de refaire intégralement la plâtrerie pour intégrer les nouveaux réseaux. Une étanchéité sous carrelage est indispensable." },
+      { question: "Quelle robinetterie choisir pour une petite salle de bain haut de gamme ?", answer: "La robinetterie encastrée en laiton brossé (comme la gamme Châtelet) est idéale : elle libère de l'espace visuel, apporte une touche luxueuse et s'associe parfaitement avec un carrelage effet marbre." },
+    ],
+    faqTitle: "Questions fréquentes — Rénovation petite salle de bain haut de gamme",
+    instagramLinks: [
+      "https://www.instagram.com/reel/DMnp8YEMaKy/"
+    ],
     coverImage: gallery7,
     photos: [
       { id: 1, image: gallery7, title: "Après — Vue d'ensemble", description: "Paroi vitrée profilé laiton doré" },
