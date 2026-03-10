@@ -257,7 +257,7 @@ const ProjetDetail = () => {
 
           {/* SEO Structured Sections & FAQ */}
           <AlbumSeoSections
-            sections={album.seoSections}
+            sections={album.seoSections?.filter(s => s.title !== "Avant / Après")}
             faqItems={album.faqItems}
             faqTitle={album.faqTitle}
             externalAlbumLink={album.externalAlbumLink}
