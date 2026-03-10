@@ -273,7 +273,7 @@ export function QuoteRequestsList({ onSelectQuote }: QuoteRequestsListProps) {
                   onClick={() => onSelectQuote(quote.id)}
                 >
                   <TableCell className="whitespace-nowrap">
-                    {format(new Date(quote.created_at), "dd/MM/yy", { locale: fr })}
+                    {format(new Date(quote.created_at), "dd/MM/yy HH:mm", { locale: fr })}
                   </TableCell>
                   <TableCell>
                     {quote.type_devis === "degat_des_eaux" ? (
