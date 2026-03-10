@@ -1098,6 +1098,12 @@ Conception : Thierry Pelmard, architecte d'intérieur
 Maîtrise d'œuvre : Carina Nahmani, maître d'œuvre
 Surface : env. 3,8 m²`
       },
+      {
+        title: "Avant / Après",
+        content: `Avant les travaux, cet espace était une kitchenette vétuste sans aucun rapport avec une salle de bain. Aucune évacuation, aucune ventilation, aucun réseau adapté.
+
+Après rénovation, la pièce est devenue une salle de bain haut de gamme de 3,8 m² avec douche à l'italienne, plan vasque de 1m20 en noyer, machine à laver intégrée et invisible, verrière bronze, plancher chauffant et robinetterie encastrée laiton brossé. Un espace entièrement repensé où chaque centimètre a été optimisé.`
+      },
     ],
     faqItems: [
       { question: "Comment créer une salle de bain dans moins de 4 m² ?", answer: "En concevant chaque élément au millimètre près : plan vasque reposant sur un meuble et la machine à laver dissimulée, banc intégré dans la douche, niches encastrées et placards techniques optimisés. L'intervention d'un architecte d'intérieur est recommandée pour maximiser chaque centimètre." },
