@@ -1137,6 +1137,15 @@ Après rénovation, la pièce est devenue une salle de bain haut de gamme de 3,8
     ],
     finitionSol: "marbre",
     finitionMur: "marbre",
+    guideLinks: [
+      { label: "Plomberie & réseaux", anchor: "plomberie-renovation-sdb" },
+      { label: "Étanchéité salle de bain", anchor: "etancheite-salle-de-bain" },
+      { label: "Receveur de douche", anchor: "receveur-douche-appartement" },
+      { label: "VMC & Éclairage", anchor: "section-13" },
+    ],
+    pressLinks: [
+      { label: "Houzz — Robinetterie laiton brossé : la tendance dorée", url: "https://www.houzz.fr/magazine/quand-le-laiton-s-invite-dans-la-salle-de-bains-stsetivw-vs~136498056" },
+    ],
   },
   {
     id: "faubourg-stmartin",
