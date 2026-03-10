@@ -204,7 +204,7 @@ const handler = async (req: Request): Promise<Response> => {
     });
 
     const emailData = await emailResponse.json();
-    console.log("Client email sent to:", maskEmail(clientEmail));
+    console.log("Client email response:", emailResponse.status, JSON.stringify(emailData));
 
     // Send notification to company
     const companyEmailResponse = await fetch("https://api.resend.com/emails", {
