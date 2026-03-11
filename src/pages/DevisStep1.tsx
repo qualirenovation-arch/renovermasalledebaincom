@@ -53,15 +53,16 @@ export default function DevisStep1() {
   const captchaRef = useRef<HCaptcha>(null);
   const [devisType, setDevisType] = useState<'selector' | 'classique' | 'degat_eaux'>('selector');
 
-  // Check URL params for direct type access
+  // Check URL params for direct type access (run only once on mount)
+  const typeParam = searchParams.get('type');
   useEffect(() => {
-    const typeParam = searchParams.get('type');
     if (typeParam === 'degat_eaux') {
       setDevisType('degat_eaux');
     } else if (typeParam === 'classique') {
       setDevisType('classique');
     }
-  }, [searchParams]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [typeParam]);
 
   const [formData, setFormData] = useState({
     prenom: "",
