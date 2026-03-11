@@ -365,3 +365,18 @@
     @apply icon-container bg-primary/10 text-primary;
   }
 }
+
+/* Ticker scroll animation - CSS only, no React re-renders */
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+.ticker-scroll {
+  animation: ticker-scroll linear infinite;
+  will-change: transform;
+}
