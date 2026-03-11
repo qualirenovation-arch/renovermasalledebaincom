@@ -15,6 +15,7 @@ import PartenairesContact from "./pages/PartenairesContact";
 import DevisStep1 from "./pages/DevisStep1";
 import Devis from "./pages/Devis";
 import DevisCallback from "./pages/DevisCallback";
+import DevisConfirmation from "./pages/DevisConfirmation";
 import FAQ from "./pages/FAQ";
 import MentionsLegales from "./pages/MentionsLegales";
 import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
