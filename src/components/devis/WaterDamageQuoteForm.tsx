@@ -108,9 +108,9 @@ interface Props {
 }
 
 export function WaterDamageQuoteForm({ onBack }: Props) {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState<WaterDamageStep1Data>(initialFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const captchaRef = useRef<HCaptcha>(null);
   const { toast } = useToast();
