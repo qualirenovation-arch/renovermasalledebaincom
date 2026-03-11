@@ -128,12 +128,12 @@ export default function DevisStep1() {
         console.error("Step 1 submission error:", error);
       }
 
-      setIsSubmitted(true);
       toast({ title: "Demande enregistrée !", description: "Consultez votre boîte email pour la suite." });
+      navigate(`/devis/confirmation?email=${encodeURIComponent(formData.email)}&type=classique`);
     } catch (err) {
       console.error("Submission error:", err);
-      setIsSubmitted(true);
       toast({ title: "Demande enregistrée !", description: "Nous vous recontacterons rapidement." });
+      navigate(`/devis/confirmation?email=${encodeURIComponent(formData.email)}&type=classique`);
     } finally {
       setIsSubmitting(false);
       setCaptchaToken(null);
