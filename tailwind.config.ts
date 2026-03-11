@@ -16,7 +16,7 @@ export default {
       fontFamily: {
         display: ["Nunito Sans", "sans-serif"],
         sans: ["Montserrat", "sans-serif"],
-        script: ["Imperial Script", "cursive"],
+        script: ["Alex Brush", "cursive"],
       },
       colors: {
         border: "hsl(var(--border))",
