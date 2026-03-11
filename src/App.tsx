@@ -15,6 +15,7 @@ import PartenairesContact from "./pages/PartenairesContact";
 import DevisStep1 from "./pages/DevisStep1";
 import Devis from "./pages/Devis";
 import DevisCallback from "./pages/DevisCallback";
+import DevisConfirmation from "./pages/DevisConfirmation";
 import FAQ from "./pages/FAQ";
 import MentionsLegales from "./pages/MentionsLegales";
 import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
@@ -58,6 +59,7 @@ const App = () => (
           <Route path="/devis" element={<DevisStep1 />} />
           <Route path="/devis/completer" element={<Devis />} />
           <Route path="/devis/rappel" element={<DevisCallback />} />
+          <Route path="/devis/confirmation" element={<DevisConfirmation />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/mentions-legales" element={<MentionsLegales />} />
           <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
