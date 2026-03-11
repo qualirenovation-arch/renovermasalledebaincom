@@ -141,50 +141,6 @@ export default function DevisStep1() {
     }
   };
 
-  if (isSubmitted) {
-    return (
-      <Layout>
-        <section className="section-padding min-h-[70vh] flex items-center">
-          <div className="container-custom">
-            <motion.div className="max-w-2xl mx-auto text-center" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }}>
-              <div className="w-24 h-24 rounded-full bg-[hsl(var(--tag-mint))] flex items-center justify-center mx-auto mb-8">
-                <Mail className="w-12 h-12 text-foreground" />
-              </div>
-              <h1 className="font-display text-3xl md:text-4xl font-light mb-6">Votre demande est enregistrée !</h1>
-              <p className="text-muted-foreground text-lg mb-8">
-                Un email vient de vous être envoyé à <strong>{formData.email}</strong> avec 
-                <strong> 3 options</strong> pour poursuivre votre projet.
-              </p>
-              <div className="bg-accent/30 rounded-xl p-6 mb-8 text-left">
-                <div className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-medium text-foreground mb-1">Vérifiez votre boîte email</p>
-                    <p className="text-muted-foreground text-sm">
-                      Vous y trouverez un lien pour compléter votre demande en ligne, demander un rappel, 
-                      ou planifier un échange téléphonique directement.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="default" size="lg" asChild>
-                  <a href="/">Retourner sur le site</a>
-                </Button>
-                <Button variant="outline" size="lg" onClick={() => {
-                  setIsSubmitted(false);
-                  setFormData({ prenom: "", nom: "", email: "", telephone: "", adresse: "", ville: "", codePostal: "", projectType: "", roomType: "" });
-                }}>
-                  Nouvelle demande
-                </Button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </Layout>
-    );
-  }
-
   return (
     <Layout>
       <OGTags
