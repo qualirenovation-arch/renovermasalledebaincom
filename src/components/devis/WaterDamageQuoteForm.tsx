@@ -170,12 +170,12 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
         console.error("Step 1 water damage error:", error);
       }
 
-      setIsSubmitted(true);
       toast({ title: "Demande enregistrée !", description: "Consultez votre boîte email pour la suite." });
+      navigate(`/devis/confirmation?email=${encodeURIComponent(formData.email)}&type=degat_eaux`);
     } catch (err) {
       console.error("Submission error:", err);
-      setIsSubmitted(true);
       toast({ title: "Demande enregistrée !", description: "Nous vous recontacterons rapidement." });
+      navigate(`/devis/confirmation?email=${encodeURIComponent(formData.email)}&type=degat_eaux`);
     } finally {
       setIsSubmitting(false);
       setCaptchaToken(null);
