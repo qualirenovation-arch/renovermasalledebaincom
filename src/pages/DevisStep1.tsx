@@ -49,7 +49,6 @@ export default function DevisStep1() {
   const [searchParams] = useSearchParams();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const captchaRef = useRef<HCaptcha>(null);
   const [devisType, setDevisType] = useState<'selector' | 'classique' | 'degat_eaux'>('selector');
