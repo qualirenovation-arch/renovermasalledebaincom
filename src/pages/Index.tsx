@@ -153,8 +153,8 @@ export default function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
             <ScrollAnimation variant="fadeUp" className="text-center lg:text-left">
               <h1 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-5 md:mb-7 text-primary leading-[1.1] tracking-tight">
-                UN CHANTIER HEUREUX<br />
-                POUR VOTRE <span className="font-script text-gold text-5xl md:text-6xl lg:text-7xl xl:text-8xl" style={{ fontWeight: 400 }}>Salle de Bain</span>
+                UN CHANTIER HEUREUX POUR VOTRE<br />
+                <span className="font-script text-gold text-5xl md:text-6xl lg:text-7xl xl:text-8xl" style={{ fontWeight: 400 }}>Salle de Bain</span>
               </h1>
               <p className="text-muted-foreground text-base md:text-lg lg:text-xl mb-8 md:mb-10 leading-relaxed max-w-lg lg:max-w-none">
                 Rénover votre salle de bain sans stress, sans mauvaises surprises, grâce à une conception maîtrisée et un accompagnement de A à Z.
