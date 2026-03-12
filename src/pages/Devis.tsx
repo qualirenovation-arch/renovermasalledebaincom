@@ -886,6 +886,7 @@ export default function Devis() {
                         placeholder="Paris"
                         required
                         className="rounded-xl"
+                        autoComplete="off"
                       />
                     </div>
                     <div className="space-y-2">
