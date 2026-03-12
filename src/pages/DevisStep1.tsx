@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback, useEffect } from "react";
+import { useState, useRef, useCallback } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { motion } from "framer-motion";
@@ -47,23 +47,26 @@ const getEffectiveCaptchaToken = (token: string | null) => {
 
 export default function DevisStep1() {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const captchaRef = useRef<HCaptcha>(null);
-  const [devisType, setDevisType] = useState<'selector' | 'classique' | 'degat_eaux'>('selector');
 
-  // Check URL params for direct type access (run only once on mount)
+  // Derive devisType directly from URL params for full sync
   const typeParam = searchParams.get('type');
-  useEffect(() => {
-    if (typeParam === 'degat_eaux') {
-      setDevisType('degat_eaux');
-    } else if (typeParam === 'classique') {
-      setDevisType('classique');
+  const devisType: 'selector' | 'classique' | 'degat_eaux' = 
+    typeParam === 'degat_eaux' ? 'degat_eaux' : 
+    typeParam === 'classique' ? 'classique' : 
+    'selector';
+
+  const setDevisType = useCallback((type: 'selector' | 'classique' | 'degat_eaux') => {
+    if (type === 'selector') {
+      setSearchParams({}, { replace: true });
+    } else {
+      setSearchParams({ type }, { replace: true });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [typeParam]);
+  }, [setSearchParams]);
 
   const [formData, setFormData] = useState({
     prenom: "",
