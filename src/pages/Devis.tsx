@@ -910,6 +910,7 @@ export default function Devis() {
                         onChange={(e) => handleChange("dimensionPiece", e.target.value)}
                         placeholder="Ex: 5 m² ou 2m x 3m"
                         className="rounded-xl"
+                        autoComplete="off"
                       />
                     </div>
                     <div className="space-y-2">
