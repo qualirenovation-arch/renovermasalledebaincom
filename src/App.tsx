@@ -24,6 +24,7 @@ import Guide from "./pages/Guide";
 import VideosConseils from "./pages/VideosConseils";
 import DegatsEaux from "./pages/DegatsEaux";
 import VisuelsHouzz from "./pages/VisuelsHouzz";
+import VisuelsInstagramHighlights from "./pages/VisuelsInstagramHighlights";
 import DevenirPartenaire from "./pages/DevenirPartenaire";
 import Avis from "./pages/Avis";
 import RenovationParis from "./pages/RenovationParis";
@@ -68,6 +69,7 @@ const App = () => (
           <Route path="/videos-conseils" element={<VideosConseils />} />
           <Route path="/degats-eaux" element={<DegatsEaux />} />
           <Route path="/visuels-houzz" element={<VisuelsHouzz />} />
+          <Route path="/visuels-instagram-highlights" element={<VisuelsInstagramHighlights />} />
           <Route path="/devenir-partenaire" element={<DevenirPartenaire />} />
           <Route path="/avis" element={<Avis />} />
           <Route path="/renovation-salle-de-bain-paris" element={<RenovationParis />} />
