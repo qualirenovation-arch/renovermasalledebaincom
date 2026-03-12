@@ -306,7 +306,7 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
           </div>
           <div className="space-y-2">
             <Label htmlFor="wd-claimNumber">Numéro de sinistre (si existant)</Label>
-            <Input id="wd-claimNumber" value={formData.claimNumber} onChange={(e) => handleChange("claimNumber", e.target.value)} placeholder="Ex: SIN-2025-XXXXX" />
+            <Input id="wd-claimNumber" value={formData.claimNumber} onChange={(e) => handleChange("claimNumber", e.target.value)} placeholder="Ex: SIN-2025-XXXXX" autoComplete="off" />
           </div>
         </div>
       </SectionCard>
