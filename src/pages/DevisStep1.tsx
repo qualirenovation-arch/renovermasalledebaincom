@@ -33,6 +33,7 @@ const roomTypeOptions = [
 // hCaptcha site key
 const isPreviewOrDev = typeof window !== 'undefined' && (
   window.location.hostname.includes('lovable.app') || 
+  window.location.hostname.includes('lovableproject.com') || 
   window.location.hostname === 'localhost'
 );
 const HCAPTCHA_SITE_KEY = isPreviewOrDev 
