@@ -203,7 +203,7 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
   );
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6" autoComplete="off">
       {/* Back button */}
       <Button type="button" variant="ghost" onClick={onBack} className="mb-4">
         <ArrowLeft className="w-4 h-4 mr-2" />
