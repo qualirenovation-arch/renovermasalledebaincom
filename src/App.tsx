@@ -24,6 +24,7 @@ import Guide from "./pages/Guide";
 import VideosConseils from "./pages/VideosConseils";
 import DegatsEaux from "./pages/DegatsEaux";
 import VisuelsHouzz from "./pages/VisuelsHouzz";
+import VisuelsInstagramHighlights from "./pages/VisuelsInstagramHighlights";
 import DevenirPartenaire from "./pages/DevenirPartenaire";
 import Avis from "./pages/Avis";
 import RenovationParis from "./pages/RenovationParis";
