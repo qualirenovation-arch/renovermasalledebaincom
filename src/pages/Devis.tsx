@@ -796,7 +796,7 @@ export default function Devis() {
               {/* Barre de progression */}
               <FormProgressBar formData={formData} />
 
-              <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
+              <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8" autoComplete="off">
                 {/* Informations personnelles */}
                 <div className="card-elevated p-5 md:p-8">
                   <h2 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
@@ -818,6 +818,7 @@ export default function Devis() {
                         placeholder="Jean"
                         required
                         className="rounded-xl"
+                        autoComplete="off"
                       />
                     </div>
                     <div className="space-y-2">
@@ -829,6 +830,7 @@ export default function Devis() {
                         placeholder="Dupont"
                         required
                         className="rounded-xl"
+                        autoComplete="off"
                       />
                     </div>
                     <div className="space-y-2">
@@ -841,6 +843,7 @@ export default function Devis() {
                         placeholder="jean@exemple.fr"
                         required
                         className="rounded-xl"
+                        autoComplete="off"
                       />
                     </div>
                     <div className="space-y-2">
@@ -852,6 +855,7 @@ export default function Devis() {
                         onChange={(e) => handleChange("telephone", e.target.value)}
                         placeholder="06 12 34 56 78"
                         className="rounded-xl"
+                        autoComplete="off"
                       />
                     </div>
                     
@@ -882,6 +886,7 @@ export default function Devis() {
                         placeholder="Paris"
                         required
                         className="rounded-xl"
+                        autoComplete="off"
                       />
                     </div>
                     <div className="space-y-2">
@@ -893,6 +898,7 @@ export default function Devis() {
                         placeholder="75017"
                         required
                         className="rounded-xl"
+                        autoComplete="off"
                       />
                     </div>
                     
@@ -904,6 +910,7 @@ export default function Devis() {
                         onChange={(e) => handleChange("dimensionPiece", e.target.value)}
                         placeholder="Ex: 5 m² ou 2m x 3m"
                         className="rounded-xl"
+                        autoComplete="off"
                       />
                     </div>
                     <div className="space-y-2">
