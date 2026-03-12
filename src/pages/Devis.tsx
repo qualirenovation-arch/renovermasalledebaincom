@@ -855,6 +855,7 @@ export default function Devis() {
                         onChange={(e) => handleChange("telephone", e.target.value)}
                         placeholder="06 12 34 56 78"
                         className="rounded-xl"
+                        autoComplete="off"
                       />
                     </div>
                     
