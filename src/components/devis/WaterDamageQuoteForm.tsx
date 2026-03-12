@@ -203,7 +203,7 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
   );
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6" autoComplete="off">
       {/* Back button */}
       <Button type="button" variant="ghost" onClick={onBack} className="mb-4">
         <ArrowLeft className="w-4 h-4 mr-2" />
@@ -215,19 +215,19 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label htmlFor="wd-prenom">Prénom *</Label>
-            <Input id="wd-prenom" value={formData.prenom} onChange={(e) => handleChange("prenom", e.target.value)} required />
+            <Input id="wd-prenom" value={formData.prenom} onChange={(e) => handleChange("prenom", e.target.value)} required autoComplete="off" />
           </div>
           <div className="space-y-2">
             <Label htmlFor="wd-nom">Nom *</Label>
-            <Input id="wd-nom" value={formData.nom} onChange={(e) => handleChange("nom", e.target.value)} required />
+            <Input id="wd-nom" value={formData.nom} onChange={(e) => handleChange("nom", e.target.value)} required autoComplete="off" />
           </div>
           <div className="space-y-2">
             <Label htmlFor="wd-email">Email *</Label>
-            <Input id="wd-email" type="email" value={formData.email} onChange={(e) => handleChange("email", e.target.value)} required />
+            <Input id="wd-email" type="email" value={formData.email} onChange={(e) => handleChange("email", e.target.value)} required autoComplete="off" />
           </div>
           <div className="space-y-2">
             <Label htmlFor="wd-telephone">Téléphone *</Label>
-            <Input id="wd-telephone" type="tel" value={formData.telephone} onChange={(e) => handleChange("telephone", e.target.value)} required />
+            <Input id="wd-telephone" type="tel" value={formData.telephone} onChange={(e) => handleChange("telephone", e.target.value)} required autoComplete="off" />
           </div>
         </div>
       </SectionCard>
@@ -266,11 +266,11 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="wd-ville">Ville</Label>
-              <Input id="wd-ville" value={formData.ville} onChange={(e) => handleChange("ville", e.target.value)} />
+              <Input id="wd-ville" value={formData.ville} onChange={(e) => handleChange("ville", e.target.value)} autoComplete="off" />
             </div>
             <div className="space-y-2">
               <Label htmlFor="wd-codePostal">Code postal *</Label>
-              <Input id="wd-codePostal" value={formData.codePostal} onChange={(e) => handleChange("codePostal", e.target.value)} required />
+              <Input id="wd-codePostal" value={formData.codePostal} onChange={(e) => handleChange("codePostal", e.target.value)} required autoComplete="off" />
             </div>
           </div>
 
@@ -306,7 +306,7 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
           </div>
           <div className="space-y-2">
             <Label htmlFor="wd-claimNumber">Numéro de sinistre (si existant)</Label>
-            <Input id="wd-claimNumber" value={formData.claimNumber} onChange={(e) => handleChange("claimNumber", e.target.value)} placeholder="Ex: SIN-2025-XXXXX" />
+            <Input id="wd-claimNumber" value={formData.claimNumber} onChange={(e) => handleChange("claimNumber", e.target.value)} placeholder="Ex: SIN-2025-XXXXX" autoComplete="off" />
           </div>
         </div>
       </SectionCard>
