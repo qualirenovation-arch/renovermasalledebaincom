@@ -26,6 +26,7 @@ import {
 // hCaptcha site key - use test key in preview/dev environments
 const isPreviewOrDev = typeof window !== 'undefined' && (
   window.location.hostname.includes('lovable.app') || 
+  window.location.hostname.includes('lovableproject.com') || 
   window.location.hostname === 'localhost'
 );
 const HCAPTCHA_SITE_KEY = isPreviewOrDev 
