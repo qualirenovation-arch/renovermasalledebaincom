@@ -227,7 +227,7 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
           </div>
           <div className="space-y-2">
             <Label htmlFor="wd-telephone">Téléphone *</Label>
-            <Input id="wd-telephone" type="tel" value={formData.telephone} onChange={(e) => handleChange("telephone", e.target.value)} required />
+            <Input id="wd-telephone" type="tel" value={formData.telephone} onChange={(e) => handleChange("telephone", e.target.value)} required autoComplete="off" />
           </div>
         </div>
       </SectionCard>
