@@ -215,7 +215,7 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label htmlFor="wd-prenom">Prénom *</Label>
-            <Input id="wd-prenom" value={formData.prenom} onChange={(e) => handleChange("prenom", e.target.value)} required />
+            <Input id="wd-prenom" value={formData.prenom} onChange={(e) => handleChange("prenom", e.target.value)} required autoComplete="off" />
           </div>
           <div className="space-y-2">
             <Label htmlFor="wd-nom">Nom *</Label>
