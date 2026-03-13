@@ -5,6 +5,10 @@ import presse from "@/assets/instagram-highlights/presse.png";
 import salleAManger from "@/assets/instagram-highlights/salle-a-manger.png";
 import salon from "@/assets/instagram-highlights/salon.png";
 import chambre from "@/assets/instagram-highlights/chambre.png";
+import maitreOeuvre from "@/assets/instagram-highlights/maitre-oeuvre.png";
+import renovationHautDeGamme from "@/assets/instagram-highlights/renovation-haut-de-gamme.png";
+import parisIdf from "@/assets/instagram-highlights/paris-idf.png";
+import devisContact from "@/assets/instagram-highlights/devis-contact.png";
 
 const highlights = [
   { name: "Salle de Bain", src: salleDeBain },
@@ -14,6 +18,13 @@ const highlights = [
   { name: "Salle à manger", src: salleAManger },
   { name: "Salon", src: salon },
   { name: "Chambre", src: chambre },
+];
+
+const bioPictos = [
+  { name: "Maître d'œuvre", src: maitreOeuvre },
+  { name: "Haut de gamme", src: renovationHautDeGamme },
+  { name: "Paris & IDF", src: parisIdf },
+  { name: "Devis / Contact", src: devisContact },
 ];
 
 export default function VisuelsInstagramHighlights() {
