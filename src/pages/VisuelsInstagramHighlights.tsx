@@ -65,9 +65,35 @@ export default function VisuelsInstagramHighlights() {
         ))}
       </div>
 
+      <h2 className="text-white text-2xl font-bold text-center mt-16 mb-4">
+        Pictogrammes Bio Instagram
+      </h2>
+      <p className="text-gray-400 text-center mb-8 max-w-xl mx-auto">
+        Icônes correspondant aux lignes de votre bio Instagram.
+      </p>
+
+      <div className="max-w-3xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-8">
+        {bioPictos.map((h) => (
+          <button
+            key={h.name}
+            onClick={() => handleDownload(h.src, h.name)}
+            className="flex flex-col items-center gap-3 group"
+          >
+            <div className="w-28 h-28 rounded-full border-2 border-gray-500 group-hover:border-white overflow-hidden bg-[#f5f0e8] p-3 transition-colors">
+              <img
+                src={h.src}
+                alt={h.name}
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <span className="text-white text-sm font-medium">{h.name}</span>
+          </button>
+        ))}
+      </div>
+
       <div className="mt-16 text-center">
         <button
-          onClick={() => highlights.forEach((h) => handleDownload(h.src, h.name))}
+          onClick={() => [...highlights, ...bioPictos].forEach((h) => handleDownload(h.src, h.name))}
           className="bg-[#124A66] text-white px-8 py-3 rounded-lg hover:bg-[#0e3a52] transition-colors font-medium"
         >
           📥 Tout télécharger
