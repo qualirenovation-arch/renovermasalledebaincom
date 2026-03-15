@@ -85,10 +85,10 @@ export default function VisuelsInstagramHighlights() {
       <div className="max-w-3xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-8">
         {bioPictos.map((h, index) => {
           const bgColors = [
-            "bg-tag-mint",
-            "bg-tag-gold",
-            "bg-tag-blue",
-            "bg-tag-beige",
+            "bg-primary/10",
+            "bg-gold/10",
+            "bg-navy/10",
+            "bg-gold/15",
           ];
           return (
             <button
