@@ -48,13 +48,13 @@ export default function VisuelsInstagramHighlights() {
       <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-8">
         {highlights.map((h, index) => {
           const bgColors = [
-            "bg-tag-beige",
-            "bg-tag-mint", 
-            "bg-tag-peach",
-            "bg-tag-blue",
-            "bg-tag-gold",
-            "bg-tag-terracotta",
-            "bg-secondary",
+            "bg-primary/10",
+            "bg-gold/10", 
+            "bg-navy/10",
+            "bg-primary/15",
+            "bg-gold/15",
+            "bg-navy/15",
+            "bg-primary/10",
           ];
           return (
             <button
@@ -85,10 +85,10 @@ export default function VisuelsInstagramHighlights() {
       <div className="max-w-3xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-8">
         {bioPictos.map((h, index) => {
           const bgColors = [
-            "bg-tag-mint",
-            "bg-tag-gold",
-            "bg-tag-blue",
-            "bg-tag-beige",
+            "bg-primary/10",
+            "bg-gold/10",
+            "bg-navy/10",
+            "bg-gold/15",
           ];
           return (
             <button
