@@ -335,7 +335,7 @@ const handler = async (req: Request): Promise<Response> => {
         <!DOCTYPE html>
         <html>
           <head><meta charset="utf-8"></head>
-            <body style="font-family: 'Montserrat', Arial, sans-serif; line-height: 1.6; color: #333;">
+            <body style="font-family: 'Nunito Sans', Arial, sans-serif; font-weight: 300; line-height: 1.6; color: #333;">
             <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
               <div style="text-align: center; padding: 24px 16px; background: linear-gradient(135deg, #124A66 0%, #0d3a52 100%); border-radius: 8px 8px 0 0;">
                 <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
