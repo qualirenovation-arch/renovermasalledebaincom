@@ -5,9 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Search, Phone, Mail, RefreshCw, Filter, Droplets, Home, PhoneCall } from "lucide-react";
+import { Search, Phone, Mail, RefreshCw, Filter, Droplets, Home, PhoneCall, Trash2, ChevronLeft, ChevronRight } from "lucide-react";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
+import { useToast } from "@/hooks/use-toast";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
 
 interface QuoteRequest {
   id: string;
@@ -91,6 +93,10 @@ export function QuoteRequestsList({ onSelectQuote }: QuoteRequestsListProps) {
   const [filterStatus, setFilterStatus] = useState<string>("all");
   const [filterPriority, setFilterPriority] = useState<string>("all");
   const [showFilters, setShowFilters] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
+  const { toast } = useToast();
+  const ITEMS_PER_PAGE = 20;
 
   useEffect(() => {
     fetchQuotes();
@@ -128,11 +134,58 @@ export function QuoteRequestsList({ onSelectQuote }: QuoteRequestsListProps) {
     return matchesSearch && matchesType && matchesStatus && matchesPriority;
   });
 
+  // Pagination
+  const totalPages = Math.ceil(filteredQuotes.length / ITEMS_PER_PAGE);
+  const paginatedQuotes = filteredQuotes.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
+
+  // Reset page when filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, filterType, filterStatus, filterPriority]);
+
   // Count by type
   const countByType = {
     all: quotes.length,
     classique: quotes.filter((q) => q.type_devis === "classique").length,
     degat_des_eaux: quotes.filter((q) => q.type_devis === "degat_des_eaux").length,
+  };
+
+  const toggleSelect = (id: string) => {
+    setSelectedIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  };
+
+  const toggleSelectAll = () => {
+    if (selectedIds.size === paginatedQuotes.length) {
+      setSelectedIds(new Set());
+    } else {
+      setSelectedIds(new Set(paginatedQuotes.map((q) => q.id)));
+    }
+  };
+
+  const deleteSelected = async () => {
+    try {
+      const { error } = await supabase
+        .from("quote_requests")
+        .delete()
+        .in("id", Array.from(selectedIds));
+
+      if (error) throw error;
+
+      toast({ title: `${selectedIds.size} demande(s) supprimée(s)` });
+      setSelectedIds(new Set());
+      fetchQuotes();
+    } catch (error) {
+      console.error("Error deleting quotes:", error);
+      toast({ title: "Erreur lors de la suppression", variant: "destructive" });
+    }
   };
 
   if (isLoading) {
@@ -236,9 +289,39 @@ export function QuoteRequestsList({ onSelectQuote }: QuoteRequestsListProps) {
         </div>
       )}
 
+      {/* Bulk actions */}
+      {selectedIds.size > 0 && (
+        <div className="flex items-center gap-4 p-3 bg-destructive/10 border border-destructive/20 rounded-lg">
+          <span className="text-sm font-medium">{selectedIds.size} sélectionnée(s)</span>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <Button variant="destructive" size="sm">
+                <Trash2 className="w-4 h-4 mr-2" />
+                Supprimer
+              </Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>Confirmer la suppression</AlertDialogTitle>
+                <AlertDialogDescription>
+                  Supprimer {selectedIds.size} demande(s) ? Cette action est irréversible.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Annuler</AlertDialogCancel>
+                <AlertDialogAction onClick={deleteSelected}>Supprimer</AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
+          <Button variant="ghost" size="sm" onClick={() => setSelectedIds(new Set())}>
+            Désélectionner
+          </Button>
+        </div>
+      )}
+
       {/* Results count */}
       <p className="text-sm text-muted-foreground">
-        {filteredQuotes.length} demande{filteredQuotes.length > 1 ? "s" : ""}
+        {filteredQuotes.length} demande{filteredQuotes.length > 1 ? "s" : ""} — Page {currentPage}/{totalPages || 1}
       </p>
 
       {/* Table */}
@@ -246,6 +329,14 @@ export function QuoteRequestsList({ onSelectQuote }: QuoteRequestsListProps) {
         <Table>
           <TableHeader>
             <TableRow>
+              <TableHead className="w-10">
+                <input
+                  type="checkbox"
+                  checked={selectedIds.size === paginatedQuotes.length && paginatedQuotes.length > 0}
+                  onChange={toggleSelectAll}
+                  className="rounded"
+                />
+              </TableHead>
               <TableHead>Date</TableHead>
               <TableHead>Type</TableHead>
               <TableHead>Client</TableHead>
@@ -259,19 +350,27 @@ export function QuoteRequestsList({ onSelectQuote }: QuoteRequestsListProps) {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {filteredQuotes.length === 0 ? (
+            {paginatedQuotes.length === 0 ? (
               <TableRow>
-                <TableCell colSpan={10} className="text-center py-8 text-muted-foreground">
+                <TableCell colSpan={11} className="text-center py-8 text-muted-foreground">
                   Aucune demande trouvée
                 </TableCell>
               </TableRow>
             ) : (
-              filteredQuotes.map((quote) => (
+              paginatedQuotes.map((quote) => (
                 <TableRow
                   key={quote.id}
-                  className="cursor-pointer hover:bg-muted/50"
+                  className={`cursor-pointer hover:bg-muted/50 ${selectedIds.has(quote.id) ? "bg-primary/5" : ""}`}
                   onClick={() => onSelectQuote(quote.id)}
                 >
+                  <TableCell onClick={(e) => e.stopPropagation()}>
+                    <input
+                      type="checkbox"
+                      checked={selectedIds.has(quote.id)}
+                      onChange={() => toggleSelect(quote.id)}
+                      className="rounded"
+                    />
+                  </TableCell>
                   <TableCell className="whitespace-nowrap">
                     {format(new Date(quote.created_at), "dd/MM/yy HH:mm", { locale: fr })}
                   </TableCell>
@@ -375,6 +474,50 @@ export function QuoteRequestsList({ onSelectQuote }: QuoteRequestsListProps) {
           </TableBody>
         </Table>
       </div>
+
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className="flex items-center justify-between">
+          <p className="text-sm text-muted-foreground">
+            {(currentPage - 1) * ITEMS_PER_PAGE + 1}–{Math.min(currentPage * ITEMS_PER_PAGE, filteredQuotes.length)} sur {filteredQuotes.length}
+          </p>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              disabled={currentPage === 1}
+              onClick={() => setCurrentPage((p) => p - 1)}
+            >
+              <ChevronLeft className="w-4 h-4 mr-1" />
+              Précédent
+            </Button>
+            {Array.from({ length: totalPages }, (_, i) => i + 1)
+              .filter((p) => p === 1 || p === totalPages || Math.abs(p - currentPage) <= 1)
+              .map((page, idx, arr) => (
+                <span key={page}>
+                  {idx > 0 && arr[idx - 1] !== page - 1 && <span className="px-1">…</span>}
+                  <Button
+                    variant={page === currentPage ? "default" : "outline"}
+                    size="sm"
+                    className="w-9"
+                    onClick={() => setCurrentPage(page)}
+                  >
+                    {page}
+                  </Button>
+                </span>
+              ))}
+            <Button
+              variant="outline"
+              size="sm"
+              disabled={currentPage === totalPages}
+              onClick={() => setCurrentPage((p) => p + 1)}
+            >
+              Suivant
+              <ChevronRight className="w-4 h-4 ml-1" />
+            </Button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
