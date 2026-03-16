@@ -346,7 +346,7 @@ const handler = async (req: Request): Promise<Response> => {
              <meta charset="utf-8">
              <meta name="viewport" content="width=device-width, initial-scale=1.0">
              <style>
-               body { font-family: 'Montserrat', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; }
+               body { font-family: 'Nunito Sans', Arial, sans-serif; font-weight: 300; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; }
                .header { background: linear-gradient(135deg, #124A66 0%, #0d3a52 100%); color: white; padding: 24px 16px; text-align: center; }
                 .logo-text { font-family: 'Nunito Sans', Arial, sans-serif; font-weight: 300; color: #ffffff; letter-spacing: 0.5px; white-space: nowrap; font-size: 18px; }
                 .logo-text .accent { color: #A0845C; }
@@ -462,7 +462,7 @@ const handler = async (req: Request): Promise<Response> => {
           <head>
             <meta charset="utf-8">
             <style>
-              body { font-family: 'Montserrat', Arial, sans-serif; line-height: 1.6; color: #333; }
+              body { font-family: 'Nunito Sans', Arial, sans-serif; font-weight: 300; line-height: 1.6; color: #333; }
               .header { background: #333; color: white; padding: 20px; }
               .content { padding: 20px; }
               .info-box { background: #f5f5f5; padding: 15px; border-radius: 6px; margin: 15px 0; }

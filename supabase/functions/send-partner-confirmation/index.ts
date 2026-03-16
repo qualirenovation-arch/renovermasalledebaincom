@@ -484,7 +484,7 @@ const handler = async (req: Request): Promise<Response> => {
           <head>
             <meta charset="utf-8">
             <style>
-              body { font-family: 'Montserrat', Arial, sans-serif; line-height: 1.6; color: #333; }
+              body { font-family: 'Nunito Sans', Arial, sans-serif; font-weight: 300; line-height: 1.6; color: #333; }
               .container { max-width: 600px; margin: 0 auto; padding: 20px; }
               .header { text-align: center; padding: 24px 16px; background: linear-gradient(135deg, #124A66 0%, #0d3a52 100%); border-radius: 8px 8px 0 0; }
               .logo-text { font-family: 'Nunito Sans', Arial, sans-serif; font-weight: 300; color: #ffffff; letter-spacing: 0.5px; white-space: nowrap; font-size: 18px; }
@@ -553,7 +553,7 @@ const handler = async (req: Request): Promise<Response> => {
           <head>
             <meta charset="utf-8">
             <style>
-              body { font-family: 'Montserrat', Arial, sans-serif; line-height: 1.6; color: #333; }
+              body { font-family: 'Nunito Sans', Arial, sans-serif; font-weight: 300; line-height: 1.6; color: #333; }
               .container { max-width: 600px; margin: 0 auto; padding: 20px; }
               .header { background-color: ${hasMissingDocs ? '#f59e0b' : '#1a1a1a'}; color: white; padding: 20px; text-align: center; }
               .content { padding: 20px; background-color: #f8f8f8; }

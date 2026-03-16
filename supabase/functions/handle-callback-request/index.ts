@@ -107,7 +107,7 @@ const handler = async (req: Request): Promise<Response> => {
         html: `<!DOCTYPE html>
 <html><head><meta charset="utf-8">
 <style>
-  body { font-family: 'Montserrat', Arial, sans-serif; line-height: 1.6; color: #333; }
+  body { font-family: 'Nunito Sans', Arial, sans-serif; font-weight: 300; line-height: 1.6; color: #333; }
   .header { background: linear-gradient(135deg, #124A66 0%, #0d3a52 100%); color: white; padding: 24px 16px; text-align: center; }
   .logo-text { font-family: 'Nunito Sans', Arial, sans-serif; font-weight: 300; color: #ffffff; letter-spacing: 0.5px; white-space: nowrap; font-size: 18px; }
   .logo-text .accent { color: #A0845C; }
