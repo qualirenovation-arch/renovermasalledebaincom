@@ -276,7 +276,7 @@ const handler = async (req: Request): Promise<Response> => {
         html: `<!DOCTYPE html>
 <html><head><meta charset="utf-8">
 <style>
-  body { font-family: 'Montserrat', Arial, sans-serif; line-height: 1.6; color: #333; }
+  body { font-family: 'Nunito Sans', Arial, sans-serif; font-weight: 300; line-height: 1.6; color: #333; }
   .header { background: #dc2626; color: white; padding: 20px; }
   .content { padding: 20px; }
   .info-box { background: #f5f5f5; padding: 15px; border-radius: 6px; margin: 15px 0; }
