@@ -93,6 +93,10 @@ export function QuoteRequestsList({ onSelectQuote }: QuoteRequestsListProps) {
   const [filterStatus, setFilterStatus] = useState<string>("all");
   const [filterPriority, setFilterPriority] = useState<string>("all");
   const [showFilters, setShowFilters] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
+  const { toast } = useToast();
+  const ITEMS_PER_PAGE = 20;
 
   useEffect(() => {
     fetchQuotes();
