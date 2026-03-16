@@ -329,6 +329,14 @@ export function QuoteRequestsList({ onSelectQuote }: QuoteRequestsListProps) {
         <Table>
           <TableHeader>
             <TableRow>
+              <TableHead className="w-10">
+                <input
+                  type="checkbox"
+                  checked={selectedIds.size === paginatedQuotes.length && paginatedQuotes.length > 0}
+                  onChange={toggleSelectAll}
+                  className="rounded"
+                />
+              </TableHead>
               <TableHead>Date</TableHead>
               <TableHead>Type</TableHead>
               <TableHead>Client</TableHead>
@@ -342,19 +350,27 @@ export function QuoteRequestsList({ onSelectQuote }: QuoteRequestsListProps) {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {filteredQuotes.length === 0 ? (
+            {paginatedQuotes.length === 0 ? (
               <TableRow>
-                <TableCell colSpan={10} className="text-center py-8 text-muted-foreground">
+                <TableCell colSpan={11} className="text-center py-8 text-muted-foreground">
                   Aucune demande trouvée
                 </TableCell>
               </TableRow>
             ) : (
-              filteredQuotes.map((quote) => (
+              paginatedQuotes.map((quote) => (
                 <TableRow
                   key={quote.id}
-                  className="cursor-pointer hover:bg-muted/50"
+                  className={`cursor-pointer hover:bg-muted/50 ${selectedIds.has(quote.id) ? "bg-primary/5" : ""}`}
                   onClick={() => onSelectQuote(quote.id)}
                 >
+                  <TableCell onClick={(e) => e.stopPropagation()}>
+                    <input
+                      type="checkbox"
+                      checked={selectedIds.has(quote.id)}
+                      onChange={() => toggleSelect(quote.id)}
+                      className="rounded"
+                    />
+                  </TableCell>
                   <TableCell className="whitespace-nowrap">
                     {format(new Date(quote.created_at), "dd/MM/yy HH:mm", { locale: fr })}
                   </TableCell>
@@ -458,6 +474,50 @@ export function QuoteRequestsList({ onSelectQuote }: QuoteRequestsListProps) {
           </TableBody>
         </Table>
       </div>
+
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className="flex items-center justify-between">
+          <p className="text-sm text-muted-foreground">
+            {(currentPage - 1) * ITEMS_PER_PAGE + 1}–{Math.min(currentPage * ITEMS_PER_PAGE, filteredQuotes.length)} sur {filteredQuotes.length}
+          </p>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              disabled={currentPage === 1}
+              onClick={() => setCurrentPage((p) => p - 1)}
+            >
+              <ChevronLeft className="w-4 h-4 mr-1" />
+              Précédent
+            </Button>
+            {Array.from({ length: totalPages }, (_, i) => i + 1)
+              .filter((p) => p === 1 || p === totalPages || Math.abs(p - currentPage) <= 1)
+              .map((page, idx, arr) => (
+                <span key={page}>
+                  {idx > 0 && arr[idx - 1] !== page - 1 && <span className="px-1">…</span>}
+                  <Button
+                    variant={page === currentPage ? "default" : "outline"}
+                    size="sm"
+                    className="w-9"
+                    onClick={() => setCurrentPage(page)}
+                  >
+                    {page}
+                  </Button>
+                </span>
+              ))}
+            <Button
+              variant="outline"
+              size="sm"
+              disabled={currentPage === totalPages}
+              onClick={() => setCurrentPage((p) => p + 1)}
+            >
+              Suivant
+              <ChevronRight className="w-4 h-4 ml-1" />
+            </Button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
