@@ -289,9 +289,39 @@ export function QuoteRequestsList({ onSelectQuote }: QuoteRequestsListProps) {
         </div>
       )}
 
+      {/* Bulk actions */}
+      {selectedIds.size > 0 && (
+        <div className="flex items-center gap-4 p-3 bg-destructive/10 border border-destructive/20 rounded-lg">
+          <span className="text-sm font-medium">{selectedIds.size} sélectionnée(s)</span>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <Button variant="destructive" size="sm">
+                <Trash2 className="w-4 h-4 mr-2" />
+                Supprimer
+              </Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>Confirmer la suppression</AlertDialogTitle>
+                <AlertDialogDescription>
+                  Supprimer {selectedIds.size} demande(s) ? Cette action est irréversible.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Annuler</AlertDialogCancel>
+                <AlertDialogAction onClick={deleteSelected}>Supprimer</AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
+          <Button variant="ghost" size="sm" onClick={() => setSelectedIds(new Set())}>
+            Désélectionner
+          </Button>
+        </div>
+      )}
+
       {/* Results count */}
       <p className="text-sm text-muted-foreground">
-        {filteredQuotes.length} demande{filteredQuotes.length > 1 ? "s" : ""}
+        {filteredQuotes.length} demande{filteredQuotes.length > 1 ? "s" : ""} — Page {currentPage}/{totalPages || 1}
       </p>
 
       {/* Table */}
