@@ -52,11 +52,27 @@ export function Header() {
         {/* Mobile layout */}
         <div className="flex lg:hidden items-center h-16 sm:h-20 px-1 gap-1">
           <button
-            className="p-2 sm:p-3 text-foreground hover:bg-secondary rounded-lg transition-colors flex-shrink-0 z-10"
+            className="relative p-2 sm:p-3 text-foreground hover:bg-secondary rounded-lg transition-colors flex-shrink-0 z-10 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Menu"
           >
-            {isMenuOpen ? <X className="w-6 h-6 sm:w-7 sm:h-7" /> : <Menu className="w-6 h-6 sm:w-7 sm:h-7" />}
+            <span className="relative w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center">
+              <motion.span
+                className="absolute block w-5 sm:w-6 h-[2px] bg-foreground rounded-full"
+                animate={isMenuOpen ? { rotate: 45, y: 0 } : { rotate: 0, y: -6 }}
+                transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+              />
+              <motion.span
+                className="absolute block w-5 sm:w-6 h-[2px] bg-foreground rounded-full"
+                animate={isMenuOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}
+              />
+              <motion.span
+                className="absolute block w-5 sm:w-6 h-[2px] bg-foreground rounded-full"
+                animate={isMenuOpen ? { rotate: -45, y: 0 } : { rotate: 0, y: 6 }}
+                transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+              />
+            </span>
           </button>
           
           <Link to="/" className="flex items-center flex-1 min-w-0 overflow-hidden">
