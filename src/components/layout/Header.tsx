@@ -133,64 +133,83 @@ export function Header() {
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-            className="lg:hidden bg-background border-t border-border overflow-hidden"
-          >
-            <nav className="container-custom py-4 flex flex-col gap-1">
-              {mobileNavItems.map((item, index) => (
+          <>
+            {/* Backdrop overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              className="lg:hidden fixed inset-0 top-16 sm:top-20 bg-foreground/10 backdrop-blur-sm z-40"
+              onClick={() => setIsMenuOpen(false)}
+            />
+            <motion.div
+              initial={{ opacity: 0, y: -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+              className="lg:hidden bg-background border-t border-border relative z-50 shadow-lg"
+            >
+              <nav className="container-custom py-5 flex flex-col gap-0.5">
+                {mobileNavItems.map((item, index) => (
+                  <motion.div
+                    key={item.path}
+                    initial={{ opacity: 0, x: -16 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.06 + index * 0.06, duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                  >
+                    <Link
+                      to={item.path}
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`block px-4 py-3.5 rounded-xl text-[15px] font-medium transition-all duration-200 ${
+                        location.pathname === item.path
+                          ? "bg-primary text-primary-foreground shadow-sm"
+                          : "text-foreground hover:bg-secondary active:scale-[0.98]"
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  </motion.div>
+                ))}
+
+                {/* Separator */}
                 <motion.div
-                  key={item.path}
-                  initial={{ opacity: 0, x: -10 }}
+                  initial={{ opacity: 0, scaleX: 0 }}
+                  animate={{ opacity: 1, scaleX: 1 }}
+                  transition={{ delay: 0.35, duration: 0.3 }}
+                  className="h-px bg-border my-2 mx-4 origin-left"
+                />
+
+                {/* CTA Urgence dégât des eaux */}
+                <motion.div
+                  initial={{ opacity: 0, x: -16 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.05 }}
+                  transition={{ delay: 0.4, duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                 >
                   <Link
-                    to={item.path}
+                    to="/devis?type=degat_eaux#devis-form"
                     onClick={() => setIsMenuOpen(false)}
-                    className={`block px-4 py-3 rounded-lg text-base font-medium transition-all ${
-                      location.pathname === item.path
-                        ? "bg-primary text-primary-foreground"
-                        : "text-foreground hover:bg-secondary"
-                    }`}
+                    className="flex items-center gap-2.5 px-4 py-3.5 rounded-xl text-[15px] font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-200 border border-primary/30 active:scale-[0.98]"
                   >
-                    {item.label}
+                    <Droplets className="w-4 h-4" />
+                    Urgence dégât des eaux
                   </Link>
                 </motion.div>
-              ))}
-
-              {/* CTA Urgence dégât des eaux in mobile menu */}
-              <motion.div
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: mobileNavItems.length * 0.05 }}
-              >
-                <Link
-                  to="/devis?type=degat_eaux#devis-form"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="flex items-center gap-2 px-4 py-3 rounded-lg text-base font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-colors border border-primary mt-2"
+                
+                {/* Phone CTA */}
+                <motion.a 
+                  href="tel:+33659764685"
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5, duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                  className="flex items-center justify-center gap-3 px-4 py-4 text-lg font-semibold text-primary hover:bg-secondary rounded-xl mt-2 active:scale-[0.98] transition-transform"
                 >
-                  <Droplets className="w-4 h-4" />
-                  Urgence dégât des eaux
-                </Link>
-              </motion.div>
-              
-              {/* Phone CTA in mobile menu */}
-              <motion.a 
-                href="tel:+33659764685"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3 }}
-                className="flex items-center justify-center gap-3 px-4 py-4 text-lg font-semibold text-primary hover:bg-secondary rounded-lg mt-3 border-t border-border pt-5"
-              >
-                <Phone className="w-5 h-5" />
-                06 59 76 46 85
-              </motion.a>
-            </nav>
-          </motion.div>
+                  <Phone className="w-5 h-5" />
+                  06 59 76 46 85
+                </motion.a>
+              </nav>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </header>
