@@ -152,16 +152,14 @@ export default function Index() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
             <ScrollAnimation variant="fadeUp" className="text-center lg:text-left">
-              <h1 className="mb-5 md:mb-7 leading-[1.15]">
-                <span className="font-script text-primary text-4xl md:text-5xl lg:text-6xl xl:text-7xl" style={{ fontWeight: 400 }}>
+              <h1 className="mb-5 md:mb-7 leading-[1.1]">
+                <span className="font-display text-primary text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight uppercase block">
                   Un chantier heureux
                 </span>
-                <br />
-                <span className="font-script text-primary text-4xl md:text-5xl lg:text-6xl xl:text-7xl" style={{ fontWeight: 400 }}>
+                <span className="font-display text-primary text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight uppercase block">
                   pour votre
                 </span>
-                <br />
-                <span className="font-script text-gold text-5xl md:text-6xl lg:text-7xl xl:text-8xl" style={{ fontWeight: 400 }}>
+                <span className="font-script text-gold text-5xl md:text-6xl lg:text-7xl xl:text-8xl block mt-1" style={{ fontWeight: 400 }}>
                   Salle de Bain
                 </span>
               </h1>
