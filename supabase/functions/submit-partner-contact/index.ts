@@ -283,7 +283,7 @@ const handler = async (req: Request): Promise<Response> => {
         <!DOCTYPE html>
         <html>
           <head><meta charset="utf-8"></head>
-            <body style="font-family: 'Montserrat', Arial, sans-serif; line-height: 1.6; color: #333;">
+            <body style="font-family: 'Nunito Sans', Arial, sans-serif; font-weight: 300; line-height: 1.6; color: #333;">
             <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
               <h2 style="color: #1a1a1a; border-bottom: 2px solid #d4a574; padding-bottom: 10px;">
                 🤝 Nouvelle demande partenaire
