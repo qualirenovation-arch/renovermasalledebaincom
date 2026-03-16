@@ -134,11 +134,58 @@ export function QuoteRequestsList({ onSelectQuote }: QuoteRequestsListProps) {
     return matchesSearch && matchesType && matchesStatus && matchesPriority;
   });
 
+  // Pagination
+  const totalPages = Math.ceil(filteredQuotes.length / ITEMS_PER_PAGE);
+  const paginatedQuotes = filteredQuotes.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
+
+  // Reset page when filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, filterType, filterStatus, filterPriority]);
+
   // Count by type
   const countByType = {
     all: quotes.length,
     classique: quotes.filter((q) => q.type_devis === "classique").length,
     degat_des_eaux: quotes.filter((q) => q.type_devis === "degat_des_eaux").length,
+  };
+
+  const toggleSelect = (id: string) => {
+    setSelectedIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  };
+
+  const toggleSelectAll = () => {
+    if (selectedIds.size === paginatedQuotes.length) {
+      setSelectedIds(new Set());
+    } else {
+      setSelectedIds(new Set(paginatedQuotes.map((q) => q.id)));
+    }
+  };
+
+  const deleteSelected = async () => {
+    try {
+      const { error } = await supabase
+        .from("quote_requests")
+        .delete()
+        .in("id", Array.from(selectedIds));
+
+      if (error) throw error;
+
+      toast({ title: `${selectedIds.size} demande(s) supprimée(s)` });
+      setSelectedIds(new Set());
+      fetchQuotes();
+    } catch (error) {
+      console.error("Error deleting quotes:", error);
+      toast({ title: "Erreur lors de la suppression", variant: "destructive" });
+    }
   };
 
   if (isLoading) {
