@@ -53,6 +53,7 @@ export default function DevisStep1() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const captchaRef = useRef<HCaptcha>(null);
+  useVirtualKeyboard();
 
   // Derive devisType directly from URL params for full sync
   const typeParam = searchParams.get('type');
