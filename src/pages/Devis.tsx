@@ -1,4 +1,5 @@
 import { useState, useRef, useCallback, useEffect } from "react";
+import { useVirtualKeyboard } from "@/hooks/useVirtualKeyboard";
 import { useSearchParams } from "react-router-dom";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { motion } from "framer-motion";
@@ -323,6 +324,7 @@ export default function Devis() {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const captchaRef = useRef<HCaptcha>(null);
   const { toast } = useToast();
+  useVirtualKeyboard();
 
   // Check URL params for direct form access or token
   useEffect(() => {

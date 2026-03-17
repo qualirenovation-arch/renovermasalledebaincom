@@ -1,4 +1,5 @@
 import { useState, useRef, useCallback } from "react";
+import { useVirtualKeyboard } from "@/hooks/useVirtualKeyboard";
 import { useNavigate } from "react-router-dom";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { motion } from "framer-motion";
@@ -115,7 +116,7 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const captchaRef = useRef<HCaptcha>(null);
   const { toast } = useToast();
-
+  useVirtualKeyboard();
   const onCaptchaVerify = useCallback((token: string) => setCaptchaToken(token), []);
   const onCaptchaExpire = useCallback(() => setCaptchaToken(null), []);
   const onCaptchaError = useCallback(() => {

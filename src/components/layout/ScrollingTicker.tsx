@@ -82,7 +82,7 @@ export function ScrollingTicker() {
       aria-label="Actualités et liens utiles"
     >
       <div
-        className="relative h-full flex items-center overflow-x-auto scrollbar-hide md:overflow-hidden"
+        className="relative h-full flex items-center overflow-hidden"
         onMouseEnter={() => !isMobile && setIsPaused(true)}
         onMouseLeave={() => !isMobile && setIsPaused(false)}
       >

@@ -1,4 +1,5 @@
 import { useState, useRef, useCallback } from "react";
+import { useVirtualKeyboard } from "@/hooks/useVirtualKeyboard";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { motion } from "framer-motion";
@@ -52,6 +53,7 @@ export default function DevisStep1() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const captchaRef = useRef<HCaptcha>(null);
+  useVirtualKeyboard();
 
   // Derive devisType directly from URL params for full sync
   const typeParam = searchParams.get('type');
@@ -203,7 +205,7 @@ export default function DevisStep1() {
                 <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
                 Choisir un autre type de devis
               </Button>
-              <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
+              <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8" autoComplete="off">
                 {/* Coordonnées */}
                 <div className="card-elevated p-5 md:p-8">
                   <h2 className="font-display text-xl font-light mb-6 flex items-center gap-3">
@@ -218,31 +220,31 @@ export default function DevisStep1() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="nom">Nom *</Label>
-                      <Input id="nom" value={formData.nom} onChange={(e) => handleChange("nom", e.target.value)} placeholder="Dupont" required className="rounded-xl" />
+                      <Input id="nom" value={formData.nom} onChange={(e) => handleChange("nom", e.target.value)} placeholder="Dupont" required className="rounded-xl" autoComplete="off" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="prenom">Prénom *</Label>
-                      <Input id="prenom" value={formData.prenom} onChange={(e) => handleChange("prenom", e.target.value)} placeholder="Jean" required className="rounded-xl" />
+                      <Input id="prenom" value={formData.prenom} onChange={(e) => handleChange("prenom", e.target.value)} placeholder="Jean" required className="rounded-xl" autoComplete="off" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email">Email *</Label>
-                      <Input id="email" type="email" value={formData.email} onChange={(e) => handleChange("email", e.target.value)} placeholder="jean@exemple.fr" required className="rounded-xl" />
+                      <Input id="email" type="email" value={formData.email} onChange={(e) => handleChange("email", e.target.value)} placeholder="jean@exemple.fr" required className="rounded-xl" autoComplete="off" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="telephone">Téléphone *</Label>
-                      <Input id="telephone" type="tel" value={formData.telephone} onChange={(e) => handleChange("telephone", e.target.value)} placeholder="06 12 34 56 78" required className="rounded-xl" />
+                      <Input id="telephone" type="tel" value={formData.telephone} onChange={(e) => handleChange("telephone", e.target.value)} placeholder="06 12 34 56 78" required className="rounded-xl" autoComplete="off" />
                     </div>
                     <div className="space-y-2 md:col-span-2">
                       <Label htmlFor="adresse">Adresse du projet *</Label>
-                      <Input id="adresse" value={formData.adresse} onChange={(e) => handleChange("adresse", e.target.value)} placeholder="4 villa Georges Sand" required className="rounded-xl" />
+                      <Input id="adresse" value={formData.adresse} onChange={(e) => handleChange("adresse", e.target.value)} placeholder="4 villa Georges Sand" required className="rounded-xl" autoComplete="off" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="codePostal">Code postal *</Label>
-                      <Input id="codePostal" value={formData.codePostal} onChange={(e) => handleChange("codePostal", e.target.value)} placeholder="75017" required className="rounded-xl" />
+                      <Input id="codePostal" value={formData.codePostal} onChange={(e) => handleChange("codePostal", e.target.value)} placeholder="75017" required className="rounded-xl" autoComplete="off" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="ville">Ville *</Label>
-                      <Input id="ville" value={formData.ville} onChange={(e) => handleChange("ville", e.target.value)} placeholder="Paris" required className="rounded-xl" />
+                      <Input id="ville" value={formData.ville} onChange={(e) => handleChange("ville", e.target.value)} placeholder="Paris" required className="rounded-xl" autoComplete="off" />
                     </div>
                   </div>
                 </div>
