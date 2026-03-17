@@ -128,7 +128,7 @@ export function WaterDamageStep2Form({ leadId, clientFirstName, clientEmail }: P
       }
 
       // Update lead with Step 2 data via edge function
-      const { error } = await supabase.functions.invoke('send-devis-confirmation', {
+      const { data, error } = await supabase.functions.invoke('send-devis-confirmation', {
         body: {
           clientEmail,
           clientFirstName,
@@ -147,16 +147,20 @@ export function WaterDamageStep2Form({ leadId, clientFirstName, clientEmail }: P
         },
       });
 
-      if (error) {
-        console.error("Water damage step 2 error:", error);
+      if (error || !data?.success) {
+        const backendMessage = (data as { error?: string } | null)?.error;
+        throw new Error(backendMessage || "Le dossier n'a pas pu être envoyé. Veuillez réessayer.");
       }
 
       setIsSubmitted(true);
       toast({ title: "Dossier complété !", description: "Nous vous recontacterons sous 24h." });
     } catch (err) {
       console.error("Submission error:", err);
-      setIsSubmitted(true);
-      toast({ title: "Dossier complété !", description: "Nous vous recontacterons rapidement." });
+      toast({
+        title: "Échec de l'envoi",
+        description: err instanceof Error ? err.message : "Impossible d'envoyer votre dossier pour le moment.",
+        variant: "destructive",
+      });
     } finally {
       setIsSubmitting(false);
       setCaptchaToken(null);

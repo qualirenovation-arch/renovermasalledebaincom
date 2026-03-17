@@ -168,16 +168,20 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
         },
       });
 
-      if (error) {
-        console.error("Step 1 water damage error:", error);
+      if (error || !data?.success) {
+        const backendMessage = (data as { error?: string } | null)?.error;
+        throw new Error(backendMessage || "La demande n'a pas pu être envoyée. Veuillez réessayer.");
       }
 
       toast({ title: "Demande enregistrée !", description: "Consultez votre boîte email pour la suite." });
       navigate(`/devis/confirmation?email=${encodeURIComponent(formData.email)}&type=degat_eaux`);
     } catch (err) {
       console.error("Submission error:", err);
-      toast({ title: "Demande enregistrée !", description: "Nous vous recontacterons rapidement." });
-      navigate(`/devis/confirmation?email=${encodeURIComponent(formData.email)}&type=degat_eaux`);
+      toast({
+        title: "Échec de l'envoi",
+        description: err instanceof Error ? err.message : "Impossible d'envoyer votre demande pour le moment.",
+        variant: "destructive",
+      });
     } finally {
       setIsSubmitting(false);
       setCaptchaToken(null);
