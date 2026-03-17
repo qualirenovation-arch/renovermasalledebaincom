@@ -500,7 +500,7 @@ export default function Devis() {
 
       if (leadToken && leadId) {
         // Step 2: Update existing lead
-        const { error: updateError } = await supabase.functions.invoke('send-devis-confirmation', {
+        const { data: updateData, error: updateError } = await supabase.functions.invoke('send-devis-confirmation', {
           body: {
             clientEmail: formData.email,
             clientFirstName: formData.prenom,
@@ -537,8 +537,9 @@ export default function Devis() {
           },
         });
 
-        if (updateError) {
-          console.error("Step 2 submission error:", updateError);
+        if (updateError || !updateData?.success) {
+          const backendMessage = (updateData as { error?: string } | null)?.error;
+          throw new Error(backendMessage || "Le dossier n'a pas pu être envoyé. Veuillez réessayer.");
         }
       } else {
         // Direct access (no token): standard flow
@@ -577,10 +578,9 @@ export default function Devis() {
           },
         });
 
-        if (error) {
-          console.error("Email sending error:", error);
-        } else {
-          console.log("Emails sent successfully:", data);
+        if (error || !data?.success) {
+          const backendMessage = (data as { error?: string } | null)?.error;
+          throw new Error(backendMessage || "La demande n'a pas pu être envoyée. Veuillez réessayer.");
         }
       }
 
@@ -592,10 +592,10 @@ export default function Devis() {
       });
     } catch (err) {
       console.error("Submission error:", err);
-      setIsSubmitted(true);
       toast({
-        title: "Demande envoyée !",
-        description: "Nous vous recontacterons sous 24h pour planifier votre visite.",
+        title: "Échec de l'envoi",
+        description: err instanceof Error ? err.message : "Impossible d'envoyer votre demande pour le moment.",
+        variant: "destructive",
       });
     } finally {
       setIsSubmitting(false);
