@@ -324,6 +324,7 @@ export default function Devis() {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const captchaRef = useRef<HCaptcha>(null);
   const { toast } = useToast();
+  useVirtualKeyboard();
 
   // Check URL params for direct form access or token
   useEffect(() => {
