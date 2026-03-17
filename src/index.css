@@ -380,3 +380,20 @@
   animation: ticker-scroll linear infinite;
   will-change: transform;
 }
+
+/* Mobile form fixes — prevent touch delays and ensure smooth keyboard interaction */
+@media (max-width: 768px) {
+  input, textarea, select, button, a {
+    touch-action: manipulation;
+  }
+
+  /* Prevent sticky header from interfering with virtual keyboard */
+  body.keyboard-open .sticky {
+    position: relative !important;
+  }
+}
+
+/* Prevent ticker from capturing touch events on form pages */
+.ticker-no-touch {
+  pointer-events: none;
+}
