@@ -116,7 +116,7 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const captchaRef = useRef<HCaptcha>(null);
   const { toast } = useToast();
-
+  useVirtualKeyboard();
   const onCaptchaVerify = useCallback((token: string) => setCaptchaToken(token), []);
   const onCaptchaExpire = useCallback(() => setCaptchaToken(null), []);
   const onCaptchaError = useCallback(() => {
