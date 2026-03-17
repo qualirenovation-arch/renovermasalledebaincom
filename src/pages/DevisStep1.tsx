@@ -205,7 +205,7 @@ export default function DevisStep1() {
                 <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
                 Choisir un autre type de devis
               </Button>
-              <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
+              <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8" autoComplete="off">
                 {/* Coordonnées */}
                 <div className="card-elevated p-5 md:p-8">
                   <h2 className="font-display text-xl font-light mb-6 flex items-center gap-3">
