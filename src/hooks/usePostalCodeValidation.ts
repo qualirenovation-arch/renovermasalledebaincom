@@ -28,34 +28,46 @@ export function usePostalCodeValidation() {
     setValidation(prev => ({ ...prev, isChecking: true }));
 
     try {
+      // Search for the city and check if the postal code matches
       const response = await fetch(
-        `https://api-adresse.data.gouv.fr/search/?q=${encodeURIComponent(ville)}&postcode=${encodeURIComponent(codePostal)}&limit=1&type=municipality`
+        `https://api-adresse.data.gouv.fr/search/?q=${encodeURIComponent(ville)}&limit=5&type=municipality`
       );
       const data = await response.json();
 
       if (data.features && data.features.length > 0) {
-        setValidation({ isValid: true, message: null, isChecking: false });
-        return true;
-      } else {
-        // Try a broader search to suggest the correct postal code
-        const cityResponse = await fetch(
-          `https://api-adresse.data.gouv.fr/search/?q=${encodeURIComponent(ville)}&limit=1&type=municipality`
-        );
-        const cityData = await cityResponse.json();
-        
-        let suggestion = "";
-        if (cityData.features && cityData.features.length > 0) {
-          const correctPostcode = cityData.features[0].properties.postcode;
-          const correctCity = cityData.features[0].properties.city;
-          suggestion = ` Le code postal de ${correctCity} est ${correctPostcode}.`;
+        // Check if any result has a matching postal code
+        // For Paris, postcodes are 75001-75020, so we also check the city-level match
+        const matchFound = data.features.some((f: any) => {
+          const props = f.properties;
+          // Direct postcode match
+          if (props.postcode === codePostal) return true;
+          // For cities like Paris/Lyon/Marseille with arrondissements,
+          // check if the department prefix matches and it's the same city
+          const cityCode = props.citycode;
+          if (cityCode === "75056" && codePostal.startsWith("750")) return true;
+          if (cityCode === "69123" && codePostal.startsWith("690")) return true;
+          if (cityCode === "13055" && codePostal.startsWith("130")) return true;
+          return false;
+        });
+
+        if (matchFound) {
+          setValidation({ isValid: true, message: null, isChecking: false });
+          return true;
         }
 
+        // No match — suggest the correct postal code
+        const correctPostcode = data.features[0].properties.postcode;
+        const correctCity = data.features[0].properties.city;
         setValidation({
           isValid: false,
-          message: `Le code postal ${codePostal} ne correspond pas à la ville "${ville}".${suggestion}`,
+          message: `Le code postal ${codePostal} ne correspond pas à "${ville}". Le code postal de ${correctCity} est ${correctPostcode}.`,
           isChecking: false,
         });
         return false;
+      } else {
+        // City not found at all — let it pass (may be a typo, handled by other validation)
+        setValidation({ isValid: true, message: null, isChecking: false });
+        return true;
       }
     } catch {
       // Don't block submission on API failure
