@@ -253,7 +253,7 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
     }
   };
 
-  // SectionCard moved outside component — see below
+  
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6" autoComplete="off">
