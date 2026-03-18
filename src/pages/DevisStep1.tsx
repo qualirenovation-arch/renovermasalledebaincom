@@ -115,6 +115,8 @@ export default function DevisStep1() {
 
     setIsSubmitting(true);
 
+    setSubmitError(null);
+
     try {
       const { data, error } = await supabase.functions.invoke('send-step1-confirmation', {
         body: {
@@ -134,14 +136,11 @@ export default function DevisStep1() {
       console.log("Edge function response:", { data, error: error?.message });
 
       if (error) {
-        // Network or invocation error
-        const errorDetail = error.message || "Erreur réseau";
         console.error("Edge function invocation error:", error);
-        throw new Error(`Erreur de connexion au serveur : ${errorDetail}. Vérifiez votre connexion internet et réessayez.`);
+        throw new Error(`Erreur de connexion au serveur : ${error.message || "Erreur réseau"}. Vérifiez votre connexion internet et réessayez.`);
       }
 
       if (!data?.success) {
-        // Backend returned an error with details
         const backendMessage = (data as { error?: string } | null)?.error;
         console.error("Backend error:", backendMessage);
         throw new Error(backendMessage || "La demande n'a pas pu être traitée. Veuillez réessayer.");
@@ -152,11 +151,7 @@ export default function DevisStep1() {
     } catch (err) {
       console.error("Submission error:", err);
       const errorMessage = err instanceof Error ? err.message : "Impossible d'envoyer votre demande pour le moment.";
-      toast({
-        title: "Échec de l'envoi",
-        description: errorMessage,
-        variant: "destructive",
-      });
+      setSubmitError(errorMessage);
     } finally {
       setIsSubmitting(false);
       setCaptchaToken(null);
