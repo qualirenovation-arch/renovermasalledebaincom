@@ -130,18 +130,30 @@ export default function DevisStep1() {
         },
       });
 
-      if (error || !data?.success) {
+      console.log("Edge function response:", { data, error: error?.message });
+
+      if (error) {
+        // Network or invocation error
+        const errorDetail = error.message || "Erreur réseau";
+        console.error("Edge function invocation error:", error);
+        throw new Error(`Erreur de connexion au serveur : ${errorDetail}. Vérifiez votre connexion internet et réessayez.`);
+      }
+
+      if (!data?.success) {
+        // Backend returned an error with details
         const backendMessage = (data as { error?: string } | null)?.error;
-        throw new Error(backendMessage || "La demande n'a pas pu être envoyée. Veuillez réessayer.");
+        console.error("Backend error:", backendMessage);
+        throw new Error(backendMessage || "La demande n'a pas pu être traitée. Veuillez réessayer.");
       }
 
       toast({ title: "Demande enregistrée !", description: "Consultez votre boîte email pour la suite." });
       navigate(`/devis/confirmation?email=${encodeURIComponent(formData.email)}&type=classique`);
     } catch (err) {
       console.error("Submission error:", err);
+      const errorMessage = err instanceof Error ? err.message : "Impossible d'envoyer votre demande pour le moment.";
       toast({
         title: "Échec de l'envoi",
-        description: err instanceof Error ? err.message : "Impossible d'envoyer votre demande pour le moment.",
+        description: errorMessage,
         variant: "destructive",
       });
     } finally {
