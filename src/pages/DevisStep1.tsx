@@ -1,5 +1,6 @@
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import { useVirtualKeyboard } from "@/hooks/useVirtualKeyboard";
+import { usePostalCodeValidation } from "@/hooks/usePostalCodeValidation";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { motion } from "framer-motion";
