@@ -41,12 +41,34 @@ export function usePostalCodeValidation() {
           const props = f.properties;
           // Direct postcode match
           if (props.postcode === codePostal) return true;
-          // For cities like Paris/Lyon/Marseille with arrondissements,
-          // check if the department prefix matches and it's the same city
+          // For Paris/Lyon/Marseille with arrondissements, accept any valid arrondissement code
+          // But only if the user typed the general city name (not a specific arrondissement)
           const cityCode = props.citycode;
-          if (cityCode === "75056" && codePostal.startsWith("750")) return true;
-          if (cityCode === "69123" && codePostal.startsWith("690")) return true;
-          if (cityCode === "13055" && codePostal.startsWith("130")) return true;
+          const villeNorm = ville.trim().toLowerCase();
+          const isGenericCity = !villeNorm.match(/\d/); // No digit = generic "Paris", not "Paris 10"
+          if (isGenericCity) {
+            if (cityCode === "75056" && codePostal.startsWith("750")) return true;
+            if (cityCode === "69123" && codePostal.startsWith("690")) return true;
+            if (cityCode === "13055" && codePostal.startsWith("130")) return true;
+          } else {
+            // User typed something like "Paris 10" — extract the arrondissement number
+            const arrMatch = villeNorm.match(/(\d+)/);
+            if (arrMatch) {
+              const arr = parseInt(arrMatch[1], 10);
+              if (cityCode === "75056") {
+                const expectedPostcode = `750${arr.toString().padStart(2, '0')}`;
+                if (codePostal === expectedPostcode) return true;
+              }
+              if (cityCode === "69123") {
+                const expectedPostcode = `690${arr.toString().padStart(2, '0')}`;
+                if (codePostal === expectedPostcode) return true;
+              }
+              if (cityCode === "13055") {
+                const expectedPostcode = `130${arr.toString().padStart(2, '0')}`;
+                if (codePostal === expectedPostcode) return true;
+              }
+            }
+          }
           return false;
         });
 
