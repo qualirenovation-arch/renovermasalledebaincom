@@ -51,6 +51,7 @@ export default function DevisStep1() {
   const [searchParams, setSearchParams] = useSearchParams();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const captchaRef = useRef<HCaptcha>(null);
   useVirtualKeyboard();
