@@ -161,6 +161,8 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
 
     setIsSubmitting(true);
 
+    setSubmitError(null);
+
     try {
       const { data, error } = await supabase.functions.invoke('send-water-damage-quote', {
         body: {
@@ -186,11 +188,8 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
       navigate(`/devis/confirmation?email=${encodeURIComponent(formData.email)}&type=degat_eaux`);
     } catch (err) {
       console.error("Submission error:", err);
-      toast({
-        title: "Échec de l'envoi",
-        description: err instanceof Error ? err.message : "Impossible d'envoyer votre demande pour le moment.",
-        variant: "destructive",
-      });
+      const errorMessage = err instanceof Error ? err.message : "Impossible d'envoyer votre demande pour le moment.";
+      setSubmitError(errorMessage);
     } finally {
       setIsSubmitting(false);
       setCaptchaToken(null);
