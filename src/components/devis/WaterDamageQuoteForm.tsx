@@ -162,6 +162,11 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
       return;
     }
 
+    if (!postalValidation.isValid) {
+      toast({ title: "Adresse incohérente", description: postalValidation.message || "Le code postal ne correspond pas à la ville.", variant: "destructive" });
+      return;
+    }
+
     if (!captchaToken) {
       toast({ title: "Vérification requise", description: "Veuillez compléter la vérification anti-spam.", variant: "destructive" });
       return;
