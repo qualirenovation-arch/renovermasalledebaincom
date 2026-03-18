@@ -39,6 +39,33 @@ const getEffectiveCaptchaToken = (token: string | null) => {
   return token;
 };
 
+const extractEdgeErrorMessage = async (err: unknown, fallback: string): Promise<string> => {
+  if (err && typeof err === "object") {
+    const maybeError = err as { message?: string; context?: Response };
+
+    if (maybeError.context instanceof Response) {
+      try {
+        const json = await maybeError.context.clone().json() as { error?: string; message?: string };
+        const backendMessage = json?.error || json?.message;
+        if (backendMessage) return backendMessage;
+      } catch {
+        try {
+          const text = await maybeError.context.clone().text();
+          if (text) return text;
+        } catch {
+          // noop
+        }
+      }
+    }
+
+    if (maybeError.message && maybeError.message !== "Edge Function returned a non-2xx status code") {
+      return maybeError.message;
+    }
+  }
+
+  return fallback;
+};
+
 interface WaterDamageStep1Data {
   prenom: string;
   nom: string;
@@ -142,9 +169,8 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
       const currentArray = prev[field] as string[];
       if (checked) {
         return { ...prev, [field]: [...currentArray, value] };
-      } else {
-        return { ...prev, [field]: currentArray.filter(item => item !== value) };
       }
+      return { ...prev, [field]: currentArray.filter(item => item !== value) };
     });
   };
 
@@ -173,7 +199,6 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
     }
 
     setIsSubmitting(true);
-
     setSubmitError(null);
 
     try {
@@ -188,7 +213,7 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
 
       if (error) {
         console.error("Edge function invocation error:", error);
-        throw new Error(`Erreur de connexion au serveur : ${error.message || "Erreur réseau"}. Vérifiez votre connexion internet et réessayez.`);
+        throw error;
       }
 
       if (!data?.success) {
@@ -201,7 +226,7 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
       navigate(`/devis/confirmation?email=${encodeURIComponent(formData.email)}&type=degat_eaux`);
     } catch (err) {
       console.error("Submission error:", err);
-      const errorMessage = err instanceof Error ? err.message : "Impossible d'envoyer votre demande pour le moment.";
+      const errorMessage = await extractEdgeErrorMessage(err, "Impossible d'envoyer votre demande pour le moment.");
       setSubmitError(errorMessage);
     } finally {
       setIsSubmitting(false);
