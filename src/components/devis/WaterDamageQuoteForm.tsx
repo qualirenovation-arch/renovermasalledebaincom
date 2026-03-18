@@ -299,6 +299,14 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
               <Input id="wd-codePostal" value={formData.codePostal} onChange={(e) => handleChange("codePostal", e.target.value)} required autoComplete="off" />
             </div>
           </div>
+          {!postalValidation.isValid && postalValidation.message && (
+            <div className="mt-3 p-3 bg-destructive/10 border border-destructive/30 rounded-lg flex items-start gap-2">
+              <svg className="w-4 h-4 text-destructive flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" />
+              </svg>
+              <p className="text-sm text-destructive">{postalValidation.message}</p>
+            </div>
+          )}
 
           <div className="space-y-2">
             <Label>Logement occupé pendant les travaux ?</Label>
