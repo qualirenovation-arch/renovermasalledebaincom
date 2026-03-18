@@ -168,9 +168,17 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
         },
       });
 
-      if (error || !data?.success) {
+      console.log("Edge function response:", { data, error: error?.message });
+
+      if (error) {
+        console.error("Edge function invocation error:", error);
+        throw new Error(`Erreur de connexion au serveur : ${error.message || "Erreur réseau"}. Vérifiez votre connexion internet et réessayez.`);
+      }
+
+      if (!data?.success) {
         const backendMessage = (data as { error?: string } | null)?.error;
-        throw new Error(backendMessage || "La demande n'a pas pu être envoyée. Veuillez réessayer.");
+        console.error("Backend error:", backendMessage);
+        throw new Error(backendMessage || "La demande n'a pas pu être traitée. Veuillez réessayer.");
       }
 
       toast({ title: "Demande enregistrée !", description: "Consultez votre boîte email pour la suite." });

@@ -147,9 +147,15 @@ export function WaterDamageStep2Form({ leadId, clientFirstName, clientEmail }: P
         },
       });
 
-      if (error || !data?.success) {
+      if (error) {
+        console.error("Edge function invocation error:", error);
+        throw new Error(`Erreur de connexion au serveur : ${error.message || "Erreur réseau"}. Vérifiez votre connexion internet et réessayez.`);
+      }
+
+      if (!data?.success) {
         const backendMessage = (data as { error?: string } | null)?.error;
-        throw new Error(backendMessage || "Le dossier n'a pas pu être envoyé. Veuillez réessayer.");
+        console.error("Backend error:", backendMessage);
+        throw new Error(backendMessage || "Le dossier n'a pas pu être traité. Veuillez réessayer.");
       }
 
       setIsSubmitted(true);
