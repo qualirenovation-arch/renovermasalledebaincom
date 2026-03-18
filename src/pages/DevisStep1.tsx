@@ -84,8 +84,17 @@ export default function DevisStep1() {
     roomType: "",
   });
 
+  const { validation: postalValidation, validateDebounced: validatePostal, reset: resetPostalValidation } = usePostalCodeValidation();
+
   const handleChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData(prev => {
+      const next = { ...prev, [field]: value };
+      // Trigger postal code validation when either field changes
+      if (field === 'codePostal' || field === 'ville') {
+        validatePostal(next.codePostal, next.ville);
+      }
+      return next;
+    });
   };
 
   const onCaptchaVerify = useCallback((token: string) => setCaptchaToken(token), []);
