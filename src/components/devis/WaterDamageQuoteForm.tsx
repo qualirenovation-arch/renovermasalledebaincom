@@ -235,23 +235,7 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
     }
   };
 
-  const SectionCard = ({ icon: Icon, title, children, iconBg = "bg-blue-100", iconColor = "text-blue-600" }: {
-    icon: any;
-    title: string;
-    children: React.ReactNode;
-    iconBg?: string;
-    iconColor?: string;
-  }) => (
-    <div className="card-elevated p-5 md:p-6">
-      <h3 className="font-display text-lg font-light mb-4 flex items-center gap-3">
-        <div className={`w-9 h-9 rounded-full ${iconBg} flex items-center justify-center`}>
-          <Icon className={`w-4 h-4 ${iconColor}`} />
-        </div>
-        {title}
-      </h3>
-      {children}
-    </div>
-  );
+  // SectionCard moved outside component — see below
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6" autoComplete="off">
