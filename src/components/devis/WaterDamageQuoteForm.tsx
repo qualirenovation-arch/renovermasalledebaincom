@@ -119,6 +119,7 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
   const captchaRef = useRef<HCaptcha>(null);
   const { toast } = useToast();
   useVirtualKeyboard();
+  const { validation: postalValidation, validateDebounced: validatePostal } = usePostalCodeValidation();
   const onCaptchaVerify = useCallback((token: string) => setCaptchaToken(token), []);
   const onCaptchaExpire = useCallback(() => setCaptchaToken(null), []);
   const onCaptchaError = useCallback(() => {
@@ -127,7 +128,13 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
   }, [toast]);
 
   const handleChange = (field: keyof WaterDamageStep1Data, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData(prev => {
+      const next = { ...prev, [field]: value };
+      if (field === 'codePostal' || field === 'ville') {
+        validatePostal(next.codePostal, next.ville);
+      }
+      return next;
+    });
   };
 
   const handleCheckboxChange = (field: keyof WaterDamageStep1Data, value: string, checked: boolean) => {
