@@ -1,5 +1,6 @@
 import { useState, useRef, useCallback } from "react";
 import { useVirtualKeyboard } from "@/hooks/useVirtualKeyboard";
+import { usePostalCodeValidation } from "@/hooks/usePostalCodeValidation";
 import { useNavigate } from "react-router-dom";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { motion } from "framer-motion";
@@ -118,6 +119,7 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
   const captchaRef = useRef<HCaptcha>(null);
   const { toast } = useToast();
   useVirtualKeyboard();
+  const { validation: postalValidation, validateDebounced: validatePostal } = usePostalCodeValidation();
   const onCaptchaVerify = useCallback((token: string) => setCaptchaToken(token), []);
   const onCaptchaExpire = useCallback(() => setCaptchaToken(null), []);
   const onCaptchaError = useCallback(() => {
@@ -126,7 +128,13 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
   }, [toast]);
 
   const handleChange = (field: keyof WaterDamageStep1Data, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData(prev => {
+      const next = { ...prev, [field]: value };
+      if (field === 'codePostal' || field === 'ville') {
+        validatePostal(next.codePostal, next.ville);
+      }
+      return next;
+    });
   };
 
   const handleCheckboxChange = (field: keyof WaterDamageStep1Data, value: string, checked: boolean) => {
@@ -151,6 +159,11 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       toast({ title: "Email invalide", description: "Veuillez entrer une adresse email valide.", variant: "destructive" });
+      return;
+    }
+
+    if (!postalValidation.isValid) {
+      toast({ title: "Adresse incohérente", description: postalValidation.message || "Le code postal ne correspond pas à la ville.", variant: "destructive" });
       return;
     }
 
@@ -286,6 +299,14 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
               <Input id="wd-codePostal" value={formData.codePostal} onChange={(e) => handleChange("codePostal", e.target.value)} required autoComplete="off" />
             </div>
           </div>
+          {!postalValidation.isValid && postalValidation.message && (
+            <div className="mt-3 p-3 bg-destructive/10 border border-destructive/30 rounded-lg flex items-start gap-2">
+              <svg className="w-4 h-4 text-destructive flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" />
+              </svg>
+              <p className="text-sm text-destructive">{postalValidation.message}</p>
+            </div>
+          )}
 
           <div className="space-y-2">
             <Label>Logement occupé pendant les travaux ?</Label>

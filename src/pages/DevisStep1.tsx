@@ -1,5 +1,6 @@
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import { useVirtualKeyboard } from "@/hooks/useVirtualKeyboard";
+import { usePostalCodeValidation } from "@/hooks/usePostalCodeValidation";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { motion } from "framer-motion";
@@ -83,8 +84,17 @@ export default function DevisStep1() {
     roomType: "",
   });
 
+  const { validation: postalValidation, validateDebounced: validatePostal, reset: resetPostalValidation } = usePostalCodeValidation();
+
   const handleChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData(prev => {
+      const next = { ...prev, [field]: value };
+      // Trigger postal code validation when either field changes
+      if (field === 'codePostal' || field === 'ville') {
+        validatePostal(next.codePostal, next.ville);
+      }
+      return next;
+    });
   };
 
   const onCaptchaVerify = useCallback((token: string) => setCaptchaToken(token), []);
@@ -105,6 +115,11 @@ export default function DevisStep1() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       toast({ title: "Email invalide", description: "Veuillez entrer une adresse email valide.", variant: "destructive" });
+      return;
+    }
+
+    if (!postalValidation.isValid) {
+      toast({ title: "Adresse incohérente", description: postalValidation.message || "Le code postal ne correspond pas à la ville.", variant: "destructive" });
       return;
     }
 
@@ -254,11 +269,19 @@ export default function DevisStep1() {
                       <Label htmlFor="codePostal">Code postal *</Label>
                       <Input id="codePostal" value={formData.codePostal} onChange={(e) => handleChange("codePostal", e.target.value)} placeholder="75017" required className="rounded-xl" autoComplete="off" />
                     </div>
-                    <div className="space-y-2">
+                     <div className="space-y-2">
                       <Label htmlFor="ville">Ville *</Label>
                       <Input id="ville" value={formData.ville} onChange={(e) => handleChange("ville", e.target.value)} placeholder="Paris" required className="rounded-xl" autoComplete="off" />
                     </div>
                   </div>
+                  {!postalValidation.isValid && postalValidation.message && (
+                    <div className="mt-3 p-3 bg-destructive/10 border border-destructive/30 rounded-lg flex items-start gap-2">
+                      <svg className="w-4 h-4 text-destructive flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" />
+                      </svg>
+                      <p className="text-sm text-destructive">{postalValidation.message}</p>
+                    </div>
+                  )}
                 </div>
 
                 {/* Type de projet */}
