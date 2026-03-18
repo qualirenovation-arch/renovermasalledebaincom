@@ -350,6 +350,21 @@ export default function DevisStep1() {
                   )}
                 </div>
 
+                {/* Persistent error message */}
+                {submitError && (
+                  <div className="bg-destructive/10 border border-destructive/30 rounded-xl p-4 flex items-start gap-3">
+                    <svg className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="12" y1="8" x2="12" y2="12" />
+                      <line x1="12" y1="16" x2="12.01" y2="16" />
+                    </svg>
+                    <div>
+                      <p className="font-semibold text-destructive text-sm">Échec de l'envoi</p>
+                      <p className="text-sm text-destructive/80 mt-1">{submitError}</p>
+                    </div>
+                  </div>
+                )}
+
                 <Button
                   type="submit"
                   size="lg"
