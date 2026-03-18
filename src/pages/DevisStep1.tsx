@@ -51,6 +51,7 @@ export default function DevisStep1() {
   const [searchParams, setSearchParams] = useSearchParams();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const captchaRef = useRef<HCaptcha>(null);
   useVirtualKeyboard();
@@ -114,6 +115,8 @@ export default function DevisStep1() {
 
     setIsSubmitting(true);
 
+    setSubmitError(null);
+
     try {
       const { data, error } = await supabase.functions.invoke('send-step1-confirmation', {
         body: {
@@ -133,14 +136,11 @@ export default function DevisStep1() {
       console.log("Edge function response:", { data, error: error?.message });
 
       if (error) {
-        // Network or invocation error
-        const errorDetail = error.message || "Erreur réseau";
         console.error("Edge function invocation error:", error);
-        throw new Error(`Erreur de connexion au serveur : ${errorDetail}. Vérifiez votre connexion internet et réessayez.`);
+        throw new Error(`Erreur de connexion au serveur : ${error.message || "Erreur réseau"}. Vérifiez votre connexion internet et réessayez.`);
       }
 
       if (!data?.success) {
-        // Backend returned an error with details
         const backendMessage = (data as { error?: string } | null)?.error;
         console.error("Backend error:", backendMessage);
         throw new Error(backendMessage || "La demande n'a pas pu être traitée. Veuillez réessayer.");
@@ -151,11 +151,7 @@ export default function DevisStep1() {
     } catch (err) {
       console.error("Submission error:", err);
       const errorMessage = err instanceof Error ? err.message : "Impossible d'envoyer votre demande pour le moment.";
-      toast({
-        title: "Échec de l'envoi",
-        description: errorMessage,
-        variant: "destructive",
-      });
+      setSubmitError(errorMessage);
     } finally {
       setIsSubmitting(false);
       setCaptchaToken(null);
@@ -353,6 +349,21 @@ export default function DevisStep1() {
                     </p>
                   )}
                 </div>
+
+                {/* Persistent error message */}
+                {submitError && (
+                  <div className="bg-destructive/10 border border-destructive/30 rounded-xl p-4 flex items-start gap-3">
+                    <svg className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="12" y1="8" x2="12" y2="12" />
+                      <line x1="12" y1="16" x2="12.01" y2="16" />
+                    </svg>
+                    <div>
+                      <p className="font-semibold text-destructive text-sm">Échec de l'envoi</p>
+                      <p className="text-sm text-destructive/80 mt-1">{submitError}</p>
+                    </div>
+                  </div>
+                )}
 
                 <Button
                   type="submit"
