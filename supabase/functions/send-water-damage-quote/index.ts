@@ -143,7 +143,7 @@ const handler = async (req: Request): Promise<Response> => {
       if (!captchaData.success) {
         const errorCodes = Array.isArray(captchaData["error-codes"]) ? captchaData["error-codes"] : [];
         console.error("hCaptcha verification failed", { errorCodes });
-        return new Response(JSON.stringify({ error: "Vérification anti-spam échouée. Veuillez réessayer." }), { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } });
+        return new Response(JSON.stringify({ error: captchaErrorMessage(errorCodes) }), { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } });
       }
     }
 
