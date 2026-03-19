@@ -65,14 +65,31 @@ const handler = async (req: Request): Promise<Response> => {
     }
 
     if (captchaToken !== "test-token") {
+      if (!HCAPTCHA_SECRET_KEY) {
+        console.error("HCAPTCHA_SECRET_KEY missing");
+        return new Response(JSON.stringify({ error: "Le service de vérification est momentanément indisponible. Veuillez réessayer." }), { status: 503, headers: { ...corsHeaders, "Content-Type": "application/json" } });
+      }
+
+      const verifyBody = new URLSearchParams({
+        response: captchaToken,
+        secret: HCAPTCHA_SECRET_KEY,
+      });
+
+      if (ip !== "unknown") {
+        verifyBody.set("remoteip", ip);
+      }
+
       const captchaResponse = await fetch("https://hcaptcha.com/siteverify", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: `response=${captchaToken}&secret=${HCAPTCHA_SECRET_KEY}`,
+        body: verifyBody.toString(),
       });
+
       const captchaData = await captchaResponse.json();
       if (!captchaData.success) {
-        return new Response(JSON.stringify({ error: "Vérification anti-spam échouée." }), { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } });
+        const errorCodes = Array.isArray(captchaData["error-codes"]) ? captchaData["error-codes"] : [];
+        console.error("hCaptcha verification failed", { errorCodes });
+        return new Response(JSON.stringify({ error: "Vérification anti-spam échouée. Veuillez réessayer." }), { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } });
       }
     }
 
