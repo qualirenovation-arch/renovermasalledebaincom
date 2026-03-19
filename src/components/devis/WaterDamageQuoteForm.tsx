@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
+
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
@@ -404,20 +404,27 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
       <SectionCard icon={Home} title="Étape 3 — Pièces concernées" iconBg="bg-purple-100" iconColor="text-purple-600">
         <div className="space-y-4">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-            {roomOptions.map(opt => (
-              <div
-                key={opt.value}
-                className={`flex items-center gap-3 p-3 rounded-lg border-2 transition-all cursor-pointer ${
-                  formData.affectedRooms.includes(opt.value)
-                    ? 'border-foreground bg-foreground/5'
-                    : 'border-border hover:border-foreground/30'
-                }`}
-                onClick={() => handleCheckboxChange("affectedRooms", opt.value, !formData.affectedRooms.includes(opt.value))}
-              >
-                <Checkbox checked={formData.affectedRooms.includes(opt.value)} className="pointer-events-none" />
-                <span className="text-sm font-medium">{opt.label}</span>
-              </div>
-            ))}
+            {roomOptions.map(opt => {
+              const isChecked = formData.affectedRooms.includes(opt.value);
+              return (
+                <div
+                  key={opt.value}
+                  className={`flex items-center gap-3 p-3 rounded-lg border-2 transition-all cursor-pointer ${
+                    isChecked
+                      ? 'border-foreground bg-foreground/5'
+                      : 'border-border hover:border-foreground/30'
+                  }`}
+                  onClick={() => handleCheckboxChange("affectedRooms", opt.value, !isChecked)}
+                >
+                  <div className={`h-4 w-4 shrink-0 rounded-sm border border-primary flex items-center justify-center ${isChecked ? 'bg-primary text-primary-foreground' : ''}`}>
+                    {isChecked && (
+                      <svg className="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                    )}
+                  </div>
+                  <span className="text-sm font-medium">{opt.label}</span>
+                </div>
+              );
+            })}
           </div>
           {formData.affectedRooms.includes("autre") && (
             <Input
