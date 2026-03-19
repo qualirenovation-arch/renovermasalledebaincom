@@ -25,6 +25,19 @@ function generateToken(): string {
   return Array.from(array, b => b.toString(16).padStart(2, '0')).join('');
 }
 
+function captchaErrorMessage(errorCodes: string[]): string {
+  if (errorCodes.includes("invalid-or-already-seen-response") || errorCodes.includes("invalid-input-response")) {
+    return "La vérification anti-spam a expiré ou a déjà été utilisée. Veuillez cocher à nouveau la case de vérification.";
+  }
+  if (errorCodes.includes("missing-input-response")) {
+    return "La vérification anti-spam n'a pas été complétée. Veuillez cocher la case avant d'envoyer.";
+  }
+  if (errorCodes.includes("sitekey-secret-mismatch") || errorCodes.includes("invalid-input-secret") || errorCodes.includes("missing-input-secret")) {
+    return "Le service de vérification est temporairement mal configuré. Veuillez nous contacter si le problème persiste.";
+  }
+  return "La vérification anti-spam a échoué. Veuillez rafraîchir la page et réessayer.";
+}
+
 const maskEmail = (e: string) => { const [l, d] = e.split('@'); return d ? `${l[0]}***@${d}` : '***'; };
 
 const insuranceLabels: Record<string, string> = {
