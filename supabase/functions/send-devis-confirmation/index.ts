@@ -152,18 +152,36 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Verify hCaptcha token server-side (bypass for test-token in dev)
     if (captchaToken !== "test-token") {
+      if (!HCAPTCHA_SECRET_KEY) {
+        console.error("HCAPTCHA_SECRET_KEY missing");
+        return new Response(
+          JSON.stringify({ error: "Le service de vérification est momentanément indisponible. Veuillez réessayer." }),
+          { status: 503, headers: { "Content-Type": "application/json", ...corsHeaders } }
+        );
+      }
+
       console.log("Verifying hCaptcha token...");
+      const verifyBody = new URLSearchParams({
+        response: captchaToken,
+        secret: HCAPTCHA_SECRET_KEY,
+      });
+
+      if (ip !== "unknown") {
+        verifyBody.set("remoteip", ip);
+      }
+
       const captchaResponse = await fetch("https://hcaptcha.com/siteverify", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: `response=${captchaToken}&secret=${HCAPTCHA_SECRET_KEY}`,
+        body: verifyBody.toString(),
       });
 
       const captchaData = await captchaResponse.json();
       console.log("hCaptcha verification result:", captchaData.success);
 
       if (!captchaData.success) {
-        console.error("hCaptcha verification failed:", captchaData);
+        const errorCodes = Array.isArray(captchaData["error-codes"]) ? captchaData["error-codes"] : [];
+        console.error("hCaptcha verification failed", { errorCodes });
         return new Response(
           JSON.stringify({ error: "Vérification anti-spam échouée. Veuillez réessayer." }),
           { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
