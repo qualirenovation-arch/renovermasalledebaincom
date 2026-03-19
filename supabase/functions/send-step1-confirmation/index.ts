@@ -25,6 +25,19 @@ function generateToken(): string {
   return Array.from(array, b => b.toString(16).padStart(2, '0')).join('');
 }
 
+function captchaErrorMessage(errorCodes: string[]): string {
+  if (errorCodes.includes("invalid-or-already-seen-response") || errorCodes.includes("invalid-input-response")) {
+    return "La vérification anti-spam a expiré ou a déjà été utilisée. Veuillez cocher à nouveau la case de vérification.";
+  }
+  if (errorCodes.includes("missing-input-response")) {
+    return "La vérification anti-spam n'a pas été complétée. Veuillez cocher la case avant d'envoyer.";
+  }
+  if (errorCodes.includes("sitekey-secret-mismatch") || errorCodes.includes("invalid-input-secret") || errorCodes.includes("missing-input-secret")) {
+    return "Le service de vérification est temporairement mal configuré. Veuillez nous contacter si le problème persiste.";
+  }
+  return "La vérification anti-spam a échoué. Veuillez rafraîchir la page et réessayer.";
+}
+
 const projectTypeLabels: Record<string, string> = {
   "baignoire-vers-douche": "Remplacer une baignoire par une douche",
   "moderniser": "Moderniser une salle de bain existante",
@@ -89,7 +102,7 @@ const handler = async (req: Request): Promise<Response> => {
       if (!captchaData.success) {
         const errorCodes = Array.isArray(captchaData["error-codes"]) ? captchaData["error-codes"] : [];
         console.error("hCaptcha verification failed", { errorCodes });
-        return new Response(JSON.stringify({ error: "Vérification anti-spam échouée. Veuillez réessayer." }), { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } });
+        return new Response(JSON.stringify({ error: captchaErrorMessage(errorCodes) }), { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } });
       }
     }
 
