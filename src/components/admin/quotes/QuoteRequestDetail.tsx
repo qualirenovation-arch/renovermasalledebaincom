@@ -163,6 +163,26 @@ export function QuoteRequestDetail({ quoteId, onBack }: QuoteRequestDetailProps)
     }
   };
 
+  const handleResendEmail = async () => {
+    setIsResending(true);
+    try {
+      const { data, error } = await supabase.functions.invoke('resend-confirmation', {
+        body: { leadId: quoteId },
+      });
+
+      if (error) throw error;
+      if (!data?.success) throw new Error("Échec");
+
+      toast({ title: "Email renvoyé", description: "L'email de confirmation a été renvoyé au client." });
+      fetchQuote(); // Refresh to update email_confirmation_sent
+    } catch (error) {
+      console.error("Error resending email:", error);
+      toast({ title: "Échec de l'envoi", description: "Impossible de renvoyer l'email.", variant: "destructive" });
+    } finally {
+      setIsResending(false);
+    }
+  };
+
   if (isLoading) {
     return (
       <div className="flex items-center justify-center py-12">
