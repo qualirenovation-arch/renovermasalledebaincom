@@ -1,0 +1,1 @@
+ALTER TABLE public.quote_requests ADD COLUMN IF NOT EXISTS email_confirmation_sent boolean NOT NULL DEFAULT false;
