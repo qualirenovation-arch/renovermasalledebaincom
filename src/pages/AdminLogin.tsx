@@ -18,7 +18,8 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/hooks/use-toast";
 import { useAdminAuth } from "@/hooks/useAdminAuth";
-import { Lock, Mail, ArrowLeft, Loader2, UserPlus } from "lucide-react";
+import { Lock, Mail, ArrowLeft, Loader2, UserPlus, ShieldCheck } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const loginSchema = z.object({
   email: z.string().email("Adresse email invalide"),
