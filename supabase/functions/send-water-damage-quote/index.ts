@@ -38,8 +38,6 @@ function captchaErrorMessage(errorCodes: string[]): string {
   return "La vérification anti-spam a échoué. Veuillez rafraîchir la page et réessayer.";
 }
 
-const maskEmail = (e: string) => { const [l, d] = e.split('@'); return d ? `${l[0]}***@${d}` : '***'; };
-
 const insuranceLabels: Record<string, string> = {
   oui: "Oui",
   non: "Non",
@@ -107,7 +105,6 @@ const handler = async (req: Request): Promise<Response> => {
     const { count } = await supabase.from('rate_limits').select('*', { count: 'exact', head: true }).eq('ip_address', ip).eq('endpoint', endpoint).gte('created_at', oneHourAgo);
     
     if ((count || 0) >= RATE_LIMIT_MAX_REQUESTS) {
-      console.log("Rate limit exceeded for send-water-damage-quote endpoint");
       return new Response(JSON.stringify({ error: "Trop de demandes. Veuillez réessayer dans une heure." }), { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } });
     }
 
@@ -158,7 +155,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Generate unique access token
     const accessToken = generateToken();
 
-    // Insert Step 1 data into database
+    // INSERT LEAD FIRST — before any email attempt
     const { data: lead, error: insertError } = await supabase
       .from('quote_requests')
       .insert({
@@ -183,6 +180,7 @@ const handler = async (req: Request): Promise<Response> => {
         status: 'nouveau',
         priority: 'haute',
         source: 'website',
+        email_confirmation_sent: false,
       })
       .select()
       .single();
@@ -194,36 +192,35 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Water damage lead saved:", lead.id);
 
-    const formatArray = (arr: string[], labels: Record<string, string>) => {
-      if (!arr || arr.length === 0) return "Non spécifié";
-      return arr.map(item => escapeHtml(labels[item] || item)).join(", ");
-    };
+    // ATTEMPT EMAIL SENDING — non-blocking
+    let emailSent = false;
+    try {
+      const formatArray = (arr: string[], labels: Record<string, string>) => {
+        if (!arr || arr.length === 0) return "Non spécifié";
+        return arr.map(item => escapeHtml(labels[item] || item)).join(", ");
+      };
 
-    // Build email
-    const safeName = escapeHtml(`${formData.prenom} ${formData.nom}`);
-    const safeEmail = escapeHtml(formData.email);
-    const safePostal = escapeHtml(formData.codePostal);
+      const safeName = escapeHtml(`${formData.prenom} ${formData.nom}`);
+      const safeEmail = escapeHtml(formData.email);
+      const safePostal = escapeHtml(formData.codePostal);
 
-    const siteBaseUrl = "https://renovermasalledebain.com";
-    const step2Url = `${siteBaseUrl}/devis/completer?token=${accessToken}`;
-    const callbackUrl = `${siteBaseUrl}/devis/rappel?token=${accessToken}`;
-    const calUrl = "https://cal.com/votre-conseiller-travaux-siw706/30min?overlayCalendar=true";
+      const siteBaseUrl = "https://renovermasalledebain.com";
+      const step2Url = `${siteBaseUrl}/devis/completer?token=${accessToken}`;
+      const callbackUrl = `${siteBaseUrl}/devis/rappel?token=${accessToken}`;
+      const calUrl = "https://cal.com/votre-conseiller-travaux-siw706/30min?overlayCalendar=true";
 
-    // Send 3-option email to client (same pattern as classic)
-    const emailResponse = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Authorization: `Bearer ${RESEND_API_KEY}` },
-      body: JSON.stringify({
-        from: "Rénover Ma Salle de Bain <gestion@renovermasalledebain.com>",
-        to: [formData.email],
-        subject: "Votre dossier dégât des eaux – comment souhaitez-vous avancer ?",
-        html: `<!DOCTYPE html>
+      const emailResponse = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${RESEND_API_KEY}` },
+        body: JSON.stringify({
+          from: "Rénover Ma Salle de Bain <gestion@renovermasalledebain.com>",
+          to: [formData.email],
+          subject: "Votre dossier dégât des eaux – comment souhaitez-vous avancer ?",
+          html: `<!DOCTYPE html>
 <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   body { font-family: 'Nunito Sans', Arial, sans-serif; font-weight: 300; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; }
   .header { background: linear-gradient(135deg, #124A66 0%, #0d3a52 100%); color: white; padding: 24px 16px; text-align: center; }
-  .logo-text { font-family: 'Nunito Sans', Arial, sans-serif; font-weight: 300; color: #ffffff; letter-spacing: 0.5px; white-space: nowrap; font-size: 18px; }
-  .logo-text .accent { color: #A0845C; }
   .logo-sub { font-family: 'Nunito Sans', Arial, sans-serif; font-size: 9px; font-weight: 400; color: rgba(255,255,255,0.85); letter-spacing: 2.5px; padding-top: 2px; }
   .content { padding: 30px; background: #f9f9f9; }
   .option-box { background: white; padding: 20px; border-radius: 8px; margin: 16px 0; border-left: 4px solid #124A66; }
@@ -233,9 +230,6 @@ const handler = async (req: Request): Promise<Response> => {
   .cta { display: inline-block; background: #124A66; color: white !important; padding: 12px 24px; text-decoration: none; border-radius: 6px; margin-top: 10px; font-weight: bold; }
   .footer { padding: 20px; text-align: center; font-size: 12px; color: #666; background: #f0f0f0; }
   @media only screen and (max-width: 480px) {
-    .logo-text { font-size: 14px !important; }
-    .logo-sub { font-size: 8px !important; letter-spacing: 1.5px !important; }
-    .header h1 { font-size: 18px !important; }
     .content { padding: 20px 16px !important; }
     .option-box { padding: 14px !important; }
   }
@@ -289,21 +283,27 @@ const handler = async (req: Request): Promise<Response> => {
     <p>📞 06 59 76 46 85 | ✉️ gestion@renovermasalledebain.com</p>
   </div>
 </body></html>`,
-      }),
-    });
+        }),
+      });
 
-    const emailData = await emailResponse.json();
-    console.log("Client email sent to:", maskEmail(formData.email));
+      const emailData = await emailResponse.json();
+      console.log("Client email response:", emailResponse.status, JSON.stringify(emailData));
 
-    // Send notification to company
-    const companyEmailResponse = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Authorization: `Bearer ${RESEND_API_KEY}` },
-      body: JSON.stringify({
-        from: "Site Web RMSDB <gestion@renovermasalledebain.com>",
-        to: ["gestion@renovermasalledebain.com"],
-        subject: `🔴 URGENT – Dégât des eaux Étape 1 – ${safeName}`,
-        html: `<!DOCTYPE html>
+      if (!emailResponse.ok) {
+        console.error("Client email failed:", emailData);
+        throw new Error("Email send failed");
+      }
+
+      // Send notification to company (also non-critical)
+      try {
+        await fetch("https://api.resend.com/emails", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Authorization: `Bearer ${RESEND_API_KEY}` },
+          body: JSON.stringify({
+            from: "Site Web RMSDB <gestion@renovermasalledebain.com>",
+            to: ["gestion@renovermasalledebain.com"],
+            subject: `🔴 URGENT – Dégât des eaux Étape 1 – ${safeName}`,
+            html: `<!DOCTYPE html>
 <html><head><meta charset="utf-8">
 <style>
   body { font-family: 'Nunito Sans', Arial, sans-serif; font-weight: 300; line-height: 1.6; color: #333; }
@@ -313,13 +313,10 @@ const handler = async (req: Request): Promise<Response> => {
   table { width: 100%; border-collapse: collapse; }
   td { padding: 8px; border-bottom: 1px solid #ddd; }
   td:first-child { font-weight: bold; width: 40%; }
-  .badge { display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: bold; }
-  .badge-urgent { background: #fee2e2; color: #dc2626; }
 </style></head>
 <body>
   <div class="header">
     <h2>🔴 Dégât des eaux – ÉTAPE 1 complétée</h2>
-    <span class="badge badge-urgent">PRIORITÉ HAUTE</span>
   </div>
   <div class="content">
     <div class="info-box">
@@ -329,7 +326,6 @@ const handler = async (req: Request): Promise<Response> => {
         <tr><td>Email</td><td><a href="mailto:${safeEmail}">${safeEmail}</a></td></tr>
         <tr><td>Téléphone</td><td>${escapeHtml(formData.telephone || "Non communiqué")}</td></tr>
         <tr><td>Adresse</td><td>${escapeHtml(`${formData.adresse || ""}, ${formData.codePostal || ""} ${formData.ville || ""}`)}</td></tr>
-        <tr><td>Logement</td><td>${formData.typeLogement === 'appartement' ? 'Appartement' : formData.typeLogement === 'maison' ? 'Maison' : 'Non spécifié'}</td></tr>
       </table>
     </div>
     <div class="info-box">
@@ -343,17 +339,34 @@ const handler = async (req: Request): Promise<Response> => {
       </table>
     </div>
     <p><em>Reçu le ${new Date().toLocaleString("fr-FR", { timeZone: "Europe/Paris" })}</em></p>
-    <p><strong>Statut :</strong> Lead dégât des eaux – Étape 1 complétée (en attente étape 2)</p>
   </div>
 </body></html>`,
-      }),
-    });
+          }),
+        });
+      } catch (companyEmailErr) {
+        console.error("Company email failed (non-blocking):", companyEmailErr);
+      }
 
-    const companyData = await companyEmailResponse.json();
-    console.log("Company notification sent for water damage lead:", lead.id);
+      emailSent = true;
+    } catch (emailErr) {
+      console.error("Email sending failed (non-blocking):", emailErr);
+      emailSent = false;
+    }
+
+    // Update email status in DB
+    if (emailSent) {
+      await supabase.from('quote_requests').update({ email_confirmation_sent: true }).eq('id', lead.id);
+    }
 
     return new Response(
-      JSON.stringify({ success: true, leadId: lead.id }),
+      JSON.stringify({ 
+        success: true, 
+        leadId: lead.id,
+        emailSent,
+        message: emailSent 
+          ? undefined 
+          : "Votre demande a bien été enregistrée. Un souci temporaire empêche l'envoi de l'email de confirmation, mais notre équipe a bien reçu votre demande."
+      }),
       { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   } catch (error: any) {

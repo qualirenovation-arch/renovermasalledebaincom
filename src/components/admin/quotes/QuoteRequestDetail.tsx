@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { ArrowLeft, Phone, Mail, MapPin, Calendar, Droplets, Home, FileText, Save, ExternalLink, Loader2, Bell, CheckCircle } from "lucide-react";
+import { ArrowLeft, Phone, Mail, MapPin, Calendar, Droplets, Home, FileText, Save, ExternalLink, Loader2, Bell, CheckCircle, MailX, RefreshCw } from "lucide-react";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 import { useToast } from "@/hooks/use-toast";
@@ -60,6 +60,7 @@ export function QuoteRequestDetail({ quoteId, onBack }: QuoteRequestDetailProps)
   const [nextFollowupAt, setNextFollowupAt] = useState("");
   const [documentUrls, setDocumentUrls] = useState<Record<string, string>>({});
   const [loadingDocs, setLoadingDocs] = useState(false);
+  const [isResending, setIsResending] = useState(false);
   const { toast } = useToast();
 
   useEffect(() => {
@@ -159,6 +160,26 @@ export function QuoteRequestDetail({ quoteId, onBack }: QuoteRequestDetailProps)
       });
     } finally {
       setIsSaving(false);
+    }
+  };
+
+  const handleResendEmail = async () => {
+    setIsResending(true);
+    try {
+      const { data, error } = await supabase.functions.invoke('resend-confirmation', {
+        body: { leadId: quoteId },
+      });
+
+      if (error) throw error;
+      if (!data?.success) throw new Error("Échec");
+
+      toast({ title: "Email renvoyé", description: "L'email de confirmation a été renvoyé au client." });
+      fetchQuote(); // Refresh to update email_confirmation_sent
+    } catch (error) {
+      console.error("Error resending email:", error);
+      toast({ title: "Échec de l'envoi", description: "Impossible de renvoyer l'email.", variant: "destructive" });
+    } finally {
+      setIsResending(false);
     }
   };
 
@@ -458,6 +479,41 @@ export function QuoteRequestDetail({ quoteId, onBack }: QuoteRequestDetailProps)
                     ))}
                   </SelectContent>
                 </Select>
+            </div>
+          </div>
+
+          {/* Email Status */}
+          <div className="bg-card border rounded-lg p-6">
+            <h3 className="font-semibold mb-4 flex items-center gap-2">
+              <Mail className="w-4 h-4" />
+              Email de confirmation
+            </h3>
+            <div className="space-y-3">
+              {quote.email_confirmation_sent ? (
+                <div className="flex items-center gap-2 text-green-700 bg-green-50 p-3 rounded-lg">
+                  <CheckCircle className="w-4 h-4" />
+                  <span className="text-sm font-medium">Email envoyé</span>
+                </div>
+              ) : (
+                <div className="flex items-center gap-2 text-amber-700 bg-amber-50 p-3 rounded-lg">
+                  <MailX className="w-4 h-4" />
+                  <span className="text-sm font-medium">Email non envoyé</span>
+                </div>
+              )}
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full"
+                onClick={handleResendEmail}
+                disabled={isResending}
+              >
+                {isResending ? (
+                  <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                ) : (
+                  <RefreshCw className="w-4 h-4 mr-2" />
+                )}
+                {isResending ? "Envoi en cours..." : "Renvoyer l'email"}
+              </Button>
             </div>
           </div>
 

@@ -387,6 +387,7 @@ export type Database = {
           client_last_name: string
           client_phone: string | null
           created_at: string
+          email_confirmation_sent: boolean
           id: string
           internal_notes: string | null
           last_contacted_at: string | null
@@ -446,6 +447,7 @@ export type Database = {
           client_last_name: string
           client_phone?: string | null
           created_at?: string
+          email_confirmation_sent?: boolean
           id?: string
           internal_notes?: string | null
           last_contacted_at?: string | null
@@ -505,6 +507,7 @@ export type Database = {
           client_last_name?: string
           client_phone?: string | null
           created_at?: string
+          email_confirmation_sent?: boolean
           id?: string
           internal_notes?: string | null
           last_contacted_at?: string | null
