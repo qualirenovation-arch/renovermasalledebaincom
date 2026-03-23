@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { ArrowLeft, Phone, Mail, MapPin, Calendar, Droplets, Home, FileText, Save, ExternalLink, Loader2, Bell, CheckCircle } from "lucide-react";
+import { ArrowLeft, Phone, Mail, MapPin, Calendar, Droplets, Home, FileText, Save, ExternalLink, Loader2, Bell, CheckCircle, MailX, RefreshCw } from "lucide-react";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 import { useToast } from "@/hooks/use-toast";
