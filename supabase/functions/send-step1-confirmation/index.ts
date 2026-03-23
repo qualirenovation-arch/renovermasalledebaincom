@@ -117,7 +117,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Generate unique access token
     const accessToken = generateToken();
 
-    // Insert lead into database
+    // INSERT LEAD FIRST — before any email attempt
     const { data: lead, error: insertError } = await supabase
       .from('quote_requests')
       .insert({
@@ -136,6 +136,7 @@ const handler = async (req: Request): Promise<Response> => {
         status: 'nouveau',
         priority: 'normale',
         source: 'website',
+        email_confirmation_sent: false,
       })
       .select()
       .single();
@@ -146,31 +147,32 @@ const handler = async (req: Request): Promise<Response> => {
     }
 
     console.log("Lead saved:", lead.id);
-    const maskEmail = (e: string) => { const [l, d] = e.split('@'); return d ? `${l[0]}***@${d}` : '***'; };
 
-    // Build email
-    const safeName = escapeHtml(`${clientFirstName} ${clientLastName}`);
-    const safeEmail = escapeHtml(clientEmail);
-    const safePostal = escapeHtml(codePostal);
-    const safeAddress = clientAddress ? escapeHtml(clientAddress) : "";
-    const safeCity = clientCity ? escapeHtml(clientCity) : "";
-    const safeFullAddress = [safeAddress, safePostal, safeCity].filter(Boolean).join(", ");
-    const safeProjectType = escapeHtml(projectTypeLabels[projectType] || projectType);
+    // ATTEMPT EMAIL SENDING — non-blocking
+    let emailSent = false;
+    try {
+      const safeName = escapeHtml(`${clientFirstName} ${clientLastName}`);
+      const safeEmail = escapeHtml(clientEmail);
+      const safePostal = escapeHtml(codePostal);
+      const safeAddress = clientAddress ? escapeHtml(clientAddress) : "";
+      const safeCity = clientCity ? escapeHtml(clientCity) : "";
+      const safeFullAddress = [safeAddress, safePostal, safeCity].filter(Boolean).join(", ");
+      const safeProjectType = escapeHtml(projectTypeLabels[projectType] || projectType);
 
-    const siteBaseUrl = "https://renovermasalledebain.com";
-    const step2Url = `${siteBaseUrl}/devis/completer?token=${accessToken}`;
-    const callbackUrl = `${siteBaseUrl}/devis/rappel?token=${accessToken}`;
-    const calUrl = "https://cal.com/votre-conseiller-travaux-siw706/30min?overlayCalendar=true";
+      const siteBaseUrl = "https://renovermasalledebain.com";
+      const step2Url = `${siteBaseUrl}/devis/completer?token=${accessToken}`;
+      const callbackUrl = `${siteBaseUrl}/devis/rappel?token=${accessToken}`;
+      const calUrl = "https://cal.com/votre-conseiller-travaux-siw706/30min?overlayCalendar=true";
 
-    // Send email to client
-    const emailResponse = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Authorization: `Bearer ${RESEND_API_KEY}` },
-      body: JSON.stringify({
-        from: "RenoverMaSalleDeBain.com <gestion@renovermasalledebain.com>",
-        to: [clientEmail],
-        subject: "Votre projet – comment souhaitez-vous avancer ?",
-        html: `<!DOCTYPE html>
+      // Send email to client
+      const emailResponse = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${RESEND_API_KEY}` },
+        body: JSON.stringify({
+          from: "RenoverMaSalleDeBain.com <gestion@renovermasalledebain.com>",
+          to: [clientEmail],
+          subject: "Votre projet – comment souhaitez-vous avancer ?",
+          html: `<!DOCTYPE html>
 <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   body { font-family: 'Nunito Sans', Arial, sans-serif; font-weight: 300; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; }
@@ -230,21 +232,27 @@ const handler = async (req: Request): Promise<Response> => {
     <p>📞 06 59 76 46 85 | ✉️ gestion@renovermasalledebain.com</p>
   </div>
 </body></html>`,
-      }),
-    });
+        }),
+      });
 
-    const emailData = await emailResponse.json();
-    console.log("Client email response:", emailResponse.status, JSON.stringify(emailData));
+      const emailData = await emailResponse.json();
+      console.log("Client email response:", emailResponse.status, JSON.stringify(emailData));
 
-    // Send notification to company
-    const companyEmailResponse = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Authorization: `Bearer ${RESEND_API_KEY}` },
-      body: JSON.stringify({
-        from: "Site Web RMSDB <gestion@renovermasalledebain.com>",
-        to: ["gestion@renovermasalledebain.com"],
-        subject: `🔔 Nouveau lead Étape 1 – ${safeName}`,
-        html: `<!DOCTYPE html>
+      if (!emailResponse.ok) {
+        console.error("Client email failed:", emailData);
+        throw new Error("Email send failed");
+      }
+
+      // Send notification to company (also non-critical)
+      try {
+        await fetch("https://api.resend.com/emails", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Authorization: `Bearer ${RESEND_API_KEY}` },
+          body: JSON.stringify({
+            from: "Site Web RMSDB <gestion@renovermasalledebain.com>",
+            to: ["gestion@renovermasalledebain.com"],
+            subject: `🔔 Nouveau lead Étape 1 – ${safeName}`,
+            html: `<!DOCTYPE html>
 <html><head><meta charset="utf-8">
 <style>
   body { font-family: 'Nunito Sans', Arial, sans-serif; font-weight: 300; line-height: 1.6; color: #333; }
@@ -278,14 +286,32 @@ const handler = async (req: Request): Promise<Response> => {
     <p><strong>Statut :</strong> Lead – Étape 1 complétée</p>
   </div>
 </body></html>`,
-      }),
-    });
+          }),
+        });
+      } catch (companyEmailErr) {
+        console.error("Company email failed (non-blocking):", companyEmailErr);
+      }
 
-    const companyData = await companyEmailResponse.json();
-    console.log("Company email response:", companyEmailResponse.status, JSON.stringify(companyData));
+      emailSent = true;
+    } catch (emailErr) {
+      console.error("Email sending failed (non-blocking):", emailErr);
+      emailSent = false;
+    }
+
+    // Update email status in DB
+    if (emailSent) {
+      await supabase.from('quote_requests').update({ email_confirmation_sent: true }).eq('id', lead.id);
+    }
 
     return new Response(
-      JSON.stringify({ success: true, leadId: lead.id }),
+      JSON.stringify({ 
+        success: true, 
+        leadId: lead.id,
+        emailSent,
+        message: emailSent 
+          ? undefined 
+          : "Votre demande a bien été enregistrée. Un souci temporaire empêche l'envoi de l'email de confirmation, mais notre équipe a bien reçu votre demande."
+      }),
       { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   } catch (error: any) {
