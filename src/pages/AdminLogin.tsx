@@ -30,10 +30,37 @@ type LoginFormValues = z.infer<typeof loginSchema>;
 
 export default function AdminLogin() {
   const [loading, setLoading] = useState(false);
+  const [setupLoading, setSetupLoading] = useState(false);
   const [activeTab, setActiveTab] = useState<"login" | "signup">("login");
-  const { signIn, signUp } = useAdminAuth();
+  const { signIn, signUp, user } = useAdminAuth();
   const { toast } = useToast();
   const navigate = useNavigate();
+
+  const handleSetupAdmin = async () => {
+    if (!user) {
+      toast({
+        title: "Connexion requise",
+        description: "Inscrivez-vous et connectez-vous d'abord, puis cliquez sur ce bouton.",
+        variant: "destructive",
+      });
+      return;
+    }
+    setSetupLoading(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("setup-first-admin");
+      if (error) throw error;
+      if (data?.error) {
+        toast({ title: "Impossible", description: data.error, variant: "destructive" });
+      } else {
+        toast({ title: "✅ Admin activé", description: data?.message || "Vous êtes maintenant administrateur." });
+        setTimeout(() => navigate("/admin"), 1500);
+      }
+    } catch (e: any) {
+      toast({ title: "Erreur", description: e.message || "Une erreur est survenue.", variant: "destructive" });
+    } finally {
+      setSetupLoading(false);
+    }
+  };
 
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
