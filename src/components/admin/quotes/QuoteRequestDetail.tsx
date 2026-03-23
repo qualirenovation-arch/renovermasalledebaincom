@@ -60,6 +60,7 @@ export function QuoteRequestDetail({ quoteId, onBack }: QuoteRequestDetailProps)
   const [nextFollowupAt, setNextFollowupAt] = useState("");
   const [documentUrls, setDocumentUrls] = useState<Record<string, string>>({});
   const [loadingDocs, setLoadingDocs] = useState(false);
+  const [isResending, setIsResending] = useState(false);
   const { toast } = useToast();
 
   useEffect(() => {
