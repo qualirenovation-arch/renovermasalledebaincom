@@ -482,6 +482,41 @@ export function QuoteRequestDetail({ quoteId, onBack }: QuoteRequestDetailProps)
             </div>
           </div>
 
+          {/* Email Status */}
+          <div className="bg-card border rounded-lg p-6">
+            <h3 className="font-semibold mb-4 flex items-center gap-2">
+              <Mail className="w-4 h-4" />
+              Email de confirmation
+            </h3>
+            <div className="space-y-3">
+              {quote.email_confirmation_sent ? (
+                <div className="flex items-center gap-2 text-green-700 bg-green-50 p-3 rounded-lg">
+                  <CheckCircle className="w-4 h-4" />
+                  <span className="text-sm font-medium">Email envoyé</span>
+                </div>
+              ) : (
+                <div className="flex items-center gap-2 text-amber-700 bg-amber-50 p-3 rounded-lg">
+                  <MailX className="w-4 h-4" />
+                  <span className="text-sm font-medium">Email non envoyé</span>
+                </div>
+              )}
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full"
+                onClick={handleResendEmail}
+                disabled={isResending}
+              >
+                {isResending ? (
+                  <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                ) : (
+                  <RefreshCw className="w-4 h-4 mr-2" />
+                )}
+                {isResending ? "Envoi en cours..." : "Renvoyer l'email"}
+              </Button>
+            </div>
+          </div>
+
           {/* Follow-up tracking */}
           <div className="bg-card border rounded-lg p-6">
             <h3 className="font-semibold mb-4 flex items-center gap-2">
