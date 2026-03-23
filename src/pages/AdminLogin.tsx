@@ -18,7 +18,8 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/hooks/use-toast";
 import { useAdminAuth } from "@/hooks/useAdminAuth";
-import { Lock, Mail, ArrowLeft, Loader2, UserPlus } from "lucide-react";
+import { Lock, Mail, ArrowLeft, Loader2, UserPlus, ShieldCheck } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const loginSchema = z.object({
   email: z.string().email("Adresse email invalide"),
@@ -29,10 +30,37 @@ type LoginFormValues = z.infer<typeof loginSchema>;
 
 export default function AdminLogin() {
   const [loading, setLoading] = useState(false);
+  const [setupLoading, setSetupLoading] = useState(false);
   const [activeTab, setActiveTab] = useState<"login" | "signup">("login");
-  const { signIn, signUp } = useAdminAuth();
+  const { signIn, signUp, user } = useAdminAuth();
   const { toast } = useToast();
   const navigate = useNavigate();
+
+  const handleSetupAdmin = async () => {
+    if (!user) {
+      toast({
+        title: "Connexion requise",
+        description: "Inscrivez-vous et connectez-vous d'abord, puis cliquez sur ce bouton.",
+        variant: "destructive",
+      });
+      return;
+    }
+    setSetupLoading(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("setup-first-admin");
+      if (error) throw error;
+      if (data?.error) {
+        toast({ title: "Impossible", description: data.error, variant: "destructive" });
+      } else {
+        toast({ title: "✅ Admin activé", description: data?.message || "Vous êtes maintenant administrateur." });
+        setTimeout(() => navigate("/admin"), 1500);
+      }
+    } catch (e: any) {
+      toast({ title: "Erreur", description: e.message || "Une erreur est survenue.", variant: "destructive" });
+    } finally {
+      setSetupLoading(false);
+    }
+  };
 
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
@@ -273,7 +301,21 @@ export default function AdminLogin() {
             </TabsContent>
           </Tabs>
 
-          <div className="mt-6 text-center">
+          <div className="mt-6 space-y-3 text-center">
+            {user && (
+              <Button
+                variant="outline"
+                className="w-full"
+                onClick={handleSetupAdmin}
+                disabled={setupLoading}
+              >
+                {setupLoading ? (
+                  <><Loader2 className="w-4 h-4 mr-2 animate-spin" />Configuration...</>
+                ) : (
+                  <><ShieldCheck className="w-4 h-4 mr-2" />Devenir premier admin</>
+                )}
+              </Button>
+            )}
             <a
               href="/"
               className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
