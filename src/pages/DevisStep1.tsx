@@ -187,7 +187,12 @@ export default function DevisStep1() {
         throw new Error(backendMessage || "La demande n'a pas pu être traitée. Veuillez réessayer.");
       }
 
-      toast({ title: "Demande enregistrée !", description: "Consultez votre boîte email pour la suite." });
+      // Lead saved successfully — navigate even if email failed
+      if (data.emailSent === false && data.message) {
+        toast({ title: "Demande enregistrée", description: data.message });
+      } else {
+        toast({ title: "Demande enregistrée !", description: "Consultez votre boîte email pour la suite." });
+      }
       navigate(`/devis/confirmation?email=${encodeURIComponent(formData.email)}&type=classique`);
     } catch (err) {
       console.error("Submission error:", err);
