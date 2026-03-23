@@ -38,3 +38,6 @@ verify_jwt = false
 
 [functions.migrate-album-photos]
 verify_jwt = false
+
+[functions.resend-confirmation]
+verify_jwt = false
