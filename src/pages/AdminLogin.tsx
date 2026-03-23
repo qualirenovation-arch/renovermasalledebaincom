@@ -301,7 +301,21 @@ export default function AdminLogin() {
             </TabsContent>
           </Tabs>
 
-          <div className="mt-6 text-center">
+          <div className="mt-6 space-y-3 text-center">
+            {user && (
+              <Button
+                variant="outline"
+                className="w-full"
+                onClick={handleSetupAdmin}
+                disabled={setupLoading}
+              >
+                {setupLoading ? (
+                  <><Loader2 className="w-4 h-4 mr-2 animate-spin" />Configuration...</>
+                ) : (
+                  <><ShieldCheck className="w-4 h-4 mr-2" />Devenir premier admin</>
+                )}
+              </Button>
+            )}
             <a
               href="/"
               className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
