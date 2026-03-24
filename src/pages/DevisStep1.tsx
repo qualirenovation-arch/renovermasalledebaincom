@@ -167,7 +167,7 @@ export default function DevisStep1() {
           codePostal: formData.codePostal,
           projectType: formData.projectType,
           roomType: formData.projectType === "nouvelle-sdb" ? formData.roomType : null,
-          captchaToken: getEffectiveCaptchaToken(captchaToken),
+          captchaToken: getEffectiveCaptchaToken(captchaToken) || null,
         },
       });
 
