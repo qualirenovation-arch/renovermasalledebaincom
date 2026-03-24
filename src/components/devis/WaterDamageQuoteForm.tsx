@@ -219,7 +219,7 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
     try {
       const { data, error } = await supabase.functions.invoke('send-water-damage-quote', {
         body: {
-          captchaToken: getEffectiveCaptchaToken(captchaToken),
+          captchaToken: getEffectiveCaptchaToken(captchaToken) || null,
           formData,
         },
       });
