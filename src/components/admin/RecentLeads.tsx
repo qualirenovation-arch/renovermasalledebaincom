@@ -40,6 +40,13 @@ const statusLabels: Record<string, { label: string; variant: "default" | "second
   refuse: { label: "Refusé", variant: "destructive" },
 };
 
+function decodeHtmlEntities(text: string): string {
+  if (!text) return text;
+  const textarea = document.createElement('textarea');
+  textarea.innerHTML = text;
+  return textarea.value;
+}
+
 const familyLabels: Record<string, string> = {
   sub_traitant: "Sous-traitant",
   installateur: "Installateur",
