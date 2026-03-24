@@ -150,10 +150,7 @@ export default function DevisStep1() {
       return;
     }
 
-    if (!captchaToken) {
-      toast({ title: "Vérification requise", description: "Veuillez compléter la vérification anti-spam.", variant: "destructive" });
-      return;
-    }
+    // captcha is optional — lead will be saved with different status
 
     setIsSubmitting(true);
     setSubmitError(null);
