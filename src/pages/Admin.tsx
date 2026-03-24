@@ -12,6 +12,8 @@ import { Card, CardContent } from "@/components/ui/card";
 export default function Admin() {
   const { user, isAdmin, loading, signOut } = useAdminAuth();
   const { toast } = useToast();
+  const [setupLoading, setSetupLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleSignOut = async () => {
     const { error } = await signOut();
