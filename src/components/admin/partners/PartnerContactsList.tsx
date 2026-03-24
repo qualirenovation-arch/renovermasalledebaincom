@@ -9,6 +9,13 @@ import { Search, Phone, Mail, RefreshCw, Filter } from "lucide-react";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 
+function decodeHtmlEntities(text: string): string {
+  if (!text) return text;
+  const textarea = document.createElement('textarea');
+  textarea.innerHTML = text;
+  return textarea.value;
+}
+
 interface PartnerContact {
   id: string;
   created_at: string;
