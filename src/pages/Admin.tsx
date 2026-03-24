@@ -1,9 +1,11 @@
-import { Navigate, Link } from "react-router-dom";
+import { useState } from "react";
+import { Navigate, Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
-import { LogOut, Loader2, ShieldX, Handshake, FileText, Users, Wrench, Image } from "lucide-react";
+import { LogOut, Loader2, ShieldX, ShieldCheck, Handshake, FileText, Users, Wrench, Image } from "lucide-react";
 import { useAdminAuth } from "@/hooks/useAdminAuth";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import { DashboardStats } from "@/components/admin/DashboardStats";
 import { RecentLeads } from "@/components/admin/RecentLeads";
 import { Card, CardContent } from "@/components/ui/card";
@@ -11,6 +13,26 @@ import { Card, CardContent } from "@/components/ui/card";
 export default function Admin() {
   const { user, isAdmin, loading, signOut } = useAdminAuth();
   const { toast } = useToast();
+  const [setupLoading, setSetupLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSetupAdmin = async () => {
+    setSetupLoading(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("setup-first-admin");
+      if (error) throw error;
+      if (data?.error) {
+        toast({ title: "Impossible", description: data.error, variant: "destructive" });
+      } else {
+        toast({ title: "✅ Admin activé", description: data?.message || "Vous êtes maintenant administrateur." });
+        setTimeout(() => window.location.reload(), 1500);
+      }
+    } catch (e: any) {
+      toast({ title: "Erreur", description: e.message || "Une erreur est survenue.", variant: "destructive" });
+    } finally {
+      setSetupLoading(false);
+    }
+  };
 
   const handleSignOut = async () => {
     const { error } = await signOut();
@@ -49,14 +71,27 @@ export default function Admin() {
           <p className="text-muted-foreground mb-6">
             Votre compte n'a pas les droits d'administration nécessaires.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button variant="outline" onClick={handleSignOut}>
-              <LogOut className="w-4 h-4 mr-2" />
-              Se déconnecter
+          <div className="flex flex-col gap-3 justify-center">
+            <Button
+              variant="default"
+              onClick={handleSetupAdmin}
+              disabled={setupLoading}
+            >
+              {setupLoading ? (
+                <><Loader2 className="w-4 h-4 mr-2 animate-spin" />Configuration...</>
+              ) : (
+                <><ShieldCheck className="w-4 h-4 mr-2" />Devenir premier admin</>
+              )}
             </Button>
-            <Button asChild>
-              <a href="/">Retour au site</a>
-            </Button>
+            <div className="flex flex-row gap-3 justify-center">
+              <Button variant="outline" onClick={handleSignOut}>
+                <LogOut className="w-4 h-4 mr-2" />
+                Se déconnecter
+              </Button>
+              <Button asChild>
+                <a href="/">Retour au site</a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
