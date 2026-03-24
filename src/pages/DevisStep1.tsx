@@ -420,7 +420,7 @@ export default function DevisStep1() {
                   type="submit"
                   size="lg"
                   className="w-full bg-[hsl(38,50%,50%)] hover:bg-[hsl(38,50%,45%)] text-white rounded-xl py-6 text-lg"
-                  disabled={isSubmitting || !captchaToken}
+                  disabled={isSubmitting}
                 >
                   <CalendarCheck className="w-5 h-5 mr-2" />
                   {isSubmitting ? "Envoi en cours..." : "Recevoir la suite de mon estimation"}

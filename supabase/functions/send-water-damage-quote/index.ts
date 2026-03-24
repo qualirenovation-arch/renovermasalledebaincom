@@ -189,10 +189,14 @@ const handler = async (req: Request): Promise<Response> => {
       throw new Error("Failed to save lead");
     }
 
-    console.log("Water damage lead saved:", lead.id);
+    console.log("Water damage lead saved:", lead.id, "captchaValid:", captchaValid, "status:", leadStatus);
 
-    // ATTEMPT EMAIL SENDING — non-blocking
+    // Only send emails if captcha was valid
     let emailSent = false;
+    if (!captchaValid) {
+      console.log("Skipping email — captcha not verified");
+    } else {
+    // ATTEMPT EMAIL SENDING — non-blocking
     try {
       const formatArray = (arr: string[], labels: Record<string, string>) => {
         if (!arr || arr.length === 0) return "Non spécifié";
