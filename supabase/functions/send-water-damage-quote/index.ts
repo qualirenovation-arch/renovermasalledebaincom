@@ -110,43 +110,41 @@ const handler = async (req: Request): Promise<Response> => {
 
     const { captchaToken, formData }: { captchaToken: string; formData: WaterDamageStep1Data } = await req.json();
 
-    // Validate captcha
-    if (!captchaToken) {
-      return new Response(JSON.stringify({ error: "Vérification anti-spam requise" }), { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } });
-    }
-
-    if (captchaToken !== "test-token") {
-      if (!HCAPTCHA_SECRET_KEY) {
-        console.error("HCAPTCHA_SECRET_KEY missing");
-        return new Response(JSON.stringify({ error: "Le service de vérification est momentanément indisponible. Veuillez réessayer." }), { status: 503, headers: { "Content-Type": "application/json", ...corsHeaders } });
-      }
-
-      const verifyBody = new URLSearchParams({
-        response: captchaToken,
-        secret: HCAPTCHA_SECRET_KEY,
-      });
-
-      if (ip !== "unknown") {
-        verifyBody.set("remoteip", ip);
-      }
-
-      const captchaResponse = await fetch("https://hcaptcha.com/siteverify", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: verifyBody.toString(),
-      });
-
-      const captchaData = await captchaResponse.json();
-      if (!captchaData.success) {
-        const errorCodes = Array.isArray(captchaData["error-codes"]) ? captchaData["error-codes"] : [];
-        console.error("hCaptcha verification failed", { errorCodes });
-        return new Response(JSON.stringify({ error: captchaErrorMessage(errorCodes) }), { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } });
-      }
-    }
-
     // Validate email
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       return new Response(JSON.stringify({ error: "Format d'email invalide" }), { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } });
+    }
+
+    // Validate captcha — but DON'T block if it fails
+    let captchaValid = false;
+    if (captchaToken && captchaToken === "test-token") {
+      captchaValid = true;
+    } else if (captchaToken && HCAPTCHA_SECRET_KEY) {
+      try {
+        const verifyBody = new URLSearchParams({
+          response: captchaToken,
+          secret: HCAPTCHA_SECRET_KEY,
+        });
+        if (ip !== "unknown") {
+          verifyBody.set("remoteip", ip);
+        }
+        const captchaResponse = await fetch("https://hcaptcha.com/siteverify", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: verifyBody.toString(),
+        });
+        const captchaData = await captchaResponse.json();
+        captchaValid = !!captchaData.success;
+        if (!captchaValid) {
+          console.warn("hCaptcha verification failed", captchaData["error-codes"]);
+        }
+      } catch (captchaErr) {
+        console.error("hCaptcha verification error (non-blocking):", captchaErr);
+        captchaValid = false;
+      }
+    } else {
+      console.warn("No captcha token provided — lead will be saved as non_verifie");
+      captchaValid = false;
     }
 
     // Record rate limit
@@ -155,7 +153,8 @@ const handler = async (req: Request): Promise<Response> => {
     // Generate unique access token
     const accessToken = generateToken();
 
-    // INSERT LEAD FIRST — before any email attempt
+    // INSERT LEAD FIRST — always save regardless of captcha
+    const leadStatus = captchaValid ? 'nouveau' : 'non_verifie';
     const { data: lead, error: insertError } = await supabase
       .from('quote_requests')
       .insert({
@@ -177,7 +176,7 @@ const handler = async (req: Request): Promise<Response> => {
         water_damage_rooms_other: formData.affectedRoomsOther || null,
         access_token: accessToken,
         lead_status: 'etape_1',
-        status: 'nouveau',
+        status: leadStatus,
         priority: 'haute',
         source: 'website',
         email_confirmation_sent: false,
@@ -190,10 +189,14 @@ const handler = async (req: Request): Promise<Response> => {
       throw new Error("Failed to save lead");
     }
 
-    console.log("Water damage lead saved:", lead.id);
+    console.log("Water damage lead saved:", lead.id, "captchaValid:", captchaValid, "status:", leadStatus);
 
-    // ATTEMPT EMAIL SENDING — non-blocking
+    // Only send emails if captcha was valid
     let emailSent = false;
+    if (!captchaValid) {
+      console.log("Skipping email — captcha not verified");
+    } else {
+    // ATTEMPT EMAIL SENDING — non-blocking
     try {
       const formatArray = (arr: string[], labels: Record<string, string>) => {
         if (!arr || arr.length === 0) return "Non spécifié";
@@ -352,6 +355,7 @@ const handler = async (req: Request): Promise<Response> => {
       console.error("Email sending failed (non-blocking):", emailErr);
       emailSent = false;
     }
+    } // end if captchaValid
 
     // Update email status in DB
     if (emailSent) {

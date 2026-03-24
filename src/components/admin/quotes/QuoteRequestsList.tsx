@@ -42,6 +42,7 @@ const TYPE_LABELS: Record<string, string> = {
 
 const STATUS_LABELS: Record<string, string> = {
   nouveau: "Nouveau",
+  non_verifie: "Non vérifié (spam ?)",
   en_cours: "En cours",
   devis_envoye: "Devis envoyé",
   accepte: "Accepté",
@@ -51,6 +52,7 @@ const STATUS_LABELS: Record<string, string> = {
 
 const STATUS_COLORS: Record<string, string> = {
   nouveau: "bg-blue-100 text-blue-800",
+  non_verifie: "bg-yellow-100 text-yellow-800",
   en_cours: "bg-purple-100 text-purple-800",
   devis_envoye: "bg-amber-100 text-amber-800",
   accepte: "bg-green-100 text-green-800",

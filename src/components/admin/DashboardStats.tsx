@@ -5,7 +5,7 @@ import { FileText, Handshake, Users, AlertTriangle, Clock, CheckCircle2 } from "
 import { Skeleton } from "@/components/ui/skeleton";
 
 interface Stats {
-  quotes: { total: number; nouveau: number; en_cours: number; termine: number };
+  quotes: { total: number; nouveau: number; non_verifie: number; en_cours: number; termine: number };
   partners: { total: number; nouveau: number; en_cours: number; partenaire_ok: number };
   subcontractors: { total: number; pending: number; reviewing: number; validated: number };
 }
@@ -34,6 +34,7 @@ export function DashboardStats() {
         quotes: {
           total: quotes.length,
           nouveau: quotes.filter(q => q.status === "nouveau").length,
+          non_verifie: quotes.filter(q => q.status === "non_verifie").length,
           en_cours: quotes.filter(q => q.status === "en_cours").length,
           termine: quotes.filter(q => q.status === "termine").length,
         },
@@ -78,6 +79,7 @@ export function DashboardStats() {
       bgColor: "bg-blue-50",
       items: [
         { label: "Nouveaux", value: stats.quotes.nouveau, icon: AlertTriangle, color: "text-amber-600" },
+        { label: "Non vérifiés", value: stats.quotes.non_verifie, icon: AlertTriangle, color: "text-yellow-600" },
         { label: "En cours", value: stats.quotes.en_cours, icon: Clock, color: "text-blue-600" },
         { label: "Terminés", value: stats.quotes.termine, icon: CheckCircle2, color: "text-emerald-600" },
       ],

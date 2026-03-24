@@ -150,10 +150,7 @@ export default function DevisStep1() {
       return;
     }
 
-    if (!captchaToken) {
-      toast({ title: "Vérification requise", description: "Veuillez compléter la vérification anti-spam.", variant: "destructive" });
-      return;
-    }
+    // captcha is optional — lead will be saved with different status
 
     setIsSubmitting(true);
     setSubmitError(null);
@@ -170,7 +167,7 @@ export default function DevisStep1() {
           codePostal: formData.codePostal,
           projectType: formData.projectType,
           roomType: formData.projectType === "nouvelle-sdb" ? formData.roomType : null,
-          captchaToken: getEffectiveCaptchaToken(captchaToken),
+          captchaToken: getEffectiveCaptchaToken(captchaToken) || null,
         },
       });
 
@@ -388,7 +385,7 @@ export default function DevisStep1() {
 
                 {/* hCaptcha */}
                 <div className="card-elevated p-6 flex flex-col items-center">
-                  <p className="text-sm text-muted-foreground mb-4 text-center">Vérification anti-spam requise</p>
+                  <p className="text-sm text-muted-foreground mb-4 text-center">Vérification anti-spam (recommandée)</p>
                   <HCaptcha
                     ref={captchaRef}
                     sitekey={HCAPTCHA_SITE_KEY}
@@ -423,7 +420,7 @@ export default function DevisStep1() {
                   type="submit"
                   size="lg"
                   className="w-full bg-[hsl(38,50%,50%)] hover:bg-[hsl(38,50%,45%)] text-white rounded-xl py-6 text-lg"
-                  disabled={isSubmitting || !captchaToken}
+                  disabled={isSubmitting}
                 >
                   <CalendarCheck className="w-5 h-5 mr-2" />
                   {isSubmitting ? "Envoi en cours..." : "Recevoir la suite de mon estimation"}
