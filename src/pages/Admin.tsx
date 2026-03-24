@@ -1,9 +1,10 @@
 import { Navigate, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
-import { LogOut, Loader2, ShieldX, Handshake, FileText, Users, Wrench, Image } from "lucide-react";
+import { LogOut, Loader2, ShieldX, ShieldCheck, Handshake, FileText, Users, Wrench, Image } from "lucide-react";
 import { useAdminAuth } from "@/hooks/useAdminAuth";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import { DashboardStats } from "@/components/admin/DashboardStats";
 import { RecentLeads } from "@/components/admin/RecentLeads";
 import { Card, CardContent } from "@/components/ui/card";
