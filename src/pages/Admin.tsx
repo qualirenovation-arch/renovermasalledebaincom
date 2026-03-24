@@ -71,14 +71,27 @@ export default function Admin() {
           <p className="text-muted-foreground mb-6">
             Votre compte n'a pas les droits d'administration nécessaires.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button variant="outline" onClick={handleSignOut}>
-              <LogOut className="w-4 h-4 mr-2" />
-              Se déconnecter
+          <div className="flex flex-col gap-3 justify-center">
+            <Button
+              variant="default"
+              onClick={handleSetupAdmin}
+              disabled={setupLoading}
+            >
+              {setupLoading ? (
+                <><Loader2 className="w-4 h-4 mr-2 animate-spin" />Configuration...</>
+              ) : (
+                <><ShieldCheck className="w-4 h-4 mr-2" />Devenir premier admin</>
+              )}
             </Button>
-            <Button asChild>
-              <a href="/">Retour au site</a>
-            </Button>
+            <div className="flex flex-row gap-3 justify-center">
+              <Button variant="outline" onClick={handleSignOut}>
+                <LogOut className="w-4 h-4 mr-2" />
+                Se déconnecter
+              </Button>
+              <Button asChild>
+                <a href="/">Retour au site</a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
