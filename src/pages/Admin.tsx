@@ -16,6 +16,24 @@ export default function Admin() {
   const [setupLoading, setSetupLoading] = useState(false);
   const navigate = useNavigate();
 
+  const handleSetupAdmin = async () => {
+    setSetupLoading(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("setup-first-admin");
+      if (error) throw error;
+      if (data?.error) {
+        toast({ title: "Impossible", description: data.error, variant: "destructive" });
+      } else {
+        toast({ title: "✅ Admin activé", description: data?.message || "Vous êtes maintenant administrateur." });
+        setTimeout(() => window.location.reload(), 1500);
+      }
+    } catch (e: any) {
+      toast({ title: "Erreur", description: e.message || "Une erreur est survenue.", variant: "destructive" });
+    } finally {
+      setSetupLoading(false);
+    }
+  };
+
   const handleSignOut = async () => {
     const { error } = await signOut();
     if (error) {
