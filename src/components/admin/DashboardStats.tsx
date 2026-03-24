@@ -79,6 +79,7 @@ export function DashboardStats() {
       bgColor: "bg-blue-50",
       items: [
         { label: "Nouveaux", value: stats.quotes.nouveau, icon: AlertTriangle, color: "text-amber-600" },
+        { label: "Non vérifiés", value: stats.quotes.non_verifie, icon: AlertTriangle, color: "text-yellow-600" },
         { label: "En cours", value: stats.quotes.en_cours, icon: Clock, color: "text-blue-600" },
         { label: "Terminés", value: stats.quotes.termine, icon: CheckCircle2, color: "text-emerald-600" },
       ],
