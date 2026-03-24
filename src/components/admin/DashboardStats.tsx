@@ -34,6 +34,7 @@ export function DashboardStats() {
         quotes: {
           total: quotes.length,
           nouveau: quotes.filter(q => q.status === "nouveau").length,
+          non_verifie: quotes.filter(q => q.status === "non_verifie").length,
           en_cours: quotes.filter(q => q.status === "en_cours").length,
           termine: quotes.filter(q => q.status === "termine").length,
         },
