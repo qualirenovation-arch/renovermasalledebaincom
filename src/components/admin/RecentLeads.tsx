@@ -40,6 +40,13 @@ const statusLabels: Record<string, { label: string; variant: "default" | "second
   refuse: { label: "Refusé", variant: "destructive" },
 };
 
+function decodeHtmlEntities(text: string): string {
+  if (!text) return text;
+  const textarea = document.createElement('textarea');
+  textarea.innerHTML = text;
+  return textarea.value;
+}
+
 const familyLabels: Record<string, string> = {
   sub_traitant: "Sous-traitant",
   installateur: "Installateur",
@@ -173,7 +180,7 @@ export function RecentLeads() {
               <TableBody>
                 {partners.map((p) => (
                   <TableRow key={p.id}>
-                    <TableCell className="font-medium">{p.company_name}</TableCell>
+                    <TableCell className="font-medium">{decodeHtmlEntities(p.company_name)}</TableCell>
                     <TableCell className="text-muted-foreground">
                       {familyLabels[p.partner_family] || p.partner_family}
                     </TableCell>
