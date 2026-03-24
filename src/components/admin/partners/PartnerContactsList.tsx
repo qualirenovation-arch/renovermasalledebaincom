@@ -265,7 +265,7 @@ export function PartnerContactsList({ onSelectContact }: PartnerContactsListProp
                     {getTypeLabel(contact)}
                   </TableCell>
                   <TableCell className="font-medium">
-                    {contact.company_name}
+                    {decodeHtmlEntities(contact.company_name)}
                   </TableCell>
                   <TableCell>
                     <div className="text-sm">
