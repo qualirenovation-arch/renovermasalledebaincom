@@ -452,7 +452,7 @@ export function WaterDamageQuoteForm({ onBack }: Props) {
 
       {/* hCaptcha */}
       <div className="card-elevated p-6 flex flex-col items-center">
-        <p className="text-sm text-muted-foreground mb-4 text-center">Vérification anti-spam requise</p>
+        <p className="text-sm text-muted-foreground mb-4 text-center">Vérification anti-spam (recommandée)</p>
         <HCaptcha
           ref={captchaRef}
           sitekey={HCAPTCHA_SITE_KEY}
