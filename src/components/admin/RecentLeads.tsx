@@ -180,7 +180,7 @@ export function RecentLeads() {
               <TableBody>
                 {partners.map((p) => (
                   <TableRow key={p.id}>
-                    <TableCell className="font-medium">{p.company_name}</TableCell>
+                    <TableCell className="font-medium">{decodeHtmlEntities(p.company_name)}</TableCell>
                     <TableCell className="text-muted-foreground">
                       {familyLabels[p.partner_family] || p.partner_family}
                     </TableCell>
