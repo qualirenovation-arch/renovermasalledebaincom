@@ -1,0 +1,2 @@
+ALTER TABLE public.quote_requests DROP CONSTRAINT quote_requests_status_check;
+ALTER TABLE public.quote_requests ADD CONSTRAINT quote_requests_status_check CHECK (status = ANY (ARRAY['nouveau'::text, 'non_verifie'::text, 'a_qualifier'::text, 'en_cours'::text, 'devis_envoye'::text, 'accepte'::text, 'refuse'::text, 'archive'::text]));
