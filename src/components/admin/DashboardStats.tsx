@@ -5,7 +5,7 @@ import { FileText, Handshake, Users, AlertTriangle, Clock, CheckCircle2 } from "
 import { Skeleton } from "@/components/ui/skeleton";
 
 interface Stats {
-  quotes: { total: number; nouveau: number; en_cours: number; termine: number };
+  quotes: { total: number; nouveau: number; non_verifie: number; en_cours: number; termine: number };
   partners: { total: number; nouveau: number; en_cours: number; partenaire_ok: number };
   subcontractors: { total: number; pending: number; reviewing: number; validated: number };
 }
