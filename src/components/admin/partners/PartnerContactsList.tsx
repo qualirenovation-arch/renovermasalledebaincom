@@ -9,6 +9,13 @@ import { Search, Phone, Mail, RefreshCw, Filter } from "lucide-react";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 
+function decodeHtmlEntities(text: string): string {
+  if (!text) return text;
+  const textarea = document.createElement('textarea');
+  textarea.innerHTML = text;
+  return textarea.value;
+}
+
 interface PartnerContact {
   id: string;
   created_at: string;
@@ -258,7 +265,7 @@ export function PartnerContactsList({ onSelectContact }: PartnerContactsListProp
                     {getTypeLabel(contact)}
                   </TableCell>
                   <TableCell className="font-medium">
-                    {contact.company_name}
+                    {decodeHtmlEntities(contact.company_name)}
                   </TableCell>
                   <TableCell>
                     <div className="text-sm">
