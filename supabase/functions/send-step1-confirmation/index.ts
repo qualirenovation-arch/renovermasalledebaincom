@@ -72,43 +72,41 @@ const handler = async (req: Request): Promise<Response> => {
       return new Response(JSON.stringify({ error: "Tous les champs obligatoires doivent être remplis." }), { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } });
     }
 
-    // Validate captcha
-    if (!captchaToken) {
-      return new Response(JSON.stringify({ error: "Vérification anti-spam requise" }), { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } });
-    }
-
-    if (captchaToken !== "test-token") {
-      if (!HCAPTCHA_SECRET_KEY) {
-        console.error("HCAPTCHA_SECRET_KEY missing");
-        return new Response(JSON.stringify({ error: "Le service de vérification est momentanément indisponible. Veuillez réessayer." }), { status: 503, headers: { ...corsHeaders, "Content-Type": "application/json" } });
-      }
-
-      const verifyBody = new URLSearchParams({
-        response: captchaToken,
-        secret: HCAPTCHA_SECRET_KEY,
-      });
-
-      if (ip !== "unknown") {
-        verifyBody.set("remoteip", ip);
-      }
-
-      const captchaResponse = await fetch("https://hcaptcha.com/siteverify", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: verifyBody.toString(),
-      });
-
-      const captchaData = await captchaResponse.json();
-      if (!captchaData.success) {
-        const errorCodes = Array.isArray(captchaData["error-codes"]) ? captchaData["error-codes"] : [];
-        console.error("hCaptcha verification failed", { errorCodes });
-        return new Response(JSON.stringify({ error: captchaErrorMessage(errorCodes) }), { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } });
-      }
-    }
-
     // Validate email format
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(clientEmail)) {
       return new Response(JSON.stringify({ error: "Format d'email invalide" }), { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } });
+    }
+
+    // Validate captcha — but DON'T block if it fails
+    let captchaValid = false;
+    if (captchaToken && captchaToken === "test-token") {
+      captchaValid = true;
+    } else if (captchaToken && HCAPTCHA_SECRET_KEY) {
+      try {
+        const verifyBody = new URLSearchParams({
+          response: captchaToken,
+          secret: HCAPTCHA_SECRET_KEY,
+        });
+        if (ip !== "unknown") {
+          verifyBody.set("remoteip", ip);
+        }
+        const captchaResponse = await fetch("https://hcaptcha.com/siteverify", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: verifyBody.toString(),
+        });
+        const captchaData = await captchaResponse.json();
+        captchaValid = !!captchaData.success;
+        if (!captchaValid) {
+          console.warn("hCaptcha verification failed", captchaData["error-codes"]);
+        }
+      } catch (captchaErr) {
+        console.error("hCaptcha verification error (non-blocking):", captchaErr);
+        captchaValid = false;
+      }
+    } else {
+      console.warn("No captcha token provided — lead will be saved as non_verifie");
+      captchaValid = false;
     }
 
     // Record rate limit
@@ -117,7 +115,8 @@ const handler = async (req: Request): Promise<Response> => {
     // Generate unique access token
     const accessToken = generateToken();
 
-    // INSERT LEAD FIRST — before any email attempt
+    // INSERT LEAD FIRST — always save regardless of captcha
+    const leadStatus = captchaValid ? 'nouveau' : 'non_verifie';
     const { data: lead, error: insertError } = await supabase
       .from('quote_requests')
       .insert({
@@ -133,7 +132,7 @@ const handler = async (req: Request): Promise<Response> => {
         project_room_type: roomType || null,
         access_token: accessToken,
         lead_status: 'etape_1',
-        status: 'nouveau',
+        status: leadStatus,
         priority: 'normale',
         source: 'website',
         email_confirmation_sent: false,
