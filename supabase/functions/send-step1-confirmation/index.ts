@@ -300,6 +300,7 @@ const handler = async (req: Request): Promise<Response> => {
       console.error("Email sending failed (non-blocking):", emailErr);
       emailSent = false;
     }
+    } // end if captchaValid
 
     // Update email status in DB
     if (emailSent) {
