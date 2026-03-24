@@ -7,55 +7,39 @@ const corsHeaders = {
 };
 
 Deno.serve(async (req) => {
-  // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: corsHeaders });
   }
 
   try {
-    // SECURITY: Require authentication - user must be logged in
     const authHeader = req.headers.get("Authorization");
     if (!authHeader?.startsWith("Bearer ")) {
-      console.error("Missing or invalid authorization header");
       return new Response(
         JSON.stringify({ error: "Authentification requise. Connectez-vous d'abord via /admin/login." }),
         { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    // Create Supabase client with user's auth token for validation
+    // Create client with user's token to validate identity
     const supabaseAuth = createClient(
       Deno.env.get("SUPABASE_URL") ?? "",
       Deno.env.get("SUPABASE_ANON_KEY") ?? "",
       { global: { headers: { Authorization: authHeader } } }
     );
 
-    // Validate the JWT and get user claims
-    const token = authHeader.replace("Bearer ", "");
-    const { data: claimsData, error: claimsError } = await supabaseAuth.auth.getClaims(token);
+    const { data: { user }, error: userError } = await supabaseAuth.auth.getUser();
 
-    if (claimsError || !claimsData?.claims) {
-      console.error("Invalid JWT token:", claimsError);
+    if (userError || !user) {
+      console.error("Invalid JWT token:", userError);
       return new Response(
         JSON.stringify({ error: "Token invalide. Reconnectez-vous via /admin/login." }),
         { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    const userId = claimsData.claims.sub;
-    const userEmail = claimsData.claims.email;
+    console.log("Authenticated user requesting admin setup:", user.email);
 
-    if (!userId) {
-      console.error("No user ID in token claims");
-      return new Response(
-        JSON.stringify({ error: "Token invalide - ID utilisateur manquant." }),
-        { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
-    }
-
-    console.log("Authenticated user requesting admin setup:", userEmail);
-
-    // Create Supabase admin client for database operations
+    // Admin client for database operations
     const supabaseAdmin = createClient(
       Deno.env.get("SUPABASE_URL") ?? "",
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
@@ -78,17 +62,16 @@ Deno.serve(async (req) => {
     }
 
     if (existingAdmins && existingAdmins.length > 0) {
-      console.log("Admin already exists, rejecting setup request");
       return new Response(
-        JSON.stringify({ error: "Un administrateur existe déjà. Utilisez l'interface admin pour gérer les rôles." }),
+        JSON.stringify({ error: "Un administrateur existe déjà." }),
         { status: 403, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    // Add admin role to the authenticated user
+    // Add admin role
     const { error: insertError } = await supabaseAdmin
       .from("user_roles")
-      .insert({ user_id: userId, role: "admin" });
+      .insert({ user_id: user.id, role: "admin" });
 
     if (insertError) {
       console.error("Error inserting admin role:", insertError);
@@ -98,18 +81,18 @@ Deno.serve(async (req) => {
       );
     }
 
-    console.log("Successfully added admin role to user:", userId, userEmail);
+    console.log("Successfully added admin role to user:", user.id, user.email);
 
     return new Response(
       JSON.stringify({ 
         success: true, 
-        message: `Vous êtes maintenant administrateur (${userEmail}).` 
+        message: `Vous êtes maintenant administrateur (${user.email}).` 
       }),
       { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
 
   } catch (error) {
-    console.error("Unexpected error in setup-first-admin:", error);
+    console.error("Unexpected error:", error);
     return new Response(
       JSON.stringify({ error: "Une erreur inattendue s'est produite" }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
