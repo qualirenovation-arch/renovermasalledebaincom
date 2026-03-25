@@ -147,8 +147,12 @@ const handler = async (req: Request): Promise<Response> => {
       return new Response(JSON.stringify({ error: "Échec de l'envoi de l'email" }), { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } });
     }
 
-    // Mark as sent
-    await supabase.from("quote_requests").update({ email_confirmation_sent: true }).eq("id", leadId);
+    // Mark as sent and validate if previously unverified
+    const updateData: Record<string, any> = { email_confirmation_sent: true };
+    if (lead.status === 'non_verifie') {
+      updateData.status = 'nouveau';
+    }
+    await supabase.from("quote_requests").update(updateData).eq("id", leadId);
 
     return new Response(
       JSON.stringify({ success: true }),

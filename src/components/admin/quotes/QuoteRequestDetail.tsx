@@ -17,6 +17,7 @@ interface QuoteRequestDetailProps {
 
 const STATUS_OPTIONS = [
   { value: "nouveau", label: "Nouveau" },
+  { value: "non_verifie", label: "Non vérifié (spam ?)" },
   { value: "en_cours", label: "En cours" },
   { value: "devis_envoye", label: "Devis envoyé" },
   { value: "accepte", label: "Accepté" },
