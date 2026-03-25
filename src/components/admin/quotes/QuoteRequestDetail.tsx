@@ -495,6 +495,11 @@ export function QuoteRequestDetail({ quoteId, onBack }: QuoteRequestDetailProps)
                   <CheckCircle className="w-4 h-4" />
                   <span className="text-sm font-medium">Email envoyé</span>
                 </div>
+              ) : quote.status === 'non_verifie' ? (
+                <div className="flex items-center gap-2 text-orange-700 bg-orange-50 p-3 rounded-lg">
+                  <MailX className="w-4 h-4" />
+                  <span className="text-sm font-medium">Non vérifié – email non envoyé</span>
+                </div>
               ) : (
                 <div className="flex items-center gap-2 text-amber-700 bg-amber-50 p-3 rounded-lg">
                   <MailX className="w-4 h-4" />
@@ -513,7 +518,8 @@ export function QuoteRequestDetail({ quoteId, onBack }: QuoteRequestDetailProps)
                 ) : (
                   <RefreshCw className="w-4 h-4 mr-2" />
                 )}
-                {isResending ? "Envoi en cours..." : "Renvoyer l'email"}
+                {isResending ? "Envoi en cours..." : 
+                  quote.status === 'non_verifie' ? "Valider & envoyer l'email" : "Renvoyer l'email"}
               </Button>
             </div>
           </div>
