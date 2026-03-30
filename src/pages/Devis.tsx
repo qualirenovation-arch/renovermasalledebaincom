@@ -1607,7 +1607,8 @@ export default function Devis() {
                   />
                 </div>
 
-                {/* hCaptcha verification */}
+                {/* hCaptcha verification — skip for token-based step 2 */}
+                {!leadToken && (
                 <div className="card-elevated p-6 flex flex-col items-center">
                   <p className="text-sm text-muted-foreground mb-4 text-center">
                     Vérification anti-spam requise
@@ -1628,6 +1629,7 @@ export default function Devis() {
                     </p>
                   )}
                 </div>
+                )}
 
                 <Button 
                   type="submit" 
