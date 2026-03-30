@@ -154,8 +154,8 @@ const handler = async (req: Request): Promise<Response> => {
       throw new Error("Email et nom du client requis");
     }
 
-    // Validate captcha token
-    if (!captchaToken) {
+    // Validate captcha token — skip for token-based step 2 (leadId present = already verified at step 1)
+    if (!leadId && !captchaToken) {
       console.error("Missing captcha token");
       return new Response(
         JSON.stringify({ error: "Vérification anti-spam requise" }),
@@ -163,8 +163,8 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    // Verify hCaptcha token server-side (bypass for test-token in dev)
-    if (captchaToken !== "test-token") {
+    // Verify hCaptcha token server-side (bypass for test-token in dev, or when leadId is present)
+    if (captchaToken && captchaToken !== "test-token") {
       if (!HCAPTCHA_SECRET_KEY) {
         console.error("HCAPTCHA_SECRET_KEY missing");
         return new Response(
