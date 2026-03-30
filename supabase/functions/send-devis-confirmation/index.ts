@@ -200,8 +200,10 @@ const handler = async (req: Request): Promise<Response> => {
           { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
         );
       }
-    } else {
+    } else if (captchaToken === "test-token") {
       console.log("Test token detected, skipping hCaptcha verification");
+    } else {
+      console.log("No captcha token — step 2 via leadId, skipping verification");
     }
 
     // Server-side input validation
