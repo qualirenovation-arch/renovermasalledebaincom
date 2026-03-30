@@ -506,7 +506,7 @@ export default function Devis() {
             clientFirstName: formData.prenom,
             clientLastName: formData.nom,
             clientPhone: formData.telephone,
-            captchaToken: getEffectiveCaptchaToken(captchaToken),
+            captchaToken: null, // No captcha needed for step 2 — already verified at step 1
             leadId: leadId,
             photoUrls: photoUrls,
             projectDetails: {
