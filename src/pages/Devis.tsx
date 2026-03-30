@@ -470,8 +470,8 @@ export default function Devis() {
       return;
     }
 
-    // Validate hCaptcha
-    if (!captchaToken) {
+    // Validate hCaptcha — skip for token-based step 2 (already verified at step 1)
+    if (!leadToken && !captchaToken) {
       toast({
         title: "Vérification requise",
         description: "Veuillez compléter la vérification anti-spam.",
@@ -506,7 +506,7 @@ export default function Devis() {
             clientFirstName: formData.prenom,
             clientLastName: formData.nom,
             clientPhone: formData.telephone,
-            captchaToken: getEffectiveCaptchaToken(captchaToken),
+            captchaToken: null, // No captcha needed for step 2 — already verified at step 1
             leadId: leadId,
             photoUrls: photoUrls,
             projectDetails: {
@@ -1607,7 +1607,8 @@ export default function Devis() {
                   />
                 </div>
 
-                {/* hCaptcha verification */}
+                {/* hCaptcha verification — skip for token-based step 2 */}
+                {!leadToken && (
                 <div className="card-elevated p-6 flex flex-col items-center">
                   <p className="text-sm text-muted-foreground mb-4 text-center">
                     Vérification anti-spam requise
@@ -1628,12 +1629,13 @@ export default function Devis() {
                     </p>
                   )}
                 </div>
+                )}
 
                 <Button 
                   type="submit" 
                   size="lg" 
                   className="w-full bg-[hsl(38,50%,50%)] hover:bg-[hsl(38,50%,45%)] text-white rounded-xl py-6 text-lg"
-                  disabled={isSubmitting || !captchaToken}
+                  disabled={isSubmitting || (!leadToken && !captchaToken)}
                 >
                   <CalendarCheck className="w-5 h-5 mr-2" />
                   {isSubmitting ? "Envoi en cours..." : leadToken ? "👉 Envoyer ma demande complète" : "Demander mon RDV gratuit sur site"}
