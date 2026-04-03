@@ -8,17 +8,25 @@ import { QualiRenovationCTA } from "@/components/shared/QualiRenovationCTA";
 const jsonLdLocalBusiness = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "renovermasalledebain.com",
+  "name": "RenoverMaSalleDeBain.com",
+  "description": "Conception et rénovation de salle de bain haut de gamme à Paris et en Île-de-France",
   "url": "https://renovermasalledebain.com",
+  "priceRange": "€€€",
+  "serviceType": "Rénovation de salle de bain",
+  "areaServed": [
+    { "@type": "City", "name": "Paris" },
+    { "@type": "AdministrativeArea", "name": "Île-de-France" }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Paris",
+    "addressRegion": "Île-de-France",
+    "addressCountry": "FR"
+  },
   "founder": {
     "@type": "Person",
     "name": "Carina Nahmani"
   },
-  "areaServed": {
-    "@type": "City",
-    "name": "Paris"
-  },
-  "description": "Entreprise spécialisée en rénovation de salle de bain à Paris. Maître d'œuvre, coordination complète, garanties décennales.",
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Services de rénovation",

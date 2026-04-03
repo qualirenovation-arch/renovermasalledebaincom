@@ -146,6 +146,33 @@ export default function Index() {
             }
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "RenoverMaSalleDeBain.com",
+            "description": "Conception et rénovation de salle de bain haut de gamme à Paris et en Île-de-France",
+            "url": "https://renovermasalledebain.com",
+            "priceRange": "€€€",
+            "serviceType": "Rénovation de salle de bain",
+            "areaServed": [
+              { "@type": "City", "name": "Paris" },
+              { "@type": "AdministrativeArea", "name": "Île-de-France" }
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Paris",
+              "addressRegion": "Île-de-France",
+              "addressCountry": "FR"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "reviewCount": "40",
+              "bestRating": "5"
+            }
+          })}
+        </script>
       </Helmet>
       {/* Hero Section - Premium design */}
       <section className="bg-gradient-to-b from-stone to-background py-6 md:py-20 lg:py-24">
