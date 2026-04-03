@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -6,108 +7,248 @@ const corsHeaders = {
 };
 
 const BASE_URL = "https://renovermasalledebain.com";
-const OG_FN_URL = "https://wacqnrxbszvznfqiiuxm.supabase.co/functions/v1/og";
 const SITE_NAME = "RenoverMaSalleDeBain.com";
 
 // ──────────────────────────────────────────────
-// Détection des bots sociaux / crawlers
+// Bot detection
 // ──────────────────────────────────────────────
 const BOT_UA_PATTERNS = [
-  "facebookexternalhit",
-  "twitterbot",
-  "linkedinbot",
-  "whatsapp",
-  "slackbot",
-  "telegrambot",
-  "discordbot",
-  "googlebot",
-  "bingbot",
-  "applebot",
-  "pinterest",
-  "vkShare",
-  "embedly",
-  "outbrain",
-  "nuzzel",
-  "flipboard",
+  "facebookexternalhit", "twitterbot", "linkedinbot", "whatsapp",
+  "slackbot", "telegrambot", "discordbot", "googlebot", "bingbot",
+  "applebot", "pinterest", "vkShare", "embedly", "outbrain",
+  "yandex", "baiduspider", "duckduckbot", "ia_archiver",
+  "gptbot", "perplexitybot", "claude-web", "chatgpt-user",
+];
+
+const SEARCH_ENGINE_PATTERNS = [
+  "googlebot", "bingbot", "applebot", "yandex", "baiduspider",
+  "duckduckbot", "ia_archiver", "gptbot", "perplexitybot", "claude-web", "chatgpt-user",
 ];
 
 function isBot(userAgent: string): boolean {
   const ua = userAgent.toLowerCase();
-  return BOT_UA_PATTERNS.some((pattern) => ua.includes(pattern.toLowerCase()));
+  return BOT_UA_PATTERNS.some((p) => ua.includes(p));
+}
+
+function isSearchEngine(userAgent: string): boolean {
+  const ua = userAgent.toLowerCase();
+  return SEARCH_ENGINE_PATTERNS.some((p) => ua.includes(p));
 }
 
 // ──────────────────────────────────────────────
-// Métadonnées statiques des pages principales
+// Static page metadata + content
 // ──────────────────────────────────────────────
 interface PageMeta {
   title: string;
   description: string;
-  image: string; // URL absolue
+  image: string;
+  h1: string;
+  content: string; // HTML body content for crawlers
+  jsonLd?: object;
 }
+
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "RenoverMaSalleDeBain.com",
+  "description": "Conception et rénovation de salle de bain haut de gamme à Paris et en Île-de-France",
+  "url": BASE_URL,
+  "priceRange": "€€€",
+  "serviceType": "Rénovation de salle de bain",
+  "areaServed": [
+    { "@type": "City", "name": "Paris" },
+    { "@type": "AdministrativeArea", "name": "Île-de-France" },
+  ],
+  "address": { "@type": "PostalAddress", "addressLocality": "Paris", "addressRegion": "Île-de-France", "addressCountry": "FR" },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "40", "bestRating": "5" },
+};
 
 const STATIC_PAGES: Record<string, PageMeta> = {
   "/": {
-    title: "Rénovation salle de bain Paris | RMSB",
-    description: "Conception + rénovation premium à Paris et Île-de-France. Optimisation d'espace, plans précis, finitions irréprochables. Un chantier heureux.",
+    title: "Rénovation salle de bain haut de gamme Paris & Île-de-France | RMSB",
+    description: "Conception et rénovation de salle de bain premium à Paris et en Île-de-France. Plans précis, finitions irréprochables, chantier heureux. Devis gratuit.",
     image: `${BASE_URL}/og/default-og.jpg`,
+    h1: "Un chantier heureux pour votre salle de bain",
+    content: `
+      <p>Rénover votre salle de bain sans stress, sans mauvaises surprises, grâce à une conception maîtrisée et un accompagnement de A à Z.</p>
+      <h2>Conception sur mesure</h2>
+      <p>Des solutions personnalisées pour votre salle de bains, avec des matériaux durables et esthétiques sélectionnés par nos experts.</p>
+      <h2>Installation professionnelle</h2>
+      <p>Des experts qualifiés pour des résultats fiables. Plus de 20 professionnels sur le terrain et une équipe de conception engagée.</p>
+      <h2>Douche ou baignoire ?</h2>
+      <p>La vraie question : comment vivez-vous votre salle de bain ? Nous vous accompagnons dans ce choix pour créer l'espace qui vous ressemble.</p>
+      <h2>Lauréat Best of Houzz 2026</h2>
+      <p>Cette distinction récompense notre équipe de plus de 20 professionnels et notre exigence de qualité, projet après projet.</p>
+      <h2>Nos témoignages clients</h2>
+      <p>Plus de 40 avis 5 étoiles vérifiés sur Houzz. Nos clients témoignent de leur expérience de rénovation.</p>
+      <nav>
+        <h2>Découvrir nos services</h2>
+        <ul>
+          <li><a href="${BASE_URL}/realisations">Nos réalisations</a></li>
+          <li><a href="${BASE_URL}/pourquoi-nous">Pourquoi nous choisir</a></li>
+          <li><a href="${BASE_URL}/devis">Demander un devis gratuit</a></li>
+          <li><a href="${BASE_URL}/guide-travaux">Guide rénovation salle de bain</a></li>
+          <li><a href="${BASE_URL}/faq">Questions fréquentes</a></li>
+          <li><a href="${BASE_URL}/renovation-salle-de-bain-paris">Rénovation salle de bain Paris</a></li>
+        </ul>
+      </nav>
+    `,
+    jsonLd: localBusinessJsonLd,
   },
   "/realisations": {
-    title: "Nos réalisations | RenoverMaSalleDeBain.com",
-    description: "Découvrez nos rénovations de salles de bain à Paris et IDF : zellige, marbre, terrazzo. Avant/Après de nos chantiers.",
+    title: "Nos réalisations de salles de bain | RMSB",
+    description: "Découvrez nos projets de rénovation de salle de bain à Paris, Vitry, Charenton, Saint-Denis et en Île-de-France. Avant/après, photos et détails de chaque chantier.",
     image: `${BASE_URL}/og/realisations.jpg`,
+    h1: "Nos réalisations de salles de bain",
+    content: `
+      <p>Découvrez nos rénovations de salles de bain à Paris et Île-de-France : zellige, marbre, terrazzo. Avant/Après de nos chantiers.</p>
+      <p>Chaque projet est unique. Nous concevons et réalisons des salles de bain sur mesure, adaptées à votre espace et à vos envies.</p>
+    `,
+  },
+  "/renovation-salle-de-bain-paris": {
+    title: "Rénovation salle de bain Paris – Entreprise haut de gamme | RMSB",
+    description: "Spécialiste de la rénovation de salle de bain à Paris. Conception sur mesure, matériaux premium, délais respectés. Demandez votre devis gratuit.",
+    image: `${BASE_URL}/og/default-og.jpg`,
+    h1: "Rénovation salle de bain à Paris",
+    content: `
+      <p>Spécialiste de la rénovation de salle de bain à Paris depuis plus de 20 ans. Conception sur mesure, matériaux premium, délais respectés.</p>
+      <h2>Notre expertise parisienne</h2>
+      <p>Plus de 60 projets réalisés dans Paris intra-muros. Nous maîtrisons les contraintes des appartements parisiens : copropriétés, étages élevés, petites surfaces.</p>
+      <h2>Nos zones d'intervention</h2>
+      <p>Paris (tous arrondissements), Boulogne-Billancourt, Neuilly-sur-Seine, Vincennes, Saint-Mandé, Charenton, Montreuil, et toute l'Île-de-France.</p>
+    `,
+    jsonLd: localBusinessJsonLd,
+  },
+  "/pourquoi-nous": {
+    title: "Pourquoi nous choisir pour votre rénovation salle de bain | RMSB",
+    description: "Notre équipe de rénovation salle de bain à Paris : expertise, transparence et finitions haut de gamme. Découvrez notre approche et nos engagements.",
+    image: `${BASE_URL}/og/pourquoi-nous.jpg`,
+    h1: "Pourquoi nous choisir",
+    content: `
+      <p>Notre approche de la rénovation de salle de bain repose sur trois piliers : expertise technique, transparence totale et finitions irréprochables.</p>
+      <h2>Une équipe d'experts</h2>
+      <p>Carina Nahmani, maître d'œuvre avec 20 ans d'expérience, et Thierry Pelmard, architecte partenaire. Plus de 60 chantiers réalisés ensemble.</p>
+      <h2>Un processus maîtrisé</h2>
+      <p>De la conception 3D à la livraison clé en main, chaque étape est anticipée et coordonnée pour un chantier sans surprises.</p>
+    `,
   },
   "/guide-travaux": {
-    title: "Guide Travaux rénovation salle de bain | RMSB",
-    description: "Conseils d'experts pour votre rénovation de salle de bain : douche italienne, carrelage, plomberie. Le guide complet.",
+    title: "Guide rénovation salle de bain Paris – Étapes, normes & délais | RMSB",
+    description: "Tout savoir sur la rénovation de salle de bain à Paris : étapes clés, normes, délais et budget. Le guide complet par nos experts.",
     image: `${BASE_URL}/og/guide-travaux.jpg`,
+    h1: "Guide complet de rénovation salle de bain",
+    content: `
+      <p>Le guide complet pour votre rénovation de salle de bain à Paris : étapes clés, normes DTU, délais et budget détaillé.</p>
+      <h2>Les étapes clés de la rénovation</h2>
+      <p>Planification, démolition, plomberie, étanchéité DTU 52.2, carrelage, équipements sanitaires et finitions.</p>
+      <h2>Budget et délais</h2>
+      <p>Estimez votre budget selon la surface et le niveau de finition souhaité. Nos chantiers durent en moyenne 3 à 6 semaines.</p>
+      <h2>Normes et réglementations</h2>
+      <p>Étanchéité aux normes DTU, installation électrique conforme NF C 15-100, accessibilité PMR.</p>
+    `,
   },
   "/devis": {
     title: "Demander un devis gratuit | RenoverMaSalleDeBain.com",
     description: "Devis gratuit pour votre rénovation de salle de bain à Paris. Réponse sous 48h. Un chantier maîtrisé de A à Z.",
     image: `${BASE_URL}/og/devis.jpg`,
-  },
-  "/pourquoi-nous": {
-    title: "Notre méthode | RenoverMaSalleDeBain.com",
-    description: "Découvrez l'approche RMSB : conception, anticipation, coordination. Pour un chantier heureux sans stress.",
-    image: `${BASE_URL}/og/pourquoi-nous.jpg`,
-  },
-  "/avis": {
-    title: "Avis clients | RenoverMaSalleDeBain.com",
-    description: "Plus de 40 avis 5 étoiles vérifiés sur Houzz. Découvrez les témoignages de nos clients satisfaits.",
-    image: `${BASE_URL}/og/avis.jpg`,
-  },
-  "/contact": {
-    title: "Nous contacter | RenoverMaSalleDeBain.com",
-    description: "Contactez RMSB pour votre projet de rénovation de salle de bain à Paris et Île-de-France.",
-    image: `${BASE_URL}/og/default-og.jpg`,
+    h1: "Demander un devis gratuit",
+    content: `
+      <p>Recevez votre devis personnalisé pour la rénovation de votre salle de bain. Réponse sous 48 heures.</p>
+      <p>Notre étude personnalisée comprend : analyse de votre espace, proposition d'aménagement, sélection de matériaux et estimation détaillée.</p>
+    `,
   },
   "/faq": {
-    title: "Questions fréquentes | RenoverMaSalleDeBain.com",
+    title: "Questions fréquentes rénovation salle de bain | RMSB",
     description: "Réponses à vos questions sur la rénovation de salle de bain : durée, budget, matériaux, garanties.",
     image: `${BASE_URL}/og/default-og.jpg`,
+    h1: "Questions fréquentes",
+    content: `
+      <p>Retrouvez les réponses aux questions les plus fréquentes sur la rénovation de salle de bain à Paris.</p>
+      <h2>Combien coûte une rénovation de salle de bain ?</h2>
+      <p>Le budget dépend de la surface, du niveau de finition et des équipements choisis. Comptez entre 15 000 € et 40 000 € pour une rénovation complète à Paris.</p>
+      <h2>Combien de temps durent les travaux ?</h2>
+      <p>En moyenne 3 à 6 semaines pour une rénovation complète, selon la complexité du projet.</p>
+      <h2>Intervenez-vous en appartement occupé ?</h2>
+      <p>Oui, nous avons l'habitude d'intervenir dans des appartements occupés. Nous organisons le chantier pour minimiser les nuisances.</p>
+    `,
   },
-  "/degats-des-eaux": {
-    title: "Dégâts des eaux | RenoverMaSalleDeBain.com",
-    description: "Rénovation après sinistre : conseils, assurance, travaux. Expertise pour réparer les dégâts des eaux.",
-    image: `${BASE_URL}/og/default-og.jpg`,
+  "/avis": {
+    title: "Avis clients rénovation salle de bain | RMSB",
+    description: "Plus de 40 avis 5 étoiles vérifiés sur Houzz. Découvrez les témoignages de nos clients satisfaits.",
+    image: `${BASE_URL}/og/avis.jpg`,
+    h1: "Avis de nos clients",
+    content: `<p>Plus de 40 avis 5 étoiles vérifiés sur Houzz. Nos clients témoignent de leur expérience de rénovation de salle de bain à Paris et en Île-de-France.</p>`,
   },
   "/partenaires": {
     title: "Nos partenaires | RenoverMaSalleDeBain.com",
     description: "Les marques et artisans de confiance avec lesquels nous travaillons pour vos rénovations de salle de bain.",
     image: `${BASE_URL}/og/default-og.jpg`,
+    h1: "Nos partenaires",
+    content: `<p>Nous travaillons avec les meilleures marques et artisans pour garantir la qualité de chaque rénovation : Grohe, Geberit, Schlüter, Wedi, et bien d'autres.</p>`,
+  },
+  "/degats-eaux": {
+    title: "Dégâts des eaux – Rénovation salle de bain sinistre | RMSB",
+    description: "Rénovation après sinistre : conseils, assurance, travaux. Expertise pour réparer les dégâts des eaux dans votre salle de bain.",
+    image: `${BASE_URL}/og/default-og.jpg`,
+    h1: "Rénovation après dégât des eaux",
+    content: `
+      <p>Spécialistes de la rénovation de salle de bain après sinistre. Nous vous accompagnons dans toutes les étapes : constat, déclaration d'assurance, travaux de remise en état.</p>
+      <h2>Notre expertise sinistre</h2>
+      <p>Diagnostic précis, devis détaillé pour l'assurance, travaux de qualité avec les mêmes standards que nos rénovations classiques.</p>
+    `,
+  },
+  "/a-propos": {
+    title: "À propos | RenoverMaSalleDeBain.com",
+    description: "Découvrez l'histoire de RenoverMaSalleDeBain.com, notre équipe et notre passion pour la rénovation de salle de bain à Paris.",
+    image: `${BASE_URL}/og/default-og.jpg`,
+    h1: "À propos de RenoverMaSalleDeBain.com",
+    content: `<p>Fondée par Carina Nahmani, notre entreprise est spécialisée dans la conception et la rénovation de salles de bain haut de gamme à Paris et en Île-de-France depuis plus de 20 ans.</p>`,
+  },
+  "/qualirenovation": {
+    title: "QualiRénovation | RenoverMaSalleDeBain.com",
+    description: "QualiRénovation, notre démarche qualité pour des rénovations de salle de bain d'exception.",
+    image: `${BASE_URL}/og/default-og.jpg`,
+    h1: "QualiRénovation",
+    content: `<p>Notre démarche qualité QualiRénovation garantit des standards élevés à chaque étape de votre projet de rénovation de salle de bain.</p>`,
+  },
+  "/presse": {
+    title: "Presse | RenoverMaSalleDeBain.com",
+    description: "RenoverMaSalleDeBain.com dans les médias. Retrouvez nos apparitions presse et nos articles.",
+    image: `${BASE_URL}/og/default-og.jpg`,
+    h1: "Presse",
+    content: `<p>Retrouvez nos apparitions dans les médias et les articles de presse consacrés à nos rénovations de salle de bain à Paris.</p>`,
+  },
+  "/videos-conseils": {
+    title: "Vidéos conseils rénovation salle de bain | RMSB",
+    description: "Nos vidéos conseils pour votre rénovation de salle de bain : astuces, tendances et tutoriels par nos experts.",
+    image: `${BASE_URL}/og/default-og.jpg`,
+    h1: "Vidéos conseils",
+    content: `<p>Découvrez nos vidéos conseils pour votre projet de rénovation de salle de bain : astuces d'experts, tendances déco et tutoriels techniques.</p>`,
+  },
+  "/devenir-partenaire": {
+    title: "Devenir partenaire | RenoverMaSalleDeBain.com",
+    description: "Rejoignez notre réseau de partenaires : artisans, marques et distributeurs pour la rénovation de salle de bain.",
+    image: `${BASE_URL}/og/default-og.jpg`,
+    h1: "Devenir partenaire",
+    content: `<p>Rejoignez notre réseau de partenaires de confiance. Artisans qualifiés, marques premium et distributeurs spécialisés.</p>`,
+  },
+  "/photographe": {
+    title: "Notre photographe | RenoverMaSalleDeBain.com",
+    description: "Stéphane Vasco, photographe attitré de nos réalisations de salle de bain.",
+    image: `${BASE_URL}/og/default-og.jpg`,
+    h1: "Notre photographe",
+    content: `<p>Stéphane Vasco capture et sublime notre savoir-faire photographique pour partager avec vous l'envers du décor de nos rénovations.</p>`,
   },
 };
 
 // ──────────────────────────────────────────────
-// Métadonnées des albums (slug → infos OG)
-// On utilise l'edge function /og pour générer
-// l'image dynamique avec photo de couverture.
+// Album metadata (hardcoded fallback)
 // ──────────────────────────────────────────────
 interface AlbumMeta {
   title: string;
   location: string;
   description: string;
-  coverPath: string; // chemin public absolu de la photo de couverture
+  coverPath: string;
 }
 
 const ALBUMS: Record<string, AlbumMeta> = {
@@ -282,36 +423,59 @@ const ALBUMS: Record<string, AlbumMeta> = {
 };
 
 // ──────────────────────────────────────────────
-// Génération du HTML minimal pour les crawlers
+// Escape HTML helper
 // ──────────────────────────────────────────────
-function buildOgImageUrl(slug: string, title: string, location: string, coverPath: string): string {
-  // Priorité 1 : image OG statique par slug dans /public/og/ (JPEG, compatible Facebook/WhatsApp)
-  const staticOgUrl = `${BASE_URL}/og/${slug}.jpg`;
-  // On retourne l'URL statique — elle existe pour la plupart des albums
-  // L'edge function /og SVG reste disponible en fallback via coverPath
-  return staticOgUrl;
+function esc(str: string): string {
+  return str.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
-function buildHtml(
+// ──────────────────────────────────────────────
+// Build full HTML page for search engine crawlers
+// ──────────────────────────────────────────────
+function buildFullHtml(
   title: string,
   description: string,
   ogImageUrl: string,
   canonicalUrl: string,
-  redirectUrl: string
+  h1: string,
+  bodyContent: string,
+  jsonLd?: object,
+  breadcrumbs?: { name: string; url?: string }[],
 ): string {
+  const jsonLdBlocks: string[] = [];
+
+  if (jsonLd) {
+    jsonLdBlocks.push(`<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`);
+  }
+
+  if (breadcrumbs && breadcrumbs.length > 0) {
+    const breadcrumbLd = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": breadcrumbs.map((b, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": b.name,
+        ...(b.url ? { "item": b.url } : {}),
+      })),
+    };
+    jsonLdBlocks.push(`<script type="application/ld+json">${JSON.stringify(breadcrumbLd)}</script>`);
+  }
+
   return `<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>${title}</title>
-  <meta name="description" content="${description.replace(/"/g, "&quot;")}" />
+  <title>${esc(title)}</title>
+  <meta name="description" content="${esc(description)}" />
   <link rel="canonical" href="${canonicalUrl}" />
+  <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="${title.replace(/"/g, "&quot;")}" />
-  <meta property="og:description" content="${description.replace(/"/g, "&quot;")}" />
+  <meta property="og:title" content="${esc(title)}" />
+  <meta property="og:description" content="${esc(description)}" />
   <meta property="og:url" content="${canonicalUrl}" />
   <meta property="og:image" content="${ogImageUrl}" />
   <meta property="og:image:width" content="1200" />
@@ -322,22 +486,99 @@ function buildHtml(
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="${title.replace(/"/g, "&quot;")}" />
-  <meta name="twitter:description" content="${description.replace(/"/g, "&quot;")}" />
+  <meta name="twitter:title" content="${esc(title)}" />
+  <meta name="twitter:description" content="${esc(description)}" />
   <meta name="twitter:image" content="${ogImageUrl}" />
 
-  <!-- Redirection vers le vrai SPA -->
-  <meta http-equiv="refresh" content="0;url=${redirectUrl}" />
-  <script>window.location.replace("${redirectUrl}");</script>
+  ${jsonLdBlocks.join("\n  ")}
 </head>
 <body>
-  <p>Redirection en cours…</p>
+  <header>
+    <a href="${BASE_URL}"><strong>${SITE_NAME}</strong></a>
+    <nav>
+      <a href="${BASE_URL}/realisations">Réalisations</a>
+      <a href="${BASE_URL}/pourquoi-nous">Pourquoi nous</a>
+      <a href="${BASE_URL}/guide-travaux">Guide travaux</a>
+      <a href="${BASE_URL}/devis">Devis gratuit</a>
+      <a href="${BASE_URL}/faq">FAQ</a>
+      <a href="${BASE_URL}/avis">Avis</a>
+    </nav>
+  </header>
+  <main>
+    <h1>${esc(h1)}</h1>
+    ${bodyContent}
+  </main>
+  <footer>
+    <p>© ${new Date().getFullYear()} ${SITE_NAME} — Rénovation de salle de bain haut de gamme à Paris et Île-de-France</p>
+    <nav>
+      <a href="${BASE_URL}/mentions-legales">Mentions légales</a>
+      <a href="${BASE_URL}/politique-confidentialite">Politique de confidentialité</a>
+    </nav>
+  </footer>
 </body>
 </html>`;
 }
 
 // ──────────────────────────────────────────────
-// Handler principal
+// Build minimal redirect HTML for social bots
+// ──────────────────────────────────────────────
+function buildRedirectHtml(
+  title: string,
+  description: string,
+  ogImageUrl: string,
+  canonicalUrl: string,
+): string {
+  return `<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>${esc(title)}</title>
+  <meta name="description" content="${esc(description)}" />
+  <link rel="canonical" href="${canonicalUrl}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="${esc(title)}" />
+  <meta property="og:description" content="${esc(description)}" />
+  <meta property="og:url" content="${canonicalUrl}" />
+  <meta property="og:image" content="${ogImageUrl}" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="${SITE_NAME}" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="${esc(title)}" />
+  <meta name="twitter:description" content="${esc(description)}" />
+  <meta name="twitter:image" content="${ogImageUrl}" />
+</head>
+<body><p>${esc(title)}</p></body>
+</html>`;
+}
+
+// ──────────────────────────────────────────────
+// Fetch album list from DB for /realisations page
+// ──────────────────────────────────────────────
+async function fetchAlbumsList(): Promise<{ slug: string; title: string; location: string; description: string }[]> {
+  try {
+    const supabaseUrl = Deno.env.get("SUPABASE_URL");
+    const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+    if (!supabaseUrl || !supabaseKey) return [];
+    
+    const supabase = createClient(supabaseUrl, supabaseKey);
+    const { data, error } = await supabase
+      .from("albums")
+      .select("slug, title, location, description")
+      .eq("is_in_progress", false)
+      .order("display_order", { ascending: true });
+    
+    if (error) { console.error("DB fetch error:", error); return []; }
+    return data ?? [];
+  } catch (e) {
+    console.error("Failed to fetch albums from DB:", e);
+    return [];
+  }
+}
+
+// ──────────────────────────────────────────────
+// Handler
 // ──────────────────────────────────────────────
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -348,11 +589,8 @@ serve(async (req) => {
     const url = new URL(req.url);
     const userAgent = req.headers.get("user-agent") || "";
     const path = url.searchParams.get("path") || "/";
-
     const canonicalUrl = `${BASE_URL}${path}`;
 
-    // Si ce n'est pas un bot ET pas un appel direct à l'edge function (pas de ?path=),
-    // rediriger vers le SPA. On laisse passer si path est explicitement fourni.
     const hasExplicitPath = url.searchParams.has("path");
     if (!isBot(userAgent) && !hasExplicitPath) {
       return new Response(null, {
@@ -361,60 +599,88 @@ serve(async (req) => {
       });
     }
 
-    // ── Pages statiques ──
+    const searchEngine = isSearchEngine(userAgent) || hasExplicitPath;
+    const responseHeaders = {
+      ...corsHeaders,
+      "Content-Type": "text/html; charset=utf-8",
+      "Cache-Control": "public, max-age=3600",
+    };
+
+    // ── Static pages ──
     if (STATIC_PAGES[path]) {
       const meta = STATIC_PAGES[path];
-      const html = buildHtml(meta.title, meta.description, meta.image, canonicalUrl, canonicalUrl);
-      return new Response(html, {
-        headers: {
-          ...corsHeaders,
-          "Content-Type": "text/html; charset=utf-8",
-          "Cache-Control": "public, max-age=3600",
-        },
-      });
+
+      // For /realisations, enrich with album list from DB
+      let bodyContent = meta.content;
+      if (path === "/realisations") {
+        const albums = await fetchAlbumsList();
+        if (albums.length > 0) {
+          bodyContent += `\n<h2>Tous nos projets</h2>\n<ul>\n`;
+          for (const a of albums) {
+            bodyContent += `  <li><a href="${BASE_URL}/realisations/${a.slug}">${esc(a.title)}</a> — ${esc(a.location)}</li>\n`;
+          }
+          bodyContent += `</ul>`;
+        }
+      }
+
+      if (searchEngine) {
+        const html = buildFullHtml(meta.title, meta.description, meta.image, canonicalUrl, meta.h1, bodyContent, meta.jsonLd);
+        return new Response(html, { headers: responseHeaders });
+      } else {
+        const html = buildRedirectHtml(meta.title, meta.description, meta.image, canonicalUrl);
+        return new Response(html, { headers: responseHeaders });
+      }
     }
 
-    // ── Pages album : /realisations/[slug] ──
+    // ── Album pages: /realisations/[slug] ──
     const albumMatch = path.match(/^\/realisations\/([^/]+)$/);
     if (albumMatch) {
       const slug = albumMatch[1];
       const album = ALBUMS[slug];
 
       if (album) {
-        const ogImageUrl = buildOgImageUrl(slug, album.title, album.location, album.coverPath);
+        const ogImageUrl = `${BASE_URL}/og/${slug}.jpg`;
         const fullTitle = `${album.title} – Avant / Après | ${SITE_NAME}`;
-        const html = buildHtml(fullTitle, album.description, ogImageUrl, canonicalUrl, canonicalUrl);
-        return new Response(html, {
-          headers: {
-            ...corsHeaders,
-            "Content-Type": "text/html; charset=utf-8",
-            "Cache-Control": "public, max-age=3600",
-          },
-        });
+        const breadcrumbs = [
+          { name: "Accueil", url: BASE_URL },
+          { name: "Réalisations", url: `${BASE_URL}/realisations` },
+          { name: album.title },
+        ];
+
+        if (searchEngine) {
+          const bodyContent = `
+            <p><strong>${esc(album.location)}</strong></p>
+            <p>${esc(album.description)}</p>
+            <h2>Détails du projet</h2>
+            <p>Rénovation complète de salle de bain réalisée par ${SITE_NAME}. Conception sur mesure, matériaux premium et finitions irréprochables.</p>
+            <p><a href="${BASE_URL}/devis">Demander un devis gratuit pour un projet similaire</a></p>
+            <nav>
+              <a href="${BASE_URL}/realisations">← Voir toutes nos réalisations</a>
+            </nav>
+          `;
+          const html = buildFullHtml(fullTitle, album.description, ogImageUrl, canonicalUrl, album.title, bodyContent, undefined, breadcrumbs);
+          return new Response(html, { headers: responseHeaders });
+        } else {
+          const html = buildRedirectHtml(fullTitle, album.description, ogImageUrl, canonicalUrl);
+          return new Response(html, { headers: responseHeaders });
+        }
       }
 
-      // Slug album inconnu → fallback avec image statique générique /realisations
-      const fallbackAlbumMeta = STATIC_PAGES["/realisations"] ?? STATIC_PAGES["/"];
-      const html = buildHtml(fallbackAlbumMeta.title, fallbackAlbumMeta.description, fallbackAlbumMeta.image, canonicalUrl, canonicalUrl);
-      return new Response(html, {
-        headers: {
-          ...corsHeaders,
-          "Content-Type": "text/html; charset=utf-8",
-          "Cache-Control": "public, max-age=3600",
-        },
-      });
+      // Unknown slug fallback
+      const fallback = STATIC_PAGES["/realisations"];
+      const html = searchEngine
+        ? buildFullHtml(fallback.title, fallback.description, fallback.image, canonicalUrl, fallback.h1, fallback.content)
+        : buildRedirectHtml(fallback.title, fallback.description, fallback.image, canonicalUrl);
+      return new Response(html, { headers: responseHeaders });
     }
 
-    // ── Fallback : page par défaut ──
-    const defaultMeta = STATIC_PAGES["/"];
-    const html = buildHtml(defaultMeta.title, defaultMeta.description, defaultMeta.image, canonicalUrl, canonicalUrl);
-    return new Response(html, {
-      headers: {
-        ...corsHeaders,
-        "Content-Type": "text/html; charset=utf-8",
-        "Cache-Control": "public, max-age=3600",
-      },
-    });
+    // ── Fallback ──
+    const def = STATIC_PAGES["/"];
+    const html = searchEngine
+      ? buildFullHtml(def.title, def.description, def.image, canonicalUrl, def.h1, def.content, def.jsonLd)
+      : buildRedirectHtml(def.title, def.description, def.image, canonicalUrl);
+    return new Response(html, { headers: responseHeaders });
+
   } catch (error) {
     console.error("Prerender error:", error);
     return new Response(JSON.stringify({ error: "Prerender failed", details: String(error) }), {
