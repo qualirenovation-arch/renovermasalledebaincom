@@ -636,7 +636,12 @@ serve(async (req) => {
     const albumMatch = path.match(/^\/realisations\/([^/]+)$/);
     if (albumMatch) {
       const slug = albumMatch[1];
-      const album = ALBUMS[slug];
+      let album = ALBUMS[slug] || null;
+
+      // If not in hardcoded list, try to find by slug in DB
+      if (!album) {
+        album = await fetchAlbumBySlug(slug);
+      }
 
       if (album) {
         const ogImageUrl = `${BASE_URL}/og/${slug}.jpg`;
