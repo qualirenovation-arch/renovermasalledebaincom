@@ -1,10 +1,23 @@
-import { createRoot } from "react-dom/client";
+import { createRoot, hydrateRoot } from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import App from "./App.tsx";
 import "./index.css";
 
-createRoot(document.getElementById("root")!).render(
-  <HelmetProvider>
-    <App />
-  </HelmetProvider>
-);
+const container = document.getElementById("root")!;
+
+if (import.meta.env.PROD && container.innerHTML.trim().length > 0) {
+  // En production, si le HTML est déjà pré-rendu, on hydrate
+  hydrateRoot(
+    container,
+    <HelmetProvider>
+      <App />
+    </HelmetProvider>
+  );
+} else {
+  // En développement ou si pas de pré-rendu, on crée normalement
+  createRoot(container).render(
+    <HelmetProvider>
+      <App />
+    </HelmetProvider>
+  );
+}
