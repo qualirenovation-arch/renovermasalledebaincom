@@ -6,28 +6,24 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createClient } from "@supabase/supabase-js";
+import { JSDOM } from "jsdom";
 
-// Polyfill browser globals pour le SSR
-if (typeof globalThis.localStorage === "undefined") {
-  const store = {};
-  globalThis.localStorage = {
-    getItem: (k) => store[k] ?? null,
-    setItem: (k, v) => { store[k] = String(v); },
-    removeItem: (k) => { delete store[k]; },
-    clear: () => { Object.keys(store).forEach((k) => delete store[k]); },
-    get length() { return Object.keys(store).length; },
-    key: (i) => Object.keys(store)[i] ?? null,
-  };
-}
-if (typeof globalThis.window === "undefined") {
-  globalThis.window = globalThis;
-}
-if (typeof globalThis.document === "undefined") {
-  globalThis.document = { querySelector: () => null, createElement: () => ({}) };
-}
-if (typeof globalThis.navigator === "undefined") {
-  globalThis.navigator = { userAgent: "node" };
-}
+// Polyfill browser globals pour le SSR via jsdom
+const dom = new JSDOM("<!doctype html><html><body><div id='root'></div></body></html>", {
+  url: "https://renovermasalledebain.com",
+});
+globalThis.window = dom.window;
+globalThis.document = dom.window.document;
+globalThis.navigator = dom.window.navigator;
+globalThis.localStorage = dom.window.localStorage;
+globalThis.HTMLElement = dom.window.HTMLElement;
+globalThis.Element = dom.window.Element;
+globalThis.Node = dom.window.Node;
+globalThis.requestAnimationFrame = (cb) => setTimeout(cb, 0);
+globalThis.cancelAnimationFrame = clearTimeout;
+globalThis.IntersectionObserver = class { observe() {} unobserve() {} disconnect() {} };
+globalThis.ResizeObserver = class { observe() {} unobserve() {} disconnect() {} };
+globalThis.MutationObserver = dom.window.MutationObserver;
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
