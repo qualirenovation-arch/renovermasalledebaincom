@@ -256,12 +256,14 @@ async function prerender() {
       // Replace template <title> with page-specific title
       finalHtml = finalHtml.replace(/<title>[^<]*<\/title>/, `<title>${escapeAttr(formattedTitle)}</title>`);
 
-      // Remove any template meta description and OG tags to avoid duplicates
+      // Remove any template meta/OG/JSON-LD tags to avoid duplicates
       finalHtml = finalHtml.replace(/<meta\s+name="description"[^>]*\/?>/g, '');
       finalHtml = finalHtml.replace(/<meta\s+property="og:[^"]*"[^>]*\/?>/g, '');
       finalHtml = finalHtml.replace(/<meta\s+name="twitter:[^"]*"[^>]*\/?>/g, '');
       finalHtml = finalHtml.replace(/<link\s+rel="canonical"[^>]*\/?>/g, '');
       finalHtml = finalHtml.replace(/<meta\s+name="robots"[^>]*\/?>/g, '');
+      // Remove any JSON-LD already in template (from Vite build)
+      finalHtml = finalHtml.replace(/<script\s+type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi, '');
 
       // Inject head tags (meta, OG, canonical) + JSON-LD before </head>
       const allHeadContent = [headTags, jsonLdTags].filter(Boolean).join("\n    ");
