@@ -107,6 +107,25 @@ async function getDynamicRoutes() {
   }
 }
 
+/**
+ * Extract JSON-LD scripts from the rendered HTML body.
+ * react-helmet-async puts <script type="application/ld+json"> via Helmet,
+ * but renderToString renders them inline in the body.
+ * We need to extract them and move them to <head>.
+ */
+function extractJsonLdScripts(html) {
+  const jsonLdScripts = [];
+  // Match <script type="application/ld+json">...</script> in the rendered HTML
+  const regex = /<script\s+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi;
+  let match;
+  while ((match = regex.exec(html)) !== null) {
+    jsonLdScripts.push(match[0]);
+  }
+  // Remove them from body HTML to avoid duplication
+  const cleanedHtml = html.replace(regex, '');
+  return { cleanedHtml, jsonLdScripts };
+}
+
 async function prerender() {
   const clientDir = path.resolve(__dirname, "dist/client");
   const serverDir = path.resolve(__dirname, "dist/server");
@@ -132,20 +151,53 @@ async function prerender() {
     try {
       const { html: appHtml, helmet } = render(url);
 
-      const headTags = [
-        helmet?.title?.toString() || "",
-        helmet?.meta?.toString() || "",
-        helmet?.link?.toString() || "",
-        helmet?.script?.toString() || "",
-      ].filter(Boolean).join("\n    ");
+      // Extract JSON-LD from the rendered body HTML
+      const { cleanedHtml, jsonLdScripts } = extractJsonLdScripts(appHtml);
 
-      let finalHtml = template
-        .replace("<!--app-head-->", headTags)
-        .replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`);
+      // Build helmet head tags
+      const helmetTags = [];
+      let helmetTitle = null;
+      if (helmet) {
+        const titleStr = helmet.title?.toString();
+        if (titleStr && !titleStr.includes("undefined") && titleStr.includes("<title>")) {
+          helmetTitle = titleStr;
+          helmetTags.push(titleStr);
+        }
+        
+        const metaStr = helmet.meta?.toString();
+        if (metaStr) helmetTags.push(metaStr);
+        
+        const linkStr = helmet.link?.toString();
+        if (linkStr) helmetTags.push(linkStr);
+        
+        const scriptStr = helmet.script?.toString();
+        if (scriptStr) helmetTags.push(scriptStr);
+      }
 
-      if (!template.includes("<!--app-head-->") && headTags) {
+      // Add extracted JSON-LD scripts to head tags
+      helmetTags.push(...jsonLdScripts);
+
+      const headTags = helmetTags.filter(Boolean).join("\n    ");
+
+      let finalHtml = template;
+
+      // Replace the template <title> with the helmet one if available
+      if (helmetTitle) {
+        finalHtml = finalHtml.replace(/<title>[^<]*<\/title>/, helmetTitle);
+      }
+
+      // Inject head tags
+      if (finalHtml.includes("<!--app-head-->")) {
+        finalHtml = finalHtml.replace("<!--app-head-->", headTags);
+      } else if (headTags) {
         finalHtml = finalHtml.replace("</head>", `    ${headTags}\n  </head>`);
       }
+
+      // Inject body content
+      finalHtml = finalHtml.replace(
+        '<div id="root"></div>',
+        `<div id="root">${cleanedHtml}</div>`
+      );
 
       const filePath = url === "/"
         ? path.resolve(clientDir, "index.html")
