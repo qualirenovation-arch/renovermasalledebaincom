@@ -9,8 +9,8 @@ export default defineConfig(({ mode }) => ({
     outDir: "dist/client",
   },
   ssr: {
-    // Bundle TOUT dans le SSR pour éviter les doublons React
     noExternal: true,
+    external: ["jsdom"],
   },
   server: {
     host: "::",
