@@ -578,6 +578,44 @@ async function fetchAlbumsList(): Promise<{ slug: string; title: string; locatio
 }
 
 // ──────────────────────────────────────────────
+// Fetch single album by slug (or static_slug) from DB
+// ──────────────────────────────────────────────
+async function fetchAlbumBySlug(slug: string): Promise<AlbumMeta | null> {
+  try {
+    const supabaseUrl = Deno.env.get("SUPABASE_URL");
+    const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+    if (!supabaseUrl || !supabaseKey) return null;
+
+    const supabase = createClient(supabaseUrl, supabaseKey);
+    // Try slug first, then static_slug
+    let { data, error } = await supabase
+      .from("albums")
+      .select("title, location, description, cover_image, slug")
+      .eq("slug", slug)
+      .maybeSingle();
+
+    if (!data && !error) {
+      ({ data, error } = await supabase
+        .from("albums")
+        .select("title, location, description, cover_image, slug")
+        .eq("static_slug", slug)
+        .maybeSingle());
+    }
+
+    if (error || !data) return null;
+    return {
+      title: data.title,
+      location: data.location,
+      description: data.description,
+      coverPath: data.cover_image,
+    };
+  } catch (e) {
+    console.error("Failed to fetch album by slug:", e);
+    return null;
+  }
+}
+
+// ──────────────────────────────────────────────
 // Handler
 // ──────────────────────────────────────────────
 serve(async (req) => {
@@ -636,7 +674,12 @@ serve(async (req) => {
     const albumMatch = path.match(/^\/realisations\/([^/]+)$/);
     if (albumMatch) {
       const slug = albumMatch[1];
-      const album = ALBUMS[slug];
+      let album = ALBUMS[slug] || null;
+
+      // If not in hardcoded list, try to find by slug in DB
+      if (!album) {
+        album = await fetchAlbumBySlug(slug);
+      }
 
       if (album) {
         const ogImageUrl = `${BASE_URL}/og/${slug}.jpg`;
