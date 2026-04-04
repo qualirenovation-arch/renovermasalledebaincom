@@ -9,22 +9,8 @@ export default defineConfig(({ mode }) => ({
     outDir: "dist/client",
   },
   ssr: {
-    // Bundle CJS packages that don't support ESM named exports
-    noExternal: [
-      "react-helmet-async",
-      "class-variance-authority",
-      "clsx",
-      "tailwind-merge",
-      "lucide-react",
-      "embla-carousel-react",
-      "cmdk",
-      "sonner",
-      "vaul",
-      "input-otp",
-      "recharts",
-      "framer-motion",
-      /^@radix-ui\//,
-    ],
+    noExternal: true,
+    external: ["jsdom"],
   },
   server: {
     host: "::",
