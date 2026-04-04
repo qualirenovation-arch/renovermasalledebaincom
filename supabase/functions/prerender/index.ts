@@ -54,7 +54,14 @@ const localBusinessJsonLd = {
   "description": "Conception et rénovation de salle de bain haut de gamme à Paris et en Île-de-France",
   "url": BASE_URL,
   "priceRange": "€€€",
-  "serviceType": "Rénovation de salle de bain",
+  "makesOffer": {
+    "@type": "Offer",
+    "itemOffered": {
+      "@type": "Service",
+      "name": "Rénovation de salle de bain",
+      "description": "Conception et rénovation complète de salle de bain haut de gamme",
+    },
+  },
   "areaServed": [
     { "@type": "City", "name": "Paris" },
     { "@type": "AdministrativeArea", "name": "Île-de-France" },
