@@ -195,13 +195,19 @@ function escapeAttr(str) {
   return str.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
-// --- Extract JSON-LD scripts from rendered body HTML ---
+// --- Extract JSON-LD scripts from rendered body HTML (deduplicated) ---
 function extractJsonLdScripts(html) {
+  const seen = new Set();
   const jsonLdScripts = [];
   const regex = /<script\s+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi;
   let match;
   while ((match = regex.exec(html)) !== null) {
-    jsonLdScripts.push(match[0]);
+    // Deduplicate by content
+    const content = match[1].trim();
+    if (!seen.has(content)) {
+      seen.add(content);
+      jsonLdScripts.push(match[0]);
+    }
   }
   const cleanedHtml = html.replace(regex, '');
   return { cleanedHtml, jsonLdScripts };
