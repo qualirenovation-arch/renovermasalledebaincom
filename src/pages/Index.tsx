@@ -14,7 +14,7 @@ import { TestimonialsSlider } from "@/components/home/TestimonialsSlider";
 import { Recompenses } from "@/components/layout/Recompenses";
 import { PartnerCTA } from "@/components/home/PartnerCTA";
 import { OGTags } from "@/components/seo/OGTags";
-import { Helmet } from "react-helmet-async";
+
 import { PageCTA } from "@/components/layout/PageCTA";
 
 // Section "Pourquoi choisir" - 3 colonnes avec pictos SVG
