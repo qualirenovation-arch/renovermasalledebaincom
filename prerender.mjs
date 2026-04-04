@@ -156,9 +156,13 @@ async function prerender() {
 
       // Build helmet head tags
       const helmetTags = [];
+      let helmetTitle = null;
       if (helmet) {
         const titleStr = helmet.title?.toString();
-        if (titleStr && !titleStr.includes("undefined")) helmetTags.push(titleStr);
+        if (titleStr && !titleStr.includes("undefined") && titleStr.includes("<title>")) {
+          helmetTitle = titleStr;
+          helmetTags.push(titleStr);
+        }
         
         const metaStr = helmet.meta?.toString();
         if (metaStr) helmetTags.push(metaStr);
@@ -177,8 +181,13 @@ async function prerender() {
 
       let finalHtml = template;
 
+      // Replace the template <title> with the helmet one if available
+      if (helmetTitle) {
+        finalHtml = finalHtml.replace(/<title>[^<]*<\/title>/, helmetTitle);
+      }
+
       // Inject head tags
-      if (template.includes("<!--app-head-->")) {
+      if (finalHtml.includes("<!--app-head-->")) {
         finalHtml = finalHtml.replace("<!--app-head-->", headTags);
       } else if (headTags) {
         finalHtml = finalHtml.replace("</head>", `    ${headTags}\n  </head>`);
