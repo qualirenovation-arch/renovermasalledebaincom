@@ -42,7 +42,9 @@ interface RenderResult {
 }
 
 export function render(url: string): RenderResult {
-  const helmetContext = {} as { helmet: HelmetServerState };
+  // HelmetProvider context must be a mutable object — helmet is set AFTER renderToString
+  const helmetContext: { helmet?: HelmetServerState } = {};
+
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: { retry: false, staleTime: Infinity },
@@ -91,5 +93,5 @@ export function render(url: string): RenderResult {
     </HelmetProvider>
   );
 
-  return { html, helmet: helmetContext.helmet };
+  return { html, helmet: helmetContext.helmet! };
 }
