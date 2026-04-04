@@ -7,6 +7,28 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createClient } from "@supabase/supabase-js";
 
+// Polyfill browser globals pour le SSR
+if (typeof globalThis.localStorage === "undefined") {
+  const store = {};
+  globalThis.localStorage = {
+    getItem: (k) => store[k] ?? null,
+    setItem: (k, v) => { store[k] = String(v); },
+    removeItem: (k) => { delete store[k]; },
+    clear: () => { Object.keys(store).forEach((k) => delete store[k]); },
+    get length() { return Object.keys(store).length; },
+    key: (i) => Object.keys(store)[i] ?? null,
+  };
+}
+if (typeof globalThis.window === "undefined") {
+  globalThis.window = globalThis;
+}
+if (typeof globalThis.document === "undefined") {
+  globalThis.document = { querySelector: () => null, createElement: () => ({}) };
+}
+if (typeof globalThis.navigator === "undefined") {
+  globalThis.navigator = { userAgent: "node" };
+}
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // --- Configuration ---
