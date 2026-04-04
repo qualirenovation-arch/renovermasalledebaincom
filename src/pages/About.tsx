@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
@@ -49,71 +49,54 @@ export default function About() {
         description="Découvrez l'équipe Qualirenovation derrière renovermasalledebain.com. 20 ans d'expérience dans la rénovation de salle de bain à Paris."
         path="/a-propos"
       />
-      <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Qualirenovation – RenoverMaSalleDeBain.com",
-            "url": "https://renovermasalledebain.com",
-            "logo": "https://renovermasalledebain.com/og/default-og.jpg",
-            "description": "Entreprise spécialisée dans la rénovation de salle de bain haut de gamme à Paris et Île-de-France. 20 ans d'expérience, conception et réalisation clé en main.",
-            "foundingDate": "2005",
-            "areaServed": {
-              "@type": "GeoCircle",
-              "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 48.8566, "longitude": 2.3522 },
-              "geoRadius": "50000"
-            },
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Paris",
-              "addressRegion": "Île-de-France",
-              "addressCountry": "FR"
-            },
-            "sameAs": [
-              "https://www.houzz.fr/pro/qualirenovation",
-              "https://www.instagram.com/renovermasalledebain"
-            ],
-            "founder": {
-              "@type": "Person",
-              "name": "Carina Nahmani",
-              "jobTitle": "Maître d'œuvre",
-              "description": "20 ans d'expertise en rénovation de salle de bain à Paris"
-            },
-            "employee": [
-              {
-                "@type": "Person",
-                "name": "Rubens Mimouni",
-                "jobTitle": "Gérant"
-              },
-              {
-                "@type": "Person",
-                "name": "Thierry Pelmard",
-                "jobTitle": "Architecte partenaire",
-                "description": "Plus de 60 chantiers réalisés en collaboration"
-              }
-            ],
-            "knowsAbout": [
-              "Rénovation salle de bain",
-              "Carrelage zellige",
-              "Terrazzo",
-              "Douche italienne",
-              "Plomberie",
-              "Étanchéité"
-            ],
-            "hasCredential": [
-              { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Certifié Schlüter-Systems" },
-              { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Certifié Wedi" }
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5",
-              "reviewCount": "40",
-              "bestRating": "5"
-            }
-          })}
-        </script>
-      </Helmet>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Qualirenovation – RenoverMaSalleDeBain.com",
+        "url": "https://renovermasalledebain.com",
+        "logo": "https://renovermasalledebain.com/og/default-og.jpg",
+        "description": "Entreprise spécialisée dans la rénovation de salle de bain haut de gamme à Paris et Île-de-France. 20 ans d'expérience, conception et réalisation clé en main.",
+        "foundingDate": "2005",
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 48.8566, "longitude": 2.3522 },
+          "geoRadius": "50000"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Paris",
+          "addressRegion": "Île-de-France",
+          "addressCountry": "FR"
+        },
+        "sameAs": [
+          "https://www.houzz.fr/pro/qualirenovation",
+          "https://www.instagram.com/renovermasalledebain"
+        ],
+        "founder": {
+          "@type": "Person",
+          "name": "Carina Nahmani",
+          "jobTitle": "Maître d'œuvre",
+          "description": "20 ans d'expertise en rénovation de salle de bain à Paris"
+        },
+        "employee": [
+          { "@type": "Person", "name": "Rubens Mimouni", "jobTitle": "Gérant" },
+          { "@type": "Person", "name": "Thierry Pelmard", "jobTitle": "Architecte partenaire", "description": "Plus de 60 chantiers réalisés en collaboration" }
+        ],
+        "knowsAbout": [
+          "Rénovation salle de bain", "Carrelage zellige", "Terrazzo",
+          "Douche italienne", "Plomberie", "Étanchéité"
+        ],
+        "hasCredential": [
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Certifié Schlüter-Systems" },
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Certifié Wedi" }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "40",
+          "bestRating": "5"
+        }
+      }) }} />
       {/* Hero */}
       <section className="relative py-16 md:py-24">
         <div className="absolute inset-0 bg-stone" />
