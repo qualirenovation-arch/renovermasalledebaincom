@@ -5,6 +5,13 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  build: {
+    outDir: "dist/client",
+  },
+  ssr: {
+    // Bundle TOUT dans le SSR pour éviter les doublons React
+    noExternal: true,
+  },
   server: {
     host: "::",
     port: 8080,
