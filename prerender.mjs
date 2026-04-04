@@ -14,7 +14,7 @@ const dom = new JSDOM("<!doctype html><html><body><div id='root'></div></body></
 });
 globalThis.window = dom.window;
 globalThis.document = dom.window.document;
-globalThis.navigator = dom.window.navigator;
+Object.defineProperty(globalThis, 'navigator', { value: dom.window.navigator, writable: true, configurable: true });
 globalThis.localStorage = dom.window.localStorage;
 globalThis.HTMLElement = dom.window.HTMLElement;
 globalThis.Element = dom.window.Element;
@@ -24,6 +24,7 @@ globalThis.cancelAnimationFrame = clearTimeout;
 globalThis.IntersectionObserver = class { observe() {} unobserve() {} disconnect() {} };
 globalThis.ResizeObserver = class { observe() {} unobserve() {} disconnect() {} };
 globalThis.MutationObserver = dom.window.MutationObserver;
+globalThis.matchMedia = () => ({ matches: false, addListener: () => {}, removeListener: () => {}, addEventListener: () => {}, removeEventListener: () => {} });
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
