@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => ({
     outDir: "dist/client",
   },
   ssr: {
-    noExternal: ["react-helmet-async"],
+    noExternal: ["react-helmet-async", "react", "react-dom", "react-router-dom", "@tanstack/react-query", "framer-motion"],
   },
   server: {
     host: "::",
