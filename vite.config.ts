@@ -8,6 +8,9 @@ export default defineConfig(({ mode }) => ({
   build: {
     outDir: "dist/client",
   },
+  ssr: {
+    noExternal: ["react-helmet-async"],
+  },
   server: {
     host: "::",
     port: 8080,
