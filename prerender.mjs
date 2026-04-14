@@ -272,7 +272,7 @@ async function prerender() {
       // Inject body content
       finalHtml = finalHtml.replace(
         '<div id="root"></div>',
-        `<div id="root">${cleanedHtml}</div>`
+        `<div id="root" data-server-rendered>${cleanedHtml}</div>`
       );
 
       const filePath = route.path === "/"

@@ -5,8 +5,11 @@ import "./index.css";
 
 const container = document.getElementById("root")!;
 
-if (import.meta.env.PROD && container.innerHTML.trim().length > 0) {
-  // En production, si le HTML est déjà pré-rendu, on hydrate
+// Only hydrate in production when real SSG content is present (has a data attribute set by prerender)
+const hasPrerenderedContent =
+  import.meta.env.PROD && container.hasAttribute("data-server-rendered");
+
+if (hasPrerenderedContent) {
   hydrateRoot(
     container,
     <HelmetProvider>
@@ -14,7 +17,6 @@ if (import.meta.env.PROD && container.innerHTML.trim().length > 0) {
     </HelmetProvider>
   );
 } else {
-  // En développement ou si pas de pré-rendu, on crée normalement
   createRoot(container).render(
     <HelmetProvider>
       <App />
