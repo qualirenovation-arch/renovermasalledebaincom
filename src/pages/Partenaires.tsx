@@ -182,7 +182,7 @@ const brandCategories: PartnerCategory[] = [
       { name: "Farrow & Ball", url: "https://www.farrow-ball.com/fr", description: "Peintures et papiers peints haut de gamme", logo: farrowBallLogo },
       { name: "Little Greene", url: "https://www.littlegreene.fr", description: "Peintures et couleurs britanniques", logo: littleGreeneLogo },
       { name: "Ressource", url: "https://www.ressource-peintures.com", description: "Peintures écologiques françaises", logo: ressourceLogo },
-      { name: "Argile", url: "https://www.argile-peinture.fr", description: "Peintures naturelles à l'argile", logo: argileLogo },
+      { name: "Argile", url: "https://argile-peinture.com", description: "Peintures naturelles à l'argile", logo: argileLogo },
       { name: "Unikalo", url: "https://www.unikalo.com", description: "Peintures professionnelles", logo: unikaloLogo },
       { name: "Benjamin Moore", url: "https://www.benjaminmoore.com/fr-fr", description: "Peintures américaines premium", logo: benjaminMooreLogo },
     ],
