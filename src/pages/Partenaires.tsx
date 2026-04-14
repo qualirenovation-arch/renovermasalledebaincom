@@ -184,7 +184,7 @@ const brandCategories: PartnerCategory[] = [
       { name: "Ressource", url: "https://www.ressource-peintures.com", description: "Peintures écologiques françaises", logo: ressourceLogo },
       { name: "Argile", url: "https://argile-peinture.com", description: "Peintures naturelles à l'argile", logo: argileLogo },
       { name: "Unikalo", url: "https://www.unikalo.com", description: "Peintures professionnelles", logo: unikaloLogo },
-      { name: "Benjamin Moore", url: "https://www.benjaminmoore.com/fr-fr", description: "Peintures américaines premium", logo: benjaminMooreLogo },
+      { name: "Benjamin Moore", url: "https://www.benjaminmoorefrance.com", description: "Peintures américaines premium", logo: benjaminMooreLogo },
     ],
   },
 ];
