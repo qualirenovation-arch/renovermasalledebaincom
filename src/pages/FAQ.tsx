@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { OGTags } from "@/components/seo/OGTags";
+import { Helmet } from "react-helmet-async";
 import { ArrowRight, Plus, Minus, Play, Instagram } from "lucide-react";
 import { useState, useMemo } from "react";
 import { FAQStickyTOC } from "@/components/faq/FAQStickyTOC";
@@ -457,15 +458,16 @@ export default function FAQ() {
   return (
     <Layout>
       <OGTags
-        title="FAQ Rénovation salle de bain à Paris – Prix, délais, étanchéité"
+        title="FAQ – Questions fréquentes"
         description="Toutes les réponses sur la rénovation de salle de bain à Paris : prix au m², durée des travaux, étanchéité DTU 52.2, pose carrelage et accompagnement maître d'œuvre."
         path="/faq"
       />
-      {/* JSON-LD Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      {/* JSON-LD Schema (FAQPage) */}
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </Helmet>
 
       {/* Hero */}
       <section className="relative py-24 md:py-32">

@@ -705,7 +705,7 @@ export default function Devis() {
   return (
     <Layout>
       <OGTags
-        title="Devis rénovation salle de bain"
+        title="Compléter votre demande de devis"
         description="Demandez votre devis gratuit pour la rénovation de votre salle de bain à Paris. Un chantier heureux, sans stress et sans imprévus. Réponse sous 48h."
         path="/devis/completer"
       />

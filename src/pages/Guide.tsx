@@ -52,10 +52,11 @@ const Guide = () => {
   return (
     <Layout>
       <OGTags
-        title="Guide travaux rénovation salle de bain à Paris – Étapes, normes & délais"
+        title="Guide travaux salle de bain Paris"
         description="Découvrez toutes les étapes pour rénover une salle de bain à Paris : planning, étanchéité DTU 52.2, plomberie, pose carrelage et garanties décennales."
         path="/guide-travaux"
         coverImage="https://renovermasalledebain.com/og/guide-travaux.jpg"
+        type="article"
       />
       
       {/* JSON-LD Article */}
