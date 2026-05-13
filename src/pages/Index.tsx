@@ -179,7 +179,7 @@ export default function Index() {
               delay={0.2}
               className="relative order-first lg:order-last"
             >
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-[0_20px_60px_-15px_hsl(0_0%_0%/0.2)]">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-[0_20px_60px_-15px_hsl(0_0%_0%/0.2)]">
                 <HeroSlideshow />
               </div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-gold/10 -z-10 hidden lg:block" />
