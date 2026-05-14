@@ -561,7 +561,7 @@ export default function Presse() {
                   </p>
 
                   {/* Journaliste + Location (optionnel) */}
-                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground/70">
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
                     {article.journalist && (
                       <span className="italic">Par {article.journalist}</span>
                     )}
@@ -604,7 +604,7 @@ export default function Presse() {
                 </p>
               );
             })()}
-            <p className="text-xs text-muted-foreground/60 mt-2">
+            <p className="text-xs text-muted-foreground mt-2">
               Une présence médiatique continue qui témoigne de notre expertise reconnue en rénovation de salle de bain.
             </p>
           </div>
