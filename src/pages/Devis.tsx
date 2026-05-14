@@ -815,10 +815,83 @@ export default function Devis() {
         <div className="container-custom">
           {/* Type Selector */}
           {devisType === 'selector' && (
-            <DevisTypeSelector
-              onSelectClassic={() => setDevisType('classique')}
-              onSelectWaterDamage={() => setDevisType('degat_eaux')}
-            />
+            <>
+              <DevisTypeSelector
+                onSelectClassic={() => setDevisType('classique')}
+                onSelectWaterDamage={() => setDevisType('degat_eaux')}
+              />
+
+              {/* Bloc SEO — orienté recherche */}
+              <article className="max-w-3xl mx-auto mt-16 md:mt-24 space-y-10 text-foreground">
+                <header className="text-center">
+                  <h2 className="font-display text-2xl md:text-3xl font-semibold mb-4 text-primary">
+                    Devis rénovation salle de bain à Paris : tout ce qu'il faut savoir
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Obtenez un devis gratuit, détaillé et sans engagement pour la rénovation
+                    complète de votre salle de bain à Paris et en Île-de-France. Visite technique
+                    sur site, prix transparents, accompagnement de A à Z.
+                  </p>
+                </header>
+
+                <section>
+                  <h2 className="font-display text-xl md:text-2xl font-semibold mb-3">
+                    Comment obtenir votre devis en 3 étapes
+                  </h2>
+                  <ol className="space-y-3 list-decimal pl-5 text-muted-foreground leading-relaxed">
+                    <li><strong className="text-foreground">Remplissez le formulaire</strong> en ligne en moins de 5 minutes (type de projet, équipements souhaités, finitions).</li>
+                    <li><strong className="text-foreground">Visite technique gratuite</strong> à votre domicile sous 7 jours pour relever les contraintes (plomberie, évacuation, copropriété).</li>
+                    <li><strong className="text-foreground">Devis détaillé sous 10 jours</strong> ouvrés, poste par poste, sans engagement.</li>
+                  </ol>
+                </section>
+
+                <section>
+                  <h2 className="font-display text-xl md:text-2xl font-semibold mb-3">
+                    Combien coûte une rénovation de salle de bain à Paris ?
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed mb-3">
+                    Le budget moyen pour une rénovation complète à Paris se situe entre
+                    <strong className="text-foreground"> 12 000 € et 25 000 €</strong> selon la
+                    surface, le niveau de finitions et les contraintes techniques. Notre devis
+                    détaille chaque poste :
+                  </p>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-muted-foreground">
+                    <li>• Dépose et démolition</li>
+                    <li>• Plomberie et évacuations</li>
+                    <li>• Électricité et éclairage</li>
+                    <li>• Étanchéité (SEL/SPEC, DTU 52.2)</li>
+                    <li>• Carrelage et faïence</li>
+                    <li>• Sanitaires et robinetterie</li>
+                    <li>• Meubles et rangements</li>
+                    <li>• Finitions et peinture</li>
+                  </ul>
+                </section>
+
+                <section>
+                  <h2 className="font-display text-xl md:text-2xl font-semibold mb-3">
+                    Zones d'intervention
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Nous intervenons à <strong className="text-foreground">Paris (tous arrondissements)</strong>,
+                    dans les Hauts-de-Seine (92), la Seine-Saint-Denis (93), le Val-de-Marne (94)
+                    et le Val-d'Oise (95). Spécialistes de la rénovation en copropriété parisienne :
+                    déclaration de travaux, gestion des nuisances, respect du règlement.
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="font-display text-xl md:text-2xl font-semibold mb-3">
+                    Devis dégât des eaux : prise en charge assurance
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Vous êtes victime d'un dégât des eaux ? Choisissez le parcours dédié
+                    ci-dessus. Nous établissons un devis compatible avec votre assurance
+                    habitation et vous accompagnons dans les démarches administratives
+                    (déclaration, expertise, remise en état).
+                  </p>
+                </section>
+              </article>
+            </>
           )}
 
           {/* Water Damage Form */}
