@@ -351,7 +351,7 @@ export default function Partenaires() {
                           className="h-6 md:h-7 w-auto object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300 mb-1"
                         />
                       ) : partner.iconComponent ? (
-                        <div className="text-muted-foreground/70 group-hover:text-primary transition-colors duration-300 mb-1">
+                        <div className="text-muted-foreground group-hover:text-primary transition-colors duration-300 mb-1">
                           {partner.iconComponent}
                         </div>
                       ) : (
@@ -443,7 +443,7 @@ export default function Partenaires() {
                           className="h-6 md:h-7 w-auto object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300 mb-1"
                         />
                       ) : partner.iconComponent ? (
-                        <div className="text-muted-foreground/70 group-hover:text-primary transition-colors duration-300 mb-1">
+                        <div className="text-muted-foreground group-hover:text-primary transition-colors duration-300 mb-1">
                           {partner.iconComponent}
                         </div>
                       ) : (
@@ -512,7 +512,7 @@ export default function Partenaires() {
                       className="h-8 md:h-10 w-auto object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300 mb-2"
                     />
                   ) : partner.iconComponent ? (
-                    <div className="text-muted-foreground/70 group-hover:text-primary transition-colors duration-300 mb-2">
+                    <div className="text-muted-foreground group-hover:text-primary transition-colors duration-300 mb-2">
                       {partner.iconComponent}
                     </div>
                   ) : (

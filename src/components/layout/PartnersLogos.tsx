@@ -142,7 +142,7 @@ export function PartnersLogos() {
                   className="w-full h-8 md:h-10 object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300"
                 />
               ) : (
-                <span className={`text-muted-foreground/70 group-hover:text-primary transition-colors duration-300 ${partner.style || ''}`}>
+                <span className={`text-muted-foreground group-hover:text-primary transition-colors duration-300 ${partner.style || ''}`}>
                   {partner.textLogo}
                 </span>
               )}

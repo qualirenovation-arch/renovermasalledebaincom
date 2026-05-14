@@ -63,7 +63,7 @@ export function QRSlideshow() {
         />
       </AnimatePresence>
 
-      <div className="absolute bottom-3 left-3 bg-background/80 backdrop-blur-sm rounded-full px-3 py-1 text-xs text-foreground/80">
+      <div className="absolute bottom-3 left-3 bg-background/90 backdrop-blur-sm rounded-full px-3 py-1 text-xs text-foreground">
         {current.location}
       </div>
 
