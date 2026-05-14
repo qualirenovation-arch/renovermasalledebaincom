@@ -714,6 +714,50 @@ export default function Devis() {
         <Helmet>
           <script type="application/ld+json">{JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Qualirenovation – RenoverMaSalleDeBain.com",
+            "description": "Conception et rénovation de salle de bain haut de gamme à Paris et en Île-de-France. Devis gratuit, visite technique sur site.",
+            "url": "https://renovermasalledebain.com/devis",
+            "telephone": "+33659764685",
+            "email": "gestion@qualiconcept.fr",
+            "priceRange": "€€€",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "6 rue d'Armaillé",
+              "addressLocality": "Paris",
+              "postalCode": "75017",
+              "addressRegion": "Île-de-France",
+              "addressCountry": "FR"
+            },
+            "areaServed": [
+              { "@type": "City", "name": "Paris" },
+              { "@type": "AdministrativeArea", "name": "Hauts-de-Seine" },
+              { "@type": "AdministrativeArea", "name": "Seine-Saint-Denis" },
+              { "@type": "AdministrativeArea", "name": "Val-de-Marne" },
+              { "@type": "AdministrativeArea", "name": "Val-d'Oise" }
+            ],
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 48.888,
+              "longitude": 2.298
+            },
+            "makesOffer": {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Devis rénovation salle de bain",
+                "description": "Devis gratuit et détaillé pour la rénovation complète de salle de bain, avec visite technique sur site à Paris et en Île-de-France."
+              }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "reviewCount": "40",
+              "bestRating": "5"
+            }
+          })}</script>
+          <script type="application/ld+json">{JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "FAQPage",
             "mainEntity": [
               {
