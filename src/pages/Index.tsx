@@ -451,6 +451,13 @@ export default function Index() {
             <p className="text-muted-foreground text-base md:text-lg">
               Nous vous accompagnons de A à Z.
             </p>
+            <p className="text-muted-foreground text-base md:text-lg mt-3">
+              Commencez par un{" "}
+              <Link to="/devis" className="text-primary font-medium underline underline-offset-2 hover:text-primary/80">
+                devis gratuit et personnalisé pour votre rénovation de salle de bain
+              </Link>
+              {" "}— étude gratuite sur site à Paris et en Île-de-France.
+            </p>
           </ScrollAnimation>
 
           <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8 max-w-5xl mx-auto" staggerDelay={0.1}>
