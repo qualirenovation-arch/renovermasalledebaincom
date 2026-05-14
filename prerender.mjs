@@ -75,6 +75,10 @@ const PAGE_SEO = {
     title: "Nos réalisations",
     description: "Découvrez nos rénovations de salles de bain à Paris et Île-de-France : zellige, marbre, terrazzo. Avant/Après de nos chantiers.",
   },
+  "/devis": {
+    title: "Demande de devis",
+    description: "Demandez votre devis gratuit pour la rénovation de votre salle de bain à Paris et Île-de-France. Réponse sous 48h.",
+  },
   "/pourquoi-nous": {
     title: "Notre méthode",
     description: "Découvrez l'approche RMSB : conception, anticipation, coordination. Pour un chantier heureux sans stress.",
