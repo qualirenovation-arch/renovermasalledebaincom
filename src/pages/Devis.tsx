@@ -15,6 +15,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { OGTags } from "@/components/seo/OGTags";
+import { Helmet } from "react-helmet-async";
 import { 
   Upload, 
   Phone, 
