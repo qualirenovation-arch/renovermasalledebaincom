@@ -3,6 +3,7 @@ Allow: /
 Disallow: /admin/
 Disallow: /og-preview
 Disallow: /visuels-houzz
+Disallow: /devis/rappel
 
 User-agent: GPTBot
 Allow: /
