@@ -97,7 +97,7 @@ export function ScrollingTicker() {
             <div key={`${item.label}-${index}`} className="flex items-center gap-6 md:gap-8">
               <Link
                 to={item.link}
-                className="inline-flex items-center gap-2 text-sm text-foreground/80 hover:text-foreground transition-colors group focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+                className="inline-flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors group focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
               >
                 <Badge
                   variant="secondary"
@@ -109,7 +109,7 @@ export function ScrollingTicker() {
                 <span className="group-hover:underline underline-offset-2">{item.label}</span>
               </Link>
               {index < duplicatedItems.length - 1 && (
-                <span className="text-muted-foreground/40 text-xs">•</span>
+                <span className="text-muted-foreground text-xs">•</span>
               )}
             </div>
           ))}
