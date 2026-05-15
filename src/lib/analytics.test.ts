@@ -40,6 +40,7 @@ describe("analytics", () => {
       expect(gtagMock).toHaveBeenCalledWith("event", "devis_click", {
         event_category: "engagement",
         event_label: "Mon étude",
+        label: "Mon étude",
         link_url: "/devis#devis-form",
         link_type: "classique",
       });
@@ -55,6 +56,7 @@ describe("analytics", () => {
       expect(gtagMock).toHaveBeenCalledWith("event", "devis_click", {
         event_category: "engagement",
         event_label: "Urgence",
+        label: "Urgence",
         link_url: "/devis?type=degat_eaux#devis-form",
         link_type: "degat_eaux",
       });
