@@ -30,6 +30,7 @@ import Avis from "./pages/Avis";
 import RenovationParis from "./pages/RenovationParis";
 import QualiRenovation from "./pages/QualiRenovation";
 import OGPreview from "./pages/OGPreview";
+import DebugTracking from "./pages/DebugTracking";
 import Admin from "./pages/Admin";
 import AdminLogin from "./pages/AdminLogin";
 import AdminPartenaires from "./pages/AdminPartenaires";
@@ -75,6 +76,7 @@ const App = () => (
           <Route path="/renovation-salle-de-bain-paris" element={<RenovationParis />} />
           <Route path="/qualirenovation" element={<QualiRenovation />} />
           <Route path="/og-preview" element={<OGPreview />} />
+          <Route path="/debug-tracking" element={<DebugTracking />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/partenaires" element={<AdminPartenaires />} />
