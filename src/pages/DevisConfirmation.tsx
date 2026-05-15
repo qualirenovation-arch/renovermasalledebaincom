@@ -67,7 +67,7 @@ export default function DevisConfirmation() {
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/devis">Nouvelle demande</Link>
+                <Link to="/devis#devis-form">Nouvelle demande</Link>
               </Button>
             </div>
           </motion.div>

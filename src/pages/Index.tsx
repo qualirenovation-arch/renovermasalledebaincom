@@ -453,7 +453,7 @@ export default function Index() {
             </p>
             <p className="text-muted-foreground text-base md:text-lg mt-3">
               Commencez par un{" "}
-              <Link to="/devis" className="text-primary font-medium underline underline-offset-2 hover:text-primary/80">
+              <Link to="/devis#devis-form" className="text-primary font-medium underline underline-offset-2 hover:text-primary/80">
                 devis gratuit et personnalisé pour votre rénovation de salle de bain
               </Link>
               {" "}— étude gratuite sur site à Paris et en Île-de-France.

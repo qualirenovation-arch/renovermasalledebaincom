@@ -212,7 +212,7 @@ export default function WhyUs() {
                 </p>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-8">
                   Prêt à vivre la même aventure ?{" "}
-                  <Link to="/devis" className="text-primary font-medium underline underline-offset-2 hover:text-primary/80">
+                  <Link to="/devis#devis-form" className="text-primary font-medium underline underline-offset-2 hover:text-primary/80">
                     Demandez votre devis gratuit et personnalisé pour rénover votre salle de bain
                   </Link>
                   {" "}— nous vous accompagnons de la conception à la réalisation.
