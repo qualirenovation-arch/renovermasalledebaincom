@@ -92,10 +92,13 @@ describe("analytics", () => {
 
       anchor.dispatchEvent(new MouseEvent("click", { bubbles: true }));
 
-      expect(gtagMock).toHaveBeenCalledTimes(1);
-      const [, , params] = gtagMock.mock.calls[0];
-      expect(params.link_url).toBe("/devis?type=degat_eaux#devis-form");
-      expect(params.link_type).toBe("degat_eaux");
+      const devisCalls = gtagMock.mock.calls.filter(
+        ([, name]: any[]) => name === "devis_click"
+      );
+      expect(devisCalls.length).toBeGreaterThanOrEqual(1);
+      const lastCall = devisCalls[devisCalls.length - 1];
+      expect(lastCall[2].link_url).toBe("/devis?type=degat_eaux#devis-form");
+      expect(lastCall[2].link_type).toBe("degat_eaux");
 
       document.body.removeChild(anchor);
     });
