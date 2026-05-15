@@ -222,7 +222,7 @@ export default function Realisations() {
             </p>
             <p className="text-muted-foreground text-lg mt-4">
               Envie de la même transformation ?{" "}
-              <Link to="/devis" className="text-primary font-medium underline underline-offset-2 hover:text-primary/80">
+              <Link to="/devis#devis-form" className="text-primary font-medium underline underline-offset-2 hover:text-primary/80">
                 Demandez un devis personnalisé pour votre rénovation de salle de bain
               </Link>
               {" "}à Paris et en Île-de-France — visite technique gratuite.
