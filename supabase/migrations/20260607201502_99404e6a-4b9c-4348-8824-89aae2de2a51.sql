@@ -1,0 +1,2 @@
+ALTER TABLE public.quote_requests DROP CONSTRAINT IF EXISTS quote_requests_type_devis_check;
+ALTER TABLE public.quote_requests ADD CONSTRAINT quote_requests_type_devis_check CHECK (type_devis = ANY (ARRAY['classique'::text, 'degat_des_eaux'::text, 'guide_download'::text]));
