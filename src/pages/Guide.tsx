@@ -17,6 +17,9 @@ import { GuideGarantiesSection } from "@/components/guide/GuideGarantiesSection"
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { QualiRenovationCTA } from "@/components/shared/QualiRenovationCTA";
+import { useState } from "react";
+import { GuideDownloadModal } from "@/components/guide/GuideDownloadModal";
+import { Download } from "lucide-react";
 
 const jsonLdArticle = {
   "@context": "https://schema.org",
@@ -49,6 +52,7 @@ const jsonLdArticle = {
 };
 
 const Guide = () => {
+  const [downloadOpen, setDownloadOpen] = useState(false);
   return (
     <Layout>
       <OGTags
@@ -68,6 +72,18 @@ const Guide = () => {
       <div className="guide-page">
         <GuideReadingProgress />
         <GuideHero />
+        <div className="container mx-auto px-4 -mt-2 mb-8">
+          <div className="max-w-4xl mx-auto flex justify-center">
+            <button
+              onClick={() => setDownloadOpen(true)}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 transition-all hover:shadow-md min-h-[44px] text-sm md:text-base font-light"
+              style={{ borderColor: "#124A66", color: "#124A66", backgroundColor: "white" }}
+            >
+              <Download className="w-4 h-4" />
+              Télécharger le guide travaux (PDF)
+            </button>
+          </div>
+        </div>
         <GuideVideos />
         <GuideMobileTOC />
 
@@ -181,6 +197,7 @@ const Guide = () => {
           buttonText="Je fais analyser mon projet"
         />
       </div>
+      <GuideDownloadModal open={downloadOpen} onOpenChange={setDownloadOpen} />
     </Layout>
   );
 };
