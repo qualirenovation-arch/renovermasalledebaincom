@@ -122,12 +122,18 @@ Deno.serve(async (req) => {
   </div>
   <div style="padding:30px;background:#f9f9f9;">
     <p>Bonjour <strong>${safeFirst}</strong>,</p>
-    <p>Merci pour votre intérêt. Vous trouverez ci-dessous votre <strong>Guide travaux complet – Rénover ma salle de bain</strong> au format PDF.</p>
+    <p>Merci pour votre intérêt. Vous trouverez ci-joint votre <strong>Guide travaux complet – Rénover ma salle de bain</strong> au format PDF.</p>
     <p style="text-align:center;margin:28px 0;">
       <a href="${GUIDE_URL}" target="_blank" style="display:inline-block;background:#124A66;color:#fff;padding:14px 28px;text-decoration:none;border-radius:6px;font-weight:bold;">Télécharger le guide (PDF)</a>
     </p>
     <p>Ce guide rassemble nos retours d'expérience sur 20 ans de chantiers parisiens : planning, plomberie, étanchéité DTU 52.2, finitions, garanties.</p>
-    <p>Si vous avez un projet en tête, nous serons heureux d'en discuter avec vous.</p>
+    <div style="background:#fff;border-left:4px solid #c2a016;padding:20px;margin:24px 0;border-radius:0 8px 8px 0;">
+      <p style="margin:0 0 12px 0;font-size:16px;color:#124A66;"><strong>Vous aimez notre philosophie ?</strong></p>
+      <p style="margin:0 0 16px 0;">Vous souhaitez un accompagnement personnalisé et obtenir votre devis gratuit ?</p>
+      <p style="text-align:center;margin:0;">
+        <a href="https://cal.com/votre-conseiller-travaux-siw706/30min" target="_blank" style="display:inline-block;background:#c2a016;color:#fff;padding:12px 24px;text-decoration:none;border-radius:6px;font-weight:bold;">Réserver mon call de 30 min</a>
+      </p>
+    </div>
     <p>À très bientôt,<br><strong>L'équipe RenoverMaSalleDeBain.com</strong><br>Paris &amp; Île-de-France</p>
   </div>
   <div style="padding:20px;text-align:center;font-size:12px;color:#666;background:#f0f0f0;">
