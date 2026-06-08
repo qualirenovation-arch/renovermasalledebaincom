@@ -83,6 +83,25 @@ Deno.serve(async (req) => {
         const safeCity = escapeHtml(city);
         const safePhone = escapeHtml(phone);
 
+        // Fetch the PDF and encode it as base64 for attachment
+        let pdfBase64: string | null = null;
+        try {
+          const pdfResp = await fetch(GUIDE_URL);
+          if (pdfResp.ok) {
+            const buf = new Uint8Array(await pdfResp.arrayBuffer());
+            let binary = "";
+            const chunk = 0x8000;
+            for (let i = 0; i < buf.length; i += chunk) {
+              binary += String.fromCharCode(...buf.subarray(i, i + chunk));
+            }
+            pdfBase64 = btoa(binary);
+          } else {
+            console.error("PDF fetch failed:", pdfResp.status);
+          }
+        } catch (e) {
+          console.error("PDF fetch error (non-blocking):", e);
+        }
+
         const clientResp = await fetch("https://api.resend.com/emails", {
           method: "POST",
           headers: { "Content-Type": "application/json", Authorization: `Bearer ${RESEND_API_KEY}` },
@@ -90,6 +109,11 @@ Deno.serve(async (req) => {
             from: "RenoverMaSalleDeBain.com <gestion@renovermasalledebain.com>",
             to: [email],
             subject: "Votre guide travaux salle de bain – à télécharger",
+            attachments: pdfBase64 ? [{
+              filename: "guide-travaux-renover-ma-salle-de-bain.pdf",
+              content: pdfBase64,
+              content_type: "application/pdf",
+            }] : undefined,
             html: `<!DOCTYPE html><html><head><meta charset="utf-8"></head>
 <body style="font-family:'Nunito Sans',Arial,sans-serif;font-weight:300;line-height:1.6;color:#333;max-width:600px;margin:0 auto;">
   <div style="background:linear-gradient(135deg,#124A66 0%,#0d3a52 100%);color:#fff;padding:24px 16px;text-align:center;">
