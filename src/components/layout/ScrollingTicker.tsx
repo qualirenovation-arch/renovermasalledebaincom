@@ -77,7 +77,7 @@ export function ScrollingTicker() {
 
   return (
     <div
-      className="bg-secondary/40 border-b border-border/30 overflow-hidden h-10 md:h-11"
+      className="sticky top-16 sm:top-20 lg:top-24 z-40 bg-secondary/40 backdrop-blur-md border-b border-border/30 overflow-hidden h-10 md:h-11"
       role="marquee"
       aria-label="Actualités et liens utiles"
     >
