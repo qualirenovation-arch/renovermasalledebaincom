@@ -12,7 +12,7 @@ const corsHeaders = {
 
 const RATE_LIMIT_MAX = 5;
 const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000;
-const GUIDE_URL = "https://renovermasalledebain.com/documents/guide-travaux-renover-ma-salle-de-bain.pdf";
+const GUIDE_URL = "https://wacqnrxbszvznfqiiuxm.supabase.co/storage/v1/object/public/email-assets/guide-travaux-renover-ma-salle-de-bain.pdf";
 
 function escapeHtml(s: string): string {
   if (!s) return "";
