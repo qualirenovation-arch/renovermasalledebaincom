@@ -5,6 +5,7 @@ import { Layout } from "@/components/layout/Layout";
 import { PageCTA } from "@/components/layout/PageCTA";
 import { ArrowRight, ExternalLink, Calendar, Newspaper, Star } from "lucide-react";
 import { OGTags } from "@/components/seo/OGTags";
+import { Picture } from "@/components/Picture";
 
 // Images
 import stMande1 from "@/assets/st-mande-1.jpg";
@@ -519,11 +520,11 @@ export default function Presse() {
                 {/* Image */}
                 {article.image && (
                   <div className={`aspect-[16/10] overflow-hidden relative ${article.id === 'houzz-best-of-2026-photo' ? 'bg-[#0a1a0a]' : ''}`}>
-                    <img 
+                    <Picture 
                       src={article.image} 
                       alt={article.titre_article}
                       className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${article.id === 'houzz-best-of-2026-photo' ? 'object-contain' : 'object-cover'}`}
-                      loading="lazy"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     {/* Badge "À la une" pour articles épinglés */}
                     {article.pinnedOrder !== undefined && (

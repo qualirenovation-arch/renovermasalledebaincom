@@ -1,4 +1,5 @@
 import { useCallback } from "react";
+import { Picture } from "@/components/Picture";
 import houzzAnnouncement from "@/assets/houzz-announcement-final.jpg";
 import houzzSquare from "@/assets/houzz-instagram-square.jpg";
 import houzzStory from "@/assets/houzz-instagram-story.jpg";
@@ -53,40 +54,44 @@ export default function VisuelsHouzz() {
         {/* Format 16:9 */}
         <div>
           <h2 className="text-white text-xl mb-4">Format 16:9 (Houzz)</h2>
-          <img 
+          <Picture 
             src={houzzAnnouncement} 
             alt="Houzz Announcement 16:9" 
             className="w-full max-w-4xl mx-auto rounded-lg shadow-2xl"
+            sizes="(max-width: 1024px) 100vw, 1024px"
           />
         </div>
 
         {/* Format Carré */}
         <div>
           <h2 className="text-white text-xl mb-4">Format Carré 1:1 (Instagram Feed)</h2>
-          <img 
+          <Picture 
             src={houzzSquare} 
             alt="Houzz Instagram Square" 
             className="w-full max-w-lg mx-auto rounded-lg shadow-2xl"
+            sizes="(max-width: 512px) 100vw, 512px"
           />
         </div>
 
         {/* Format Story */}
         <div>
           <h2 className="text-white text-xl mb-4">Format Story 9:16 (Instagram Stories)</h2>
-          <img 
+          <Picture 
             src={houzzStory} 
             alt="Houzz Instagram Story" 
             className="max-h-[80vh] mx-auto rounded-lg shadow-2xl"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
 
         {/* Photo Paris 10 Faubourg Saint-Denis Doré */}
         <div>
           <h2 className="text-white text-xl mb-4">Paris 10ème — Faubourg Saint-Denis Doré</h2>
-          <img 
+          <Picture 
             src={paris10Dore} 
             alt="Salle de bain Paris 10 Faubourg Saint-Denis dorée" 
             className="w-full max-w-3xl mx-auto rounded-lg shadow-2xl"
+            sizes="(max-width: 768px) 100vw, 768px"
           />
         </div>
 
@@ -104,10 +109,11 @@ export default function VisuelsHouzz() {
         <div>
           <h2 className="text-white text-xl mb-4">Pied de page Houzz</h2>
           <div className="relative max-w-5xl mx-auto">
-            <img 
+            <Picture 
               src={houzzPiedDePage} 
               alt="Pied de page Houzz" 
               className="w-full rounded-t-lg shadow-2xl"
+              sizes="(max-width: 1280px) 100vw, 1280px"
             />
             <div className="bg-[#f5f5f5] rounded-b-lg py-3 px-4 text-center shadow-2xl">
               <p className="text-[#124A66] text-sm md:text-base lg:text-lg font-medium">
