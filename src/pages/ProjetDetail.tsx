@@ -3,6 +3,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
+import { Picture } from "@/components/Picture";
 import { ArrowLeft, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { AlbumCTA } from "@/components/albums/AlbumCTA";
 import { AlbumSeoSections } from "@/components/albums/AlbumSeoSections";
