@@ -7,6 +7,7 @@ import { OGTags } from "@/components/seo/OGTags";
 import { Shield, Award, Users, Clock, CheckCircle2, ArrowRight, Camera, Ruler } from "lucide-react";
 import { PageCTA } from "@/components/layout/PageCTA";
 import { QualiRenovationCTA } from "@/components/shared/QualiRenovationCTA";
+import { Picture } from "@/components/Picture";
 import aboutHistoire from "@/assets/about-histoire.jpg";
 import teamPhoto from "@/assets/team-photo.jpg";
 import teamChantier1 from "@/assets/team-chantier-1.jpg";
@@ -126,10 +127,12 @@ export default function About() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <img 
+              <Picture 
                 src={teamPhoto} 
                 alt="L'équipe QualiRénovation sur chantier" 
                 className="w-full h-full object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
               />
             </motion.div>
           </div>
@@ -183,10 +186,11 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <img 
+              <Picture 
                 src={aboutHistoire} 
                 alt="Rénovation salle de bain haut de gamme - Notre savoir-faire" 
                 className="w-full h-full object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </motion.div>
           </div>
@@ -457,11 +461,11 @@ export default function About() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
                 >
-                  <img 
+                  <Picture 
                     src={thierryPelmard1} 
                     alt="Thierry Pelmard – Architecte d'intérieur, P3D Concept" 
                     className="w-full h-full object-cover"
-                    loading="lazy"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </motion.div>
               </div>
@@ -484,10 +488,11 @@ export default function About() {
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-                <img 
+                <Picture 
                   src={teamChantier1} 
                   alt="L'équipe au complet sur un chantier parisien" 
                   className="w-full h-full object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </motion.div>
               <motion.div 
@@ -495,10 +500,11 @@ export default function About() {
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-                <img 
+                <Picture 
                   src={teamChantier3} 
                   alt="Artisan réalisant des travaux de perçage" 
                   className="w-full h-full object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </motion.div>
             </div>
@@ -541,11 +547,11 @@ export default function About() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
                 >
-                  <img 
+                  <Picture 
                     src={stephaneVasco} 
                     alt="Stéphane Vasco en action sur un de nos chantiers" 
                     className="w-full h-full object-cover"
-                    loading="lazy"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </motion.div>
               </div>
