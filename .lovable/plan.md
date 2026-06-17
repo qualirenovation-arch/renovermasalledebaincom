@@ -1,37 +1,54 @@
-# Promotion sécurisée du premier administrateur
 
-## Objectif
-Permettre la promotion du premier administrateur de manière sécurisée.
+## Pourquoi découper
 
-## Solution implémentée
+Génération séquentielle des 533 JPG → ~3200 variantes AVIF+WebP. Même parallélisé (concurrence 6), ça reste ~25-40 min de calcul ininterrompu, mal adapté au format conversationnel (les commandes longues meurent, l'avancement n'est pas visible côté toi, et tu ne peux rien valider entre temps).
 
-### Authentification requise
+Mieux : on traite par lots thématiques, tu valides visuellement chaque lot, et si un rendu ne te plaît pas (qualité AVIF trop agressive par ex.) on ajuste **avant** d'avoir gaspillé 30 min sur 500 images.
 
-La fonction `setup-first-admin` exige maintenant que l'utilisateur soit authentifié :
+## Étape 1 — Câblage `<Picture>` partout (sans regénérer d'images)
 
-1. L'utilisateur crée un compte via `/admin/login` (inscription)
-2. L'utilisateur se connecte
-3. L'utilisateur appelle la fonction avec son token JWT
-4. La fonction valide le JWT et promeut l'utilisateur connecté en admin
+Aujourd'hui seul `ProjetDetail.tsx` utilise `<Picture>`. Les autres pages affichent encore les `<img src={importedJpg}>` classiques → même avec les variantes générées, elles servent le JPG lourd.
 
-### Sécurité multicouche
+À faire : remplacer les `<img>` par `<Picture>` dans les 15 fichiers qui importent des assets :
+- `Index.tsx`, `About.tsx`, `Avis.tsx`, `Devis.tsx`, `Partenaires.tsx`, `Presse.tsx`, `Photographe.tsx`, `MentionsLegales.tsx`
+- `VisuelsHouzz.tsx`, `VisuelsInstagramHighlights.tsx`
+- `Footer.tsx`, `Recompenses.tsx`, `QRSlideshow.tsx`
+- `GuideInfrastructureSections.tsx`, `GuideDetailsSections.tsx`
 
-1. **Authentification JWT** : Seuls les utilisateurs connectés peuvent appeler la fonction
-2. **Protection "premier uniquement"** : Si un admin existe déjà, la fonction refuse toute exécution
-3. **Auto-promotion** : L'utilisateur ne peut promouvoir que lui-même (pas d'email arbitraire)
+Durée : ~15 min. Gain : aucun avant qu'on génère les variantes, mais une fois fait c'est branché.
 
-### Utilisation
+## Étape 2 — Lot 1 : pages hot (homepage, guides, about)
 
-```typescript
-// L'utilisateur doit être connecté
-const { data, error } = await supabase.functions.invoke('setup-first-admin');
-// Aucun paramètre requis - utilise l'utilisateur authentifié
-```
+Optimiser uniquement les images de ces pages (~80-120 images). Tu valides visuellement la homepage et 1-2 guides après. Si OK, on continue.
 
-## Étapes pour promouvoir qualirenovation@gmail.com
+Durée calcul : ~6 min. Gain mesurable immédiatement sur le LCP de la home.
 
-1. Aller sur `/admin/login`
-2. S'inscrire avec `qualirenovation@gmail.com`
-3. Se connecter
-4. Appeler la fonction (via console ou bouton dédié)
-5. Le rôle admin est attribué automatiquement
+## Étape 3 — Lot 2 : albums portfolio (le gros morceau)
+
+~400 images réparties sur ~30 albums. On lance le batch parallélisé en arrière-plan et on revient checker quelques albums au hasard.
+
+Durée calcul : ~20-25 min en tâche de fond pendant qu'on fait autre chose.
+
+## Étape 4 — Lot 3 : reliquat (presse, partenaires, divers)
+
+~50-80 images. Court, ~5 min. Cleanup final.
+
+## Question annexe à trancher après l'étape 1
+
+Le repo reste à **727 MB de JPG sources**. Deux options pour la suite :
+
+- **A. Garder les JPG en local** (fallback navigateurs très anciens, simple)
+- **B. Migrer les 533 JPG vers le CDN Lovable Assets** après l'étape 4 (repo → ~5 MB, déploiements 100× plus rapides)
+
+Recommandation : **B**, mais on en reparle quand tout sera converti et validé visuellement.
+
+## Détails techniques
+
+- Script existant `scripts/optimize-images.mjs` déjà parallélisé (concurrence 6)
+- Idempotent : skip si la variante existe déjà → relancer ne refait rien
+- Composant `<Picture>` déjà prêt avec srcset 400/800/1200/1600 et fallback JPG automatique
+- Qualité actuelle : AVIF q60, WebP q75 — à ajuster si tu trouves le rendu trop dégradé
+
+## Prochaine action si tu valides
+
+Je démarre l'**étape 1** (câblage `<Picture>` partout). Aucune image à régénérer, donc rapide et tu vois la mécanique se mettre en place. Les variantes déjà générées (Boulogne + quelques galleries) deviendront actives immédiatement sur les pages concernées.
