@@ -101,7 +101,7 @@ export function GuideInfrastructureSections() {
                 <p className="text-xs text-muted-foreground mt-1">L'étanchéité est un système complet, invisible une fois terminé.</p>
               </div>
               <div className="border border-border/30 rounded p-3 overflow-hidden">
-                <img src={butteschaumont6} alt="Étanchéité Weber Aquastop sous carrelage" className="w-full h-32 object-cover mb-1" loading="lazy" />
+                <Picture src={butteschaumont6} alt="Étanchéité Weber Aquastop sous carrelage" className="w-full h-32 object-cover mb-1" sizes="(max-width: 768px) 100vw, 33vw" />
                 <p className="text-xs text-muted-foreground text-center">Weber Aquastop — obligatoire</p>
               </div>
             </div>
@@ -147,7 +147,7 @@ export function GuideInfrastructureSections() {
                     <p className="text-[11px] italic">Étanchéité et pente parfaitement maîtrisées obligatoires.</p>
                   </div>
                 </div>
-                <img src={receveursDouche} alt="Receveurs de douche" className="w-full h-24 object-cover mt-2" loading="lazy" />
+                <Picture src={receveursDouche} alt="Receveurs de douche" className="w-full h-24 object-cover mt-2" sizes="(max-width: 768px) 100vw, 33vw" />
               </div>
               <div className="border border-border/30 rounded p-3">
                 <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: '#124A66' }}>Matériaux</p>
@@ -213,8 +213,8 @@ export function GuideInfrastructureSections() {
               <div className="border border-border/30 rounded p-3">
                 <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: '#124A66' }}>Rangements</p>
                 <div className="grid grid-cols-2 gap-1 mb-2">
-                  <img src={baignoireRangementNiches} alt="Niches baignoire" className="w-full h-16 object-cover" loading="lazy" />
-                  <img src={baignoireRangementTiroirs} alt="Tiroirs baignoire" className="w-full h-16 object-cover" loading="lazy" />
+                  <Picture src={baignoireRangementNiches} alt="Niches baignoire" className="w-full h-16 object-cover" sizes="200px" />
+                  <Picture src={baignoireRangementTiroirs} alt="Tiroirs baignoire" className="w-full h-16 object-cover" sizes="200px" />
                 </div>
                 <div className="space-y-0.5 text-xs text-muted-foreground">
                   <p><strong>Tiroirs</strong> — Produits, serviettes</p>
