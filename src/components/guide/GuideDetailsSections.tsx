@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { GuideSectionHeader } from "./GuideSectionHeader";
+import { Picture } from "@/components/Picture";
 import guideJointNoir from "@/assets/guide-joint-noir.webp";
 import guideJointAssorti from "@/assets/guide-joint-assorti.webp";
 import guideProfilFinition from "@/assets/guide-profil-finition.webp";
@@ -32,8 +33,8 @@ export function GuideDetailsSections() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
               <div className="border border-border/30 rounded p-3 overflow-hidden">
-                <img src={boulogne3} alt="Niche baignoire Boulogne" className="w-full h-28 object-cover mb-2" loading="lazy" />
-                <img src={nicolasRoretDouche} alt="Niche douche Nicolas Roret" className="w-full h-28 object-cover" loading="lazy" />
+                <Picture src={boulogne3} alt="Niche baignoire Boulogne" className="w-full h-28 object-cover mb-2" sizes="(max-width: 768px) 100vw, 33vw" />
+                <Picture src={nicolasRoretDouche} alt="Niche douche Nicolas Roret" className="w-full h-28 object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
               </div>
               <div className="border border-border/30 rounded p-3">
                 <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: '#124A66' }}>Avantages</p>
@@ -143,7 +144,7 @@ export function GuideDetailsSections() {
                 </div>
               </div>
               <div className="border border-border/30 rounded p-3 overflow-hidden">
-                <img src={cielDePluiePlafond} alt="Ciel de pluie encastré plafond" className="w-full h-32 object-cover mb-1" loading="lazy" />
+                <Picture src={cielDePluiePlafond} alt="Ciel de pluie encastré plafond" className="w-full h-32 object-cover mb-1" sizes="(max-width: 768px) 100vw, 33vw" />
                 <p className="text-xs text-muted-foreground text-center">Ciel de pluie — finition noire mate</p>
               </div>
             </div>

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { GuideSectionHeader } from "./GuideSectionHeader";
+import { Picture } from "@/components/Picture";
 import butteschaumont6 from "@/assets/buttes-chaumont-6.jpg";
 import receveursDouche from "@/assets/receveurs-douche.jpg";
 import baignoireRangementNiches from "@/assets/baignoire-rangement-niches.jpg";
