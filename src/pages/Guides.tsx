@@ -16,7 +16,7 @@ type GuideCard = {
   slug: string;
   title: string;
   summary: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
 };
 
 const GUIDES: GuideCard[] = [
