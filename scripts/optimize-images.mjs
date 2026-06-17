@@ -58,7 +58,7 @@ for (const file of files) {
 
       const pipeline = sharp(file).resize({ width, withoutEnlargement: true });
       const buf = fmt === "avif"
-        ? await pipeline.avif({ quality: AVIF_QUALITY, effort: 4 }).toBuffer()
+        ? await pipeline.avif({ quality: AVIF_QUALITY, effort: 2 }).toBuffer()
         : await pipeline.webp({ quality: WEBP_QUALITY }).toBuffer();
       await fs.writeFile(out, buf);
       totalGenerated += buf.length;
