@@ -1,7 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { OGTags } from "@/components/seo/OGTags";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ExternalLink, Compass, Ruler, Wallet, ShowerHead, Droplets, Bath, ShieldCheck, Wrench, Calculator } from "lucide-react";
+import { ArrowRight, ExternalLink, Compass, Ruler, Wallet, ShowerHead, Droplets, Bath, ShieldCheck, Wrench, Calculator, type LucideIcon } from "lucide-react";
 import qrLogo from "@/assets/logos/qualirenovation-logo-hor-pos.svg";
 import carinaSig from "@/assets/carina-signature.svg";
 import heroImg from "@/assets/hero-shower.jpg";
@@ -16,7 +16,7 @@ type GuideCard = {
   slug: string;
   title: string;
   summary: string;
-  icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
+  icon: LucideIcon;
 };
 
 const GUIDES: GuideCard[] = [
