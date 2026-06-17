@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { albums as staticAlbums } from "@/data/albumsData";
+import { resolvePicture } from "@/lib/picture";
 
 // Build static cover lookup once
 const staticCoverBySlug = new Map(
@@ -55,14 +56,13 @@ export function HeroSlideshow() {
   if (heroImages.length === 0) return null;
 
   const current = heroImages[index];
+  const sources = resolvePicture(current.src);
 
   return (
     <div className="absolute inset-0">
       <AnimatePresence mode="wait">
-        <motion.img
+        <motion.picture
           key={index}
-          src={current.src}
-          alt={current.alt}
           initial={{ opacity: 0, scale: 1 }}
           animate={{ opacity: 1, scale: 1.08 }}
           exit={{ opacity: 0 }}
@@ -70,9 +70,19 @@ export function HeroSlideshow() {
             opacity: { duration: 0.8 },
             scale: { duration: 30, ease: "linear" },
           }}
-          className="absolute inset-0 w-full h-full object-cover object-center"
-          loading={index === 0 ? "eager" : "lazy"}
-        />
+          className="absolute inset-0 w-full h-full"
+        >
+          {sources.avif && <source type="image/avif" srcSet={sources.avif} sizes="100vw" />}
+          {sources.webp && <source type="image/webp" srcSet={sources.webp} sizes="100vw" />}
+          <img
+            src={sources.fallback}
+            alt={current.alt}
+            className="absolute inset-0 w-full h-full object-cover object-center"
+            loading={index === 0 ? "eager" : "lazy"}
+            fetchPriority={index === 0 ? "high" : "auto"}
+            decoding={index === 0 ? "sync" : "async"}
+          />
+        </motion.picture>
       </AnimatePresence>
 
       {/* Location badge */}
