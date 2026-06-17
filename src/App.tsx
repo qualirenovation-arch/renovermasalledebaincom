@@ -29,7 +29,6 @@ import DevenirPartenaire from "./pages/DevenirPartenaire";
 import Avis from "./pages/Avis";
 import RenovationParis from "./pages/RenovationParis";
 import QualiRenovation from "./pages/QualiRenovation";
-import Guides from "./pages/Guides";
 import OGPreview from "./pages/OGPreview";
 import DebugTracking from "./pages/DebugTracking";
 import Admin from "./pages/Admin";
@@ -76,7 +75,6 @@ const App = () => (
           <Route path="/avis" element={<Avis />} />
           <Route path="/renovation-salle-de-bain-paris" element={<RenovationParis />} />
           <Route path="/qualirenovation" element={<QualiRenovation />} />
-          <Route path="/guides" element={<Guides />} />
           <Route path="/og-preview" element={<OGPreview />} />
           <Route path="/debug-tracking" element={<DebugTracking />} />
           <Route path="/admin" element={<Admin />} />

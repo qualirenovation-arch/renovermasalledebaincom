@@ -107,10 +107,6 @@ const PAGE_SEO = {
     title: "QualiRénovation – Notre label qualité",
     description: "Découvrez le label QualiRénovation : notre engagement qualité pour votre rénovation de salle de bain.",
   },
-  "/guides": {
-    title: "Guides gratuits — Rénover sa salle de bain",
-    description: "Un guide interactif gratuit conçu par des maîtres d'œuvre parisiens. Comprendre, décider, budgéter et piloter votre rénovation — sans jargon.",
-  },
   "/partenaires": {
     title: "Nos partenaires",
     description: "Les marques et artisans de confiance avec lesquels nous travaillons pour vos rénovations de salle de bain.",

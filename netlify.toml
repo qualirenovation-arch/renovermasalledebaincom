@@ -2,6 +2,20 @@
   command = "npm run build"
   publish = "dist/client"
 
+# Proxy invisible : /guides → application QualiRénovation
+# Le visiteur voit renovermasalledebain.com/guides, le contenu provient du sous-domaine.
+[[redirects]]
+  from = "/guides"
+  to = "https://qualirenovation.les-freres-salamon.com/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/guides/*"
+  to = "https://qualirenovation.les-freres-salamon.com/:splat"
+  status = 200
+  force = true
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
