@@ -3,6 +3,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
+import { Picture } from "@/components/Picture";
 import { ArrowLeft, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { AlbumCTA } from "@/components/albums/AlbumCTA";
 import { AlbumSeoSections } from "@/components/albums/AlbumSeoSections";
@@ -337,9 +338,10 @@ const ProjetDetail = () => {
                       </div>
                     </>
                   ) : (
-                    <img 
-                      src={photo.image} 
+                    <Picture
+                      src={photo.image}
                       alt={photo.title}
+                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                     />
                   )}
