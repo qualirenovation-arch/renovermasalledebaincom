@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { OGTags } from "@/components/seo/OGTags";
 import { Camera, Phone, Globe, MapPin, Star, ArrowRight, ExternalLink, Award, Building, Home, Eye } from "lucide-react";
+import { Picture } from "@/components/Picture";
 import stephaneVasco from "@/assets/stephane-vasco.png";
 
 const specialties = [
@@ -191,10 +192,11 @@ export default function Photographe() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <img 
+              <Picture 
                 src={stephaneVasco} 
                 alt="Stéphane Vasco en plein shooting dans une cuisine rénovée" 
                 className="w-full h-80 object-cover object-top"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </motion.div>
             <motion.div 
@@ -204,10 +206,11 @@ export default function Photographe() {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              <img 
+              <Picture 
                 src={stephaneVasco} 
                 alt="Stéphane Vasco préparant son trépied pour un reportage photo" 
                 className="w-full h-80 object-cover object-top"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </motion.div>
           </div>
