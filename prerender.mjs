@@ -305,6 +305,9 @@ async function prerender() {
   if (successCount === 0) {
     process.exit(1);
   }
+
+  // JSDOM keeps some timers alive; force clean exit
+  process.exit(0);
 }
 
 prerender();
