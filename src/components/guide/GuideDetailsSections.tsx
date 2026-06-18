@@ -4,9 +4,12 @@ import { Picture } from "@/components/Picture";
 import guideJointNoir from "@/assets/guide-joint-noir.webp";
 import guideJointAssorti from "@/assets/guide-joint-assorti.webp";
 import guideProfilFinition from "@/assets/guide-profil-finition.webp";
-import cielDePluiePlafond from "@/assets/chatelet-ciel-pluie-plafond.jpg";
-import nicolasRoretDouche from "@/assets/nicolas-roret-douche.jpg";
-import boulogne3 from "@/assets/boulogne-3.jpg";
+import cielDePluiePlafondData from "@/assets/chatelet-ciel-pluie-plafond.jpg.asset.json";
+const cielDePluiePlafond = cielDePluiePlafondData.url;
+import nicolasRoretDoucheData from "@/assets/nicolas-roret-douche.jpg.asset.json";
+const nicolasRoretDouche = nicolasRoretDoucheData.url;
+import boulogne3Data from "@/assets/boulogne-3.jpg.asset.json";
+const boulogne3 = boulogne3Data.url;
 
 export function GuideDetailsSections() {
   return (

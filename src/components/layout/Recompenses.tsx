@@ -1,5 +1,6 @@
 import { ExternalLink } from "lucide-react";
-import houzzBadge2019 from "@/assets/logos/houzz-badge-2019.png";
+import houzzBadge2019Data from "@/assets/logos/houzz-badge-2019.png.asset.json";
+const houzzBadge2019 = houzzBadge2019Data.url;
 import { Picture } from "@/components/Picture";
 
 // Badge officiel Houzz - Style rectangulaire/vertical
