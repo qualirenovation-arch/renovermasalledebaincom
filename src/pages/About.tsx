@@ -8,7 +8,8 @@ import { Shield, Award, Users, Clock, CheckCircle2, ArrowRight, Camera, Ruler } 
 import { PageCTA } from "@/components/layout/PageCTA";
 import { QualiRenovationCTA } from "@/components/shared/QualiRenovationCTA";
 import { Picture } from "@/components/Picture";
-import aboutHistoire from "@/assets/about-histoire.jpg";
+import aboutHistoireData from "@/assets/about-histoire.jpg.asset.json";
+const aboutHistoire = aboutHistoireData.url;
 import teamPhoto from "@/assets/team-photo.jpg";
 import teamChantier1 from "@/assets/team-chantier-1.jpg";
 import teamChantier3 from "@/assets/team-chantier-3.jpg";
