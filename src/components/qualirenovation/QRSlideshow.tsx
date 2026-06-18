@@ -1,18 +1,31 @@
 import { useState, useEffect, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import chercheMidi from "@/assets/qualirenovation/cherche-midi.jpg";
-import avJeanneSalon from "@/assets/qualirenovation/av-jeanne-salon.jpg";
-import avJeanneCuisine from "@/assets/qualirenovation/av-jeanne-cuisine.jpg";
-import chambre from "@/assets/qualirenovation/chambre.jpg";
-import salonBibliotheque from "@/assets/qualirenovation/salon-bibliotheque.jpg";
-import faubourgSalon from "@/assets/qualirenovation/faubourg-saint-denis-salon.jpg";
-import faubourgSejour from "@/assets/qualirenovation/faubourg-saint-denis-sejour.jpg";
-import faubourgCuisine from "@/assets/qualirenovation/faubourg-saint-denis-cuisine.jpg";
-import ernestSam from "@/assets/qualirenovation/ernest-savart-salle-a-manger.jpg";
-import ernestSejour from "@/assets/qualirenovation/ernest-savart-sejour.jpg";
-import rooseveltChambre from "@/assets/qualirenovation/roosevelt-chambre.jpg";
-import rooseveltChambreMarbre from "@/assets/qualirenovation/roosevelt-chambre-marbre.jpg";
-import rooseveltSejourCuisine from "@/assets/qualirenovation/roosevelt-sejour-cuisine.jpg";
+import chercheMidiData from "@/assets/qualirenovation/cherche-midi.jpg.asset.json";
+const chercheMidi = chercheMidiData.url;
+import avJeanneSalonData from "@/assets/qualirenovation/av-jeanne-salon.jpg.asset.json";
+const avJeanneSalon = avJeanneSalonData.url;
+import avJeanneCuisineData from "@/assets/qualirenovation/av-jeanne-cuisine.jpg.asset.json";
+const avJeanneCuisine = avJeanneCuisineData.url;
+import chambreData from "@/assets/qualirenovation/chambre.jpg.asset.json";
+const chambre = chambreData.url;
+import salonBibliothequeData from "@/assets/qualirenovation/salon-bibliotheque.jpg.asset.json";
+const salonBibliotheque = salonBibliothequeData.url;
+import faubourgSalonData from "@/assets/qualirenovation/faubourg-saint-denis-salon.jpg.asset.json";
+const faubourgSalon = faubourgSalonData.url;
+import faubourgSejourData from "@/assets/qualirenovation/faubourg-saint-denis-sejour.jpg.asset.json";
+const faubourgSejour = faubourgSejourData.url;
+import faubourgCuisineData from "@/assets/qualirenovation/faubourg-saint-denis-cuisine.jpg.asset.json";
+const faubourgCuisine = faubourgCuisineData.url;
+import ernestSamData from "@/assets/qualirenovation/ernest-savart-salle-a-manger.jpg.asset.json";
+const ernestSam = ernestSamData.url;
+import ernestSejourData from "@/assets/qualirenovation/ernest-savart-sejour.jpg.asset.json";
+const ernestSejour = ernestSejourData.url;
+import rooseveltChambreData from "@/assets/qualirenovation/roosevelt-chambre.jpg.asset.json";
+const rooseveltChambre = rooseveltChambreData.url;
+import rooseveltChambreMarbreData from "@/assets/qualirenovation/roosevelt-chambre-marbre.jpg.asset.json";
+const rooseveltChambreMarbre = rooseveltChambreMarbreData.url;
+import rooseveltSejourCuisineData from "@/assets/qualirenovation/roosevelt-sejour-cuisine.jpg.asset.json";
+const rooseveltSejourCuisine = rooseveltSejourCuisineData.url;
 
 const slides = [
   { src: chercheMidi, alt: "Rénovation appartement Cherche-Midi, Paris", location: "Paris 6e" },

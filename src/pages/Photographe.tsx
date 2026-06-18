@@ -5,7 +5,8 @@ import { Layout } from "@/components/layout/Layout";
 import { OGTags } from "@/components/seo/OGTags";
 import { Camera, Phone, Globe, MapPin, Star, ArrowRight, ExternalLink, Award, Building, Home, Eye } from "lucide-react";
 import { Picture } from "@/components/Picture";
-import stephaneVasco from "@/assets/stephane-vasco.png";
+import stephaneVascoData from "@/assets/stephane-vasco.png.asset.json";
+const stephaneVasco = stephaneVascoData.url;
 
 const specialties = [
   {

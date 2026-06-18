@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, Clock, MessageCircle, Instagram, Linkedin } from "lucide-react";
-import houzzLogo from "@/assets/logos/houzz-logo.png";
+import houzzLogoData from "@/assets/logos/houzz-logo.png.asset.json";
+const houzzLogo = houzzLogoData.url;
 import logoNeg from "@/assets/logos/logo-renover-neg.svg";
 import { Picture } from "@/components/Picture";
 

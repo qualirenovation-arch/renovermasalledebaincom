@@ -1,6 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { OGTags } from "@/components/seo/OGTags";
-import micLogo from "@/assets/logos/mic-insurance.jpg";
+import micLogoData from "@/assets/logos/mic-insurance.jpg.asset.json";
+const micLogo = micLogoData.url;
 import { Picture } from "@/components/Picture";
 
 export default function MentionsLegales() {

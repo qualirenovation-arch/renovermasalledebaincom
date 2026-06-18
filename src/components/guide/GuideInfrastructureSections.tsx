@@ -1,14 +1,22 @@
 import { motion } from "framer-motion";
 import { GuideSectionHeader } from "./GuideSectionHeader";
 import { Picture } from "@/components/Picture";
-import butteschaumont6 from "@/assets/buttes-chaumont-6.jpg";
-import receveursDouche from "@/assets/receveurs-douche.jpg";
-import baignoireRangementNiches from "@/assets/baignoire-rangement-niches.jpg";
-import baignoireRangementTiroirs from "@/assets/baignoire-rangement-tiroirs.jpg";
-import batiSupportGeberit from "@/assets/images/bati-support-geberit.png";
-import plaqueGeberitNoir from "@/assets/images/plaque-geberit-noir.png";
-import plaqueGeberitLaiton from "@/assets/images/plaque-geberit-laiton.png";
-import plaqueGeberitChrome from "@/assets/images/plaque-geberit-chrome.png";
+import butteschaumont6Data from "@/assets/buttes-chaumont-6.jpg.asset.json";
+const butteschaumont6 = butteschaumont6Data.url;
+import receveursDoucheData from "@/assets/receveurs-douche.jpg.asset.json";
+const receveursDouche = receveursDoucheData.url;
+import baignoireRangementNichesData from "@/assets/baignoire-rangement-niches.jpg.asset.json";
+const baignoireRangementNiches = baignoireRangementNichesData.url;
+import baignoireRangementTiroirsData from "@/assets/baignoire-rangement-tiroirs.jpg.asset.json";
+const baignoireRangementTiroirs = baignoireRangementTiroirsData.url;
+import batiSupportGeberitData from "@/assets/images/bati-support-geberit.png.asset.json";
+const batiSupportGeberit = batiSupportGeberitData.url;
+import plaqueGeberitNoirData from "@/assets/images/plaque-geberit-noir.png.asset.json";
+const plaqueGeberitNoir = plaqueGeberitNoirData.url;
+import plaqueGeberitLaitonData from "@/assets/images/plaque-geberit-laiton.png.asset.json";
+const plaqueGeberitLaiton = plaqueGeberitLaitonData.url;
+import plaqueGeberitChromeData from "@/assets/images/plaque-geberit-chrome.png.asset.json";
+const plaqueGeberitChrome = plaqueGeberitChromeData.url;
 import carinaSig from "@/assets/carina-signature.svg";
 
 const SectionDivider = () => (

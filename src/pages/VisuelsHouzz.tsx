@@ -1,11 +1,16 @@
 import { useCallback } from "react";
 import { Picture } from "@/components/Picture";
-import houzzAnnouncement from "@/assets/houzz-announcement-final.jpg";
-import houzzSquare from "@/assets/houzz-instagram-square.jpg";
-import houzzStory from "@/assets/houzz-instagram-story.jpg";
+import houzzAnnouncementData from "@/assets/houzz-announcement-final.jpg.asset.json";
+const houzzAnnouncement = houzzAnnouncementData.url;
+import houzzSquareData from "@/assets/houzz-instagram-square.jpg.asset.json";
+const houzzSquare = houzzSquareData.url;
+import houzzStoryData from "@/assets/houzz-instagram-story.jpg.asset.json";
+const houzzStory = houzzStoryData.url;
 import logoSdbParis10 from "/images/logo-salle-de-bain-paris-10.png";
-import paris10Dore from "@/assets/paris10-dore-branded.jpg";
-import houzzPiedDePage from "@/assets/houzz-pied-de-page.jpg";
+import paris10DoreData from "@/assets/paris10-dore-branded.jpg.asset.json";
+const paris10Dore = paris10DoreData.url;
+import houzzPiedDePageData from "@/assets/houzz-pied-de-page.jpg.asset.json";
+const houzzPiedDePage = houzzPiedDePageData.url;
 
 export default function VisuelsHouzz() {
   const handleExportPiedDePage = useCallback(() => {
