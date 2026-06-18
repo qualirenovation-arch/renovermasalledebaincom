@@ -37,13 +37,19 @@ for (const file of files) {
   const ext = path.extname(file).toLowerCase();
   if (![".jpg", ".jpeg", ".png"].includes(ext)) continue;
 
-  const stat = await fs.stat(file);
-  totalOriginal += stat.size;
-
-  const dir = path.dirname(file);
-  const base = path.basename(file, ext);
-  const meta = await sharp(file).metadata();
-  const srcWidth = meta.width || 1600;
+  let srcWidth = 1600;
+  let dir, base;
+  try {
+    const stat = await fs.stat(file);
+    totalOriginal += stat.size;
+    dir = path.dirname(file);
+    base = path.basename(file, ext);
+    const meta = await sharp(file).metadata();
+    srcWidth = meta.width || 1600;
+  } catch (e) {
+    console.warn(`  ⚠️  skip ${file}: ${e.message}`);
+    continue;
+  }
 
   for (const width of SIZES) {
     // Ne génère pas une variante plus large que l'original
@@ -56,13 +62,17 @@ for (const file of files) {
         continue; // déjà généré
       } catch {}
 
-      const pipeline = sharp(file).resize({ width, withoutEnlargement: true });
-      const buf = fmt === "avif"
-        ? await pipeline.avif({ quality: AVIF_QUALITY, effort: 2 }).toBuffer()
-        : await pipeline.webp({ quality: WEBP_QUALITY }).toBuffer();
-      await fs.writeFile(out, buf);
-      totalGenerated += buf.length;
-      console.log(`  ✓ ${path.basename(out)} (${(buf.length / 1024).toFixed(1)} KB)`);
+      try {
+        const pipeline = sharp(file).resize({ width, withoutEnlargement: true });
+        const buf = fmt === "avif"
+          ? await pipeline.avif({ quality: AVIF_QUALITY, effort: 2 }).toBuffer()
+          : await pipeline.webp({ quality: WEBP_QUALITY }).toBuffer();
+        await fs.writeFile(out, buf);
+        totalGenerated += buf.length;
+        console.log(`  ✓ ${path.basename(out)} (${(buf.length / 1024).toFixed(1)} KB)`);
+      } catch (e) {
+        console.warn(`  ⚠️  fail ${path.basename(out)}: ${e.message}`);
+      }
     }
   }
 }
