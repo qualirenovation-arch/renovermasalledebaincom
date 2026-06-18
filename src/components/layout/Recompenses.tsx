@@ -1,5 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import houzzBadge2019 from "@/assets/logos/houzz-badge-2019.png";
+import { Picture } from "@/components/Picture";
 
 // Badge officiel Houzz - Style rectangulaire/vertical
 const HouzzBadge = ({ 
@@ -51,7 +52,7 @@ const HouzzOfficialBadge = () => (
     rel="noopener noreferrer"
     className="transition-transform hover:scale-105"
   >
-    <img 
+    <Picture 
       src={houzzBadge2019} 
       alt="Badge Houzz" 
       className="w-20 h-20 object-contain"

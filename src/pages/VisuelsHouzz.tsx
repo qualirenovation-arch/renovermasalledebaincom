@@ -98,7 +98,7 @@ export default function VisuelsHouzz() {
         {/* Logo Salle de Bain Paris 10 */}
         <div>
           <h2 className="text-white text-xl mb-4">Logo Salle de Bain Paris 10</h2>
-          <img 
+          <Picture 
             src={logoSdbParis10} 
             alt="Logo Salle de Bain Paris 10" 
             className="w-full max-w-3xl mx-auto rounded-lg shadow-2xl"

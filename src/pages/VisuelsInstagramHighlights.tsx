@@ -9,6 +9,7 @@ import maitreOeuvre from "@/assets/instagram-highlights/maitre-oeuvre.png";
 import renovationHautDeGamme from "@/assets/instagram-highlights/renovation-haut-de-gamme.png";
 import parisIdf from "@/assets/instagram-highlights/paris-idf.png";
 import devisContact from "@/assets/instagram-highlights/devis-contact.png";
+import { Picture } from "@/components/Picture";
 
 const highlights = [
   { name: "Salle de Bain", src: salleDeBain },
@@ -63,7 +64,7 @@ export default function VisuelsInstagramHighlights() {
               className="flex flex-col items-center gap-3 group"
             >
               <div className={`w-28 h-28 rounded-full border-2 border-gold/40 group-hover:border-gold overflow-hidden ${bgColors[index]} p-3 transition-all shadow-lg hover:shadow-gold`}>
-                <img
+                <Picture
                   src={h.src}
                   alt={h.name}
                   className="w-full h-full object-contain"
@@ -97,7 +98,7 @@ export default function VisuelsInstagramHighlights() {
               className="flex flex-col items-center gap-3 group"
             >
               <div className={`w-28 h-28 rounded-full border-2 border-primary/30 group-hover:border-primary overflow-hidden ${bgColors[index]} p-3 transition-all shadow-lg hover:shadow-navy`}>
-                <img
+                <Picture
                   src={h.src}
                   alt={h.name}
                   className="w-full h-full object-contain"

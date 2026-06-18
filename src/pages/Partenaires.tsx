@@ -63,6 +63,7 @@ import koakDesignLogo from "@/assets/logos/koak-design.svg";
 import etsyLogo from "@/assets/logos/etsy.svg";
 import thermorLogo from "@/assets/logos/thermor.svg";
 import distribainLogo from "@/assets/logos/distribain.svg";
+import { Picture } from "@/components/Picture";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -345,7 +346,7 @@ export default function Partenaires() {
                       whileHover={{ scale: 1.02, y: -2 }}
                     >
                       {partner.logo ? (
-                        <img 
+                        <Picture 
                           src={partner.logo} 
                           alt={partner.name}
                           className="h-6 md:h-7 w-auto object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300 mb-1"
@@ -437,7 +438,7 @@ export default function Partenaires() {
                       whileHover={{ scale: 1.02, y: -2 }}
                     >
                       {partner.logo ? (
-                        <img 
+                        <Picture 
                           src={partner.logo} 
                           alt={partner.name}
                           className="h-6 md:h-7 w-auto object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300 mb-1"
@@ -506,7 +507,7 @@ export default function Partenaires() {
                   whileHover={{ scale: 1.02, y: -3 }}
                 >
                   {partner.logo ? (
-                    <img 
+                    <Picture 
                       src={partner.logo} 
                       alt={partner.name}
                       className="h-8 md:h-10 w-auto object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300 mb-2"

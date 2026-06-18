@@ -16,6 +16,7 @@ import { PartnerCTA } from "@/components/home/PartnerCTA";
 import { OGTags } from "@/components/seo/OGTags";
 
 import { PageCTA } from "@/components/layout/PageCTA";
+import { Picture } from "@/components/Picture";
 
 // Section "Pourquoi choisir" - 3 colonnes avec pictos SVG
 const whyChoose = [
@@ -192,7 +193,7 @@ export default function Index() {
       <section className="py-8 md:py-12 bg-primary/5 border-y border-primary/10">
         <div className="container-custom flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8">
           <div className="transition-all duration-300 hover:scale-110 cursor-pointer">
-            <img 
+            <Picture 
               src={houzzBestOf2026Photo} 
               alt="Lauréat Best of Houzz 2026 – Photo" 
               className="h-40 md:h-52 rounded-lg" 
@@ -391,7 +392,7 @@ export default function Index() {
               >
                 <Link to={`/realisations/${project.slug}`} className="block">
                   <div className={`aspect-[3/4] ${project.borderClass} mb-4 md:mb-5 overflow-hidden`}>
-                    <img
+                    <Picture
                       src={project.img}
                       alt={`${project.style} ${project.location}`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

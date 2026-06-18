@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Phone, Mail, Clock, MessageCircle, Instagram, Linkedin } from "lucide-react";
 import houzzLogo from "@/assets/logos/houzz-logo.png";
 import logoNeg from "@/assets/logos/logo-renover-neg.svg";
+import { Picture } from "@/components/Picture";
 
 const footerLinks = {
   navigation: [{
@@ -53,7 +54,7 @@ export function Footer() {
           {/* Brand - hidden on mobile, shown on lg */}
           <div className="hidden lg:flex flex-col items-start justify-center">
             <Link to="/" className="inline-block mb-4">
-              <img src={logoNeg} alt="RénoverMaSalleDeBain.com" className="w-[260px] h-auto" />
+              <Picture src={logoNeg} alt="RénoverMaSalleDeBain.com" className="w-[260px] h-auto" />
             </Link>
             <div className="flex gap-3">
               <a href="https://wa.me/33659764685" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center hover:bg-[#20BD5A] transition-colors" aria-label="WhatsApp">
@@ -66,7 +67,7 @@ export function Footer() {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a href="https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors" aria-label="Houzz">
-                <img src={houzzLogo} alt="Houzz" className="w-5 h-5 object-contain" />
+                <Picture src={houzzLogo} alt="Houzz" className="w-5 h-5 object-contain" />
               </a>
             </div>
           </div>
@@ -169,7 +170,7 @@ export function Footer() {
             <Linkedin className="w-4 h-4" />
           </a>
           <a href="https://www.houzz.fr/pro/qualirenovation/qualirenovation-by-qualiconcept" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center" aria-label="Houzz">
-            <img src={houzzLogo} alt="Houzz" className="w-4 h-4 object-contain" />
+            <Picture src={houzzLogo} alt="Houzz" className="w-4 h-4 object-contain" />
           </a>
         </div>
       </div>
@@ -179,7 +180,7 @@ export function Footer() {
         <div className="container-custom py-4 md:py-5">
           {/* Mobile bottom bar */}
           <div className="flex flex-col items-center gap-2 text-center md:hidden pb-16">
-            <img src={logoNeg} alt="RénoverMaSalleDeBain.com" className="w-[160px] h-auto" />
+            <Picture src={logoNeg} alt="RénoverMaSalleDeBain.com" className="w-[160px] h-auto" />
             <p className="text-[11px] text-primary-foreground/60 leading-tight">
               6 rue d'Armaillé, 75017 Paris<br />© 2024 Tous droits réservés.
             </p>
@@ -196,7 +197,7 @@ export function Footer() {
           {/* Desktop bottom bar */}
           <div className="hidden md:flex flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
             <div className="flex items-center gap-4">
-              <img src={logoNeg} alt="RénoverMaSalleDeBain.com" className="w-[240px] h-auto" />
+              <Picture src={logoNeg} alt="RénoverMaSalleDeBain.com" className="w-[240px] h-auto" />
               <div className="text-left">
                 <p>6 rue d'Armaillé, 75017 Paris — © 2024 Tous droits réservés.</p>
                 <p className="mt-1 text-xs">Site édité par Qualirenovation by Qualiconcept</p>
