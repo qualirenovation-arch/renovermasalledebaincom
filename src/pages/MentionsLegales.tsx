@@ -1,6 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { OGTags } from "@/components/seo/OGTags";
 import micLogo from "@/assets/logos/mic-insurance.jpg";
+import { Picture } from "@/components/Picture";
 
 export default function MentionsLegales() {
   return (
@@ -110,7 +111,7 @@ export default function MentionsLegales() {
                 Assurances professionnelles
               </h2>
               <div className="flex items-center gap-6">
-                <img 
+                <Picture 
                   src={micLogo} 
                   alt="MIC Insurance" 
                   className="h-16 w-auto object-contain"

@@ -342,7 +342,7 @@ const getMediaLogo = (media: string): React.ReactNode => {
           rel="noopener noreferrer"
           className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-50 dark:bg-emerald-900/20 rounded-full hover:bg-emerald-100 dark:hover:bg-emerald-900/30 transition-colors"
         >
-          <img src={houzzLogo} alt="Houzz" className="w-4 h-4" />
+          <Picture src={houzzLogo} alt="Houzz" className="w-4 h-4" />
           <span className="font-bold text-emerald-700 dark:text-emerald-300 text-sm tracking-tight">houzz</span>
         </a>
       );

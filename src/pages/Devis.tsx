@@ -76,6 +76,7 @@ import carrelageTerazzoImage from "@/assets/carrelage-terrazzo.jpg";
 import carrelageMetroImage from "@/assets/carrelage-metro.jpg";
 import carrelageGraphiqueImage from "@/assets/carrelage-graphique.jpg";
 import carrelageNaturelImage from "@/assets/carrelage-naturel.jpg";
+import { Picture } from "@/components/Picture";
 
 interface FormData {
   prenom: string;
@@ -1193,7 +1194,7 @@ export default function Devis() {
                       
                       {/* Image de référence receveurs */}
                       <div className="mb-4 rounded-2xl overflow-hidden">
-                        <img 
+                        <Picture 
                           src={receveursImage} 
                           alt="Types de receveurs - À poser, À carreler, Encastré, Résine, Acrylique" 
                           className="w-full h-auto"
@@ -1232,7 +1233,7 @@ export default function Devis() {
                               {typeBaignoireOptions.find(opt => opt.value === formData.typeBaignoire[0])?.label}
                             </span>
                             <div className="w-40 h-40 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg shrink-0">
-                              <img src={baignoiresImage} alt="Styles de baignoires" className="w-full h-full object-cover" />
+                              <Picture src={baignoiresImage} alt="Styles de baignoires" className="w-full h-full object-cover" />
                             </div>
                           </div>
                         )}
@@ -1253,7 +1254,7 @@ export default function Devis() {
                   
                   {/* Image de référence */}
                   <div className="mb-6 rounded-2xl overflow-hidden">
-                    <img 
+                    <Picture 
                       src={wcTypesImage} 
                       alt="Types de WC - WC Suspendu, WC Classique" 
                       className="w-full h-auto"
@@ -1298,7 +1299,7 @@ export default function Devis() {
                           <div className="flex items-center gap-4 ml-auto">
                             <span className="text-sm font-medium text-foreground hidden md:block">{selectedOption.label}</span>
                             <div className="w-40 h-52 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg shrink-0">
-                              <img src={selectedOption.image} alt={selectedOption.label} className="w-full h-full object-cover" />
+                              <Picture src={selectedOption.image} alt={selectedOption.label} className="w-full h-full object-cover" />
                             </div>
                           </div>
                         );
@@ -1343,7 +1344,7 @@ export default function Devis() {
                           <div className="flex items-center gap-4 ml-auto">
                             <span className="text-sm font-medium text-foreground hidden md:block">{selectedOption.label}</span>
                             <div className="w-40 h-52 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg shrink-0">
-                              <img src={selectedOption.image} alt={selectedOption.label} className="w-full h-full object-cover" />
+                              <Picture src={selectedOption.image} alt={selectedOption.label} className="w-full h-full object-cover" />
                             </div>
                           </div>
                         );
@@ -1464,7 +1465,7 @@ export default function Devis() {
                                     <div className="flex items-center gap-4 ml-auto">
                                       <span className="text-sm font-medium text-foreground hidden md:block">{selectedOption.label}</span>
                                       <div className="w-40 h-52 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg shrink-0">
-                                        <img src={selectedOption.image} alt={selectedOption.label} className="w-full h-full object-cover" />
+                                        <Picture src={selectedOption.image} alt={selectedOption.label} className="w-full h-full object-cover" />
                                       </div>
                                     </div>
                                   );
@@ -1507,7 +1508,7 @@ export default function Devis() {
                               <div className="flex items-center gap-4 ml-auto">
                                 <span className="text-sm font-medium text-foreground hidden md:block">{selectedOption.label}</span>
                                 <div className="w-40 h-40 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg shrink-0">
-                                  <img src={selectedOption.image} alt={selectedOption.label} className="w-full h-full object-cover" />
+                                  <Picture src={selectedOption.image} alt={selectedOption.label} className="w-full h-full object-cover" />
                                 </div>
                               </div>
                             );
@@ -1576,7 +1577,7 @@ export default function Devis() {
                               <div className="flex items-center gap-4 ml-auto">
                                 <span className="text-sm font-medium text-foreground hidden md:block">{selectedFinition.label}</span>
                                 <div className="w-40 h-40 rounded-xl overflow-hidden border-2 border-foreground/20 shadow-lg shrink-0">
-                                  <img 
+                                  <Picture 
                                     src={selectedFinition.image} 
                                     alt={`Finition ${selectedFinition.label}`}
                                     className="w-full h-full object-cover"
@@ -1668,7 +1669,7 @@ export default function Devis() {
                           }`}
                         >
                           <div className="aspect-square">
-                            <img 
+                            <Picture 
                               src={option.image} 
                               alt={option.label} 
                               className="w-full h-full object-cover"

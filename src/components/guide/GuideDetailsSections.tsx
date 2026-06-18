@@ -80,8 +80,8 @@ export function GuideDetailsSections() {
               <div className="border border-border/30 rounded p-3">
                 <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: '#124A66' }}>Joint mortier</p>
                 <div className="grid grid-cols-2 gap-1 mb-2">
-                  <img src={guideJointAssorti} alt="Joint assorti" className="w-full h-20 object-cover" loading="lazy" />
-                  <img src={guideJointNoir} alt="Joint contrasté" className="w-full h-20 object-cover" loading="lazy" />
+                  <Picture src={guideJointAssorti} alt="Joint assorti" className="w-full h-20 object-cover" loading="lazy" />
+                  <Picture src={guideJointNoir} alt="Joint contrasté" className="w-full h-20 object-cover" loading="lazy" />
                 </div>
                 <div className="space-y-0.5 text-xs text-muted-foreground">
                   <p><strong>Assorti</strong> — uniforme, élégant</p>
@@ -95,7 +95,7 @@ export function GuideDetailsSections() {
               </div>
               <div className="border border-border/30 rounded p-3">
                 <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: '#124A66' }}>Profils de finition</p>
-                <img src={guideProfilFinition} alt="Profil Schlüter" className="w-full h-20 object-cover mb-2" loading="lazy" />
+                <Picture src={guideProfilFinition} alt="Profil Schlüter" className="w-full h-20 object-cover mb-2" loading="lazy" />
                 <p className="text-xs text-muted-foreground">Assortis à la robinetterie et paroi.</p>
                 <p className="text-xs text-muted-foreground italic">Le profil doit s'intégrer, pas attirer l'oeil.</p>
               </div>

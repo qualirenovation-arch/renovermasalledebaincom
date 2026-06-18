@@ -306,7 +306,7 @@ export function GuideInfrastructureSections() {
               {/* WC suspendu */}
               <div id="section-wc" className="border border-border/30 rounded p-3 scroll-mt-20">
                 <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: '#124A66' }}>WC suspendu</p>
-                <img src={batiSupportGeberit} alt="Bâti-support Geberit" className="w-full h-24 object-contain mb-2" loading="lazy" />
+                <Picture src={batiSupportGeberit} alt="Bâti-support Geberit" className="w-full h-24 object-contain mb-2" loading="lazy" />
                 <div className="space-y-0.5 text-xs text-muted-foreground">
                   <p>Bâti <strong className="text-foreground">Geberit Duofix</strong></p>
                   <p>Standard 12 cm · Faible profondeur 8 cm</p>
@@ -314,9 +314,9 @@ export function GuideInfrastructureSections() {
                   <p><strong>Autoportant</strong> (sol) ou <strong>portant</strong> (mur+sol)</p>
                 </div>
                 <div className="flex gap-1 mt-2">
-                  <img src={plaqueGeberitNoir} alt="Plaque noire" className="w-10 h-auto object-contain" loading="lazy" />
-                  <img src={plaqueGeberitLaiton} alt="Plaque laiton" className="w-10 h-auto object-contain" loading="lazy" />
-                  <img src={plaqueGeberitChrome} alt="Plaque chromée" className="w-10 h-auto object-contain" loading="lazy" />
+                  <Picture src={plaqueGeberitNoir} alt="Plaque noire" className="w-10 h-auto object-contain" loading="lazy" />
+                  <Picture src={plaqueGeberitLaiton} alt="Plaque laiton" className="w-10 h-auto object-contain" loading="lazy" />
+                  <Picture src={plaqueGeberitChrome} alt="Plaque chromée" className="w-10 h-auto object-contain" loading="lazy" />
                 </div>
               </div>
 
@@ -352,7 +352,7 @@ export function GuideInfrastructureSections() {
                 "Les détails ne sont pas accessoires.<br />Ils font la différence."
               </p>
               <div className="flex justify-end mt-5">
-                <img src={carinaSig} alt="Carina N." className="w-[100px] md:w-[150px] opacity-90" style={{ filter: 'brightness(0) invert(1)' }} />
+                <Picture src={carinaSig} alt="Carina N." className="w-[100px] md:w-[150px] opacity-90" style={{ filter: 'brightness(0) invert(1)' }} />
               </div>
             </div>
           </motion.div>

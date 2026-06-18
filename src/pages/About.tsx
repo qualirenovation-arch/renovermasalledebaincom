@@ -398,7 +398,7 @@ export default function About() {
                    </div>
                   {/* Signature */}
                   <div className="mt-6">
-                    <img
+                    <Picture
                       src={lartDeRenoverSignature}
                       alt="L'Art de Rénover by Carina N."
                       className="h-28 md:h-36 w-auto opacity-90"
@@ -413,7 +413,7 @@ export default function About() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
                 >
-                  <img
+                  <Picture
                     src={carinaNahmani1}
                     alt="Carina Nahmani, maître d'œuvre – renovermasalledebain.com"
                     className="w-full h-full object-cover"
@@ -610,7 +610,7 @@ export default function About() {
               </div>
 
               <div className="flex-shrink-0 mx-auto md:mx-0">
-                <img 
+                <Picture 
                   src={houzzBestOf2026Photo} 
                   alt="Lauréat Best of Houzz 2026 – Photo" 
                   className="w-48 md:w-56 rounded-lg shadow-lg"
