@@ -55,11 +55,12 @@ Avec le recul, j'ai constaté que nos réalisations sur base IKEA résistent bie
 
 — Carina Nahmani, maîtresse d'œuvre intégrée, QUALIRENOVATION by Qualiconcept
 
-## 3. Projet à la une : la bibliothèque en chêne de Sèvres (NOUVEAU — 22e réalisation)
+## 3. Projet à la une : le meuble TV en chêne de Sèvres (NOUVEAU — 22e réalisation)
 - Vidéo (Reel) + 4 à 6 photos de l'album
-- Texte : caissons IKEA transformés en bibliothèque sur mesure autour de la fenêtre, étagères en chêne massif vernies à la main, banc TV assorti, rangement sous l'escalier. Projet dessiné en 3D.
+- Texte : derrière le canapé, des caissons IKEA transformés en long meuble TV sur mesure : plateau, joues et niche en chêne massif, façades blanches, ajusté au mur jusqu'au poêle. Projet dessiné en 3D.
+- Précision : la bibliothèque autour de la fenêtre n'est PAS un IKEA hack (caissons en médium + chêne, 100 % sur mesure) ; on peut la citer comme exemple de menuiserie sur mesure, pas comme IKEA hack.
 - Bouton « Voir l'album complet » → `/projet/bibliotheque-sur-mesure-et-banc-tv-un-salon-lumineux-a-sevres`
-- À faire aussi : ajouter Sèvres dans l'article (→ « 22 réalisations ») et mentionner les caissons IKEA dans le texte de l'album
+- À faire aussi : ajouter Sèvres dans l'article (→ « 22 réalisations », catégorie Meubles TV) et préciser dans le texte de l'album que le meuble TV est sur base IKEA (la bibliothèque, elle, est sur mesure)
 
 ## 4. Nos réalisations par type de meuble (4 blocs = les 4 sous-albums prévus)
 Chaque bloc : 3 à 4 cartes (photo, ville, une ligne) + lien vers le sous-album, et vers l'album du site quand il existe.
@@ -72,7 +73,7 @@ Chaque bloc : 3 à 4 cartes (photo, ville, une ligne) + lien vers le sous-album,
 - Paris 5 — façades Havtorp conservées → album en ligne `une-cuisine-parisienne-reinventee-l-elegance-du-sur-mesure`
 
 **Meubles TV, bibliothèques et salon**
-- Sèvres — bibliothèque chêne et banc TV → album en ligne
+- Sèvres — meuble TV derrière le canapé, plateau et niche en chêne massif → album en ligne
 - Rueil-Malmaison — meuble TV suspendu METOD, parement pierre
 - Vincennes — meuble TV bois clair
 - Paris 2 — bibliothèque fond bleu et meuble sur pieds
