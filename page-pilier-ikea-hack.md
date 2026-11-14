@@ -37,6 +37,18 @@ Sources reprises (Claude Docs) :
 ## 2. En bref (bloc GEO, en tête de page)
 Un IKEA hack consiste à partir de caissons IKEA (METOD, PAX, BILLY) puis à les recouper, les peindre et les habiller (chêne massif, façades sur mesure, plateau, pieds) pour obtenir un rendu sur mesure à moindre coût. Dans nos chantiers à Paris, la pose d'un caisson PAX coûte de 105 à 153 € HT et un dressing PAX de 5 caissons posé revient à environ 2 133 € HT (Montreuil, 2026). QUALIRENOVATION conçoit, commande, fait livrer, pose et finit le meuble, intégré au reste du chantier, avec la garantie décennale.
 
+## 2 bis. Pourquoi je propose des IKEA hack à mes clients (texte signé, 1re personne)
+
+**Titre (H2) :** Pourquoi je propose des IKEA hack à mes clients
+
+Soyons clairs : QUALIRENOVATION n'est pas affilié à IKEA. Nous ne sommes ni partenaires, ni revendeurs de la marque.
+
+C'est avec l'expérience, chantier après chantier, que j'ai appris à bien retravailler les meubles IKEA : les recouper, les peindre, les habiller de bois massif ou de façades sur mesure. Cela me permet d'offrir à mes clients une véritable alternative à la menuiserie sur mesure : on part d'une base IKEA, et on la transforme en meuble fait pour leur pièce.
+
+C'est une bonne solution financière, surtout quand on vient d'acheter un appartement ou qu'on envisage des travaux de menuiserie. On le sait, c'est un poste qui peut vite grimper. Un IKEA hack n'est pas gratuit, il a un coût, mais il reste plus attractif qu'un meuble entièrement fabriqué en atelier. C'est une façon d'optimiser son logement avec un budget plus maîtrisé.
+
+— Carina Nahmani, maîtresse d'œuvre intégrée, QUALIRENOVATION by Qualiconcept
+
 ## 3. Projet à la une : la bibliothèque en chêne de Sèvres (NOUVEAU — 22e réalisation)
 - Vidéo (Reel) + 4 à 6 photos de l'album
 - Texte : caissons IKEA transformés en bibliothèque sur mesure autour de la fenêtre, étagères en chêne massif vernies à la main, banc TV assorti, rangement sous l'escalier. Projet dessiné en 3D.
