@@ -47,6 +47,12 @@ C'est avec l'expérience, chantier après chantier, que j'ai appris à bien retr
 
 C'est une bonne solution financière, surtout quand on vient d'acheter un appartement ou qu'on envisage des travaux de menuiserie. On le sait, c'est un poste qui peut vite grimper. Un IKEA hack n'est pas gratuit, il a un coût, mais il reste plus attractif qu'un meuble entièrement fabriqué en atelier. C'est une façon d'optimiser son logement avec un budget plus maîtrisé.
 
+**Pourquoi IKEA, et pas une autre enseigne ?** (H3)
+
+Chez IKEA, les caissons sont fournis avec leur quincaillerie : charnières, coulisses, fixations, tout est prévu et compatible. Chez d'autres fabricants, tout est vendu séparément, et assembler les bonnes pièces devient vite compliqué. Les disponibilités sont aussi rapides, ce qui compte pour tenir le planning d'un chantier.
+
+Avec le recul, j'ai constaté que nos réalisations sur base IKEA résistent bien au temps. Et elles ont eu beaucoup de succès : auprès de mes clients, sur Instagram, et dans les sélections IKEA hack du magazine Houzz.
+
 — Carina Nahmani, maîtresse d'œuvre intégrée, QUALIRENOVATION by Qualiconcept
 
 ## 3. Projet à la une : la bibliothèque en chêne de Sèvres (NOUVEAU — 22e réalisation)
