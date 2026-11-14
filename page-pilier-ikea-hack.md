@@ -57,8 +57,10 @@ Avec le recul, j'ai constaté que nos réalisations sur base IKEA résistent bie
 
 ## 3. Projet à la une : le meuble TV en chêne de Sèvres (NOUVEAU — 22e réalisation)
 - Vidéo (Reel) + 4 à 6 photos de l'album
-- Texte : derrière le canapé, des caissons IKEA transformés en long meuble TV sur mesure : plateau, joues et niche en chêne massif, façades blanches, ajusté au mur jusqu'au poêle. Projet dessiné en 3D.
-- **L'idée du projet :** dans une même pièce, mélanger IKEA hack et sur-mesure pour alléger la facture. Le meuble TV (moins visible, derrière le canapé) est sur base IKEA ; la bibliothèque (pièce maîtresse) est faite sur mesure.
+- Texte : le meuble derrière le canapé et le meuble TV : des caissons IKEA transformés en meubles sur mesure, avec plateaux, joues et niches en chêne massif et façades blanches, ajustés au mur. Projet dessiné en 3D par l'architecte.
+- **L'idée du projet :** dans une même pièce, mélanger IKEA hack et sur-mesure pour alléger la facture. Le meuble derrière le canapé et le meuble TV sont sur base IKEA (même principe) ; de l'autre côté, la bibliothèque est faite sur mesure.
+- **Le parti pris :** quand il y a des menuiseries à faire, plutôt que de proposer du 100 % sur mesure, on cherche le mix qui allège le budget. Quand les plans de l'architecte le nécessitent, on fait du sur mesure. Le choix final revient au client.
+- **Le duo architecte / maître d'œuvre :** une collaboration de longue date avec l'architecte Thierry Pelmard (P3D Concept, à confirmer). Une communication fluide et une bonne compréhension mutuelle permettent de tirer les prix et de sortir de jolis meubles à des prix plus compétitifs.
 - **Le détail qui change tout :** des tablettes en chêne massif qualitatif de chez Forestea, sur les deux meubles : c'est ce qui harmonise l'ensemble et donne le rendu menuisier.
 - Précision : la bibliothèque autour de la fenêtre n'est PAS un IKEA hack (caissons en médium + chêne, 100 % sur mesure) ; on peut la citer comme exemple de menuiserie sur mesure, pas comme IKEA hack.
 - Bouton « Voir l'album complet » → `/projet/bibliotheque-sur-mesure-et-banc-tv-un-salon-lumineux-a-sevres`
@@ -75,7 +77,7 @@ Chaque bloc : 3 à 4 cartes (photo, ville, une ligne) + lien vers le sous-album,
 - Paris 5 — façades Havtorp conservées → album en ligne `une-cuisine-parisienne-reinventee-l-elegance-du-sur-mesure`
 
 **Meubles TV, bibliothèques et salon**
-- Sèvres — meuble TV derrière le canapé, plateau et niche en chêne massif → album en ligne
+- Sèvres — meuble derrière le canapé et meuble TV sur base IKEA, bibliothèque sur mesure à côté → album en ligne
 - Rueil-Malmaison — meuble TV suspendu METOD, parement pierre
 - Vincennes — meuble TV bois clair
 - Paris 2 — bibliothèque fond bleu et meuble sur pieds
